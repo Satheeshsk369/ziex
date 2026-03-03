@@ -2,11 +2,16 @@ pub fn Layout(ctx: zx.LayoutContext, children: zx.Component) zx.Component {
     const allocator = ctx.arena;
 
     return (
-        <Sidebar @{allocator} categories={&categories} toc={&toc_links}>
+        <Sidebar @{allocator} categories={&categories} toc={&toc_links} tabs={&tabs}>
             {children}
         </Sidebar>
     );
 }
+
+const tabs = [_]SidebarProps.Tab{
+    .{ .label = "Learn", .href = "/learn", .active = true },
+    .{ .label = "Reference", .href = "/reference", .active = false },
+};
 
 const categories = [_]SidebarProps.Category{
     .{

@@ -442,6 +442,42 @@ body {
     position: relative;
 }
 
+/* Sidebar Tabs (Learn / Reference) */
+.sidebar-tabs {
+    display: flex;
+    padding: 0.75rem 0.75rem 0;
+    gap: 0.25rem;
+    border-bottom: 1px solid var(--border-color);
+    background: var(--panel-bg);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.sidebar-tab {
+    flex: 1;
+    text-align: center;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--subtitle-color);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.15s ease;
+    margin-bottom: -1px;
+    border-radius: 6px 6px 0 0;
+}
+
+.sidebar-tab:hover {
+    color: var(--link-color);
+    background: var(--link-hover-bg);
+}
+
+.sidebar-tab-active {
+    color: var(--link-color);
+    border-bottom-color: var(--link-color);
+}
+
 /* Category-based Sidebar (React-style) */
 .sidebar-categories {
     padding: 1rem 0;

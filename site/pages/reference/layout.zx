@@ -1,0 +1,184 @@
+pub fn Layout(ctx: zx.LayoutContext, children: zx.Component) zx.Component {
+    return (
+        <div @allocator={ctx.arena}>
+            <Sidebar allocator={ctx.arena} categories={&categories} toc={&toc_links} tabs={&tabs} children={children} />
+            <script src=`/assets/docs.js?v={zx.info.version}` defer="true"></script>
+        </div>
+    );
+}
+
+const tabs = [_]SidebarProps.Tab{
+    .{ .label = "Learn", .href = "/learn", .active = false },
+    .{ .label = "Reference", .href = "/reference", .active = true },
+};
+
+const categories = [_]SidebarProps.Category{
+    .{
+        .title = "REFERENCE",
+        .sections = &[_]SidebarProps.Section{
+            .{ .title = "Overview", .href = "/reference#overview" },
+        },
+    },
+    .{
+        .title = "CORE CONCEPTS",
+        .sections = &[_]SidebarProps.Section{
+            .{
+                .title = "Expressions",
+                .href = "/reference#expressions",
+                .items = &[_]SidebarProps.Link{
+                    .{ .href = "/reference#expr-strings", .text = "Strings" },
+                    .{ .href = "/reference#expr-integers", .text = "Integers" },
+                    .{ .href = "/reference#expr-floats", .text = "Floats" },
+                    .{ .href = "/reference#expr-booleans", .text = "Booleans" },
+                    .{ .href = "/reference#expr-enums", .text = "Enums" },
+                    .{ .href = "/reference#expr-optionals", .text = "Optionals" },
+                    .{ .href = "/reference#expr-null", .text = "Null" },
+                    .{ .href = "/reference#expr-components", .text = "Components" },
+                    .{ .href = "/reference#expr-component-arrays", .text = "Component Arrays" },
+                },
+            },
+            .{
+                .title = "Control Flow",
+                .href = "/reference#control-flow",
+                .items = &[_]SidebarProps.Link{
+                    .{ .href = "/reference#if-statements", .text = "If Statements" },
+                    .{ .href = "/reference#switch-statements", .text = "Switch Statements" },
+                    .{ .href = "/reference#for-loops", .text = "For Loops" },
+                    .{ .href = "/reference#while-loops", .text = "While Loops" },
+                    .{ .href = "/reference#optional-capture", .text = "Optional Capture" },
+                    .{ .href = "/reference#error-capture", .text = "Error Capture" },
+                },
+            },
+            .{
+                .title = "Components",
+                .href = "/reference#components",
+                .items = &[_]SidebarProps.Link{
+                    .{ .href = "/reference#component-context", .text = "ComponentContext" },
+                    .{ .href = "/reference#component-ctx-props", .text = "ComponentCtx" },
+                },
+            },
+            .{
+                .title = "Routing",
+                .href = "/reference#routing",
+                .items = &[_]SidebarProps.Link{
+                    .{ .href = "/reference#pages", .text = "Pages" },
+                    .{ .href = "/reference#layouts", .text = "Layouts" },
+                    .{ .href = "/reference#dynamic-routes", .text = "Dynamic Routes" },
+                },
+            },
+            .{
+                .title = "API & WebSockets",
+                .href = "/reference#api-and-websockets",
+                .items = &[_]SidebarProps.Link{
+                    .{ .href = "/reference#api-routes", .text = "API Routes" },
+                    .{ .href = "/reference#websockets", .text = "WebSockets" },
+                    .{ .href = "/reference#pub-sub", .text = "Pub/Sub" },
+                },
+            },
+        },
+    },
+    .{
+        .title = "ADVANCED",
+        .sections = &[_]SidebarProps.Section{
+            .{
+                .title = "Builtin Attributes",
+                .href = "/reference#builtin-attributes",
+                .items = &[_]SidebarProps.Link{
+                    .{ .href = "/reference#allocator", .text = "@allocator" },
+                    .{ .href = "/reference#escaping", .text = "@escaping" },
+                    .{ .href = "/reference#rendering", .text = "@rendering" },
+                },
+            },
+            .{
+                .title = "Attribute Syntax",
+                .href = "/reference#attribute-syntax",
+                .items = &[_]SidebarProps.Link{
+                    .{ .href = "/reference#spread-attributes", .text = "Spread Attributes" },
+                    .{ .href = "/reference#shorthand-attributes", .text = "Shorthand" },
+                    .{ .href = "/reference#template-attributes", .text = "Template Strings" },
+                },
+            },
+            .{ .title = "Importing", .href = "/reference#importing" },
+            .{ .title = "Fragments", .href = "/reference#fragments" },
+            .{ .title = "Children Props", .href = "/reference#children-props" },
+            .{
+                .title = "Syntax",
+                .href = "/reference#syntax",
+                .items = &[_]SidebarProps.Link{
+                    .{ .href = "/reference#multiline-strings", .text = "Multiline Strings" },
+                    .{ .href = "/reference#comments", .text = "Comments" },
+                },
+            },
+            .{
+                .title = "Caching",
+                .href = "/reference#caching",
+                .items = &[_]SidebarProps.Link{
+                    .{ .href = "/reference#caching-overview", .text = "Overview" },
+                    .{ .href = "/reference#caching-components", .text = "Component Caching" },
+                    .{ .href = "/reference#caching-pages", .text = "Page Caching" },
+                    .{ .href = "/reference#caching-layouts", .text = "Layout Caching" },
+                    .{ .href = "/reference#cache-invalidation", .text = "Invalidation" },
+                    .{ .href = "/reference#caching-best-practices", .text = "Best Practices" },
+                },
+            },
+        },
+    },
+    .{
+        .title = "BUILD & TOOLS",
+        .sections = &[_]SidebarProps.Section{
+            .{
+                .title = "CLI",
+                .href = "/reference#cli",
+                .items = &[_]SidebarProps.Link{
+                    .{ .href = "/reference#cli-installation", .text = "Installation" },
+                    .{ .href = "/reference#cli-init", .text = "init" },
+                    .{ .href = "/reference#cli-dev", .text = "dev" },
+                    .{ .href = "/reference#cli-serve", .text = "serve" },
+                    .{ .href = "/reference#cli-transpile", .text = "transpile" },
+                    .{ .href = "/reference#cli-fmt", .text = "fmt" },
+                    .{ .href = "/reference#cli-export", .text = "export" },
+                    .{ .href = "/reference#cli-bundle", .text = "bundle" },
+                    .{ .href = "/reference#cli-update", .text = "update" },
+                    .{ .href = "/reference#cli-upgrade", .text = "upgrade" },
+                    .{ .href = "/reference#cli-version", .text = "version" },
+                },
+            },
+            .{
+                .title = "Plugins",
+                .href = "/reference#plugins",
+                .items = &[_]SidebarProps.Link{
+                    .{ .href = "/reference#plugin-overview", .text = "Overview" },
+                    .{ .href = "/reference#builtin-plugins", .text = "Builtin Plugins" },
+                    .{ .href = "/reference#tailwind-plugin", .text = "Tailwind CSS" },
+                    .{ .href = "/reference#esbuild-plugin", .text = "esbuild" },
+                    // .{ .href = "/reference#combining-plugins", .text = "Combining Plugins" },
+                    // .{ .href = "/reference#custom-plugins", .text = "Custom Plugins" },
+                },
+            },
+        },
+    },
+};
+
+const toc_links = [_]SidebarProps.Link{
+    .{ .href = "/reference#overview", .text = "Overview" },
+    .{ .href = "/reference#expressions", .text = "Expressions" },
+    .{ .href = "/reference#control-flow", .text = "Control Flow" },
+    .{ .href = "/reference#components", .text = "Components" },
+    .{ .href = "/reference#routing", .text = "Routing" },
+    .{ .href = "/reference#api-and-websockets", .text = "API & WebSockets" },
+    .{ .href = "/reference#builtin-attributes", .text = "Builtin Attributes" },
+    .{ .href = "/reference#attribute-syntax", .text = "Attribute Syntax" },
+    .{ .href = "/reference#importing", .text = "Importing" },
+    .{ .href = "/reference#dynamic-routes", .text = "Dynamic Routes" },
+    .{ .href = "/reference#fragments", .text = "Fragments" },
+    .{ .href = "/reference#children-props", .text = "Children Props" },
+    .{ .href = "/reference#syntax", .text = "Syntax" },
+    .{ .href = "/reference#caching", .text = "Caching" },
+    .{ .href = "/reference#plugins", .text = "Plugins" },
+    .{ .href = "/reference#cli", .text = "CLI" },
+};
+
+const Sidebar = @import("../components/sidebar.zx").Sidebar;
+const SidebarProps = @import("../components/sidebar.zx").SidebarProps;
+
+const zx = @import("zx");

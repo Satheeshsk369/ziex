@@ -155,4 +155,4 @@ const dark_mode_style =
 
 const zx = @import("zx");
 const std = @import("std");
-const util = @import("../docs/util.zx");
+const util = @import("../reference/util.zx");

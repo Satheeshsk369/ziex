@@ -32,4 +32,4 @@ pub fn CodeBlock(allocator: zx.Allocator, props: CodeBlockProps) zx.Component {
 
 const zx = @import("zx");
 const std = @import("std");
-const util = @import("../docs/util.zig");
+const util = @import("../reference/util.zig");
