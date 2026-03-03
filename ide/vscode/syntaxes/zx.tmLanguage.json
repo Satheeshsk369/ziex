@@ -48,7 +48,7 @@
     },
     "zx-tag-self-closing": {
       "name": "meta.tag.self-closing.zx",
-      "begin": "(<)([a-zA-Z_][a-zA-Z0-9_-]*)(?=[^>]*/>)",
+      "begin": "(<)([a-zA-Z_][a-zA-Z0-9_.-]*)(?=[^>]*/>)",
       "end": "(/>)",
       "beginCaptures": {
         "1": {
@@ -71,7 +71,7 @@
     },
     "zx-tag-open": {
       "name": "meta.tag.open.zx",
-      "begin": "(<)([a-zA-Z_][a-zA-Z0-9_-]*)",
+      "begin": "(<)([a-zA-Z_][a-zA-Z0-9_.-]*)",
       "end": "(>)",
       "beginCaptures": {
         "1": {
@@ -94,7 +94,7 @@
     },
     "zx-tag-close": {
       "name": "meta.tag.close.zx",
-      "match": "(</)([a-zA-Z_][a-zA-Z0-9_-]*)(>)",
+      "match": "(</)([a-zA-Z_][a-zA-Z0-9_.-]*)(>)",
       "captures": {
         "1": {
           "name": "punctuation.definition.tag.begin.zx"
