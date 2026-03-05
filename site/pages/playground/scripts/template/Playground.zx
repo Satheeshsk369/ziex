@@ -1,6 +1,6 @@
-pub fn Playground(allocator: zx.Allocator) zx.Component {
+pub fn Playground(ctx: *zx.ComponentContext) zx.Component {
     return (
-        <div @{allocator}>
+        <div @allocator={ctx.allocator}>
             <style>{@embedFile("style.css")}</style>
 
             <h1>Ziex Playground</h1>
