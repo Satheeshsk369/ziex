@@ -172,6 +172,18 @@ pub fn deinit(self: *Client) void {
     self.handler_registry.deinit();
 }
 
+fn mainClient() callconv(.c) void {
+    if (zx.platform != .browser) return;
+
+    clnt.info();
+    clnt.renderAll();
+}
+
+var clnt = init(zx.client_allocator, .{});
+pub fn run() !void {
+    @export(&mainClient, .{ .name = "mainClient" });
+}
+
 /// Register a VElement and all its children in the id_to_velement registry
 /// This enables event delegation lookup by VElement ID
 /// Also extracts and registers event handlers from component attributes

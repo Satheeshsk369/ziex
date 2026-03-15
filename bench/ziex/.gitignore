@@ -8,3 +8,6 @@
 
 # Node.js
 node_modules
+
+# Cloudflare Worker
+/.wrangler

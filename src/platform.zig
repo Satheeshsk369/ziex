@@ -6,6 +6,9 @@ pub const Platform = enum {
     /// Server environment
     server,
 
+    /// Edge runtime (e.g. Cloudflare Workers
+    edge,
+
     /// Future - Android environment
     android,
     /// Future - iOS environment
@@ -23,4 +26,8 @@ pub const Platform = enum {
 /// - `ios` if running on an iOS environment
 /// - `macos` if running on a macOS environment
 /// - `windows` if running on a Windows environment
-pub const platform: Platform = if (builtin.os.tag == .freestanding) .browser else .server;
+pub const platform: Platform = switch (builtin.os.tag) {
+    .wasi => .edge,
+    .freestanding => .browser,
+    else => .server,
+};

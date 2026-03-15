@@ -1,10 +1,11 @@
 const features = [_]Feature{
     .{ .icon_fn = icons.Lightning, .title = "It's Fast", .description = "Significantly faster at SSR than many other frameworks." },
-    .{ .icon_fn = icons.Shield, .title = "Compile-time Safety", .description = "Zig's type system catches bugs at compile time. No runtime surprises, no GC." },
+    .{ .icon_fn = icons.Shield, .title = "Compile-time Safety", .description = "Bugs are caught early, before running your app." },
     .{ .icon_fn = icons.PaintBrush, .title = "Familiar Syntax", .description = "Familiar JSX-like syntax, or plain HTML-style markup, with full access to Zig's control flow." },
     .{ .icon_fn = icons.Server, .title = "Server-side Rendering", .description = "Render per request on the server for dynamic data, auth, and personalized pages for best performance and SEO." },
     .{ .icon_fn = icons.Layers, .title = "Static Site Generation", .description = "Pre-render pages at build/export time into static HTML for fast CDN delivery." },
-    .{ .icon_fn = icons.Folder, .title = "File System Routing", .description = "Folder structure defines routes. No configs, no magic strings, just files in folders." },
+    .{ .icon_fn = icons.Folder, .title = "File System Routing", .description = "Just put files in folders to create routes." },
+    .{ .icon_fn = icons.Server, .title = "API Routes", .description = "Create API endpoints by adding route.zig files to your project." },
     .{ .icon_fn = icons.Monitor, .title = "Client-side Rendering", .description = "Optional client-side rendering for interactive experiences when you need it." },
     .{ .icon_fn = icons.Flow, .title = "Control Flow in Zig's Syntax", .description = "if/else, for/while, and switch all work as expected. It's just Zig." },
     .{ .icon_fn = icons.Wrench, .title = "Developer Tooling", .description = "CLI, hot reload, and editor extensions for the best DX." },

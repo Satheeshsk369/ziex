@@ -289,7 +289,7 @@ pub const ZxContext = struct {
                     }
                     // Function pointer - treat as event handler
                     if (@typeInfo(ptr_info.child) == .@"fn") {
-                        break :blk .{ .name = name, .handler = zx.EventHandler.fromFn(val) };
+                        break :blk .{ .name = name, .handler = zx.EventHandler.fromFnRuntime(val) };
                     }
                 }
                 @compileError("Unsupported pointer type for attribute: " ++ @typeName(T));

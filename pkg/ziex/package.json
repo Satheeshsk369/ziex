@@ -9,7 +9,8 @@
     ".": "./index.js",
     "./react": "./react/index.js",
     "./wasm": "./wasm/index.js",
-    "./wasm/init": "./wasm/init.js"
+    "./wasm/init": "./wasm/init.js",
+    "./cloudflare": "./cloudflare/index.js"
   },
   "homepage": "https://ziex.dev",
   "repository": {
@@ -35,16 +36,19 @@
     "build": "bun run script/build.ts",
     "publish": "bun run build && cd dist && bun publish",
     "fmt": "prettier --write . '!test/files/**' '!README.md'",
-    "check": "tsc",
-    "bench": "BENCH=true bun test --test-name-pattern 'Performance JSON/ZON' && bun run script/bench.ts"
+    "check": "tsc"
   },
   "devDependencies": {
     "@types/bun": "latest",
     "zzon": "^1.7.1",
-    "jsz": "github:nurulhudaapon/jsz"
+    "jsz": "github:nurulhudaapon/jsz",
+    "@types/react": "latest",
+    "@types/react-dom": "latest"
   },
   "peerDependencies": {
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
   },
   "release": {
     "plugins": [

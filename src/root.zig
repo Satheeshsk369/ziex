@@ -43,7 +43,7 @@ pub const Allocator = std.mem.Allocator;
 pub const App = app_module.Server(void);
 pub const Server = app_module.Server;
 pub const server = app_module;
-pub const Edge = @import("runtime/edge/Edge.zig").Edge;
+pub const Edge = @import("runtime/edge/Edge.zig");
 pub const Client = @import("runtime/client/Client.zig");
 
 pub const prop = prp.prop;
@@ -97,6 +97,12 @@ pub const ActionContext = ctxs.ActionContext;
 
 pub const BuiltinAttribute = @import("attributes.zig").builtin;
 pub const Platform = plfm.Platform;
+
+// --- Routing --- //
+pub const Router = @import("runtime/core/Router.zig");
+
+// --- Storage --- //
+pub const kv = @import("runtime/core/kv.zig");
 
 // --- Net --- //
 pub const Headers = @import("runtime/core/Headers.zig");

@@ -5,7 +5,8 @@ const zx = @import("zx");
 const config = zx.Server(AppCtx).Config{ .server = .{ .port = 5588 } };
 
 pub fn main() !void {
-    if (zx.platform == .browser) return;
+    if (zx.platform == .browser) return try zx.Client.run();
+    if (zx.platform == .edge) return try zx.Edge.run();
 
     var gpa = std.heap.GeneralPurposeAllocator(.{}){};
     const allocator = gpa.allocator();
@@ -18,14 +19,6 @@ pub fn main() !void {
 
     server.info();
     try server.start();
-}
-
-var client = zx.Client.init(zx.client_allocator, .{});
-
-export fn mainClient() void {
-    if (zx.platform != .browser) return;
-    client.info();
-    client.renderAll();
 }
 
 pub const std_options = zx.std_options;

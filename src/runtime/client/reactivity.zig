@@ -385,7 +385,7 @@ pub const EventHandler = struct {
     callback: *const fn (ctx: *anyopaque, event: zx.EventContext) void,
     context: *anyopaque,
 
-    /// Helper to create an EventHandler from a plain function pointer (no context)
+    /// Helper to create an EventHandler from a plain function pointer (no context) - comptime version
     pub fn fromFn(comptime func: *const fn (zx.EventContext) void) EventHandler {
         return .{
             .callback = &struct {
@@ -395,6 +395,19 @@ pub const EventHandler = struct {
             }.wrapper,
             .context = undefined,
         };
+    }
+
+    /// Helper to create an EventHandler from a runtime function pointer (no context)
+    pub fn fromFnRuntime(func: *const fn (zx.EventContext) void) EventHandler {
+        return .{
+            .callback = &runtimeWrapper,
+            .context = @ptrCast(@constCast(func)),
+        };
+    }
+
+    fn runtimeWrapper(ctx: *anyopaque, event: zx.EventContext) void {
+        const func: *const fn (zx.EventContext) void = @ptrCast(@alignCast(ctx));
+        func(event);
     }
 };
 

@@ -826,6 +826,8 @@ pub const ServerMeta = struct {
 };
 
 pub const ServerConfig = struct {
+    pub const init: ServerConfig = .{ .server = .{} };
+
     server: httpz.Config,
     cache: CacheConfig = .{},
 };

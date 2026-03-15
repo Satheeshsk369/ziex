@@ -303,7 +303,7 @@ fn resetTodosForSSR(allocator: zx.Allocator) void {
 
 fn addTodo(ctx: zx.EventContext) void {
     ctx.preventDefault();
-    if (comptime builtin.cpu.arch != .wasm32) return;
+    if (comptime builtin.os.tag != .freestanding) return;
 
     const document = zx.client.Document.init(todos_allocator);
     const input = document.getElementById("todo-input") catch return;
@@ -330,7 +330,7 @@ fn handleInputChange(ctx: zx.EventContext) void {
     todos.append(todos_allocator, .{ .id = id, .text = value, .completed = false }) catch @panic("OOM");
 }
 fn toggleTodo(ctx: zx.EventContext) void {
-    if (comptime builtin.cpu.arch != .wasm32) return;
+    if (comptime builtin.os.tag != .freestanding) return;
 
     const event = ctx.getEvent();
     defer event.deinit();
@@ -357,7 +357,7 @@ fn clearTodos(_: zx.EventContext) void {
 }
 
 fn deleteTodo(ctx: zx.EventContext) void {
-    if (comptime builtin.cpu.arch != .wasm32) return;
+    if (comptime builtin.os.tag != .freestanding) return;
 
     const event = ctx.getEvent();
     defer event.deinit();
