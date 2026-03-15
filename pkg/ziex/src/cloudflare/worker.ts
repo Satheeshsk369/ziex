@@ -154,6 +154,27 @@ function createWasiImports({
             crypto.getRandomValues(new Uint8Array(wasmMemory.buffer, buf_ptr, buf_len));
             return 0;
         },
+        path_open(_fd: number, _dirflags: number, _path: number, _path_len: number, _oflags: number, _rights_base: bigint, _rights_inheriting: bigint, _fdflags: number, opened_fd_ptr: number): number {
+            v().setInt32(opened_fd_ptr, -1, true);
+            return 76; // WASI_ENOTCAPABLE
+        },
+        path_create_directory(_fd: number, _path: number, _path_len: number): number { return 76; },
+        path_unlink_file(_fd: number, _path: number, _path_len: number): number { return 76; },
+        path_remove_directory(_fd: number, _path: number, _path_len: number): number { return 76; },
+        path_rename(_fd: number, _old_path: number, _old_path_len: number, _new_fd: number, _new_path: number, _new_path_len: number): number { return 76; },
+        path_filestat_get(_fd: number, _flags: number, _path: number, _path_len: number, filestat_ptr: number): number {
+            // zero out the 64-byte filestat struct
+            new Uint8Array(wasmMemory.buffer, filestat_ptr, 64).fill(0);
+            return 76;
+        },
+        path_readlink(_fd: number, _path: number, _path_len: number, _buf: number, _buf_len: number, nread_ptr: number): number {
+            v().setUint32(nread_ptr, 0, true);
+            return 76;
+        },
+        fd_readdir(_fd: number, _buf: number, _buf_len: number, _cookie: bigint, bufused_ptr: number): number {
+            v().setUint32(bufused_ptr, 0, true);
+            return 76;
+        },
     };
 
     function collectOutput(): { stdout: Uint8Array; stderrText: string } {
