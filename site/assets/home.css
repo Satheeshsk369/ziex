@@ -46,6 +46,16 @@ body {
     overflow: hidden;
     border-bottom: 1px solid var(--zx-border);
 }
+
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3%3Ffilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 1;
+}
 /* Visuals */
 .hero-visuals {
     position: absolute;
@@ -61,12 +71,12 @@ body {
     position: absolute;
     inset: -100% 0;
     background-image: 
-        linear-gradient(to right, rgba(74, 222, 128, 0.2) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(74, 222, 128, 0.2) 1px, transparent 1px);
-    background-size: 80px 80px;
-    transform: rotateX(60deg) translateZ(0);
-    animation: move-forward 8s linear infinite;
-    mask-image: radial-gradient(circle at 50% 50%, black 20%, transparent 90%);
+        linear-gradient(to right, rgba(74, 222, 128, 0.15) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(74, 222, 128, 0.15) 1px, transparent 1px);
+    background-size: 60px 60px;
+    transform: rotateX(55deg) translateZ(0);
+    animation: move-forward 10s linear infinite;
+    mask-image: radial-gradient(circle at 50% 40%, black 10%, transparent 80%);
 }
 
 .hero-visuals-dots {
@@ -79,7 +89,12 @@ body {
         radial-gradient(2.5px 2.5px at 30% 80%, rgba(74, 222, 128, 0.6) 100%, transparent 0),
         radial-gradient(1.5px 1.5px at 90% 70%, rgba(255, 255, 255, 0.5) 100%, transparent 0);
     background-size: 400px 400px;
-    animation: warp-speed 15s linear infinite;
+    animation: warp-speed 15s linear infinite, dots-float 30s linear infinite;
+}
+
+@keyframes dots-float {
+    0% { background-position: 0 0; }
+    100% { background-position: 400px 400px; }
 }
 
 .hero-visuals-scanline {
@@ -88,14 +103,20 @@ body {
     background: linear-gradient(
         to bottom,
         transparent 50%,
-        rgba(74, 222, 128, 0.08) 50%,
-        rgba(74, 222, 128, 0.08) 52%,
+        rgba(74, 222, 128, 0.05) 50%,
+        rgba(74, 222, 128, 0.05) 52%,
         transparent 52%
     );
-    background-size: 100% 4px;
+    background-size: 100% 8px;
     z-index: 1;
     pointer-events: none;
     opacity: 0.9;
+    animation: scanline-move 20s linear infinite;
+}
+
+@keyframes scanline-move {
+    from { background-position: 0 0; }
+    to { background-position: 0 100%; }
 }
 
 @keyframes move-forward {
@@ -190,8 +211,9 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    animation: mascot-float 6s ease-in-out infinite;
- 
+    animation: 
+        mascot-entry 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) both,
+        mascot-float 6s ease-in-out infinite 1.2s;
 }
 
 .hero-mascot img {
@@ -225,6 +247,19 @@ body {
 @keyframes mascot-float {
     0%, 100% { transform: translateY(0) rotate(0); }
     50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+@keyframes mascot-entry {
+    0% {
+        opacity: 0;
+        transform: translateX(-150px) scale(0.7) rotate(-5deg);
+        filter: blur(10px) brightness(1.5);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1) rotate(0);
+        filter: blur(0) brightness(1);
+    }
 }
 
 @keyframes mascot-glow-pulse {
@@ -303,11 +338,29 @@ body {
 .hero-title-main {
     font-size: clamp(4rem, 12vw, 8rem);
     font-weight: 900;
-    color: var(--zx-white);
+    background: linear-gradient(
+        90deg, 
+        var(--zx-white) 0%, 
+        var(--zx-primary) 25%, 
+        var(--zx-white) 50%, 
+        var(--zx-primary) 75%, 
+        var(--zx-white) 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text-shimmer 8s linear infinite;
     line-height: 0.9;
     letter-spacing: -0.05em;
     margin: 0;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    filter: drop-shadow(0 0 30px rgba(74, 222, 128, 0.1));
+}
+
+@keyframes text-shimmer {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
 }
 
 .hero-title-accent {
@@ -648,8 +701,23 @@ body {
 .btn-primary:hover {
     background: var(--zx-primary-dark);
     border-color: var(--zx-primary-dark);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 217, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 
+        0 0 20px rgba(74, 222, 128, 0.4),
+        0 0 40px rgba(74, 222, 128, 0.2);
+}
+
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.btn-primary:hover::after {
+    transform: translateX(100%);
 }
 
 .btn-secondary {
@@ -715,6 +783,21 @@ body {
 
 .nav-link:hover {
     color: var(--zx-white);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--zx-primary);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
 }
 
 .nav-social {
@@ -1046,7 +1129,15 @@ body {
 }
 
 .feature-card:hover {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(74, 222, 128, 0.04);
+}
+
+.feature-card:hover::before,
+.feature-card:hover::after {
+    background: var(--zx-primary);
+    box-shadow: 0 0 10px var(--zx-primary);
+    transform: scale(1.5);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .feature-icon {
@@ -2246,6 +2337,15 @@ body {
     color: rgba(255, 255, 255, 0.75);
     text-align: right;
     white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.bench-row:hover .bench-value {
+    color: var(--zx-primary);
+    transform: scale(1.1);
+    text-shadow: 
+        2px 0 rgba(255, 0, 0, 0.5),
+        -2px 0 rgba(0, 0, 255, 0.5);
 }
 
 .bench-row:first-child .bench-value {
