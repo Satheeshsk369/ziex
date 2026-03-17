@@ -602,17 +602,25 @@ pub const EventHandler = struct {
     callback: *const fn (ctx: *anyopaque, event: zx.EventContext) void,
     context: *anyopaque,
 
-    /// Helper to create an EventHandler from a plain function pointer (no context)
-    pub fn fromFn(func: *const fn (zx.EventContext) void) EventHandler {
+    /// Helper to create an EventHandler from a plain function pointer (no context).
+    /// Accepts both `fn (zx.EventContext) void` and `fn () void`.
+    pub fn fromFn(comptime func: anytype) EventHandler {
+        const FnType = @TypeOf(func);
+        const fn_info = @typeInfo(FnType);
+        const params = fn_info.@"fn".params;
         const Wrapper = struct {
             fn wrapper(ctx: *anyopaque, event: zx.EventContext) void {
-                const f: *const fn (zx.EventContext) void = @ptrCast(@alignCast(ctx));
-                f(event);
+                _ = ctx;
+                if (comptime params.len == 0) {
+                    func();
+                } else {
+                    func(event);
+                }
             }
         };
         return .{
             .callback = &Wrapper.wrapper,
-            .context = @as(*anyopaque, @ptrCast(@constCast(func))),
+            .context = @as(*anyopaque, @ptrFromInt(1)),
         };
     }
 

@@ -5,24 +5,24 @@ export default function Page(props: { count: number }) {
 
     return (
         <div>
-            <button onClick={handleReset}>Reset</button>
+            <button onClick={reset}>Reset</button>
             <h5>{count}</h5>
-            <button onClick={handleDecrement}>Decrement</button>
-            <button onClick={handleIncrement}>Increment</button>
+            <button onClick={decrement}>Decrement</button>
+            <button onClick={increment}>Increment</button>
         </div>
     );
 
-    function handleIncrement() {
+    function increment() {
         setCount(c => c + 1);
         fetch(`?increment=true`);
     }
 
-    function handleDecrement() {
+    function decrement() {
         setCount(c => c - 1);
         fetch(`?decrement=true`);
     }
 
-    function handleReset() {
+    function reset() {
         setCount(0);
         fetch(`?reset=true`);
     }
