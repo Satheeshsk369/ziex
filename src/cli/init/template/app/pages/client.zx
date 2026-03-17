@@ -1,7 +1,7 @@
-var count = zx.signal(i128, 0);
+var count: *zx.State(i128) = undefined;
 
 pub fn CounterComponent(ctx: *zx.ComponentCtx(struct { count: i128 })) zx.Component {
-    count.set(ctx.props.count);
+    count = ctx.state(i128, ctx.props.count);
 
     return (
         <div @allocator={ctx.allocator}>
