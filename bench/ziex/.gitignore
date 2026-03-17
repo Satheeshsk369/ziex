@@ -11,3 +11,6 @@ node_modules
 
 # Cloudflare Worker
 /.wrangler
+
+
+app/public/css/

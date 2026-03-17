@@ -1,12 +1,12 @@
 pub fn Page(ctx: zx.PageContext) zx.Component {
     return (
-        <main @allocator={ctx.arena}>
+        <div id="main" @allocator={ctx.arena}>
             <SimpleApp @rendering={.client} @allocator={ctx.arena} />
-        </main>
+        </div>
     );
 }
 
-const Item = struct { id: u32, text: []const u8 };
+const Item = struct { id: u32, label: []const u8 };
 
 pub fn SimpleApp(allocator: zx.Allocator) zx.Component {
     return (
@@ -44,14 +44,35 @@ pub fn SimpleApp(allocator: zx.Allocator) zx.Component {
 const RowProps = struct { item: Item };
 
 fn Row(ctx: *zx.ComponentCtx(RowProps)) zx.Component {
+    const Handler = struct {
+        fn onSelect(h_ctx: *anyopaque, _: zx.EventContext) void {
+            std.log.info("onSelect called with", .{});
+            selected = @intCast(@intFromPtr(h_ctx));
+            zx.rerender();
+        }
+        fn onRemove(h_ctx: *anyopaque, _: zx.EventContext) void {
+            const id: u32 = @intCast(@intFromPtr(h_ctx));
+            for (items.items, 0..) |item, i| {
+                if (item.id == id) {
+                    _ = items.orderedRemove(i);
+                    break;
+                }
+            }
+            zx.rerender();
+        }
+    };
+
+    const is_selected = selected == ctx.props.item.id;
+    const ctx_ptr: *anyopaque = @ptrFromInt(ctx.props.item.id);
+
     return (
-        <tr key={ctx.props.item.id} @allocator={ctx.allocator}>
+        <tr key={ctx.props.item.id} @allocator={ctx.allocator} class={if(is_selected) "danger" else ""}>
             <td class="col-md-1">{ctx.props.item.id}</td>
             <td class="col-md-4">
-                <a>{ctx.props.item.text}</a>
+                <a onclick={zx.EventHandler{ .callback = Handler.onSelect, .context = ctx_ptr }}>{ctx.props.item.label}</a>
             </td>
             <td class="col-md-1">
-                <a>
+                <a onclick={zx.EventHandler{ .callback = Handler.onRemove, .context = ctx_ptr }}>
                     <span class="glyphicon glyphicon-remove" aria-hidden="true" />
                 </a>
             </td>
@@ -72,11 +93,12 @@ fn Button(ctx: *zx.ComponentCtx(ButtonProps)) zx.Component {
     );
 }
 var next_id: u32 = 1;
+var selected: u32 = 0;
 var items = std.ArrayList(Item).empty;
 
 fn clearRows(_: zx.EventContext) void {
     items.clearRetainingCapacity();
-    next_id = 1;
+    selected = 0;
     zx.rerender();
 }
 
@@ -93,8 +115,8 @@ fn updateRows(_: zx.EventContext) void {
     var i: usize = 0;
     while (i < items.items.len) : (i += 10) {
         const item = &items.items[i];
-        const new_text = std.fmt.allocPrint(zx.client_allocator, "{s} !!!", .{item.text}) catch @panic("OOM");
-        item.text = new_text;
+        const new_label = std.fmt.allocPrint(zx.client_allocator, "{s} !!!", .{item.label}) catch @panic("OOM");
+        item.label = new_label;
     }
     zx.rerender();
 }
@@ -139,14 +161,14 @@ fn BuildRows(count_to_add: u32, clear_first: bool) void {
     std.log.info("BuildRows called with count_to_add: {d}", .{count_to_add});
     if (clear_first) {
         items.clearRetainingCapacity();
-        next_id = 1;
+        selected = 0;
     }
 
     for (0..count_to_add) |_| {
-        const text = std.fmt.allocPrint(zx.client_allocator, "{s} {s} {s}", .{ adjectives[RandomNumber(adjectives.len)], colours[RandomNumber(colours.len)], nouns[RandomNumber(nouns.len)] }) catch @panic("OOM");
+        const label = std.fmt.allocPrint(zx.client_allocator, "{s} {s} {s}", .{ adjectives[RandomNumber(adjectives.len)], colours[RandomNumber(colours.len)], nouns[RandomNumber(nouns.len)] }) catch @panic("OOM");
         const item = Item{
             .id = next_id,
-            .text = text,
+            .label = label,
         };
 
         items.append(zx.client_allocator, item) catch @panic("OOM");
