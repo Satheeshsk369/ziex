@@ -1,19 +1,15 @@
 {
   "name": "ziex_dev",
-  "main": "app/main.ts",
+  "type": "module",
   "scripts": {
-    "deploy": "wrangler deploy",
-    "dev": "wrangler dev",
-    "start": "wrangler dev",
-    "test": "vitest",
-    "cf-typegen": "wrangler types"
+    "build": "zig build -Dtarget=wasm32-wasi -Doptimize=ReleaseSmall"
   },
   "devDependencies": {
     "@tailwindcss/cli": "4.1.18",
+    "@types/node": "^25.5.0",
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
     "esbuild": "0.27.2",
-    "@types/node": "^25.5.0",
     "typescript": "^5.5.2",
     "wrangler": "^4.73.0"
   },
@@ -36,6 +32,7 @@
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "tailwindcss": "4.1.18",
-    "vscode-languageserver-protocol": "^3.17.5"
+    "vscode-languageserver-protocol": "^3.17.5",
+    "ziex": "file:../pkg/ziex/dist"
   }
 }

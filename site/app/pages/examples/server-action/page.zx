@@ -1,6 +1,7 @@
 pub fn Page(ctx: zx.PageContext) zx.Component {
     return (
         <div @allocator={ctx.arena}>
+            <input type="text" name="name" value="Jodhn Doe" />
             <ProfileForm @rendering={.client} />
             <br />
             <hr />
@@ -14,30 +15,47 @@ pub fn ProfileForm(ctx: *zx.ComponentContext) zx.Component {
     const count = ctx.state(i32, 0);
     const age = ctx.state(i32, 0);
     const p = ctx.state(Person, Person{
-        .first_name = "Nurul",
-        .last_name = "Huda",
+        .first_name = "Ziex",
+        .last_name = "Dev",
         .age = 25,
     });
 
     const person = p.get();
 
     return (
-        <div @allocator={ctx.allocator} style="display: inline-flex; flex-direction: column">
-            <h1>{count}</h1>
-            <h1>{age}</h1>
-            <h1>{person.first_name} {person.last_name} {person.age}</h1>
-            // <form action={handleSubmit}>
-            //     <label>Username: <input type="text" name="username" required /></label>
-            //     <input type="submit" name="action" value="Login" />
-            // </form>
-            <button onclick={clientEvent} value="I'm on the client">Client Event</button>
-            <button onclick={serverEvent} value="I'm on the server">Server Event</button>
-            <button onclick={ctx.bind(serverIncrement)} value="I'm on the server">Increment: Server</button>
-            <button onclick={ctx.bind(serverAgeIncrement)} value="I'm on the server">Increment: Server age</button>
-            <button onclick={ctx.bind(clientIncrement)} value="I'm on the server">Increment: Client</button>
+        <div @allocator={ctx.allocator}>
+            <span>Count: {count}</span>
+            <button onclick={ctx.bind(serverIncrement)} value="server">+ (Server)</button>
+            <button onclick={ctx.bind(clientIncrement)} value="server">+ (Client)</button>
+            <button onclick={ctx.sbind(serverSIncrementHandler, .{count})} value="server">+ (Server sbind)</button>
+            <br />
 
-            <button onclick={ctx.sbind(serverSIncrementHandler, .{count})} value="I'm on the server">Increment: Server (selective)</button>
-            <button onclick={ctx.bind(serverStateIncrementHandler)} value="I'm on the server">Increment: Server (state)</button>
+            <span>Age: {age}</span>
+            <button onclick={ctx.bind(serverAgeIncrement)} value="server">+ (Server)</button>
+            <br />
+
+            <span>{person.first_name} {person.last_name} - {person.age}</span>
+            <button onclick={ctx.bind(serverStateUpdateHandler)} value="server">Update (Server))</button>
+            <br />
+
+            <form action={handleSubmit}>
+                <label>Username: <input type="text" name="username" required /></label>
+                <input type="submit" name="action" value="Login" />
+            </form>
+            <button onclick={clientEvent} value="client">Client Event</button>
+            <button onclick={serverEvent} value="server">Server Event</button>
+
+            <form action={typedform}>
+                <label>Name: <input type="text" name="name" defaultValue="John Doe" required /></label>
+                <label>ID: <input type="text" name="id" defaultValue="123" required /></label>
+                <input type="submit" name="action" value="Submit" />
+            </form>
+
+            <form action={directtypedform}>
+                <label>Name: <input type="text" name="name" defaultValue="John Doe" required /></label>
+                <label>ID: <input type="text" name="id" defaultValue="123" required /></label>
+                <input type="submit" name="action" value="Submit" />
+            </form>
         </div>
     );
 }
@@ -76,18 +94,8 @@ fn serverIncrement(_: zx.ServerEventContext, sc: *zx.StateContext) void {
 fn serverAgeIncrement(_: zx.ServerEventContext, sc: *zx.StateContext) void {
     _ = sc.state(i32);
     const val = sc.state(i32);
-    var person = sc.state(Person);
     val.set(val.get() + 1);
-    // std.log.info("age increment: {d} {s}\n", .{val.get(), person.first_name});
-
-    const updated_person = Person{
-        .first_name = "Nurul Huda",
-        .last_name = "Apon",
-        .age = person.get().age + 1,
-    };
-    person.set(updated_person);
 }
-
 
 fn serverSIncrementHandler(_: zx.ServerEventContext, sc: *zx.StateContext) void {
     const val = sc.state(i32);
@@ -95,17 +103,58 @@ fn serverSIncrementHandler(_: zx.ServerEventContext, sc: *zx.StateContext) void 
     std.log.info("increment: {d}\n", .{val.get()});
 }
 
+fn serverStateUpdateHandler(sc: *zx.StateContext) void {
+    _ = sc.state(i32);
+    _ = sc.state(i32);
+    var person = sc.state(Person);
 
-fn serverStateIncrementHandler(sc: *zx.StateContext) void {
-    const val = sc.state(i32);
-    val.set(val.get() + 1);
-    std.log.info("increment: {d}\n", .{val.get()});
+    const updated_person = Person{
+        .first_name = "ZX",
+        .last_name = "FW",
+        .age = person.get().age + 1,
+    };
+    person.set(updated_person);
 }
 
 // This should be a server action
 fn handleSubmit(ctx: zx.ActionContext) void {
-    _ = ctx;
-    std.log.info("server form handler", .{});
+    // const formdata = ctx.request.formData();
+    // const username = formdata.get("username") orelse "";
+
+    // std.log.info("server form handler username: {s}", .{username});
+
+    const data = ctx.data(struct {
+        username: []const u8,
+    });
+
+    std.log.info("server form handler username: {s}", .{data.username});
+
+
+// _ = data;
+
+    //   const mformdata = ctx.request.multiFormData();
+    //   const v = mformdata.get("name: []const u8");
+    // const musername = if (mformdata.get("username")) |val| val.data else "";
+
+    // std.log.info("server form handler musername: {s}", .{musername});
+}
+
+const FormData = struct {
+    name: []const u8,
+    id: i32,
+};
+
+// This should be a server action
+fn typedform(ctx: zx.ActionContext) void {
+    const data = ctx.data(FormData);
+
+    std.log.info("server form handler name: {s}, id: {d}", .{data.name, data.id});
+}
+
+
+// This should be a server action
+fn directtypedform(data: FormData) void {
+    std.log.info("server form handler name: {s}, id: {d}", .{data.name, data.id});
 }
 
 pub const options: zx.PageOptions = .{

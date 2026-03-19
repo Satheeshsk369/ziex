@@ -28,7 +28,7 @@ async function main() {
   
   // Build main entry modules
   await Bun.build({
-    entrypoints: [join(pkgDir, "src/index.ts"), join(pkgDir, "src/react/index.ts"), join(pkgDir, "src/wasm/index.ts"), join(pkgDir, "src/cloudflare/index.ts")],
+    entrypoints: [join(pkgDir, "src/index.ts"), join(pkgDir, "src/react/index.ts"), join(pkgDir, "src/wasm/index.ts"), join(pkgDir, "src/cloudflare/index.ts"), join(pkgDir, "src/aws-lambda/index.ts"), join(pkgDir, "src/vercel/index.ts")],
     outdir: pkgDistDir,
     // minify: true,
   });

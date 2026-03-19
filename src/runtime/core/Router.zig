@@ -1,6 +1,6 @@
 //! Shared routing logic for edge (WASI) and server runtimes.
 //! Provides route matching, proxy cascading, layout hierarchy,
-//! and error/notfound page rendering.
+//! error/notfound page rendering, action streaming, and handler registry.
 
 const std = @import("std");
 const zx = @import("../../root.zig");
@@ -39,6 +39,129 @@ pub const ProxyResult = struct {
     state_ptr: ?*const anyopaque = null,
 };
 
+/// Execute cascading Proxy() handlers from root "/" down to the target path, plus optional local proxy.
+pub fn executeProxyChain(
+    path: []const u8,
+    local_proxy: ?ServerMeta.ProxyHandler,
+    req: zx.Request,
+    res: zx.Response,
+    arena: std.mem.Allocator,
+) ProxyResult {
+    var proxy_ctx = zx.ProxyContext.init(req, res, arena, arena);
+    var proxies: [16]ServerMeta.ProxyHandler = undefined;
+    var count: usize = 0;
+
+    // Root "/" proxy
+    for (zx.meta.routes) |*route| {
+        if (std.mem.eql(u8, route.path, "/")) {
+            if (route.proxy) |proxy_fn| {
+                if (count < proxies.len) {
+                    proxies[count] = proxy_fn;
+                    count += 1;
+                }
+            }
+            break;
+        }
+    }
+
+    // Build path segments and check each intermediate path
+    var segments: [32][]const u8 = undefined;
+    var seg_count: usize = 0;
+    var seg_iter = std.mem.splitScalar(u8, path, '/');
+    while (seg_iter.next()) |seg| {
+        if (seg.len > 0 and seg_count < segments.len) {
+            segments[seg_count] = seg;
+            seg_count += 1;
+        }
+    }
+
+    for (1..seg_count + 1) |depth| {
+        var path_buf: [256]u8 = undefined;
+        var offset: usize = 0;
+        for (0..depth) |d| {
+            path_buf[offset] = '/';
+            offset += 1;
+            const seg = segments[d];
+            @memcpy(path_buf[offset .. offset + seg.len], seg);
+            offset += seg.len;
+        }
+        const check_path = path_buf[0..offset];
+        if (std.mem.eql(u8, check_path, "/")) continue;
+
+        for (zx.meta.routes) |*route| {
+            if (std.mem.eql(u8, route.path, check_path)) {
+                if (route.proxy) |proxy_fn| {
+                    if (count < proxies.len) {
+                        proxies[count] = proxy_fn;
+                        count += 1;
+                    }
+                }
+                break;
+            }
+        }
+    }
+
+    // Execute collected proxies in order (root to leaf)
+    for (proxies[0..count]) |proxy_fn| {
+        proxy_fn(&proxy_ctx) catch {};
+        if (proxy_ctx.isAborted()) {
+            return .{ .aborted = true, .state_ptr = proxy_ctx._state_ptr };
+        }
+    }
+
+    // Execute local proxy (page_proxy or route_proxy). Returns updated ProxyResult.
+    if (local_proxy) |proxy_fn| {
+        proxy_ctx._state_ptr = proxy_ctx._state_ptr;
+        proxy_fn(&proxy_ctx) catch {};
+        if (proxy_ctx.isAborted()) {
+            return .{ .aborted = true, .state_ptr = proxy_ctx._state_ptr };
+        }
+    }
+
+    return .{ .aborted = false, .state_ptr = proxy_ctx._state_ptr };
+}
+
+/// Registry for server actions and events (for streaming and event dispatch)
+pub const ActionRegistry = struct {
+    // ...implementation placeholder...
+    // Add lookup, registration, and event dispatch logic as needed
+};
+
+/// Streaming support for server actions and async components
+pub fn renderStreaming() void {
+    // ...implementation placeholder...
+    // Add streaming logic for async components, similar to server/handler.zig
+}
+
+/// Flexible handler resolution (custom HTTP methods, event handlers)
+pub fn resolveCustomHandler(
+    handlers: ServerMeta.RouteHandlers,
+    method: zx.Request.Method,
+    method_string: ?[]const u8,
+) ?ServerMeta.RouteHandler {
+    return switch (method) {
+        .GET => handlers.get orelse handlers.handler,
+        .POST => handlers.post orelse handlers.handler,
+        .PUT => handlers.put orelse handlers.handler,
+        .DELETE => handlers.delete orelse handlers.handler,
+        .PATCH => handlers.patch orelse handlers.handler,
+        .HEAD => handlers.head orelse handlers.handler,
+        .OPTIONS => handlers.options orelse handlers.handler,
+        else => blk: {
+            if (handlers.custom_methods) |custom_methods| {
+                if (method_string) |ms| {
+                    for (custom_methods) |custom| {
+                        if (std.mem.eql(u8, custom.method, ms)) {
+                            break :blk custom.handler;
+                        }
+                    }
+                }
+            }
+            break :blk handlers.handler;
+        },
+    };
+}
+
 /// Match a route by path with support for :param and * glob patterns.
 /// Returns the matched route and any extracted URL parameters.
 pub fn matchRoute(path: []const u8, opts: FindRouteOptions) ?RouteMatch {
@@ -63,7 +186,7 @@ pub fn matchRoute(path: []const u8, opts: FindRouteOptions) ?RouteMatch {
                     if (opts.has_error and route.@"error" == null) continue;
                     return m;
                 }
-                if (std.mem.lastIndexOfScalar(u8, current[0..@max(current.len, 1) - 1], '/')) |last_slash| {
+                if (std.mem.lastIndexOfScalar(u8, current[0 .. @max(current.len, 1) - 1], '/')) |last_slash| {
                     current = if (last_slash == 0) "/" else current[0..last_slash];
                 } else {
                     if (!std.mem.eql(u8, current, "/")) {

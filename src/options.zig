@@ -3,6 +3,7 @@ const std = @import("std");
 const pltfm = @import("platform.zig");
 const platform = pltfm.platform;
 const Client = @import("runtime/client/Client.zig");
+const Edge = @import("runtime/edge/Edge.zig");
 
 pub const BuiltinAttribute = @import("attributes.zig").builtin;
 
@@ -73,4 +74,10 @@ pub const ProxyOptions = struct {
 /// ```zig
 /// pub const std_options = zx.std_options;
 /// ```
-pub const std_options: std.Options = .{ .logFn = if (platform == .browser) Client.logFn else std.log.defaultLog };
+pub const std_options: std.Options = .{
+    .logFn = switch (platform) {
+        .browser => Client.logFn,
+        .edge => Edge.logFn,
+        else => std.log.defaultLog,
+    },
+};

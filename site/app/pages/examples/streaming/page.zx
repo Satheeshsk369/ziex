@@ -34,7 +34,7 @@ pub fn Page(ctx: zx.PageContext) zx.Component {
 
 fn UserProfile(allocator: zx.Allocator, props: struct { user_id: u32 }) zx.Component {
     if (props.user_id != 0) {
-        std.Thread.sleep(700 * std.time.ns_per_ms);
+        wait(700);
     }
 
     const name = if (props.user_id == 0) "....." else "Jane Developer";
@@ -55,7 +55,7 @@ fn UserProfile(allocator: zx.Allocator, props: struct { user_id: u32 }) zx.Compo
 
 fn RecentPosts(allocator: zx.Allocator, props: struct { count: u32 }) zx.Component {
     if (props.count != 0) {
-        std.Thread.sleep(1600 * std.time.ns_per_ms);
+        wait(1600);
     }
 
     const title = if (props.count == 0) "Recent Posts (.....)" else "Recent Posts (3)";
@@ -77,7 +77,7 @@ fn RecentPosts(allocator: zx.Allocator, props: struct { count: u32 }) zx.Compone
 
 fn SiteStats(allocator: zx.Allocator, props: struct { loading: bool }) zx.Component {
     if (!props.loading) {
-        std.Thread.sleep(500 * std.time.ns_per_ms);
+        wait(500);
     }
 
     const users = if (props.loading) "....." else "12,847";
@@ -98,5 +98,23 @@ fn SiteStats(allocator: zx.Allocator, props: struct { loading: bool }) zx.Compon
     );
 }
 
+/// Pause execution for `duration_ms` milliseconds.
+/// On native (dev server): uses std.Thread.sleep.
+/// On WASM (edge/Cloudflare): calls a Suspending JS import so the Worker can
+/// flush partial response chunks to the client before resuming — enabling
+/// true streaming with JSPI.
+fn wait(duration_ms: u64) void {
+    if (comptime builtin.cpu.arch == .wasm32) {
+        sleep_ms(@intCast(duration_ms));
+    } else {
+        std.Thread.sleep(duration_ms * std.time.ns_per_ms);
+    }
+}
+
+/// Suspending WASM import — implemented as `setTimeout` on the JS side.
+/// Only linked in WASM builds; dead-code-eliminated in native builds.
+extern "__zx_sys" fn sleep_ms(ms: u32) void;
+
+const builtin = @import("builtin");
 const std = @import("std");
 const zx = @import("zx");

@@ -354,7 +354,10 @@ pub const ZxContext = struct {
             // Event handlers - store as function pointer
             .@"fn" => .{
                 .name = name,
-                .handler = zx.EventHandler.fromFn(val),
+                .handler = if (comptime std.mem.eql(u8, name, "action"))
+                    zx.EventHandler.fromActionFn(val)
+                else
+                    zx.EventHandler.fromFn(val),
             },
             // Pre-built event handlers
             .@"struct" => if (T == zx.EventHandler) .{

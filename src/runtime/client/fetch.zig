@@ -149,6 +149,32 @@ fn findSlotByFetchId(fetch_id: u64) ?usize {
     return null;
 }
 
+/// Allocate a pending fetch slot and register a ctx callback without firing _fetchAsync.
+/// Returns the fetch_id to pass to a custom extern (e.g. _submitFormActionAsync).
+/// The callback will be invoked when __zx_fetch_complete arrives for that id.
+pub fn allocFetchId(
+    allocator: std.mem.Allocator,
+    ctx: *anyopaque,
+    callback: ResponseCallbackCtx,
+) ?u64 {
+    const fetch_id = next_fetch_id;
+    next_fetch_id +%= 1;
+
+    const slot_index = findOrAllocSlot(fetch_id) orelse {
+        callback(ctx, null, error.TooManyPendingRequests);
+        return null;
+    };
+
+    pending_slots[slot_index] = PendingFetch{
+        .active = true,
+        .fetch_id = fetch_id,
+        .callback_ctx_fn = callback,
+        .callback_ctx = ctx,
+        .allocator = allocator,
+    };
+    return fetch_id;
+}
+
 /// Called by JS when async fetch completes
 export fn __zx_fetch_complete(
     fetch_id: u64,

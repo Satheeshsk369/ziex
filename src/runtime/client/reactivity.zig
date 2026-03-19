@@ -661,9 +661,9 @@ pub const EventHandler = struct {
 
     callback: *const fn (ctx: *anyopaque, event: zx.EventContext) void,
     context: *anyopaque,
-    /// Non-null when created from a `fn (zx.ActionContext) void`.
-    /// Used server-side to register and dispatch the handler.
-    action_fn: ?*const fn (zx.ActionContext) void = null,
+    /// Non-null when created from a form `action={}` handler.
+    /// Takes a pointer so the server wrapper can write `_state_ctx` back after the call.
+    action_fn: ?*const fn (*zx.ActionContext) void = null,
     /// Server-side handler; takes *ServerEventContext so the wrapper can set _state_ctx.
     server_event_fn: ?*const fn (*zx.ServerEventContext) void = null,
     /// Unique ID for this handler instance on the current page.
@@ -685,10 +685,17 @@ pub const EventHandler = struct {
             const arg_type = params[0].type.?;
             switch (arg_type) {
                 zx.ActionContext => {
+                    // Wrap fn(ActionContext)void → fn(*ActionContext)void so the server
+                    // can write _state_ctx back after dispatch.
+                    const Wrap = struct {
+                        fn w(ctx: *zx.ActionContext) void {
+                            func(ctx.*);
+                        }
+                    };
                     return .{
                         .callback = &serverActionHandler,
                         .context = @as(*anyopaque, @ptrFromInt(1)),
-                        .action_fn = func,
+                        .action_fn = &Wrap.w,
                     };
                 },
                 zx.ServerEventContext => {
@@ -704,7 +711,19 @@ pub const EventHandler = struct {
                         .server_event_fn = &Wrapper.w,
                     };
                 },
-                else => {},
+                else => {
+                    // Guard: user-defined struct arg (not a framework context) is only valid
+                    // on `action={}`. Point them at fromActionFn / the action attribute.
+                    if (comptime @typeInfo(arg_type) == .@"struct" and
+                        arg_type != zx.EventContext)
+                    {
+                        @compileError(
+                            "A struct-typed handler `" ++ @typeName(@TypeOf(func)) ++ "` can only be used " ++
+                                "as a form `action={}` attribute, not as an event handler. " ++
+                                "Use `fn (zx.EventContext) void` for event handlers.",
+                        );
+                    }
+                },
             }
         }
 
@@ -722,6 +741,39 @@ pub const EventHandler = struct {
             .callback = &Wrapper.wrapper,
             .context = @as(*anyopaque, @ptrFromInt(1)),
         };
+    }
+
+    /// Helper to create an EventHandler from a form `action={}` attribute.
+    /// Accepts both `fn (zx.ActionContext) void` and `fn (SomeStruct) void`.
+    /// For the struct form, form fields are automatically parsed via ctx.data(T).
+    pub fn fromActionFn(comptime func: anytype) EventHandler {
+        const FnType = @TypeOf(func);
+        const fn_info = @typeInfo(FnType);
+        const params = fn_info.@"fn".params;
+
+        if (comptime params.len == 1) {
+            const arg_type = params[0].type.?;
+            // Direct typed form: first param is a user struct (not a framework context type).
+            if (comptime @typeInfo(arg_type) == .@"struct" and
+                arg_type != zx.ActionContext and
+                arg_type != zx.EventContext and
+                arg_type != zx.ServerEventContext)
+            {
+                const DirectTyped = struct {
+                    fn w(ctx: *zx.ActionContext) void {
+                        func(ctx.data(arg_type));
+                    }
+                };
+                return .{
+                    .callback = &serverActionHandler,
+                    .context = @as(*anyopaque, @ptrFromInt(1)),
+                    .action_fn = &DirectTyped.w,
+                };
+            }
+        }
+
+        // Fall back to the standard path (handles ActionContext, ServerEventContext, etc.)
+        return fromFn(func);
     }
 
     /// Helper to create an EventHandler from a runtime function pointer (no context)
@@ -747,7 +799,7 @@ pub const EventHandler = struct {
         };
     }
 
-    fn serverActionHandler(ctx: *anyopaque, event: zx.EventContext) void {
+    pub fn serverActionHandler(ctx: *anyopaque, event: zx.EventContext) void {
         _ = ctx;
         if (!is_wasm) return;
 

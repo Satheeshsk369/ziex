@@ -232,8 +232,8 @@ pub fn renderInner(self: zx.Component, writer: *std.Io.Writer, options: RenderIn
             const is_no_closing = elem.tag.isVoid();
 
             // Handle attributes
+            var has_action_handler = false;
             if (elem.attributes) |attributes| {
-                var has_action_handler = false;
                 var has_method = false;
 
                 for (attributes) |attribute| {
@@ -255,7 +255,9 @@ pub fn renderInner(self: zx.Component, writer: *std.Io.Writer, options: RenderIn
                         if (std.mem.eql(u8, attribute.name, "method")) {
                             has_method = true;
                         }
-                        try writer.print(" {s}", .{attribute.name});
+                        // defaultValue is a DOM property; the HTML attribute equivalent is "value"
+                        const attr_name = if (std.mem.eql(u8, attribute.name, "defaultValue")) "value" else attribute.name;
+                        try writer.print(" {s}", .{attr_name});
                     }
                     if (attribute.value) |value| {
                         try writer.writeAll("=\"");
@@ -264,9 +266,10 @@ pub fn renderInner(self: zx.Component, writer: *std.Io.Writer, options: RenderIn
                     }
                 }
 
-                // Mimic Next.js: auto-inject method="post" on form elements with an action handler
+                // Mimic Next.js: auto-inject method="post" enctype="multipart/form-data"
+                // on form elements with an action handler
                 if (elem.tag == .form and has_action_handler and !has_method) {
-                    try writer.writeAll(" method=\"post\"");
+                    try writer.writeAll(" method=\"post\" enctype=\"multipart/form-data\"");
                 }
             }
 
@@ -275,6 +278,11 @@ pub fn renderInner(self: zx.Component, writer: *std.Io.Writer, options: RenderIn
                 try writer.print(">", .{});
             } else {
                 try writer.print(" />", .{});
+            }
+
+            // Inject hidden field so no-JS form submissions can be identified as action requests
+            if (elem.tag == .form and has_action_handler) {
+                try writer.writeAll("<input type=\"hidden\" name=\"__zx_action\" value=\"1\">");
             }
 
             // Comptime element injection: emit pre-baked HTML right after the opening tag

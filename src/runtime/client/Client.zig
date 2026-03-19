@@ -498,14 +498,21 @@ export fn __zx_free(ptr: [*]u8, size: usize) void {
 }
 
 /// Custom log function for browser environment that outputs to console.
-/// Uses console.info/warn/error which already display the level visually.
+/// Routes through the __zx._log extern so the same bridge handles both browser and edge.
 pub fn logFn(
     comptime message_level: std.log.Level,
     comptime scope: @TypeOf(.enum_literal),
     comptime format: []const u8,
     args: anytype,
 ) void {
+    const level: u8 = switch (message_level) {
+        .err => 0,
+        .warn => 1,
+        .info => 2,
+        .debug => 3,
+    };
     const prefix = if (scope == .default) "" else "(" ++ @tagName(scope) ++ ") ";
-    const formatted = std.fmt.allocPrint(zx.client_allocator, prefix ++ format, args) catch return;
-    Console.init().strLevel(message_level, formatted);
+    const msg = std.fmt.allocPrint(zx.client_allocator, prefix ++ format, args) catch return;
+    defer zx.client_allocator.free(msg);
+    @import("window/extern.zig")._log(level, msg.ptr, msg.len);
 }

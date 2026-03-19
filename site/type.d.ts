@@ -11,3 +11,13 @@ declare module "*.css" {
     const content: string;
     export default content;
 }
+
+declare module "*.wasm?module" {
+    const module: WebAssembly.Module;
+    export default module;
+}
+
+declare module "*.wasm" {
+    const module: WebAssembly.Module;
+    export default module;
+}

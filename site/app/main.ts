@@ -1,3 +1,4 @@
-import { init } from "../../pkg/ziex/src/wasm";
-init();
+import { Ziex } from "ziex";
+import module from "../zig-out/bin/ziex_dev.wasm";
 
+export default new Ziex<Env>({ module, kv: "KV" });

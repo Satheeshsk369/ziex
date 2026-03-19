@@ -1,7 +1,7 @@
 const std = @import("std");
 const zx = @import("../../root.zig");
 
-pub const ActionFn = *const fn (zx.ActionContext) void;
+pub const ActionFn = *const fn (*zx.ActionContext) void;
 pub const ServerEventFn = *const fn (*zx.ServerEventContext) void;
 
 var mu: std.Thread.Mutex = .{};

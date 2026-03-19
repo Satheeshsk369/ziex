@@ -51,6 +51,31 @@ pub extern "__zx" fn _wsClose(ws_id: u64, code: u16, reason_ptr: [*]const u8, re
 /// Write window.location.href into buf. Returns the number of bytes written.
 pub extern "__zx" fn _getLocationHref(buf: [*]u8, buf_len: usize) usize;
 
+/// Serialize the form data of the form DOM element identified by vnode_id as a
+/// URL-encoded string (application/x-www-form-urlencoded).  Returns the number
+/// of bytes written to buf (0 if the element is not a form or not found).
+pub extern "__zx" fn _getFormData(vnode_id: u64, buf_ptr: [*]u8, buf_len: usize) usize;
+
+/// Submit a form action: reads the DOM form identified by vnode_id, builds a
+/// multipart/form-data request with the X-ZX-Action header, and fires it via
+/// the JS fetch API.  The browser handles multipart serialization (including
+/// file inputs) so no WASM-side encoding is required.
+pub extern "__zx" fn _submitFormAction(vnode_id: u64) void;
+
+/// Like _submitFormAction but stateful: injects the serialised bound-state JSON
+/// as a `__zx_states` multipart field and calls __zx_fetch_complete(fetch_id,…)
+/// when the response arrives so WASM can apply the returned state updates.
+pub extern "__zx" fn _submitFormActionAsync(
+    vnode_id: u64,
+    states_ptr: [*]const u8,
+    states_len: usize,
+    fetch_id: u64,
+) void;
+
+// ── Logging ───────────────────────────────────────────────────────────────────
+/// Forward a log message to the JS console. level: 0=error, 1=warn, 2=info, 3=debug
+pub extern "__zx" fn _log(level: u8, ptr: [*]const u8, len: usize) void;
+
 // ── Fetch ─────────────────────────────────────────────────────────────────────
 pub extern "__zx" fn _fetchAsync(
     url_ptr: [*]const u8,

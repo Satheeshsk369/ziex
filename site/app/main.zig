@@ -28,8 +28,8 @@ pub const AppCtx = struct {
 };
 
 pub const configs = .{
-    .main_site_url = if (builtin.mode == .Debug) "" else zx.info.homepage,
+    .main_site_url = if (builtin.mode == .Debug or builtin.os.tag == .wasi) "" else zx.info.homepage,
     // Some examples are on the SSR site beacuse the main site is statically generated and some of examples depends on the SSR.
-    .ssr_url = if (builtin.mode == .Debug) "" else "https://ssr.ziex.dev",
-    .ssg_url = if (builtin.mode == .Debug) "" else zx.info.homepage,
+    .ssr_url = if (builtin.mode == .Debug or builtin.os.tag == .wasi) "" else "https://ssr.ziex.dev",
+    .ssg_url = if (builtin.mode == .Debug or builtin.os.tag == .wasi) "" else zx.info.homepage,
 };

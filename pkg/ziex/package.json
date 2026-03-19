@@ -10,7 +10,9 @@
     "./react": "./react/index.js",
     "./wasm": "./wasm/index.js",
     "./wasm/init": "./wasm/init.js",
-    "./cloudflare": "./cloudflare/index.js"
+    "./cloudflare": "./cloudflare/index.js",
+    "./aws-lambda": "./aws-lambda/index.js",
+    "./vercel": "./vercel/index.js"
   },
   "homepage": "https://ziex.dev",
   "repository": {
@@ -49,6 +51,14 @@
     "typescript": "^5.0.0",
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
   },
   "release": {
     "plugins": [

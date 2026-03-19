@@ -122,11 +122,96 @@ pub const ActionContext = struct {
     allocator: std.mem.Allocator = undefined,
     arena: std.mem.Allocator = undefined,
     action_ref: u64 = 0,
+    /// Set by stateful action wrappers; read back by the server to build the response.
+    _state_ctx: ?*StateContext = null,
 
     pub fn init(action_ref: u64) ActionContext {
         return .{ .action_ref = action_ref };
     }
+
+    /// Parse the submitted form fields into a typed struct using comptime reflection.
+    ///
+    /// Each struct field name must match an HTML `<input name="...">` attribute.
+    /// Handles both `multipart/form-data` and `application/x-www-form-urlencoded`.
+    ///
+    /// Supported field types: `[]const u8`, `bool`, any int/float, and `?T` wrappers.
+    /// Missing fields get zero-values (`""`, `false`, `0`); optional fields get `null`.
+    ///
+    /// Example:
+    /// ```zig
+    /// const Login = struct { username: []const u8, remember: bool };
+    /// const form = ctx.data(Login);
+    /// ```
+    pub fn data(self: ActionContext, comptime T: type) T {
+        comptime if (@typeInfo(T) != .@"struct") @compileError("ctx.data() requires a struct type, got: " ++ @typeName(T));
+
+        const content_type = self.request.headers.get("content-type") orelse "";
+        var result: T = undefined;
+
+        if (std.mem.indexOf(u8, content_type, "multipart/form-data") != null) {
+            const mfd = self.request.multiFormData();
+            inline for (@typeInfo(T).@"struct".fields) |field| {
+                if (comptime field.type == zx.File) {
+                    const val = mfd.get(field.name);
+                    @field(result, field.name) = if (val) |v|
+                        zx.File.fromBytes(v.data, v.filename orelse "", "", self.arena)
+                    else
+                        zx.File{};
+                } else if (comptime field.type == ?zx.File) {
+                    const val = mfd.get(field.name);
+                    @field(result, field.name) = if (val) |v|
+                        zx.File.fromBytes(v.data, v.filename orelse "", "", self.arena)
+                    else
+                        null;
+                } else {
+                    @field(result, field.name) = parseFormField(field.type, mfd.getValue(field.name), self.arena);
+                }
+            }
+        } else {
+            const fd = self.request.formData();
+            inline for (@typeInfo(T).@"struct".fields) |field| {
+                if (comptime field.type == zx.File or field.type == ?zx.File) {
+                    // Files are not available in url-encoded submissions.
+                    @field(result, field.name) = if (comptime field.type == zx.File) zx.File{} else null;
+                } else {
+                    @field(result, field.name) = parseFormField(field.type, fd.get(field.name), self.arena);
+                }
+            }
+        }
+
+        return result;
+    }
 };
+
+/// Coerce a raw form string value into a comptime-known type.
+/// Called by ActionContext.data() for each struct field.
+fn parseFormField(comptime T: type, raw: ?[]const u8, allocator: std.mem.Allocator) T {
+    _ = allocator; // reserved for future heap types (e.g. []i32)
+    switch (@typeInfo(T)) {
+        .optional => |opt| {
+            const val = raw orelse return null;
+            // coerce child value → ?Child implicitly
+            return parseFormField(opt.child, val, undefined);
+        },
+        .pointer => {
+            comptime if (T != []const u8) @compileError("ctx.data(): only []const u8 is supported for pointer fields, got: " ++ @typeName(T));
+            return raw orelse "";
+        },
+        .bool => {
+            const val = raw orelse return false;
+            return std.mem.eql(u8, val, "true") or std.mem.eql(u8, val, "1") or std.mem.eql(u8, val, "on");
+        },
+        .int => {
+            const val = raw orelse return 0;
+            return std.fmt.parseInt(T, val, 10) catch 0;
+        },
+        .float => {
+            const val = raw orelse return 0;
+            return std.fmt.parseFloat(T, val) catch 0;
+        },
+        else => @compileError("ctx.data(): unsupported field type '" ++ @typeName(T) ++ "'"),
+    }
+}
 
 /// A handle to a single state value inside a ServerEventContext handler.
 /// Returned by `sc.state(T)` — call `.get()` to read, `.set(val)` to write back.
@@ -156,6 +241,7 @@ pub fn StateHandle(comptime T: type) type {
 /// Call `sc.state(T)` in the same order as `ctx.state(T)` in the render function
 /// to access each bound state — no index needed.
 pub const StateContext = struct {
+    arena: std.mem.Allocator,
     _allocator: std.mem.Allocator,
     /// Positional JSON values received from the client, one per bound state.
     _inputs: []const []const u8,
@@ -174,6 +260,10 @@ pub const StateContext = struct {
         else
             std.mem.zeroes(T);
         return StateHandle(T){ ._ctx = self, ._index = i, ._value = val };
+    }
+
+    pub fn fmt(self: StateContext, comptime format: []const u8, args: anytype) ![]u8 {
+        return fmtInner(self.arena, format, args);
     }
 };
 
@@ -268,6 +358,7 @@ pub fn ComponentCtx(comptime PropsType: type) type {
                     }
                     const sc = ctx.allocator.create(zx.StateContext) catch return;
                     sc.* = zx.StateContext{
+                        .arena = ctx.arena,
                         ._allocator = ctx.allocator,
                         ._inputs = ctx.payload.states,
                         ._outputs = outputs,
@@ -380,6 +471,7 @@ pub fn ComponentCtx(comptime PropsType: type) type {
                         }
                         const sc = ctx.allocator.create(zx.StateContext) catch return;
                         sc.* = zx.StateContext{
+                            .arena = ctx.arena,
                             ._allocator = ctx.allocator,
                             ._inputs = ctx.payload.states,
                             ._outputs = outputs,
@@ -418,9 +510,72 @@ pub fn ComponentCtx(comptime PropsType: type) type {
                     @ptrCast(server_evt_ctx),
                     bound_states,
                 );
+            } else if (comptime (params.len == 2 and
+                params[0].type.? == zx.ActionContext and
+                params[1].type.? == *zx.StateContext) or
+                (params.len == 2 and
+                    @typeInfo(params[0].type.?) == .@"struct" and
+                    params[0].type.? != zx.ActionContext and
+                    params[1].type.? == *zx.StateContext))
+            {
+                // Form action with state binding.
+                // Wraps into fn(*ActionContext)void: reads __zx_states from multipart,
+                // creates StateContext, calls the real handler, stores sc on _state_ctx.
+                const arg0 = params[0].type.?;
+                const FormActionWrapper = struct {
+                    fn wrap(action_ctx_ptr: *zx.ActionContext) void {
+                        const mfd = action_ctx_ptr.request.multiFormData();
+                        const states_raw = mfd.getValue("__zx_states") orelse "[]";
+                        const states = zx.prop.parse(
+                            []const []const u8,
+                            action_ctx_ptr.arena,
+                            states_raw,
+                        );
+                        const outputs = action_ctx_ptr.arena.alloc([]u8, states.len) catch return;
+                        for (states, 0..) |s, i| {
+                            outputs[i] = action_ctx_ptr.arena.dupe(u8, s) catch "";
+                        }
+                        const sc = action_ctx_ptr.arena.create(zx.StateContext) catch return;
+                        sc.* = .{
+                            .arena = action_ctx_ptr.arena,
+                            ._allocator = action_ctx_ptr.arena,
+                            ._inputs = states,
+                            ._outputs = outputs,
+                        };
+                        action_ctx_ptr._state_ctx = sc;
+                        if (comptime arg0 == zx.ActionContext) {
+                            handler(action_ctx_ptr.*, sc);
+                        } else {
+                            handler(action_ctx_ptr.data(arg0), sc);
+                        }
+                    }
+                };
+
+                const alloc = if (platform == .browser) client_allocator else self.allocator;
+                const bound_states = reactivity.collectStateBoundEntries(
+                    alloc,
+                    self._component_id,
+                    self._state_index,
+                );
+
+                return zx.EventHandler{
+                    .callback = &reactivity.EventHandler.serverActionHandler,
+                    .context = @as(*anyopaque, @ptrFromInt(1)),
+                    .action_fn = &FormActionWrapper.wrap,
+                    .bound_states = bound_states,
+                };
             } else {
-                @compileError("bind: handler must be fn(*EventContext) void, fn(*StateContext) void, or fn(ServerEventContext, *StateContext) void");
+                @compileError("bind: handler must be fn(*EventContext) void, fn(*StateContext) void, fn(ServerEventContext, *StateContext) void, fn(ActionContext, *StateContext) void, or fn(FormData, *StateContext) void");
             }
         }
     };
+}
+
+inline fn fmtInner(allocator: std.mem.Allocator, comptime format: []const u8, args: anytype) ![]u8 {
+    var aw: std.Io.Writer.Allocating = .init(allocator);
+    defer aw.deinit();
+    aw.writer.print(format, args) catch |err| switch (err) {
+        error.WriteFailed => return error.OutOfMemory,
+    };
+    return aw.toOwnedSlice();
 }

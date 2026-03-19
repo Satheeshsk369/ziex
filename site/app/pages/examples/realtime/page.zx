@@ -98,6 +98,8 @@ var ws: ?zx.WebSocket = null;
 var current_username: []const u8 = "";
 
 fn joinChat(username: []const u8) void {
+    if (zx.platform != .browser) return;
+
     std.log.info("joinChat: {s}", .{username});
     current_username = zx.client_allocator.dupe(u8, username) catch return;
     ws = zx.WebSocket.init(zx.client_allocator, "/examples/realtime/ws", .{}) catch return;
@@ -139,8 +141,8 @@ fn leaveChat(_: zx.EventContext) void {
 }
 
 fn sendMessage(e: zx.EventContext) void {
-    e.preventDefault();
     if (zx.platform != .browser) return;
+    e.preventDefault();
 
     const document = zx.client.Document.init(zx.client_allocator);
     const input = document.getElementById("message-input") catch return;
@@ -160,6 +162,8 @@ fn sendMessage(e: zx.EventContext) void {
 fn onWsOpen(_: *zx.WebSocket) void {}
 
 fn onWsMessage(_: *zx.WebSocket, event: zx.WebSocket.MessageEvent) void {
+    if (zx.platform != .browser) return;
+
     const data = event.text() orelse return;
     const is_system = std.mem.startsWith(u8, data, "system:");
 
@@ -185,6 +189,8 @@ fn onWsMessage(_: *zx.WebSocket, event: zx.WebSocket.MessageEvent) void {
 }
 
 fn onWsClose(_: *zx.WebSocket, _: zx.WebSocket.CloseEvent) void {
+    if (zx.platform != .browser) return;
+
     if (messages) |msgs_state| {
         var msgs = msgs_state.get();
         msgs.insert(zx.client_allocator, 0, .{
@@ -197,6 +203,8 @@ fn onWsClose(_: *zx.WebSocket, _: zx.WebSocket.CloseEvent) void {
 }
 
 fn onWsError(_: *zx.WebSocket, _: zx.WebSocket.ErrorEvent) void {
+    if (zx.platform != .browser) return;
+
     if (messages) |msgs_state| {
         var msgs = msgs_state.get();
         msgs.insert(zx.client_allocator, 0, .{

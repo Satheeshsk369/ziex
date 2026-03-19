@@ -558,7 +558,7 @@ pub fn AppCtx(comptime DataType: type) type {
     return DataType;
 }
 
-fn fmtInner(allocator: std.mem.Allocator, comptime format: []const u8, args: anytype) ![]u8 {
+inline fn fmtInner(allocator: std.mem.Allocator, comptime format: []const u8, args: anytype) ![]u8 {
     var aw: std.Io.Writer.Allocating = .init(allocator);
     defer aw.deinit();
     aw.writer.print(format, args) catch |err| switch (err) {

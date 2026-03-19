@@ -118,6 +118,73 @@ pub fn applyPatches(
     }
 }
 
+/// Context stored on the heap so formActionCallback can find the form by vnode_id.
+/// When `bound_states` is non-empty the submission is stateful: bound state values
+/// are serialised, sent as `__zx_states`, and the response updates those states.
+const FormActionCtx = struct {
+    vnode_id: u64,
+    bound_states: []const zx.EventHandler.BoundStateEntry = &.{},
+};
+
+/// Callback context for stateful form action responses.
+const FormActionCallbackCtx = struct {
+    bound_states: []const zx.EventHandler.BoundStateEntry,
+};
+
+/// Called when a stateful form action response arrives; applies state updates.
+fn onFormActionResponse(
+    ctx_ptr: *anyopaque,
+    response: ?*@import("../core/Fetch.zig").Response,
+    _: ?@import("../core/Fetch.zig").FetchError,
+) void {
+    const cb_ctx: *FormActionCallbackCtx = @ptrCast(@alignCast(ctx_ptr));
+    defer zx.client_allocator.destroy(cb_ctx);
+
+    const resp = response orelse return;
+    if (resp._body.len == 0) return;
+
+    const states = zx.prop.parse([]const []const u8, zx.client_allocator, resp._body);
+    for (states, 0..) |state_json, i| {
+        if (i >= cb_ctx.bound_states.len) break;
+        const bs = cb_ctx.bound_states[i];
+        bs.applyJson(bs.state_ptr, state_json);
+    }
+}
+
+/// onsubmit handler for form elements that carry an action handler.
+/// Fire-and-forget when no states are bound; stateful round-trip otherwise.
+fn formActionCallback(ctx: *anyopaque, event: zx.EventContext) void {
+    if (!is_wasm) return;
+    const form_ctx: *FormActionCtx = @ptrCast(@alignCast(ctx));
+    event.preventDefault();
+
+    if (form_ctx.bound_states.len == 0) {
+        ext._submitFormAction(form_ctx.vnode_id);
+        return;
+    }
+
+    // Stateful: serialise bound-state values → JSON array → __zx_states field.
+    const alloc = zx.client_allocator;
+    var states_list = std.ArrayList([]const u8).empty;
+    for (form_ctx.bound_states) |bs| {
+        states_list.append(alloc, bs.getJson(alloc, bs.state_ptr)) catch {};
+    }
+    var aw = std.Io.Writer.Allocating.init(alloc);
+    zx.prop.serialize([]const []const u8, states_list.items, &aw.writer) catch {};
+    const states_json = aw.written();
+
+    const cb_ctx = alloc.create(FormActionCallbackCtx) catch return;
+    cb_ctx.* = .{ .bound_states = form_ctx.bound_states };
+
+    const client_fetch = @import("fetch.zig");
+    const fetch_id = client_fetch.allocFetchId(alloc, @ptrCast(cb_ctx), onFormActionResponse) orelse {
+        alloc.destroy(cb_ctx);
+        return;
+    };
+    ext._submitFormActionAsync(form_ctx.vnode_id, states_json.ptr, states_json.len, fetch_id);
+}
+
+
 /// Build DOM nodes for a VNode subtree and register every node in the JS
 pub fn createPlatformNodes(allocator: zx.Allocator, vnode: *VNode, client: anytype) anyerror!Document.HTMLNode {
     if (!is_wasm) return .{ .text = Document.HTMLText.init(allocator, {}) };
@@ -139,23 +206,45 @@ pub fn createPlatformNodes(allocator: zx.Allocator, vnode: *VNode, client: anyty
             if (elem.attributes) |attrs| {
                 var has_action_handler = false;
                 var has_method = false;
+                var form_bound_states: []const zx.EventHandler.BoundStateEntry = &.{};
 
                 for (attrs) |attr| {
                     if (std.mem.eql(u8, attr.name, "key")) continue;
                     if (attr.handler) |handler| {
-                        if (handler.action_fn != null) has_action_handler = true;
+                        if (handler.action_fn != null) {
+                            has_action_handler = true;
+                            form_bound_states = handler.bound_states;
+                        }
                         continue;
                     }
                     if (std.mem.eql(u8, attr.name, "method")) has_method = true;
                     const val = attr.value orelse "";
-                    ext._sa(vnode.id, attr.name.ptr, attr.name.len, val.ptr, val.len);
+                    // defaultValue is a DOM property; the HTML attribute equivalent is "value"
+                    const attr_name = if (std.mem.eql(u8, attr.name, "defaultValue")) "value" else attr.name;
+                    ext._sa(vnode.id, attr_name.ptr, attr_name.len, val.ptr, val.len);
                 }
 
-                // Mimic Next.js: auto-inject method="post" on form elements with an action handler
+                // Mimic Next.js: auto-inject method="post" enctype="multipart/form-data"
+                // on form elements with an action handler
                 if (elem.tag == .form and has_action_handler and !has_method) {
                     const method = "method";
                     const post = "post";
                     ext._sa(vnode.id, method.ptr, method.len, post.ptr, post.len);
+                    const enctype_key = "enctype";
+                    const enctype_val = "multipart/form-data";
+                    ext._sa(vnode.id, enctype_key.ptr, enctype_key.len, enctype_val.ptr, enctype_val.len);
+                }
+
+                // Register a synthetic onsubmit handler that POSTs form data to the server
+                if (elem.tag == .form and has_action_handler) {
+                    const Client = @import("Client.zig");
+                    if (allocator.create(FormActionCtx) catch null) |form_ctx| {
+                        form_ctx.* = .{ .vnode_id = vnode.id, .bound_states = form_bound_states };
+                        client.registerHandler(vnode.id, Client.EventType.submit, zx.EventHandler{
+                            .callback = &formActionCallback,
+                            .context = @ptrCast(form_ctx),
+                        });
+                    }
                 }
             }
 

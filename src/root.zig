@@ -116,6 +116,7 @@ pub const Request = @import("runtime/core/Request.zig");
 pub const Response = @import("runtime/core/Response.zig");
 pub const Fetch = @import("runtime/core/Fetch.zig");
 pub const WebSocket = @import("runtime/core/WebSocket.zig");
+pub const File = @import("runtime/core/File.zig");
 pub const Io = Fetch.Io;
 pub const fetch = Fetch.fetch;
 

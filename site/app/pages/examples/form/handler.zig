@@ -15,6 +15,8 @@ const RequestInfo = struct {
 };
 
 pub fn handleRequest(ctx: zx.PageContext) RequestInfo {
+    start(ctx);
+    defer end(ctx);
     // const fd = ctx.request.formData() catch @panic("OOM");
     const qs = ctx.request.searchParams;
 
@@ -91,4 +93,17 @@ fn filterUsers(allocator: std.mem.Allocator, search_opt: ?[]const u8) std.ArrayL
     }
 
     return filtered;
+}
+
+const kv = zx.kv.scope("examples/form");
+fn start(ctx: zx.PageContext) void {
+    users.clearRetainingCapacity();
+    const v = kv.get(ctx.arena, "users") catch return;
+    const ul = zx.prop.parse([]User, ctx.arena, v);
+    users.appendSlice(ctx.arena, ul) catch return;
+}
+fn end(ctx: zx.PageContext) void {
+    var aw: std.Io.Writer.Allocating = .init(ctx.arena);
+    zx.prop.serialize([]User, users.items, &aw.writer) catch return;
+    kv.put("users", aw.written(), .{}) catch return;
 }

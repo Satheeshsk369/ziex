@@ -2,16 +2,16 @@ pub fn Page(ctx: zx.PageContext) !zx.Component {
     std.log.info("Starting fetch request (server-side)...", .{});
 
     // Server-side: use blocking Io
-    const result = try zx.fetch(.blocking, ctx.arena, "https://jsonplaceholder.typicode.com/todos/1", .{});
-    var res = result orelse return error.FetchError;
-    defer res.deinit();
+    // const result = try zx.fetch(.blocking, ctx.arena, "https://jsonplaceholder.typicode.com/todos/1", .{});
+    // var res = result orelse return error.FetchError;
+    // defer res.deinit();
 
-    const t = res.text() catch |err| {
-        std.log.err("Fetch text error: {s}", .{@errorName(err)});
-        return error.FetchTextError;
-    };
+    // const t = res.text() catch |err| {
+    //     std.log.err("Fetch text error: {s}", .{@errorName(err)});
+    //     return error.FetchTextError;
+    // };
 
-    std.log.info("Fetch completed (server-side): {s}", .{t});
+    // std.log.info("Fetch completed (server-side): {s}", .{t});
 
     return (
         <div @allocator={ctx.arena} class="todo-container">
