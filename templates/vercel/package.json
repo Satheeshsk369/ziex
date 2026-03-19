@@ -1,0 +1,14 @@
+{
+  "name": "ziex_cloudflare",
+  "type": "module",
+  "scripts": {
+    "build": "vercel build",
+    "deploy": "vercel deploy --prebuilt"
+  },
+  "dependencies": {
+    "ziex": "^0.1.0-dev.804"
+  },
+  "devDependencies": {
+    "vercel": "^50.34.1"
+  }
+}

@@ -1,0 +1,37 @@
+# General ignores
+.zig-cache/
+zig-out/
+dist/
+bundle/
+node_modules/
+.wrangler/
+
+# Ignore all files by default
+**/*
+
+# unignore directories so we can unignore files within them
+!*/
+!*/**/
+
+# base template (keep everything except ignored above)
+!_base/**/*
+!.gitignore
+
+# cloudflare template (keep only specific overrides)
+!cloudflare/.gitignore
+!cloudflare/package.json
+!cloudflare/wrangler.jsonc
+!cloudflare/build.zig
+!cloudflare/app/main.ts
+!cloudflare/type.d.ts
+!cloudflare/README.md
+
+# vercel template
+!vercel/.gitignore
+!vercel/.vercelignore
+!vercel/package.json
+!vercel/build.zig
+!vercel/api/index.ts
+!vercel/vercel.json
+!vercel/README.md
+!vercel/type.d.ts
