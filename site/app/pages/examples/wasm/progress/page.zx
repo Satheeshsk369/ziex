@@ -43,14 +43,14 @@ pub fn ProgressDemo(ctx: *zx.ComponentContext) zx.Component {
     );
 }
 
-fn start(_: zx.EventContext) void {
+fn start(_: zx.client.Event) void {
     if (interval_id != null) return;
     progress.set(0);
     fetch();
     interval_id = zx.client.setInterval(&fetch, 1200);
 }
 
-fn stop(_: zx.EventContext) void {
+fn stop(_: zx.client.Event) void {
     if (interval_id) |id| {
         zx.client.clearInterval(id);
         interval_id = null;
@@ -58,7 +58,7 @@ fn stop(_: zx.EventContext) void {
     }
 }
 
-fn reset(_: zx.EventContext) void {
+fn reset(_: zx.client.Event) void {
     if (interval_id) |id| {
         zx.client.clearInterval(id);
         interval_id = null;

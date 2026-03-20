@@ -86,7 +86,7 @@ pub fn ComponentState(
                 <div @allocator={ctx.allocator} class="component-state-wrapper">
                     <div @allocator={ctx.allocator} class="state-content">
                         <StateSection allocator={ctx.allocator} title="Props" items={metadata.prop_items} />
-                        <StateSection allocator={ctx.allocator} title="Signals" items={metadata.signal_items} />
+                        <StateSection allocator={ctx.allocator} title="States" items={metadata.signal_items} />
                         <StateSection allocator={ctx.allocator} title="Actions" items={metadata.action_items} />
                     </div>
                 </div>
@@ -106,12 +106,12 @@ pub fn ComponentState(
     );
 }
 
-pub fn handleComponentSearchInput(ctx: zx.EventContext) void {
+pub fn handleComponentSearchInput(ctx: zx.client.Event) void {
     inputvalue = ctx.value() orelse "";
     zx.rerender();
 }
 
-pub fn handleStateFilterInput(ctx: zx.EventContext) void {
+pub fn handleStateFilterInput(ctx: zx.client.Event) void {
     stateFilter = ctx.value() orelse "";
     zx.rerender();
 }
@@ -126,7 +126,7 @@ pub fn ComponentStateFilter(
     );
 }
 
-pub fn handleComponentClick(ctx: zx.EventContext) void {
+pub fn handleComponentClick(ctx: zx.client.Event) void {
     const id = ctx.value() orelse "0";
     selected_component = id;
     zx.rerender();
@@ -146,7 +146,7 @@ pub fn NativeToggle(
     );
 }
 
-pub fn handleToggleNative(_: zx.EventContext) void {
+pub fn handleToggleNative(_: zx.client.Event) void {
     data.show_native_elements = !data.show_native_elements;
     data.saveSettings();
     zx.rerender();

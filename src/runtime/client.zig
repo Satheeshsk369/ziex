@@ -1,11 +1,11 @@
-const client = @import("client/window.zig");
+const window = @import("client/window.zig");
 
-pub const Event = client.Event;
+pub const Event = @import("client/Event.zig");
 
 // Legacy --- may get removed/renamed
-pub const Document = client.Document;
-pub const js = client.js;
-pub const clearInterval = client.clearInterval;
-pub const setInterval = client.setInterval;
-pub const setTimeout = client.setTimeout;
-pub const Console = client.Console;
+pub const Document = window.Document;
+pub const js = window.js;
+pub const clearInterval = window.clearInterval;
+pub const setInterval = window.setInterval;
+pub const setTimeout = window.setTimeout;
+pub const Console = window.Console;

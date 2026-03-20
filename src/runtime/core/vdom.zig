@@ -91,9 +91,6 @@ pub const VNode = struct {
             .component_csr => |component_csr| {
                 _ = component_csr;
             },
-            .signal_text => |sig| {
-                _ = sig;
-            },
         }
         return self;
     }
@@ -314,10 +311,6 @@ pub fn areComponentsSameType(old: zx.Component, new: zx.Component) bool {
         },
         .component_csr => switch (new) {
             .component_csr => return true,
-            else => return false,
-        },
-        .signal_text => |old_sig| switch (new) {
-            .signal_text => |new_sig| return old_sig.signal_id == new_sig.signal_id,
             else => return false,
         },
     }

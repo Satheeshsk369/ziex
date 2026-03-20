@@ -118,7 +118,7 @@ fn joinChat(username: []const u8) void {
     }
 }
 
-fn leaveChat(_: zx.EventContext) void {
+fn leaveChat(_: zx.client.Event) void {
     if (zx.platform != .browser) return;
 
     if (ws) |*w| {
@@ -140,7 +140,7 @@ fn leaveChat(_: zx.EventContext) void {
     } else |_| {}
 }
 
-fn sendMessage(e: zx.EventContext) void {
+fn sendMessage(e: zx.client.Event) void {
     if (zx.platform != .browser) return;
     e.preventDefault();
 

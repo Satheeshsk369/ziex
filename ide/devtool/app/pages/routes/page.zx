@@ -96,7 +96,7 @@ pub fn ComponentSearchInput(
     );
 }
 
-pub fn handleComponentSearchInput(ctx: zx.EventContext) void {
+pub fn handleComponentSearchInput(ctx: zx.client.Event) void {
     inputvalue = ctx.value() orelse "";
     zx.rerender();
 }

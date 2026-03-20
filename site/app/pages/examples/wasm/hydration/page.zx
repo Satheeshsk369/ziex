@@ -106,7 +106,7 @@ pub fn Counter(ctx: *zx.ComponentCtx(CounterProps)) ?zx.Component {
             <p>Status: {@as(u8, @intFromEnum(props.status))}</p>
 
             <hr />
-            <h5>Signal: {count}</h5>
+            <h5>Var: {count}</h5>
         </div>
     );
 }

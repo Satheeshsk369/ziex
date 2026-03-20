@@ -83,14 +83,11 @@ pub const ComponentMeta = struct {
                     ctx.allocator = allocator;
                     ctx.children = null;
 
-                    // Inject unique instance ID for per-instance signal state (legacy)
                     ctx._id = instance_counter;
                     instance_counter +%= 1; // Wrap around on overflow
 
-                    // Inject the stable component_id so state()/signal() use stable (id, slot) keys.
                     // Reset both slot counters so hooks run in stable order every render.
                     ctx._component_id = current_render_id;
-                    ctx._signal_index = 0;
                     ctx._state_index = 0;
                     if (@hasField(CtxType, "_handler_index")) ctx._handler_index = 0;
                     if (@hasField(CtxType, "_component_name")) ctx._component_name = cmp_name;
@@ -262,7 +259,7 @@ pub fn getVElementById(self: *Client, id: u64) ?*vtree_mod.VElement {
 /// Returns true if a handler was found and called
 pub fn dispatchEvent(self: *Client, velement_id: u64, event_type: EventType, event_ref: u64) bool {
     if (self.getHandler(velement_id, event_type)) |handler| {
-        const event_context = zx.EventContext.init(event_ref);
+        const event_context = zx.client.Event.init(event_ref);
         handler.callback(handler.context, event_context);
         return true;
     }

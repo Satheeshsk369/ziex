@@ -21,7 +21,7 @@ pub fn Page(allocator: zx.Allocator) zx.Component {
     );
 }
 
-fn handleClick(event: zx.EventContext) void {
+fn handleClick(event: zx.client.Event) void {
     _ = event;
     std.debug.print("handleClick\n", .{});
 }

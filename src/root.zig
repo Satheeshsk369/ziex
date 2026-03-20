@@ -36,7 +36,10 @@ pub const components = @import("zx_meta").components.components;
 pub const meta = @import("zx_meta").meta;
 pub const info = @import("zx_info");
 
+// --- Aliases --- //
 pub const Allocator = std.mem.Allocator;
+pub const log = std.log;
+
 pub const Server = app_module.Server;
 pub const Edge = @import("runtime/server/wasm/entrypoint.zig");
 pub const Client = @import("runtime/client/Client.zig");
@@ -50,10 +53,6 @@ pub const cache = @import("runtime/core//Cache.zig");
 // --- Reactivity --- //
 pub const EventHandler = reactivity.EventHandler;
 pub const State = reactivity.State;
-// pub const effect = reactivity.effect;
-// pub const effectDeferred = reactivity.effectDeferred;
-// TODO: this is currently VDom based re-render, remove this once signal system can trigger complex-re-render
-pub const rerender = reactivity.rerender;
 
 // --- Options --- //
 pub const AppOptions = app_module.ServerConfig;
@@ -86,9 +85,8 @@ pub const SocketCloseCtx = routing.SocketCloseCtx;
 pub const SocketMessageType = routing.SocketMessageType;
 pub const ComponentCtx = ctxs.ComponentCtx;
 pub const ComponentContext = ComponentCtx(void);
-pub const EventContext = ctxs.EventContext;
-pub const StateContext = ctxs.StateContext;
-pub const StateHandle = ctxs.StateHandle;
+pub const StateContext = @import("runtime/core/Event.zig").StateContext;
+pub const StateHandle = @import("runtime/core/Event.zig").StateHandle;
 pub const ActionContext = ctxs.ActionContext;
 
 pub const BuiltinAttribute = @import("attributes.zig").builtin;

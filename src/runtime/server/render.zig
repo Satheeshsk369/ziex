@@ -180,13 +180,6 @@ pub fn renderInner(self: zx.Component, writer: *std.Io.Writer, options: RenderIn
             // End comment marker: <!--/$id-->
             try writer.print("<!--/${s}-->", .{component_csr.id});
         },
-        .signal_text => |sig| {
-            if (options.escaping == .none) {
-                try zx.util.html.unescape(writer, sig.current_text);
-            } else {
-                try writer.print("{s}", .{sig.current_text});
-            }
-        },
         .element => |elem| {
             // Check if this element is async and we're collecting async components
             if (options.async_components != null and elem.async == .stream) {

@@ -83,7 +83,7 @@ const initial_todos = [_]Todo{
     .{ .id = 3, .text = "Implement client-side rendering", .completed = false },
 };
 
-fn addTodo(e: *zx.EventContext) void {
+fn addTodo(e: *zx.client.Event.Stateful) void {
     e.preventDefault();
     if (!zx.platform.isBrowser()) return;
 
@@ -105,7 +105,7 @@ fn addTodo(e: *zx.EventContext) void {
     input.ref.set("value", js.string("")) catch return;
 }
 
-fn toggleTodo(e: *zx.EventContext) void {
+fn toggleTodo(e: *zx.client.Event.Stateful) void {
     if (!zx.platform.isBrowser()) return;
     const todos_state = e.state(TodoList);
     _ = e.state(u32); // skip next_id
@@ -130,14 +130,14 @@ fn toggleTodo(e: *zx.EventContext) void {
     todos_state.set(list);
 }
 
-fn clearTodos(e: *zx.EventContext) void {
+fn clearTodos(e: *zx.client.Event.Stateful) void {
     const todos_state = e.state(TodoList);
     var list = todos_state.get();
     list.items.len = 0;
     todos_state.set(list);
 }
 
-fn deleteTodo(e: *zx.EventContext) void {
+fn deleteTodo(e: *zx.client.Event.Stateful) void {
     if (!zx.platform.isBrowser()) return;
     const todos_state = e.state(TodoList);
     _ = e.state(u32); // skip next_id

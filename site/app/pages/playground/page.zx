@@ -155,7 +155,7 @@ pub fn ActionButtons(ctx: *zx.ComponentCtx(struct {})) zx.Component {
     );
 }
 
-fn handleRunClick(ctx: zx.EventContext) void {
+fn handleRunClick(ctx: zx.client.Event) void {
     _ = ctx;
 
     if (zx.platform != .browser) return;

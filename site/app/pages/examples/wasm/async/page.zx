@@ -55,12 +55,12 @@ pub fn TimerDemo(ctx: *zx.ComponentContext) zx.Component {
     );
 }
 
-fn startTimeout(_: zx.EventContext) void {
+fn startTimeout(_: zx.client.Event) void {
     std.log.info("setTimeout started (2 seconds)...", .{});
     _ = zx.client.setTimeout(&onTimeoutFired, 2000);
 }
 
-fn toggleInterval(_: zx.EventContext) void {
+fn toggleInterval(_: zx.client.Event) void {
     if (interval_id) |id| {
         zx.client.clearInterval(id);
         interval_id = null;
@@ -99,7 +99,7 @@ fn onFetchComplete(response: ?*zx.Fetch.Response, err: ?zx.Fetch.FetchError) voi
     }
 }
 
-fn doFetch(_: zx.EventContext) void {
+fn doFetch(_: zx.client.Event) void {
     std.log.info("Starting fetch request (client-side)...", .{});
 
     _ = zx.fetch(

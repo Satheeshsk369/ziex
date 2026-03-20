@@ -153,7 +153,7 @@ fn onFormActionResponse(
 
 /// onsubmit handler for form elements that carry an action handler.
 /// Fire-and-forget when no states are bound; stateful round-trip otherwise.
-fn formActionCallback(ctx: *anyopaque, event: zx.EventContext) void {
+fn formActionCallback(ctx: *anyopaque, event: zx.client.Event) void {
     if (!is_wasm) return;
     const form_ctx: *FormActionCtx = @ptrCast(@alignCast(ctx));
     event.preventDefault();
@@ -183,7 +183,6 @@ fn formActionCallback(ctx: *anyopaque, event: zx.EventContext) void {
     };
     ext._submitFormActionAsync(form_ctx.vnode_id, states_json.ptr, states_json.len, fetch_id);
 }
-
 
 /// Build DOM nodes for a VNode subtree and register every node in the JS
 pub fn createPlatformNodes(allocator: zx.Allocator, vnode: *VNode, client: anytype) anyerror!Document.HTMLNode {
@@ -254,13 +253,6 @@ pub fn createPlatformNodes(allocator: zx.Allocator, vnode: *VNode, client: anyty
             }
 
             break :blk .{ .element = htmlElementFromRef(allocator, ref_id) };
-        },
-        .signal_text => |sig| blk: {
-            const ref_id = ext._ct(sig.current_text.ptr, sig.current_text.len, vnode.id);
-            const text_node = htmlTextFromRef(allocator, ref_id);
-            const reactivity = @import("reactivity.zig");
-            reactivity.registerBinding(sig.signal_id, text_node.ref);
-            break :blk .{ .text = text_node };
         },
         .component_csr => |csr| blk: {
             // CSR islands: plain <div id="..." data-name="..."> placeholder.

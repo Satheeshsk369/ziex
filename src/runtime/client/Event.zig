@@ -1,0 +1,121 @@
+//! Client-side Event — wraps a browser JS event object.
+//!
+//! Provides DOM event methods: `value()`, `key()`, `preventDefault()`.
+//! For state access, use `Event.Stateful` via `ctx.bind()`.
+
+const std = @import("std");
+const zx = @import("../../root.zig");
+const pltfm = @import("../../platform.zig");
+const client = @import("window.zig");
+const reactivity = client.reactivity;
+
+const platform = pltfm.platform;
+const gpa = if (@import("builtin").os.tag == .freestanding) std.heap.wasm_allocator else std.heap.page_allocator;
+
+const Event = @This();
+
+/// The JS event object reference (as a u64 NaN-boxed value)
+event_ref: u64,
+
+pub fn init(event_ref: u64) Event {
+    return .{ .event_ref = event_ref };
+}
+
+/// Get the underlying js.Object for the event
+pub fn getEvent(self: Event) client.Event {
+    return client.Event.fromRef(self.event_ref);
+}
+
+/// Get the underlying js.Object with data loaded (value, key, etc)
+pub fn getEventWithData(self: Event, allocator: std.mem.Allocator) client.Event {
+    return client.Event.fromRefWithData(allocator, self.event_ref);
+}
+
+pub fn preventDefault(self: Event) void {
+    self.getEvent().preventDefault();
+}
+
+/// Get the input value from event.target.value
+pub fn value(self: Event) ?[]const u8 {
+    if (platform != .browser) return null;
+    const real_js = @import("js");
+    const event = self.getEvent();
+    const target = event.ref.get(real_js.Object, "target") catch return null;
+    return target.getAlloc(real_js.String, gpa, "value") catch null;
+}
+
+/// Get the key from keyboard event
+pub fn key(self: Event) ?[]const u8 {
+    if (platform != .browser) return null;
+    const real_js = @import("js");
+    const event = self.getEvent();
+    return event.ref.getAlloc(real_js.String, gpa, "key") catch null;
+}
+
+/// Create an EventHandler for a stateless client event: `fn(*Event) void`.
+pub fn createHandler(comptime handler: anytype) zx.EventHandler {
+    return .{
+        .callback = &struct {
+            fn w(_: *anyopaque, event: Event) void {
+                var e = event;
+                handler(&e);
+            }
+        }.w,
+        .context = @as(*anyopaque, @ptrFromInt(1)),
+    };
+}
+
+// --- Stateful --- //
+
+/// Stateful client event — provides `state()` access to bound component state.
+/// Use `fn(*zx.client.Event.Stateful) void` with `ctx.bind()` to get this type.
+pub const Stateful = struct {
+    _inner: *Event,
+    _component_id: []const u8 = "",
+    _state_index: u32 = 0,
+
+    /// Access the component's state.
+    /// Must be called in the same order as `ctx.state()` in the render function.
+    pub fn state(self: *Stateful, comptime T: type) *reactivity.State(T) {
+        const slot = (1 << 20) + self._state_index;
+        self._state_index += 1;
+        return reactivity.State(T).getExisting(self._component_id, slot);
+    }
+
+    pub fn getEvent(self: Stateful) client.Event {
+        return self._inner.getEvent();
+    }
+
+    pub fn getEventWithData(self: Stateful, allocator: std.mem.Allocator) client.Event {
+        return self._inner.getEventWithData(allocator);
+    }
+
+    pub fn preventDefault(self: Stateful) void {
+        self._inner.preventDefault();
+    }
+
+    pub fn value(self: Stateful) ?[]const u8 {
+        return self._inner.value();
+    }
+
+    pub fn key(self: Stateful) ?[]const u8 {
+        return self._inner.key();
+    }
+
+    /// Create an EventHandler for a stateful client event: `fn(*Event.Stateful) void`.
+    pub fn createHandler(comptime handler: anytype, alloc: std.mem.Allocator, component_id: []const u8) zx.EventHandler {
+        const cid = alloc.create([]const u8) catch @panic("OOM");
+        cid.* = alloc.dupe(u8, component_id) catch @panic("OOM");
+        return .{
+            .callback = &struct {
+                fn w(ctx: *anyopaque, event: Event) void {
+                    const p: *[]const u8 = @ptrCast(@alignCast(ctx));
+                    var e = event;
+                    var sf = Stateful{ ._inner = &e, ._component_id = p.* };
+                    handler(&sf);
+                }
+            }.w,
+            .context = @ptrCast(cid),
+        };
+    }
+};

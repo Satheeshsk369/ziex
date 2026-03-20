@@ -67,7 +67,7 @@ const Person = struct {
 };
 
 // This will execute on the browser
-fn clientEvent(ctx: zx.EventContext) void {
+fn clientEvent(ctx: zx.client.Event) void {
     const val = ctx.value() orelse "";
     std.log.info("onclick: {s}\n", .{val});
 }
@@ -79,34 +79,34 @@ fn serverEvent(ctx: zx.server.Event) void {
 }
 
 // This will execute on the browser
-fn clientIncrement(ctx: *zx.EventContext) void {
+fn clientIncrement(ctx: *zx.client.Event.Stateful) void {
     const val = ctx.state(i32);
     val.set(val.get() + 1);
     std.log.info("increment: {d}\n", .{val.get()});
 }
 
-fn serverIncrement(_: zx.server.Event, sc: *zx.StateContext) void {
-    const val = sc.state(i32);
+fn serverIncrement(e: *zx.server.Event.Stateful) void {
+    const val = e.state(i32);
     val.set(val.get() + 1);
     std.log.info("increment: {d}\n", .{val.get()});
 }
 
-fn serverAgeIncrement(_: zx.server.Event, sc: *zx.StateContext) void {
-    _ = sc.state(i32);
-    const val = sc.state(i32);
+fn serverAgeIncrement(e: *zx.server.Event.Stateful) void {
+    _ = e.state(i32);
+    const val = e.state(i32);
     val.set(val.get() + 1);
 }
 
-fn serverSIncrementHandler(_: zx.server.Event, sc: *zx.StateContext) void {
-    const val = sc.state(i32);
+fn serverSIncrementHandler(e: *zx.server.Event.Stateful) void {
+    const val = e.state(i32);
     val.set(val.get() + 1);
     std.log.info("increment: {d}\n", .{val.get()});
 }
 
-fn serverStateUpdateHandler(sc: *zx.StateContext) void {
-    _ = sc.state(i32);
-    _ = sc.state(i32);
-    var person = sc.state(Person);
+fn serverStateUpdateHandler(e: *zx.server.Event.Stateful) void {
+    _ = e.state(i32);
+    _ = e.state(i32);
+    var person = e.state(Person);
 
     const updated_person = Person{
         .first_name = "ZX",

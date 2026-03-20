@@ -1,6 +1,4 @@
 //! Reactive primitives for client-side state management.
-//! Provides fine-grained reactivity where only DOM nodes that depend on
-//! changed signals are updated (no full re-render or tree diffing).
 
 const std = @import("std");
 const builtin = @import("builtin");
@@ -9,31 +7,23 @@ const Client = @import("Client.zig");
 const zx = @import("../../root.zig");
 const js = zx.client.js;
 
-const BindingList = std.ArrayList(js.Object);
-const EffectList = std.ArrayList(EffectCallback);
-
-var signal_bindings = std.ArrayList(BindingList).empty;
-var effect_callbacks = std.ArrayList(EffectList).empty;
-var next_signal_id: u64 = 0;
-
 const is_wasm = builtin.os.tag == .freestanding;
+
 fn getGlobalAllocator() std.mem.Allocator {
     return zx.client_allocator;
 }
 
 const ComponentSubKey = struct {
-    signal_id: u64,
     component_id: []const u8,
 
     const Context = struct {
         pub fn hash(_: Context, k: ComponentSubKey) u64 {
             var h = std.hash.Wyhash.init(0);
-            h.update(std.mem.asBytes(&k.signal_id));
             h.update(k.component_id);
             return h.final();
         }
         pub fn eql(_: Context, a: ComponentSubKey, b: ComponentSubKey) bool {
-            return a.signal_id == b.signal_id and std.mem.eql(u8, a.component_id, b.component_id);
+            return std.mem.eql(u8, a.component_id, b.component_id);
         }
     };
 };
@@ -46,25 +36,6 @@ var component_subscriptions = std.HashMapUnmanaged(
 ){};
 
 pub var active_component_id: ?[]const u8 = null;
-
-/// Register a component for re-render when a signal changes.
-pub fn subscribeComponent(signal_id: u64, component_id: []const u8) void {
-    if (!is_wasm) return;
-    const key = ComponentSubKey{ .signal_id = signal_id, .component_id = component_id };
-    const g_alloc = getGlobalAllocator();
-    const result = component_subscriptions.getOrPut(g_alloc, key) catch return;
-    if (result.found_existing) return;
-
-    const id_copy = g_alloc.dupe(u8, component_id) catch return;
-    const ctx_ptr = g_alloc.create([]const u8) catch return;
-    ctx_ptr.* = id_copy;
-    registerEffect(signal_id, @ptrCast(ctx_ptr), &struct {
-        fn run(ctx: *anyopaque) void {
-            const id_ptr: *[]const u8 = @ptrCast(@alignCast(ctx));
-            scheduleRender(id_ptr.*);
-        }
-    }.run);
-}
 
 /// Key for the per-component per-slot state store.
 const StateKey = struct {
@@ -105,14 +76,6 @@ var state_store = std.HashMapUnmanaged(
     std.hash_map.default_max_load_percentage,
 ){};
 
-pub fn signal(comptime T: type, initial: T) Signal(T) {
-    return Signal(T).init(initial);
-}
-
-/// Pure component state — triggers a full component re-render on change.
-/// Unlike Signal, this has NO DOM binding and cannot be used with `{&myState}`.
-/// Use `ctx.state()` to create an instance inside a component.
-/// This will replace Signal in the future.
 pub fn State(comptime T: type) type {
     return struct {
         const Self = @This();
@@ -148,7 +111,7 @@ pub fn State(comptime T: type) type {
         pub fn bind(self: *Self, comptime transform: *const fn (T) T) zx.EventHandler {
             return .{
                 .callback = &struct {
-                    fn handler(ctx: *anyopaque, _: zx.EventContext) void {
+                    fn handler(ctx: *anyopaque, _: zx.client.Event) void {
                         const s: *Self = @ptrCast(@alignCast(ctx));
                         s.set(transform(s.get()));
                     }
@@ -237,389 +200,6 @@ pub fn collectStateBoundEntries(
     return list.toOwnedSlice(alloc) catch &.{};
 }
 
-pub fn Signal(comptime T: type) type {
-    return struct {
-        const Self = @This();
-        pub const ValueType = T;
-
-        id: u64,
-        value: T,
-        runtime_id_assigned: bool = false,
-        instance_idx: u32 = 0,
-
-        pub fn init(initial: T) Self {
-            return .{ .id = 0, .value = initial, .runtime_id_assigned = false };
-        }
-
-        pub fn initWithId(initial: T, id: u64) Self {
-            return .{ .id = id, .value = initial, .runtime_id_assigned = id != 0 };
-        }
-
-        pub fn ensureId(self: anytype) void {
-            const mutable = @constCast(self);
-            if (!mutable.runtime_id_assigned) {
-                mutable.id = next_signal_id;
-                next_signal_id += 1;
-                mutable.runtime_id_assigned = true;
-            }
-        }
-
-        pub inline fn get(self: *const Self) T {
-            return self.value;
-        }
-
-        pub inline fn ptr(self: *Self) *T {
-            return &self.value;
-        }
-
-        pub fn set(self: *Self, new_value: T) void {
-            self.value = new_value;
-            self.notifyChange();
-        }
-
-        pub fn update(self: *Self, comptime updater: fn (T) T) void {
-            self.value = updater(self.value);
-            self.notifyChange();
-        }
-
-        pub fn notifyChange(self: *const Self) void {
-            updateSignalNodes(self.id, self.value);
-            runEffects(self.id);
-        }
-
-        pub fn subscribeActiveComponent(self: *Self) void {
-            self.ensureId();
-            if (active_component_id) |cid| {
-                subscribeComponent(self.id, cid);
-            }
-        }
-
-        pub inline fn eql(self: *const Self, other: T) bool {
-            return std.meta.eql(self.value, other);
-        }
-
-        pub fn format(self: *const Self, buf: []u8) []const u8 {
-            return formatValue(T, self.value, buf);
-        }
-
-        var instances = std.ArrayList(*Self).empty;
-        var initial_values = std.ArrayList(T).empty;
-
-        pub const ComponentSignal = struct {
-            signal: *Self,
-
-            /// Get the current value
-            pub inline fn get(self: ComponentSignal) T {
-                return self.signal.get();
-            }
-
-            /// Set a new value
-            pub inline fn set(self: ComponentSignal, new_value: T) void {
-                self.signal.set(new_value);
-            }
-
-            /// Format for template rendering
-            pub fn format(self: ComponentSignal, buf: []u8) []const u8 {
-                return self.signal.format(buf);
-            }
-
-            /// Get a handler to reset to initial value
-            pub fn reset(self: ComponentSignal) zx.EventHandler {
-                return .{
-                    .callback = &struct {
-                        fn handler(ctx: *anyopaque, _: zx.EventContext) void {
-                            const sig_ptr: *Self = @ptrCast(@alignCast(ctx));
-                            sig_ptr.set(initial_values.items[sig_ptr.instance_idx]);
-                        }
-                    }.handler,
-                    .context = self.signal,
-                };
-            }
-
-            /// Create an event handler that updates the signal using a transform function.
-            /// Usage: `<button onclick={count.bind(struct { fn f(x: i32) i32 { return x + 1; } }.f)}>+</button>`
-            pub fn bind(self: ComponentSignal, comptime transform: *const fn (T) T) zx.EventHandler {
-                return .{
-                    .callback = &struct {
-                        fn handler(ctx: *anyopaque, _: zx.EventContext) void {
-                            const sig_ptr: *Self = @ptrCast(@alignCast(ctx));
-                            sig_ptr.set(transform(sig_ptr.get()));
-                        }
-                    }.handler,
-                    .context = self.signal,
-                };
-            }
-
-            /// Update the value using a transform function `fn(T) T`.
-            pub fn update(self: ComponentSignal, transform: *const fn (T) T) void {
-                self.signal.set(transform(self.signal.get()));
-            }
-        };
-
-        /// Create an instance-aware signal for use in ComponentCtx.
-        /// Each instance ID gets its own independent storage.
-        /// DEPRECATED: Use getOrCreate with a stable component_id instead.
-        pub fn create(alloc: std.mem.Allocator, instance_id: u16, initial: T) !ComponentSignal {
-            if (!is_wasm) {
-                // Server SSR just needs a transient object
-                const sig_ptr = try alloc.create(Self);
-                sig_ptr.* = Self.init(initial);
-                return .{ .signal = sig_ptr };
-            }
-
-            const idx = @as(usize, instance_id);
-            const g_alloc = getGlobalAllocator();
-
-            if (idx >= instances.items.len) {
-                try instances.ensureTotalCapacity(g_alloc, idx + 1);
-                while (instances.items.len <= idx) {
-                    const new_instance_ptr = try g_alloc.create(Self);
-                    new_instance_ptr.* = Self.init(undefined);
-                    try instances.append(g_alloc, new_instance_ptr);
-                    try initial_values.append(g_alloc, undefined);
-                }
-            }
-
-            instances.items[idx].* = Self.init(initial);
-            instances.items[idx].instance_idx = @intCast(idx);
-            initial_values.items[idx] = initial;
-
-            return .{
-                .signal = instances.items[idx],
-            };
-        }
-
-        /// Stable state creation keyed by (component_id, slot).
-        /// On the first call for a given (component_id, slot), allocates and initialises with `initial`.
-        /// On subsequent calls (re-renders), returns the existing signal pointer unchanged.
-        pub fn getOrCreate(alloc: std.mem.Allocator, component_id: []const u8, slot: u32, initial: T) !ComponentSignal {
-            if (is_wasm) {
-                const key = StateKey{ .component_id = component_id, .slot = slot };
-
-                if (state_store.get(key)) |entry| {
-                    // Already exists: return existing signal without touching its value.
-                    const existing: *Self = @ptrCast(@alignCast(entry.ptr));
-                    return .{ .signal = existing };
-                }
-
-                // First render: allocate and initialise.
-                const sig_ptr = try getGlobalAllocator().create(Self);
-                sig_ptr.* = Self.init(initial);
-                const id_copy = try getGlobalAllocator().dupe(u8, component_id);
-                const stored_key = StateKey{ .component_id = id_copy, .slot = slot };
-                try state_store.put(getGlobalAllocator(), stored_key, .{ .ptr = @ptrCast(sig_ptr) });
-                return .{ .signal = sig_ptr };
-            } else {
-                // Server SSR just needs a transient object
-                const sig_ptr = try alloc.create(Self);
-                sig_ptr.* = Self.init(initial);
-                return .{ .signal = sig_ptr };
-            }
-        }
-    };
-}
-
-/// Top-level alias for Signal(T).Instance to improve IDE/ZLS type resolution.
-pub fn SignalInstance(comptime T: type) type {
-    return Signal(T).ComponentSignal;
-}
-
-fn formatValue(comptime T: type, value: T, buf: []u8) []const u8 {
-    return switch (@typeInfo(T)) {
-        .int, .comptime_int => std.fmt.bufPrint(buf, "{d}", .{value}) catch "?",
-        .float, .comptime_float => std.fmt.bufPrint(buf, "{d:.2}", .{value}) catch "?",
-        .bool => if (value) "true" else "false",
-        .pointer => |ptr_info| blk: {
-            if (ptr_info.size == .slice and ptr_info.child == u8) {
-                break :blk value;
-            }
-            break :blk std.fmt.bufPrint(buf, "{any}", .{value}) catch "?";
-        },
-        .@"enum" => @tagName(value),
-        .optional => if (value) |v| formatValue(@TypeOf(v), v, buf) else "",
-        else => std.fmt.bufPrint(buf, "{any}", .{value}) catch "?",
-    };
-}
-
-fn updateSignalNodes(signal_id: u64, value: anytype) void {
-    if (!is_wasm) return;
-    const T = @TypeOf(value);
-    const idx = @as(usize, @intCast(signal_id));
-    if (idx >= signal_bindings.items.len) return;
-    const count = signal_bindings.items[idx].items.len;
-
-    if (count == 0) return;
-
-    var buf: [256]u8 = undefined;
-    const text = formatValue(T, value, &buf);
-
-    for (signal_bindings.items[idx].items) |node| {
-        node.set("nodeValue", js.string(text)) catch {};
-    }
-}
-
-/// Check if a type is a Signal type.
-pub fn isSignalType(comptime T: type) bool {
-    const info = @typeInfo(T);
-    if (info == .pointer) {
-        const Child = info.pointer.child;
-        if (@typeInfo(Child) == .@"struct") {
-            return @hasField(Child, "id") and
-                @hasField(Child, "value") and
-                @hasDecl(Child, "get") and
-                @hasDecl(Child, "set") and
-                @hasDecl(Child, "notifyChange");
-        }
-    }
-    return false;
-}
-
-/// Get the value type from a Signal pointer type.
-pub fn SignalValueType(comptime T: type) type {
-    const info = @typeInfo(T);
-    if (info == .pointer) {
-        const Child = info.pointer.child;
-        if (@typeInfo(Child) == .@"struct" and @hasField(Child, "value")) {
-            return @FieldType(Child, "value");
-        }
-    }
-    @compileError("Expected a pointer to a Signal type");
-}
-
-/// Derived/computed value that updates when its source signal changes.
-pub fn Computed(comptime T: type, comptime SourceT: type) type {
-    return struct {
-        const Self = @This();
-        pub const ValueType = T;
-
-        id: u64 = 0,
-        runtime_id_assigned: bool = false,
-        value: T = undefined,
-        initialized: bool = false,
-        source: *const Signal(SourceT),
-        compute: *const fn (SourceT) T,
-        subscribed: bool = false,
-
-        pub fn init(source: *const Signal(SourceT), compute: *const fn (SourceT) T) Self {
-            return .{
-                .id = 0,
-                .runtime_id_assigned = false,
-                .value = undefined,
-                .initialized = false,
-                .source = source,
-                .compute = compute,
-                .subscribed = false,
-            };
-        }
-
-        pub fn ensureId(self: anytype) void {
-            const mutable = @constCast(self);
-            if (!mutable.runtime_id_assigned) {
-                mutable.id = next_signal_id;
-                next_signal_id += 1;
-                mutable.runtime_id_assigned = true;
-            }
-        }
-
-        fn ensureInitialized(self: anytype) void {
-            const mutable = @constCast(self);
-            if (!mutable.initialized) {
-                mutable.value = mutable.compute(mutable.source.get());
-                mutable.initialized = true;
-            }
-        }
-
-        pub fn subscribe(self: *Self) void {
-            if (self.subscribed) return;
-            self.ensureInitialized();
-            self.source.ensureId();
-            registerEffect(self.source.id, @ptrCast(self), updateWrapper);
-            self.subscribed = true;
-        }
-
-        fn updateWrapper(ctx: *anyopaque) void {
-            const self: *Self = @ptrCast(@alignCast(ctx));
-            self.recompute();
-        }
-
-        fn recompute(self: *Self) void {
-            const new_value = self.compute(self.source.get());
-            self.value = new_value;
-            updateSignalNodes(self.id, new_value);
-            runEffects(self.id);
-        }
-
-        pub fn get(self: anytype) T {
-            const mutable = @constCast(self);
-            mutable.subscribe();
-            mutable.ensureInitialized();
-            return mutable.value;
-        }
-
-        pub fn notifyChange(self: *const Self) void {
-            updateSignalNodes(self.id, self.value);
-        }
-    };
-}
-
-const EffectCallback = struct {
-    context: *anyopaque,
-    run_fn: *const fn (*anyopaque) void,
-};
-
-/// Register a text node binding for a signal (no-op on server).
-pub fn registerBinding(signal_id: u64, text_node: js.Object) void {
-    if (!is_wasm) return;
-    ensureSignalSlot(signal_id) catch return;
-    const idx = @as(usize, @intCast(signal_id));
-    signal_bindings.items[idx].append(getGlobalAllocator(), text_node) catch {};
-}
-
-/// Clear all bindings for a signal (no-op on server).
-pub fn clearBindings(signal_id: u64) void {
-    if (!is_wasm) return;
-    const idx = @as(usize, @intCast(signal_id));
-    if (idx >= signal_bindings.items.len) return;
-
-    for (signal_bindings.items[idx].items) |node| {
-        node.deinit();
-    }
-    signal_bindings.items[idx].clearRetainingCapacity();
-}
-
-/// Register an effect callback for a signal.
-pub fn registerEffect(signal_id: u64, context: *anyopaque, run_fn: *const fn (*anyopaque) void) void {
-    if (!is_wasm) return;
-    ensureSignalSlot(signal_id) catch return;
-    const idx = @as(usize, @intCast(signal_id));
-    effect_callbacks.items[idx].append(getGlobalAllocator(), .{ .context = context, .run_fn = run_fn }) catch {};
-}
-
-fn runEffects(signal_id: u64) void {
-    const idx = @as(usize, @intCast(signal_id));
-    if (idx >= effect_callbacks.items.len) return;
-
-    for (effect_callbacks.items[idx].items) |cb| {
-        cb.run_fn(cb.context);
-    }
-}
-
-/// Reset global reactivity state (useful for testing).
-pub fn reset() void {
-    const g_alloc = getGlobalAllocator();
-    if (is_wasm) {
-        for (signal_bindings.items) |*list| {
-            list.deinit(g_alloc);
-        }
-        signal_bindings.clearAndFree(g_alloc);
-    }
-    for (effect_callbacks.items) |*list| {
-        list.deinit(g_alloc);
-    }
-    effect_callbacks.clearAndFree(g_alloc);
-    next_signal_id = 0;
-}
-
 /// Re-render the whole page using VDOM diffing algorithm like react
 pub fn rerender() void {
     if (!is_wasm) return;
@@ -646,9 +226,6 @@ pub fn scheduleRender(component_id: []const u8) void {
     }
 }
 
-/// Cleanup function type for effects.
-pub const CleanupFn = *const fn () void;
-
 pub const EventHandler = struct {
     /// Vtable entry for a single piece of state bound to a server event handler.
     pub const BoundStateEntry = struct {
@@ -659,7 +236,7 @@ pub const EventHandler = struct {
         applyJson: *const fn (ptr: *anyopaque, json: []const u8) void,
     };
 
-    callback: *const fn (ctx: *anyopaque, event: zx.EventContext) void,
+    callback: *const fn (ctx: *anyopaque, event: zx.client.Event) void,
     context: *anyopaque,
     /// Non-null when created from a form `action={}` handler.
     /// Takes a pointer so the server wrapper can write `_state_ctx` back after the call.
@@ -672,7 +249,7 @@ pub const EventHandler = struct {
     bound_states: []const BoundStateEntry = &.{},
 
     /// Helper to create an EventHandler from a plain function pointer (no context).
-    /// Accepts `fn () void`, `fn (zx.EventContext) void`, and `fn (zx.ActionContext) void`.
+    /// Accepts `fn () void`, `fn (zx.client.Event) void`, and `fn (zx.ActionContext) void`.
     /// When the parameter is `zx.ActionContext`, the handler behaves as a server action:
     /// it calls preventDefault() then POSTs to the current page URL (WASM only).
     pub fn fromFn(comptime func: anytype) EventHandler {
@@ -711,16 +288,23 @@ pub const EventHandler = struct {
                         .server_event_fn = &Wrapper.w,
                     };
                 },
+                *zx.server.Event.Stateful => {
+                    // Stateful server event — not supported without ctx.bind().
+                    @compileError(
+                        "fn(*zx.server.Event.Stateful) void handlers require ctx.bind(). " ++
+                            "Use fn(zx.server.Event) void for non-bind server event handlers.",
+                    );
+                },
                 else => {
                     // Guard: user-defined struct arg (not a framework context) is only valid
                     // on `action={}`. Point them at fromActionFn / the action attribute.
                     if (comptime @typeInfo(arg_type) == .@"struct" and
-                        arg_type != zx.EventContext)
+                        arg_type != zx.client.Event)
                     {
                         @compileError(
                             "A struct-typed handler `" ++ @typeName(@TypeOf(func)) ++ "` can only be used " ++
                                 "as a form `action={}` attribute, not as an event handler. " ++
-                                "Use `fn (zx.EventContext) void` for event handlers.",
+                                "Use `fn (zx.client.Event) void` for event handlers.",
                         );
                     }
                 },
@@ -728,7 +312,7 @@ pub const EventHandler = struct {
         }
 
         const Wrapper = struct {
-            fn wrapper(ctx: *anyopaque, event: zx.EventContext) void {
+            fn wrapper(ctx: *anyopaque, event: zx.client.Event) void {
                 _ = ctx;
                 if (comptime params.len == 0) {
                     func();
@@ -756,7 +340,7 @@ pub const EventHandler = struct {
             // Direct typed form: first param is a user struct (not a framework context type).
             if (comptime @typeInfo(arg_type) == .@"struct" and
                 arg_type != zx.ActionContext and
-                arg_type != zx.EventContext and
+                arg_type != zx.client.Event and
                 arg_type != zx.server.Event)
             {
                 const DirectTyped = struct {
@@ -777,15 +361,15 @@ pub const EventHandler = struct {
     }
 
     /// Helper to create an EventHandler from a runtime function pointer (no context)
-    pub fn fromFnRuntime(func: *const fn (zx.EventContext) void) EventHandler {
+    pub fn fromFnRuntime(func: *const fn (zx.client.Event) void) EventHandler {
         return .{
             .callback = &runtimeWrapper,
             .context = @ptrCast(@constCast(func)),
         };
     }
 
-    fn runtimeWrapper(ctx: *anyopaque, event: zx.EventContext) void {
-        const func: *const fn (zx.EventContext) void = @ptrCast(@alignCast(ctx));
+    fn runtimeWrapper(ctx: *anyopaque, event: zx.client.Event) void {
+        const func: *const fn (zx.client.Event) void = @ptrCast(@alignCast(ctx));
         func(event);
     }
 
@@ -799,7 +383,7 @@ pub const EventHandler = struct {
         };
     }
 
-    pub fn serverActionHandler(ctx: *anyopaque, event: zx.EventContext) void {
+    pub fn serverActionHandler(ctx: *anyopaque, event: zx.client.Event) void {
         _ = ctx;
         if (!is_wasm) return;
 
@@ -858,7 +442,7 @@ pub const EventHandler = struct {
         };
     }
 
-    fn serverEventHandler(ctx: *anyopaque, event: zx.EventContext) void {
+    fn serverEventHandler(ctx: *anyopaque, event: zx.client.Event) void {
         if (!is_wasm) return;
 
         // Prevent default browser behavior (e.g. form navigation).
@@ -952,201 +536,3 @@ pub const EventHandler = struct {
         }
     }
 };
-
-/// Create an effect that runs when the source signal/computed changes.
-/// Like SolidJS/React, runs on mount AND on signal changes.
-/// Type is inferred from the source.
-///
-/// ```zig
-/// // Runs on mount and on every change (like SolidJS createEffect)
-/// zx.effect(&count, onCountChange);
-/// ```
-pub fn effect(source: anytype, comptime callback: anytype) void {
-    effectWithOptions(source, callback, .{ .skip_initial = false });
-}
-
-/// Create an effect that only runs when the value changes (skips initial mount).
-/// Like SolidJS `createEffect(on(signal, callback, { defer: true }))`.
-///
-/// ```zig
-/// // Skips initial mount, only runs on changes
-/// zx.effectDeferred(&count, onCountChange);
-/// ```
-pub fn effectDeferred(source: anytype, comptime callback: anytype) void {
-    effectWithOptions(source, callback, .{ .skip_initial = true });
-}
-
-const EffectOptions = struct {
-    /// If true, skip the initial run on mount (only run on changes)
-    skip_initial: bool = false,
-};
-
-/// Effect type (prefer `effect()` function for simpler API).
-pub fn Effect(comptime T: type) type {
-    return struct {
-        const Self = @This();
-
-        var auto_effects = std.ArrayList(*Self).empty;
-
-        source_ptr: *const anyopaque,
-        source_get: *const fn (*const anyopaque) T,
-        source_id_ptr: *u64,
-        callback: *const fn (T) ?CleanupFn,
-        last_value: ?T = null,
-        registered: bool = false,
-        cleanup: ?CleanupFn = null,
-
-        /// Initialize and auto-run the effect.
-        /// Callback can return `void` or `?CleanupFn`.
-        /// If `skip_initial` is true, skips the initial run (only fires on changes).
-        pub fn init(source: anytype, comptime callback: anytype, skip_initial: bool) void {
-            if (!is_wasm) return;
-
-            const SourcePtrType = @TypeOf(source);
-            const source_info = @typeInfo(SourcePtrType);
-
-            if (source_info != .pointer) {
-                @compileError("Effect source must be a pointer to Signal or Computed");
-            }
-
-            const SourceType = source_info.pointer.child;
-
-            if (!@hasDecl(SourceType, "get") or !@hasDecl(SourceType, "ensureId")) {
-                @compileError("Effect source must have get() and ensureId() methods");
-            }
-
-            const CallbackType = @TypeOf(callback);
-            const cb_type_info = @typeInfo(CallbackType);
-
-            if (cb_type_info != .pointer or @typeInfo(cb_type_info.pointer.child) != .@"fn") {
-                @compileError("Effect callback must be a function pointer");
-            }
-
-            const fn_info = @typeInfo(cb_type_info.pointer.child).@"fn";
-            const ReturnType = fn_info.return_type orelse void;
-
-            const wrapped_callback: *const fn (T) ?CleanupFn = comptime blk: {
-                if (ReturnType == void) {
-                    break :blk &struct {
-                        fn wrapper(val: T) ?CleanupFn {
-                            callback(val);
-                            return null;
-                        }
-                    }.wrapper;
-                } else if (ReturnType == CleanupFn) {
-                    break :blk callback;
-                } else {
-                    @compileError("Effect callback must return void or CleanupFn");
-                }
-            };
-
-            const Wrapper = struct {
-                fn get(ptr: *const anyopaque) T {
-                    const typed_ptr: *const SourceType = @ptrCast(@alignCast(ptr));
-                    return typed_ptr.get();
-                }
-            };
-
-            source.ensureId();
-
-            const g_alloc = getGlobalAllocator();
-            const effect_ptr = g_alloc.create(Self) catch @panic("OOM");
-
-            effect_ptr.* = .{
-                .source_ptr = @ptrCast(source),
-                .source_get = Wrapper.get,
-                .source_id_ptr = &@constCast(source).id,
-                .callback = wrapped_callback,
-                // If skip_initial, store current value so initial run is skipped
-                // If not (default), use null so effect runs on mount
-                .last_value = if (skip_initial) source.get() else null,
-                .registered = false,
-                .cleanup = null,
-            };
-
-            auto_effects.append(g_alloc, effect_ptr) catch @panic("OOM");
-
-            effect_ptr.run();
-        }
-
-        fn runWrapper(ctx: *anyopaque) void {
-            const self: *Self = @ptrCast(@alignCast(ctx));
-            self.execute();
-        }
-
-        /// Register the effect without running it immediately.
-        /// Effect will only fire when the signal value changes.
-        pub fn register(self: *Self) void {
-            if (!self.registered) {
-                registerEffect(self.source_id_ptr.*, @ptrCast(self), runWrapper);
-                self.registered = true;
-            }
-        }
-
-        /// Register and run the effect immediately (React-like behavior).
-        pub fn run(self: *Self) void {
-            self.register();
-            self.execute();
-        }
-
-        fn execute(self: *Self) void {
-            const current = self.source_get(self.source_ptr);
-            if (self.last_value == null or !std.meta.eql(self.last_value.?, current)) {
-                if (self.cleanup) |cleanup_fn| {
-                    cleanup_fn();
-                }
-                self.last_value = current;
-                self.cleanup = self.callback(current);
-            }
-        }
-
-        pub fn dispose(self: *Self) void {
-            if (self.cleanup) |cleanup_fn| {
-                cleanup_fn();
-                self.cleanup = null;
-            }
-            self.registered = false;
-        }
-    };
-}
-
-fn effectWithOptions(source: anytype, comptime callback: anytype, options: EffectOptions) void {
-    const SourcePtrType = @TypeOf(source);
-    const source_info = @typeInfo(SourcePtrType);
-
-    if (source_info != .pointer) {
-        @compileError("effect source must be a pointer to a Signal or Computed");
-    }
-
-    const SourceType = source_info.pointer.child;
-
-    if (!@hasDecl(SourceType, "ValueType")) {
-        @compileError("effect source must be a Signal or Computed type");
-    }
-
-    if (!is_wasm) return;
-
-    const T = SourceType.ValueType;
-    Effect(T).init(source, callback, options.skip_initial);
-}
-
-fn ensureSignalSlot(signal_id: u64) !void {
-    const idx = @as(usize, @intCast(signal_id));
-    const g_alloc = getGlobalAllocator();
-
-    if (is_wasm) {
-        if (idx >= signal_bindings.items.len) {
-            try signal_bindings.ensureTotalCapacity(g_alloc, idx + 1);
-            while (signal_bindings.items.len <= idx) {
-                try signal_bindings.append(g_alloc, BindingList.empty);
-            }
-        }
-    }
-
-    if (idx >= effect_callbacks.items.len) {
-        try effect_callbacks.ensureTotalCapacity(g_alloc, idx + 1);
-        while (effect_callbacks.items.len <= idx) {
-            try effect_callbacks.append(g_alloc, EffectList.empty);
-        }
-    }
-}

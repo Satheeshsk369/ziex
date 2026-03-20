@@ -7,7 +7,6 @@ pub extern "__zx" fn _ce(id: usize, vnode_id: u64) u64;
 
 /// Create a text node with the given content, register it in the JS domNodes
 /// registry under vnode_id, and set __zx_ref = vnode_id on the node.
-/// Returns the jsz ref (needed for signal bindings via reactivity.registerBinding).
 pub extern "__zx" fn _ct(ptr: [*]const u8, len: usize, vnode_id: u64) u64;
 
 // ── Attribute / property mutation ────────────────────────────────────────────

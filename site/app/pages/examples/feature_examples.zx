@@ -276,7 +276,7 @@ pub fn Counter(ctx: *zx.ComponentCtx(void)) zx.Component {
         </div>
     );
 }
-fn increment(e: *zx.EventContext) void {
+fn increment(e: *zx.client.Event.Stateful) void {
     const count = e.state(i32);
     count.set(count.get() + 1);
 }

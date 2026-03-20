@@ -1,5 +1,10 @@
 pub fn Page(ctx: zx.PageContext) zx.Component {
-    return (<LoginForm @allocator={ctx.arena} @rendering={.client} />);
+    return (
+        <main @allocator={ctx.arena}>
+            <LoginForm @rendering={.client} />
+            <EventForm @rendering={.client} />
+        </main>
+    );
 }
 
 pub fn LoginForm(ctx: *zx.ComponentContext) zx.Component {
@@ -23,10 +28,26 @@ fn handleLogin(data: LoginInput) void {
 }
 
 fn handleSubmit(data: LoginInput, sc: *zx.StateContext) void {
-    sc.state([]const u8).set(sc.fmt("Hello, {s}!", .{ data.name }) catch "Err");
+    sc.state([]const u8).set(sc.fmt("Hello, {s}!", .{data.name}) catch "Err");
     std.log.info("\n\nName: {s}\nID: {d}\nFile: {s}\n", .{ data.name, data.id, data.file });
 }
 
+pub fn EventForm(ctx: *zx.ComponentContext) zx.Component {
+    const count = ctx.state(i32, 1);
+    return (
+        <button @allocator={ctx.allocator} onclick={ctx.bind(onclick)}>
+            Click Me {count}
+        </button>
+    );
+}
+
+fn onclick(e: *zx.server.Event.Stateful) void {
+    const c = e.state(i32);
+
+    c.set(c.get() + 1);
+
+    zx.log.info("{d} \n\n", .{c.get()});
+}
 
 pub const options: zx.PageOptions = .{
     .methods = &.{ .GET, .POST },

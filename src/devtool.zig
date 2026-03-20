@@ -210,7 +210,6 @@ pub const ComponentSerializable = struct {
         return switch (component) {
             .none => .{},
             .text => |text| .{ .text = text },
-            .signal_text => |sig| .{ .text = sig.current_text },
             .element => |element| blk: {
                 const children_serializable = if (element.children) |children| blk2: {
                     break :blk2 try ComponentSerializable.initChildren(allocator, children, options);

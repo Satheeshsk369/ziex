@@ -132,67 +132,7 @@ pub const ZxContext = struct {
 
         if (T == Component) return val;
 
-        // Check if it's a Signal handle (ComponentSignal struct)
-        if (comptime isSignalHandle(T)) {
-            return self.expr(val.signal);
-        }
-
-        // Check if it's a Signal pointer - enable fine-grained reactivity
-        if (comptime isSignalPointer(T)) {
-            const allocator = self.getAlloc();
-            // Ensure the signal has a runtime ID for DOM binding
-            val.ensureId();
-            // Format the current value as text
-            const ValueType = reactivity.SignalValueType(T);
-            const current_value = val.get();
-            const text = formatSignalValue(ValueType, current_value, allocator);
-            return .{ .signal_text = .{
-                .signal_id = val.id,
-                .current_text = text,
-            } };
-        }
-
-        // Check if it's a State pointer - automatically get the value for rendering.
-        // This allows using {state_count} in templates instead of {state_count.get()}.
-        if (comptime isStatePointer(T)) {
-            return self.expr(val.get());
-        }
-
-        // Check if it's a Computed pointer - enable fine-grained reactivity like Signal
-        if (comptime isComputedPointer(T)) {
-            const allocator = self.getAlloc();
-            // Ensure the computed has a runtime ID and subscribes to source
-            val.ensureId();
-            @constCast(val).subscribe();
-            // Format the current value as text
-            const ValueType = ComputedValueType(T);
-            const current_value = val.get();
-            const text = formatSignalValue(ValueType, current_value, allocator);
-            return .{ .signal_text = .{
-                .signal_id = val.id,
-                .current_text = text,
-            } };
-        }
-
-        // Check if it's a Signal VALUE (not pointer) - compile error with helpful message
-        if (comptime isSignalValue(T)) {
-            @compileError(
-                \\Signal passed by value - reactivity won't work.
-                \\Use `{&signal}` instead of `{signal}` to enable reactive updates.
-                \\
-                \\Example: <h5>{&count}</h5> instead of <h5>{count}</h5>
-            );
-        }
-
-        // Check if it's a Computed VALUE (not pointer) - compile error with helpful message
-        if (comptime isComputedValue(T)) {
-            @compileError(
-                \\Computed passed by value - reactivity won't work.
-                \\Use `{&computed}` instead of `{computed}` to enable reactive updates.
-                \\
-                \\Example: <h5>{&doubled}</h5> instead of <h5>{doubled}</h5>
-            );
-        }
+        if (comptime isStatePointer(T)) return self.expr(val.get());
 
         const Cmp = switch (@typeInfo(T)) {
             .comptime_int, .comptime_float, .float => self.fmt("{d}", .{val}),
@@ -280,27 +220,10 @@ pub const ZxContext = struct {
         return text;
     }
 
-    /// Helper to get the raw value of an expression (handles State/Signal automatically).
-    pub fn unwrap(self: anytype) @TypeOf(self) {
-        const T = @TypeOf(self);
-        if (comptime isSignalHandle(T)) return self.signal.get();
-        if (comptime isSignalPointer(T)) return self.get();
-        if (comptime isStatePointer(T)) return self.get();
-        return self;
-    }
-
     /// Create an attribute with type-aware value handling
     /// Returns null for values that should omit the attribute (false booleans, null optionals)
     pub fn attr(self: *ZxContext, comptime name: []const u8, val: anytype) ?Element.Attribute {
         const T = @TypeOf(val);
-
-        if (comptime isSignalHandle(T)) {
-            return self.attr(name, val.signal);
-        }
-
-        if (comptime isSignalPointer(T)) {
-            return self.attr(name, val.get());
-        }
 
         if (comptime isStatePointer(T)) {
             return self.attr(name, val.get());
@@ -686,102 +609,19 @@ pub const ZxContext = struct {
     }
 };
 
-/// Check at comptime if a type is a Signal struct (value, not pointer)
-fn isSignalValue(comptime T: type) bool {
-    if (@typeInfo(T) != .@"struct") return false;
+fn isStatePointer(comptime PT: type) bool {
+    const type_info = @typeInfo(PT);
 
-    // Check for Signal's characteristic fields and declarations
-    return @hasField(T, "id") and
-        @hasField(T, "value") and
-        @hasDecl(T, "get") and
-        @hasDecl(T, "set") and
-        @hasDecl(T, "notifyChange");
-}
-
-/// Check at comptime if a type is a pointer to a Signal struct
-fn isSignalPointer(comptime T: type) bool {
-    const type_info = @typeInfo(T);
     if (type_info != .pointer) return false;
     if (type_info.pointer.size != .one) return false;
 
-    return isSignalValue(type_info.pointer.child);
-}
+    const CT = type_info.pointer.child;
 
-/// Check at comptime if a type is a ComponentSignal handle
-fn isSignalHandle(comptime T: type) bool {
-    if (@typeInfo(T) != .@"struct") return false;
-    if (!@hasField(T, "signal")) return false;
-    return isSignalPointer(@FieldType(T, "signal"));
-}
+    if (@typeInfo(CT) != .@"struct") return false;
 
-/// Check at comptime if a type is a State struct (value, not pointer)
-fn isStateValue(comptime T: type) bool {
-    if (@typeInfo(T) != .@"struct") return false;
-
-    // Check for State's characteristic fields and declarations
-    return @hasField(T, "value") and
-        @hasField(T, "component_id") and
-        @hasDecl(T, "get") and
-        @hasDecl(T, "set") and
-        @hasDecl(T, "update");
-}
-
-/// Check at comptime if a type is a pointer to a State struct
-fn isStatePointer(comptime T: type) bool {
-    const type_info = @typeInfo(T);
-    if (type_info != .pointer) return false;
-    if (type_info.pointer.size != .one) return false;
-
-    return isStateValue(type_info.pointer.child);
-}
-
-/// Check at comptime if a type is a Computed struct (value, not pointer)
-fn isComputedValue(comptime T: type) bool {
-    if (@typeInfo(T) != .@"struct") return false;
-
-    // Check for Computed's characteristic fields: source, compute, id, and subscribe
-    return @hasField(T, "source") and
-        @hasField(T, "compute") and
-        @hasField(T, "id") and
-        @hasDecl(T, "get") and
-        @hasDecl(T, "subscribe");
-}
-
-/// Check at comptime if a type is a pointer to a Computed struct
-fn isComputedPointer(comptime T: type) bool {
-    const type_info = @typeInfo(T);
-    if (type_info != .pointer) return false;
-    if (type_info.pointer.size != .one) return false;
-
-    return isComputedValue(type_info.pointer.child);
-}
-
-/// Get the value type from a Computed pointer type
-fn ComputedValueType(comptime T: type) type {
-    const type_info = @typeInfo(T);
-    if (type_info == .pointer) {
-        const Child = type_info.pointer.child;
-        if (@typeInfo(Child) == .@"struct" and @hasField(Child, "value")) {
-            return @FieldType(Child, "value");
-        }
-    }
-    @compileError("Expected a pointer to a Computed type");
-}
-
-/// Format a Signal's value to a string for DOM text content
-fn formatSignalValue(comptime T: type, value: T, allocator: Allocator) []const u8 {
-    return switch (@typeInfo(T)) {
-        .int, .comptime_int => std.fmt.allocPrint(allocator, "{d}", .{value}) catch "?",
-        .float, .comptime_float => std.fmt.allocPrint(allocator, "{d:.2}", .{value}) catch "?",
-        .bool => if (value) "true" else "false",
-        .pointer => |ptr_info| blk: {
-            if (ptr_info.size == .slice and ptr_info.child == u8) {
-                break :blk allocator.dupe(u8, value) catch "?";
-            }
-            break :blk std.fmt.allocPrint(allocator, "{any}", .{value}) catch "?";
-        },
-        .@"enum" => @tagName(value),
-        .optional => if (value) |v| formatSignalValue(@TypeOf(v), v, allocator) else "",
-        else => std.fmt.allocPrint(allocator, "{any}", .{value}) catch "?",
-    };
+    return @hasField(CT, "value") and
+        @hasField(CT, "component_id") and
+        @hasDecl(CT, "get") and
+        @hasDecl(CT, "set") and
+        @hasDecl(CT, "update");
 }

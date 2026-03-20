@@ -23,7 +23,7 @@ fn decrement() void {
     fetch("?decrement=true");
 }
 
-fn reset(_: zx.EventContext) void {
+fn reset(_: zx.client.Event) void {
     count.set(0);
     fetch("?reset=true");
 }

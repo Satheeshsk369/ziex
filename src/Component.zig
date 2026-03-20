@@ -16,16 +16,6 @@ pub const Component = union(enum) {
     element: Element,
     component_fn: ComponentFn,
     component_csr: ComponentCsr,
-    /// Reactive signal text - updates automatically when signal changes
-    signal_text: SignalText,
-
-    /// A text node bound to a Signal for fine-grained reactivity
-    pub const SignalText = struct {
-        /// The signal's unique ID for DOM binding
-        signal_id: u64,
-        /// The current text value (for initial render)
-        current_text: []const u8,
-    };
 
     pub const ComponentCsr = struct {
         name: []const u8,
@@ -96,10 +86,7 @@ pub const Component = union(enum) {
                 if (@hasField(CtxType, "_component_id")) ctx._component_id = "";
                 if (@hasField(CtxType, "_id")) ctx._id = 0;
                 if (@hasField(CtxType, "_state_index")) ctx._state_index = 0;
-                if (@hasField(CtxType, "_signal_index")) ctx._signal_index = 0;
-                // Children from props if present
                 ctx.children = if (@hasField(@TypeOf(props), "children")) props.children else null;
-                // fn Component(ctx: *ComponentCtx(Props)) zx.Component
                 if (@hasField(CtxType, "props")) {
                     const PropsFieldType = @FieldType(CtxType, "props");
                     if (PropsFieldType != void) {
@@ -144,7 +131,6 @@ pub const Component = union(enum) {
                         const ctx_ptr: *CtxType = @ptrCast(@alignCast(@constCast(propsPtr orelse @panic("ctx is null"))));
                         // Reset slot counters on every call so hooks run in stable order.
                         if (@hasField(CtxType, "_state_index")) ctx_ptr._state_index = 0;
-                        if (@hasField(CtxType, "_signal_index")) ctx_ptr._signal_index = 0;
                         if (@hasField(CtxType, "_handler_index")) ctx_ptr._handler_index = 0;
                         return normalize(func(ctx_ptr));
                     }
@@ -197,19 +183,13 @@ pub const Component = union(enum) {
         }
     };
 
-    /// Free allocated memory recursively
-    /// Note: Only frees what was allocated by ZxContext.zx()
-    /// Inline struct data is not freed (and will cause no issues as it's stack data)
     pub fn deinit(self: Component, allocator: std.mem.Allocator) void {
         switch (self) {
-            .none, .text, .signal_text => {},
             .element => |elem| {
                 if (elem.children) |children| {
-                    // Recursively free children (e.g., Button() results)
                     for (children) |child| {
                         child.deinit(allocator);
                     }
-                    // Free the children array itself
                     allocator.free(children);
                 }
                 if (elem.attributes) |attributes| {
@@ -217,7 +197,6 @@ pub const Component = union(enum) {
                 }
             },
             .component_fn => |func| {
-                // Free the props that were allocated
                 func.deinit();
             },
             .component_csr => |component_csr| {
@@ -264,7 +243,7 @@ pub const Component = union(enum) {
                 // Now search the resolved component
                 return self.getElementByName(allocator, tag);
             },
-            .none, .text, .component_csr, .signal_text => return null,
+            .none, .text, .component_csr => return null,
         }
     }
 
