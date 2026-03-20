@@ -278,6 +278,6 @@ pub const ComponentSerializable = struct {
     }
 
     pub fn serialize(self: ComponentSerializable, writer: *std.Io.Writer) !void {
-        try zx.prop.serialize(ComponentSerializable, self, writer);
+        try zx.util.zxon.serialize(self, writer, .{});
     }
 };

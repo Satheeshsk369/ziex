@@ -8,6 +8,7 @@ pub fn DELETE(ctx: zx.RouteContext) !void {
     try ctx.response.json(.{ .message = "Deleted" }, .{});
 }
 
+// Too much column width of codes
 pub fn POST(ctx: zx.RouteContext) !void {
     const body = ctx.request.text() orelse "No body";
     ctx.response.setCookie("body", body, .{});
@@ -17,5 +18,34 @@ pub fn POST(ctx: zx.RouteContext) !void {
         .body = body,
     }, .{});
 }
+
+// Support multiple methods signature
+// pub fn POST(req: zx.Request, res: zx.Response) !void {
+//     const body = req.text() orelse "No body";
+//     res.setCookie("body", body, .{});
+//     res.setCookie("body-1", body, .{});
+//     try res.json(.{
+//         .message = "PST",
+//         .body = body,
+//     }, .{});
+// }
+
+// // Shortan cookie setter
+// pub fn POST(res: zx.Response) !void {
+//     res.cookie("id", "0");
+//     try res.json(.{
+//         .message = "PST",
+//         .body = body,
+//     }, .{});
+// }
+
+// // Add shorter high-level methods on ctx
+// pub fn POST(res: zx.RouteContext) !void {
+//     ctx.cookie("id", "0");
+//     try ctx.res.json(.{
+//         .message = "PST",
+//         .body = body,
+//     }, .{});
+// }
 
 const zx = @import("zx");

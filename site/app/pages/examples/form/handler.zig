@@ -99,11 +99,11 @@ const kv = zx.kv.scope("examples/form");
 fn start(ctx: zx.PageContext) void {
     users.clearRetainingCapacity();
     const v = kv.get(ctx.arena, "users") catch return;
-    const ul = zx.prop.parse([]User, ctx.arena, v);
+    const ul = zx.util.zxon.parse([]User, ctx.arena, v orelse return, .{}) catch return;
     users.appendSlice(ctx.arena, ul) catch return;
 }
 fn end(ctx: zx.PageContext) void {
     var aw: std.Io.Writer.Allocating = .init(ctx.arena);
-    zx.prop.serialize([]User, users.items, &aw.writer) catch return;
+    zx.util.zxon.serialize(users.items, &aw.writer, .{}) catch return;
     kv.put("users", aw.written(), .{}) catch return;
 }

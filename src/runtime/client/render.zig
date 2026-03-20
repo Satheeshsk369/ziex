@@ -143,7 +143,7 @@ fn onFormActionResponse(
     const resp = response orelse return;
     if (resp._body.len == 0) return;
 
-    const states = zx.prop.parse([]const []const u8, zx.client_allocator, resp._body);
+    const states = zx.util.zxon.parse([]const []const u8, zx.client_allocator, resp._body, .{}) catch return;
     for (states, 0..) |state_json, i| {
         if (i >= cb_ctx.bound_states.len) break;
         const bs = cb_ctx.bound_states[i];
@@ -170,7 +170,7 @@ fn formActionCallback(ctx: *anyopaque, event: zx.EventContext) void {
         states_list.append(alloc, bs.getJson(alloc, bs.state_ptr)) catch {};
     }
     var aw = std.Io.Writer.Allocating.init(alloc);
-    zx.prop.serialize([]const []const u8, states_list.items, &aw.writer) catch {};
+    zx.util.zxon.serialize(states_list.items, &aw.writer, .{}) catch {};
     const states_json = aw.written();
 
     const cb_ctx = alloc.create(FormActionCallbackCtx) catch return;

@@ -1,6 +1,6 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "zx",
+	"name": "site",
 	"main": "app/main.ts",
 	"compatibility_date": "2026-03-10",
 	"observability": {
@@ -12,28 +12,29 @@
 	"kv_namespaces": [
 		{
 			"binding": "KV",
-			"id": "703a3ddb053a40e39b230f582dfb5d2f"
 		}
 	],
 	"build": {
 		"watch_dir": "./app",
 		// "command": "zig build -Dtarget=wasm32-wasi"
 	},
-	"assets": {  "directory": "./zig-out/static",  "binding": "ASSETS" },
-// 	"durable_objects": {
-//     "bindings": [
-//       {
-//         "name": "CHAT_ROOM",
-//         "class_name": "ChatRoom"
-		
-//       }
-//     ]
-//   },
-//   "migrations": [
-//     {
-//       "tag": "v1",
-//     //   "new_classes": ["ChatRoom"],
-// 	  "new_sqlite_classes": ["ChatRoom"]
-//     }
-//   ]
+	"assets": {
+		"directory": "./zig-out/static",
+		"binding": "ASSETS"
+	},
+	// 	"durable_objects": {
+	//     "bindings": [
+	//       {
+	//         "name": "CHAT_ROOM",
+	//         "class_name": "ChatRoom"
+	//       }
+	//     ]
+	//   },
+	//   "migrations": [
+	//     {
+	//       "tag": "v1",
+	//     //   "new_classes": ["ChatRoom"],
+	// 	  "new_sqlite_classes": ["ChatRoom"]
+	//     }
+	//   ]
 }

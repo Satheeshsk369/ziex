@@ -5,7 +5,8 @@ test {
     _ = @import("cli/fmt.zig");
     _ = @import("cli/cli.zig");
     _ = @import("core/net.zig");
-    _ = @import("core/prop.zig");
+    _ = @import("core/zxon.zig");
+    _ = @import("core/html.zig");
     _ = @import("core/routing.zig");
     _ = @import("core/vdom.zig");
 }

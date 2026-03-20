@@ -34,7 +34,7 @@ pub fn isActionRequest(request: zx.Request) bool {
 
 fn serializeStateOutputs(sc: anytype, allocator: std.mem.Allocator) !?[]u8 {
     var aw = std.Io.Writer.Allocating.init(allocator);
-    try zx.prop.serialize([][]u8, sc._outputs, &aw.writer);
+    try zx.util.zxon.serialize(sc._outputs, &aw.writer, .{});
     return aw.written();
 }
 
@@ -113,7 +113,7 @@ pub fn dispatchServerEvent(
 ) !DispatchResult {
     if (!request.headers.has("x-zx-server-event")) return .not_triggered;
 
-    const payload = zx.prop.parse(zx.EventHandler.ServerEventPayload, arena, request.text());
+    const payload = zx.util.zxon.parse(zx.EventHandler.ServerEventPayload, arena, request.text() orelse return .not_found, .{}) catch return .not_found;
 
     if (registry.getEvent(route_path, payload.handler_id)) |event_fn| {
         var event_ctx = zx.ServerEventContext{

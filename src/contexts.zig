@@ -228,7 +228,7 @@ pub fn StateHandle(comptime T: type) type {
         pub fn set(self: @This(), val: T) void {
             if (self._index >= self._ctx._outputs.len) return;
             var aw = std.Io.Writer.Allocating.init(self._ctx._allocator);
-            zx.prop.serialize(T, val, &aw.writer) catch return;
+            zx.util.zxon.serialize(val, &aw.writer, .{}) catch return;
             self._ctx._outputs[self._index] = aw.written();
         }
     };
@@ -256,7 +256,7 @@ pub const StateContext = struct {
         const i = self._index;
         self._index += 1;
         const val: T = if (i < self._inputs.len)
-            zx.prop.parse(T, self._allocator, self._inputs[i])
+            zx.util.zxon.parse(T, self._allocator, self._inputs[i], .{}) catch std.mem.zeroes(T)
         else
             std.mem.zeroes(T);
         return StateHandle(T){ ._ctx = self, ._index = i, ._value = val };
@@ -382,14 +382,14 @@ pub fn ComponentCtx(comptime PropsType: type) type {
                         fn get(get_alloc: std.mem.Allocator, ptr: *anyopaque) []const u8 {
                             const st: *reactivity.State(T) = @ptrCast(@alignCast(ptr));
                             var aw = std.Io.Writer.Allocating.init(get_alloc);
-                            zx.prop.serialize(T, st.get(), &aw.writer) catch return "null";
+                            zx.util.zxon.serialize(st.get(), &aw.writer, .{}) catch return "null";
                             return aw.written();
                         }
                     }.get,
                     .applyJson = &struct {
                         fn apply(ptr: *anyopaque, json: []const u8) void {
                             const st: *reactivity.State(T) = @ptrCast(@alignCast(ptr));
-                            const val = zx.prop.parse(T, client_allocator, json);
+                            const val = zx.util.zxon.parse(T, client_allocator, json, .{}) catch return;
                             st.set(val);
                         }
                     }.apply,
@@ -526,11 +526,12 @@ pub fn ComponentCtx(comptime PropsType: type) type {
                     fn wrap(action_ctx_ptr: *zx.ActionContext) void {
                         const mfd = action_ctx_ptr.request.multiFormData();
                         const states_raw = mfd.getValue("__zx_states") orelse "[]";
-                        const states = zx.prop.parse(
+                        const states = zx.util.zxon.parse(
                             []const []const u8,
                             action_ctx_ptr.arena,
                             states_raw,
-                        );
+                            .{},
+                        ) catch return;
                         const outputs = action_ctx_ptr.arena.alloc([]u8, states.len) catch return;
                         for (states, 0..) |s, i| {
                             outputs[i] = action_ctx_ptr.arena.dupe(u8, s) catch "";

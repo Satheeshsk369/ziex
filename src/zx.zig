@@ -7,15 +7,13 @@ const ElementTag = zx.ElementTag;
 const Element = zx.Element;
 const Allocator = std.mem.Allocator;
 const BuiltinAttribute = zx.BuiltinAttribute;
-const devtool = zx.devtool;
-const cache = zx.cache;
 const Component = zx.Component;
 const ElementAttribute = zx.Element.Attribute;
 const reactivity = zx.client.reactivity;
 
 const platform = zx.platform;
 //TODO: Do not escape ahead of time, remove escaping from this place
-const escapHtmlTextNode = @import("runtime/server/render.zig").escapHtmlTextNode;
+const escapHtmlTextNode = zx.util.html.escapeText;
 
 pub const ClientComponentOptions = struct {
     name: []const u8,

@@ -175,14 +175,14 @@ pub fn State(comptime T: type) type {
                         fn f(a: std.mem.Allocator, ptr: *anyopaque) []const u8 {
                             const s: *Self = @ptrCast(@alignCast(ptr));
                             var aw = std.Io.Writer.Allocating.init(a);
-                            zx.prop.serialize(T, s.get(), &aw.writer) catch return "null";
+                            zx.util.zxon.serialize(s.get(), &aw.writer, .{}) catch return "null";
                             return aw.written();
                         }
                     }.f,
                     .applyJson = &struct {
                         fn f(ptr: *anyopaque, json: []const u8) void {
                             const s: *Self = @ptrCast(@alignCast(ptr));
-                            s.set(zx.prop.parse(T, getGlobalAllocator(), json));
+                            s.set(zx.util.zxon.parse(T, getGlobalAllocator(), json, .{}) catch return);
                         }
                     }.f,
                 });
@@ -901,7 +901,7 @@ pub const EventHandler = struct {
         };
 
         var aw = std.Io.Writer.Allocating.init(getGlobalAllocator());
-        zx.prop.serialize(ServerEventPayload, payload, &aw.writer) catch {};
+        zx.util.zxon.serialize(payload, &aw.writer, .{}) catch {};
         const payload_buf = aw.written();
 
         if (bound_states.len > 0) {
@@ -945,7 +945,7 @@ pub const EventHandler = struct {
 
         // Body is a JSON array of JSON-string-encoded state values: ["42", "true", ...]
         // Parse as []const []const u8; each element is the raw positional JSON for that state.
-        const states = zx.prop.parse([]const []const u8, getGlobalAllocator(), body);
+        const states = zx.util.zxon.parse([]const []const u8, getGlobalAllocator(), body, .{}) catch return;
         for (states, 0..) |state_json, i| {
             if (i >= cb_ctx.bound_states.len) break;
             cb_ctx.bound_states[i].applyJson(cb_ctx.bound_states[i].state_ptr, state_json);

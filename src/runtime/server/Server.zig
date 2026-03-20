@@ -357,7 +357,7 @@ pub const SerilizableAppMeta = struct {
         }, writer);
     }
     pub fn serializeRoutes(self: SerilizableAppMeta, writer: anytype) !void {
-        try zx.prop.serialize([]const SerilizableAppMeta.Route, self.routes, writer);
+        try zx.util.zxon.serialize(self.routes, writer, .{});
     }
 };
 

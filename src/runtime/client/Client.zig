@@ -72,7 +72,7 @@ pub const ComponentMeta = struct {
                 // Case 2: Component takes allocator and props - fn Component(allocator, props) Component
                 if (first_is_allocator and param_count == 2) {
                     const PropsType = FuncInfo.@"fn".params[1].type.?;
-                    const props = zx.prop.parse(PropsType, allocator, props_json);
+                    const props = if (props_json) |pj| zx.util.zxon.parse(PropsType, allocator, pj, .{}) catch std.mem.zeroes(PropsType) else std.mem.zeroes(PropsType);
                     return normalizeResult(func(allocator, props));
                 }
 
@@ -99,7 +99,7 @@ pub const ComponentMeta = struct {
                     if (@hasField(CtxType, "props")) {
                         const PropsFieldType = @FieldType(CtxType, "props");
                         if (PropsFieldType != void) {
-                            ctx.props = zx.prop.parse(PropsFieldType, allocator, props_json);
+                            ctx.props = if (props_json) |pj| zx.util.zxon.parse(PropsFieldType, allocator, pj, .{}) catch std.mem.zeroes(PropsFieldType) else std.mem.zeroes(PropsFieldType);
                         }
                     }
 

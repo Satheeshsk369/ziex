@@ -6,7 +6,7 @@ const prp = @import("props.zig");
 const ElementTag = zx.ElementTag;
 const Allocator = std.mem.Allocator;
 const BuiltinAttribute = zx.BuiltinAttribute;
-const devtool = zx.devtool;
+const devtool = zx.util.devtool;
 
 pub const Component = union(enum) {
     pub const Serializable = devtool.ComponentSerializable;

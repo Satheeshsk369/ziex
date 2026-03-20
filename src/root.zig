@@ -15,7 +15,6 @@ const opts = @import("options.zig");
 const ctxs = @import("contexts.zig");
 const reactivity = @import("runtime/client/reactivity.zig");
 
-pub const devtool = @import("devtool.zig");
 pub const cache = @import("runtime/core//Cache.zig");
 
 // -- Core Language --//
@@ -46,7 +45,8 @@ pub const server = app_module;
 pub const Edge = @import("runtime/edge/Edge.zig");
 pub const Client = @import("runtime/client/Client.zig");
 
-pub const prop = prp.prop;
+pub const util = @import("util.zig");
+
 pub const client = @import("runtime/client/window.zig");
 
 // --- Reactivity --- //

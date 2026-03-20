@@ -42,7 +42,7 @@ fn onFetchText(res: ?*zx.Fetch.Response, _: ?zx.Fetch.FetchError) void {
     if (res) |r| {
         defer r.deinit();
         if (r.text()) |p| {
-            routes = zx.prop.parse([]const AppRoute, zx.client_allocator, p);
+            routes = zx.util.zxon.parse([]const AppRoute, zx.client_allocator, p, .{}) catch return;
         } else |_| {}
     }
     zx.rerender();

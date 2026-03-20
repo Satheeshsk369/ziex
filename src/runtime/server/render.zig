@@ -91,7 +91,7 @@ pub fn renderInner(self: zx.Component, writer: *std.Io.Writer, options: RenderIn
         },
         .text => |text| {
             if (options.escaping == .none) {
-                try unescapeHtmlToWriter(writer, text);
+                try zx.util.html.unescape(writer, text);
             } else {
                 try writer.print("{s}", .{text});
             }
@@ -182,7 +182,7 @@ pub fn renderInner(self: zx.Component, writer: *std.Io.Writer, options: RenderIn
         },
         .signal_text => |sig| {
             if (options.escaping == .none) {
-                try unescapeHtmlToWriter(writer, sig.current_text);
+                try zx.util.html.unescape(writer, sig.current_text);
             } else {
                 try writer.print("{s}", .{sig.current_text});
             }
@@ -261,7 +261,7 @@ pub fn renderInner(self: zx.Component, writer: *std.Io.Writer, options: RenderIn
                     }
                     if (attribute.value) |value| {
                         try writer.writeAll("=\"");
-                        try escapeHtmlAttrVal(writer, value);
+                        try zx.util.html.escapeAttr(writer, value);
                         try writer.writeAll("\"");
                     }
                 }
@@ -326,63 +326,5 @@ pub fn renderInner(self: zx.Component, writer: *std.Io.Writer, options: RenderIn
                 try writer.print("</{s}>", .{@tagName(elem.tag)});
             }
         },
-    }
-}
-
-/// Escapes: & < > " '
-pub fn escapeHtmlAttrVal(writer: *std.Io.Writer, value: []const u8) !void {
-    for (value) |char| {
-        switch (char) {
-            '&' => try writer.writeAll("&amp;"),
-            '<' => try writer.writeAll("&lt;"),
-            '>' => try writer.writeAll("&gt;"),
-            '"' => try writer.writeAll("&quot;"),
-            '\'' => try writer.writeAll("&#x27;"),
-            else => try writer.writeByte(char),
-        }
-    }
-}
-
-/// Escapes: & < >
-pub fn escapHtmlTextNode(writer: *std.Io.Writer, value: []const u8) !void {
-    for (value) |char| {
-        switch (char) {
-            '&' => try writer.writeAll("&amp;"),
-            '<' => try writer.writeAll("&lt;"),
-            '>' => try writer.writeAll("&gt;"),
-            else => try writer.writeByte(char),
-        }
-    }
-}
-
-pub fn unescapeHtmlToWriter(writer: *std.Io.Writer, value: []const u8) !void {
-    var i: usize = 0;
-    while (i < value.len) {
-        if (value[i] == '&') {
-            // Check for HTML entities
-            if (i + 4 <= value.len and std.mem.eql(u8, value[i .. i + 4], "&lt;")) {
-                try writer.writeByte('<');
-                i += 4;
-            } else if (i + 4 <= value.len and std.mem.eql(u8, value[i .. i + 4], "&gt;")) {
-                try writer.writeByte('>');
-                i += 4;
-            } else if (i + 5 <= value.len and std.mem.eql(u8, value[i .. i + 5], "&amp;")) {
-                try writer.writeByte('&');
-                i += 5;
-            } else if (i + 6 <= value.len and std.mem.eql(u8, value[i .. i + 6], "&quot;")) {
-                try writer.writeByte('"');
-                i += 6;
-            } else if (i + 6 <= value.len and std.mem.eql(u8, value[i .. i + 6], "&#x27;")) {
-                try writer.writeByte('\'');
-                i += 6;
-            } else {
-                // Not a recognized entity, write the ampersand as-is
-                try writer.writeByte(value[i]);
-                i += 1;
-            }
-        } else {
-            try writer.writeByte(value[i]);
-            i += 1;
-        }
     }
 }
