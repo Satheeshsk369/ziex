@@ -13,11 +13,11 @@ node_modules/
 !*/
 !*/**/
 
-# base template (keep everything except ignored above)
+# base template
 !_base/**/*
 !.gitignore
 
-# cloudflare template (keep only specific overrides)
+# cloudflare template
 !cloudflare/.gitignore
 !cloudflare/package.json
 !cloudflare/wrangler.jsonc
@@ -36,3 +36,8 @@ node_modules/
 !vercel/vercel.json
 !vercel/README.md
 !vercel/type.d.ts
+
+# starter template
+!starter/.gitignore
+!starter/package.json
+!starter/build.zig

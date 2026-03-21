@@ -234,12 +234,12 @@ test "bundle" {
         .expected_stderr_strings = &.{
             "Bundling ZX site!",
             "bundle",
-            "zx_app",
+            "ziex_app",
             "style.css",
             "favicon.ico",
         },
         .expected_files = &.{
-            "bundle/zx_app" ++ (if (builtin.os.tag == .windows) ".exe" else ""),
+            "bundle/ziex_app" ++ (if (builtin.os.tag == .windows) ".exe" else ""),
             "bundle/static/assets/style.css",
             "bundle/static/favicon.ico",
         },
@@ -384,9 +384,9 @@ fn test_cmd(options: TestCmdOptions) !void {
 
 const local_zon_str =
     \\.{
-    \\    .name = .zx_app,
+    \\    .name = .ziex_app,
     \\    .version = "0.0.0",
-    \\    .fingerprint = 0x77989223bd4e92d3,
+    \\    .fingerprint = 0x7246d8c908f650a4,
     \\    .minimum_zig_version = "0.15.2",
     \\    .dependencies = .{
     \\        .zx = .{
@@ -402,9 +402,9 @@ const local_zon_str =
 ;
 
 var local_wasm_zon_str = .{
-    .name = .zx_app,
+    .name = .ziex_app,
     .version = "0.0.0",
-    .fingerprint = 0x77989223bd4e92d3,
+    .fingerprint = 0x7246d8c908f650a4,
     .minimum_zig_version = "0.15.2",
     .dependencies = .{
         .zx = .{

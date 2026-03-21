@@ -1,12 +1,12 @@
 .{
-    .name = .zx_app,
+    .name = .ziex_app,
     .version = "0.0.0",
-    .fingerprint = 0x77989223bd4e92d3,
+    .fingerprint = 0x7246d8c908f650a4,
     .minimum_zig_version = "0.15.2",
     .dependencies = .{
         .zx = .{
-            .url = "git+https://github.com/ziex-dev/ziex?ref=v0.1.0-dev.727#5d61315cb3b4962f1112d877b5d023b3a1c49420",
-            .hash = "zx-0.1.0-dev.727-8okzKmfj6QCZRsbGcX5iVs89rVtVztsmjf63SDq_ITaS",
+            .url = "git+https://github.com/ziex-dev/ziex#3f6ff52c055d83d0ac50811e08e9d8c202439b53",
+            .hash = "zx-0.1.0-dev.805-8okzKum06wBFG7SgsZ6Y-wSUZDOXlo1PRNxqBOtFXVZM",
         },
     },
     .paths = .{

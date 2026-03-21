@@ -1,5 +1,5 @@
 {
-  "name": "ziex_cloudflare",
+  "name": "ziex_app",
   "type": "module",
   "scripts": {
     "build": "wrangler build",
