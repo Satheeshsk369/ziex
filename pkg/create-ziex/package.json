@@ -1,6 +1,6 @@
 {
   "name": "create-ziex",
-  "version": "0.1.0-dev.3",
+  "version": "0.1.0-dev.6",
   "type": "module",
   "bin": "dist/index.js",
   "files": [
