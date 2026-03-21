@@ -1,7 +1,4 @@
 pub fn main() !void {
-    if (builtin.os.tag == .wasi) return try main_wasm();
-    if (builtin.os.tag == .windows) _ = std.os.windows.kernel32.SetConsoleOutputCP(65001);
-
     var dbg = std.heap.DebugAllocator(.{}).init;
 
     const allocator = switch (builtin.mode) {
@@ -10,6 +7,18 @@ pub fn main() !void {
     };
 
     defer if (builtin.mode == .Debug) std.debug.assert(dbg.deinit() == .ok);
+
+    var args = try std.process.argsWithAllocator(allocator);
+
+    _ = args.next();
+    const subcmd = args.next();
+    if (std.mem.eql(u8, subcmd orelse "", "lsp")) {
+        try lsp.main();
+        return;
+    }
+
+    if (builtin.os.tag == .wasi) return try main_wasm();
+    if (builtin.os.tag == .windows) _ = std.os.windows.kernel32.SetConsoleOutputCP(65001);
 
     var stdout_writer = std.fs.File.stdout().writerStreaming(&.{});
     var stdout = &stdout_writer.interface;
@@ -82,6 +91,7 @@ const cli = @import("cli/root.zig");
 const builtin = @import("builtin");
 const zx = @import("zx");
 const tui = @import("tui/main.zig");
+const lsp = @import("lsp/main.zig");
 
 pub const std_options = std.Options{
     .log_scope_levels = &[_]std.log.ScopeLevel{

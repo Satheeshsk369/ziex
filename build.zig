@@ -60,6 +60,7 @@ pub fn build(b: *std.Build) !void {
 
     // --- ZX CLI (Transpiler, Exporter, Dev Server) --- //
     const zli_dep = b.dependency("zli", .{ .target = target, .optimize = optimize });
+    const zls_dep = b.dependency("zls", .{ .target = target, .optimize = optimize });
     const exe_rootmod_opts: std.Build.Module.CreateOptions = .{
         .root_source_file = b.path("src/main.zig"),
         .target = target,
@@ -67,26 +68,11 @@ pub fn build(b: *std.Build) !void {
         .imports = &.{
             .{ .name = "zx", .module = mod },
             .{ .name = "zli", .module = zli_dep.module("zli") },
+            .{ .name = "zls", .module = zls_dep.module("zls") },
         },
     };
     const exe = b.addExecutable(.{ .name = "zx", .root_module = b.createModule(exe_rootmod_opts) });
     b.installArtifact(exe);
-
-    // --- ZXLS - LSP proxy for ZX files --- //
-    const zls_dep = b.dependency("zls", .{ .target = target, .optimize = optimize });
-    const zxls_exe = b.addExecutable(.{
-        .name = "zxls",
-        .root_module = b.createModule(.{
-            .root_source_file = b.path("src/lsp/main.zig"),
-            .target = target,
-            .optimize = optimize,
-            .imports = &.{
-                .{ .name = "zx", .module = mod },
-                .{ .name = "zls", .module = zls_dep.module("zls") },
-            },
-        }),
-    });
-    b.installArtifact(zxls_exe);
 
     // --- Steps: Run --- //
     const run_step = b.step("run", "Run the app");
