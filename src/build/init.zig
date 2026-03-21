@@ -5,9 +5,9 @@ const LazyPath = std.Build.LazyPath;
 const AddElementOptions = injection.AddElementOptions;
 const InjectionsGenStep = injection.InjectionsGenStep;
 
-pub const ZxInitOptions = @import("init/ZxInitOptions.zig");
+pub const InitOptions = @import("init/InitOptions.zig");
 
-pub fn init(b: *std.Build, exe: *std.Build.Step.Compile, options: ZxInitOptions) !Build {
+pub fn init(b: *std.Build, exe: *std.Build.Step.Compile, options: InitOptions) !Build {
     const target = exe.root_module.resolved_target;
     const optimize = exe.root_module.optimize;
     const build_zig = @import("../../build.zig");
@@ -63,9 +63,9 @@ const InitInnerOptions = struct {
     site_path: LazyPath,
     cli_path: ?LazyPath,
     site_outdir: ?LazyPath,
-    steps: ZxInitOptions.CliOptions.Steps,
+    steps: InitOptions.CliOptions.Steps,
     copy_embedded_sources: bool,
-    client: ZxInitOptions.ClientOptions,
+    client: InitOptions.ClientOptions,
     static_path: ?LazyPath,
     data_path: ?LazyPath,
     ziex_js_dep: *std.Build.Dependency,
@@ -409,7 +409,7 @@ pub const Build = struct {
     /// Handle to the build options module
     zx_build_options: *std.Build.Step.Options,
 
-    pub fn addPlugin(self: *Build, opts: ZxInitOptions.PluginOptions) *PluginRun {
+    pub fn addPlugin(self: *Build, opts: InitOptions.PluginOptions) *PluginRun {
         for (opts.steps) |*step| {
             switch (step.*) {
                 .command => {
@@ -438,7 +438,7 @@ pub const Build = struct {
         return &plugin_run;
     }
 
-    pub fn plugin(self: *Build, opts: ZxInitOptions.PluginOptions) void {
+    pub fn plugin(self: *Build, opts: InitOptions.PluginOptions) void {
         _ = self.addPlugin(opts);
     }
 

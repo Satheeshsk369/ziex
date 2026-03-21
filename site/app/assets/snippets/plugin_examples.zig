@@ -83,14 +83,14 @@ pub fn build(b: *std.Build) !void {
     });
 }
 
-fn createImageOptimizer(b: *std.Build) zx.ZxInitOptions.PluginOptions {
+fn createImageOptimizer(b: *std.Build) zx.InitOptions.PluginOptions {
     const cmd = std.Build.Step.Run.create(b, "optimize-images");
     
     // Add your custom command
     cmd.addArgs(&.{ "npx", "imagemin", "app/public/**/*", "--out-dir={outdir}/public" });
     
     // Allocate steps array
-    const steps = b.allocator.alloc(zx.ZxInitOptions.PluginOptions.PluginStep, 1) catch @panic("OOM");
+    const steps = b.allocator.alloc(zx.InitOptions.PluginOptions.PluginStep, 1) catch @panic("OOM");
     steps[0] = .{
         .command = .{
             .type = .after_transpile,  // Run after ZX transpilation

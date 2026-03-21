@@ -1,4 +1,4 @@
-pub fn esbuild(b: *std.Build, options: EsbuildPluginOptions) ZxInitOptions.PluginOptions {
+pub fn esbuild(b: *std.Build, options: EsbuildPluginOptions) InitOptions.PluginOptions {
     const bin = options.bin orelse b.path("node_modules/.bin/esbuild");
     const input = options.input orelse b.path("app/main.ts");
     const output = options.output orelse b.path("{outdir}/assets/main.js");
@@ -73,7 +73,7 @@ pub fn esbuild(b: *std.Build, options: EsbuildPluginOptions) ZxInitOptions.Plugi
         cmd.addArg(b.fmt("--define:{s}={s}", .{ def.key, def.value }));
     }
 
-    const steps = b.allocator.alloc(ZxInitOptions.PluginOptions.PluginStep, 1) catch @panic("OOM");
+    const steps = b.allocator.alloc(InitOptions.PluginOptions.PluginStep, 1) catch @panic("OOM");
     steps[0] = .{
         .command = .{
             .type = .after_transpile,
@@ -128,4 +128,4 @@ const EsbuildPluginOptions = struct {
     optimize: ?std.builtin.OptimizeMode = null,
 };
 
-const ZxInitOptions = @import("../init/ZxInitOptions.zig");
+const InitOptions = @import("../init/InitOptions.zig");

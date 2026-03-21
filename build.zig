@@ -5,7 +5,7 @@ const buildlib = @import("src/build/main.zig");
 
 // --- Public API (setting up ZX Site) --- //
 /// Options for initializing
-pub const ZxInitOptions = buildlib.initlib.ZxInitOptions;
+pub const InitOptions = buildlib.initlib.InitOptions;
 /// Initialize a ZX project (sets up ZX, dependencies, executables, wasm executable and `serve` step)
 pub const init = buildlib.initlib.init;
 

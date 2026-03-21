@@ -1,4 +1,4 @@
-pub fn tailwind(b: *std.Build, options: TailwindPluginOptions) ZxInitOptions.PluginOptions {
+pub fn tailwind(b: *std.Build, options: TailwindPluginOptions) InitOptions.PluginOptions {
     const bin = options.bin orelse b.path("node_modules/.bin/tailwindcss");
     const input = options.input orelse b.path("app/assets/styles.css");
     const output = options.output orelse b.path("{outdir}/assets/styles.css");
@@ -37,7 +37,7 @@ pub fn tailwind(b: *std.Build, options: TailwindPluginOptions) ZxInitOptions.Plu
         cmd.addArg("--map");
     }
 
-    const steps = b.allocator.alloc(ZxInitOptions.PluginOptions.PluginStep, 1) catch @panic("OOM");
+    const steps = b.allocator.alloc(InitOptions.PluginOptions.PluginStep, 1) catch @panic("OOM");
     steps[0] = .{
         .command = .{
             .type = .after_transpile,
@@ -78,4 +78,4 @@ const TailwindPluginOptions = struct {
     map: bool = false,
 };
 
-const ZxInitOptions = @import("../init/ZxInitOptions.zig");
+const InitOptions = @import("../init/InitOptions.zig");

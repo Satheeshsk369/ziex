@@ -608,7 +608,7 @@ fn APIAndWebSockets(allocator: zx.Allocator, props: APIAndWebSocketsProps) zx.Co
 fn PluginsSection(allocator: zx.Allocator) zx.Component {
     // Embedded snippet files for plugin examples
     // const plugin_examples = @embedFile("../../assets/snippets/plugin_examples.zig");
-    // const zx_init_options = @embedFile("../../assets/snippets/ZxInitOptions.zig");
+    // const zx_init_options = @embedFile("../../assets/snippets/InitOptions.zig");
 
     const tailwind_full_example = @embedFile("../learn/examples/tailwind_plugin.zig");
     const esbuild_full_example = @embedFile("../learn/examples/esbuild_plugin.zig");
@@ -806,7 +806,7 @@ fn PluginsSection(allocator: zx.Allocator) zx.Component {
             // <CodeBlock code={combined_example} filename="build.zig" />
 
             // <h3 id="custom-plugins">Creating Custom Plugins</h3>
-            // <p>You can create your own plugins by returning a <code>zx.ZxInitOptions.PluginOptions</code> struct. This allows you to integrate any command-line tool into the ZX build process.</p>
+            // <p>You can create your own plugins by returning a <code>zx.InitOptions.PluginOptions</code> struct. This allows you to integrate any command-line tool into the ZX build process.</p>
 
             // <h4>Plugin Structure</h4>
             // <p>A plugin consists of a name and a list of steps. Each step specifies when to run (before or after transpilation) and what command to execute:</p>

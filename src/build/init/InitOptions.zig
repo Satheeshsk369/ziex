@@ -5,7 +5,7 @@
 ///
 /// ## Usage Example
 /// ```zig
-/// const zx_options: zx.ZxInitOptions = .{
+/// const zx_options: zx.InitOptions = .{
 ///     .site = .{ .path = "site" },
 ///     .cli = .{
 ///         .path = null, // Use ZX from dependency
@@ -62,7 +62,7 @@ pub const AppOptions = struct {
     /// Path to the ZX app source directory.
     ///
     /// This directory should contain your `.zx` template files, layouts,
-    /// and other app assets. Defaults to "app" if not specified in ZxInitOptions.
+    /// and other app assets. Defaults to "app" if not specified in InitOptions.
     path: LazyPath,
 
     /// Copy embedded `.zx` source files to the transpile output directory.

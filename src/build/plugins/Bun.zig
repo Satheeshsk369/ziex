@@ -1,6 +1,6 @@
 const Bun = @This();
 
-pub fn init(ctx: plugin.PluginCtx(BunPluginOptions)) ZxInitOptions.PluginOptions {
+pub fn init(ctx: plugin.PluginCtx(BunPluginOptions)) InitOptions.PluginOptions {
     const options = ctx.options;
     const b = ctx.build;
 
@@ -19,7 +19,7 @@ pub fn init(ctx: plugin.PluginCtx(BunPluginOptions)) ZxInitOptions.PluginOptions
         cmd.addArg(@tagName(sourcemap));
     }
 
-    const steps = b.allocator.alloc(ZxInitOptions.PluginOptions.PluginStep, 1) catch @panic("OOM");
+    const steps = b.allocator.alloc(InitOptions.PluginOptions.PluginStep, 1) catch @panic("OOM");
     steps[0] = .{
         .command = .{
             .type = .after_transpile,
@@ -47,5 +47,5 @@ const BunPluginOptions = struct {
     sourcemap: ?Sourcemap = null,
 };
 
-const ZxInitOptions = @import("../init/ZxInitOptions.zig");
+const InitOptions = @import("../init/InitOptions.zig");
 const plugin = @import("../plugins.zig");
