@@ -41,3 +41,14 @@ node_modules/
 !starter/.gitignore
 !starter/package.json
 !starter/build.zig
+
+# database-pg template
+!database-pg/.gitignore
+!database-pg/build.zig
+!database-pg/build.zig.zon
+!database-pg/README.md
+!database-pg/app/Context.zig
+!database-pg/app/db/**/*
+!database-pg/app/main.zig
+!database-pg/app/pages/page.zx
+

@@ -1,0 +1,37 @@
+pub const options = zx.PageOptions{ .methods = &.{ .GET, .POST } };
+const Context = @import("../Context.zig");
+
+pub fn Page(ctx: zx.PageCtx(Context, void)) zx.Component {
+    const query = ctx.request.searchParams;
+
+    count = ctx.app.db.getCount() catch -1;
+
+    if (query.get("reset")) |_|
+        count = 0
+    else if (query.get("increment")) |_|
+        count += 1
+    else if (query.get("decrement")) |_|
+        count -= 1
+    else
+        count += 1;
+
+    ctx.app.db.setCount(count) catch |err| {
+        zx.log.err("setting {s}", .{@errorName(err)});
+    };
+
+    return (
+        <main @allocator={ctx.arena}>
+            <p>Ziex is a framework for building web applications with Zig.</p>
+            <a href={zx.info.homepage} target="_blank">See Ziex Docs →</a>
+            <br />
+            <CounterComponent @rendering={.client} count={count} />
+            <br />
+            <hr />
+            <a href="/about">Navigate to About Page</a>
+        </main>
+    );
+}
+var count: i64 = 0;
+
+const zx = @import("zx");
+pub const CounterComponent = @import("./client.zig").CounterComponent;
