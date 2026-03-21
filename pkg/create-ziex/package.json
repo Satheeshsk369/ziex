@@ -1,12 +1,23 @@
 {
   "name": "create-ziex",
   "version": "0.1.0-dev.2",
-  "bin": "bin/index.js",
   "type": "module",
-  "scripts": {
-    "start": "node bin/index.js"
+  "bin": {
+    "create-ziex": "dist/index.js"
   },
-  "dependencies": {
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "build.zig",
+    "build.zig.zon"
+  ],
+  "scripts": {
+    "start": "node bin/index.js",
+    "build": "bun run scripts/build.js",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
     "@clack/prompts": "^1.1.0",
     "giget": "^3.1.2",
     "picocolors": "^1.1.1",
