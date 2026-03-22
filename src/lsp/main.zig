@@ -12,9 +12,12 @@ const sourcemap = zx.sourcemap;
 var debug_allocator: std.heap.DebugAllocator(.{}) = .init;
 
 pub fn main() !void {
-    const gpa, const is_debug = switch (builtin.mode) {
-        .Debug, .ReleaseSafe => .{ debug_allocator.allocator(), true },
-        .ReleaseFast, .ReleaseSmall => .{ std.heap.smp_allocator, false },
+    const gpa, const is_debug = switch (builtin.os.tag) {
+        .wasi, .freestanding => .{ std.heap.wasm_allocator, false },
+        else => switch (builtin.mode) {
+            .Debug, .ReleaseSafe => .{ debug_allocator.allocator(), true },
+            .ReleaseFast, .ReleaseSmall => .{ std.heap.smp_allocator, false },
+        },
     };
     defer if (is_debug) {
         _ = debug_allocator.deinit();

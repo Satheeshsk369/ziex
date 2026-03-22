@@ -47,7 +47,7 @@ pub fn inspectProgram(allocator: std.mem.Allocator, binpath: []const u8) !Serili
     exe.stderr_behavior = .Ignore;
     try exe.spawn();
 
-    const source = if (exe.stdout) |estdout| estdout.readToEndAlloc(allocator, 8192) catch |err| {
+    const source = if (exe.stdout) |estdout| estdout.readToEndAlloc(allocator, std.math.maxInt(usize)) catch |err| {
         _ = exe.kill() catch {};
         return err;
     } else {
