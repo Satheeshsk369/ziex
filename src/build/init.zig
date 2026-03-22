@@ -120,7 +120,9 @@ pub fn initInner(
     const zx_options = b.addOptions();
     zx_options.addOption(?[]const u8, "jsglue_href", opts.client.jsglue_href);
 
-    const staticdir = if (opts.static_path) |p| p.getPath(b) else b.pathJoin(&.{ b.install_path, "static" });
+    const static_lazypath: LazyPath = if (opts.static_path) |p| p else .{ .cwd_relative = b.pathJoin(&.{ b.install_path, "static" }) };
+    const staticdir = static_lazypath.getPath(b);
+    const assetsdir = static_lazypath.path(b, "assets");
     const datadir = if (opts.data_path) |p| p.getPath(b) else b.pathJoin(&.{ b.install_path, "data" });
 
     zx_options.addOption([]const u8, "staticdir", staticdir);
@@ -347,7 +349,7 @@ pub fn initInner(
             .transpile = transpile_cmd,
         },
         .outdir = transpile_outdir,
-        .assetsdir = transpile_outdir.path(b, "assets"),
+        .assetsdir = assetsdir,
         .zx = .{
             .exe = zx_exe,
         },
