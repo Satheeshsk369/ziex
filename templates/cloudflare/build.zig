@@ -1,5 +1,5 @@
 const std = @import("std");
-const zx = @import("zx");
+const ziex = @import("zx");
 
 pub fn build(b: *std.Build) !void {
     // --- Target and Optimize from `zig build` arguments ---
@@ -17,11 +17,11 @@ pub fn build(b: *std.Build) !void {
     });
 
     // --- ZX setup: wires dependencies and adds `zx`/`dev` build steps ---
-    var zx_build = try zx.init(b, app_exe, .{});
+    var ziex_b = try ziex.init(b, app_exe, .{});
 
     // HACK: on wasi we do not inject jsglue automatically yet
     if (target.result.os.tag == .wasi)
-        zx_build.addElement(.{
+        ziex_b.addElement(.{
             .parent = .body,
             .position = .ending,
             .element = .{
