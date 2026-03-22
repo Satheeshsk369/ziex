@@ -229,6 +229,36 @@ pub fn serverSS(
     return finalizeServer(alloc, handler_index, &wrap_fn, bound_states);
 }
 
+/// Stateful action handler: fn(*zx.server.Action.Stateful) void (auto-binds states from component)
+pub fn actionStateful(
+    comptime handler: anytype,
+    alloc: Allocator,
+    component_id: []const u8,
+    state_index: u32,
+    handler_index: *u32,
+) Self {
+    const ActionWrap = struct {
+        fn wrap(ctx: *zx.server.Action) void {
+            const sc = zx.StateContext.init(ctx.allocator, ctx.arena, ctx._inputs orelse &.{}) orelse return;
+            ctx._state_ctx = sc;
+            var sf = zx.server.Action.Stateful{ ._inner = ctx, ._state_ctx = sc };
+            handler(&sf);
+        }
+    };
+    const bound = reactivity.collectStateBoundEntries(alloc, component_id, state_index);
+    handler_index.* += 1;
+    const h_id = handler_index.*;
+    const ec = alloc.create(Context) catch @panic("OOM");
+    ec.* = .{ .handler_id = h_id, .bound_states = bound };
+    return .{
+        .callback = &actionHandler,
+        .context = @ptrCast(ec),
+        .action_fn = &ActionWrap.wrap,
+        .handler_id = h_id,
+        .bound_states = bound,
+    };
+}
+
 /// Build Bound vtable for explicitly listed states.
 pub fn buildStates(alloc: Allocator, states: anytype) []const Bound {
     const state_fields = @typeInfo(@TypeOf(states)).@"struct".fields;
@@ -307,27 +337,55 @@ pub fn init(
 }
 
 pub fn actionHandler(ctx: *anyopaque, event: zx.client.Event) void {
-    _ = ctx;
     if (!is_wasm) return;
     event.preventDefault();
     const client_fetch = @import("../client/fetch.zig");
     const CoreFetch = @import("Fetch.zig");
+
+    const bound_states: []const Bound = if (@intFromPtr(ctx) == 1)
+        &.{}
+    else blk: {
+        const ec: *Context = @ptrCast(@alignCast(ctx));
+        break :blk ec.bound_states;
+    };
 
     const headers = [_]CoreFetch.RequestInit.Header{
         .{ .name = "Content-Type", .value = "application/json" },
         .{ .name = "X-ZX-Action", .value = "1" },
     };
 
-    client_fetch.fetchAsync(
-        getGlobalAllocator(),
-        "",
-        .{
-            .method = .GET,
-            .headers = &headers,
-            .body = "{}",
-        },
-        onActionResponse,
-    );
+    if (bound_states.len > 0) {
+        var state_jsons = std.ArrayList([]const u8).empty;
+        for (bound_states) |bs| {
+            const json = bs.getJson(getGlobalAllocator(), bs.state_ptr);
+            state_jsons.append(getGlobalAllocator(), json) catch {};
+        }
+
+        var aw = std.Io.Writer.Allocating.init(getGlobalAllocator());
+        zx.util.zxon.serialize(state_jsons.items, &aw.writer, .{}) catch {};
+        const payload_buf = aw.written();
+
+        const cb_ctx = getGlobalAllocator().create(Context) catch return;
+        cb_ctx.* = .{ .bound_states = bound_states };
+        client_fetch.fetchAsyncCtx(
+            getGlobalAllocator(),
+            "",
+            .{ .method = .POST, .headers = &headers, .body = payload_buf },
+            @ptrCast(cb_ctx),
+            onEventResponse,
+        );
+    } else {
+        client_fetch.fetchAsync(
+            getGlobalAllocator(),
+            "",
+            .{
+                .method = .GET,
+                .headers = &headers,
+                .body = "{}",
+            },
+            onActionResponse,
+        );
+    }
 }
 
 fn eventHandler(ctx: *anyopaque, event: zx.client.Event) void {
