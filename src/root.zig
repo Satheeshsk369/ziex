@@ -18,6 +18,7 @@ const reactivity = @import("runtime/client/reactivity.zig");
 // -- Core Language --//
 pub const Ast = @import("core/Ast.zig");
 pub const Parse = @import("core/Parse.zig");
+pub const sourcemap = @import("core/sourcemap.zig");
 
 // -- Core -- //
 pub const ElementTag = element.Tag;

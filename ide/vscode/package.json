@@ -23,15 +23,10 @@
   "engines": {
     "vscode": "^1.99.0"
   },
-  "extensionDependencies": [
-    "ziglang.vscode-zig"
-  ],
   "activationEvents": [
     "onLanguage:zig",
-    "onLanguage:zx",
     "onCommand:zx.pasteInMultilineString",
-    "onCommand:zx.copyFromMultilineString",
-    "onCommand:zx.toggleMultilineStringLiteral"
+    "onCommand:zx.copyFromMultilineString"
   ],
   "main": "./out/extension",
   "contributes": {

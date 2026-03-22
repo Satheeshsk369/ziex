@@ -8,12 +8,136 @@ pub const Mapping = struct {
     source_column: i32,
 };
 
+/// Decoded sourcemap with lookup capabilities for position remapping.
+pub const DecodedMap = struct {
+    entries: []const Mapping,
+    allocator: std.mem.Allocator,
+
+    pub fn deinit(self: *DecodedMap) void {
+        self.allocator.free(self.entries);
+    }
+
+    /// Map a source (original .zx) position to the generated (.zig) position.
+    /// Returns the closest mapping at or before the given source position.
+    pub fn sourceToGenerated(self: DecodedMap, line: i32, column: i32) ?Mapping {
+        var best: ?Mapping = null;
+        for (self.entries) |m| {
+            if (m.source_line > line) continue;
+            if (m.source_line == line and m.source_column > column) continue;
+            if (best) |b| {
+                if (m.source_line > b.source_line or
+                    (m.source_line == b.source_line and m.source_column > b.source_column))
+                {
+                    best = m;
+                }
+            } else {
+                best = m;
+            }
+        }
+        if (best) |b| {
+            // Adjust the generated column by the offset from the exact mapping point
+            const col_offset = if (b.source_line == line) column - b.source_column else 0;
+            return .{
+                .generated_line = b.generated_line,
+                .generated_column = b.generated_column + col_offset,
+                .source_line = line,
+                .source_column = column,
+            };
+        }
+        return null;
+    }
+
+    /// Map a generated (.zig) position back to the source (original .zx) position.
+    /// Returns the closest mapping at or before the given generated position.
+    pub fn generatedToSource(self: DecodedMap, line: i32, column: i32) ?Mapping {
+        var best: ?Mapping = null;
+        for (self.entries) |m| {
+            if (m.generated_line > line) continue;
+            if (m.generated_line == line and m.generated_column > column) continue;
+            if (best) |b| {
+                if (m.generated_line > b.generated_line or
+                    (m.generated_line == b.generated_line and m.generated_column > b.generated_column))
+                {
+                    best = m;
+                }
+            } else {
+                best = m;
+            }
+        }
+        if (best) |b| {
+            const col_offset = if (b.generated_line == line) column - b.generated_column else 0;
+            return .{
+                .generated_line = line,
+                .generated_column = column,
+                .source_line = b.source_line,
+                .source_column = b.source_column + col_offset,
+            };
+        }
+        return null;
+    }
+};
+
 /// Source map structure containing mappings in VLQ format
 pub const SourceMap = struct {
     mappings: []const u8,
 
     pub fn deinit(self: *SourceMap, allocator: std.mem.Allocator) void {
         allocator.free(self.mappings);
+    }
+
+    /// Decode VLQ-encoded mappings into a DecodedMap with lookup capabilities.
+    pub fn decode(self: SourceMap, allocator: std.mem.Allocator) !DecodedMap {
+        var result = std.array_list.Managed(Mapping).init(allocator);
+        errdefer result.deinit();
+
+        var gen_line: i32 = 0;
+        var gen_col: i32 = 0;
+        var src_line: i32 = 0;
+        var src_col: i32 = 0;
+
+        var i: usize = 0;
+        while (i < self.mappings.len) {
+            const ch = self.mappings[i];
+            if (ch == ';') {
+                gen_line += 1;
+                gen_col = 0;
+                i += 1;
+                continue;
+            }
+            if (ch == ',') {
+                i += 1;
+                continue;
+            }
+
+            // Decode segment: generated_column, source_index, source_line, source_column
+            const gen_col_delta = decodeVLQ(self.mappings, &i) orelse break;
+            gen_col += gen_col_delta;
+
+            // Must have at least source_index, source_line, source_column
+            if (i >= self.mappings.len or self.mappings[i] == ';' or self.mappings[i] == ',') {
+                // No source mapping for this segment, skip
+                continue;
+            }
+
+            _ = decodeVLQ(self.mappings, &i) orelse break; // source_index (always 0)
+            const src_line_delta = decodeVLQ(self.mappings, &i) orelse break;
+            const src_col_delta = decodeVLQ(self.mappings, &i) orelse break;
+
+            src_line += src_line_delta;
+            src_col += src_col_delta;
+
+            try result.append(.{
+                .generated_line = gen_line,
+                .generated_column = gen_col,
+                .source_line = src_line,
+                .source_column = src_col,
+            });
+        }
+
+        return .{
+            .entries = try result.toOwnedSlice(),
+            .allocator = allocator,
+        };
     }
 
     /// Convert source map to JSON format
@@ -141,6 +265,40 @@ fn escapeJSONString(writer: anytype, s: []const u8) !void {
             },
         }
     }
+}
+
+/// Decode a single VLQ value from a base64-encoded mappings string.
+/// Advances `pos` past the consumed characters. Returns null if no valid VLQ found.
+fn decodeVLQ(data: []const u8, pos: *usize) ?i32 {
+    var result: u32 = 0;
+    var shift: u5 = 0;
+
+    while (pos.* < data.len) {
+        const ch = data[pos.*];
+        const digit = base64Decode(ch) orelse return null;
+        pos.* += 1;
+
+        result |= @as(u32, digit & 31) << shift;
+        if (digit & 32 == 0) {
+            // Sign bit is the LSB of the result
+            const is_negative = (result & 1) != 0;
+            const magnitude = result >> 1;
+            return if (is_negative) -@as(i32, @intCast(magnitude)) else @as(i32, @intCast(magnitude));
+        }
+        shift +|= 5;
+    }
+    return null;
+}
+
+fn base64Decode(ch: u8) ?u6 {
+    return switch (ch) {
+        'A'...'Z' => @intCast(ch - 'A'),
+        'a'...'z' => @intCast(ch - 'a' + 26),
+        '0'...'9' => @intCast(ch - '0' + 52),
+        '+' => 62,
+        '/' => 63,
+        else => null,
+    };
 }
 
 /// Encode an integer value as VLQ (Variable-Length Quantity) base64
