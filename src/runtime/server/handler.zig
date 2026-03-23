@@ -1,6 +1,7 @@
 const httpz = @import("httpz");
 const log = std.log.scoped(.app);
 const zx_injections = @import("zx_injections");
+const tree = @import("../core/tree.zig");
 
 /// ElementInjector handles injecting elements into component trees
 const ElementInjector = struct {
@@ -8,14 +9,14 @@ const ElementInjector = struct {
 
     /// Inject a script element into the body of a component
     pub fn injectScriptIntoBody(self: ElementInjector, page: *Component, script_src: []const u8) bool {
-        if (page.getElementByName(self.allocator, .body)) |body_element| {
+        if (tree.getElementByName(page, self.allocator, .body)) |body_element| {
             const attributes = self.allocator.alloc(zx.Element.Attribute, 1) catch {
                 std.debug.print("Error allocating attributes: OOM\n", .{});
                 return false;
             };
             attributes[0] = .{ .name = "src", .value = script_src };
             const script_element = Component{ .element = .{ .tag = .script, .attributes = attributes } };
-            body_element.appendChild(self.allocator, script_element) catch |err| {
+            tree.appendChild(body_element, self.allocator, script_element) catch |err| {
                 std.debug.print("Error appending script to body: {}\n", .{err});
                 self.allocator.free(attributes);
                 return false;
@@ -25,24 +26,22 @@ const ElementInjector = struct {
         return false;
     }
 
-    /// Inject pre-rendered HTML strings from zx_injections into the head/body of the component tree.
-    /// Uses raw .text nodes so the strings are written verbatim (no escaping).
     pub fn injectZxInjections(self: ElementInjector, page: *Component) void {
         if (zx_injections.head_starting.len > 0) {
-            if (page.getElementByName(self.allocator, .head)) |el|
-                el.prependChild(self.allocator, .{ .text = zx_injections.head_starting }) catch {};
+            if (tree.getElementByName(page, self.allocator, .head)) |el|
+                tree.prependChild(el, self.allocator, .{ .text = zx_injections.head_starting }) catch {};
         }
         if (zx_injections.head_ending.len > 0) {
-            if (page.getElementByName(self.allocator, .head)) |el|
-                el.appendChild(self.allocator, .{ .text = zx_injections.head_ending }) catch {};
+            if (tree.getElementByName(page, self.allocator, .head)) |el|
+                tree.appendChild(el, self.allocator, .{ .text = zx_injections.head_ending }) catch {};
         }
         if (zx_injections.body_starting.len > 0) {
-            if (page.getElementByName(self.allocator, .body)) |el|
-                el.prependChild(self.allocator, .{ .text = zx_injections.body_starting }) catch {};
+            if (tree.getElementByName(page, self.allocator, .body)) |el|
+                tree.prependChild(el, self.allocator, .{ .text = zx_injections.body_starting }) catch {};
         }
         if (zx_injections.body_ending.len > 0) {
-            if (page.getElementByName(self.allocator, .body)) |el|
-                el.appendChild(self.allocator, .{ .text = zx_injections.body_ending }) catch {};
+            if (tree.getElementByName(page, self.allocator, .body)) |el|
+                tree.appendChild(el, self.allocator, .{ .text = zx_injections.body_ending }) catch {};
         }
     }
 };

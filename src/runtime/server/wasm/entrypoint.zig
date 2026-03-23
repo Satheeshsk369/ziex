@@ -5,26 +5,27 @@ const render = @import("../../server/render.zig");
 const server_dispatch = @import("../../server/dispatch.zig");
 const ext = @import("extern.zig");
 const zx_injections = @import("zx_injections");
+const tree = @import("../../core/tree.zig");
 
 const Router = zx.Router;
 const Component = zx.Component;
 
 fn injectZxInjections(allocator: std.mem.Allocator, page: *Component) void {
     if (zx_injections.head_starting.len > 0) {
-        if (page.getElementByName(allocator, .head)) |el|
-            el.prependChild(allocator, .{ .text = zx_injections.head_starting }) catch {};
+        if (tree.getElementByName(page, allocator, .head)) |el|
+            tree.prependChild(el, allocator, .{ .text = zx_injections.head_starting }) catch {};
     }
     if (zx_injections.head_ending.len > 0) {
-        if (page.getElementByName(allocator, .head)) |el|
-            el.appendChild(allocator, .{ .text = zx_injections.head_ending }) catch {};
+        if (tree.getElementByName(page, allocator, .head)) |el|
+            tree.appendChild(el, allocator, .{ .text = zx_injections.head_ending }) catch {};
     }
     if (zx_injections.body_starting.len > 0) {
-        if (page.getElementByName(allocator, .body)) |el|
-            el.prependChild(allocator, .{ .text = zx_injections.body_starting }) catch {};
+        if (tree.getElementByName(page, allocator, .body)) |el|
+            tree.prependChild(el, allocator, .{ .text = zx_injections.body_starting }) catch {};
     }
     if (zx_injections.body_ending.len > 0) {
-        if (page.getElementByName(allocator, .body)) |el|
-            el.appendChild(allocator, .{ .text = zx_injections.body_ending }) catch {};
+        if (tree.getElementByName(page, allocator, .body)) |el|
+            tree.appendChild(el, allocator, .{ .text = zx_injections.body_ending }) catch {};
     }
 }
 
