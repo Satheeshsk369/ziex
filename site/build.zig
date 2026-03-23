@@ -45,13 +45,17 @@ pub fn build(b: *std.Build) !void {
     });
 
     var assetsdir = ziex_b.assetsdir;
-    tailwindcss.addBuildRun(b, .{ .config = .{
-        .input = b.path("app/assets/docs.css"),
-        .output = assetsdir.path(b, "docs.css"),
-        .minify = true,
-        .optimize = true,
-        .map = false,
-    } });
+    const tailwindcss_b = tailwindcss.addBuild(b, .{
+        .config = .{
+            .input = b.path("app/assets/docs.css"),
+            // .output = assetsdir.path(b, "docs.css"),
+            .minify = true,
+            .optimize = true,
+            .map = false,
+        },
+    });
+    _ = b.addInstallFile(tailwindcss_b.file, "static/assets/docs.css");
+
     ziex_b.plugin(ziex.plugins.esbuild(b, .{
         .input = b.path("app/scripts/react.ts"),
         .output = assetsdir.path(b, "react.js"),
@@ -73,16 +77,25 @@ pub fn build(b: *std.Build) !void {
     //     .entrypoints = &.{b.path("app/scripts/docs.ts")},
     //     .outfile = assetsdir.path(b, "docs.js"),
     // } });
-    bunjs.addBuildRun(b, .{ .name = "pg-assets", .config = .{
-        .entrypoints = &.{
-            b.path("app/pages/playground/scripts/editor.ts"),
-            b.path("app/pages/playground/scripts/workers/runner.ts"),
-            b.path("app/pages/playground/scripts/workers/zig.ts"),
-            b.path("app/pages/playground/scripts/workers/zx.ts"),
-            b.path("app/pages/playground/scripts/workers/zls.ts"),
+    const bi = bunjs.addBuild(b, .{
+        .name = "pg-assets",
+        .config = .{
+            .entrypoints = &.{
+                b.path("app/pages/playground/scripts/editor.ts"),
+                b.path("app/pages/playground/scripts/workers/runner.ts"),
+                b.path("app/pages/playground/scripts/workers/zig.ts"),
+                b.path("app/pages/playground/scripts/workers/zx.ts"),
+                b.path("app/pages/playground/scripts/workers/zls.ts"),
+            },
+            // .outdir = assetsdir.path(b, "playground/"),
         },
-        .outdir = assetsdir.path(b, "playground/"),
-    } });
+    });
+
+    b.installDirectory(.{
+        .source_dir = bi.dir,
+        .install_dir = .prefix,
+        .install_subdir = "static/test/playground",
+    });
 }
 
 const bunjs = @import("bunjs");
