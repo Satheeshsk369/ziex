@@ -45,8 +45,40 @@ jobs:
 
           echo "templates=$TEMPLATES" >> $GITHUB_OUTPUT
 
-  sync:
+  build:
+    name: Build Check
     needs: discover
+    runs-on: ubuntu-latest
+    if: needs.discover.outputs.templates != '[]'
+    strategy:
+      matrix:
+        template: ${{ fromJson(needs.discover.outputs.templates) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Zig
+        uses: mlugg/setup-zig@v2
+        with:
+          version: 0.15.2
+
+      - name: Update ziex dependency to current commit
+        run: |
+          cd templates/_base
+          zig fetch --save "git+https://github.com/ziex-dev/ziex#${{ github.sha }}"
+
+      - name: Populate template
+        run: bash ./tools/template.sh populate ${{ matrix.template }}
+
+      - name: Build template
+        run: |
+          cd templates/${{ matrix.template }}
+          zig build
+
+  sync:
+    name: Sync
+    needs: [discover, build]
     runs-on: ubuntu-latest
     if: needs.discover.outputs.templates != '[]'
     strategy:
@@ -62,6 +94,16 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
+      - name: Setup Zig
+        uses: mlugg/setup-zig@v2
+        with:
+          version: 0.15.2
+
+      - name: Update ziex dependency to current commit
+        run: |
+          cd templates/_base
+          zig fetch --save "git+https://github.com/ziex-dev/ziex#${{ github.sha }}"
+
       - name: Populate and Sync
         env:
           GITHUB_TOKEN: ${{ secrets.SYNC_TOKEN || secrets.GITHUB_TOKEN }}
@@ -69,27 +111,27 @@ jobs:
           OWNER=$(echo $GITHUB_REPOSITORY | cut -d'/' -f1)
           REPO_NAME="template-${{ matrix.template }}"
           TEMP_DIR=$(mktemp -d)
-          
+
           echo "Syncing ${{ matrix.template }} to $REPO_NAME"
-          
+
           # Run the populate tool locally
           # Note: The populate tool overwrites ignored files in the templates/ dir with base versions.
           bash ./tools/template.sh populate ${{ matrix.template }}
-          
+
           # Copy everything from the populated template directory to the temp dir
           # Using -a to preserve permissions and -L if there are symlinks
           cp -a templates/${{ matrix.template }}/. "$TEMP_DIR/"
-          
+
           # Copy common files from root if they don't exist in template
           [ ! -f "$TEMP_DIR/LICENSE" ] && [ -f LICENSE ] && cp LICENSE "$TEMP_DIR/"
-          
+
           cd "$TEMP_DIR"
-          
+
           # Initialize new repo for force push
           git init -b main
           git add .
           git commit -m "sync: latest changes from ziex-dev/ziex@${GITHUB_SHA::7}"
-          
+
           # Push to the target repository
           REMOTE_URL="https://x-access-token:${GITHUB_TOKEN}@github.com/$OWNER/$REPO_NAME.git"
           git remote add origin "$REMOTE_URL"
