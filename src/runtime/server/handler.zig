@@ -1,31 +1,20 @@
 const httpz = @import("httpz");
 const log = std.log.scoped(.app);
+const zx_injections = @import("zx_injections");
 
 /// ElementInjector handles injecting elements into component trees
 const ElementInjector = struct {
     allocator: std.mem.Allocator,
 
     /// Inject a script element into the body of a component
-    /// Returns true if injection was successful, false if body element not found
     pub fn injectScriptIntoBody(self: ElementInjector, page: *Component, script_src: []const u8) bool {
         if (page.getElementByName(self.allocator, .body)) |body_element| {
-            // Allocate attributes array properly (not a pointer to stack memory)
             const attributes = self.allocator.alloc(zx.Element.Attribute, 1) catch {
                 std.debug.print("Error allocating attributes: OOM\n", .{});
                 return false;
             };
-            attributes[0] = .{
-                .name = "src",
-                .value = script_src,
-            };
-
-            const script_element = Component{
-                .element = .{
-                    .tag = .script,
-                    .attributes = attributes,
-                },
-            };
-
+            attributes[0] = .{ .name = "src", .value = script_src };
+            const script_element = Component{ .element = .{ .tag = .script, .attributes = attributes } };
             body_element.appendChild(self.allocator, script_element) catch |err| {
                 std.debug.print("Error appending script to body: {}\n", .{err});
                 self.allocator.free(attributes);
@@ -34,6 +23,27 @@ const ElementInjector = struct {
             return true;
         }
         return false;
+    }
+
+    /// Inject pre-rendered HTML strings from zx_injections into the head/body of the component tree.
+    /// Uses raw .text nodes so the strings are written verbatim (no escaping).
+    pub fn injectZxInjections(self: ElementInjector, page: *Component) void {
+        if (zx_injections.head_starting.len > 0) {
+            if (page.getElementByName(self.allocator, .head)) |el|
+                el.prependChild(self.allocator, .{ .text = zx_injections.head_starting }) catch {};
+        }
+        if (zx_injections.head_ending.len > 0) {
+            if (page.getElementByName(self.allocator, .head)) |el|
+                el.appendChild(self.allocator, .{ .text = zx_injections.head_ending }) catch {};
+        }
+        if (zx_injections.body_starting.len > 0) {
+            if (page.getElementByName(self.allocator, .body)) |el|
+                el.prependChild(self.allocator, .{ .text = zx_injections.body_starting }) catch {};
+        }
+        if (zx_injections.body_ending.len > 0) {
+            if (page.getElementByName(self.allocator, .body)) |el|
+                el.appendChild(self.allocator, .{ .text = zx_injections.body_ending }) catch {};
+        }
     }
 };
 
@@ -538,6 +548,10 @@ pub fn Handler(comptime AppCtxType: type) type {
             if (layouts_count == 0 and is_dev_mode) {
                 injectDevScript(req.arena, &component);
             }
+
+            // Inject build-time HTML (scripts, styles, etc.) into head/body
+            const inj = ElementInjector{ .allocator = req.arena };
+            inj.injectZxInjections(&component);
 
             // Render the final component
             const writer = res.writer();
@@ -1071,6 +1085,9 @@ pub fn Handler(comptime AppCtxType: type) type {
                         }
                     }
 
+                    // Inject build-time HTML (scripts, styles, etc.) into head/body
+                    (ElementInjector{ .allocator = pagectx.arena }).injectZxInjections(&page_component);
+
                     if (is_devtool) {
                         res.content_type = .JSON;
                         try page_component.format(res.writer());
@@ -1500,7 +1517,7 @@ const rndr = @import("render.zig");
 const ctxs = @import("../../contexts.zig");
 const registry = @import("registry.zig");
 const server_dispatch = @import("dispatch.zig");
-
+const render = @import("render.zig");
 const Allocator = std.mem.Allocator;
 const Component = zx.Component;
 const App = zx.Server(void);
