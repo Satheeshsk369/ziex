@@ -19,7 +19,7 @@ type TailwindBuild = {
 
 type BuildEvent =
     | { id: number; name: string; type: "start" }
-    | { id: number; name: string; type: "result"; success: boolean; output: string }
+    | { id: number; name: string; type: "result"; success: boolean; output: string; dependencies: string[] }
     | { id: number; name: string; type: "error"; error: string }
     | { id: number; name: string; type: "end" };
 
@@ -55,7 +55,7 @@ async function runBuild({ id, name, config }: TailwindBuild, index: number): Pro
         mkdirSync(dirname(config.output), { recursive: true });
         writeFileSync(config.output, result);
 
-        writeLine({ id, type: "result", name, success: true, output: config.output });
+        writeLine({ id, type: "result", name, success: true, output: config.output, dependencies });
     } catch (err) {
         writeLine({
             id,

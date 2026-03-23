@@ -6,40 +6,37 @@ pub const Build = struct {
     config: BuildConfig,
 };
 
+pub const Output = struct {
+    file: std.Build.LazyPath,
+    run: *std.Build.Step.Run,
+};
+
 pub var bun_path: ?std.Build.LazyPath = null;
 
 pub fn setBunPath(path: std.Build.LazyPath) void {
     bun_path = path;
 }
 
-pub fn addBuild(b: *std.Build, builds: Build) *std.Build.Step.Run {
-    return innerInitSingle(b, builds) catch @panic("addBuild");
+pub fn addBuild(b: *std.Build, build_item: Build) Output {
+    return innerInitSingle(b, build_item) catch @panic("addBuild");
 }
 
-pub fn addBuilds(b: *std.Build, builds: []const Build) *std.Build.Step.Run {
-    return innerInitSingle(b, builds) catch @panic("addBuilds");
-}
-
-pub fn addBuildRun(b: *std.Build, build_item: Build) void {
-    const run = innerInitSingle(b, build_item) catch @panic("addBuildRun");
-    b.default_step.dependOn(&run.step);
-}
-
-pub fn addBuildsRun(b: *std.Build, builds: []const Build) void {
-    for (builds) |build_item| {
-        const run = innerInitSingle(b, build_item) catch @panic("addBuildsRun");
-        b.default_step.dependOn(&run.step);
+pub fn addBuilds(b: *std.Build, builds: []const Build) []const Output {
+    const outputs = b.allocator.alloc(Output, builds.len) catch @panic("OOM");
+    for (builds, 0..) |build_item, i| {
+        outputs[i] = innerInitSingle(b, build_item) catch @panic("addBuilds");
     }
+    return outputs;
 }
 
-fn innerInitSingle(b: *std.Build, build_item: Build) !*std.Build.Step.Run {
+fn innerInitSingle(b: *std.Build, build_item: Build) !Output {
     const dep = b.dependencyFromBuildZig(@This(), .{});
     const plugin_exe = dep.artifact("tailwindcss");
 
     var arena = std.heap.ArenaAllocator.init(b.allocator);
     const alloc = arena.allocator();
 
-    // Create config for single build
+    // Create config for single build (output is NOT in config — injected by exe from CLI arg)
     var obj = std.json.ObjectMap.init(alloc);
     try obj.put("name", .{ .string = build_item.name orelse "tailwindcss" });
     const config_val = try build_item.config.toJsonValue(b, alloc);
@@ -54,6 +51,14 @@ fn innerInitSingle(b: *std.Build, build_item: Build) !*std.Build.Step.Run {
     run.setName(step_name);
     run.setStdIn(.{ .bytes = json_buf });
 
+    // Zig-managed output file (enables build caching)
+    run.addArg("--output");
+    const output = run.addOutputFileArg("output.css");
+
+    // Dep file for transitive dependency tracking (enables --watch for imports)
+    run.addArg("--dep-file");
+    _ = run.addDepFileOutputArg("output.d");
+
     if (bun_path) |bp| {
         run.addArg("--bun-path");
         run.addFileArg(bp);
@@ -61,7 +66,7 @@ fn innerInitSingle(b: *std.Build, build_item: Build) !*std.Build.Step.Run {
 
     run.addFileInput(build_item.config.input);
 
-    return run;
+    return .{ .file = output, .run = run };
 }
 
 fn deriveName(b: *std.Build, self: Build, step: *std.Build.Step) []const u8 {

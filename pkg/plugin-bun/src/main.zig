@@ -19,20 +19,34 @@ pub fn main() !void {
 
     // --- Flags --- //
     var bun_path: []const u8 = "bun"; // default to "bun" in PATH
+    var outdir_path: ?[]const u8 = null;
     const runner_script = @embedFile("builder.ts");
 
     while (args.next()) |arg| {
         if (std.mem.eql(u8, arg, "--bun-path")) bun_path = args.next() orelse return error.MissingBunPath;
+        if (std.mem.eql(u8, arg, "--outdir")) outdir_path = args.next() orelse return error.MissingOutdirPath;
     }
 
     const input_json = try std.fs.File.stdin().readToEndAlloc(allocator, 64 * 1024 * 1024);
     defer allocator.free(input_json);
 
+    // Parse and inject outdir into each build config
     const parsed = try std.json.parseFromSlice(std.json.Value, allocator, input_json, .{});
     defer parsed.deinit();
 
     const builds = parsed.value.array.items;
     const build_count = builds.len;
+
+    if (outdir_path) |od| {
+        for (builds) |*build_item| {
+            const config_ptr = build_item.object.getPtr("config").?;
+            try config_ptr.object.put("outdir", .{ .string = od });
+        }
+    }
+
+    // Re-serialize with injected outdir
+    const modified_json = try std.json.Stringify.valueAlloc(allocator, parsed.value, .{});
+    defer allocator.free(modified_json);
 
     var child = std.process.Child.init(
         &.{ bun_path, "-e", runner_script },
@@ -44,7 +58,7 @@ pub fn main() !void {
     try child.spawn();
 
     // Write config to bun's stdin, then close so bun sees EOF
-    try child.stdin.?.writeAll(input_json);
+    try child.stdin.?.writeAll(modified_json);
     child.stdin.?.close();
     child.stdin = null;
 
@@ -54,7 +68,6 @@ pub fn main() !void {
     });
     defer progress.end();
 
-    // // Track a progress node per build name.
     const NodeMap = std.StringHashMap(std.Progress.Node);
     var nodes = NodeMap.init(allocator);
     defer {

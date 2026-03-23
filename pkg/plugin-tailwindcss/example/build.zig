@@ -8,9 +8,12 @@ pub fn build(b: *std.Build) !void {
             .name = b.fmt("example-{d}", .{i}),
             .config = .{
                 .input = b.path("styles.css"),
-                .output = b.path(b.fmt("dist/output-{d}.css", .{i})),
             },
         };
     }
-    tailwindcss.addBuildsRun(b, builds);
+    const outputs = tailwindcss.addBuilds(b, builds);
+    for (outputs, 0..) |output, i| {
+        const install = b.addInstallFile(output.file, b.fmt("dist/output-{d}.css", .{i}));
+        b.default_step.dependOn(&install.step);
+    }
 }

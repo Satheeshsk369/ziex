@@ -11,12 +11,6 @@ pub const Target = enum { browser, bun, node };
 /// Entry point file paths. At least one is required.
 entrypoints: []const std.Build.LazyPath,
 
-/// Output directory
-outdir: ?std.Build.LazyPath = null,
-
-/// Output file (single-entrypoint builds only, mutually exclusive with outdir)
-outfile: ?std.Build.LazyPath = null,
-
 /// Target runtime [default: .browser]
 target: ?Target = null,
 
@@ -53,8 +47,6 @@ pub fn toJsonValue(self: BunBuildConfig, b: *std.Build, arena: std.mem.Allocator
     }
     try obj.put("entrypoints", .{ .array = eps });
 
-    if (self.outdir) |lp| try obj.put("outdir", .{ .string = lp.getPath(b) });
-    if (self.outfile) |lp| try obj.put("outfile", .{ .string = lp.getPath(b) });
     if (self.target) |v| try obj.put("target", .{ .string = @tagName(v) });
     if (self.format) |v| try obj.put("format", .{ .string = @tagName(v) });
     if (self.sourcemap) |v| try obj.put("sourcemap", .{ .string = @tagName(v) });

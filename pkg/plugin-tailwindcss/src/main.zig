@@ -7,6 +7,7 @@ const BuildEvent = struct {
     type: EventType,
     success: ?bool = null,
     @"error": ?[]const u8 = null,
+    dependencies: []const []const u8 = &.{},
 };
 
 pub fn main() !void {
@@ -19,20 +20,36 @@ pub fn main() !void {
 
     // --- Flags --- //
     var bun_path: []const u8 = "bun"; // default to "bun" in PATH
+    var output_path: ?[]const u8 = null;
+    var dep_file_path: ?[]const u8 = null;
     const runner_script = @embedFile("builder.ts");
 
     while (args.next()) |arg| {
         if (std.mem.eql(u8, arg, "--bun-path")) bun_path = args.next() orelse return error.MissingBunPath;
+        if (std.mem.eql(u8, arg, "--output")) output_path = args.next() orelse return error.MissingOutputPath;
+        if (std.mem.eql(u8, arg, "--dep-file")) dep_file_path = args.next() orelse return error.MissingDepFilePath;
     }
 
     const input_json = try std.fs.File.stdin().readToEndAlloc(allocator, 64 * 1024 * 1024);
     defer allocator.free(input_json);
 
+    // Parse and inject output path into each build config
     const parsed = try std.json.parseFromSlice(std.json.Value, allocator, input_json, .{});
     defer parsed.deinit();
 
     const builds = parsed.value.array.items;
     const build_count = builds.len;
+
+    if (output_path) |op| {
+        for (builds) |*build_item| {
+            const config_ptr = build_item.object.getPtr("config").?;
+            try config_ptr.object.put("output", .{ .string = op });
+        }
+    }
+
+    // Re-serialize with injected output path
+    const modified_json = try std.json.Stringify.valueAlloc(allocator, parsed.value, .{});
+    defer allocator.free(modified_json);
 
     var child = std.process.Child.init(
         &.{ bun_path, "-e", runner_script },
@@ -44,7 +61,7 @@ pub fn main() !void {
     try child.spawn();
 
     // Write config to bun's stdin, then close so bun sees EOF
-    try child.stdin.?.writeAll(input_json);
+    try child.stdin.?.writeAll(modified_json);
     child.stdin.?.close();
     child.stdin = null;
 
@@ -54,7 +71,6 @@ pub fn main() !void {
     });
     defer progress.end();
 
-    // // Track a progress node per build name.
     const NodeMap = std.StringHashMap(std.Progress.Node);
     var nodes = NodeMap.init(allocator);
     defer {
@@ -65,6 +81,10 @@ pub fn main() !void {
 
     var failed: usize = 0;
     failed = failed; // silence unused
+
+    // Collect dependencies for dep file
+    var all_deps = std.ArrayList([]const u8).empty;
+    defer all_deps.deinit(allocator);
 
     var stdout = child.stdout.?;
     var buffer: [4096]u8 = undefined;
@@ -97,6 +117,10 @@ pub fn main() !void {
             },
             .result => {
                 if (ev.success == false) failed += 1;
+                // Collect discovered dependencies for dep file
+                for (ev.dependencies) |dep| {
+                    try all_deps.append(allocator, try arena.dupe(u8, dep));
+                }
             },
             .@"error" => {
                 failed += 1;
@@ -117,6 +141,13 @@ pub fn main() !void {
         if (err == error.EndOfStream) {}
     }
 
+    // Write dep file before potential exit(1)
+    if (dep_file_path) |dfp| {
+        writeDepFile(allocator, dfp, output_path orelse "output.css", all_deps.items) catch |err| {
+            std.debug.print("Failed to write dep file: {any}\n", .{err});
+        };
+    }
+
     const term = child.wait() catch |err| {
         if (err == error.FileNotFound) {
             std.debug.print("Failed to execute bun: executable not found at '{s}'\n", .{bun_path});
@@ -134,4 +165,26 @@ pub fn main() !void {
         std.debug.print("tailwindcss: {d} build(s) failed\n", .{failed});
         std.process.exit(1);
     }
+}
+
+fn writeDepFile(allocator: std.mem.Allocator, path: []const u8, target: []const u8, deps: []const []const u8) !void {
+    // Build dep file content in memory, then write in one shot
+    var buf = std.ArrayList(u8).empty;
+    defer buf.deinit(allocator);
+    try buf.appendSlice(allocator, target);
+    try buf.appendSlice(allocator, ":");
+    for (deps) |dep| {
+        try buf.appendSlice(allocator, " ");
+        for (dep) |c| {
+            if (c == ' ') {
+                try buf.appendSlice(allocator, "\\ ");
+            } else {
+                try buf.append(allocator, c);
+            }
+        }
+    }
+    try buf.appendSlice(allocator, "\n");
+    const f = try std.fs.cwd().createFile(path, .{});
+    defer f.close();
+    try f.writeAll(buf.items);
 }

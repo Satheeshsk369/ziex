@@ -8,9 +8,19 @@ pub fn build(b: *std.Build) !void {
             .name = b.fmt("example-{d}", .{i}),
             .config = .{
                 .entrypoints = &.{b.path("index.ts")},
-                .outdir = b.path("dist"),
+                .target = .browser,
+                .minify = b.release_mode != .off,
+                .sourcemap = if (b.release_mode == .off) .@"inline" else .none,
             },
         };
     }
-    bunjs.addBuildsRun(b, builds);
+    const outputs = bunjs.addBuilds(b, builds);
+    for (outputs, 0..) |output, i| {
+        const install = b.addInstallDirectory(.{
+            .source_dir = output.dir,
+            .install_dir = .prefix,
+            .install_subdir = b.fmt("dist-{d}", .{i}),
+        });
+        b.default_step.dependOn(&install.step);
+    }
 }

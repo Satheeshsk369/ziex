@@ -5,9 +5,6 @@ const TailwindBuildConfig = @This();
 /// Input CSS file path (required)
 input: std.Build.LazyPath,
 
-/// Output CSS file path (required)
-output: std.Build.LazyPath,
-
 /// Minify the output [default: false]
 minify: bool = false,
 
@@ -24,7 +21,6 @@ pub fn toJsonValue(self: TailwindBuildConfig, b: *std.Build, arena: std.mem.Allo
     var obj = std.json.ObjectMap.init(arena);
 
     try obj.put("input", .{ .string = self.input.getPath(b) });
-    try obj.put("output", .{ .string = self.output.getPath(b) });
     try obj.put("minify", .{ .bool = self.minify });
     try obj.put("optimize", .{ .bool = self.optimize });
     try obj.put("map", .{ .bool = self.map });
