@@ -364,8 +364,11 @@ pub fn Handler(comptime AppCtxType: type) type {
 
         /// Paths to ignore in dev logging (browser probes, internal routes)
         fn isNoisyPath(path: []const u8) bool {
-            return std.mem.startsWith(u8, path, "/.well-known/") or
-                std.mem.eql(u8, path, "/favicon.ico");
+            if (std.mem.startsWith(u8, path, "/.well-known/")) return true;
+            if (std.mem.startsWith(u8, path, "/assets/_/")) return true; // Generated assets directory
+            if (std.mem.eql(u8, path, "/favicon.ico")) return true;
+
+            return false;
         }
 
         pub fn notFound(self: *Self, req: *httpz.Request, res: *httpz.Response) !void {

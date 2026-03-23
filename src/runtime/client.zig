@@ -11,3 +11,4 @@ pub const setInterval = window.setInterval;
 pub const setTimeout = window.setTimeout;
 pub const Console = window.Console;
 pub const rerender = reactivity.rerender;
+pub const eval = window.eval;

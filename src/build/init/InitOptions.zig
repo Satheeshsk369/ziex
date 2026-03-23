@@ -151,6 +151,15 @@ static_path: ?LazyPath = null,
 /// If `null`, defaults to `data` directory in your project root.
 data_path: ?LazyPath = null,
 
+/// Version string used for cache-busting asset URLs (e.g. `/assets/_/main.wasm?<version>`).
+///
+/// Pass your app's version here so that asset URLs change when you ship a new release:
+/// ```zig
+/// .version = @import("build.zig.zon").version,
+/// ```
+/// If `null`, falls back to ziex's own version.
+version: ?[]const u8 = null,
+
 // /// Plugin configurations for extending the build process.
 // ///
 // /// Plugins allow you to run custom commands (like CSS preprocessors, asset optimizers, etc.)

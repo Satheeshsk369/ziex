@@ -50,6 +50,7 @@ pub fn init(b: *std.Build, exe: *std.Build.Step.Compile, options: InitOptions) !
         .static_path = options.static_path,
         .data_path = options.data_path,
         .ziex_js_dep = ziex_js_dep,
+        .version = options.version,
     };
 
     if (options.app) |site_opts| {
@@ -77,6 +78,7 @@ const InitInnerOptions = struct {
     data_path: ?LazyPath,
     ziex_js_dep: *std.Build.Dependency,
     element_injections: []const AddElementOptions = &.{},
+    version: ?[]const u8 = null,
 };
 
 fn getZxRun(b: *std.Build, zx_exe: *std.Build.Step.Compile, opts: InitInnerOptions) *std.Build.Step.Run {
@@ -111,6 +113,7 @@ pub fn initInner(
 ) !Build {
     // const target = exe.root_module.resolved_target;
     const optimize = exe.root_module.optimize;
+    const build_zon = @import("../../build.zig.zon");
 
     // --- ZX Options --- //
     const zx_options = b.addOptions();
@@ -140,37 +143,8 @@ pub fn initInner(
     }
     transpile_cmd.expectExitCode(0);
 
-    // --- ZX Injections --- //
-    const build_zon = @import("../../build.zig.zon");
-    const injections_step = try InjectionsGenStep.create(b);
-    for (opts.element_injections) |inj| {
-        injections_step.add(inj);
-    }
-    // Inject wasm preload link tag into head
-    injections_step.add(.{
-        .parent = .head,
-        .position = .ending,
-        .element = .{
-            .tag = "link",
-            .attributes = "id=\"__$wasmlink\" rel=\"preload\" as=\"fetch\" href=\"/assets/_/main.wasm?" ++ build_zon.version ++ "\" crossorigin",
-        },
-    });
-    // Inject jsglue script tag via the build system
-    injections_step.add(.{
-        .parent = .body,
-        .position = .ending,
-        .element = .{
-            .tag = "script",
-            .attributes = "src=\"/assets/_/main.js?" ++ build_zon.version ++ "\"",
-        },
-    });
-    zx_module.addAnonymousImport("zx_injections", .{
-        .root_source_file = injections_step.getOutput(),
-    });
-    zx_wasm_module.addAnonymousImport("zx_injections", .{
-        .root_source_file = injections_step.getOutput(),
-    });
-
+    const zxjs_default_href = "/assets/_/main.js";
+    var zxjs_href = opts.client.jsglue_href orelse zxjs_default_href;
     // --- Static Directory Setup --- //
     {
         // Install public directory into static (only if the directory exists)
@@ -195,14 +169,56 @@ pub fn initInner(
             exe.step.dependOn(&install_assets.step);
         } else |_| {}
 
-        // Install jsglue (wasm/init.js) from ziex_js package to static/assets/_/main.js
-        const install_jsglue = b.addInstallFileWithDir(
-            opts.ziex_js_dep.path("wasm/init.js"),
-            .prefix,
-            "static/assets/_/main.js",
-        );
-        exe.step.dependOn(&install_jsglue.step);
+        var local_zxjs_path: ?LazyPath = opts.ziex_js_dep.path("wasm/init.js");
+
+        if (opts.client.jsglue_href) |jsglue_href| {
+            const is_remote = std.mem.startsWith(u8, jsglue_href, "http://") or std.mem.startsWith(u8, jsglue_href, "https://");
+            if (is_remote) {
+                local_zxjs_path = null;
+                zxjs_href = jsglue_href;
+            }
+        }
+
+        if (local_zxjs_path) |local_path| {
+            // Install jsglue (wasm/init.js) from ziex_js package to static/assets/_/main.js
+            const install_jsglue = b.addInstallFileWithDir(
+                local_path,
+                .prefix,
+                "static" ++ zxjs_default_href,
+            );
+            exe.step.dependOn(&install_jsglue.step);
+        }
     }
+
+    // --- ZX Injections --- //
+    const version = opts.version orelse build_zon.version;
+    const injections_step = try InjectionsGenStep.create(b);
+    for (opts.element_injections) |inj| {
+        injections_step.add(inj);
+    }
+    // Inject wasm preload link tag into head
+    injections_step.add(.{
+        .parent = .head,
+        .position = .ending,
+        .element = .{
+            .tag = "link",
+            .attributes = b.fmt(
+                "id=\"__$wasmlink\" rel=\"preload\" as=\"fetch\" href=\"/assets/_/main.wasm?{s}\" crossorigin",
+                .{version},
+            ),
+        },
+    });
+    // Inject jsglue script tag via the build system
+    injections_step.add(.{ .parent = .body, .position = .ending, .element = .{
+        .tag = "script",
+        .attributes = b.fmt("src=\"{s}?{s}\"", .{ zxjs_href, version }),
+    } });
+    zx_module.addAnonymousImport("zx_injections", .{
+        .root_source_file = injections_step.getOutput(),
+    });
+    zx_wasm_module.addAnonymousImport("zx_injections", .{
+        .root_source_file = injections_step.getOutput(),
+    });
 
     // --- ZX File Cache Invalidator ---
     watch: {
