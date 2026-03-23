@@ -141,10 +141,20 @@ pub fn initInner(
     transpile_cmd.expectExitCode(0);
 
     // --- ZX Injections --- //
+    const build_zon = @import("../../build.zig.zon");
     const injections_step = try InjectionsGenStep.create(b);
     for (opts.element_injections) |inj| {
         injections_step.add(inj);
     }
+    // Inject jsglue script tag via the build system
+    injections_step.add(.{
+        .parent = .body,
+        .position = .ending,
+        .element = .{
+            .tag = "script",
+            .attributes = "src=\"/assets/_/main.js?" ++ build_zon.version ++ "\"",
+        },
+    });
     zx_module.addAnonymousImport("zx_injections", .{
         .root_source_file = injections_step.getOutput(),
     });
@@ -168,6 +178,14 @@ pub fn initInner(
             .install_subdir = "static/assets",
         });
         exe.step.dependOn(&install_assets.step);
+
+        // Install jsglue (wasm/init.js) from ziex_js package to static/assets/_/main.js
+        const install_jsglue = b.addInstallFileWithDir(
+            opts.ziex_js_dep.path("wasm/init.js"),
+            .prefix,
+            "static/assets/_/main.js",
+        );
+        exe.step.dependOn(&install_jsglue.step);
     }
 
     // --- ZX File Cache Invalidator ---

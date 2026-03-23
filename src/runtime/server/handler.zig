@@ -1,5 +1,4 @@
 const httpz = @import("httpz");
-const module_config = @import("zx_info");
 const log = std.log.scoped(.app);
 
 /// ElementInjector handles injecting elements into component trees
@@ -443,22 +442,9 @@ pub fn Handler(comptime AppCtxType: type) type {
             fallback_message: []const u8 = "Internal Server Error",
         };
 
-        const InjectScriptsOptions = struct {
-            dev: bool = false,
-            jsglue: bool = false,
-        };
-
-        fn injectScripts(arena: Allocator, component: *Component, comptime opts: InjectScriptsOptions) void {
+        fn injectDevScript(arena: Allocator, component: *Component) void {
             const inj = ElementInjector{ .allocator = arena };
-
-            if (opts.dev) _ = inj.injectScriptIntoBody(component, "/.well-known/_zx/devscript.js");
-            if (opts.jsglue) {
-                const jsglue_cdn_href =
-                    std.fmt.comptimePrint("https://cdn.jsdelivr.net/npm/ziex@{s}/wasm/init.min.js", .{module_config.jsglue_version});
-                const jsglue_href = if (zx_options.jsglue_href) |href| href else jsglue_cdn_href;
-
-                _ = inj.injectScriptIntoBody(component, jsglue_href);
-            }
+            _ = inj.injectScriptIntoBody(component, "/.well-known/_zx/devscript.js");
         }
 
         /// Shared method to render error/notfound pages wrapped in parent layouts
@@ -543,19 +529,15 @@ pub fn Handler(comptime AppCtxType: type) type {
                 component = layouts_to_apply[j](layoutctx, component);
                 // In dev mode, inject dev script into body element of root layout (last one applied, j == 0)
                 if (j == 0 and injector != null) {
-                    injectScripts(req.arena, &component, .{ .dev = true });
+                    injectDevScript(req.arena, &component);
                     injector = null;
                 }
             }
 
             // If no layouts were applied but we're in dev mode, still try to inject
             if (layouts_count == 0 and is_dev_mode) {
-                injectScripts(req.arena, &component, .{ .dev = true });
+                injectDevScript(req.arena, &component);
             }
-
-            // if (comptime zx_options.client_enabled) {
-            injectScripts(req.arena, &component, .{ .jsglue = true });
-            // }
 
             // Render the final component
             const writer = res.writer();
@@ -1076,23 +1058,17 @@ pub fn Handler(comptime AppCtxType: type) type {
                         // In dev mode, inject dev script into body element of root layout (last one applied, i == 0)
                         if (i == 0) {
                             if (injector != null) {
-                                injectScripts(pagectx.arena, &page_component, .{ .dev = true });
+                                injectDevScript(pagectx.arena, &page_component);
                                 injector = null; // Only inject once
                             }
-                            // if (comptime zx_options.client_enabled) {
-                            injectScripts(pagectx.arena, &page_component, .{ .jsglue = true });
-                            // }
                         }
                     }
 
                     // Handle root route's own layout - inject dev script since it's the most parent
                     if (is_root_route) {
                         if (injector != null) {
-                            injectScripts(pagectx.arena, &page_component, .{ .dev = true });
+                            injectDevScript(pagectx.arena, &page_component);
                         }
-                        // if (comptime zx_options.client_enabled) {
-                        injectScripts(pagectx.arena, &page_component, .{ .jsglue = true });
-                        // }
                     }
 
                     if (is_devtool) {
