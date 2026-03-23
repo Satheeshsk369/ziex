@@ -45,8 +45,7 @@ jobs:
 
           echo "templates=$TEMPLATES" >> $GITHUB_OUTPUT
 
-  build:
-    name: Build Check
+  check:
     needs: discover
     runs-on: ubuntu-latest
     if: needs.discover.outputs.templates != '[]'
@@ -77,8 +76,7 @@ jobs:
           zig build
 
   sync:
-    name: Sync
-    needs: [discover, build]
+    needs: [discover, check]
     runs-on: ubuntu-latest
     if: needs.discover.outputs.templates != '[]'
     strategy:

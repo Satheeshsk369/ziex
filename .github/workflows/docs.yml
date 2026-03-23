@@ -61,7 +61,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build_ssg
-    name: Deploy (GH Pages)
+    name: Deploy (SSG)
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
