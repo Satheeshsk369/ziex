@@ -67,6 +67,11 @@ jobs:
         run: |
           cd templates/_base
           zig fetch --save "git+https://github.com/ziex-dev/ziex#${{ github.sha }}"
+          # If this template tracks its own build.zig.zon, update it too
+          if git ls-files --error-unmatch "templates/${{ matrix.template }}/build.zig.zon" 2>/dev/null; then
+            cd "$OLDPWD/templates/${{ matrix.template }}"
+            zig fetch --save "git+https://github.com/ziex-dev/ziex#${{ github.sha }}"
+          fi
 
       - name: Populate template
         run: bash ./tools/template.sh populate ${{ matrix.template }}
@@ -102,6 +107,11 @@ jobs:
         run: |
           cd templates/_base
           zig fetch --save "git+https://github.com/ziex-dev/ziex#${{ github.sha }}"
+          # If this template tracks its own build.zig.zon, update it too
+          if git ls-files --error-unmatch "templates/${{ matrix.template }}/build.zig.zon" 2>/dev/null; then
+            cd "$OLDPWD/templates/${{ matrix.template }}"
+            zig fetch --save "git+https://github.com/ziex-dev/ziex#${{ github.sha }}"
+          fi
 
       - name: Populate and Sync
         env:
