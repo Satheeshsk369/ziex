@@ -203,6 +203,8 @@ pub const Component = union(enum) {
                 allocator.free(component_csr.name);
                 allocator.free(component_csr.id);
             },
+            .none => {},
+            .text => |t| allocator.free(t),
         }
     }
 

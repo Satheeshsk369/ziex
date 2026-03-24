@@ -112,3 +112,7 @@ pub const fetch = Fetch.fetch;
 pub const client_allocator = if (builtin.os.tag == .freestanding) std.heap.wasm_allocator else std.heap.page_allocator;
 pub const platform: Platform = plfm.platform;
 pub const std_options: std.Options = opts.std_options;
+
+// --- StyleSheet --- //
+pub const style = @import("style/root.zig");
+pub const StyleSheet = style.Style;

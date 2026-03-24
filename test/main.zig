@@ -10,6 +10,7 @@ test {
     _ = @import("core/routing.zig");
     _ = @import("core/vdom.zig");
     _ = @import("core/dx.zig");
+    _ = @import("style.zig");
 }
 
 pub const std_options = std.Options{

@@ -1,0 +1,27730 @@
+//! Generated from @webref/css (W3C Specifications)
+//! Do not edit manually.
+
+const std = @import("std");
+const core = @import("core.zig");
+
+/// -webkit-align-content
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-align-content
+pub const WebkitAlignContent = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    normal,
+    first,
+    last,
+    baseline,
+    spaceBetween,
+    spaceAround,
+    spaceEvenly,
+    stretch,
+    unsafe,
+    safe,
+    center,
+    start,
+    end,
+    flexStart,
+    flexEnd,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitAlignContent { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitAlignContent, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-align-items
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-align-items
+pub const WebkitAlignItems = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    normal,
+    stretch,
+    first,
+    last,
+    baseline,
+    unsafe,
+    safe,
+    center,
+    start,
+    end,
+    selfStart,
+    selfEnd,
+    flexStart,
+    flexEnd,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitAlignItems { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitAlignItems, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-align-self
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-align-self
+pub const WebkitAlignSelf = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    unsafe,
+    safe,
+    normal,
+    center,
+    start,
+    end,
+    selfStart,
+    selfEnd,
+    flexStart,
+    flexEnd,
+    stretch,
+    first,
+    last,
+    baseline,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitAlignSelf { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitAlignSelf, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-animation
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-animation
+pub const WebkitAnimation = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    linear,
+    ease,
+    easeIn,
+    easeOut,
+    easeInOut,
+    stepStart,
+    stepEnd,
+    infinite,
+    normal,
+    reverse,
+    alternate,
+    alternateReverse,
+    forwards,
+    backwards,
+    both,
+    running,
+    paused,
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitAnimation { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitAnimation, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-animation-delay
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-animation-delay
+pub const WebkitAnimationDelay = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitAnimationDelay { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitAnimationDelay, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-animation-direction
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-animation-direction
+pub const WebkitAnimationDirection = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    normal,
+    reverse,
+    alternate,
+    alternateReverse,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitAnimationDirection { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitAnimationDirection, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-animation-duration
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-animation-duration
+pub const WebkitAnimationDuration = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitAnimationDuration { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitAnimationDuration, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-animation-fill-mode
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-animation-fill-mode
+pub const WebkitAnimationFillMode = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    forwards,
+    backwards,
+    both,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitAnimationFillMode { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitAnimationFillMode, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-animation-iteration-count
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-animation-iteration-count
+pub const WebkitAnimationIterationCount = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    infinite,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitAnimationIterationCount { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitAnimationIterationCount, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-animation-name
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-animation-name
+pub const WebkitAnimationName = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitAnimationName { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitAnimationName, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-animation-play-state
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-animation-play-state
+pub const WebkitAnimationPlayState = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    running,
+    paused,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitAnimationPlayState { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitAnimationPlayState, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-animation-timing-function
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-animation-timing-function
+pub const WebkitAnimationTimingFunction = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    linear,
+    ease,
+    easeIn,
+    easeOut,
+    easeInOut,
+    stepStart,
+    stepEnd,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitAnimationTimingFunction { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitAnimationTimingFunction, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-appearance
+/// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef--webkit-appearance
+pub const WebkitAppearance = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    base,
+    baseSelect,
+    searchfield,
+    textarea,
+    checkbox,
+    radio,
+    menulist,
+    listbox,
+    meter,
+    progressBar,
+    button,
+    textfield,
+    menulistButton,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitAppearance { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitAppearance, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-backface-visibility
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-backface-visibility
+pub const WebkitBackfaceVisibility = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    visible,
+    hidden,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitBackfaceVisibility { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitBackfaceVisibility, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-background-clip
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-background-clip
+pub const WebkitBackgroundClip = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    contentBox,
+    paddingBox,
+    borderBox,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitBackgroundClip { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitBackgroundClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-background-origin
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-background-origin
+pub const WebkitBackgroundOrigin = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    contentBox,
+    paddingBox,
+    borderBox,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitBackgroundOrigin { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitBackgroundOrigin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-background-size
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-background-size
+pub const WebkitBackgroundSize = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    cover,
+    contain,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) WebkitBackgroundSize { return .{ .px_ = v }; }
+    pub fn em(v: f32) WebkitBackgroundSize { return .{ .em_ = v }; }
+    pub fn rem(v: f32) WebkitBackgroundSize { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) WebkitBackgroundSize { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) WebkitBackgroundSize { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitBackgroundSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-border-bottom-left-radius
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-border-bottom-left-radius
+pub const WebkitBorderBottomLeftRadius = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) WebkitBorderBottomLeftRadius { return .{ .px_ = v }; }
+    pub fn em(v: f32) WebkitBorderBottomLeftRadius { return .{ .em_ = v }; }
+    pub fn rem(v: f32) WebkitBorderBottomLeftRadius { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) WebkitBorderBottomLeftRadius { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) WebkitBorderBottomLeftRadius { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitBorderBottomLeftRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-border-bottom-right-radius
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-border-bottom-right-radius
+pub const WebkitBorderBottomRightRadius = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) WebkitBorderBottomRightRadius { return .{ .px_ = v }; }
+    pub fn em(v: f32) WebkitBorderBottomRightRadius { return .{ .em_ = v }; }
+    pub fn rem(v: f32) WebkitBorderBottomRightRadius { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) WebkitBorderBottomRightRadius { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) WebkitBorderBottomRightRadius { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitBorderBottomRightRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-border-radius
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-border-radius
+pub const WebkitBorderRadius = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) WebkitBorderRadius { return .{ .px_ = v }; }
+    pub fn em(v: f32) WebkitBorderRadius { return .{ .em_ = v }; }
+    pub fn rem(v: f32) WebkitBorderRadius { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) WebkitBorderRadius { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) WebkitBorderRadius { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitBorderRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-border-top-left-radius
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-border-top-left-radius
+pub const WebkitBorderTopLeftRadius = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) WebkitBorderTopLeftRadius { return .{ .px_ = v }; }
+    pub fn em(v: f32) WebkitBorderTopLeftRadius { return .{ .em_ = v }; }
+    pub fn rem(v: f32) WebkitBorderTopLeftRadius { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) WebkitBorderTopLeftRadius { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) WebkitBorderTopLeftRadius { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitBorderTopLeftRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-border-top-right-radius
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-border-top-right-radius
+pub const WebkitBorderTopRightRadius = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) WebkitBorderTopRightRadius { return .{ .px_ = v }; }
+    pub fn em(v: f32) WebkitBorderTopRightRadius { return .{ .em_ = v }; }
+    pub fn rem(v: f32) WebkitBorderTopRightRadius { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) WebkitBorderTopRightRadius { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) WebkitBorderTopRightRadius { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitBorderTopRightRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-box-align
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-box-align
+pub const WebkitBoxAlign = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitBoxAlign { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitBoxAlign, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-box-flex
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-box-flex
+pub const WebkitBoxFlex = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitBoxFlex { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitBoxFlex, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-box-ordinal-group
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-box-ordinal-group
+pub const WebkitBoxOrdinalGroup = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitBoxOrdinalGroup { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitBoxOrdinalGroup, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-box-orient
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-box-orient
+pub const WebkitBoxOrient = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitBoxOrient { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitBoxOrient, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-box-pack
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-box-pack
+pub const WebkitBoxPack = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitBoxPack { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitBoxPack, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-box-shadow
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-box-shadow
+pub const WebkitBoxShadow = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn px(v: f32) WebkitBoxShadow { return .{ .px_ = v }; }
+    pub fn em(v: f32) WebkitBoxShadow { return .{ .em_ = v }; }
+    pub fn rem(v: f32) WebkitBoxShadow { return .{ .rem_ = v }; }
+    pub fn hex(v: u32) WebkitBoxShadow { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) WebkitBoxShadow { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) WebkitBoxShadow { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitBoxShadow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-box-sizing
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-box-sizing
+pub const WebkitBoxSizing = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    contentBox,
+    borderBox,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitBoxSizing { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitBoxSizing, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-filter
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-filter
+pub const WebkitFilter = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitFilter { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitFilter, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-flex
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-flex-propdef
+pub const WebkitFlex = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitFlex { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitFlex, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-flex-basis
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-flex-basis
+pub const WebkitFlexBasis = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    content,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitFlexBasis { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitFlexBasis, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-flex-direction
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-flex-direction
+pub const WebkitFlexDirection = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    row,
+    rowReverse,
+    column,
+    columnReverse,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitFlexDirection { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitFlexDirection, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-flex-flow
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-flex-flow
+pub const WebkitFlexFlow = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitFlexFlow { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitFlexFlow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-flex-grow
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-flex-grow
+pub const WebkitFlexGrow = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitFlexGrow { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitFlexGrow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-flex-shrink
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-flex-shrink
+pub const WebkitFlexShrink = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitFlexShrink { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitFlexShrink, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-flex-wrap
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-flex-wrap
+pub const WebkitFlexWrap = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    nowrap,
+    wrap,
+    wrapReverse,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitFlexWrap { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitFlexWrap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-justify-content
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-justify-content
+pub const WebkitJustifyContent = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    normal,
+    spaceBetween,
+    spaceAround,
+    spaceEvenly,
+    stretch,
+    unsafe,
+    safe,
+    center,
+    start,
+    end,
+    flexStart,
+    flexEnd,
+    left,
+    right,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitJustifyContent { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitJustifyContent, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-line-clamp
+/// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef--webkit-line-clamp
+pub const WebkitLineClamp = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitLineClamp { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitLineClamp, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-mask
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask
+pub const WebkitMask = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    left,
+    center,
+    right,
+    top,
+    bottom,
+    xStart,
+    xEnd,
+    yStart,
+    yEnd,
+    blockStart,
+    blockEnd,
+    inlineStart,
+    inlineEnd,
+    start,
+    end,
+    auto,
+    cover,
+    contain,
+    repeatX,
+    repeatY,
+    repeatBlock,
+    repeatInline,
+    repeat,
+    space,
+    round,
+    noRepeat,
+    contentBox,
+    paddingBox,
+    borderBox,
+    marginBox,
+    halfBorderBox,
+    fillBox,
+    strokeBox,
+    viewBox,
+    noClip,
+    add,
+    subtract,
+    intersect,
+    exclude,
+    alpha,
+    luminance,
+    matchSource,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) WebkitMask { return .{ .px_ = v }; }
+    pub fn em(v: f32) WebkitMask { return .{ .em_ = v }; }
+    pub fn rem(v: f32) WebkitMask { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) WebkitMask { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) WebkitMask { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitMask, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-mask-box-image
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-box-image
+pub const WebkitMaskBoxImage = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitMaskBoxImage { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitMaskBoxImage, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-mask-box-image-outset
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-box-image-outset
+pub const WebkitMaskBoxImageOutset = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) WebkitMaskBoxImageOutset { return .{ .px_ = v }; }
+    pub fn em(v: f32) WebkitMaskBoxImageOutset { return .{ .em_ = v }; }
+    pub fn rem(v: f32) WebkitMaskBoxImageOutset { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) WebkitMaskBoxImageOutset { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitMaskBoxImageOutset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-mask-box-image-repeat
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-box-image-repeat
+pub const WebkitMaskBoxImageRepeat = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    stretch,
+    repeat,
+    round,
+    space,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitMaskBoxImageRepeat { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitMaskBoxImageRepeat, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-mask-box-image-slice
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-box-image-slice
+pub const WebkitMaskBoxImageSlice = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    fill,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn percent(v: f32) WebkitMaskBoxImageSlice { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) WebkitMaskBoxImageSlice { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitMaskBoxImageSlice, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-mask-box-image-source
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-box-image-source
+pub const WebkitMaskBoxImageSource = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitMaskBoxImageSource { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitMaskBoxImageSource, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-mask-box-image-width
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-box-image-width
+pub const WebkitMaskBoxImageWidth = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) WebkitMaskBoxImageWidth { return .{ .px_ = v }; }
+    pub fn em(v: f32) WebkitMaskBoxImageWidth { return .{ .em_ = v }; }
+    pub fn rem(v: f32) WebkitMaskBoxImageWidth { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) WebkitMaskBoxImageWidth { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) WebkitMaskBoxImageWidth { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitMaskBoxImageWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-mask-clip
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-clip
+pub const WebkitMaskClip = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    contentBox,
+    paddingBox,
+    borderBox,
+    fillBox,
+    strokeBox,
+    viewBox,
+    noClip,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitMaskClip { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitMaskClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-mask-composite
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-composite
+pub const WebkitMaskComposite = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    add,
+    subtract,
+    intersect,
+    exclude,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitMaskComposite { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitMaskComposite, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-mask-image
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-image
+pub const WebkitMaskImage = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitMaskImage { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitMaskImage, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-mask-origin
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-origin
+pub const WebkitMaskOrigin = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    contentBox,
+    paddingBox,
+    borderBox,
+    fillBox,
+    strokeBox,
+    viewBox,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitMaskOrigin { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitMaskOrigin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-mask-position
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-position
+pub const WebkitMaskPosition = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    left,
+    center,
+    right,
+    top,
+    bottom,
+    xStart,
+    xEnd,
+    yStart,
+    yEnd,
+    blockStart,
+    blockEnd,
+    inlineStart,
+    inlineEnd,
+    start,
+    end,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) WebkitMaskPosition { return .{ .px_ = v }; }
+    pub fn em(v: f32) WebkitMaskPosition { return .{ .em_ = v }; }
+    pub fn rem(v: f32) WebkitMaskPosition { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) WebkitMaskPosition { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) WebkitMaskPosition { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitMaskPosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-mask-repeat
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-repeat
+pub const WebkitMaskRepeat = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    repeatX,
+    repeatY,
+    repeatBlock,
+    repeatInline,
+    repeat,
+    space,
+    round,
+    noRepeat,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitMaskRepeat { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitMaskRepeat, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-mask-size
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-size
+pub const WebkitMaskSize = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    cover,
+    contain,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) WebkitMaskSize { return .{ .px_ = v }; }
+    pub fn em(v: f32) WebkitMaskSize { return .{ .em_ = v }; }
+    pub fn rem(v: f32) WebkitMaskSize { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) WebkitMaskSize { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) WebkitMaskSize { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitMaskSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-order
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-order
+pub const WebkitOrder = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitOrder { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitOrder, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-perspective
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-perspective
+pub const WebkitPerspective = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) WebkitPerspective { return .{ .px_ = v }; }
+    pub fn em(v: f32) WebkitPerspective { return .{ .em_ = v }; }
+    pub fn rem(v: f32) WebkitPerspective { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) WebkitPerspective { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitPerspective, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-perspective-origin
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-perspective-origin
+pub const WebkitPerspectiveOrigin = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    left,
+    center,
+    right,
+    top,
+    bottom,
+    xStart,
+    xEnd,
+    yStart,
+    yEnd,
+    blockStart,
+    blockEnd,
+    inlineStart,
+    inlineEnd,
+    start,
+    end,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) WebkitPerspectiveOrigin { return .{ .px_ = v }; }
+    pub fn em(v: f32) WebkitPerspectiveOrigin { return .{ .em_ = v }; }
+    pub fn rem(v: f32) WebkitPerspectiveOrigin { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) WebkitPerspectiveOrigin { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) WebkitPerspectiveOrigin { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitPerspectiveOrigin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-text-fill-color
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-text-fill-color
+pub const WebkitTextFillColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) WebkitTextFillColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) WebkitTextFillColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) WebkitTextFillColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitTextFillColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-text-size-adjust
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-text-size-adjust
+pub const WebkitTextSizeAdjust = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn percent(v: f32) WebkitTextSizeAdjust { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) WebkitTextSizeAdjust { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitTextSizeAdjust, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-text-stroke
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-text-stroke
+pub const WebkitTextStroke = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hairline,
+    thin,
+    medium,
+    thick,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    px_: f32, em_: f32, rem_: f32,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn px(v: f32) WebkitTextStroke { return .{ .px_ = v }; }
+    pub fn em(v: f32) WebkitTextStroke { return .{ .em_ = v }; }
+    pub fn rem(v: f32) WebkitTextStroke { return .{ .rem_ = v }; }
+    pub fn hex(v: u32) WebkitTextStroke { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) WebkitTextStroke { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) WebkitTextStroke { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitTextStroke, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-text-stroke-color
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-text-stroke-color
+pub const WebkitTextStrokeColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) WebkitTextStrokeColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) WebkitTextStrokeColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) WebkitTextStrokeColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitTextStrokeColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-text-stroke-width
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-text-stroke-width
+pub const WebkitTextStrokeWidth = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hairline,
+    thin,
+    medium,
+    thick,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) WebkitTextStrokeWidth { return .{ .px_ = v }; }
+    pub fn em(v: f32) WebkitTextStrokeWidth { return .{ .em_ = v }; }
+    pub fn rem(v: f32) WebkitTextStrokeWidth { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) WebkitTextStrokeWidth { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitTextStrokeWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-transform
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-transform
+pub const WebkitTransform = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitTransform { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitTransform, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-transform-origin
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-transform-origin
+pub const WebkitTransformOrigin = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    left,
+    center,
+    right,
+    top,
+    bottom,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) WebkitTransformOrigin { return .{ .px_ = v }; }
+    pub fn em(v: f32) WebkitTransformOrigin { return .{ .em_ = v }; }
+    pub fn rem(v: f32) WebkitTransformOrigin { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) WebkitTransformOrigin { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) WebkitTransformOrigin { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitTransformOrigin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-transform-style
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-transform-style
+pub const WebkitTransformStyle = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    flat,
+    preserve3d,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitTransformStyle { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitTransformStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-transition
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-transition
+pub const WebkitTransition = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    all,
+    linear,
+    ease,
+    easeIn,
+    easeOut,
+    easeInOut,
+    stepStart,
+    stepEnd,
+    normal,
+    allowDiscrete,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitTransition { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitTransition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-transition-delay
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-transition-delay
+pub const WebkitTransitionDelay = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitTransitionDelay { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitTransitionDelay, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-transition-duration
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-transition-duration
+pub const WebkitTransitionDuration = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitTransitionDuration { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitTransitionDuration, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-transition-property
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-transition-property
+pub const WebkitTransitionProperty = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    all,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitTransitionProperty { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitTransitionProperty, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-transition-timing-function
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-transition-timing-function
+pub const WebkitTransitionTimingFunction = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    linear,
+    ease,
+    easeIn,
+    easeOut,
+    easeInOut,
+    stepStart,
+    stepEnd,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitTransitionTimingFunction { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitTransitionTimingFunction, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// -webkit-user-select
+/// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef--webkit-user-select
+pub const WebkitUserSelect = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    text,
+    contain,
+    all,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WebkitUserSelect { return .{ .raw_ = r }; }
+
+    pub fn format(self: WebkitUserSelect, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// accent-color
+/// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-accent-color
+pub const AccentColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Represents a UA-chosen color, which should match the accent color of the platform, if any.
+    auto,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) AccentColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) AccentColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) AccentColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: AccentColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// align-content
+/// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-align-content
+pub const AlignContent = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Aligns the contents of the box as a whole (as the alignment subject) within the box itself (as the alignment container): along the inline/row/main axis of the box (for justify-content) or the block/column/cross axis of the box (for align-content). Values other than normal are defined in § 4 Alignment Keywords, above.
+    normal,
+    first,
+    last,
+    baseline,
+    spaceBetween,
+    spaceAround,
+    spaceEvenly,
+    stretch,
+    unsafe,
+    safe,
+    center,
+    start,
+    end,
+    flexStart,
+    flexEnd,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) AlignContent { return .{ .raw_ = r }; }
+
+    pub fn format(self: AlignContent, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// align-items
+/// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-align-items
+pub const AlignItems = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    normal,
+    stretch,
+    first,
+    last,
+    baseline,
+    unsafe,
+    safe,
+    center,
+    start,
+    end,
+    selfStart,
+    selfEnd,
+    flexStart,
+    flexEnd,
+    ///     /// The new anchor-center value makes this case extremely simple: if the positioned box has a default anchor box, then it is centered (insofar as possible) over the default anchor box in the relevant axis. Additionally:
+    anchorCenter,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) AlignItems { return .{ .raw_ = r }; }
+
+    pub fn format(self: AlignItems, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// align-self
+/// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-align-self
+pub const AlignSelf = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Behaves as normal if the box has no parent, or when determining the actual position of an absolutely positioned box. It behaves as the computed align-items value of the parent box (minus any legacy keywords) otherwise (including when determining the static position of an absolutely positioned box).
+    auto,
+    unsafe,
+    safe,
+    ///     /// Represents the “default” alignment for the layout mode, as defined below.
+    normal,
+    center,
+    start,
+    end,
+    selfStart,
+    selfEnd,
+    flexStart,
+    flexEnd,
+    ///     /// As defined for justify-self in § 6.1 Inline-Axis (or Main-Axis) Self-Alignment: the justify-self property.
+    stretch,
+    first,
+    last,
+    baseline,
+    ///     /// The new anchor-center value makes this case extremely simple: if the positioned box has a default anchor box, then it is centered (insofar as possible) over the default anchor box in the relevant axis. Additionally:
+    anchorCenter,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) AlignSelf { return .{ .raw_ = r }; }
+
+    pub fn format(self: AlignSelf, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// alignment-baseline
+/// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-alignment-baseline
+pub const AlignmentBaseline = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// This property specifies the box’s alignment baseline: the baseline used to align the box prior to applying its post-alignment shift (if applicable). Values have the same meanings as for dominant-baseline; the baseline keyword uses the dominant baseline choice of the parent.
+    baseline,
+    textBottom,
+    alphabetic,
+    ideographic,
+    middle,
+    central,
+    mathematical,
+    hanging,
+    textTop,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) AlignmentBaseline { return .{ .raw_ = r }; }
+
+    pub fn format(self: AlignmentBaseline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// all
+/// - **W3C**: https://drafts.csswg.org/css-cascade-5/#propdef-all
+pub const All = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The revert-rule CSS-wide keyword rolls back the cascade similar to revert and revert-layer, except it works by style rule rather than cascade origin or cascade layer.
+    revertRule,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) All { return .{ .raw_ = r }; }
+
+    pub fn format(self: All, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// anchor-name
+/// - **W3C**: https://drafts.csswg.org/css-anchor-position-1/#propdef-anchor-name
+pub const AnchorName = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) AnchorName { return .{ .raw_ = r }; }
+
+    pub fn format(self: AnchorName, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// anchor-scope
+/// - **W3C**: https://drafts.csswg.org/css-anchor-position-1/#propdef-anchor-scope
+pub const AnchorScope = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Specifies that all anchor names defined by this element or its descendants—​whose scope is not already limited by a descendant using anchor-scope—​to be in scope only for this element’s descendants; and limits descendants to only match anchor names to anchor elements within this subtree. This value only affects anchor names in the same tree scope, as if it were a strictly matched tree-scoped name. (That is, anchor-scope: all acts identically to anchor-scope: --foo, --bar, ..., listing all relevant anchor names.)
+    all,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) AnchorScope { return .{ .raw_ = r }; }
+
+    pub fn format(self: AnchorScope, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// animation
+/// - **W3C**: https://drafts.csswg.org/css-animations-1/#propdef-animation
+pub const Animation = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    linear,
+    ease,
+    easeIn,
+    easeOut,
+    easeInOut,
+    stepStart,
+    stepEnd,
+    infinite,
+    normal,
+    reverse,
+    alternate,
+    alternateReverse,
+    forwards,
+    backwards,
+    both,
+    running,
+    paused,
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Animation { return .{ .raw_ = r }; }
+
+    pub fn format(self: Animation, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// animation-composition
+/// - **W3C**: https://drafts.csswg.org/css-animations-2/#propdef-animation-composition
+pub const AnimationComposition = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    replace,
+    add,
+    accumulate,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) AnimationComposition { return .{ .raw_ = r }; }
+
+    pub fn format(self: AnimationComposition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// animation-delay
+/// - **W3C**: https://drafts.csswg.org/css-animations-1/#propdef-animation-delay
+pub const AnimationDelay = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) AnimationDelay { return .{ .raw_ = r }; }
+
+    pub fn format(self: AnimationDelay, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// animation-direction
+/// - **W3C**: https://drafts.csswg.org/css-animations-1/#propdef-animation-direction
+pub const AnimationDirection = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// All iterations of the animation are played as specified.
+    normal,
+    ///     /// All iterations of the animation are played in the reverse direction from the way they were specified.
+    reverse,
+    ///     /// The animation cycle iterations that are odd counts are played in the normal direction, and the animation cycle iterations that are even counts are played in a reverse direction.
+    alternate,
+    ///     /// The animation cycle iterations that are odd counts are played in the reverse direction, and the animation cycle iterations that are even counts are played in a normal direction.
+    alternateReverse,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) AnimationDirection { return .{ .raw_ = r }; }
+
+    pub fn format(self: AnimationDirection, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// animation-duration
+/// - **W3C**: https://drafts.csswg.org/css-animations-2/#propdef-animation-duration
+pub const AnimationDuration = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// For time-driven animations, equivalent to 0s. For scroll-driven animations, equivalent to the duration necessary to fill the timeline in consideration of animation-range, animation-delay, and animation-iteration-count. See Scroll-driven Animations § 4.1 Finite Timeline Calculations.
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) AnimationDuration { return .{ .raw_ = r }; }
+
+    pub fn format(self: AnimationDuration, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// animation-fill-mode
+/// - **W3C**: https://drafts.csswg.org/css-animations-1/#propdef-animation-fill-mode
+pub const AnimationFillMode = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// After the animation ends (as determined by its animation-iteration-count), the animation will apply the property values for the time the animation ended. When animation-iteration-count is an integer greater than zero, the values applied will be those for the end of the last completed iteration of the animation (rather than the values for the start of the iteration that would be next). When animation-iteration-count is zero, the values applied will be those that would start the first iteration (just as when animation-fill-mode is backwards).
+    forwards,
+    ///     /// During the period defined by animation-delay, the animation will apply the property values defined in the keyframe that will start the first iteration of the animation. These are either the values of the from keyframe (when animation-direction is normal or alternate) or those of the to keyframe (when animation-direction is reverse or alternate-reverse).
+    backwards,
+    ///     /// The effects of both forwards and backwards fill apply.
+    both,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) AnimationFillMode { return .{ .raw_ = r }; }
+
+    pub fn format(self: AnimationFillMode, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// animation-iteration-count
+/// - **W3C**: https://drafts.csswg.org/css-animations-1/#propdef-animation-iteration-count
+pub const AnimationIterationCount = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The animation will repeat forever.
+    infinite,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) AnimationIterationCount { return .{ .raw_ = r }; }
+
+    pub fn format(self: AnimationIterationCount, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// animation-name
+/// - **W3C**: https://drafts.csswg.org/css-animations-1/#propdef-animation-name
+pub const AnimationName = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) AnimationName { return .{ .raw_ = r }; }
+
+    pub fn format(self: AnimationName, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// animation-play-state
+/// - **W3C**: https://drafts.csswg.org/css-animations-1/#propdef-animation-play-state
+pub const AnimationPlayState = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// While this property is set to running, the animation proceeds as normal.
+    running,
+    ///     /// While this property is set to paused, the animation is paused. The animation continues to apply to the element with the progress it had made before being paused. When unpaused (set back to running), it restarts from where it left off, as if the "clock" that controls the animation had stopped and started again. If the property is set to paused during the delay phase of the animation, the delay clock is also paused and resumes as soon as animation-play-state is set back to running.
+    paused,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) AnimationPlayState { return .{ .raw_ = r }; }
+
+    pub fn format(self: AnimationPlayState, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// animation-range
+/// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-animation-range
+pub const AnimationRange = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) AnimationRange { return .{ .raw_ = r }; }
+
+    pub fn format(self: AnimationRange, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// animation-range-center
+/// - **W3C**: https://drafts.csswg.org/pointer-animations-1/#propdef-animation-range-center
+pub const AnimationRangeCenter = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The 50% progress point of the animation’s active interval is at the center of the animation attachment range.
+    normal,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) AnimationRangeCenter { return .{ .px_ = v }; }
+    pub fn em(v: f32) AnimationRangeCenter { return .{ .em_ = v }; }
+    pub fn rem(v: f32) AnimationRangeCenter { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) AnimationRangeCenter { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) AnimationRangeCenter { return .{ .raw_ = r }; }
+
+    pub fn format(self: AnimationRangeCenter, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// animation-range-end
+/// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-animation-range-end
+pub const AnimationRangeEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The end of the animation’s attachment range is the end of its associated timeline; the end of the animation’s active interval is determined as normal.
+    normal,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) AnimationRangeEnd { return .{ .px_ = v }; }
+    pub fn em(v: f32) AnimationRangeEnd { return .{ .em_ = v }; }
+    pub fn rem(v: f32) AnimationRangeEnd { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) AnimationRangeEnd { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) AnimationRangeEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: AnimationRangeEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// animation-range-start
+/// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-animation-range-start
+pub const AnimationRangeStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The start of the animation’s attachment range is the start of its associated timeline; the start of the animation’s active interval is determined as normal.
+    normal,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) AnimationRangeStart { return .{ .px_ = v }; }
+    pub fn em(v: f32) AnimationRangeStart { return .{ .em_ = v }; }
+    pub fn rem(v: f32) AnimationRangeStart { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) AnimationRangeStart { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) AnimationRangeStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: AnimationRangeStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// animation-timeline
+/// - **W3C**: https://drafts.csswg.org/css-animations-2/#propdef-animation-timeline
+pub const AnimationTimeline = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) AnimationTimeline { return .{ .raw_ = r }; }
+
+    pub fn format(self: AnimationTimeline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// animation-timing-function
+/// - **W3C**: https://drafts.csswg.org/css-animations-1/#propdef-animation-timing-function
+pub const AnimationTimingFunction = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    linear,
+    ease,
+    easeIn,
+    easeOut,
+    easeInOut,
+    stepStart,
+    stepEnd,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) AnimationTimingFunction { return .{ .raw_ = r }; }
+
+    pub fn format(self: AnimationTimingFunction, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// animation-trigger
+/// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-animation-trigger
+pub const AnimationTrigger = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) AnimationTrigger { return .{ .raw_ = r }; }
+
+    pub fn format(self: AnimationTrigger, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// appearance
+/// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-appearance
+pub const Appearance = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The element’s box is laid out like a regular replaced element. Within that box, elements representing widgets should have the native appearance of that widget. The host language is responsible for defining which elements represent which widgets. Elements other than widgets must be rendered as for none.
+    auto,
+    ///     /// The effect of base depends on the element it is applied to:
+    base,
+    ///     /// The effect of base-select depends on the element it is applied to:
+    baseSelect,
+    searchfield,
+    textarea,
+    checkbox,
+    radio,
+    menulist,
+    listbox,
+    meter,
+    progressBar,
+    button,
+    textfield,
+    menulistButton,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Appearance { return .{ .raw_ = r }; }
+
+    pub fn format(self: Appearance, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// aspect-ratio
+/// - **W3C**: https://drafts.csswg.org/css-sizing-4/#propdef-aspect-ratio
+pub const AspectRatio = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Replaced elements with a natural aspect ratio use that aspect ratio; otherwise the box has no preferred aspect ratio. Size calculations involving the aspect ratio work with the content box dimensions always.
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) AspectRatio { return .{ .raw_ = r }; }
+
+    pub fn format(self: AspectRatio, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// backdrop-filter
+/// - **W3C**: https://drafts.csswg.org/filter-effects-2/#propdef-backdrop-filter
+pub const BackdropFilter = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BackdropFilter { return .{ .raw_ = r }; }
+
+    pub fn format(self: BackdropFilter, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// backface-visibility
+/// - **W3C**: https://drafts.csswg.org/css-transforms-2/#propdef-backface-visibility
+pub const BackfaceVisibility = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    visible,
+    hidden,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BackfaceVisibility { return .{ .raw_ = r }; }
+
+    pub fn format(self: BackfaceVisibility, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// background
+/// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background
+pub const Background = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    left,
+    center,
+    right,
+    top,
+    bottom,
+    xStart,
+    xEnd,
+    yStart,
+    yEnd,
+    blockStart,
+    blockEnd,
+    inlineStart,
+    inlineEnd,
+    start,
+    end,
+    auto,
+    cover,
+    contain,
+    repeatX,
+    repeatY,
+    repeatBlock,
+    repeatInline,
+    repeat,
+    space,
+    round,
+    noRepeat,
+    scroll,
+    fixed,
+    local,
+    contentBox,
+    paddingBox,
+    borderBox,
+    borderArea,
+    text,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn px(v: f32) Background { return .{ .px_ = v }; }
+    pub fn em(v: f32) Background { return .{ .em_ = v }; }
+    pub fn rem(v: f32) Background { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) Background { return .{ .percent_ = v }; }
+    pub fn hex(v: u32) Background { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) Background { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) Background { return .{ .raw_ = r }; }
+
+    pub fn format(self: Background, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// background-attachment
+/// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-attachment
+pub const BackgroundAttachment = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The background is fixed with regard to the box itself and does not scroll with its contents. (It is effectively attached to the box’s border.)
+    scroll,
+    ///     /// The background is fixed with regard to the viewport. In paged media where there is no viewport, a fixed background is fixed with respect to the page box and therefore replicated on every page.
+    fixed,
+    ///     /// The background is fixed with regard to the box’s contents: if the box has a scrolling mechanism, the background scrolls with the box’s contents, and the background painting area and background positioning area are relative to the scrollable overflow area of the box rather than to the border framing them. Because the scrollable overflow area does not include the border area, for scroll containers the border-box value of background-clip may be treated the same as padding-box.
+    local,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BackgroundAttachment { return .{ .raw_ = r }; }
+
+    pub fn format(self: BackgroundAttachment, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// background-blend-mode
+/// - **W3C**: https://drafts.csswg.org/compositing-2/#propdef-background-blend-mode
+pub const BackgroundBlendMode = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BackgroundBlendMode { return .{ .raw_ = r }; }
+
+    pub fn format(self: BackgroundBlendMode, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// background-clip
+/// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-clip
+pub const BackgroundClip = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The background is painted within (clipped to) the content box.
+    contentBox,
+    ///     /// The background is painted within (clipped to) the padding box.
+    paddingBox,
+    ///     /// The background is painted within (clipped to) the border box.
+    borderBox,
+    borderArea,
+    text,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BackgroundClip { return .{ .raw_ = r }; }
+
+    pub fn format(self: BackgroundClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// background-color
+/// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-color
+pub const BackgroundColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) BackgroundColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) BackgroundColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) BackgroundColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: BackgroundColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// background-image
+/// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-image
+pub const BackgroundImage = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BackgroundImage { return .{ .raw_ = r }; }
+
+    pub fn format(self: BackgroundImage, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// background-origin
+/// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-origin
+pub const BackgroundOrigin = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The position is relative to the content box.
+    contentBox,
+    ///     /// The position is relative to the padding box. (For single boxes 0 0 is the upper left corner of the padding edge, 100% 100% is the lower right corner.)
+    paddingBox,
+    ///     /// The position is relative to the border box.
+    borderBox,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BackgroundOrigin { return .{ .raw_ = r }; }
+
+    pub fn format(self: BackgroundOrigin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// background-position
+/// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-position
+pub const BackgroundPosition = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Computes to 0% for the horizontal position if one or two values are given, otherwise specifies the left edge as the origin for the next offset.
+    left,
+    ///     /// Computes to 50% (left 50%) for the horizontal position if the horizontal position is not otherwise specified, or 50% (top 50%) for the vertical position if it is.
+    center,
+    ///     /// Computes to 100% for the horizontal position if one or two values are given, otherwise specifies the right edge as the origin for the next offset.
+    right,
+    ///     /// Computes to 0% for the vertical position if one or two values are given, otherwise specifies the top edge as the origin for the next offset.
+    top,
+    ///     /// Computes to 100% for the vertical position if one or two values are given, otherwise specifies the bottom edge as the origin for the next offset.
+    bottom,
+    xStart,
+    xEnd,
+    yStart,
+    yEnd,
+    blockStart,
+    blockEnd,
+    inlineStart,
+    inlineEnd,
+    start,
+    end,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BackgroundPosition { return .{ .px_ = v }; }
+    pub fn em(v: f32) BackgroundPosition { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BackgroundPosition { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BackgroundPosition { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BackgroundPosition { return .{ .raw_ = r }; }
+
+    pub fn format(self: BackgroundPosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// background-position-block
+/// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-position-block
+pub const BackgroundPositionBlock = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    center,
+    start,
+    end,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BackgroundPositionBlock { return .{ .px_ = v }; }
+    pub fn em(v: f32) BackgroundPositionBlock { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BackgroundPositionBlock { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BackgroundPositionBlock { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BackgroundPositionBlock { return .{ .raw_ = r }; }
+
+    pub fn format(self: BackgroundPositionBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// background-position-inline
+/// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-position-inline
+pub const BackgroundPositionInline = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    center,
+    start,
+    end,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BackgroundPositionInline { return .{ .px_ = v }; }
+    pub fn em(v: f32) BackgroundPositionInline { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BackgroundPositionInline { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BackgroundPositionInline { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BackgroundPositionInline { return .{ .raw_ = r }; }
+
+    pub fn format(self: BackgroundPositionInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// background-position-x
+/// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-position-x
+pub const BackgroundPositionX = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    center,
+    left,
+    right,
+    xStart,
+    xEnd,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BackgroundPositionX { return .{ .px_ = v }; }
+    pub fn em(v: f32) BackgroundPositionX { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BackgroundPositionX { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BackgroundPositionX { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BackgroundPositionX { return .{ .raw_ = r }; }
+
+    pub fn format(self: BackgroundPositionX, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// background-position-y
+/// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-position-y
+pub const BackgroundPositionY = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    center,
+    top,
+    bottom,
+    yStart,
+    yEnd,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BackgroundPositionY { return .{ .px_ = v }; }
+    pub fn em(v: f32) BackgroundPositionY { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BackgroundPositionY { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BackgroundPositionY { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BackgroundPositionY { return .{ .raw_ = r }; }
+
+    pub fn format(self: BackgroundPositionY, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// background-repeat
+/// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-repeat
+pub const BackgroundRepeat = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Computes to repeat no-repeat.
+    repeatX,
+    ///     /// Computes to no-repeat repeat.
+    repeatY,
+    ///     /// Computes to repeat in the block axis and no-repeat in the inline axis.
+    repeatBlock,
+    ///     /// Computes to repeat in the inline axis and no-repeat in the block axis.
+    repeatInline,
+    ///     /// The image is repeated in this direction as often as needed to cover the background painting area.
+    repeat,
+    ///     /// The image is repeated as often as will fit within the background positioning area without being clipped, and then the images are spaced out to fill the area. The first and last images touch the edges of the area. If the background painting area is larger than the background positioning area, then the pattern repeats to fill the background painting area. The value of background-position for this direction is ignored unless there is not enough space for two copies of the image in this axis, in which case only one image is placed, and background-position determines its position in this axis.
+    space,
+    ///     /// The image is repeated as often as will fit within the background positioning area. If it doesn’t fit a whole number of times, it is rescaled so that it does. See the formula under background-size. If the background painting area is larger than the background positioning area, then the pattern repeats to fill the background painting area.
+    round,
+    ///     /// The image is placed once and not repeated in this direction.
+    noRepeat,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BackgroundRepeat { return .{ .raw_ = r }; }
+
+    pub fn format(self: BackgroundRepeat, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// background-repeat-block
+/// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-repeat-block
+pub const BackgroundRepeatBlock = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The image is repeated in the given direction as often as needed to cover the background painting area.
+    repeat,
+    ///     /// The image is repeated in the given direction as often as will fit within the background positioning area without being clipped and then the repeated images are spaced out to fill the area. The first and last images touch the edges of the area. If the background painting area is larger than the background positioning area, then the pattern repeats to fill the background painting area. The value of background-position for this direction is ignored, unless there is not enough space for two copies of the image in this direction, in which case only one image is placed and background-position determines its position in this direction.
+    space,
+    ///     /// The image is repeated in the given direction as often as will fit within the background positioning area. If it doesn’t fit a whole number of times, it is rescaled so that it does. See the formula under background-size. If the background painting area is larger than the background positioning area, then the pattern repeats to fill the background painting area.
+    round,
+    ///     /// The image is placed once and not repeated in the given direction.
+    noRepeat,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BackgroundRepeatBlock { return .{ .raw_ = r }; }
+
+    pub fn format(self: BackgroundRepeatBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// background-repeat-inline
+/// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-repeat-inline
+pub const BackgroundRepeatInline = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The image is repeated in the given direction as often as needed to cover the background painting area.
+    repeat,
+    ///     /// The image is repeated in the given direction as often as will fit within the background positioning area without being clipped and then the repeated images are spaced out to fill the area. The first and last images touch the edges of the area. If the background painting area is larger than the background positioning area, then the pattern repeats to fill the background painting area. The value of background-position for this direction is ignored, unless there is not enough space for two copies of the image in this direction, in which case only one image is placed and background-position determines its position in this direction.
+    space,
+    ///     /// The image is repeated in the given direction as often as will fit within the background positioning area. If it doesn’t fit a whole number of times, it is rescaled so that it does. See the formula under background-size. If the background painting area is larger than the background positioning area, then the pattern repeats to fill the background painting area.
+    round,
+    ///     /// The image is placed once and not repeated in the given direction.
+    noRepeat,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BackgroundRepeatInline { return .{ .raw_ = r }; }
+
+    pub fn format(self: BackgroundRepeatInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// background-repeat-x
+/// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-repeat-x
+pub const BackgroundRepeatX = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The image is repeated in the given direction as often as needed to cover the background painting area.
+    repeat,
+    ///     /// The image is repeated in the given direction as often as will fit within the background positioning area without being clipped and then the repeated images are spaced out to fill the area. The first and last images touch the edges of the area. If the background painting area is larger than the background positioning area, then the pattern repeats to fill the background painting area. The value of background-position for this direction is ignored, unless there is not enough space for two copies of the image in this direction, in which case only one image is placed and background-position determines its position in this direction.
+    space,
+    ///     /// The image is repeated in the given direction as often as will fit within the background positioning area. If it doesn’t fit a whole number of times, it is rescaled so that it does. See the formula under background-size. If the background painting area is larger than the background positioning area, then the pattern repeats to fill the background painting area.
+    round,
+    ///     /// The image is placed once and not repeated in the given direction.
+    noRepeat,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BackgroundRepeatX { return .{ .raw_ = r }; }
+
+    pub fn format(self: BackgroundRepeatX, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// background-repeat-y
+/// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-repeat-y
+pub const BackgroundRepeatY = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The image is repeated in the given direction as often as needed to cover the background painting area.
+    repeat,
+    ///     /// The image is repeated in the given direction as often as will fit within the background positioning area without being clipped and then the repeated images are spaced out to fill the area. The first and last images touch the edges of the area. If the background painting area is larger than the background positioning area, then the pattern repeats to fill the background painting area. The value of background-position for this direction is ignored, unless there is not enough space for two copies of the image in this direction, in which case only one image is placed and background-position determines its position in this direction.
+    space,
+    ///     /// The image is repeated in the given direction as often as will fit within the background positioning area. If it doesn’t fit a whole number of times, it is rescaled so that it does. See the formula under background-size. If the background painting area is larger than the background positioning area, then the pattern repeats to fill the background painting area.
+    round,
+    ///     /// The image is placed once and not repeated in the given direction.
+    noRepeat,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BackgroundRepeatY { return .{ .raw_ = r }; }
+
+    pub fn format(self: BackgroundRepeatY, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// background-size
+/// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-size
+pub const BackgroundSize = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The first value gives the width of the corresponding image, the second value its height. If only one value is given the second is assumed to be auto. A <percentage> is relative to the background positioning area. An auto value for one dimension is resolved by using the image’s natural aspect ratio and the size of the other dimension, or failing that, using the image’s natural size, or failing that, treating it as 100%. If both values are auto then the natural width and/or height of the image should be used, if any, the missing dimension (if any) behaving as auto as described above. If the image has neither natural size, its size is determined as for contain. Negative values are invalid.
+    auto,
+    ///     /// Scale the image, while preserving its natural aspect ratio (if any), to the smallest size such that both its width and its height can completely cover the background positioning area.
+    cover,
+    ///     /// Scale the image, while preserving its natural aspect ratio (if any), to the largest size such that both its width and its height can fit inside the background positioning area.
+    contain,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BackgroundSize { return .{ .px_ = v }; }
+    pub fn em(v: f32) BackgroundSize { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BackgroundSize { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BackgroundSize { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BackgroundSize { return .{ .raw_ = r }; }
+
+    pub fn format(self: BackgroundSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// background-tbd
+/// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-tbd
+pub const BackgroundTbd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    left,
+    center,
+    right,
+    top,
+    bottom,
+    xStart,
+    xEnd,
+    yStart,
+    yEnd,
+    blockStart,
+    blockEnd,
+    inlineStart,
+    inlineEnd,
+    start,
+    end,
+    auto,
+    cover,
+    contain,
+    repeatX,
+    repeatY,
+    repeatBlock,
+    repeatInline,
+    repeat,
+    space,
+    round,
+    noRepeat,
+    scroll,
+    fixed,
+    local,
+    contentBox,
+    paddingBox,
+    borderBox,
+    borderArea,
+    text,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BackgroundTbd { return .{ .px_ = v }; }
+    pub fn em(v: f32) BackgroundTbd { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BackgroundTbd { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BackgroundTbd { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BackgroundTbd { return .{ .raw_ = r }; }
+
+    pub fn format(self: BackgroundTbd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// baseline-shift
+/// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-baseline-shift
+pub const BaselineShift = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Lower by the offset appropriate for subscripts of the parent’s box. The UA may use the parent’s font metrics to find this offset; otherwise it defaults to dropping by one fifth of the parent’s used font-size.
+    sub,
+    ///     /// Raise by the offset appropriate for superscripts of the parent’s box. The UA may use the parent’s font metrics to find this offset; otherwise it defaults to raising by one third of the parent’s used font-size.
+    super,
+    ///     /// Align the line-over edge of the aligned subtree with the line-over edge of the line box.
+    top,
+    ///     /// Align the center of the aligned subtree with the center of the line box.
+    center,
+    ///     /// Align the line-under edge of the aligned subtree with the line-under edge of the line box.
+    bottom,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BaselineShift { return .{ .px_ = v }; }
+    pub fn em(v: f32) BaselineShift { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BaselineShift { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BaselineShift { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BaselineShift { return .{ .raw_ = r }; }
+
+    pub fn format(self: BaselineShift, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// baseline-source
+/// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-baseline-source
+pub const BaselineSource = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Specifies last-baseline alignment for inline-block, first-baseline alignment for everything else.
+    auto,
+    ///     /// Specifies first-baseline alignment.
+    first,
+    ///     /// Specifies last-baseline alignment.
+    last,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BaselineSource { return .{ .raw_ = r }; }
+
+    pub fn format(self: BaselineSource, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// block-ellipsis
+/// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-block-ellipsis
+pub const BlockEllipsis = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The rendering is unaffected.
+    noEllipsis,
+    ///     /// Render an ellipsis character (U+2026)—​or a more typographically-appropriate equivalent—​as the block overflow ellipsis at the end of the affected line box. UAs should use the conventions of the content language, writing system, and writing mode to determine the most appropriate ellipsis string.
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BlockEllipsis { return .{ .raw_ = r }; }
+
+    pub fn format(self: BlockEllipsis, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// block-size
+/// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-block-size
+pub const BlockSize = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BlockSize { return .{ .raw_ = r }; }
+
+    pub fn format(self: BlockSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// block-step
+/// - **W3C**: https://drafts.csswg.org/css-rhythm-1/#propdef-block-step
+pub const BlockStep = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BlockStep { return .{ .raw_ = r }; }
+
+    pub fn format(self: BlockStep, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// block-step-align
+/// - **W3C**: https://drafts.csswg.org/css-rhythm-1/#propdef-block-step-align
+pub const BlockStepAlign = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// If block-step-insert is margin-box: if align-self is start, end, or center, treat as that value, otherwise treat as center.
+    auto,
+    ///     /// Any extra space resulting from a block-step-size-induced adjustment is split, and applied half on either side of the box.
+    center,
+    ///     /// Any extra space resulting from a block-step-size-induced adjustment is inserted on the end side of the box.
+    start,
+    ///     /// Any extra space resulting from a block-step-size-induced adjustment is inserted on the start side of the box.
+    end,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BlockStepAlign { return .{ .raw_ = r }; }
+
+    pub fn format(self: BlockStepAlign, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// block-step-insert
+/// - **W3C**: https://drafts.csswg.org/css-rhythm-1/#propdef-block-step-insert
+pub const BlockStepInsert = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Any extra space resulting from a block-step-size-induced adjustment is inserted outside the box’s border, as extra margin.
+    marginBox,
+    ///     /// Any extra space resulting from a block-step-size-induced adjustment is inserted inside the box’s border, as extra padding.
+    paddingBox,
+    ///     /// Any extra space resulting from a block-step-size-induced adjustment is inserted inside the box’s border by increasing the height of the content area.
+    contentBox,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BlockStepInsert { return .{ .raw_ = r }; }
+
+    pub fn format(self: BlockStepInsert, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// block-step-round
+/// - **W3C**: https://drafts.csswg.org/css-rhythm-1/#propdef-block-step-round
+pub const BlockStepRound = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    up,
+    down,
+    nearest,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BlockStepRound { return .{ .raw_ = r }; }
+
+    pub fn format(self: BlockStepRound, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// block-step-size
+/// - **W3C**: https://drafts.csswg.org/css-rhythm-1/#propdef-block-step-size
+pub const BlockStepSize = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BlockStepSize { return .{ .px_ = v }; }
+    pub fn em(v: f32) BlockStepSize { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BlockStepSize { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) BlockStepSize { return .{ .raw_ = r }; }
+
+    pub fn format(self: BlockStepSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// bookmark-label
+/// - **W3C**: https://drafts.csswg.org/css-content-3/#propdef-bookmark-label
+pub const BookmarkLabel = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    contents,
+    openQuote,
+    closeQuote,
+    noOpenQuote,
+    noCloseQuote,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BookmarkLabel { return .{ .raw_ = r }; }
+
+    pub fn format(self: BookmarkLabel, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// bookmark-level
+/// - **W3C**: https://drafts.csswg.org/css-content-3/#propdef-bookmark-level
+pub const BookmarkLevel = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BookmarkLevel { return .{ .raw_ = r }; }
+
+    pub fn format(self: BookmarkLevel, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// bookmark-state
+/// - **W3C**: https://drafts.csswg.org/css-content-3/#propdef-bookmark-state
+pub const BookmarkState = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Subsequent bookmarks with bookmark-level greater than the given bookmark are displayed, until reaching another bookmark of the same level or lower. If one of subsequent bookmark is closed, apply the same test to determine if its subsequent bookmarks should be displayed.
+    open,
+    ///     /// Subsequent bookmarks of bookmark-level greater than the given bookmark are not displayed, until reaching another bookmark of the same level or lower.
+    closed,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BookmarkState { return .{ .raw_ = r }; }
+
+    pub fn format(self: BookmarkState, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border
+pub const Border = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hairline,
+    thin,
+    medium,
+    thick,
+    hidden,
+    dotted,
+    dashed,
+    solid,
+    double,
+    groove,
+    ridge,
+    inset,
+    outset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    px_: f32, em_: f32, rem_: f32,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn px(v: f32) Border { return .{ .px_ = v }; }
+    pub fn em(v: f32) Border { return .{ .em_ = v }; }
+    pub fn rem(v: f32) Border { return .{ .rem_ = v }; }
+    pub fn hex(v: u32) Border { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) Border { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) Border { return .{ .raw_ = r }; }
+
+    pub fn format(self: Border, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-block
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block
+pub const BorderBlock = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BorderBlock { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-block-clip
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-clip
+pub const BorderBlockClip = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BorderBlockClip { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderBlockClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-block-color
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-color
+pub const BorderBlockColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) BorderBlockColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) BorderBlockColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) BorderBlockColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderBlockColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-block-end
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-end
+pub const BorderBlockEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hairline,
+    thin,
+    medium,
+    thick,
+    hidden,
+    dotted,
+    dashed,
+    solid,
+    double,
+    groove,
+    ridge,
+    inset,
+    outset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    px_: f32, em_: f32, rem_: f32,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderBlockEnd { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderBlockEnd { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderBlockEnd { return .{ .rem_ = v }; }
+    pub fn hex(v: u32) BorderBlockEnd { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) BorderBlockEnd { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) BorderBlockEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderBlockEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-block-end-clip
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-end-clip
+pub const BorderBlockEndClip = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderBlockEndClip { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderBlockEndClip { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderBlockEndClip { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BorderBlockEndClip { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BorderBlockEndClip { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderBlockEndClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-block-end-color
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-end-color
+pub const BorderBlockEndColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) BorderBlockEndColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) BorderBlockEndColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) BorderBlockEndColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderBlockEndColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-block-end-radius
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-end-radius
+pub const BorderBlockEndRadius = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderBlockEndRadius { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderBlockEndRadius { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderBlockEndRadius { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BorderBlockEndRadius { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BorderBlockEndRadius { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderBlockEndRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-block-end-style
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-end-style
+pub const BorderBlockEndStyle = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hidden,
+    dotted,
+    dashed,
+    solid,
+    double,
+    groove,
+    ridge,
+    inset,
+    outset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BorderBlockEndStyle { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderBlockEndStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-block-end-width
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-end-width
+pub const BorderBlockEndWidth = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hairline,
+    thin,
+    medium,
+    thick,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderBlockEndWidth { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderBlockEndWidth { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderBlockEndWidth { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) BorderBlockEndWidth { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderBlockEndWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-block-start
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-start
+pub const BorderBlockStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hairline,
+    thin,
+    medium,
+    thick,
+    hidden,
+    dotted,
+    dashed,
+    solid,
+    double,
+    groove,
+    ridge,
+    inset,
+    outset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    px_: f32, em_: f32, rem_: f32,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderBlockStart { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderBlockStart { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderBlockStart { return .{ .rem_ = v }; }
+    pub fn hex(v: u32) BorderBlockStart { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) BorderBlockStart { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) BorderBlockStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderBlockStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-block-start-clip
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-start-clip
+pub const BorderBlockStartClip = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderBlockStartClip { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderBlockStartClip { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderBlockStartClip { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BorderBlockStartClip { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BorderBlockStartClip { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderBlockStartClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-block-start-color
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-start-color
+pub const BorderBlockStartColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) BorderBlockStartColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) BorderBlockStartColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) BorderBlockStartColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderBlockStartColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-block-start-radius
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-start-radius
+pub const BorderBlockStartRadius = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderBlockStartRadius { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderBlockStartRadius { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderBlockStartRadius { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BorderBlockStartRadius { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BorderBlockStartRadius { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderBlockStartRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-block-start-style
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-start-style
+pub const BorderBlockStartStyle = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hidden,
+    dotted,
+    dashed,
+    solid,
+    double,
+    groove,
+    ridge,
+    inset,
+    outset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BorderBlockStartStyle { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderBlockStartStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-block-start-width
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-start-width
+pub const BorderBlockStartWidth = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hairline,
+    thin,
+    medium,
+    thick,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderBlockStartWidth { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderBlockStartWidth { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderBlockStartWidth { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) BorderBlockStartWidth { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderBlockStartWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-block-style
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-style
+pub const BorderBlockStyle = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BorderBlockStyle { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderBlockStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-block-width
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-width
+pub const BorderBlockWidth = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BorderBlockWidth { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderBlockWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-bottom
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-bottom
+pub const BorderBottom = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hairline,
+    thin,
+    medium,
+    thick,
+    hidden,
+    dotted,
+    dashed,
+    solid,
+    double,
+    groove,
+    ridge,
+    inset,
+    outset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    px_: f32, em_: f32, rem_: f32,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderBottom { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderBottom { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderBottom { return .{ .rem_ = v }; }
+    pub fn hex(v: u32) BorderBottom { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) BorderBottom { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) BorderBottom { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderBottom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-bottom-clip
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-bottom-clip
+pub const BorderBottomClip = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderBottomClip { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderBottomClip { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderBottomClip { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BorderBottomClip { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BorderBottomClip { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderBottomClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-bottom-color
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-bottom-color
+pub const BorderBottomColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) BorderBottomColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) BorderBottomColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) BorderBottomColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderBottomColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-bottom-left-radius
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-bottom-left-radius
+pub const BorderBottomLeftRadius = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderBottomLeftRadius { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderBottomLeftRadius { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderBottomLeftRadius { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BorderBottomLeftRadius { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BorderBottomLeftRadius { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderBottomLeftRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-bottom-radius
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-bottom-radius
+pub const BorderBottomRadius = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderBottomRadius { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderBottomRadius { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderBottomRadius { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BorderBottomRadius { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BorderBottomRadius { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderBottomRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-bottom-right-radius
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-bottom-right-radius
+pub const BorderBottomRightRadius = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderBottomRightRadius { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderBottomRightRadius { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderBottomRightRadius { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BorderBottomRightRadius { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BorderBottomRightRadius { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderBottomRightRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-bottom-style
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-bottom-style
+pub const BorderBottomStyle = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hidden,
+    dotted,
+    dashed,
+    solid,
+    double,
+    groove,
+    ridge,
+    inset,
+    outset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BorderBottomStyle { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderBottomStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-bottom-width
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-bottom-width
+pub const BorderBottomWidth = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hairline,
+    thin,
+    medium,
+    thick,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderBottomWidth { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderBottomWidth { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderBottomWidth { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) BorderBottomWidth { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderBottomWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-boundary
+/// - **W3C**: https://drafts.csswg.org/css-round-display-1/#propdef-border-boundary
+pub const BorderBoundary = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    parent,
+    display,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BorderBoundary { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderBoundary, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-clip
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-clip
+pub const BorderClip = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BorderClip { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-collapse
+/// - **W3C**: https://drafts.csswg.org/css-tables-3/#propdef-border-collapse
+pub const BorderCollapse = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    separate,
+    collapse,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BorderCollapse { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderCollapse, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-color
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-color
+pub const BorderColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) BorderColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) BorderColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) BorderColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-end-end-radius
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-end-end-radius
+pub const BorderEndEndRadius = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderEndEndRadius { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderEndEndRadius { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderEndEndRadius { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BorderEndEndRadius { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BorderEndEndRadius { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderEndEndRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-end-start-radius
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-end-start-radius
+pub const BorderEndStartRadius = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderEndStartRadius { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderEndStartRadius { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderEndStartRadius { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BorderEndStartRadius { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BorderEndStartRadius { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderEndStartRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-image
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-image
+pub const BorderImage = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BorderImage { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderImage, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-image-outset
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-image-outset
+pub const BorderImageOutset = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderImageOutset { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderImageOutset { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderImageOutset { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) BorderImageOutset { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderImageOutset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-image-repeat
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-image-repeat
+pub const BorderImageRepeat = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The image is stretched to fill its corresponding region.
+    stretch,
+    ///     /// The image is tiled (repeated) to fill its corresponding region.
+    repeat,
+    ///     /// The image is tiled (repeated) to fill its corresponding region. If it does not fill the area with a whole number of tiles, the image is rescaled so that it does.
+    round,
+    ///     /// The image is tiled (repeated) to fill its corresponding region. If it does not fill the region with a whole number of tiles, the extra space is distributed around the tiles.
+    space,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BorderImageRepeat { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderImageRepeat, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-image-slice
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-image-slice
+pub const BorderImageSlice = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The fill keyword, if present, causes the middle part of the border-image to be preserved. (By default it is discarded, i.e., treated as empty.)
+    fill,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn percent(v: f32) BorderImageSlice { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BorderImageSlice { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderImageSlice, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-image-source
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-image-source
+pub const BorderImageSource = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BorderImageSource { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderImageSource, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-image-width
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-image-width
+pub const BorderImageWidth = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// If auto is specified then the used border-image-width is the natural width or height (whichever is applicable) of the corresponding image slice (see border-image-slice). If the image does not have the required natural dimension then the corresponding computed border-width is used instead.
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderImageWidth { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderImageWidth { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderImageWidth { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BorderImageWidth { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BorderImageWidth { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderImageWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-inline
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline
+pub const BorderInline = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BorderInline { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-inline-clip
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-clip
+pub const BorderInlineClip = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BorderInlineClip { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderInlineClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-inline-color
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-color
+pub const BorderInlineColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) BorderInlineColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) BorderInlineColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) BorderInlineColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderInlineColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-inline-end
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-end
+pub const BorderInlineEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hairline,
+    thin,
+    medium,
+    thick,
+    hidden,
+    dotted,
+    dashed,
+    solid,
+    double,
+    groove,
+    ridge,
+    inset,
+    outset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    px_: f32, em_: f32, rem_: f32,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderInlineEnd { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderInlineEnd { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderInlineEnd { return .{ .rem_ = v }; }
+    pub fn hex(v: u32) BorderInlineEnd { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) BorderInlineEnd { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) BorderInlineEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderInlineEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-inline-end-clip
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-end-clip
+pub const BorderInlineEndClip = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderInlineEndClip { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderInlineEndClip { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderInlineEndClip { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BorderInlineEndClip { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BorderInlineEndClip { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderInlineEndClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-inline-end-color
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-end-color
+pub const BorderInlineEndColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) BorderInlineEndColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) BorderInlineEndColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) BorderInlineEndColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderInlineEndColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-inline-end-radius
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-end-radius
+pub const BorderInlineEndRadius = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderInlineEndRadius { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderInlineEndRadius { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderInlineEndRadius { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BorderInlineEndRadius { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BorderInlineEndRadius { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderInlineEndRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-inline-end-style
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-end-style
+pub const BorderInlineEndStyle = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hidden,
+    dotted,
+    dashed,
+    solid,
+    double,
+    groove,
+    ridge,
+    inset,
+    outset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BorderInlineEndStyle { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderInlineEndStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-inline-end-width
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-end-width
+pub const BorderInlineEndWidth = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hairline,
+    thin,
+    medium,
+    thick,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderInlineEndWidth { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderInlineEndWidth { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderInlineEndWidth { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) BorderInlineEndWidth { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderInlineEndWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-inline-start
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-start
+pub const BorderInlineStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hairline,
+    thin,
+    medium,
+    thick,
+    hidden,
+    dotted,
+    dashed,
+    solid,
+    double,
+    groove,
+    ridge,
+    inset,
+    outset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    px_: f32, em_: f32, rem_: f32,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderInlineStart { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderInlineStart { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderInlineStart { return .{ .rem_ = v }; }
+    pub fn hex(v: u32) BorderInlineStart { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) BorderInlineStart { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) BorderInlineStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderInlineStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-inline-start-clip
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-start-clip
+pub const BorderInlineStartClip = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderInlineStartClip { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderInlineStartClip { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderInlineStartClip { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BorderInlineStartClip { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BorderInlineStartClip { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderInlineStartClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-inline-start-color
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-start-color
+pub const BorderInlineStartColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) BorderInlineStartColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) BorderInlineStartColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) BorderInlineStartColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderInlineStartColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-inline-start-radius
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-start-radius
+pub const BorderInlineStartRadius = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderInlineStartRadius { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderInlineStartRadius { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderInlineStartRadius { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BorderInlineStartRadius { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BorderInlineStartRadius { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderInlineStartRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-inline-start-style
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-start-style
+pub const BorderInlineStartStyle = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hidden,
+    dotted,
+    dashed,
+    solid,
+    double,
+    groove,
+    ridge,
+    inset,
+    outset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BorderInlineStartStyle { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderInlineStartStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-inline-start-width
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-start-width
+pub const BorderInlineStartWidth = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hairline,
+    thin,
+    medium,
+    thick,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderInlineStartWidth { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderInlineStartWidth { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderInlineStartWidth { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) BorderInlineStartWidth { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderInlineStartWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-inline-style
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-style
+pub const BorderInlineStyle = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BorderInlineStyle { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderInlineStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-inline-width
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-width
+pub const BorderInlineWidth = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BorderInlineWidth { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderInlineWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-left
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-left
+pub const BorderLeft = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hairline,
+    thin,
+    medium,
+    thick,
+    hidden,
+    dotted,
+    dashed,
+    solid,
+    double,
+    groove,
+    ridge,
+    inset,
+    outset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    px_: f32, em_: f32, rem_: f32,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderLeft { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderLeft { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderLeft { return .{ .rem_ = v }; }
+    pub fn hex(v: u32) BorderLeft { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) BorderLeft { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) BorderLeft { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-left-clip
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-left-clip
+pub const BorderLeftClip = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderLeftClip { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderLeftClip { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderLeftClip { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BorderLeftClip { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BorderLeftClip { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderLeftClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-left-color
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-left-color
+pub const BorderLeftColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) BorderLeftColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) BorderLeftColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) BorderLeftColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderLeftColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-left-radius
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-left-radius
+pub const BorderLeftRadius = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderLeftRadius { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderLeftRadius { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderLeftRadius { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BorderLeftRadius { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BorderLeftRadius { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderLeftRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-left-style
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-left-style
+pub const BorderLeftStyle = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hidden,
+    dotted,
+    dashed,
+    solid,
+    double,
+    groove,
+    ridge,
+    inset,
+    outset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BorderLeftStyle { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderLeftStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-left-width
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-left-width
+pub const BorderLeftWidth = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hairline,
+    thin,
+    medium,
+    thick,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderLeftWidth { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderLeftWidth { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderLeftWidth { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) BorderLeftWidth { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderLeftWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-limit
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-limit
+pub const BorderLimit = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The entire border is drawn.
+    all,
+    ///     /// The sides are drawn up to but not including the corners (as defined by the border radii). A length or percentage is measured from the center of each side: 50% draws the middle 50% of the border; by default the entire side is drawn.
+    sides,
+    ///     /// The corners are drawn plus the specified distance into the sides if specified. A length is measured from the closest edge of the corner area. A percentage is measured from the absolute corner of the border box.
+    corners,
+    ///     /// For the top and bottom (horizontal) sides, draws the entire side and corner. For the left and right (vertical) sides, draws the top/bottom portion, as specified. Distances are measured as for corners.
+    top,
+    ///     /// For the left and right (vertical) sides, draws the entire side and corner. For the top and bottom (horizontal) sides, draws the left/right portion, as specified. Distances are measured as for corners.
+    right,
+    ///     /// For the top and bottom (horizontal) sides, draws the entire side and corner. For the left and right (vertical) sides, draws the top/bottom portion, as specified. Distances are measured as for corners.
+    bottom,
+    ///     /// For the left and right (vertical) sides, draws the entire side and corner. For the top and bottom (horizontal) sides, draws the left/right portion, as specified. Distances are measured as for corners.
+    left,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderLimit { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderLimit { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderLimit { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BorderLimit { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BorderLimit { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderLimit, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-radius
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-radius
+pub const BorderRadius = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderRadius { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderRadius { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderRadius { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BorderRadius { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BorderRadius { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-right
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-right
+pub const BorderRight = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hairline,
+    thin,
+    medium,
+    thick,
+    hidden,
+    dotted,
+    dashed,
+    solid,
+    double,
+    groove,
+    ridge,
+    inset,
+    outset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    px_: f32, em_: f32, rem_: f32,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderRight { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderRight { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderRight { return .{ .rem_ = v }; }
+    pub fn hex(v: u32) BorderRight { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) BorderRight { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) BorderRight { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-right-clip
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-right-clip
+pub const BorderRightClip = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderRightClip { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderRightClip { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderRightClip { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BorderRightClip { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BorderRightClip { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderRightClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-right-color
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-right-color
+pub const BorderRightColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) BorderRightColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) BorderRightColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) BorderRightColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderRightColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-right-radius
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-right-radius
+pub const BorderRightRadius = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderRightRadius { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderRightRadius { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderRightRadius { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BorderRightRadius { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BorderRightRadius { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderRightRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-right-style
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-right-style
+pub const BorderRightStyle = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hidden,
+    dotted,
+    dashed,
+    solid,
+    double,
+    groove,
+    ridge,
+    inset,
+    outset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BorderRightStyle { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderRightStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-right-width
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-right-width
+pub const BorderRightWidth = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hairline,
+    thin,
+    medium,
+    thick,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderRightWidth { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderRightWidth { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderRightWidth { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) BorderRightWidth { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderRightWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-shape
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-shape
+pub const BorderShape = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    contentBox,
+    paddingBox,
+    borderBox,
+    marginBox,
+    halfBorderBox,
+    fillBox,
+    strokeBox,
+    viewBox,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BorderShape { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-spacing
+/// - **W3C**: https://drafts.csswg.org/css-tables-3/#propdef-border-spacing
+pub const BorderSpacing = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderSpacing { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderSpacing { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderSpacing { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) BorderSpacing { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderSpacing, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-start-end-radius
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-start-end-radius
+pub const BorderStartEndRadius = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderStartEndRadius { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderStartEndRadius { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderStartEndRadius { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BorderStartEndRadius { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BorderStartEndRadius { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderStartEndRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-start-start-radius
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-start-start-radius
+pub const BorderStartStartRadius = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderStartStartRadius { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderStartStartRadius { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderStartStartRadius { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BorderStartStartRadius { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BorderStartStartRadius { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderStartStartRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-style
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-style
+pub const BorderStyle = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BorderStyle { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-top
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-top
+pub const BorderTop = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hairline,
+    thin,
+    medium,
+    thick,
+    hidden,
+    dotted,
+    dashed,
+    solid,
+    double,
+    groove,
+    ridge,
+    inset,
+    outset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    px_: f32, em_: f32, rem_: f32,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderTop { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderTop { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderTop { return .{ .rem_ = v }; }
+    pub fn hex(v: u32) BorderTop { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) BorderTop { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) BorderTop { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderTop, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-top-clip
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-top-clip
+pub const BorderTopClip = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderTopClip { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderTopClip { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderTopClip { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BorderTopClip { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BorderTopClip { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderTopClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-top-color
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-top-color
+pub const BorderTopColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) BorderTopColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) BorderTopColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) BorderTopColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderTopColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-top-left-radius
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-top-left-radius
+pub const BorderTopLeftRadius = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderTopLeftRadius { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderTopLeftRadius { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderTopLeftRadius { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BorderTopLeftRadius { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BorderTopLeftRadius { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderTopLeftRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-top-radius
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-top-radius
+pub const BorderTopRadius = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderTopRadius { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderTopRadius { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderTopRadius { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BorderTopRadius { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BorderTopRadius { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderTopRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-top-right-radius
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-top-right-radius
+pub const BorderTopRightRadius = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderTopRightRadius { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderTopRightRadius { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderTopRightRadius { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) BorderTopRightRadius { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) BorderTopRightRadius { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderTopRightRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-top-style
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-top-style
+pub const BorderTopStyle = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hidden,
+    dotted,
+    dashed,
+    solid,
+    double,
+    groove,
+    ridge,
+    inset,
+    outset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BorderTopStyle { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderTopStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-top-width
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-top-width
+pub const BorderTopWidth = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hairline,
+    thin,
+    medium,
+    thick,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BorderTopWidth { return .{ .px_ = v }; }
+    pub fn em(v: f32) BorderTopWidth { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BorderTopWidth { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) BorderTopWidth { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderTopWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// border-width
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-width
+pub const BorderWidth = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BorderWidth { return .{ .raw_ = r }; }
+
+    pub fn format(self: BorderWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// bottom
+/// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-bottom
+pub const Bottom = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Represents an unconstrained inset; the exact meaning depends on the positioning scheme.
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) Bottom { return .{ .px_ = v }; }
+    pub fn em(v: f32) Bottom { return .{ .em_ = v }; }
+    pub fn rem(v: f32) Bottom { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) Bottom { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) Bottom { return .{ .raw_ = r }; }
+
+    pub fn format(self: Bottom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// box-decoration-break
+/// - **W3C**: https://drafts.csswg.org/css-break-4/#propdef-box-decoration-break
+pub const BoxDecorationBreak = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The effect is as though the element were rendered with no breaks present, and then sliced by the breaks afterward: no border and no padding are inserted at a break; no box-shadow is drawn at a broken edge; and backgrounds, border-radius, and the border-image are applied to the geometry of the whole box as if it were unbroken.
+    slice,
+    ///     /// Each box fragment is independently wrapped with the border, padding, and margin. The border-radius and border-image and box-shadow, if any, are applied to each fragment independently. The background is drawn independently in each fragment of the element. A no-repeat background image will thus be rendered once in each fragment of the element.
+    clone,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BoxDecorationBreak { return .{ .raw_ = r }; }
+
+    pub fn format(self: BoxDecorationBreak, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// box-shadow
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-box-shadow
+pub const BoxShadow = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn px(v: f32) BoxShadow { return .{ .px_ = v }; }
+    pub fn em(v: f32) BoxShadow { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BoxShadow { return .{ .rem_ = v }; }
+    pub fn hex(v: u32) BoxShadow { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) BoxShadow { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) BoxShadow { return .{ .raw_ = r }; }
+
+    pub fn format(self: BoxShadow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// box-shadow-blur
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-box-shadow-blur
+pub const BoxShadowBlur = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BoxShadowBlur { return .{ .px_ = v }; }
+    pub fn em(v: f32) BoxShadowBlur { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BoxShadowBlur { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) BoxShadowBlur { return .{ .raw_ = r }; }
+
+    pub fn format(self: BoxShadowBlur, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// box-shadow-color
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-box-shadow-color
+pub const BoxShadowColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) BoxShadowColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) BoxShadowColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) BoxShadowColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: BoxShadowColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// box-shadow-offset
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-box-shadow-offset
+pub const BoxShadowOffset = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BoxShadowOffset { return .{ .px_ = v }; }
+    pub fn em(v: f32) BoxShadowOffset { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BoxShadowOffset { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) BoxShadowOffset { return .{ .raw_ = r }; }
+
+    pub fn format(self: BoxShadowOffset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// box-shadow-position
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-box-shadow-position
+pub const BoxShadowPosition = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Causes the drop shadow to be an outer box-shadow. That means, one that shadows the box onto the canvas, as if it were lifted above the canvas.
+    outset,
+    ///     /// Causes the drop shadow to be an inner box-shadow. That means, one that shadows the canvas onto the box, as if the box were cut out of the canvas and shifted behind it.
+    inset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BoxShadowPosition { return .{ .raw_ = r }; }
+
+    pub fn format(self: BoxShadowPosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// box-shadow-spread
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-box-shadow-spread
+pub const BoxShadowSpread = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) BoxShadowSpread { return .{ .px_ = v }; }
+    pub fn em(v: f32) BoxShadowSpread { return .{ .em_ = v }; }
+    pub fn rem(v: f32) BoxShadowSpread { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) BoxShadowSpread { return .{ .raw_ = r }; }
+
+    pub fn format(self: BoxShadowSpread, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// box-sizing
+/// - **W3C**: https://drafts.csswg.org/css-sizing-3/#propdef-box-sizing
+pub const BoxSizing = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Sizes specified on sizing properties as <length-percentage> represent the box’s inner sizes, excluding the margins/border/padding: they are applied to the content box. The padding and border of the box are laid out and drawn outside the specified width and height.
+    contentBox,
+    ///     /// Sizes specified on sizing properties as <length-percentage> represent the box’s visually-apparent sizes, including the borders/padding (but not margin): they are applied to the border box. The padding and border of the box are laid out and drawn inside the specified width and height, with the content box sized to fill the remaining space, floored at zero. The content width and height are calculated by subtracting the border and padding widths of the respective sides from the specified <length-percentage>. As the content width and height cannot be negative, this computation is floored at zero. Used values, as exposed for instance through getComputedStyle(), also refer to the border box.
+    borderBox,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BoxSizing { return .{ .raw_ = r }; }
+
+    pub fn format(self: BoxSizing, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// box-snap
+/// - **W3C**: https://drafts.csswg.org/css-line-grid-1/#propdef-box-snap
+pub const BoxSnap = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The block-start edge is snapped to the nearest grid line.
+    blockStart,
+    ///     /// The block-end edge is snapped to the nearest grid line.
+    blockEnd,
+    ///     /// The block is centered between one of the baseline grid’s text-over baselines and a subsequent (but not necessarily consecutive) text-under baseline.
+    center,
+    ///     /// The first line box’s dominant baseline is snapped to the nearest grid line.
+    baseline,
+    ///     /// The last line box’s dominant baseline is snapped to the nearest grid line.
+    lastBaseline,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BoxSnap { return .{ .raw_ = r }; }
+
+    pub fn format(self: BoxSnap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// break-after
+/// - **W3C**: https://drafts.csswg.org/css-break-4/#propdef-break-after
+pub const BreakAfter = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Neither force nor forbid a break before/after the principal box.
+    auto,
+    ///     /// Avoid a break before/after the principal box.
+    avoid,
+    ///     /// Always force a break before/after the principal box. The type of this break is that of the immediately-containing fragmentation context. For example, in a multi-column container forces a column break; in paged media not inside a multi-column container, forces a page break.
+    always,
+    ///     /// Always force a break before/after the principal box. This value breaks through all containing fragmentation contexts. For example, inside a multi-column container in a region in a multi-column container in paged media, it forces simultaneously a column break in the inner multi-column container, a region break, a column break in the outer multi-column container, and a page break. It’s unclear if this value is needed.
+    all,
+    ///     /// Avoid a page break before/after the principal box.
+    avoidPage,
+    ///     /// Always force a page break before/after the principal box.
+    page,
+    ///     /// Force one or two page breaks before/after the principal box so that the next page is formatted as a left page.
+    left,
+    ///     /// Force one or two page breaks before/after the principal box so that the next page is formatted as a right page.
+    right,
+    ///     /// Force one or two page breaks before/after the principal box so that the next page is formatted as either a left page or a right page, whichever is second (according to the page progression) in a page spread.
+    recto,
+    ///     /// Force one or two page breaks before/after the principal box so that the next page is formatted as either a left page or a right page, whichever is first (according to the page progression) in a page spread.
+    verso,
+    ///     /// Avoid a column break before/after the principal box.
+    avoidColumn,
+    ///     /// Always force a column break before/after the principal box.
+    column,
+    ///     /// Avoid a region break before/after the principal box.
+    avoidRegion,
+    ///     /// Always force a region break before/after the principal box.
+    region,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BreakAfter { return .{ .raw_ = r }; }
+
+    pub fn format(self: BreakAfter, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// break-before
+/// - **W3C**: https://drafts.csswg.org/css-break-4/#propdef-break-before
+pub const BreakBefore = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Neither force nor forbid a break before/after the principal box.
+    auto,
+    ///     /// Avoid a break before/after the principal box.
+    avoid,
+    ///     /// Always force a break before/after the principal box. The type of this break is that of the immediately-containing fragmentation context. For example, in a multi-column container forces a column break; in paged media not inside a multi-column container, forces a page break.
+    always,
+    ///     /// Always force a break before/after the principal box. This value breaks through all containing fragmentation contexts. For example, inside a multi-column container in a region in a multi-column container in paged media, it forces simultaneously a column break in the inner multi-column container, a region break, a column break in the outer multi-column container, and a page break. It’s unclear if this value is needed.
+    all,
+    ///     /// Avoid a page break before/after the principal box.
+    avoidPage,
+    ///     /// Always force a page break before/after the principal box.
+    page,
+    ///     /// Force one or two page breaks before/after the principal box so that the next page is formatted as a left page.
+    left,
+    ///     /// Force one or two page breaks before/after the principal box so that the next page is formatted as a right page.
+    right,
+    ///     /// Force one or two page breaks before/after the principal box so that the next page is formatted as either a left page or a right page, whichever is second (according to the page progression) in a page spread.
+    recto,
+    ///     /// Force one or two page breaks before/after the principal box so that the next page is formatted as either a left page or a right page, whichever is first (according to the page progression) in a page spread.
+    verso,
+    ///     /// Avoid a column break before/after the principal box.
+    avoidColumn,
+    ///     /// Always force a column break before/after the principal box.
+    column,
+    ///     /// Avoid a region break before/after the principal box.
+    avoidRegion,
+    ///     /// Always force a region break before/after the principal box.
+    region,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BreakBefore { return .{ .raw_ = r }; }
+
+    pub fn format(self: BreakBefore, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// break-inside
+/// - **W3C**: https://drafts.csswg.org/css-break-4/#propdef-break-inside
+pub const BreakInside = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Impose no additional breaking constraints within the box.
+    auto,
+    ///     /// Avoid breaks within the box.
+    avoid,
+    ///     /// Avoid a page break within the box.
+    avoidPage,
+    ///     /// Avoid a column break within the box.
+    avoidColumn,
+    ///     /// Avoid a region break within the box.
+    avoidRegion,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) BreakInside { return .{ .raw_ = r }; }
+
+    pub fn format(self: BreakInside, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// caption-side
+/// - **W3C**: https://drafts.csswg.org/css-tables-3/#propdef-caption-side
+pub const CaptionSide = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Positions the caption box above the table grid box.
+    top,
+    ///     /// Positions the caption box below the table grid box.
+    bottom,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CaptionSide { return .{ .raw_ = r }; }
+
+    pub fn format(self: CaptionSide, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// caret
+/// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-caret
+pub const Caret = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) Caret { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) Caret { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) Caret { return .{ .raw_ = r }; }
+
+    pub fn format(self: Caret, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// caret-animation
+/// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-caret-animation
+pub const CaretAnimation = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The UA determines how the caret should be animated, if at all, as well as the speed of any such animation. It should match platform conventions and settings, and may be adjusted based on context.
+    auto,
+    ///     /// The UA must not animate the caret.
+    manual,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CaretAnimation { return .{ .raw_ = r }; }
+
+    pub fn format(self: CaretAnimation, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// caret-color
+/// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-caret-color
+pub const CaretColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) CaretColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) CaretColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) CaretColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: CaretColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// caret-shape
+/// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-caret-shape
+pub const CaretShape = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The UA determines the shape of the caret. It should match platform conventions, and may be adjusted based on context. For example, if a UA switches between insert mode and overtype mode when the user presses the insert key on their keyboard, it may show a bar caret in insert mode, and a block caret in overtype mode.
+    auto,
+    ///     /// The UA must render the insertion caret as a thin bar placed at the insertion point. This means it is between, before, or after characters, not over them. It should be perpendicular to the inline progression direction, although UAs may render it slanted when inserting italic or oblique text.
+    bar,
+    ///     /// The UA must render the insertion caret as a rectangle overlapping the next visible character following the insertion point. If there is no visible character after the insertion point, the UA must render the caret after the last visible character. UAs may render it as a slanted rectangle when inserting italic or oblique text.
+    block,
+    ///     /// The UA must render the insertion caret as a thin line under (as defined in [CSS-WRITING-MODES-3]) the next visible character following the insertion point. If there is no visible character after the insertion point, the UA must render the caret after the last visible character.
+    underscore,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CaretShape { return .{ .raw_ = r }; }
+
+    pub fn format(self: CaretShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// clear
+/// - **W3C**: https://drafts.csswg.org/css-page-floats-3/#propdef-clear
+pub const Clear = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// If applied to an inline float, requires that the block-start outer edge of the box comes after the block-end outer edge of any inline-start-floats with an inline-start-float-reference that resulted from elements earlier in the source document. If applied to a page float, the float reference in which the page float is placed will be seen as full when determining whether it can host subsequent page floats that float in the inline-start direction.
+    inlineStart,
+    ///     /// If applied to a block-level element or an inline float, requires that the block-start outer edge of the box comes after the block-end outer edge of any inline-end-floats with an inline-end-float-reference that resulted from elements earlier in the source document. If applied to a page float, the float reference in which the page float is placed will be seen as full when determining whether it can host subsequent page floats that float in the inline-end direction.
+    inlineEnd,
+    ///     /// If applied to a block-level element or an inline float, behaves like inline-start. If applied to a page float, the float reference in which the page float is placed will be seen as full when determining whether it can host subsequent page floats that float in the block-start direction.
+    blockStart,
+    ///     /// If applied to a block-level element or an inline float, behaves like inline-end. If applied to a page float, the float reference in which the page float is placed will be seen as full when determining whether it can host subsequent page floats that float in the block-end direction.
+    blockEnd,
+    ///     /// Behave like block-end, inline-start or inline-end depending on the float containing block’s direction and writing-mode.
+    left,
+    ///     /// Behave like block-start, inline-start or inline-end depending on the float containing block’s direction and writing-mode.
+    right,
+    ///     /// Behave like block-start or inline-start depending on the float containing block’s direction and writing-mode.
+    top,
+    ///     /// Behave like block-end or inline-end depending on the float containing block’s direction and writing-mode.
+    bottom,
+    ///     /// Behave like inline-start and inline-end.
+    bothInline,
+    ///     /// Behave like block-start and block-end.
+    bothBlock,
+    ///     /// Behave like both-inline.
+    both,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Clear { return .{ .raw_ = r }; }
+
+    pub fn format(self: Clear, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// clip
+/// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-clip
+pub const Clip = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Clip { return .{ .raw_ = r }; }
+
+    pub fn format(self: Clip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// clip-path
+/// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-clip-path
+pub const ClipPath = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    contentBox,
+    paddingBox,
+    borderBox,
+    marginBox,
+    halfBorderBox,
+    ///     /// Uses the object bounding box as reference box.
+    fillBox,
+    ///     /// Uses the stroke bounding box as reference box.
+    strokeBox,
+    ///     /// Uses the nearest SVG viewport as reference box. If a viewBox attribute is specified for the SVG viewport creating element: The reference box is positioned at the origin of the coordinate system established by the viewBox attribute. The dimension of the reference box is set to the width and height values of the viewBox attribute.
+    viewBox,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ClipPath { return .{ .raw_ = r }; }
+
+    pub fn format(self: ClipPath, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// clip-rule
+/// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-clip-rule
+pub const ClipRule = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// See description of fill-rule property [SVG11].
+    nonzero,
+    ///     /// See description of fill-rule property [SVG11].
+    evenodd,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ClipRule { return .{ .raw_ = r }; }
+
+    pub fn format(self: ClipRule, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// color
+/// - **W3C**: https://drafts.csswg.org/css-color-4/#propdef-color
+pub const CssColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) CssColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) CssColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) CssColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: CssColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// color-adjust
+/// - **W3C**: https://drafts.csswg.org/css-color-adjust-1/#propdef-color-adjust
+pub const ColorAdjust = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) ColorAdjust { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) ColorAdjust { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) ColorAdjust { return .{ .raw_ = r }; }
+
+    pub fn format(self: ColorAdjust, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// color-interpolation
+/// - **W3C**: https://svgwg.org/svg2-draft/painting.html#ColorInterpolationProperty
+pub const ColorInterpolation = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    sRGB,
+    linearRGB,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ColorInterpolation { return .{ .raw_ = r }; }
+
+    pub fn format(self: ColorInterpolation, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// color-interpolation-filters
+/// - **W3C**: https://drafts.csswg.org/filter-effects-1/#propdef-color-interpolation-filters
+pub const ColorInterpolationFilters = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Indicates that the user agent can choose either the sRGB or linearRGB spaces for filter effects color operations. This option indicates that the author doesn’t require that color operations occur in a particular color space.
+    auto,
+    ///     /// Indicates that filter effects color operations should occur in the gamma-encoded sRGB color space.
+    sRGB,
+    ///     /// Indicates that filter effects color operations should occur in the linear-light sRGB color space.
+    linearRGB,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ColorInterpolationFilters { return .{ .raw_ = r }; }
+
+    pub fn format(self: ColorInterpolationFilters, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// color-scheme
+/// - **W3C**: https://drafts.csswg.org/css-color-adjust-1/#propdef-color-scheme
+pub const ColorScheme = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Indicates that the element supports the page’s supported color schemes, if they are set, or that it supports no color schemes at all otherwise.
+    normal,
+    ///     /// Indicates that the element supports a light color scheme.
+    light,
+    ///     /// Indicates that the element supports a dark color scheme.
+    dark,
+    ///     /// Forbids the user agent from overriding the color scheme for the element.
+    only,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ColorScheme { return .{ .raw_ = r }; }
+
+    pub fn format(self: ColorScheme, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// column-count
+/// - **W3C**: https://drafts.csswg.org/css-multicol-2/#propdef-column-count
+pub const ColumnCount = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// means that the number of columns will be determined by other properties (e.g., column-width, if it has a non-auto value).
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ColumnCount { return .{ .raw_ = r }; }
+
+    pub fn format(self: ColumnCount, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// column-fill
+/// - **W3C**: https://drafts.csswg.org/css-multicol-2/#propdef-column-fill
+pub const ColumnFill = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// fill columns sequentially
+    auto,
+    ///     /// Balance content equally between columns, as far as possible. In fragmented contexts, only the last fragment is balanced.
+    balance,
+    ///     /// Balance content equally between columns, as far as possible. In fragmented contexts, all fragments are balanced.
+    balanceAll,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ColumnFill { return .{ .raw_ = r }; }
+
+    pub fn format(self: ColumnFill, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// column-gap
+/// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-column-gap
+pub const ColumnGap = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The value normal represents a used value of 1em on multi-column containers, and a used value of 0px in all other contexts.
+    normal,
+    hairline,
+    thin,
+    medium,
+    thick,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ColumnGap { return .{ .px_ = v }; }
+    pub fn em(v: f32) ColumnGap { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ColumnGap { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) ColumnGap { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) ColumnGap { return .{ .raw_ = r }; }
+
+    pub fn format(self: ColumnGap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// column-height
+/// - **W3C**: https://drafts.csswg.org/css-multicol-2/#propdef-column-height
+pub const ColumnHeight = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// means that the column height will be determined by the amount of content and other properties.
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ColumnHeight { return .{ .px_ = v }; }
+    pub fn em(v: f32) ColumnHeight { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ColumnHeight { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) ColumnHeight { return .{ .raw_ = r }; }
+
+    pub fn format(self: ColumnHeight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// column-rule
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule
+pub const ColumnRule = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hairline,
+    thin,
+    medium,
+    thick,
+    hidden,
+    dotted,
+    dashed,
+    solid,
+    double,
+    groove,
+    ridge,
+    inset,
+    outset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn px(v: f32) ColumnRule { return .{ .px_ = v }; }
+    pub fn em(v: f32) ColumnRule { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ColumnRule { return .{ .rem_ = v }; }
+    pub fn hex(v: u32) ColumnRule { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) ColumnRule { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) ColumnRule { return .{ .raw_ = r }; }
+
+    pub fn format(self: ColumnRule, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// column-rule-break
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-break
+pub const ColumnRuleBreak = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Behavior depends on the type of container.
+    normal,
+    ///     /// Gap decorations start and end at visible "T" and "cross" intersections.
+    intersection,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ColumnRuleBreak { return .{ .raw_ = r }; }
+
+    pub fn format(self: ColumnRuleBreak, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// column-rule-color
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-color
+pub const ColumnRuleColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    auto,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) ColumnRuleColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) ColumnRuleColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) ColumnRuleColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: ColumnRuleColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// column-rule-edge-inset
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-edge-inset
+pub const ColumnRuleEdgeInset = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ColumnRuleEdgeInset { return .{ .px_ = v }; }
+    pub fn em(v: f32) ColumnRuleEdgeInset { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ColumnRuleEdgeInset { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) ColumnRuleEdgeInset { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) ColumnRuleEdgeInset { return .{ .raw_ = r }; }
+
+    pub fn format(self: ColumnRuleEdgeInset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// column-rule-edge-inset-end
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-edge-inset-end
+pub const ColumnRuleEdgeInsetEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ColumnRuleEdgeInsetEnd { return .{ .px_ = v }; }
+    pub fn em(v: f32) ColumnRuleEdgeInsetEnd { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ColumnRuleEdgeInsetEnd { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) ColumnRuleEdgeInsetEnd { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) ColumnRuleEdgeInsetEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: ColumnRuleEdgeInsetEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// column-rule-edge-inset-start
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-edge-inset-start
+pub const ColumnRuleEdgeInsetStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ColumnRuleEdgeInsetStart { return .{ .px_ = v }; }
+    pub fn em(v: f32) ColumnRuleEdgeInsetStart { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ColumnRuleEdgeInsetStart { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) ColumnRuleEdgeInsetStart { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) ColumnRuleEdgeInsetStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: ColumnRuleEdgeInsetStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// column-rule-inset
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-inset
+pub const ColumnRuleInset = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ColumnRuleInset { return .{ .raw_ = r }; }
+
+    pub fn format(self: ColumnRuleInset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// column-rule-inset-end
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-inset-end
+pub const ColumnRuleInsetEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ColumnRuleInsetEnd { return .{ .px_ = v }; }
+    pub fn em(v: f32) ColumnRuleInsetEnd { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ColumnRuleInsetEnd { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) ColumnRuleInsetEnd { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) ColumnRuleInsetEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: ColumnRuleInsetEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// column-rule-inset-start
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-inset-start
+pub const ColumnRuleInsetStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ColumnRuleInsetStart { return .{ .px_ = v }; }
+    pub fn em(v: f32) ColumnRuleInsetStart { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ColumnRuleInsetStart { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) ColumnRuleInsetStart { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) ColumnRuleInsetStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: ColumnRuleInsetStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// column-rule-interior-inset
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-interior-inset
+pub const ColumnRuleInteriorInset = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ColumnRuleInteriorInset { return .{ .px_ = v }; }
+    pub fn em(v: f32) ColumnRuleInteriorInset { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ColumnRuleInteriorInset { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) ColumnRuleInteriorInset { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) ColumnRuleInteriorInset { return .{ .raw_ = r }; }
+
+    pub fn format(self: ColumnRuleInteriorInset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// column-rule-interior-inset-end
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-interior-inset-end
+pub const ColumnRuleInteriorInsetEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ColumnRuleInteriorInsetEnd { return .{ .px_ = v }; }
+    pub fn em(v: f32) ColumnRuleInteriorInsetEnd { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ColumnRuleInteriorInsetEnd { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) ColumnRuleInteriorInsetEnd { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) ColumnRuleInteriorInsetEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: ColumnRuleInteriorInsetEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// column-rule-interior-inset-start
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-interior-inset-start
+pub const ColumnRuleInteriorInsetStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ColumnRuleInteriorInsetStart { return .{ .px_ = v }; }
+    pub fn em(v: f32) ColumnRuleInteriorInsetStart { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ColumnRuleInteriorInsetStart { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) ColumnRuleInteriorInsetStart { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) ColumnRuleInteriorInsetStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: ColumnRuleInteriorInsetStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// column-rule-style
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-style
+pub const ColumnRuleStyle = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hidden,
+    dotted,
+    dashed,
+    solid,
+    double,
+    groove,
+    ridge,
+    inset,
+    outset,
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ColumnRuleStyle { return .{ .raw_ = r }; }
+
+    pub fn format(self: ColumnRuleStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// column-rule-visibility-items
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-visibility-items
+pub const ColumnRuleVisibilityItems = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Paint decorations in all gap segments, regardless of whether adjacent items are present.
+    all,
+    ///     /// Paint decorations in a gap segment if at least one of the two adjacent areas is occupied by an item.
+    around,
+    ///     /// Paint decorations in a gap segment if both adjacent areas are occupied by items.
+    between,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ColumnRuleVisibilityItems { return .{ .raw_ = r }; }
+
+    pub fn format(self: ColumnRuleVisibilityItems, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// column-rule-width
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-width
+pub const ColumnRuleWidth = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hairline,
+    thin,
+    medium,
+    thick,
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ColumnRuleWidth { return .{ .px_ = v }; }
+    pub fn em(v: f32) ColumnRuleWidth { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ColumnRuleWidth { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) ColumnRuleWidth { return .{ .raw_ = r }; }
+
+    pub fn format(self: ColumnRuleWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// column-span
+/// - **W3C**: https://drafts.csswg.org/css-multicol-2/#propdef-column-span
+pub const ColumnSpan = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The element forces a column break and is taken out of flow to span across all columns of the current multicol row in the same block formatting context. Content in the normal flow that appears before the element is automatically balanced across all columns in the immediately preceding multi-column line before the element appears, and any subsequent content flows into a new multi-column line after the element. The element establishes an independent formatting context.
+    all,
+    ///     /// The number of columns spanned by the element depends on its min-content outer size in the inline direction of the multi-column container. If it is smaller than the used value of column-width, this is the same as if column-span: none had been specified. Otherwise, the number of columns spanned is the smallest positive integer n for which n × column-width + (n - 1) × column-gap is larger than the min-content outer size. If this would be larger than the number of columns, the number of columns spanned will be the same as if column-span: all had been specified. If column-span: 1 does not do the same as column-span: none, should this behave as column-span: 1 or as column-span: none when the element is small enough?
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ColumnSpan { return .{ .raw_ = r }; }
+
+    pub fn format(self: ColumnSpan, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// column-width
+/// - **W3C**: https://drafts.csswg.org/css-multicol-2/#propdef-column-width
+pub const ColumnWidth = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// means that the column width will be determined by other properties (e.g., column-count, if it has a non-auto value).
+    auto,
+    ///     /// Specifies the optimal column width as the min-content inline size of the multi-column container’s contents.
+    minContent,
+    ///     /// Specifies the optimal column width as the max-content inline size of the multi-column container’s contents.
+    maxContent,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ColumnWidth { return .{ .px_ = v }; }
+    pub fn em(v: f32) ColumnWidth { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ColumnWidth { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) ColumnWidth { return .{ .raw_ = r }; }
+
+    pub fn format(self: ColumnWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// column-wrap
+/// - **W3C**: https://drafts.csswg.org/css-multicol-2/#propdef-column-wrap
+pub const ColumnWrap = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// If column-height is not 'column-height/auto' behaves as the value 'column-wrap/wrap' otherwise acts as 'column-wrap/nowrap'.
+    auto,
+    ///     /// Overflow columns are created in the inline direction.
+    nowrap,
+    ///     /// Overflow columns create a new multicol row in the block direction.
+    wrap,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ColumnWrap { return .{ .raw_ = r }; }
+
+    pub fn format(self: ColumnWrap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// columns
+/// - **W3C**: https://drafts.csswg.org/css-multicol-2/#propdef-columns
+pub const Columns = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Columns { return .{ .raw_ = r }; }
+
+    pub fn format(self: Columns, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// contain
+/// - **W3C**: https://drafts.csswg.org/css-contain-2/#propdef-contain
+pub const Contain = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// This value computes to size layout paint style, and thus turns on all forms of containment for the element.
+    strict,
+    ///     /// This value computes to layout paint style, and thus turns on all forms of containment except size containment for the element.
+    content,
+    ///     /// The value turns on size containment for the element. This ensures that the containment box can be laid out without needing to examine its descendants.
+    size,
+    ///     /// This value turns on inline-size containment for the element. This prevents the inline-size of its principal box from directly depending on its contents.
+    inlineSize,
+    ///     /// This value turns on layout containment for the element. This ensures that the containment box is totally opaque for layout purposes; nothing outside can affect its internal layout, and vice versa.
+    layout,
+    ///     /// This value turns on style containment for the element. This ensures that, for properties which can have effects on more than just an element and its descendants, those effects don’t escape the element.
+    style,
+    ///     /// This value turns on paint containment for the element. This ensures that the descendants of the containment box don’t display outside its bounds, so if an element is off-screen or otherwise not visible, its descendants are also guaranteed to be not visible.
+    paint,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Contain { return .{ .raw_ = r }; }
+
+    pub fn format(self: Contain, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// contain-intrinsic-block-size
+/// - **W3C**: https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-block-size
+pub const ContainIntrinsicBlockSize = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// If auto is specified and the element has a last remembered size and is currently skipping its contents, its explicit intrinsic inner size in the corresponding axis is the last remembered size in that axis.
+    auto,
+    ///     /// If from-element is specified and the element is a replaced element with an internal layout intrinsic size, its explicit intrinsic inner size in the corresponding axis is that size. Should this apply even when contain:layout isn’t specified? The name needs further discussion.
+    fromElement,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ContainIntrinsicBlockSize { return .{ .px_ = v }; }
+    pub fn em(v: f32) ContainIntrinsicBlockSize { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ContainIntrinsicBlockSize { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) ContainIntrinsicBlockSize { return .{ .raw_ = r }; }
+
+    pub fn format(self: ContainIntrinsicBlockSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// contain-intrinsic-height
+/// - **W3C**: https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-height
+pub const ContainIntrinsicHeight = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// If auto is specified and the element has a last remembered size and is currently skipping its contents, its explicit intrinsic inner size in the corresponding axis is the last remembered size in that axis.
+    auto,
+    ///     /// If from-element is specified and the element is a replaced element with an internal layout intrinsic size, its explicit intrinsic inner size in the corresponding axis is that size. Should this apply even when contain:layout isn’t specified? The name needs further discussion.
+    fromElement,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ContainIntrinsicHeight { return .{ .px_ = v }; }
+    pub fn em(v: f32) ContainIntrinsicHeight { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ContainIntrinsicHeight { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) ContainIntrinsicHeight { return .{ .raw_ = r }; }
+
+    pub fn format(self: ContainIntrinsicHeight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// contain-intrinsic-inline-size
+/// - **W3C**: https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-inline-size
+pub const ContainIntrinsicInlineSize = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// If auto is specified and the element has a last remembered size and is currently skipping its contents, its explicit intrinsic inner size in the corresponding axis is the last remembered size in that axis.
+    auto,
+    ///     /// If from-element is specified and the element is a replaced element with an internal layout intrinsic size, its explicit intrinsic inner size in the corresponding axis is that size. Should this apply even when contain:layout isn’t specified? The name needs further discussion.
+    fromElement,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ContainIntrinsicInlineSize { return .{ .px_ = v }; }
+    pub fn em(v: f32) ContainIntrinsicInlineSize { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ContainIntrinsicInlineSize { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) ContainIntrinsicInlineSize { return .{ .raw_ = r }; }
+
+    pub fn format(self: ContainIntrinsicInlineSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// contain-intrinsic-size
+/// - **W3C**: https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-size
+pub const ContainIntrinsicSize = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// If auto is specified and the element has a last remembered size and is currently skipping its contents, its explicit intrinsic inner size in the corresponding axis is the last remembered size in that axis.
+    auto,
+    ///     /// If from-element is specified and the element is a replaced element with an internal layout intrinsic size, its explicit intrinsic inner size in the corresponding axis is that size. Should this apply even when contain:layout isn’t specified? The name needs further discussion.
+    fromElement,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ContainIntrinsicSize { return .{ .px_ = v }; }
+    pub fn em(v: f32) ContainIntrinsicSize { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ContainIntrinsicSize { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) ContainIntrinsicSize { return .{ .raw_ = r }; }
+
+    pub fn format(self: ContainIntrinsicSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// contain-intrinsic-width
+/// - **W3C**: https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-width
+pub const ContainIntrinsicWidth = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// If auto is specified and the element has a last remembered size and is currently skipping its contents, its explicit intrinsic inner size in the corresponding axis is the last remembered size in that axis.
+    auto,
+    ///     /// If from-element is specified and the element is a replaced element with an internal layout intrinsic size, its explicit intrinsic inner size in the corresponding axis is that size. Should this apply even when contain:layout isn’t specified? The name needs further discussion.
+    fromElement,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ContainIntrinsicWidth { return .{ .px_ = v }; }
+    pub fn em(v: f32) ContainIntrinsicWidth { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ContainIntrinsicWidth { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) ContainIntrinsicWidth { return .{ .raw_ = r }; }
+
+    pub fn format(self: ContainIntrinsicWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// container
+/// - **W3C**: https://drafts.csswg.org/css-conditional-5/#propdef-container
+pub const Container = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Container { return .{ .raw_ = r }; }
+
+    pub fn format(self: Container, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// container-name
+/// - **W3C**: https://drafts.csswg.org/css-conditional-5/#propdef-container-name
+pub const ContainerName = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ContainerName { return .{ .raw_ = r }; }
+
+    pub fn format(self: ContainerName, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// container-type
+/// - **W3C**: https://drafts.csswg.org/css-conditional-5/#propdef-container-type
+pub const ContainerType = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The element is not a query container for any container size queries or container scroll-state queries, but remains a query container for container style queries.
+    normal,
+    ///     /// Establishes a query container for container size queries on both the inline and block axis. Applies style containment and size containment to the principal box, and establishes an independent formatting context.
+    size,
+    ///     /// Establishes a query container for container size queries on the container’s own inline axis. Applies style containment and inline-size containment to the principal box, and establishes an independent formatting context.
+    inlineSize,
+    ///     /// Establishes a query container for container scroll-state queries
+    scrollState,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ContainerType { return .{ .raw_ = r }; }
+
+    pub fn format(self: ContainerType, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// content
+/// - **W3C**: https://drafts.csswg.org/css-content-3/#propdef-content
+pub const Content = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// For an element or page margin box, this computes to contents. For ::before and ::after, this computes to none. For ::marker, ::placeholder, and ::file-selector-button, this computes to itself (normal).
+    normal,
+    contents,
+    openQuote,
+    closeQuote,
+    noOpenQuote,
+    noCloseQuote,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Content { return .{ .raw_ = r }; }
+
+    pub fn format(self: Content, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// content-visibility
+/// - **W3C**: https://drafts.csswg.org/css-contain-2/#propdef-content-visibility
+pub const ContentVisibility = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// No effect. The element’s contents are laid out and rendered as normal.
+    visible,
+    ///     /// Changes the used value of the contain property so as to turn on layout containment, style containment, and paint containment for the element. If the element is not relevant to the user, it also skips its contents. Unlike hidden, the skipped contents must still be available as normal to user-agent features such as find-in-page, tab order navigation, etc., and must be focusable and selectable as normal.
+    auto,
+    ///     /// The element skips its contents. The skipped contents must not be accessible to user-agent features, such as find-in-page, tab-order navigation, etc., nor be selectable or focusable.
+    hidden,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ContentVisibility { return .{ .raw_ = r }; }
+
+    pub fn format(self: ContentVisibility, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// continue
+/// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-continue
+pub const Continue = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// If the box has more content than can fit, the excess content is handled according to the usual rules.
+    auto,
+    ///     /// The box must establish an independent formatting context and becomes a fragmentation container that captures region breaks, if it is not already. [CSS-BREAK-3] Content after the first region break is not rendered. See § 5.3.2 Discarding Content for further details. continue: discard is meant to generalize and replace the region-fragment property from [CSS-REGIONS-1]. Once it is sufficiently stable in this specification, region-fragment should be removed from the regions specification in favor of this.
+    discard,
+    ///     /// If the box is a block container, then it must establish an independent formatting context that also becomes a line-clamp container. This causes all content after the clamp point to be visually hidden, and to not be taken into account for the box’s automatic block size. If the box is a multicol container, the behavior is the same as auto.
+    collapse,
+    ///     /// The -webkit-legacy value behaves identically to collapse, except that it only takes effect if the specified value of the display property is -webkit-box or -webkit-inline-box and the value of the -webkit-box-orient property is vertical.
+    webkitLegacy,
+    ///     /// Content that doesn’t fit overflows, according to the overflow property
+    overflow,
+    ///     /// Content that doesn’t fit paginates. This creates a paginated view inside the element similar to the way that 'overflow: scroll' creates a scrollable view. See paginated overflow
+    paginate,
+    ///     /// content that doesn’t fit causes the element to copy itself and continue laying out. See fragment overflow.
+    fragments,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Continue { return .{ .raw_ = r }; }
+
+    pub fn format(self: Continue, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// copy-into
+/// - **W3C**: https://drafts.csswg.org/css-gcpm-4/#propdef-copy-into
+pub const CopyInto = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    element,
+    content,
+    text,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CopyInto { return .{ .raw_ = r }; }
+
+    pub fn format(self: CopyInto, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner
+pub const Corner = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Corner { return .{ .raw_ = r }; }
+
+    pub fn format(self: Corner, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-block-end
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-block-end
+pub const CornerBlockEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerBlockEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerBlockEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-block-end-shape
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-block-end-shape
+pub const CornerBlockEndShape = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerBlockEndShape { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerBlockEndShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-block-start
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-block-start
+pub const CornerBlockStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerBlockStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerBlockStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-block-start-shape
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-block-start-shape
+pub const CornerBlockStartShape = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerBlockStartShape { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerBlockStartShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-bottom
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-bottom
+pub const CornerBottom = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerBottom { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerBottom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-bottom-left
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-bottom-left
+pub const CornerBottomLeft = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerBottomLeft { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerBottomLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-bottom-left-shape
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-bottom-left-shape
+pub const CornerBottomLeftShape = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    round,
+    scoop,
+    bevel,
+    notch,
+    square,
+    squircle,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerBottomLeftShape { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerBottomLeftShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-bottom-right
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-bottom-right
+pub const CornerBottomRight = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerBottomRight { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerBottomRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-bottom-right-shape
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-bottom-right-shape
+pub const CornerBottomRightShape = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    round,
+    scoop,
+    bevel,
+    notch,
+    square,
+    squircle,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerBottomRightShape { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerBottomRightShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-bottom-shape
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-bottom-shape
+pub const CornerBottomShape = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerBottomShape { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerBottomShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-end-end
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-end-end
+pub const CornerEndEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerEndEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerEndEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-end-end-shape
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-end-end-shape
+pub const CornerEndEndShape = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    round,
+    scoop,
+    bevel,
+    notch,
+    square,
+    squircle,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerEndEndShape { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerEndEndShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-end-start
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-end-start
+pub const CornerEndStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerEndStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerEndStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-end-start-shape
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-end-start-shape
+pub const CornerEndStartShape = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    round,
+    scoop,
+    bevel,
+    notch,
+    square,
+    squircle,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerEndStartShape { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerEndStartShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-inline-end
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-inline-end
+pub const CornerInlineEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerInlineEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerInlineEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-inline-end-shape
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-inline-end-shape
+pub const CornerInlineEndShape = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerInlineEndShape { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerInlineEndShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-inline-start
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-inline-start
+pub const CornerInlineStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerInlineStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerInlineStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-inline-start-shape
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-inline-start-shape
+pub const CornerInlineStartShape = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerInlineStartShape { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerInlineStartShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-left
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-left
+pub const CornerLeft = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerLeft { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-left-shape
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-left-shape
+pub const CornerLeftShape = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerLeftShape { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerLeftShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-right
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-right
+pub const CornerRight = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerRight { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-right-shape
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-right-shape
+pub const CornerRightShape = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerRightShape { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerRightShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-shape
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-shape
+pub const CornerShape = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerShape { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-start-end
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-start-end
+pub const CornerStartEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerStartEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerStartEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-start-end-shape
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-start-end-shape
+pub const CornerStartEndShape = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    round,
+    scoop,
+    bevel,
+    notch,
+    square,
+    squircle,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerStartEndShape { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerStartEndShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-start-start
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-start-start
+pub const CornerStartStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerStartStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerStartStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-start-start-shape
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-start-start-shape
+pub const CornerStartStartShape = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    round,
+    scoop,
+    bevel,
+    notch,
+    square,
+    squircle,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerStartStartShape { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerStartStartShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-top
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-top
+pub const CornerTop = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerTop { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerTop, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-top-left
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-top-left
+pub const CornerTopLeft = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerTopLeft { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerTopLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-top-left-shape
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-top-left-shape
+pub const CornerTopLeftShape = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    round,
+    scoop,
+    bevel,
+    notch,
+    square,
+    squircle,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerTopLeftShape { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerTopLeftShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-top-right
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-top-right
+pub const CornerTopRight = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerTopRight { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerTopRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-top-right-shape
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-top-right-shape
+pub const CornerTopRightShape = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    round,
+    scoop,
+    bevel,
+    notch,
+    square,
+    squircle,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerTopRightShape { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerTopRightShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// corner-top-shape
+/// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-top-shape
+pub const CornerTopShape = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CornerTopShape { return .{ .raw_ = r }; }
+
+    pub fn format(self: CornerTopShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// counter-increment
+/// - **W3C**: https://drafts.csswg.org/css-lists-3/#propdef-counter-increment
+pub const CounterIncrement = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CounterIncrement { return .{ .raw_ = r }; }
+
+    pub fn format(self: CounterIncrement, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// counter-reset
+/// - **W3C**: https://drafts.csswg.org/css-lists-3/#propdef-counter-reset
+pub const CounterReset = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CounterReset { return .{ .raw_ = r }; }
+
+    pub fn format(self: CounterReset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// counter-set
+/// - **W3C**: https://drafts.csswg.org/css-lists-3/#propdef-counter-set
+pub const CounterSet = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CounterSet { return .{ .raw_ = r }; }
+
+    pub fn format(self: CounterSet, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// cue
+/// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-cue
+pub const Cue = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Cue { return .{ .raw_ = r }; }
+
+    pub fn format(self: Cue, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// cue-after
+/// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-cue-after
+pub const CueAfter = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CueAfter { return .{ .raw_ = r }; }
+
+    pub fn format(self: CueAfter, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// cue-before
+/// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-cue-before
+pub const CueBefore = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) CueBefore { return .{ .raw_ = r }; }
+
+    pub fn format(self: CueBefore, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// cursor
+/// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-cursor
+pub const Cursor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The UA determines the cursor to display based on the current context: auto behaves as text over selectable text or editable elements, and default otherwise.
+    auto,
+    ///     /// The platform-dependent default cursor. Often rendered as an arrow.
+    default,
+    ///     /// A context menu is available for the object under the cursor. Often rendered as an arrow with a small menu-like graphic next to it.
+    contextMenu,
+    ///     /// Help is available for the object under the cursor. Often rendered as a question mark or a balloon.
+    help,
+    ///     /// The cursor is a pointer that indicates a link.
+    pointer,
+    ///     /// A progress indicator. The program is performing some processing, but is different from wait in that the user may still interact with the program. Often rendered as a spinning beach ball, or an arrow with a watch or hourglass.
+    progress,
+    ///     /// Indicates that the program is busy and the user should wait. Often rendered as a watch or hourglass.
+    wait,
+    ///     /// Indicates that a cell or set of cells may be selected. Often rendered as a thick plus-sign with a dot in the middle.
+    cell,
+    ///     /// A simple crosshair (e.g., short line segments resembling a "+" sign). Often used to indicate a two dimensional bitmap selection mode.
+    crosshair,
+    ///     /// Indicates text that may be selected. Often rendered as a vertical I-beam. User agents may automatically display a horizontal I-beam/cursor (e.g. same as the vertical-text keyword) for vertical text, or for that matter, any angle of I-beam/cursor for text that is rendered at any particular angle.
+    text,
+    ///     /// Indicates vertical-text that may be selected. Often rendered as a horizontal I-beam.
+    verticalText,
+    ///     /// Indicates an alias of/shortcut to something is to be created. Often rendered as an arrow with a small curved arrow next to it.
+    alias,
+    ///     /// Indicates something is to be copied. Often rendered as an arrow with a small plus sign next to it.
+    copy,
+    ///     /// Indicates something is to be moved.
+    move,
+    ///     /// Indicates that the dragged item cannot be dropped at the current cursor location. Often rendered as a hand or pointer with a small circle with a line through it.
+    noDrop,
+    ///     /// Indicates that the requested action will not be carried out. Often rendered as a circle with a line through it.
+    notAllowed,
+    ///     /// Indicates that something can be grabbed (dragged to be moved). Often rendered as the backside of an open hand.
+    grab,
+    ///     /// Indicates that something is being grabbed (dragged to be moved). Often rendered as the backside of a hand with fingers closed mostly out of view.
+    grabbing,
+    ///     /// Indicates that some edge is to be moved. For example, the se-resize cursor is used when the movement starts from the south-east corner of the box.
+    eResize,
+    ///     /// Indicates that some edge is to be moved. For example, the se-resize cursor is used when the movement starts from the south-east corner of the box.
+    nResize,
+    ///     /// Indicates that some edge is to be moved. For example, the se-resize cursor is used when the movement starts from the south-east corner of the box.
+    neResize,
+    ///     /// Indicates that some edge is to be moved. For example, the se-resize cursor is used when the movement starts from the south-east corner of the box.
+    nwResize,
+    ///     /// Indicates that some edge is to be moved. For example, the se-resize cursor is used when the movement starts from the south-east corner of the box.
+    sResize,
+    ///     /// Indicates that some edge is to be moved. For example, the se-resize cursor is used when the movement starts from the south-east corner of the box.
+    seResize,
+    ///     /// Indicates that some edge is to be moved. For example, the se-resize cursor is used when the movement starts from the south-east corner of the box.
+    swResize,
+    ///     /// Indicates that some edge is to be moved. For example, the se-resize cursor is used when the movement starts from the south-east corner of the box.
+    wResize,
+    ///     /// Indicates a bidirectional resize cursor.
+    ewResize,
+    ///     /// Indicates a bidirectional resize cursor.
+    nsResize,
+    ///     /// Indicates a bidirectional resize cursor.
+    neswResize,
+    ///     /// Indicates a bidirectional resize cursor.
+    nwseResize,
+    ///     /// Indicates that the item/column can be resized horizontally. Often rendered as arrows pointing left and right with a vertical bar separating them.
+    colResize,
+    ///     /// Indicates that the item/row can be resized vertically. Often rendered as arrows pointing up and down with a horizontal bar separating them.
+    rowResize,
+    ///     /// Indicates that the something can be scrolled in any direction. Often rendered as arrows pointing up, down, left, and right with a dot in the middle.
+    allScroll,
+    ///     /// Indicates that something can be zoomed (magnified) in or out, and often rendered as a magnifying glass with a "+" or "-" in the center of the glass, for zoom-in and zoom-out respectively.
+    zoomIn,
+    ///     /// Indicates that something can be zoomed (magnified) in or out, and often rendered as a magnifying glass with a "+" or "-" in the center of the glass, for zoom-in and zoom-out respectively.
+    zoomOut,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Cursor { return .{ .raw_ = r }; }
+
+    pub fn format(self: Cursor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// cx
+/// - **W3C**: https://svgwg.org/svg2-draft/geometry.html#CxProperty
+pub const Cx = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) Cx { return .{ .px_ = v }; }
+    pub fn em(v: f32) Cx { return .{ .em_ = v }; }
+    pub fn rem(v: f32) Cx { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) Cx { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) Cx { return .{ .raw_ = r }; }
+
+    pub fn format(self: Cx, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// cy
+/// - **W3C**: https://svgwg.org/svg2-draft/geometry.html#CyProperty
+pub const Cy = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) Cy { return .{ .px_ = v }; }
+    pub fn em(v: f32) Cy { return .{ .em_ = v }; }
+    pub fn rem(v: f32) Cy { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) Cy { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) Cy { return .{ .raw_ = r }; }
+
+    pub fn format(self: Cy, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// d
+/// - **W3C**: https://svgwg.org/svg2-draft/paths.html#DProperty
+pub const D = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) D { return .{ .raw_ = r }; }
+
+    pub fn format(self: D, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// direction
+/// - **W3C**: https://drafts.csswg.org/css-writing-modes-4/#propdef-direction
+pub const Direction = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// This value sets inline base direction (bidi directionality) to line-left-to-line-right.
+    ltr,
+    ///     /// This value sets inline base direction (bidi directionality) to line-right-to-line-left.
+    rtl,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Direction { return .{ .raw_ = r }; }
+
+    pub fn format(self: Direction, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// display
+/// - **W3C**: https://drafts.csswg.org/css-display-4/#propdef-display
+pub const Display = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    block,
+    inline_,
+    runIn,
+    flow,
+    flowRoot,
+    table,
+    flex,
+    grid,
+    ///     /// Specifies that an element generates a ruby container box. (Corresponds to HTML/XHTML <ruby> elements.)
+    ruby,
+    ///     /// The list-item keyword causes the element to generate a ::marker pseudo-element [CSS-PSEUDO-4] with the content specified by its list-style properties (CSS 2.1§12.5 Lists) [CSS2] together with a principal box of the specified type for its own contents.
+    listItem,
+    tableRowGroup,
+    tableHeaderGroup,
+    tableFooterGroup,
+    tableRow,
+    tableCell,
+    tableColumnGroup,
+    tableColumn,
+    tableCaption,
+    ///     /// Specifies that an element generates a ruby base box. (Corresponds to HTML/XHTML <rb> elements.)
+    rubyBase,
+    ///     /// Specifies that an element generates a ruby annotation box. (Corresponds to HTML/XHTML <rt> elements.)
+    rubyText,
+    ///     /// Specifies that an element generates a ruby base container box. (Corresponds to XHTML <rbc> elements; generated as an anonymous box in HTML.)
+    rubyBaseContainer,
+    ///     /// Specifies that an element generates a ruby annotation container box. (Corresponds to HTML/XHTML <rtc> elements.)
+    rubyTextContainer,
+    contents,
+    inlineBlock,
+    inlineTable,
+    inlineFlex,
+    inlineGrid,
+    ///     /// This value causes an element to generate a block-level grid lanes container box.
+    gridLanes,
+    ///     /// This value causes an element to generate an inline-level grid lanes container box.
+    inlineGridLanes,
+    math,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Display { return .{ .raw_ = r }; }
+
+    pub fn format(self: Display, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// dominant-baseline
+/// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-dominant-baseline
+pub const DominantBaseline = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Equivalent to alphabetic in horizontal writing modes and in vertical writing modes when text-orientation is sideways. Equivalent to central in vertical writing modes when text-orientation is mixed or upright. However, in SVG text, the origin point of glyphs (used for coordinate-based glyph positioning) is always handled as for central in vertical writing modes.
+    auto,
+    ///     /// Use the text-under baselines.
+    textBottom,
+    ///     /// Use the alphabetic baselines.
+    alphabetic,
+    ///     /// Use the ideographic-under baselines.
+    ideographic,
+    ///     /// Use the x-middle baselines; except under text-orientation: upright (where the alphabetic and x-height baselines are essentially meaningless) use the central baseline.
+    middle,
+    ///     /// Use the central baselines.
+    central,
+    ///     /// Use the math baselines.
+    mathematical,
+    ///     /// Use the hanging baselines.
+    hanging,
+    ///     /// Use the text-over baselines.
+    textTop,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) DominantBaseline { return .{ .raw_ = r }; }
+
+    pub fn format(self: DominantBaseline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// dynamic-range-limit
+/// - **W3C**: https://drafts.csswg.org/css-color-hdr-1/#propdef-dynamic-range-limit
+pub const DynamicRangeLimit = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The highest luminance color that is displayed is the same as HDR reference white, i.e. the CSS color white.
+    standard,
+    ///     /// The highest peak luminance that is displayed is much greater than HDR reference white, i.e. the CSS color white; the precise level is not specified.
+    noLimit,
+    ///     /// The highest peak luminance that is displayed is somewhat greater than HDR reference white, i.e. the CSS color white, such that a mix of SDR and HDR content can be comfortably viewed together.
+    constrained,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) DynamicRangeLimit { return .{ .raw_ = r }; }
+
+    pub fn format(self: DynamicRangeLimit, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// empty-cells
+/// - **W3C**: https://drafts.csswg.org/css-tables-3/#propdef-empty-cells
+pub const EmptyCells = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    show,
+    hide,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) EmptyCells { return .{ .raw_ = r }; }
+
+    pub fn format(self: EmptyCells, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// event-trigger
+/// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-event-trigger
+pub const EventTrigger = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) EventTrigger { return .{ .raw_ = r }; }
+
+    pub fn format(self: EventTrigger, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// event-trigger-name
+/// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-event-trigger-name
+pub const EventTriggerName = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) EventTriggerName { return .{ .raw_ = r }; }
+
+    pub fn format(self: EventTriggerName, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// event-trigger-source
+/// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-event-trigger-source
+pub const EventTriggerSource = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    activate,
+    interest,
+    click,
+    touch,
+    dblclick,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) EventTriggerSource { return .{ .raw_ = r }; }
+
+    pub fn format(self: EventTriggerSource, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// field-sizing
+/// - **W3C**: https://drafts.csswg.org/css-forms-1/#propdef-field-sizing
+pub const FieldSizing = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// For element with default preferred size, the UA must set the intrinsic size to the default preferred size defined by the host language for that element. Otherwise, the UA must behave the same as content.
+    fixed,
+    ///     /// The UA must determine the element’s intrinsic size based on its content, and must ignore any default preferred size defined by the host language for that element. If the element is an element with default preferred size and is listed in compressible replaced elements, the UA must stop treating the element as a replaced element for min-content contribution.
+    content,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FieldSizing { return .{ .raw_ = r }; }
+
+    pub fn format(self: FieldSizing, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// fill
+/// - **W3C**: https://svgwg.org/svg2-draft/painting.html#FillProperty
+pub const Fill = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    child,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Fill { return .{ .raw_ = r }; }
+
+    pub fn format(self: Fill, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// fill-break
+/// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-fill-break
+pub const FillBreak = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    boundingBox,
+    slice,
+    clone,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FillBreak { return .{ .raw_ = r }; }
+
+    pub fn format(self: FillBreak, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// fill-color
+/// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-fill-color
+pub const FillColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) FillColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) FillColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) FillColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: FillColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// fill-image
+/// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-fill-image
+pub const FillImage = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    child,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FillImage { return .{ .raw_ = r }; }
+
+    pub fn format(self: FillImage, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// fill-opacity
+/// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-fill-opacity
+pub const FillOpacity = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FillOpacity { return .{ .raw_ = r }; }
+
+    pub fn format(self: FillOpacity, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// fill-origin
+/// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-fill-origin
+pub const FillOrigin = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Use the same fill positioning area as the parent. If it has no parent, use the initial containing block.
+    matchParent,
+    ///     /// For SVG shapes or SVG text, use the object bounding box of the element. For CSS boxes, use the bounding box of the text glyph outlines of the element and all in-flow or floated descendants.
+    fillBox,
+    ///     /// For SVG shapes or SVG text, use the stroke bounding box of the element. For CSS boxes, use the bounding box of the text glyph stroke outlines of the element and all in-flow or floated descendants.
+    strokeBox,
+    ///     /// Use the box’s own content-box/padding-box/border-box as the fill positioning area. For SVG shapes, content-box and padding-box are treated as fill-box, while border-box is treated as stroke-box.
+    contentBox,
+    ///     /// Use the box’s own content-box/padding-box/border-box as the fill positioning area. For SVG shapes, content-box and padding-box are treated as fill-box, while border-box is treated as stroke-box.
+    paddingBox,
+    ///     /// Use the box’s own content-box/padding-box/border-box as the fill positioning area. For SVG shapes, content-box and padding-box are treated as fill-box, while border-box is treated as stroke-box.
+    borderBox,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FillOrigin { return .{ .raw_ = r }; }
+
+    pub fn format(self: FillOrigin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// fill-position
+/// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-fill-position
+pub const FillPosition = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    left,
+    center,
+    right,
+    top,
+    bottom,
+    xStart,
+    xEnd,
+    yStart,
+    yEnd,
+    blockStart,
+    blockEnd,
+    inlineStart,
+    inlineEnd,
+    start,
+    end,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) FillPosition { return .{ .px_ = v }; }
+    pub fn em(v: f32) FillPosition { return .{ .em_ = v }; }
+    pub fn rem(v: f32) FillPosition { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) FillPosition { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) FillPosition { return .{ .raw_ = r }; }
+
+    pub fn format(self: FillPosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// fill-repeat
+/// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-fill-repeat
+pub const FillRepeat = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    repeatX,
+    repeatY,
+    repeatBlock,
+    repeatInline,
+    repeat,
+    space,
+    round,
+    noRepeat,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FillRepeat { return .{ .raw_ = r }; }
+
+    pub fn format(self: FillRepeat, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// fill-rule
+/// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-fill-rule
+pub const FillRule = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// This rule determines the “insideness” of a point on the canvas by drawing a ray from that point to infinity in any direction and then examining the places where a segment of the shape crosses the ray. Starting with a count of zero, add one each time a path segment crosses the ray from left to right and subtract one each time a path segment crosses the ray from right to left. After counting the crossings, if the result is zero then the point is outside the path. Otherwise, it is inside. The effect of a nonzero fill rule on paths with self-intersections and enclosed subpaths.
+    nonzero,
+    ///     /// This rule determines the “insideness” of a point on the canvas by drawing a ray from that point to infinity in any direction and counting the number of path segments from the given shape that the ray crosses. If this number is odd, the point is inside; if even, the point is outside. The effect of an evenodd fill rule on paths with self-intersections and enclosed subpaths.
+    evenodd,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FillRule { return .{ .raw_ = r }; }
+
+    pub fn format(self: FillRule, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// fill-size
+/// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-fill-size
+pub const FillSize = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    cover,
+    contain,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) FillSize { return .{ .px_ = v }; }
+    pub fn em(v: f32) FillSize { return .{ .em_ = v }; }
+    pub fn rem(v: f32) FillSize { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) FillSize { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) FillSize { return .{ .raw_ = r }; }
+
+    pub fn format(self: FillSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// filter
+/// - **W3C**: https://drafts.csswg.org/filter-effects-1/#propdef-filter
+pub const Filter = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Filter { return .{ .raw_ = r }; }
+
+    pub fn format(self: Filter, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// flex
+/// - **W3C**: https://drafts.csswg.org/css-flexbox-1/#propdef-flex
+pub const Flex = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Flex { return .{ .raw_ = r }; }
+
+    pub fn format(self: Flex, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// flex-basis
+/// - **W3C**: https://drafts.csswg.org/css-flexbox-1/#propdef-flex-basis
+pub const FlexBasis = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Indicates an automatic size based on the flex item’s content. (This is typically equivalent to the max-content size, but with adjustments to handle preferred aspect ratios, intrinsic sizing constraints, and orthogonal flows; see details in § 9 Flex Layout Algorithm.)
+    content,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FlexBasis { return .{ .raw_ = r }; }
+
+    pub fn format(self: FlexBasis, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// flex-direction
+/// - **W3C**: https://drafts.csswg.org/css-flexbox-1/#propdef-flex-direction
+pub const FlexDirection = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The flex container’s main axis has the same orientation as the inline axis of the current writing mode. The main-start and main-end directions are equivalent to the inline-start and inline-end directions, respectively, of the current writing mode.
+    row,
+    ///     /// Same as row, except the main-start and main-end directions are swapped.
+    rowReverse,
+    ///     /// The flex container’s main axis has the same orientation as the block axis of the current writing mode. The main-start and main-end directions are equivalent to the block-start and block-end directions, respectively, of the current writing mode.
+    column,
+    ///     /// Same as column, except the main-start and main-end directions are swapped.
+    columnReverse,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FlexDirection { return .{ .raw_ = r }; }
+
+    pub fn format(self: FlexDirection, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// flex-flow
+/// - **W3C**: https://drafts.csswg.org/css-flexbox-1/#propdef-flex-flow
+pub const FlexFlow = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FlexFlow { return .{ .raw_ = r }; }
+
+    pub fn format(self: FlexFlow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// flex-grow
+/// - **W3C**: https://drafts.csswg.org/css-flexbox-1/#propdef-flex-grow
+pub const FlexGrow = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FlexGrow { return .{ .raw_ = r }; }
+
+    pub fn format(self: FlexGrow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// flex-shrink
+/// - **W3C**: https://drafts.csswg.org/css-flexbox-1/#propdef-flex-shrink
+pub const FlexShrink = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FlexShrink { return .{ .raw_ = r }; }
+
+    pub fn format(self: FlexShrink, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// flex-wrap
+/// - **W3C**: https://drafts.csswg.org/css-flexbox-1/#propdef-flex-wrap
+pub const FlexWrap = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The flex container is single-line.
+    nowrap,
+    ///     /// The flex container is multi-line.
+    wrap,
+    ///     /// Same as wrap.
+    wrapReverse,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FlexWrap { return .{ .raw_ = r }; }
+
+    pub fn format(self: FlexWrap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// float
+/// - **W3C**: https://drafts.csswg.org/css-page-floats-3/#propdef-float
+pub const Float = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// If the float reference is a line box, block-start behaves like inline-start. If the float reference is not a line box, the element generates a box that is floated to the block-start and line-start outer edges of the float reference. The initial value of the max-width or max-height property that refers to the inline size of the float is '100%'. Content flows on the block-end side of the box.
+    blockStart,
+    ///     /// If the float reference is a line box, block-end behaves like inline-end. If the float reference is not a line box, the element generates a box that is floated to the block-end and line-end outer edges of the float reference. The initial value of the max-width or max-height property that refers to the inline size of the float is '100%'. Content flows on the block-start side of the box.
+    blockEnd,
+    ///     /// If the float reference is a line box, the element generates a box that is floated to the line-start outer edge of the float reference and content flows on the line-end side of the box. If the float reference is not a line box, the element generates a box that is floated to the line-start and block-start outer edges of the float reference.
+    inlineStart,
+    ///     /// If the float reference is a line box, the element generates a box that is floated to the line-ebd outer edge of the float reference and content flows on the line-start side of the box. If the float reference is not a line box, the element generates a box that is floated to the line-end and block-end outer edges of the float reference.
+    inlineEnd,
+    ///     /// Behaves as snap-block(2em, near)
+    snapBlock,
+    ///     /// same as snap-inline(2em, near)
+    snapInline,
+    ///     /// If the float reference is a line box, behaves like inline-start or inline-end, whichever corresponds to line-left for the float reference. Otherwise, behaves like block-end, inline-start or inline-end depending on the float containing block’s direction and writing-mode.
+    left,
+    ///     /// If the float reference is a line box, behaves like inline-start or inline-end, whichever corresponds to line-right for the float reference. Otherwise, behaves like block-start, inline-start or inline-end depending on the float containing block’s direction and writing-mode.
+    right,
+    ///     /// Behave like block-start or inline-start depending on the float containing block’s direction and writing-mode.
+    top,
+    ///     /// Behave like block-end or inline-end depending on the float containing block’s direction and writing-mode.
+    bottom,
+    ///     /// each footnote element is placed in the footnote area of the page
+    footnote,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Float { return .{ .raw_ = r }; }
+
+    pub fn format(self: Float, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// float-defer
+/// - **W3C**: https://drafts.csswg.org/css-page-floats-3/#propdef-float-defer
+pub const FloatDefer = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    last,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FloatDefer { return .{ .raw_ = r }; }
+
+    pub fn format(self: FloatDefer, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// float-offset
+/// - **W3C**: https://drafts.csswg.org/css-page-floats-3/#propdef-float-offset
+pub const FloatOffset = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) FloatOffset { return .{ .px_ = v }; }
+    pub fn em(v: f32) FloatOffset { return .{ .em_ = v }; }
+    pub fn rem(v: f32) FloatOffset { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) FloatOffset { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) FloatOffset { return .{ .raw_ = r }; }
+
+    pub fn format(self: FloatOffset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// float-reference
+/// - **W3C**: https://drafts.csswg.org/css-page-floats-3/#propdef-float-reference
+pub const FloatReference = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The float reference is the line box of the float anchor. The float containing block formatting context is the same as that of the float anchor. The float is an inline float.
+    inline_,
+    ///     /// The float reference is the column in a multi column environment in which the float anchor is placed. If the float anchor is not inside a column, the float reference is the line box of the float anchor. The float containing block formatting context is a new block formatting context with the same dimensions and placement as the float reference. The float is a page float.
+    column,
+    ///     /// The float reference is the region in a region-chain within which the float anchor is placed. If the float anchor is not inside a region, the float reference is the line box of the float anchor. The float containing block formatting context is a new block formatting context with the same dimensions and placement as the float reference. The float is a page float.
+    region,
+    ///     /// The float reference of the float is the page within which the float anchor is placed. If the float anchor is not inside a page, the float reference is the line box of the float anchor. The float containing block formatting context is a new block formatting context with the same dimensions and placement as the float reference. The float is a page float.
+    page,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FloatReference { return .{ .raw_ = r }; }
+
+    pub fn format(self: FloatReference, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// flood-color
+/// - **W3C**: https://drafts.csswg.org/filter-effects-1/#propdef-flood-color
+pub const FloodColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) FloodColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) FloodColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) FloodColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: FloodColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// flood-opacity
+/// - **W3C**: https://drafts.csswg.org/filter-effects-1/#propdef-flood-opacity
+pub const FloodOpacity = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FloodOpacity { return .{ .raw_ = r }; }
+
+    pub fn format(self: FloodOpacity, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// flow-from
+/// - **W3C**: https://drafts.csswg.org/css-regions-1/#propdef-flow-from
+pub const FlowFrom = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FlowFrom { return .{ .raw_ = r }; }
+
+    pub fn format(self: FlowFrom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// flow-into
+/// - **W3C**: https://drafts.csswg.org/css-regions-1/#propdef-flow-into
+pub const FlowInto = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    element,
+    content,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FlowInto { return .{ .raw_ = r }; }
+
+    pub fn format(self: FlowInto, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// flow-tolerance
+/// - **W3C**: https://drafts.csswg.org/css-grid-3/#propdef-flow-tolerance
+pub const FlowTolerance = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Resolves to a used value of 1em in grid lanes layout and a used value of 0 in all other layout modes.
+    normal,
+    ///     /// Specifies an infinite tie threshold. This makes items distribute themselves strictly in order, without considering the length of the tracks at all.
+    infinite,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) FlowTolerance { return .{ .px_ = v }; }
+    pub fn em(v: f32) FlowTolerance { return .{ .em_ = v }; }
+    pub fn rem(v: f32) FlowTolerance { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) FlowTolerance { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) FlowTolerance { return .{ .raw_ = r }; }
+
+    pub fn format(self: FlowTolerance, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// font
+/// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font
+pub const Font = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    normal,
+    smallCaps,
+    ultraCondensed,
+    extraCondensed,
+    condensed,
+    semiCondensed,
+    semiExpanded,
+    expanded,
+    extraExpanded,
+    ultraExpanded,
+    ///     /// The font used for captioned controls (e.g., buttons, drop-downs, etc.).
+    caption,
+    ///     /// The font used to label icons.
+    icon,
+    ///     /// The font used in menus (e.g., dropdown menus and menu lists).
+    menu,
+    ///     /// The font used in dialog boxes.
+    messageBox,
+    ///     /// The font used for labeling small controls.
+    smallCaption,
+    ///     /// The font used in window status bars.
+    statusBar,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Font { return .{ .raw_ = r }; }
+
+    pub fn format(self: Font, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// font-family
+/// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-family
+pub const FontFamily = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    serif,
+    sansSerif,
+    systemUi,
+    cursive,
+    fantasy,
+    math,
+    monospace,
+    uiSerif,
+    uiSansSerif,
+    uiMonospace,
+    uiRounded,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FontFamily { return .{ .raw_ = r }; }
+
+    pub fn format(self: FontFamily, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// font-feature-settings
+/// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-feature-settings
+pub const FontFeatureSettings = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// A value of normal means that no change in glyph selection or positioning occurs due to this property.
+    normal,
+    on,
+    off,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FontFeatureSettings { return .{ .raw_ = r }; }
+
+    pub fn format(self: FontFeatureSettings, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// font-kerning
+/// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-kerning
+pub const FontKerning = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Specifies that kerning is applied at the discretion of the user agent
+    auto,
+    ///     /// Specifies that kerning is applied
+    normal,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FontKerning { return .{ .raw_ = r }; }
+
+    pub fn format(self: FontKerning, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// font-language-override
+/// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-language-override
+pub const FontLanguageOverride = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    normal,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FontLanguageOverride { return .{ .raw_ = r }; }
+
+    pub fn format(self: FontLanguageOverride, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// font-optical-sizing
+/// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-optical-sizing
+pub const FontOpticalSizing = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The user agent may modify the shape of glyphs based on the font-size and the pixel density of the screen. For OpenType and TrueType fonts using font variations, this is often done by using the "opsz" font variation.
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FontOpticalSizing { return .{ .raw_ = r }; }
+
+    pub fn format(self: FontOpticalSizing, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// font-palette
+/// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-palette
+pub const FontPalette = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// If the color-scheme property is set to a value other than normal', user-agents should select the first light or dark palette as appropriate. Otherwise, user-agents display the color font with the default palette or default glyph colorisation. User-agents should take the computed value of the color property into consideration when a color font format requires use of the foreground color In the COLR [OPENTYPE] table, color index 0xFFFF should be rendered according the color property. For COLR/CPAL [OPENTYPE] fonts, font-palette: normal usually means rendering the font with the palette in the font at index 0.
+    normal,
+    ///     /// Some color font formats include metadata marking certain palettes as applicable on a light (close to white) background. This keyword causes the user-agent to use the first available palette in the font file marked this way. If the font file format does not account for this metadata, or no palette in the font is marked this way, this value behaves as normal.
+    light,
+    ///     /// Some color font formats include metadata marking certain palettes as applicable on a dark (close to black) background. This keyword causes the user-agent to use the first available palette in the font file marked this way. If the font file format does not account for this metadata, or no palette in the font is marked this way, this value behaves as normal.
+    dark,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FontPalette { return .{ .raw_ = r }; }
+
+    pub fn format(self: FontPalette, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// font-size
+/// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-size
+pub const FontSize = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    xxSmall,
+    xSmall,
+    small,
+    medium,
+    large,
+    xLarge,
+    xxLarge,
+    xxxLarge,
+    larger,
+    smaller,
+    ///     /// Special mathematical scaling rules must be applied when determining the computed value of the font-size property.
+    math,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) FontSize { return .{ .px_ = v }; }
+    pub fn em(v: f32) FontSize { return .{ .em_ = v }; }
+    pub fn rem(v: f32) FontSize { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) FontSize { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) FontSize { return .{ .raw_ = r }; }
+
+    pub fn format(self: FontSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// font-size-adjust
+/// - **W3C**: https://drafts.csswg.org/css-fonts-5/#propdef-font-size-adjust
+pub const FontSizeAdjust = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Normalize the aspect value of the fonts, using the x-height divided by the font size.
+    exHeight,
+    ///     /// Normalize the cap-height of the fonts, using the cap-height by the font size.
+    capHeight,
+    ///     /// Normalize the horizontal narrow pitch of the fonts, using the advance width of “0” (ZERO, U+0030) divided by the font size.
+    chWidth,
+    ///     /// Normalize the horizontal wide pitch of the font, using the advance width of “水” (CJK water ideograph, U+6C34) divided by the font size.
+    icWidth,
+    ///     /// Normalize the vertical wide pitch of the font, using the advance height of “水” (CJK water ideograph, U+6C34) divided by the font size.
+    icHeight,
+    ///     /// Computes to the <number> corresponding to the specified metric of the first available font, if it exists. Otherwise, the same as none.
+    fromFont,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FontSizeAdjust { return .{ .raw_ = r }; }
+
+    pub fn format(self: FontSizeAdjust, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// font-stretch
+/// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-stretch
+pub const FontStretch = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    normal,
+    ultraCondensed,
+    extraCondensed,
+    condensed,
+    semiCondensed,
+    semiExpanded,
+    expanded,
+    extraExpanded,
+    ultraExpanded,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn percent(v: f32) FontStretch { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) FontStretch { return .{ .raw_ = r }; }
+
+    pub fn format(self: FontStretch, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// font-style
+/// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-style
+pub const FontStyle = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Matches against a face that is classified as a normal face, one that is neither italic or obliqued. This represents an oblique value of "0".
+    normal,
+    ///     /// Matches against a font that is labeled as an italic face, or an oblique face if one does not exist. The angle and direction of slant is unspecified.
+    italic,
+    ///     /// Matches against a font that is labeled as an italic face, with a positive (clockwise) slant; or an oblique face with positive slant, if one does not exist.
+    left,
+    ///     /// Matches against a font that is labeled as an italic face, with a negative (counter-clockwise) slant; or an oblique face with negative slant, if one does not exist.
+    right,
+    oblique,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FontStyle { return .{ .raw_ = r }; }
+
+    pub fn format(self: FontStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// font-synthesis
+/// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-synthesis
+pub const FontSynthesis = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    weight,
+    style,
+    smallCaps,
+    position,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FontSynthesis { return .{ .raw_ = r }; }
+
+    pub fn format(self: FontSynthesis, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// font-synthesis-position
+/// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-synthesis-position
+pub const FontSynthesisPosition = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Synthesis of superscript and subscript forms is required
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FontSynthesisPosition { return .{ .raw_ = r }; }
+
+    pub fn format(self: FontSynthesisPosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// font-synthesis-small-caps
+/// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-synthesis-small-caps
+pub const FontSynthesisSmallCaps = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Synthesis of small caps faces is allowed
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FontSynthesisSmallCaps { return .{ .raw_ = r }; }
+
+    pub fn format(self: FontSynthesisSmallCaps, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// font-synthesis-style
+/// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-synthesis-style
+pub const FontSynthesisStyle = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Synthesis of oblique faces is allowed
+    auto,
+    ///     /// Synthesis of oblique faces is allowed, but they must not be used as fallback if italic is specified
+    obliqueOnly,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FontSynthesisStyle { return .{ .raw_ = r }; }
+
+    pub fn format(self: FontSynthesisStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// font-synthesis-weight
+/// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-synthesis-weight
+pub const FontSynthesisWeight = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Synthesis of bold faces is allowed
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FontSynthesisWeight { return .{ .raw_ = r }; }
+
+    pub fn format(self: FontSynthesisWeight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// font-variant
+/// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-variant
+pub const FontVariant = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The value normal resets all subproperties of font-variant to their initial value. The none value sets font-variant-ligatures to 'font-variant-ligatures/none' and resets all other font feature properties to their initial value. Like other shorthands, using font-variant resets unspecified font-variant subproperties to their initial values.
+    normal,
+    commonLigatures,
+    noCommonLigatures,
+    discretionaryLigatures,
+    noDiscretionaryLigatures,
+    historicalLigatures,
+    noHistoricalLigatures,
+    contextual,
+    noContextual,
+    smallCaps,
+    allSmallCaps,
+    petiteCaps,
+    allPetiteCaps,
+    unicase,
+    titlingCaps,
+    historicalForms,
+    liningNums,
+    oldstyleNums,
+    proportionalNums,
+    tabularNums,
+    diagonalFractions,
+    stackedFractions,
+    ordinal,
+    slashedZero,
+    jis78,
+    jis83,
+    jis90,
+    jis04,
+    simplified,
+    traditional,
+    fullWidth,
+    proportionalWidth,
+    ruby,
+    sub,
+    super,
+    text,
+    emoji,
+    unicode,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FontVariant { return .{ .raw_ = r }; }
+
+    pub fn format(self: FontVariant, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// font-variant-alternates
+/// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-alternates
+pub const FontVariantAlternates = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// None of the features listed below are enabled.
+    normal,
+    ///     /// Enables display of historical forms (OpenType feature: hist).
+    historicalForms,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FontVariantAlternates { return .{ .raw_ = r }; }
+
+    pub fn format(self: FontVariantAlternates, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// font-variant-caps
+/// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-caps
+pub const FontVariantCaps = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// None of the features listed below are enabled.
+    normal,
+    ///     /// Enables display of small capitals (OpenType feature: smcp). Small-caps glyphs typically use the form of uppercase letters but are reduced to the size of lowercase letters.
+    smallCaps,
+    ///     /// Enables display of small capitals for both upper and lowercase letters (OpenType features: c2sc, smcp).
+    allSmallCaps,
+    ///     /// Enables display of petite capitals (OpenType feature: pcap).
+    petiteCaps,
+    ///     /// Enables display of petite capitals for both upper and lowercase letters (OpenType features: c2pc, pcap).
+    allPetiteCaps,
+    ///     /// Enables display of mixture of small capitals for uppercase letters with normal lowercase letters (OpenType feature: unic).
+    unicase,
+    ///     /// Enables display of titling capitals (OpenType feature: titl). Uppercase letter glyphs are often designed for use with lowercase letters. When used in all uppercase titling sequences they can appear too strong. Titling capitals are designed specifically for this situation.
+    titlingCaps,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FontVariantCaps { return .{ .raw_ = r }; }
+
+    pub fn format(self: FontVariantCaps, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// font-variant-east-asian
+/// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-east-asian
+pub const FontVariantEastAsian = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// None of the features listed below are enabled.
+    normal,
+    ///     /// Enables rendering of JIS78 forms (OpenType feature: jp78).
+    jis78,
+    ///     /// Enables rendering of JIS83 forms (OpenType feature: jp83).
+    jis83,
+    ///     /// Enables rendering of JIS90 forms (OpenType feature: jp90).
+    jis90,
+    ///     /// Enables rendering of JIS2004 forms (OpenType feature: jp04). The various JIS variants reflect the glyph forms defined in different Japanese national standards. Fonts generally include glyphs defined by the most recent national standard, but it’s sometimes necessary to use older variants, to match signage for example.
+    jis04,
+    ///     /// Enables rendering of simplified forms (OpenType feature: smpl).
+    simplified,
+    ///     /// Enables rendering of traditional forms (OpenType feature: trad). The simplified and traditional values allow control over the glyph forms for characters which have been simplified over time but for which the older, traditional form is still used in some contexts. The exact set of characters and glyph forms will vary to some degree by the context for which a given font was designed.
+    traditional,
+    ///     /// Enables rendering of full-width variants (OpenType feature: fwid).
+    fullWidth,
+    ///     /// Enables rendering of proportionally-spaced variants (OpenType feature: pwid).
+    proportionalWidth,
+    ///     /// Enables display of ruby variant glyphs (OpenType feature: ruby). Since ruby text is generally smaller than the associated body text, font designers can design special glyphs for use with ruby that are more readable than scaled down versions of the default glyphs. Only glyph selection is affected, there is no associated font scaling or other change that affects line layout. The red ruby text below is shown with default glyphs (top) and with ruby variant glyphs (bottom). Note the slight difference in stroke thickness.
+    ruby,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FontVariantEastAsian { return .{ .raw_ = r }; }
+
+    pub fn format(self: FontVariantEastAsian, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// font-variant-emoji
+/// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-emoji
+pub const FontVariantEmoji = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// User agents can choose to draw a Emoji Presentation Participating Code Point in either emoji style or text style. User agents typically follow platform conventions when performing this decision.
+    normal,
+    ///     /// Code points are rendered as if U+FE0E VARIATION SELECTOR-15 was appended to every Emoji Presentation Participating Code Point.
+    text,
+    ///     /// Code points are rendered as if U+FE0F VARIATION SELECTOR-16 was appended to every Emoji Presentation Participating Code Point.
+    emoji,
+    ///     /// Code points are rendered in accordance with [UTS51] as either emoji-default, text-default, or text-only, depending on the values of the Emoji and Emoji_Presentation properties for each Emoji Presentation Participating Code Point. If present, FE0E VARIATION SELECTOR-15 and U+FE0F VARIATION SELECTOR-16 will override the default presentation of individual Emoji Presentation Participating Code Points.
+    unicode,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FontVariantEmoji { return .{ .raw_ = r }; }
+
+    pub fn format(self: FontVariantEmoji, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// font-variant-ligatures
+/// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-ligatures
+pub const FontVariantLigatures = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// A value of normal specifies that common default features are enabled, as described in detail in the next section. For OpenType fonts, common ligatures and contextual forms are on by default, discretionary and historical ligatures are not.
+    normal,
+    ///     /// Enables display of common ligatures (OpenType features: liga, clig). For OpenType fonts, common ligatures are enabled by default.
+    commonLigatures,
+    ///     /// Disables display of common ligatures (OpenType features: liga, clig).
+    noCommonLigatures,
+    ///     /// Enables display of discretionary ligatures (OpenType feature: dlig). Which ligatures are discretionary or optional is decided by the type designer, so authors will need to refer to the documentation of a given font to understand which ligatures are considered discretionary.
+    discretionaryLigatures,
+    ///     /// Disables display of discretionary ligatures (OpenType feature: dlig).
+    noDiscretionaryLigatures,
+    ///     /// Enables display of historical ligatures (OpenType feature: hlig).
+    historicalLigatures,
+    ///     /// Disables display of historical ligatures (OpenType feature: hlig).
+    noHistoricalLigatures,
+    ///     /// Enables display of contextual alternates (OpenType feature: calt). Although not strictly a ligature feature, like ligatures this feature is commonly used to harmonize the shapes of glyphs with the surrounding context. For OpenType fonts, this feature is on by default.
+    contextual,
+    ///     /// Disables display of contextual alternates (OpenType feature: calt).
+    noContextual,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FontVariantLigatures { return .{ .raw_ = r }; }
+
+    pub fn format(self: FontVariantLigatures, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// font-variant-numeric
+/// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-numeric
+pub const FontVariantNumeric = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// None of the features listed below are enabled.
+    normal,
+    ///     /// Enables display of lining numerals (OpenType feature: lnum).
+    liningNums,
+    ///     /// Enables display of old-style numerals (OpenType feature: onum).
+    oldstyleNums,
+    ///     /// Enables display of proportional numerals (OpenType feature: pnum).
+    proportionalNums,
+    ///     /// Enables display of tabular numerals (OpenType feature: tnum).
+    tabularNums,
+    ///     /// Enables display of lining diagonal fractions (OpenType feature: frac).
+    diagonalFractions,
+    ///     /// Enables display of lining stacked fractions (OpenType feature: afrc).
+    stackedFractions,
+    ///     /// Enables display of letter forms used with ordinal numbers (OpenType feature: ordn).
+    ordinal,
+    ///     /// Enables display of slashed zeros (OpenType feature: zero).
+    slashedZero,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FontVariantNumeric { return .{ .raw_ = r }; }
+
+    pub fn format(self: FontVariantNumeric, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// font-variant-position
+/// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-position
+pub const FontVariantPosition = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// None of the features listed below are enabled.
+    normal,
+    ///     /// Enables display of subscript variants (OpenType feature: subs).
+    sub,
+    ///     /// Enables display of superscript variants (OpenType feature: sups).
+    super,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FontVariantPosition { return .{ .raw_ = r }; }
+
+    pub fn format(self: FontVariantPosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// font-variation-settings
+/// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-variation-settings
+pub const FontVariationSettings = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    normal,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FontVariationSettings { return .{ .raw_ = r }; }
+
+    pub fn format(self: FontVariationSettings, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// font-weight
+/// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-weight
+pub const FontWeight = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Same as 400.
+    normal,
+    ///     /// Same as 700.
+    bold,
+    ///     /// Specifies a bolder weight than the inherited value. See § 2.2.1 Relative Weights.
+    bolder,
+    ///     /// Specifies a lighter weight than the inherited value. See § 2.2.1 Relative Weights.
+    lighter,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FontWeight { return .{ .raw_ = r }; }
+
+    pub fn format(self: FontWeight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// font-width
+/// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-width
+pub const FontWidth = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    normal,
+    ultraCondensed,
+    extraCondensed,
+    condensed,
+    semiCondensed,
+    semiExpanded,
+    expanded,
+    extraExpanded,
+    ultraExpanded,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn percent(v: f32) FontWidth { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) FontWidth { return .{ .raw_ = r }; }
+
+    pub fn format(self: FontWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// footnote-display
+/// - **W3C**: https://drafts.csswg.org/css-gcpm-3/#propdef-footnote-display
+pub const FootnoteDisplay = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The footnote element is placed in the footnote area as a block element
+    block,
+    ///     /// The footnote element is placed in the footnote area as an inline element
+    inline_,
+    ///     /// The user agent determines whether a given footnote element is placed as a block element or an inline element. If two or more footnotes could fit on the same line in the footnote area, they should be placed inline.
+    compact,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FootnoteDisplay { return .{ .raw_ = r }; }
+
+    pub fn format(self: FootnoteDisplay, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// footnote-policy
+/// - **W3C**: https://drafts.csswg.org/css-gcpm-3/#propdef-footnote-policy
+pub const FootnotePolicy = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The user agent chooses how to render footnotes, and may place the footnote body on a later page than the footnote reference. A footnote body must never be placed on a page before the footnote reference.
+    auto,
+    ///     /// If a given footnote body cannot be placed on the current page due to lack of space, the user agent introduces a forced page break at the start of the line containing the footnote reference, so that both the reference and the footnote body fall on the next page. Note that the user agent must honor widow and orphan settings when doing this, and so may need to insert the page break on an earlier line.
+    line,
+    ///     /// As with line, except a forced page break is introduced before the paragraph that contains the footnote.
+    block,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) FootnotePolicy { return .{ .raw_ = r }; }
+
+    pub fn format(self: FootnotePolicy, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// forced-color-adjust
+/// - **W3C**: https://drafts.csswg.org/css-color-adjust-1/#propdef-forced-color-adjust
+pub const ForcedColorAdjust = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The element’s colors are automatically adjusted by the UA in forced colors mode.
+    auto,
+    ///     /// In forced colors mode, if the color property inherits from its parent (i.e. there is no cascaded value or the cascaded value is currentColor, inherit, or another keyword that inherits from the parent), then it computes to the used color of its parent’s color value. In all other respects, behaves the same as none.
+    preserveParentColor,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ForcedColorAdjust { return .{ .raw_ = r }; }
+
+    pub fn format(self: ForcedColorAdjust, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// gap
+/// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-gap
+pub const Gap = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Gap { return .{ .raw_ = r }; }
+
+    pub fn format(self: Gap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// glyph-orientation-vertical
+/// - **W3C**: https://drafts.csswg.org/css-writing-modes-4/#propdef-glyph-orientation-vertical
+pub const GlyphOrientationVertical = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    @"0",
+    raw_: []const u8,
+    pub fn raw(r: []const u8) GlyphOrientationVertical { return .{ .raw_ = r }; }
+
+    pub fn format(self: GlyphOrientationVertical, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// grid
+/// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid
+pub const Grid = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    autoFlow,
+    dense,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Grid { return .{ .raw_ = r }; }
+
+    pub fn format(self: Grid, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// grid-area
+/// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-area
+pub const GridArea = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    span,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) GridArea { return .{ .raw_ = r }; }
+
+    pub fn format(self: GridArea, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// grid-auto-columns
+/// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-auto-columns
+pub const GridAutoColumns = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    minContent,
+    maxContent,
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) GridAutoColumns { return .{ .px_ = v }; }
+    pub fn em(v: f32) GridAutoColumns { return .{ .em_ = v }; }
+    pub fn rem(v: f32) GridAutoColumns { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) GridAutoColumns { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) GridAutoColumns { return .{ .raw_ = r }; }
+
+    pub fn format(self: GridAutoColumns, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// grid-auto-flow
+/// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-auto-flow
+pub const GridAutoFlow = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The auto-placement algorithm places items by filling each row in turn, adding new rows as necessary. If neither row nor column is provided, row is assumed.
+    row,
+    ///     /// The auto-placement algorithm places items by filling each column in turn, adding new columns as necessary.
+    column,
+    ///     /// If specified, the auto-placement algorithm uses a “dense” packing algorithm, which attempts to fill in holes earlier in the grid if smaller items come up later. This may cause items to appear out-of-order, when doing so would fill in holes left by larger items. If omitted, a “sparse” algorithm is used, where the placement algorithm only ever moves “forward” in the grid when placing items, never backtracking to fill holes. This ensures that all of the auto-placed items appear “in order”, even if this leaves holes that could have been filled by later items.
+    dense,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) GridAutoFlow { return .{ .raw_ = r }; }
+
+    pub fn format(self: GridAutoFlow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// grid-auto-rows
+/// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-auto-rows
+pub const GridAutoRows = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    minContent,
+    maxContent,
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) GridAutoRows { return .{ .px_ = v }; }
+    pub fn em(v: f32) GridAutoRows { return .{ .em_ = v }; }
+    pub fn rem(v: f32) GridAutoRows { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) GridAutoRows { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) GridAutoRows { return .{ .raw_ = r }; }
+
+    pub fn format(self: GridAutoRows, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// grid-column
+/// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-column
+pub const GridColumn = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    span,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) GridColumn { return .{ .raw_ = r }; }
+
+    pub fn format(self: GridColumn, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// grid-column-end
+/// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-column-end
+pub const GridColumnEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    span,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) GridColumnEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: GridColumnEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// grid-column-gap
+/// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-grid-column-gap
+pub const GridColumnGap = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    normal,
+    hairline,
+    thin,
+    medium,
+    thick,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) GridColumnGap { return .{ .px_ = v }; }
+    pub fn em(v: f32) GridColumnGap { return .{ .em_ = v }; }
+    pub fn rem(v: f32) GridColumnGap { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) GridColumnGap { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) GridColumnGap { return .{ .raw_ = r }; }
+
+    pub fn format(self: GridColumnGap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// grid-column-start
+/// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-column-start
+pub const GridColumnStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    span,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) GridColumnStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: GridColumnStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// grid-gap
+/// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-grid-gap
+pub const GridGap = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) GridGap { return .{ .raw_ = r }; }
+
+    pub fn format(self: GridGap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// grid-row
+/// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-row
+pub const GridRow = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    span,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) GridRow { return .{ .raw_ = r }; }
+
+    pub fn format(self: GridRow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// grid-row-end
+/// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-row-end
+pub const GridRowEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    span,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) GridRowEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: GridRowEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// grid-row-gap
+/// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-grid-row-gap
+pub const GridRowGap = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    normal,
+    hairline,
+    thin,
+    medium,
+    thick,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) GridRowGap { return .{ .px_ = v }; }
+    pub fn em(v: f32) GridRowGap { return .{ .em_ = v }; }
+    pub fn rem(v: f32) GridRowGap { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) GridRowGap { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) GridRowGap { return .{ .raw_ = r }; }
+
+    pub fn format(self: GridRowGap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// grid-row-start
+/// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-row-start
+pub const GridRowStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    span,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) GridRowStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: GridRowStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// grid-template
+/// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-template
+pub const GridTemplate = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    minContent,
+    maxContent,
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) GridTemplate { return .{ .px_ = v }; }
+    pub fn em(v: f32) GridTemplate { return .{ .em_ = v }; }
+    pub fn rem(v: f32) GridTemplate { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) GridTemplate { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) GridTemplate { return .{ .raw_ = r }; }
+
+    pub fn format(self: GridTemplate, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// grid-template-areas
+/// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-template-areas
+pub const GridTemplateAreas = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) GridTemplateAreas { return .{ .raw_ = r }; }
+
+    pub fn format(self: GridTemplateAreas, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// grid-template-columns
+/// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-template-columns
+pub const GridTemplateColumns = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Represents the largest min-content contribution of the grid items occupying the grid track.
+    minContent,
+    ///     /// Represents the largest max-content contribution of the grid items occupying the grid track.
+    maxContent,
+    ///     /// As a maximum: represents the largest max-content contribution of the grid items occupying the grid track; however, unlike max-content, allows expansion of the track by the align-content and justify-content properties. As a minimum: represents the largest minimum size (specified by min-width/min-height) of the grid items occupying the grid track. (This initially is often, but not always, equal to a min-content minimum—​see § 6.6 Automatic Minimum Size of Grid Items.) When appearing outside a minmax() notation: equivalent to minmax(auto, auto), representing the range between the minimum and maximum described above. (This behaves similar to minmax(min-content, max-content) in the most basic cases, but with extra abilities.)
+    auto,
+    autoFill,
+    autoFit,
+    subgrid,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) GridTemplateColumns { return .{ .px_ = v }; }
+    pub fn em(v: f32) GridTemplateColumns { return .{ .em_ = v }; }
+    pub fn rem(v: f32) GridTemplateColumns { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) GridTemplateColumns { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) GridTemplateColumns { return .{ .raw_ = r }; }
+
+    pub fn format(self: GridTemplateColumns, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// grid-template-rows
+/// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-template-rows
+pub const GridTemplateRows = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Represents the largest min-content contribution of the grid items occupying the grid track.
+    minContent,
+    ///     /// Represents the largest max-content contribution of the grid items occupying the grid track.
+    maxContent,
+    ///     /// As a maximum: represents the largest max-content contribution of the grid items occupying the grid track; however, unlike max-content, allows expansion of the track by the align-content and justify-content properties. As a minimum: represents the largest minimum size (specified by min-width/min-height) of the grid items occupying the grid track. (This initially is often, but not always, equal to a min-content minimum—​see § 6.6 Automatic Minimum Size of Grid Items.) When appearing outside a minmax() notation: equivalent to minmax(auto, auto), representing the range between the minimum and maximum described above. (This behaves similar to minmax(min-content, max-content) in the most basic cases, but with extra abilities.)
+    auto,
+    autoFill,
+    autoFit,
+    subgrid,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) GridTemplateRows { return .{ .px_ = v }; }
+    pub fn em(v: f32) GridTemplateRows { return .{ .em_ = v }; }
+    pub fn rem(v: f32) GridTemplateRows { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) GridTemplateRows { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) GridTemplateRows { return .{ .raw_ = r }; }
+
+    pub fn format(self: GridTemplateRows, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// hanging-punctuation
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-hanging-punctuation
+pub const HangingPunctuation = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// An opening bracket, quote, or ideographic space at the start of the first formatted line of an element hangs. This applies to all characters in the Unicode categories Ps, Pf, Pi plus the ASCII quote marks U+0027 ' APOSTROPHE and U+0022 " QUOTATION MARK and the IDEOGRAPHIC SPACE U+3000.
+    first,
+    ///     /// A stop or comma at the end of a line hangs.
+    forceEnd,
+    ///     /// A stop or comma at the end of a line conditionally hangs.
+    allowEnd,
+    ///     /// A closing bracket or quote at the end of the last formatted line of an element hangs. This applies to all characters in the Unicode categories Pe, Pf, Pi plus the ASCII quote marks U+0027 ' APOSTROPHE and U+0022 " QUOTATION MARK.
+    last,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) HangingPunctuation { return .{ .raw_ = r }; }
+
+    pub fn format(self: HangingPunctuation, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// height
+/// - **W3C**: https://drafts.csswg.org/css-sizing-3/#propdef-height
+pub const Height = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// For width/height, specifies an automatic size (automatic block size/automatic inline size). See the relevant layout module for how to calculate this. For min-width/min-height, specifies an automatic minimum size. Unless otherwise defined by the relevant layout module, however, it resolves to a used value of 0. For backwards-compatibility, the resolved value of this keyword is zero for boxes of all [CSS2] display types: block and inline boxes, inline blocks, and all the table layout boxes. It also resolves to zero when no box is generated.
+    auto,
+    ///     /// Use the min-content size in the relevant axis; for a box’s block size, unless otherwise specified, this is equivalent to its automatic size.
+    minContent,
+    ///     /// Use the max-content size in the relevant axis; for a box’s block size, unless otherwise specified, this is equivalent to its automatic size.
+    maxContent,
+    ///     /// Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.
+    stretch,
+    ///     /// Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).
+    fitContent,
+    ///     /// If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.
+    contain,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) Height { return .{ .px_ = v }; }
+    pub fn em(v: f32) Height { return .{ .em_ = v }; }
+    pub fn rem(v: f32) Height { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) Height { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) Height { return .{ .raw_ = r }; }
+
+    pub fn format(self: Height, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// hyphenate-character
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-hyphenate-character
+pub const HyphenateCharacter = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Specifies that the user agent should find an appropriate string based on the content language’s typographic conventions, possibly from the same source as the hyphenation dictionary.
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) HyphenateCharacter { return .{ .raw_ = r }; }
+
+    pub fn format(self: HyphenateCharacter, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// hyphenate-limit-chars
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-hyphenate-limit-chars
+pub const HyphenateLimitChars = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// If three values are specified, the first value is the required minimum for the total characters in a word, the second value is the minimum for characters before the hyphenation point, and the third value is the minimum for characters after the hyphenation point. If the third value is missing, it is the same as the second. If the second value is missing, then it is auto. The auto value means that the UA chooses a value that adapts to the current layout.
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) HyphenateLimitChars { return .{ .raw_ = r }; }
+
+    pub fn format(self: HyphenateLimitChars, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// hyphenate-limit-last
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-hyphenate-limit-last
+pub const HyphenateLimitLast = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    always,
+    column,
+    page,
+    spread,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) HyphenateLimitLast { return .{ .raw_ = r }; }
+
+    pub fn format(self: HyphenateLimitLast, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// hyphenate-limit-lines
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-hyphenate-limit-lines
+pub const HyphenateLimitLines = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    noLimit,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) HyphenateLimitLines { return .{ .raw_ = r }; }
+
+    pub fn format(self: HyphenateLimitLines, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// hyphenate-limit-zone
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-hyphenate-limit-zone
+pub const HyphenateLimitZone = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) HyphenateLimitZone { return .{ .px_ = v }; }
+    pub fn em(v: f32) HyphenateLimitZone { return .{ .em_ = v }; }
+    pub fn rem(v: f32) HyphenateLimitZone { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) HyphenateLimitZone { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) HyphenateLimitZone { return .{ .raw_ = r }; }
+
+    pub fn format(self: HyphenateLimitZone, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// hyphens
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-hyphens
+pub const Hyphens = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Words are only hyphenated where there are characters inside the word that explicitly suggest hyphenation opportunities. The UA must use the appropriate language-specific hyphenation character(s) and should apply any appropriate spelling changes just as for automatic hyphenation at the same point. In Unicode, U+00AD is a conditional "soft hyphen" and U+2010 is an unconditional hyphen. Unicode Standard Annex #14 describes the role of soft hyphens in Unicode line breaking. [UAX14] In HTML, &shy; represents the soft hyphen character, which suggests a hyphenation opportunity. ex&shy;ample
+    manual,
+    ///     /// Words may be broken at hyphenation opportunities determined automatically by a language-appropriate hyphenation resource in addition to those indicated explicitly by a conditional hyphen. Automatic hyphenation opportunities elsewhere within a word must be ignored if the word contains a conditional hyphen (&shy; or U+00AD SOFT HYPHEN), in favor of the conditional hyphen(s). However, if, even after breaking at such opportunities, a portion of that word is still too long to fit on one line, an automatic hyphenation opportunity may be used.
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Hyphens { return .{ .raw_ = r }; }
+
+    pub fn format(self: Hyphens, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// image-animation
+/// - **W3C**: https://drafts.csswg.org/css-image-animation-1/#propdef-image-animation
+pub const ImageAnimation = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The animation of animated images is run normally, as determined by the image format and the host language. Further, all animated images with the same absolute URL, the same image data, and with an image-animation computed value of normal' must be rendered synchronized to the same timeline as a group, with the timeline starting at the time of the least recent addition to the group.
+    normal,
+    ///     /// The user agent must not run the animation contained in the Animated images, and must continue to display the image as it was when this value started to apply, effectively pausing the animation. If the animation had not been playing prior to this value being applied, the behavior is the same as stopped.
+    paused,
+    ///     /// Animated images are rendered as if they were static images: the user agent must not run any animation it contains. If the image contains a cover frame, that is what the user agent must use; otherwise, it must display the image as it would be in the initial state of the animation.
+    stopped,
+    ///     /// Like normal, the animation of animated images is run normally, as determined by the image format and the host language. However, animation timelines are scoped per element: among the content image and decorative images of a single element, any animated images with the same absolute URL, the same image data, and with an image-animation computed value of running must be rendered synchronized to the same timeline as a group, distinct from the timeline of images in other elements. If images are added to the element while the computed value is running, the timeline starts at the time of the least recent addition to the group. If the element is created or made visible after having previously been set to display: none, with images already added and with image-animation already set to running, the timeline starts when the element is included in the layout. If this property is switched to running from another value, the beginnig of this timeline is set so that the animation continues from the state that was displayed at the timem of the switch.
+    running,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ImageAnimation { return .{ .raw_ = r }; }
+
+    pub fn format(self: ImageAnimation, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// image-orientation
+/// - **W3C**: https://drafts.csswg.org/css-images-3/#propdef-image-orientation
+pub const ImageOrientation = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// If the image has an orientation specified in its metadata, such as EXIF, this value computes to the angle that the metadata specifies is necessary to correctly orient the image. If necessary, this angle is then rounded and normalized as described above for an <angle> value. If there is no orientation specified in its metadata, this value computes to none.
+    fromImage,
+    flip,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ImageOrientation { return .{ .raw_ = r }; }
+
+    pub fn format(self: ImageOrientation, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// image-rendering
+/// - **W3C**: https://drafts.csswg.org/css-images-3/#propdef-image-rendering
+pub const ImageRendering = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The scaling algorithm is UA-dependent.
+    auto,
+    ///     /// The image should be scaled with an algorithm that maximizes the appearance of the image. In particular, scaling algorithms that "smooth" colors are acceptable, such as bilinear interpolation. This is intended for images such as photos.
+    smooth,
+    ///     /// Identical to smooth, but with a preference for higher-quality scaling. If system resources are constrained, images with high-quality should be prioritized over those with any other value, when considering which images to degrade the quality of and to what degree.
+    highQuality,
+    ///     /// The image is scaled in a way that preserves the pixelation of the original as much as possible, but allows minor smoothing as necessary to avoid distorting the image when the target size is not a clean multiple of the original. For each axis independently, first determine the integer multiple of its natural size that puts it closest to the target size and is greater than zero. Scale it to this integer-multiple-size using nearest neighbor, then scale it the rest of the way to the target size as for smooth.
+    pixelated,
+    ///     /// The image is scaled in a way that preserves contrast and edges, and which avoids smoothing colors or introducing blur to the image in the process. This is intended for images such as line drawings. The image may be scaled using nearest neighbor or any other UA-chosen algorithm that does not blur edges or blend colors from the source image. It can, however, detect diagonal or curved lines and render them as such (rather than as jagged-looking “giant pixels”).
+    crispEdges,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ImageRendering { return .{ .raw_ = r }; }
+
+    pub fn format(self: ImageRendering, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// image-resolution
+/// - **W3C**: https://drafts.csswg.org/css-images-4/#propdef-image-resolution
+pub const ImageResolution = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The image’s preferred resolution is taken as that specified by the image format (the natural resolution). If the image does not specify its own resolution, the explicitly specified resolution is used (if given), else it defaults to 1dppx.
+    fromImage,
+    ///     /// If the "snap" keyword is provided, the computed <resolution> (if any) is the specified resolution rounded to the nearest value that would map one image pixel to an integer number of device pixels. If the resolution is taken from the image, then the used natural resolution is the image’s native resolution similarly adjusted.
+    snap,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ImageResolution { return .{ .raw_ = r }; }
+
+    pub fn format(self: ImageResolution, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// initial-letter
+/// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-initial-letter
+pub const InitialLetter = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// No special initial letter effect. Text behaves as normal.
+    normal,
+    ///     /// Computes to an initial letter sink equal to the initial letter size floored to the nearest positive whole number.
+    drop,
+    ///     /// Computes to an initial letter sink of 1.
+    raise,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) InitialLetter { return .{ .raw_ = r }; }
+
+    pub fn format(self: InitialLetter, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// initial-letter-align
+/// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-initial-letter-align
+pub const InitialLetterAlign = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Use the initial letter box’s line-under and line-over border edges as the over and under alignment points, respectively.
+    borderBox,
+    ///     /// Use the cap-height and alphabetic baselines of the surrounding text to align the initial letter.
+    alphabetic,
+    ///     /// Use the ideographic-ink-over and ideographic-ink-under baselines of the surrounding text to align the initial letter.
+    ideographic,
+    ///     /// Use the hanging and alphabetic baselines of the surrounding text to align the initial letter.
+    hanging,
+    ///     /// Use the over/under half-leading edges (i.e. ascent/descent + half-leading) of the surrounding text to align the initial letter.
+    leading,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) InitialLetterAlign { return .{ .raw_ = r }; }
+
+    pub fn format(self: InitialLetterAlign, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// initial-letter-wrap
+/// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-initial-letter-wrap
+pub const InitialLetterWrap = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Behaves as none if the first typographic character unit after the initial letter belongs to Unicode General Category Zs. Otherwise behaves as for all on the first line of the block containing the initial letter and as none on the rest. This example shows why contour-fitting the first line is necessary, and why it is dropped when the initial letter is followed by a space: In the top paragraph, the initial letter "A" has a word space after it: the gap between the top of the "A" and the next letter provides the necessary word separation. In the next paragraph, the initial letter "A" is part of the first word, and leaving a gap between the top of the "A" and the next letter would create a jarring visual break within the word. In this case, the first line of text should be kerned into the initial letter’s area, as shown in the bottom paragraph. Do we need an unconditional first? (I.e. Should we rename this value to auto and add a first value that does not check for spaces?) See GitHub issue 410
+    first,
+    ///     /// For each line of text impacted by the initial letter, the line box adjacent to the initial letter starts at the start-most point that does not overlap the initial letter’s glyph outline. If the value of shape-outside is not none, shape-outside is used instead of the glyph outline. In both cases, shape-margin is applied to expand the outline, and the resulting outline is clipped by the initial letter’s margin edges.
+    all,
+    ///     /// This value is the same as none, except that the exclusion area of the impacted lines is increased as necessary for its end-edge to land on the character grid, i.e. to be a multiple of (1ic + letter-spacing) as computed on the containing block. The justify-self property can then be used to align the initial letter box within the exclusion area. Diagram of Japanese initial letter in vertical writing mode
+    grid,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) InitialLetterWrap { return .{ .px_ = v }; }
+    pub fn em(v: f32) InitialLetterWrap { return .{ .em_ = v }; }
+    pub fn rem(v: f32) InitialLetterWrap { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) InitialLetterWrap { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) InitialLetterWrap { return .{ .raw_ = r }; }
+
+    pub fn format(self: InitialLetterWrap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// inline-size
+/// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-inline-size
+pub const InlineSize = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) InlineSize { return .{ .raw_ = r }; }
+
+    pub fn format(self: InlineSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// inline-sizing
+/// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-inline-sizing
+pub const InlineSizing = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The content area of the inline box is sized and positioned to fit (possibly hypothetical) text from its first available font. If text-box-trim indicates trimming, then the specified metric must be used. Otherwise, this specification does not specify how. A UA may, e.g., use the maximum ascender and descender of the font. (This would ensure that glyphs with parts above or below the em-box still fall within the content area, but leads to differently sized boxes for different fonts.)
+    normal,
+    ///     /// Once the line box has been sized and its contents positioned as for normal, the inline box’s box edges are shifted such that its over/under margin edges coincide with the corresponding line box’s edges, stretching the inline box’s inner logical height so that its block-axis outer size fills the line box. (The sizes and positions of its in-flow contents are not affected.)
+    stretch,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) InlineSizing { return .{ .raw_ = r }; }
+
+    pub fn format(self: InlineSizing, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// input-security
+/// - **W3C**: https://drafts.csswg.org/css-forms-1/#propdef-input-security
+pub const InputSecurity = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The UA should obscure the text in the control, so that it cannot be read by the user.
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) InputSecurity { return .{ .raw_ = r }; }
+
+    pub fn format(self: InputSecurity, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// inset
+/// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-inset
+pub const Inset = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Inset { return .{ .raw_ = r }; }
+
+    pub fn format(self: Inset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// inset-block
+/// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-inset-block
+pub const InsetBlock = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) InsetBlock { return .{ .raw_ = r }; }
+
+    pub fn format(self: InsetBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// inset-block-end
+/// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-inset-block-end
+pub const InsetBlockEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Represents an unconstrained inset; the exact meaning depends on the positioning scheme.
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) InsetBlockEnd { return .{ .px_ = v }; }
+    pub fn em(v: f32) InsetBlockEnd { return .{ .em_ = v }; }
+    pub fn rem(v: f32) InsetBlockEnd { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) InsetBlockEnd { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) InsetBlockEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: InsetBlockEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// inset-block-start
+/// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-inset-block-start
+pub const InsetBlockStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Represents an unconstrained inset; the exact meaning depends on the positioning scheme.
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) InsetBlockStart { return .{ .px_ = v }; }
+    pub fn em(v: f32) InsetBlockStart { return .{ .em_ = v }; }
+    pub fn rem(v: f32) InsetBlockStart { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) InsetBlockStart { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) InsetBlockStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: InsetBlockStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// inset-inline
+/// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-inset-inline
+pub const InsetInline = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) InsetInline { return .{ .raw_ = r }; }
+
+    pub fn format(self: InsetInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// inset-inline-end
+/// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-inset-inline-end
+pub const InsetInlineEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Represents an unconstrained inset; the exact meaning depends on the positioning scheme.
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) InsetInlineEnd { return .{ .px_ = v }; }
+    pub fn em(v: f32) InsetInlineEnd { return .{ .em_ = v }; }
+    pub fn rem(v: f32) InsetInlineEnd { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) InsetInlineEnd { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) InsetInlineEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: InsetInlineEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// inset-inline-start
+/// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-inset-inline-start
+pub const InsetInlineStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Represents an unconstrained inset; the exact meaning depends on the positioning scheme.
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) InsetInlineStart { return .{ .px_ = v }; }
+    pub fn em(v: f32) InsetInlineStart { return .{ .em_ = v }; }
+    pub fn rem(v: f32) InsetInlineStart { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) InsetInlineStart { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) InsetInlineStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: InsetInlineStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// interactivity
+/// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-interactivity
+pub const Interactivity = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The element’s inertness is determined by the host language. (This will usually mean the element is not inert.)
+    auto,
+    ///     /// The element is inert.
+    inert,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Interactivity { return .{ .raw_ = r }; }
+
+    pub fn format(self: Interactivity, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// interest-delay
+/// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-interest-delay
+pub const InterestDelay = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) InterestDelay { return .{ .raw_ = r }; }
+
+    pub fn format(self: InterestDelay, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// interest-delay-end
+/// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-interest-delay-end
+pub const InterestDelayEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The interest start delay and/or the interest end delay are UA-defined. They can be chosen to match platform conventions. These delays should not be zero. They may be different from each other, and may vary depending on the way the user is showing interest. (For example, a "hover" and a "long press" might use different delays for indicating interest.)
+    normal,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) InterestDelayEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: InterestDelayEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// interest-delay-start
+/// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-interest-delay-start
+pub const InterestDelayStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The interest start delay and/or the interest end delay are UA-defined. They can be chosen to match platform conventions. These delays should not be zero. They may be different from each other, and may vary depending on the way the user is showing interest. (For example, a "hover" and a "long press" might use different delays for indicating interest.)
+    normal,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) InterestDelayStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: InterestDelayStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// interpolate-size
+/// - **W3C**: https://drafts.csswg.org/css-values-5/#propdef-interpolate-size
+pub const InterpolateSize = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// An <intrinsic-size-keyword> cannot be interpolated.
+    numericOnly,
+    ///     /// Two values can also be interpolated if one of them is an <intrinsic-size-keyword> and the other is a <length-percentage>. This is done by treating the <intrinsic-size-keyword> keyword as though it is calc-size(keyword, size) and applying the rules in § 11.3 Interpolating calc-size(). In other cases, an <intrinsic-size-keyword> still cannot be interpolated.
+    allowKeywords,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) InterpolateSize { return .{ .raw_ = r }; }
+
+    pub fn format(self: InterpolateSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// isolation
+/// - **W3C**: https://drafts.csswg.org/compositing-2/#propdef-isolation
+pub const Isolation = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    isolate,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Isolation { return .{ .raw_ = r }; }
+
+    pub fn format(self: Isolation, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// justify-content
+/// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-justify-content
+pub const JustifyContent = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Aligns the contents of the box as a whole (as the alignment subject) within the box itself (as the alignment container): along the inline/row/main axis of the box (for justify-content) or the block/column/cross axis of the box (for align-content). Values other than normal are defined in § 4 Alignment Keywords, above.
+    normal,
+    spaceBetween,
+    spaceAround,
+    spaceEvenly,
+    stretch,
+    unsafe,
+    safe,
+    center,
+    start,
+    end,
+    flexStart,
+    flexEnd,
+    ///     /// Aligns the alignment subject to be flush with the alignment container’s line-left or physical left edge, whichever is in the appropriate axis. If the property’s axis is not parallel with either left↔right axis, this value behaves as start. Currently, the only case where the property’s axis is not parallel with either left↔right axis is in a column flexbox.
+    left,
+    ///     /// Aligns the alignment subject to be flush with the alignment container’s line-right or physical right edge, whichever is in the appropriate axis. If the property’s axis is not parallel with either left↔right axis, this value behaves as start. Currently, the only case where the property’s axis is not parallel with either left↔right axis is in a column flexbox.
+    right,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) JustifyContent { return .{ .raw_ = r }; }
+
+    pub fn format(self: JustifyContent, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// justify-items
+/// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-justify-items
+pub const JustifyItems = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    normal,
+    stretch,
+    first,
+    last,
+    baseline,
+    unsafe,
+    safe,
+    center,
+    start,
+    end,
+    selfStart,
+    selfEnd,
+    flexStart,
+    flexEnd,
+    ///     /// Aligns the alignment subject to be flush with the alignment container’s line-left or physical left edge, whichever is in the appropriate axis. If the property’s axis is not parallel with either left↔right axis, this value behaves as start. Currently, the only case where the property’s axis is not parallel with either left↔right axis is in a column flexbox.
+    left,
+    ///     /// Aligns the alignment subject to be flush with the alignment container’s line-right or physical right edge, whichever is in the appropriate axis. If the property’s axis is not parallel with either left↔right axis, this value behaves as start. Currently, the only case where the property’s axis is not parallel with either left↔right axis is in a column flexbox.
+    right,
+    ///     /// This keyword causes the value to effectively inherit into descendants. If the legacy keyword appears on its own (without an accompanying left, right, or center keyword): if the inherited value of justify-items includes the legacy keyword, this value computes to the inherited value; otherwise it computes to normal. When justify-self:auto references the value of justify-items, only the alignment keyword, not the legacy keyword, is referenced by it. It exists to implement the legacy alignment behavior of HTML’s <center> element and align attribute.
+    legacy,
+    ///     /// The new anchor-center value makes this case extremely simple: if the positioned box has a default anchor box, then it is centered (insofar as possible) over the default anchor box in the relevant axis. Additionally:
+    anchorCenter,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) JustifyItems { return .{ .raw_ = r }; }
+
+    pub fn format(self: JustifyItems, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// justify-self
+/// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-justify-self
+pub const JustifySelf = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Behaves as normal if the box has no parent, or when determining the actual position of an absolutely positioned box. It behaves as the computed justify-items value of the parent box (minus any legacy keywords) otherwise (including when determining the static position of an absolutely positioned box).
+    auto,
+    unsafe,
+    safe,
+    ///     /// Represents the “default” alignment for the layout mode. Its behavior depends on the layout mode, as described below.
+    normal,
+    center,
+    start,
+    end,
+    selfStart,
+    selfEnd,
+    flexStart,
+    flexEnd,
+    ///     /// Aligns the alignment subject to be flush with the alignment container’s line-left or physical left edge, whichever is in the appropriate axis. If the property’s axis is not parallel with either left↔right axis, this value behaves as start. Currently, the only case where the property’s axis is not parallel with either left↔right axis is in a column flexbox.
+    left,
+    ///     /// Aligns the alignment subject to be flush with the alignment container’s line-right or physical right edge, whichever is in the appropriate axis. If the property’s axis is not parallel with either left↔right axis, this value behaves as start. Currently, the only case where the property’s axis is not parallel with either left↔right axis is in a column flexbox.
+    right,
+    ///     /// When the box’s computed width/height (as appropriate to the axis) is auto and neither of its margins (in the appropriate axis) are auto, sets the box’s used size to the length necessary to make its outer size as close to filling the alignment container as possible while still respecting the constraints imposed by min-height/min-width/max-height/max-width. Unless otherwise specified, this value falls back to flex-start generally, and to self-start or self-end if the box has also specified first baseline or last baseline baseline content-alignment (respectively) in the same axis.
+    stretch,
+    first,
+    last,
+    baseline,
+    ///     /// The new anchor-center value makes this case extremely simple: if the positioned box has a default anchor box, then it is centered (insofar as possible) over the default anchor box in the relevant axis. Additionally:
+    anchorCenter,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) JustifySelf { return .{ .raw_ = r }; }
+
+    pub fn format(self: JustifySelf, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// left
+/// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-left
+pub const Left = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Represents an unconstrained inset; the exact meaning depends on the positioning scheme.
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) Left { return .{ .px_ = v }; }
+    pub fn em(v: f32) Left { return .{ .em_ = v }; }
+    pub fn rem(v: f32) Left { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) Left { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) Left { return .{ .raw_ = r }; }
+
+    pub fn format(self: Left, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// letter-spacing
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-letter-spacing
+pub const LetterSpacing = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// No additional spacing is applied. Computes to zero.
+    normal,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) LetterSpacing { return .{ .px_ = v }; }
+    pub fn em(v: f32) LetterSpacing { return .{ .em_ = v }; }
+    pub fn rem(v: f32) LetterSpacing { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) LetterSpacing { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) LetterSpacing { return .{ .raw_ = r }; }
+
+    pub fn format(self: LetterSpacing, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// lighting-color
+/// - **W3C**: https://drafts.csswg.org/filter-effects-1/#propdef-lighting-color
+pub const LightingColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) LightingColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) LightingColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) LightingColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: LightingColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// line-break
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-line-break
+pub const LineBreak = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The UA determines the set of line-breaking restrictions to use, and it may vary the restrictions based on the length of the line; e.g., use a less restrictive set of line-break rules for short lines.
+    auto,
+    ///     /// Breaks text using the least restrictive set of line-breaking rules. Typically used for short lines, such as in newspapers.
+    loose,
+    ///     /// Breaks text using the most common set of line-breaking rules.
+    normal,
+    ///     /// Breaks text using the most stringent set of line-breaking rules.
+    strict,
+    ///     /// There is a soft wrap opportunity around every typographic character unit, including around any punctuation character or preserved white spaces, or in the middle of words, disregarding any prohibition against line breaks, even those introduced by characters with the GL, WJ, or ZWJ line breaking classes or mandated by the word-break property. [UAX14] The different wrapping opportunities must not be prioritized. Hyphenation is not applied.
+    anywhere,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) LineBreak { return .{ .raw_ = r }; }
+
+    pub fn format(self: LineBreak, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// line-clamp
+/// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-line-clamp
+pub const LineClamp = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Sets continue to -webkit-legacy.
+    webkitLegacy,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) LineClamp { return .{ .raw_ = r }; }
+
+    pub fn format(self: LineClamp, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// line-fit-edge
+/// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-line-fit-edge
+pub const LineFitEdge = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Use the ascent/descent plus any positive half-leading. Margin/padding/border is ignored for the purpose of sizing the line box.
+    leading,
+    ///     /// Use the text-over baseline/text-under baseline as the over/under edge.
+    text,
+    ///     /// Use the ideographic-over baseline/ideographic-under baseline as the over/under edge.
+    ideographic,
+    ///     /// Use the ideographic-ink-over baseline/ideographic-ink-under baseline as the over/under edge.
+    ideographicInk,
+    ///     /// Use the cap-height baseline as the over edge.
+    cap,
+    ///     /// Use the x-height baseline as the over edge.
+    ex,
+    ///     /// Use the alphabetic baseline as the under edge.
+    alphabetic,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) LineFitEdge { return .{ .raw_ = r }; }
+
+    pub fn format(self: LineFitEdge, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// line-grid
+/// - **W3C**: https://drafts.csswg.org/css-line-grid-1/#propdef-line-grid
+pub const LineGrid = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Box assumes the line grid of its parent if its writing mode is the same as its parent. If the box has a writing mode that is different than its parent, then the box creates a new line grid as create below.
+    matchParent,
+    ///     /// Box creates a new line grid using its own font and line layout settings, including any adjustment to the line height caused by the line-height-step property. The line grid consists of a series of horizontal lines corresponding to all the baselines (alphabetic, text-top, text-bottom, mathematic, central, hanging, etc.) and to the line-over and line-under edges, positioned where they would fall if the contents of this element consisted entirely of line boxes filled with text (no sub-elements) using the first available font. If the box is paginated, the line grid is restarted on each page; since line boxes cannot be fragmented, no page begins with the bottom part of a line’s grid.
+    create,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) LineGrid { return .{ .raw_ = r }; }
+
+    pub fn format(self: LineGrid, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// line-height
+/// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-line-height
+pub const LineHeight = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Determine the preferred line height automatically based on font metrics.
+    normal,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) LineHeight { return .{ .px_ = v }; }
+    pub fn em(v: f32) LineHeight { return .{ .em_ = v }; }
+    pub fn rem(v: f32) LineHeight { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) LineHeight { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) LineHeight { return .{ .raw_ = r }; }
+
+    pub fn format(self: LineHeight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// line-height-step
+/// - **W3C**: https://drafts.csswg.org/css-rhythm-1/#propdef-line-height-step
+pub const LineHeightStep = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) LineHeightStep { return .{ .px_ = v }; }
+    pub fn em(v: f32) LineHeightStep { return .{ .em_ = v }; }
+    pub fn rem(v: f32) LineHeightStep { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) LineHeightStep { return .{ .raw_ = r }; }
+
+    pub fn format(self: LineHeightStep, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// line-padding
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-line-padding
+pub const LinePadding = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) LinePadding { return .{ .px_ = v }; }
+    pub fn em(v: f32) LinePadding { return .{ .em_ = v }; }
+    pub fn rem(v: f32) LinePadding { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) LinePadding { return .{ .raw_ = r }; }
+
+    pub fn format(self: LinePadding, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// line-snap
+/// - **W3C**: https://drafts.csswg.org/css-line-grid-1/#propdef-line-snap
+pub const LineSnap = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The dominant baseline snaps with the matching baseline on the line grid applying to the element.
+    baseline,
+    ///     /// Two baselines are used to align the line box: the line box is snapped so that its central baseline is centered between one of the line grid’s text-over-edge baselines and a subsequent (but not necessarily consecutive) text-under-edge baseline.
+    contain,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) LineSnap { return .{ .raw_ = r }; }
+
+    pub fn format(self: LineSnap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// link-parameters
+/// - **W3C**: https://drafts.csswg.org/css-link-params-1/#propdef-link-parameters
+pub const LinkParameters = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) LinkParameters { return .{ .raw_ = r }; }
+
+    pub fn format(self: LinkParameters, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// list-style
+/// - **W3C**: https://drafts.csswg.org/css-lists-3/#propdef-list-style
+pub const ListStyle = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ListStyle { return .{ .raw_ = r }; }
+
+    pub fn format(self: ListStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// list-style-image
+/// - **W3C**: https://drafts.csswg.org/css-lists-3/#propdef-list-style-image
+pub const ListStyleImage = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ListStyleImage { return .{ .raw_ = r }; }
+
+    pub fn format(self: ListStyleImage, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// list-style-position
+/// - **W3C**: https://drafts.csswg.org/css-lists-3/#propdef-list-style-position
+pub const ListStylePosition = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// No special effect. (The ::marker is an inline element at the start of the list item’s contents.)
+    inside,
+    ///     /// If the list item is a block container: the marker box is a block container and is placed outside the principal block box; however, the position of the list-item marker adjacent to floats is undefined. CSS does not specify the precise location of the marker box or its position in the painting order, but does require that it be placed on the inline-start side of the box, using the writing mode of the box indicated by marker-side. The marker box is fixed with respect to the principal block box’s border and does not scroll with the principal box’s content. A UA may hide the marker if the element’s overflow is other than visible. (This allowance may change in the future.) The size or contents of the marker box may affect the height of the principal block box and/or the height of its first line box, and in some cases may cause the creation of a new line box; this interaction is also not defined. This is handwavey nonsense from CSS2, and needs a real definition. If the list item is an inline box: this value is equivalent to inside. Alternatively, outside could lay out the marker as a previous sibling of the principal inline box.
+    outside,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ListStylePosition { return .{ .raw_ = r }; }
+
+    pub fn format(self: ListStylePosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// list-style-type
+/// - **W3C**: https://drafts.csswg.org/css-lists-3/#propdef-list-style-type
+pub const ListStyleType = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ListStyleType { return .{ .raw_ = r }; }
+
+    pub fn format(self: ListStyleType, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// margin
+/// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-margin
+pub const Margin = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Margin { return .{ .raw_ = r }; }
+
+    pub fn format(self: Margin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// margin-block
+/// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-margin-block
+pub const MarginBlock = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MarginBlock { return .{ .raw_ = r }; }
+
+    pub fn format(self: MarginBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// margin-block-end
+/// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-margin-block-end
+pub const MarginBlockEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MarginBlockEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: MarginBlockEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// margin-block-start
+/// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-margin-block-start
+pub const MarginBlockStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MarginBlockStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: MarginBlockStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// margin-bottom
+/// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-margin-bottom
+pub const MarginBottom = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) MarginBottom { return .{ .px_ = v }; }
+    pub fn em(v: f32) MarginBottom { return .{ .em_ = v }; }
+    pub fn rem(v: f32) MarginBottom { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) MarginBottom { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) MarginBottom { return .{ .raw_ = r }; }
+
+    pub fn format(self: MarginBottom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// margin-break
+/// - **W3C**: https://drafts.csswg.org/css-break-4/#propdef-margin-break
+pub const MarginBreak = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// When an unforced break occurs before or after the box, any margins adjoining the break truncate to the remaining fragmentainer extent before the break, and are truncated to zero after the break. When a forced break occurs there, adjoining margins before the break are truncated, but margins after the break are preserved. Cloned margins are always truncated to zero.
+    auto,
+    ///     /// Margins adjoining a fragmentation break are not truncated.
+    keep,
+    ///     /// Margins adjoining a fragmentation break are always truncated, including at the start and end of a fragmentation context.
+    discard,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MarginBreak { return .{ .raw_ = r }; }
+
+    pub fn format(self: MarginBreak, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// margin-inline
+/// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-margin-inline
+pub const MarginInline = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MarginInline { return .{ .raw_ = r }; }
+
+    pub fn format(self: MarginInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// margin-inline-end
+/// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-margin-inline-end
+pub const MarginInlineEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MarginInlineEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: MarginInlineEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// margin-inline-start
+/// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-margin-inline-start
+pub const MarginInlineStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MarginInlineStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: MarginInlineStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// margin-left
+/// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-margin-left
+pub const MarginLeft = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) MarginLeft { return .{ .px_ = v }; }
+    pub fn em(v: f32) MarginLeft { return .{ .em_ = v }; }
+    pub fn rem(v: f32) MarginLeft { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) MarginLeft { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) MarginLeft { return .{ .raw_ = r }; }
+
+    pub fn format(self: MarginLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// margin-right
+/// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-margin-right
+pub const MarginRight = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) MarginRight { return .{ .px_ = v }; }
+    pub fn em(v: f32) MarginRight { return .{ .em_ = v }; }
+    pub fn rem(v: f32) MarginRight { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) MarginRight { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) MarginRight { return .{ .raw_ = r }; }
+
+    pub fn format(self: MarginRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// margin-top
+/// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-margin-top
+pub const MarginTop = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) MarginTop { return .{ .px_ = v }; }
+    pub fn em(v: f32) MarginTop { return .{ .em_ = v }; }
+    pub fn rem(v: f32) MarginTop { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) MarginTop { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) MarginTop { return .{ .raw_ = r }; }
+
+    pub fn format(self: MarginTop, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// margin-trim
+/// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-margin-trim
+pub const MarginTrim = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Computes to block-start block-end.
+    block,
+    ///     /// Computes to inline-start inline-end.
+    inline_,
+    ///     /// For in-flow boxes contained by this box, margins adjacent to the box’s specified edges are truncated to zero. It also truncates any descendant margins collapsed with such a margin (but not its own, its siblings’, or its ancestors’).
+    blockStart,
+    ///     /// Computes to block-start block-end.
+    inlineStart,
+    ///     /// For in-flow boxes contained by this box, margins adjacent to the box’s specified edges are truncated to zero. It also truncates any descendant margins collapsed with such a margin (but not its own, its siblings’, or its ancestors’).
+    blockEnd,
+    ///     /// Computes to block-start block-end.
+    inlineEnd,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MarginTrim { return .{ .raw_ = r }; }
+
+    pub fn format(self: MarginTrim, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// marker
+/// - **W3C**: https://svgwg.org/svg2-draft/painting.html#MarkerProperty
+pub const Marker = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Marker { return .{ .raw_ = r }; }
+
+    pub fn format(self: Marker, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// marker-end
+/// - **W3C**: https://svgwg.org/svg2-draft/painting.html#MarkerEndProperty
+pub const MarkerEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MarkerEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: MarkerEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// marker-mid
+/// - **W3C**: https://svgwg.org/svg2-draft/painting.html#MarkerMidProperty
+pub const MarkerMid = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MarkerMid { return .{ .raw_ = r }; }
+
+    pub fn format(self: MarkerMid, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// marker-side
+/// - **W3C**: https://drafts.csswg.org/css-lists-3/#propdef-marker-side
+pub const MarkerSide = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The marker box is positioned using the directionality of the ::marker’s originating element.
+    matchSelf,
+    ///     /// The marker box is positioned using the directionality of the ::marker’s originating element’s parent element.
+    matchParent,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MarkerSide { return .{ .raw_ = r }; }
+
+    pub fn format(self: MarkerSide, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// marker-start
+/// - **W3C**: https://svgwg.org/svg2-draft/painting.html#MarkerStartProperty
+pub const MarkerStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MarkerStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: MarkerStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// mask
+/// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask
+pub const Mask = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    left,
+    center,
+    right,
+    top,
+    bottom,
+    xStart,
+    xEnd,
+    yStart,
+    yEnd,
+    blockStart,
+    blockEnd,
+    inlineStart,
+    inlineEnd,
+    start,
+    end,
+    auto,
+    cover,
+    contain,
+    repeatX,
+    repeatY,
+    repeatBlock,
+    repeatInline,
+    repeat,
+    space,
+    round,
+    noRepeat,
+    contentBox,
+    paddingBox,
+    borderBox,
+    marginBox,
+    halfBorderBox,
+    fillBox,
+    strokeBox,
+    viewBox,
+    noClip,
+    add,
+    subtract,
+    intersect,
+    exclude,
+    alpha,
+    luminance,
+    matchSource,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) Mask { return .{ .px_ = v }; }
+    pub fn em(v: f32) Mask { return .{ .em_ = v }; }
+    pub fn rem(v: f32) Mask { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) Mask { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) Mask { return .{ .raw_ = r }; }
+
+    pub fn format(self: Mask, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// mask-border
+/// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-border
+pub const MaskBorder = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MaskBorder { return .{ .raw_ = r }; }
+
+    pub fn format(self: MaskBorder, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// mask-border-mode
+/// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-border-mode
+pub const MaskBorderMode = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// A value of luminance indicates that the luminance values of the mask border image should be used as the mask values. See Calculating mask values.
+    luminance,
+    ///     /// A value of alpha indicates that the alpha values of the mask border image should be used as the mask values. See Calculating mask values.
+    alpha,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MaskBorderMode { return .{ .raw_ = r }; }
+
+    pub fn format(self: MaskBorderMode, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// mask-border-outset
+/// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-border-outset
+pub const MaskBorderOutset = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) MaskBorderOutset { return .{ .px_ = v }; }
+    pub fn em(v: f32) MaskBorderOutset { return .{ .em_ = v }; }
+    pub fn rem(v: f32) MaskBorderOutset { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) MaskBorderOutset { return .{ .raw_ = r }; }
+
+    pub fn format(self: MaskBorderOutset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// mask-border-repeat
+/// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-border-repeat
+pub const MaskBorderRepeat = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    stretch,
+    repeat,
+    round,
+    space,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MaskBorderRepeat { return .{ .raw_ = r }; }
+
+    pub fn format(self: MaskBorderRepeat, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// mask-border-slice
+/// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-border-slice
+pub const MaskBorderSlice = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// This property specifies inward offsets from the top, right, bottom, and left edges of the mask border image, dividing it into nine regions: four corners, four edges and a middle. The middle image part is discarded and treated as fully opaque white (the content covered by the middle part is not masked and shines through) unless the fill keyword is present.
+    fill,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn percent(v: f32) MaskBorderSlice { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) MaskBorderSlice { return .{ .raw_ = r }; }
+
+    pub fn format(self: MaskBorderSlice, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// mask-border-source
+/// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-border-source
+pub const MaskBorderSource = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MaskBorderSource { return .{ .raw_ = r }; }
+
+    pub fn format(self: MaskBorderSource, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// mask-border-width
+/// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-border-width
+pub const MaskBorderWidth = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) MaskBorderWidth { return .{ .px_ = v }; }
+    pub fn em(v: f32) MaskBorderWidth { return .{ .em_ = v }; }
+    pub fn rem(v: f32) MaskBorderWidth { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) MaskBorderWidth { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) MaskBorderWidth { return .{ .raw_ = r }; }
+
+    pub fn format(self: MaskBorderWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// mask-clip
+/// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-clip
+pub const MaskClip = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The painted content is restricted to (clipped to) the content box.
+    contentBox,
+    ///     /// The painted content is restricted to (clipped to) the padding box.
+    paddingBox,
+    ///     /// The painted content is restricted to (clipped to) the border box.
+    borderBox,
+    ///     /// The painted content is restricted to (clipped to) the object bounding box.
+    fillBox,
+    ///     /// The painted content is restricted to (clipped to) the stroke bounding box.
+    strokeBox,
+    ///     /// Uses the nearest SVG viewport as reference box. If a viewBox attribute is specified for the SVG viewport creating element: The reference box is positioned at the origin of the coordinate system established by the viewBox attribute. The dimension of the reference box is set to the width and height values of the viewBox attribute.
+    viewBox,
+    ///     /// The painted content is not restricted (not clipped).
+    noClip,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MaskClip { return .{ .raw_ = r }; }
+
+    pub fn format(self: MaskClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// mask-composite
+/// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-composite
+pub const MaskComposite = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The source is placed over the destination. (See Porter-Duff compositing operator source over for more details.)
+    add,
+    ///     /// The source is placed, where it falls outside of the destination. (See Porter-Duff compositing operator source out for more details.)
+    subtract,
+    ///     /// The parts of source that overlap the destination, replace the destination. (See Porter-Duff compositing operator source in .)
+    intersect,
+    ///     /// The non-overlapping regions of source and destination are combined. (See Porter-Duff compositing operator XOR.)
+    exclude,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MaskComposite { return .{ .raw_ = r }; }
+
+    pub fn format(self: MaskComposite, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// mask-image
+/// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-image
+pub const MaskImage = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MaskImage { return .{ .raw_ = r }; }
+
+    pub fn format(self: MaskImage, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// mask-mode
+/// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-mode
+pub const MaskMode = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// A value of alpha indicates that the alpha values of the mask layer image should be used as the mask values. See Calculating mask values.
+    alpha,
+    ///     /// A value of luminance indicates that the luminance values of the mask layer image should be used as the mask values. See Calculating mask values.
+    luminance,
+    ///     /// If the <mask-reference> of the mask-image property is of type <mask-source> the value specified by the referenced mask element’s mask-type property must be used. If the <mask-reference> of the mask-image property is of type <image> the alpha values of the mask layer image should be used as the mask values.
+    matchSource,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MaskMode { return .{ .raw_ = r }; }
+
+    pub fn format(self: MaskMode, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// mask-origin
+/// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-origin
+pub const MaskOrigin = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The position is relative to the content box.
+    contentBox,
+    ///     /// The position is relative to the padding box. (For single boxes 0 0 is the upper left corner of the padding edge, 100% 100% is the lower right corner.)
+    paddingBox,
+    ///     /// The position is relative to the border box.
+    borderBox,
+    ///     /// The position is relative to the object bounding box.
+    fillBox,
+    ///     /// The position is relative to the stroke bounding box.
+    strokeBox,
+    ///     /// Uses the nearest SVG viewport as reference box. If a viewBox attribute is specified for the SVG viewport creating element: The reference box is positioned at the origin of the coordinate system established by the viewBox attribute. The dimension of the reference box is set to the width and height values of the viewBox attribute.
+    viewBox,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MaskOrigin { return .{ .raw_ = r }; }
+
+    pub fn format(self: MaskOrigin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// mask-position
+/// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-position
+pub const MaskPosition = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    left,
+    center,
+    right,
+    top,
+    bottom,
+    xStart,
+    xEnd,
+    yStart,
+    yEnd,
+    blockStart,
+    blockEnd,
+    inlineStart,
+    inlineEnd,
+    start,
+    end,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) MaskPosition { return .{ .px_ = v }; }
+    pub fn em(v: f32) MaskPosition { return .{ .em_ = v }; }
+    pub fn rem(v: f32) MaskPosition { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) MaskPosition { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) MaskPosition { return .{ .raw_ = r }; }
+
+    pub fn format(self: MaskPosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// mask-repeat
+/// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-repeat
+pub const MaskRepeat = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    repeatX,
+    repeatY,
+    repeatBlock,
+    repeatInline,
+    repeat,
+    space,
+    round,
+    noRepeat,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MaskRepeat { return .{ .raw_ = r }; }
+
+    pub fn format(self: MaskRepeat, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// mask-size
+/// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-size
+pub const MaskSize = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    cover,
+    contain,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) MaskSize { return .{ .px_ = v }; }
+    pub fn em(v: f32) MaskSize { return .{ .em_ = v }; }
+    pub fn rem(v: f32) MaskSize { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) MaskSize { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) MaskSize { return .{ .raw_ = r }; }
+
+    pub fn format(self: MaskSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// mask-type
+/// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-type
+pub const MaskType = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Indicates that the luminance values of the mask should be used.
+    luminance,
+    ///     /// Indicates that the alpha values of the mask should be used.
+    alpha,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MaskType { return .{ .raw_ = r }; }
+
+    pub fn format(self: MaskType, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// math-depth
+/// - **W3C**: https://w3c.github.io/mathml-core/#propdef-math-depth
+pub const MathDepth = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    autoAdd,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MathDepth { return .{ .raw_ = r }; }
+
+    pub fn format(self: MathDepth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// math-shift
+/// - **W3C**: https://w3c.github.io/mathml-core/#propdef-math-shift
+pub const MathShift = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    normal,
+    compact,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MathShift { return .{ .raw_ = r }; }
+
+    pub fn format(self: MathShift, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// math-style
+/// - **W3C**: https://w3c.github.io/mathml-core/#propdef-math-style
+pub const MathStyle = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    normal,
+    compact,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MathStyle { return .{ .raw_ = r }; }
+
+    pub fn format(self: MathStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// max-block-size
+/// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-max-block-size
+pub const MaxBlockSize = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MaxBlockSize { return .{ .raw_ = r }; }
+
+    pub fn format(self: MaxBlockSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// max-height
+/// - **W3C**: https://drafts.csswg.org/css-sizing-3/#propdef-max-height
+pub const MaxHeight = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Use the min-content size in the relevant axis; for a box’s block size, unless otherwise specified, this is equivalent to its automatic size.
+    minContent,
+    ///     /// Use the max-content size in the relevant axis; for a box’s block size, unless otherwise specified, this is equivalent to its automatic size.
+    maxContent,
+    ///     /// Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.
+    stretch,
+    ///     /// Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).
+    fitContent,
+    ///     /// If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.
+    contain,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) MaxHeight { return .{ .px_ = v }; }
+    pub fn em(v: f32) MaxHeight { return .{ .em_ = v }; }
+    pub fn rem(v: f32) MaxHeight { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) MaxHeight { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) MaxHeight { return .{ .raw_ = r }; }
+
+    pub fn format(self: MaxHeight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// max-inline-size
+/// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-max-inline-size
+pub const MaxInlineSize = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MaxInlineSize { return .{ .raw_ = r }; }
+
+    pub fn format(self: MaxInlineSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// max-lines
+/// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-max-lines
+pub const MaxLines = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MaxLines { return .{ .raw_ = r }; }
+
+    pub fn format(self: MaxLines, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// max-width
+/// - **W3C**: https://drafts.csswg.org/css-sizing-3/#propdef-max-width
+pub const MaxWidth = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Use the min-content size in the relevant axis; for a box’s block size, unless otherwise specified, this is equivalent to its automatic size.
+    minContent,
+    ///     /// Use the max-content size in the relevant axis; for a box’s block size, unless otherwise specified, this is equivalent to its automatic size.
+    maxContent,
+    ///     /// Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.
+    stretch,
+    ///     /// Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).
+    fitContent,
+    ///     /// If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.
+    contain,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) MaxWidth { return .{ .px_ = v }; }
+    pub fn em(v: f32) MaxWidth { return .{ .em_ = v }; }
+    pub fn rem(v: f32) MaxWidth { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) MaxWidth { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) MaxWidth { return .{ .raw_ = r }; }
+
+    pub fn format(self: MaxWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// min-block-size
+/// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-min-block-size
+pub const MinBlockSize = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MinBlockSize { return .{ .raw_ = r }; }
+
+    pub fn format(self: MinBlockSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// min-height
+/// - **W3C**: https://drafts.csswg.org/css-sizing-3/#propdef-min-height
+pub const MinHeight = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// For width/height, specifies an automatic size (automatic block size/automatic inline size). See the relevant layout module for how to calculate this. For min-width/min-height, specifies an automatic minimum size. Unless otherwise defined by the relevant layout module, however, it resolves to a used value of 0. For backwards-compatibility, the resolved value of this keyword is zero for boxes of all [CSS2] display types: block and inline boxes, inline blocks, and all the table layout boxes. It also resolves to zero when no box is generated.
+    auto,
+    ///     /// Use the min-content size in the relevant axis; for a box’s block size, unless otherwise specified, this is equivalent to its automatic size.
+    minContent,
+    ///     /// Use the max-content size in the relevant axis; for a box’s block size, unless otherwise specified, this is equivalent to its automatic size.
+    maxContent,
+    ///     /// Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.
+    stretch,
+    ///     /// Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).
+    fitContent,
+    ///     /// If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.
+    contain,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) MinHeight { return .{ .px_ = v }; }
+    pub fn em(v: f32) MinHeight { return .{ .em_ = v }; }
+    pub fn rem(v: f32) MinHeight { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) MinHeight { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) MinHeight { return .{ .raw_ = r }; }
+
+    pub fn format(self: MinHeight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// min-inline-size
+/// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-min-inline-size
+pub const MinInlineSize = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MinInlineSize { return .{ .raw_ = r }; }
+
+    pub fn format(self: MinInlineSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// min-intrinsic-sizing
+/// - **W3C**: https://drafts.csswg.org/css-sizing-4/#propdef-min-intrinsic-sizing
+pub const MinIntrinsicSizing = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The box’s min-content contribution is handled as normal.
+    legacy,
+    ///     /// The box’s min-content contribution is “compressed” if it is a scroll container.
+    zeroIfScroll,
+    ///     /// The box’s min-content contribution is “compressed” if has an extrinsic preferred or maximum size.
+    zeroIfExtrinsic,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MinIntrinsicSizing { return .{ .raw_ = r }; }
+
+    pub fn format(self: MinIntrinsicSizing, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// min-width
+/// - **W3C**: https://drafts.csswg.org/css-sizing-3/#propdef-min-width
+pub const MinWidth = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// For width/height, specifies an automatic size (automatic block size/automatic inline size). See the relevant layout module for how to calculate this. For min-width/min-height, specifies an automatic minimum size. Unless otherwise defined by the relevant layout module, however, it resolves to a used value of 0. For backwards-compatibility, the resolved value of this keyword is zero for boxes of all [CSS2] display types: block and inline boxes, inline blocks, and all the table layout boxes. It also resolves to zero when no box is generated.
+    auto,
+    ///     /// Use the min-content size in the relevant axis; for a box’s block size, unless otherwise specified, this is equivalent to its automatic size.
+    minContent,
+    ///     /// Use the max-content size in the relevant axis; for a box’s block size, unless otherwise specified, this is equivalent to its automatic size.
+    maxContent,
+    ///     /// Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.
+    stretch,
+    ///     /// Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).
+    fitContent,
+    ///     /// If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.
+    contain,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) MinWidth { return .{ .px_ = v }; }
+    pub fn em(v: f32) MinWidth { return .{ .em_ = v }; }
+    pub fn rem(v: f32) MinWidth { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) MinWidth { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) MinWidth { return .{ .raw_ = r }; }
+
+    pub fn format(self: MinWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// mix-blend-mode
+/// - **W3C**: https://drafts.csswg.org/compositing-2/#propdef-mix-blend-mode
+pub const MixBlendMode = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    normal,
+    darken,
+    multiply,
+    colorBurn,
+    lighten,
+    screen,
+    colorDodge,
+    overlay,
+    softLight,
+    hardLight,
+    difference,
+    exclusion,
+    hue,
+    saturation,
+    color,
+    luminosity,
+    plusLighter,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) MixBlendMode { return .{ .raw_ = r }; }
+
+    pub fn format(self: MixBlendMode, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// nav-down
+/// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-nav-down
+pub const NavDown = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    current,
+    root,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) NavDown { return .{ .raw_ = r }; }
+
+    pub fn format(self: NavDown, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// nav-left
+/// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-nav-left
+pub const NavLeft = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    current,
+    root,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) NavLeft { return .{ .raw_ = r }; }
+
+    pub fn format(self: NavLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// nav-right
+/// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-nav-right
+pub const NavRight = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    current,
+    root,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) NavRight { return .{ .raw_ = r }; }
+
+    pub fn format(self: NavRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// nav-up
+/// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-nav-up
+pub const NavUp = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    current,
+    root,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) NavUp { return .{ .raw_ = r }; }
+
+    pub fn format(self: NavUp, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// object-fit
+/// - **W3C**: https://drafts.csswg.org/css-images-4/#propdef-object-fit
+pub const ObjectFit = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The replaced content is sized to fill the element’s content box: the object’s concrete object size is the element’s used width and height.
+    fill,
+    ///     /// The replaced content is sized to maintain its aspect ratio while fitting within the element’s content box: its concrete object size is resolved as a contain constraint against the element’s used width and height. If the scale-down flag is used, size the content as if none or contain were specified, whichever would result in a smaller concrete object size.
+    contain,
+    ///     /// The replaced content is sized to maintain its aspect ratio while filling the element’s entire content box: its concrete object size is resolved as a cover constraint against the element’s used width and height. If the scale-down flag is used, size the content as if none or cover were specified, whichever would result in a smaller concrete object size.
+    cover,
+    ///     /// Equivalent to contain scale-down.
+    scaleDown,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ObjectFit { return .{ .raw_ = r }; }
+
+    pub fn format(self: ObjectFit, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// object-position
+/// - **W3C**: https://drafts.csswg.org/css-images-3/#propdef-object-position
+pub const ObjectPosition = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    left,
+    center,
+    right,
+    top,
+    bottom,
+    xStart,
+    xEnd,
+    yStart,
+    yEnd,
+    blockStart,
+    blockEnd,
+    inlineStart,
+    inlineEnd,
+    start,
+    end,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ObjectPosition { return .{ .px_ = v }; }
+    pub fn em(v: f32) ObjectPosition { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ObjectPosition { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) ObjectPosition { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) ObjectPosition { return .{ .raw_ = r }; }
+
+    pub fn format(self: ObjectPosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// object-view-box
+/// - **W3C**: https://drafts.csswg.org/css-images-5/#propdef-object-view-box
+pub const ObjectViewBox = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ObjectViewBox { return .{ .raw_ = r }; }
+
+    pub fn format(self: ObjectViewBox, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// offset
+/// - **W3C**: https://drafts.csswg.org/motion-1/#propdef-offset
+pub const Offset = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Offset { return .{ .raw_ = r }; }
+
+    pub fn format(self: Offset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// offset-anchor
+/// - **W3C**: https://drafts.csswg.org/motion-1/#propdef-offset-anchor
+pub const OffsetAnchor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The anchor point is the same as the point indicated by transform-origin. Specifically, the computed value of transform-origin is resolved as a <position> against the element’s reference box.
+    auto,
+    left,
+    center,
+    right,
+    top,
+    bottom,
+    xStart,
+    xEnd,
+    yStart,
+    yEnd,
+    blockStart,
+    blockEnd,
+    inlineStart,
+    inlineEnd,
+    start,
+    end,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) OffsetAnchor { return .{ .px_ = v }; }
+    pub fn em(v: f32) OffsetAnchor { return .{ .em_ = v }; }
+    pub fn rem(v: f32) OffsetAnchor { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) OffsetAnchor { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) OffsetAnchor { return .{ .raw_ = r }; }
+
+    pub fn format(self: OffsetAnchor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// offset-distance
+/// - **W3C**: https://drafts.csswg.org/motion-1/#propdef-offset-distance
+pub const OffsetDistance = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) OffsetDistance { return .{ .px_ = v }; }
+    pub fn em(v: f32) OffsetDistance { return .{ .em_ = v }; }
+    pub fn rem(v: f32) OffsetDistance { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) OffsetDistance { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) OffsetDistance { return .{ .raw_ = r }; }
+
+    pub fn format(self: OffsetDistance, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// offset-path
+/// - **W3C**: https://drafts.csswg.org/motion-1/#propdef-offset-path
+pub const OffsetPath = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    contentBox,
+    paddingBox,
+    borderBox,
+    fillBox,
+    strokeBox,
+    viewBox,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) OffsetPath { return .{ .raw_ = r }; }
+
+    pub fn format(self: OffsetPath, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// offset-position
+/// - **W3C**: https://drafts.csswg.org/motion-1/#propdef-offset-position
+pub const OffsetPosition = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The element does not have an offset starting position.
+    normal,
+    ///     /// The offset starting position is the top-left corner of the box.
+    auto,
+    left,
+    center,
+    right,
+    top,
+    bottom,
+    xStart,
+    xEnd,
+    yStart,
+    yEnd,
+    blockStart,
+    blockEnd,
+    inlineStart,
+    inlineEnd,
+    start,
+    end,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) OffsetPosition { return .{ .px_ = v }; }
+    pub fn em(v: f32) OffsetPosition { return .{ .em_ = v }; }
+    pub fn rem(v: f32) OffsetPosition { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) OffsetPosition { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) OffsetPosition { return .{ .raw_ = r }; }
+
+    pub fn format(self: OffsetPosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// offset-rotate
+/// - **W3C**: https://drafts.csswg.org/motion-1/#propdef-offset-rotate
+pub const OffsetRotate = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The offset transform will have a rotation component equal to the difference between the offset path’s direction at the offset position and the direction of the positive X axis (that is, a line going toward the right). See SVG’s direction of a path for details on how to calculate this. If specified with an <angle>, the angle is added to the rotation component.
+    auto,
+    ///     /// Identical to auto, but adds an additional 180deg to the rotation.
+    reverse,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) OffsetRotate { return .{ .raw_ = r }; }
+
+    pub fn format(self: OffsetRotate, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// opacity
+/// - **W3C**: https://drafts.csswg.org/css-color-4/#propdef-opacity
+pub const Opacity = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn percent(v: f32) Opacity { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) Opacity { return .{ .raw_ = r }; }
+
+    pub fn format(self: Opacity, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// order
+/// - **W3C**: https://drafts.csswg.org/css-display-4/#propdef-order
+pub const Order = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Order { return .{ .raw_ = r }; }
+
+    pub fn format(self: Order, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// orphans
+/// - **W3C**: https://drafts.csswg.org/css-break-4/#propdef-orphans
+pub const Orphans = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Orphans { return .{ .raw_ = r }; }
+
+    pub fn format(self: Orphans, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// outline
+/// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-outline
+pub const Outline = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) Outline { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) Outline { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) Outline { return .{ .raw_ = r }; }
+
+    pub fn format(self: Outline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// outline-color
+/// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-outline-color
+pub const OutlineColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// When outline-style is auto, outline-color: auto computes to auto and represents the accent color. Otherwise, outline-color: auto computes to currentColor.
+    auto,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) OutlineColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) OutlineColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) OutlineColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: OutlineColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// outline-offset
+/// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-outline-offset
+pub const OutlineOffset = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) OutlineOffset { return .{ .px_ = v }; }
+    pub fn em(v: f32) OutlineOffset { return .{ .em_ = v }; }
+    pub fn rem(v: f32) OutlineOffset { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) OutlineOffset { return .{ .raw_ = r }; }
+
+    pub fn format(self: OutlineOffset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// outline-style
+/// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-outline-style
+pub const OutlineStyle = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    dotted,
+    dashed,
+    solid,
+    double,
+    groove,
+    ridge,
+    inset,
+    outset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) OutlineStyle { return .{ .raw_ = r }; }
+
+    pub fn format(self: OutlineStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// outline-width
+/// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-outline-width
+pub const OutlineWidth = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hairline,
+    thin,
+    medium,
+    thick,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) OutlineWidth { return .{ .px_ = v }; }
+    pub fn em(v: f32) OutlineWidth { return .{ .em_ = v }; }
+    pub fn rem(v: f32) OutlineWidth { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) OutlineWidth { return .{ .raw_ = r }; }
+
+    pub fn format(self: OutlineWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// overflow
+/// - **W3C**: https://drafts.csswg.org/css-overflow-3/#propdef-overflow
+pub const Overflow = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Overflow { return .{ .raw_ = r }; }
+
+    pub fn format(self: Overflow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// overflow-anchor
+/// - **W3C**: https://drafts.csswg.org/css-scroll-anchoring-1/#propdef-overflow-anchor
+pub const OverflowAnchor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Declares that the element is potentially eligible to participate in the anchor node selection algorithm for any scrolling box created by the element or an ancestor.
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) OverflowAnchor { return .{ .raw_ = r }; }
+
+    pub fn format(self: OverflowAnchor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// overflow-block
+/// - **W3C**: https://drafts.csswg.org/css-overflow-3/#propdef-overflow-block
+pub const OverflowBlock = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    visible,
+    hidden,
+    clip,
+    scroll,
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) OverflowBlock { return .{ .raw_ = r }; }
+
+    pub fn format(self: OverflowBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// overflow-clip-margin
+/// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin
+pub const OverflowClipMargin = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    contentBox,
+    paddingBox,
+    borderBox,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) OverflowClipMargin { return .{ .px_ = v }; }
+    pub fn em(v: f32) OverflowClipMargin { return .{ .em_ = v }; }
+    pub fn rem(v: f32) OverflowClipMargin { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) OverflowClipMargin { return .{ .raw_ = r }; }
+
+    pub fn format(self: OverflowClipMargin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// overflow-clip-margin-block
+/// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-block
+pub const OverflowClipMarginBlock = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    contentBox,
+    paddingBox,
+    borderBox,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) OverflowClipMarginBlock { return .{ .px_ = v }; }
+    pub fn em(v: f32) OverflowClipMarginBlock { return .{ .em_ = v }; }
+    pub fn rem(v: f32) OverflowClipMarginBlock { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) OverflowClipMarginBlock { return .{ .raw_ = r }; }
+
+    pub fn format(self: OverflowClipMarginBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// overflow-clip-margin-block-end
+/// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-block-end
+pub const OverflowClipMarginBlockEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    contentBox,
+    paddingBox,
+    borderBox,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) OverflowClipMarginBlockEnd { return .{ .px_ = v }; }
+    pub fn em(v: f32) OverflowClipMarginBlockEnd { return .{ .em_ = v }; }
+    pub fn rem(v: f32) OverflowClipMarginBlockEnd { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) OverflowClipMarginBlockEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: OverflowClipMarginBlockEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// overflow-clip-margin-block-start
+/// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-block-start
+pub const OverflowClipMarginBlockStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    contentBox,
+    paddingBox,
+    borderBox,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) OverflowClipMarginBlockStart { return .{ .px_ = v }; }
+    pub fn em(v: f32) OverflowClipMarginBlockStart { return .{ .em_ = v }; }
+    pub fn rem(v: f32) OverflowClipMarginBlockStart { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) OverflowClipMarginBlockStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: OverflowClipMarginBlockStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// overflow-clip-margin-bottom
+/// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-bottom
+pub const OverflowClipMarginBottom = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    contentBox,
+    paddingBox,
+    borderBox,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) OverflowClipMarginBottom { return .{ .px_ = v }; }
+    pub fn em(v: f32) OverflowClipMarginBottom { return .{ .em_ = v }; }
+    pub fn rem(v: f32) OverflowClipMarginBottom { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) OverflowClipMarginBottom { return .{ .raw_ = r }; }
+
+    pub fn format(self: OverflowClipMarginBottom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// overflow-clip-margin-inline
+/// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-inline
+pub const OverflowClipMarginInline = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    contentBox,
+    paddingBox,
+    borderBox,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) OverflowClipMarginInline { return .{ .px_ = v }; }
+    pub fn em(v: f32) OverflowClipMarginInline { return .{ .em_ = v }; }
+    pub fn rem(v: f32) OverflowClipMarginInline { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) OverflowClipMarginInline { return .{ .raw_ = r }; }
+
+    pub fn format(self: OverflowClipMarginInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// overflow-clip-margin-inline-end
+/// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-inline-end
+pub const OverflowClipMarginInlineEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    contentBox,
+    paddingBox,
+    borderBox,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) OverflowClipMarginInlineEnd { return .{ .px_ = v }; }
+    pub fn em(v: f32) OverflowClipMarginInlineEnd { return .{ .em_ = v }; }
+    pub fn rem(v: f32) OverflowClipMarginInlineEnd { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) OverflowClipMarginInlineEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: OverflowClipMarginInlineEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// overflow-clip-margin-inline-start
+/// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-inline-start
+pub const OverflowClipMarginInlineStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    contentBox,
+    paddingBox,
+    borderBox,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) OverflowClipMarginInlineStart { return .{ .px_ = v }; }
+    pub fn em(v: f32) OverflowClipMarginInlineStart { return .{ .em_ = v }; }
+    pub fn rem(v: f32) OverflowClipMarginInlineStart { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) OverflowClipMarginInlineStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: OverflowClipMarginInlineStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// overflow-clip-margin-left
+/// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-left
+pub const OverflowClipMarginLeft = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    contentBox,
+    paddingBox,
+    borderBox,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) OverflowClipMarginLeft { return .{ .px_ = v }; }
+    pub fn em(v: f32) OverflowClipMarginLeft { return .{ .em_ = v }; }
+    pub fn rem(v: f32) OverflowClipMarginLeft { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) OverflowClipMarginLeft { return .{ .raw_ = r }; }
+
+    pub fn format(self: OverflowClipMarginLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// overflow-clip-margin-right
+/// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-right
+pub const OverflowClipMarginRight = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    contentBox,
+    paddingBox,
+    borderBox,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) OverflowClipMarginRight { return .{ .px_ = v }; }
+    pub fn em(v: f32) OverflowClipMarginRight { return .{ .em_ = v }; }
+    pub fn rem(v: f32) OverflowClipMarginRight { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) OverflowClipMarginRight { return .{ .raw_ = r }; }
+
+    pub fn format(self: OverflowClipMarginRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// overflow-clip-margin-top
+/// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-top
+pub const OverflowClipMarginTop = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    contentBox,
+    paddingBox,
+    borderBox,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) OverflowClipMarginTop { return .{ .px_ = v }; }
+    pub fn em(v: f32) OverflowClipMarginTop { return .{ .em_ = v }; }
+    pub fn rem(v: f32) OverflowClipMarginTop { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) OverflowClipMarginTop { return .{ .raw_ = r }; }
+
+    pub fn format(self: OverflowClipMarginTop, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// overflow-inline
+/// - **W3C**: https://drafts.csswg.org/css-overflow-3/#propdef-overflow-inline
+pub const OverflowInline = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    visible,
+    hidden,
+    clip,
+    scroll,
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) OverflowInline { return .{ .raw_ = r }; }
+
+    pub fn format(self: OverflowInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// overflow-wrap
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-overflow-wrap
+pub const OverflowWrap = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Lines may break only at allowed break points. However, the restrictions introduced by word-break: keep-all may be relaxed to match word-break: normal if there are no otherwise-acceptable break points in the line. Also, the restrictions introduced by word-break: auto-phrase are relaxed if there are no otherwise-acceptable break points in the line: If suppressing soft wrap opportunities within a particular phrase would cause that phrase to overflow even when placed on an otherwise empty line, the user agent must fall back to the same soft wrap opportunities as normal within that phrase. If that is not enough to prevent overflow, suppression of hyphenation opportunities must also be abandoned within each line that would overflow. As an intermediary measure, user agents may also detect multiple levels of phrases, choosing to shorter ones (possibly down to individual words) when longer ones would lead to overflow. The soft wrap opportunities obtained by relaxing the restrictions introduced by word-break: keep-all and word-break: auto-phrase are not considered when calculating min-content intrinsic sizes.
+    normal,
+    ///     /// As for anywhere except that soft wrap opportunities introduced by break-word are not considered when calculating min-content intrinsic sizes.
+    breakWord,
+    ///     /// An otherwise unbreakable sequence of characters may be broken at an arbitrary point if there are no otherwise-acceptable break points in the line. Shaping characters are still shaped as if the word were not broken, and grapheme clusters must stay together as one unit. No hyphenation character is inserted at the break point. Soft wrap opportunities introduced by anywhere are considered when calculating min-content intrinsic sizes. In the case of word-break: auto-phrase, these additional soft wrap opportunities are only introduced if relaxing the restrictions introduced by word-break: auto-phrase as described in overflow-wrap: normal is insufficient to prevent overflow.
+    anywhere,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) OverflowWrap { return .{ .raw_ = r }; }
+
+    pub fn format(self: OverflowWrap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// overflow-x
+/// - **W3C**: https://drafts.csswg.org/css-overflow-3/#propdef-overflow-x
+pub const OverflowX = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// There is no special handling of overflow, that is, the box’s content is rendered outside the box if positioned there. The box is not a scroll container.
+    visible,
+    ///     /// This value indicates that the box’s content is clipped to its padding box and that the UA must not provide any scrolling user interface to view the content outside the clipping region, nor allow scrolling by direct intervention of the user, such as dragging on a touch screen or using the scrolling wheel on a mouse. However, the content must still be scrollable programmatically, for example using the mechanisms defined in [CSSOM-VIEW], and the box is therefore still a scroll container.
+    hidden,
+    ///     /// This value indicates that the box’s content is clipped to its overflow clip edge and that no scrolling user interface should be provided by the UA to view the content outside the clipping region. In addition, unlike overflow: hidden which still allows programmatic scrolling, overflow: clip forbids scrolling entirely, through any mechanism, and therefore the box is not a scroll container. Unlike hidden, this value does not cause the element to establish a new formatting context.
+    clip,
+    ///     /// This value indicates that the content is clipped to the padding box, but can be scrolled into view (and therefore the box is a scroll container). Furthermore, if the user agent uses a scrolling mechanism that is visible on the screen (such as a scroll bar or a panner), that mechanism should be displayed whether or not any of its content is clipped. This avoids any problem with scrollbars appearing and disappearing in a dynamic environment. When the target medium is print, overflowing content may be printed; it is not defined where it may be printed.
+    scroll,
+    ///     /// Like scroll when the box has scrollable overflow; like hidden otherwise. Thus, if the user agent uses a scrolling mechanism that is visible on the screen (such as a scroll bar or a panner), that mechanism will only be displayed if there is overflow.
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) OverflowX { return .{ .raw_ = r }; }
+
+    pub fn format(self: OverflowX, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// overflow-y
+/// - **W3C**: https://drafts.csswg.org/css-overflow-3/#propdef-overflow-y
+pub const OverflowY = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// There is no special handling of overflow, that is, the box’s content is rendered outside the box if positioned there. The box is not a scroll container.
+    visible,
+    ///     /// This value indicates that the box’s content is clipped to its padding box and that the UA must not provide any scrolling user interface to view the content outside the clipping region, nor allow scrolling by direct intervention of the user, such as dragging on a touch screen or using the scrolling wheel on a mouse. However, the content must still be scrollable programmatically, for example using the mechanisms defined in [CSSOM-VIEW], and the box is therefore still a scroll container.
+    hidden,
+    ///     /// This value indicates that the box’s content is clipped to its overflow clip edge and that no scrolling user interface should be provided by the UA to view the content outside the clipping region. In addition, unlike overflow: hidden which still allows programmatic scrolling, overflow: clip forbids scrolling entirely, through any mechanism, and therefore the box is not a scroll container. Unlike hidden, this value does not cause the element to establish a new formatting context.
+    clip,
+    ///     /// This value indicates that the content is clipped to the padding box, but can be scrolled into view (and therefore the box is a scroll container). Furthermore, if the user agent uses a scrolling mechanism that is visible on the screen (such as a scroll bar or a panner), that mechanism should be displayed whether or not any of its content is clipped. This avoids any problem with scrollbars appearing and disappearing in a dynamic environment. When the target medium is print, overflowing content may be printed; it is not defined where it may be printed.
+    scroll,
+    ///     /// Like scroll when the box has scrollable overflow; like hidden otherwise. Thus, if the user agent uses a scrolling mechanism that is visible on the screen (such as a scroll bar or a panner), that mechanism will only be displayed if there is overflow.
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) OverflowY { return .{ .raw_ = r }; }
+
+    pub fn format(self: OverflowY, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// overlay
+/// - **W3C**: https://drafts.csswg.org/css-position-4/#propdef-overlay
+pub const Overlay = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The element is rendered in the top layer if it is in the top layer. Rather than generating boxes as part of its normal position in the document, it generates boxes as a sibling of the root element, rendered "above" it.
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Overlay { return .{ .raw_ = r }; }
+
+    pub fn format(self: Overlay, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// overscroll-behavior
+/// - **W3C**: https://drafts.csswg.org/css-overscroll-1/#propdef-overscroll-behavior
+pub const OverscrollBehavior = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// This value indicates that the element must not perform non-local boundary default actions such as scroll chaining or navigation. The user agent must not perform scroll chaining to any ancestors along the scroll chain regardless of whether the scroll originated at this element or one of its descendants. This value must not modify the behavior of how local boundary default actions should behave, such as showing any overscroll affordances.
+    contain,
+    ///     /// This value indicates that the user agent should perform the usual boundary default action with respect to scroll chaining, overscroll and navigation gestures.
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) OverscrollBehavior { return .{ .raw_ = r }; }
+
+    pub fn format(self: OverscrollBehavior, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// overscroll-behavior-block
+/// - **W3C**: https://drafts.csswg.org/css-overscroll-1/#propdef-overscroll-behavior-block
+pub const OverscrollBehaviorBlock = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// This value indicates that the element must not perform non-local boundary default actions such as scroll chaining or navigation. The user agent must not perform scroll chaining to any ancestors along the scroll chain regardless of whether the scroll originated at this element or one of its descendants. This value must not modify the behavior of how local boundary default actions should behave, such as showing any overscroll affordances.
+    contain,
+    ///     /// This value indicates that the user agent should perform the usual boundary default action with respect to scroll chaining, overscroll and navigation gestures.
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) OverscrollBehaviorBlock { return .{ .raw_ = r }; }
+
+    pub fn format(self: OverscrollBehaviorBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// overscroll-behavior-inline
+/// - **W3C**: https://drafts.csswg.org/css-overscroll-1/#propdef-overscroll-behavior-inline
+pub const OverscrollBehaviorInline = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// This value indicates that the element must not perform non-local boundary default actions such as scroll chaining or navigation. The user agent must not perform scroll chaining to any ancestors along the scroll chain regardless of whether the scroll originated at this element or one of its descendants. This value must not modify the behavior of how local boundary default actions should behave, such as showing any overscroll affordances.
+    contain,
+    ///     /// This value indicates that the user agent should perform the usual boundary default action with respect to scroll chaining, overscroll and navigation gestures.
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) OverscrollBehaviorInline { return .{ .raw_ = r }; }
+
+    pub fn format(self: OverscrollBehaviorInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// overscroll-behavior-x
+/// - **W3C**: https://drafts.csswg.org/css-overscroll-1/#propdef-overscroll-behavior-x
+pub const OverscrollBehaviorX = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// This value indicates that the element must not perform non-local boundary default actions such as scroll chaining or navigation. The user agent must not perform scroll chaining to any ancestors along the scroll chain regardless of whether the scroll originated at this element or one of its descendants. This value must not modify the behavior of how local boundary default actions should behave, such as showing any overscroll affordances.
+    contain,
+    ///     /// This value indicates that the user agent should perform the usual boundary default action with respect to scroll chaining, overscroll and navigation gestures.
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) OverscrollBehaviorX { return .{ .raw_ = r }; }
+
+    pub fn format(self: OverscrollBehaviorX, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// overscroll-behavior-y
+/// - **W3C**: https://drafts.csswg.org/css-overscroll-1/#propdef-overscroll-behavior-y
+pub const OverscrollBehaviorY = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// This value indicates that the element must not perform non-local boundary default actions such as scroll chaining or navigation. The user agent must not perform scroll chaining to any ancestors along the scroll chain regardless of whether the scroll originated at this element or one of its descendants. This value must not modify the behavior of how local boundary default actions should behave, such as showing any overscroll affordances.
+    contain,
+    ///     /// This value indicates that the user agent should perform the usual boundary default action with respect to scroll chaining, overscroll and navigation gestures.
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) OverscrollBehaviorY { return .{ .raw_ = r }; }
+
+    pub fn format(self: OverscrollBehaviorY, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// padding
+/// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-padding
+pub const Padding = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Padding { return .{ .raw_ = r }; }
+
+    pub fn format(self: Padding, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// padding-block
+/// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-padding-block
+pub const PaddingBlock = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) PaddingBlock { return .{ .raw_ = r }; }
+
+    pub fn format(self: PaddingBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// padding-block-end
+/// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-padding-block-end
+pub const PaddingBlockEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) PaddingBlockEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: PaddingBlockEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// padding-block-start
+/// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-padding-block-start
+pub const PaddingBlockStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) PaddingBlockStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: PaddingBlockStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// padding-bottom
+/// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-padding-bottom
+pub const PaddingBottom = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) PaddingBottom { return .{ .px_ = v }; }
+    pub fn em(v: f32) PaddingBottom { return .{ .em_ = v }; }
+    pub fn rem(v: f32) PaddingBottom { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) PaddingBottom { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) PaddingBottom { return .{ .raw_ = r }; }
+
+    pub fn format(self: PaddingBottom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// padding-inline
+/// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-padding-inline
+pub const PaddingInline = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) PaddingInline { return .{ .raw_ = r }; }
+
+    pub fn format(self: PaddingInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// padding-inline-end
+/// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-padding-inline-end
+pub const PaddingInlineEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) PaddingInlineEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: PaddingInlineEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// padding-inline-start
+/// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-padding-inline-start
+pub const PaddingInlineStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) PaddingInlineStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: PaddingInlineStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// padding-left
+/// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-padding-left
+pub const PaddingLeft = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) PaddingLeft { return .{ .px_ = v }; }
+    pub fn em(v: f32) PaddingLeft { return .{ .em_ = v }; }
+    pub fn rem(v: f32) PaddingLeft { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) PaddingLeft { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) PaddingLeft { return .{ .raw_ = r }; }
+
+    pub fn format(self: PaddingLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// padding-right
+/// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-padding-right
+pub const PaddingRight = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) PaddingRight { return .{ .px_ = v }; }
+    pub fn em(v: f32) PaddingRight { return .{ .em_ = v }; }
+    pub fn rem(v: f32) PaddingRight { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) PaddingRight { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) PaddingRight { return .{ .raw_ = r }; }
+
+    pub fn format(self: PaddingRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// padding-top
+/// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-padding-top
+pub const PaddingTop = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) PaddingTop { return .{ .px_ = v }; }
+    pub fn em(v: f32) PaddingTop { return .{ .em_ = v }; }
+    pub fn rem(v: f32) PaddingTop { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) PaddingTop { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) PaddingTop { return .{ .raw_ = r }; }
+
+    pub fn format(self: PaddingTop, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// page
+/// - **W3C**: https://drafts.csswg.org/css-page-3/#propdef-page
+pub const Page = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Page { return .{ .raw_ = r }; }
+
+    pub fn format(self: Page, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// page-break-after
+/// - **W3C**: https://drafts.csswg.org/css2/#propdef-page-break-after
+pub const PageBreakAfter = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Neither force nor forbid a page break before (after, inside) the generated box.
+    auto,
+    ///     /// Always force a page break before (after) the generated box.
+    always,
+    ///     /// Avoid a page break before (after, inside) the generated box.
+    avoid,
+    ///     /// Force one or two page breaks before (after) the generated box so that the next page is formatted as a left page.
+    left,
+    ///     /// Force one or two page breaks before (after) the generated box so that the next page is formatted as a right page.
+    right,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) PageBreakAfter { return .{ .raw_ = r }; }
+
+    pub fn format(self: PageBreakAfter, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// page-break-before
+/// - **W3C**: https://drafts.csswg.org/css2/#propdef-page-break-before
+pub const PageBreakBefore = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Neither force nor forbid a page break before (after, inside) the generated box.
+    auto,
+    ///     /// Always force a page break before (after) the generated box.
+    always,
+    ///     /// Avoid a page break before (after, inside) the generated box.
+    avoid,
+    ///     /// Force one or two page breaks before (after) the generated box so that the next page is formatted as a left page.
+    left,
+    ///     /// Force one or two page breaks before (after) the generated box so that the next page is formatted as a right page.
+    right,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) PageBreakBefore { return .{ .raw_ = r }; }
+
+    pub fn format(self: PageBreakBefore, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// page-break-inside
+/// - **W3C**: https://drafts.csswg.org/css2/#propdef-page-break-inside
+pub const PageBreakInside = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Avoid a page break before (after, inside) the generated box.
+    avoid,
+    ///     /// Neither force nor forbid a page break before (after, inside) the generated box.
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) PageBreakInside { return .{ .raw_ = r }; }
+
+    pub fn format(self: PageBreakInside, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// paint-order
+/// - **W3C**: https://svgwg.org/svg2-draft/painting.html#PaintOrderProperty
+pub const PaintOrder = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    normal,
+    fill,
+    stroke,
+    markers,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) PaintOrder { return .{ .raw_ = r }; }
+
+    pub fn format(self: PaintOrder, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// pause
+/// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-pause
+pub const Pause = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Pause { return .{ .raw_ = r }; }
+
+    pub fn format(self: Pause, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// pause-after
+/// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-pause-after
+pub const PauseAfter = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Expresses the pause by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
+    xWeak,
+    ///     /// Expresses the pause by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
+    weak,
+    ///     /// Expresses the pause by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
+    medium,
+    ///     /// Expresses the pause by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
+    strong,
+    ///     /// Expresses the pause by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
+    xStrong,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) PauseAfter { return .{ .raw_ = r }; }
+
+    pub fn format(self: PauseAfter, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// pause-before
+/// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-pause-before
+pub const PauseBefore = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Expresses the pause by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
+    xWeak,
+    ///     /// Expresses the pause by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
+    weak,
+    ///     /// Expresses the pause by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
+    medium,
+    ///     /// Expresses the pause by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
+    strong,
+    ///     /// Expresses the pause by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
+    xStrong,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) PauseBefore { return .{ .raw_ = r }; }
+
+    pub fn format(self: PauseBefore, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// perspective
+/// - **W3C**: https://drafts.csswg.org/css-transforms-2/#propdef-perspective
+pub const Perspective = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) Perspective { return .{ .px_ = v }; }
+    pub fn em(v: f32) Perspective { return .{ .em_ = v }; }
+    pub fn rem(v: f32) Perspective { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) Perspective { return .{ .raw_ = r }; }
+
+    pub fn format(self: Perspective, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// perspective-origin
+/// - **W3C**: https://drafts.csswg.org/css-transforms-2/#propdef-perspective-origin
+pub const PerspectiveOrigin = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Computes to 0% for the horizontal position if one or two values are given, otherwise specifies the left edge as the origin for the next offset.
+    left,
+    ///     /// Computes to 50% (left 50%) for the horizontal position if the horizontal position is not otherwise specified, or 50% (top 50%) for the vertical position if it is.
+    center,
+    ///     /// Computes to 100% for the horizontal position if one or two values are given, otherwise specifies the right edge as the origin for the next offset.
+    right,
+    ///     /// Computes to 0% for the vertical position if one or two values are given, otherwise specifies the top edge as the origin for the next offset.
+    top,
+    ///     /// Computes to 100% for the vertical position if one or two values are given, otherwise specifies the bottom edge as the origin for the next offset.
+    bottom,
+    xStart,
+    xEnd,
+    yStart,
+    yEnd,
+    blockStart,
+    blockEnd,
+    inlineStart,
+    inlineEnd,
+    start,
+    end,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) PerspectiveOrigin { return .{ .px_ = v }; }
+    pub fn em(v: f32) PerspectiveOrigin { return .{ .em_ = v }; }
+    pub fn rem(v: f32) PerspectiveOrigin { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) PerspectiveOrigin { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) PerspectiveOrigin { return .{ .raw_ = r }; }
+
+    pub fn format(self: PerspectiveOrigin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// place-content
+/// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-place-content
+pub const PlaceContent = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) PlaceContent { return .{ .raw_ = r }; }
+
+    pub fn format(self: PlaceContent, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// place-items
+/// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-place-items
+pub const PlaceItems = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) PlaceItems { return .{ .raw_ = r }; }
+
+    pub fn format(self: PlaceItems, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// place-self
+/// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-place-self
+pub const PlaceSelf = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) PlaceSelf { return .{ .raw_ = r }; }
+
+    pub fn format(self: PlaceSelf, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// pointer-events
+/// - **W3C**: https://svgwg.org/svg2-draft/interact.html#PointerEventsProperty
+pub const PointerEvents = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    boundingBox,
+    visiblePainted,
+    visibleFill,
+    visibleStroke,
+    visible,
+    painted,
+    fill,
+    stroke,
+    all,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) PointerEvents { return .{ .raw_ = r }; }
+
+    pub fn format(self: PointerEvents, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// pointer-timeline
+/// - **W3C**: https://drafts.csswg.org/pointer-animations-1/#propdef-pointer-timeline
+pub const PointerTimeline = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) PointerTimeline { return .{ .raw_ = r }; }
+
+    pub fn format(self: PointerTimeline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// pointer-timeline-axis
+/// - **W3C**: https://drafts.csswg.org/pointer-animations-1/#propdef-pointer-timeline-axis
+pub const PointerTimelineAxis = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Specifies to use the measure of progress along the block axis of the pointer range.
+    block,
+    ///     /// Specifies to use the measure of progress along the inline axis of the pointer range. (Default.)
+    inline_,
+    ///     /// Specifies to use the measure of progress along the horizontal axis of the pointer range.
+    x,
+    ///     /// Specifies to use the measure of progress along the vertical axis of the pointer range.
+    y,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) PointerTimelineAxis { return .{ .raw_ = r }; }
+
+    pub fn format(self: PointerTimelineAxis, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// pointer-timeline-name
+/// - **W3C**: https://drafts.csswg.org/pointer-animations-1/#propdef-pointer-timeline-name
+pub const PointerTimelineName = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) PointerTimelineName { return .{ .raw_ = r }; }
+
+    pub fn format(self: PointerTimelineName, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// position
+/// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-position
+pub const Position = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The box is not a positioned box, and is laid out according to the rules of its parent formatting context. The inset properties do not apply.
+    static,
+    ///     /// The box is laid out as for static, then offset from the resulting position. This offsetting is a purely visual effect, and, unless otherwise specified, does not affect the size or position of any other non-descendant box except insofar as it increases the scrollable overflow area of its ancestors. This positioning scheme is called relative positioning.
+    relative,
+    ///     /// The box is taken out of flow such that it has no impact on the size or position of its siblings and ancestors, and does not participate in its parent’s formatting context. Instead, the box is positioned and sized solely in reference to its absolute positioning containing block, as modified by the box’s inset properties, see § 4 Absolute Positioning Layout Model. It can overlap in-flow content or other absolutely positioned elements, and is included in the scrollable overflow area of the box that generates is containing block. This positioning scheme is called absolute positioning.
+    absolute,
+    ///     /// Identical to relative, except that its offsets are automatically adjusted in reference to the nearest ancestor scroll container’s scrollport (as modified by the inset properties) in whichever axes the inset properties are not both auto, to try to keep the box in view within its containing block as the user scrolls. This positioning scheme is called sticky positioning.
+    sticky,
+    ///     /// Same as absolute, except the box is positioned and sized relative to a fixed positioning containing block (usually the viewport in continuous media, or the page area in paged media). The box’s position is fixed with respect to this reference rectangle: when attached to the viewport it does not move when the document is scrolled, and when attached to the page area is replicated on every page when the document is paginated. This positioning scheme is called fixed positioning and is considered a subset of absolute positioning. Authors may wish to specify fixed in a media-dependent way. For instance, an author may want a box to remain at the top of the viewport on the screen, but not at the top of each printed page. The two specifications may be separated by using an '@media' rule, as in: @media screen { h1#first { position: fixed } } @media print { h1#first { position: static } }
+    fixed,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Position { return .{ .raw_ = r }; }
+
+    pub fn format(self: Position, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// position-anchor
+/// - **W3C**: https://drafts.csswg.org/css-anchor-position-1/#propdef-position-anchor
+pub const PositionAnchor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// If position-area is none, behaves as none. Otherwise, behaves as auto.
+    normal,
+    ///     /// Use the implicit anchor element if it exists; otherwise the box has no default anchor element.
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) PositionAnchor { return .{ .raw_ = r }; }
+
+    pub fn format(self: PositionAnchor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// position-area
+/// - **W3C**: https://drafts.csswg.org/css-anchor-position-1/#propdef-position-area
+pub const PositionArea = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    left,
+    center,
+    right,
+    spanLeft,
+    spanRight,
+    xStart,
+    xEnd,
+    spanXStart,
+    spanXEnd,
+    selfXStart,
+    selfXEnd,
+    spanSelfXStart,
+    spanSelfXEnd,
+    spanAll,
+    top,
+    bottom,
+    spanTop,
+    spanBottom,
+    yStart,
+    yEnd,
+    spanYStart,
+    spanYEnd,
+    selfYStart,
+    selfYEnd,
+    spanSelfYStart,
+    spanSelfYEnd,
+    blockStart,
+    blockEnd,
+    spanBlockStart,
+    spanBlockEnd,
+    inlineStart,
+    inlineEnd,
+    spanInlineStart,
+    spanInlineEnd,
+    selfBlockStart,
+    selfBlockEnd,
+    spanSelfBlockStart,
+    spanSelfBlockEnd,
+    selfInlineStart,
+    selfInlineEnd,
+    spanSelfInlineStart,
+    spanSelfInlineEnd,
+    start,
+    end,
+    spanStart,
+    spanEnd,
+    selfStart,
+    selfEnd,
+    spanSelfStart,
+    spanSelfEnd,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) PositionArea { return .{ .raw_ = r }; }
+
+    pub fn format(self: PositionArea, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// position-try
+/// - **W3C**: https://drafts.csswg.org/css-anchor-position-1/#propdef-position-try
+pub const PositionTry = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) PositionTry { return .{ .raw_ = r }; }
+
+    pub fn format(self: PositionTry, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// position-try-fallbacks
+/// - **W3C**: https://drafts.csswg.org/css-anchor-position-1/#propdef-position-try-fallbacks
+pub const PositionTryFallbacks = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// swaps the values in the block axis (between, for example, margin-block-start and margin-block-end), essentially mirroring across an inline-axis line.
+    flipBlock,
+    ///     /// swaps the values in the inline axis, essentially mirroring across a block-axis line.
+    flipInline,
+    ///     /// swaps the values of the start properties with each other, and the end properties with each other (between, for example, margin-block-start and margin-inline-start), essentially mirroring across a diagonal drawn from the start-start corner to the end-end corner.
+    flipStart,
+    ///     /// swaps the values in the horizontal axis (between, for example, margin-left and margin-right), essentially mirroring across a vertical-axis line.
+    flipX,
+    ///     /// swaps the values in the vertical axis, essentially mirroring across a horizontal-axis line.
+    flipY,
+    left,
+    center,
+    right,
+    spanLeft,
+    spanRight,
+    xStart,
+    xEnd,
+    spanXStart,
+    spanXEnd,
+    selfXStart,
+    selfXEnd,
+    spanSelfXStart,
+    spanSelfXEnd,
+    spanAll,
+    top,
+    bottom,
+    spanTop,
+    spanBottom,
+    yStart,
+    yEnd,
+    spanYStart,
+    spanYEnd,
+    selfYStart,
+    selfYEnd,
+    spanSelfYStart,
+    spanSelfYEnd,
+    blockStart,
+    blockEnd,
+    spanBlockStart,
+    spanBlockEnd,
+    inlineStart,
+    inlineEnd,
+    spanInlineStart,
+    spanInlineEnd,
+    selfBlockStart,
+    selfBlockEnd,
+    spanSelfBlockStart,
+    spanSelfBlockEnd,
+    selfInlineStart,
+    selfInlineEnd,
+    spanSelfInlineStart,
+    spanSelfInlineEnd,
+    start,
+    end,
+    spanStart,
+    spanEnd,
+    selfStart,
+    selfEnd,
+    spanSelfStart,
+    spanSelfEnd,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) PositionTryFallbacks { return .{ .raw_ = r }; }
+
+    pub fn format(self: PositionTryFallbacks, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// position-try-order
+/// - **W3C**: https://drafts.csswg.org/css-anchor-position-1/#propdef-position-try-order
+pub const PositionTryOrder = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Try the position options in the order specified by position-try-fallbacks.
+    normal,
+    ///     /// For each entry in the position options list, apply that position option to the box, and find the inset-modified containing block size that results from those styles (treating auto inset values as zero). Stably sort the position options list according to this size, with the largest coming first. Logical directions are resolved against the writing mode of the containing block.
+    mostWidth,
+    ///     /// For each entry in the position options list, apply that position option to the box, and find the inset-modified containing block size that results from those styles (treating auto inset values as zero). Stably sort the position options list according to this size, with the largest coming first. Logical directions are resolved against the writing mode of the containing block.
+    mostHeight,
+    ///     /// For each entry in the position options list, apply that position option to the box, and find the inset-modified containing block size that results from those styles (treating auto inset values as zero). Stably sort the position options list according to this size, with the largest coming first. Logical directions are resolved against the writing mode of the containing block.
+    mostBlockSize,
+    ///     /// For each entry in the position options list, apply that position option to the box, and find the inset-modified containing block size that results from those styles (treating auto inset values as zero). Stably sort the position options list according to this size, with the largest coming first. Logical directions are resolved against the writing mode of the containing block.
+    mostInlineSize,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) PositionTryOrder { return .{ .raw_ = r }; }
+
+    pub fn format(self: PositionTryOrder, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// position-visibility
+/// - **W3C**: https://drafts.csswg.org/css-anchor-position-1/#propdef-position-visibility
+pub const PositionVisibility = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// This property has no effect. (The box is displayed without regard for its anchors or its overflowing status.)
+    always,
+    ///     /// If any of the box’s required anchor references do not resolve to a target anchor element, the box’s visibility property computes to force-hidden. What is a required anchor reference? anchor() functions that don’t have a fallback value; the default anchor *sometimes*? Need more detail here. Any anchors are missing, or all anchors are missing? I can see use-cases for either, potentially. Do we want to make a decision here, or make it controllable somehow?
+    anchorsValid,
+    ///     /// If the box has a default anchor box but that anchor box is invisible or clipped by intervening boxes, the box’s visibility property computes to force-hidden.
+    anchorsVisible,
+    ///     /// If the box overflows its inset-modified containing block even after applying position-try, the box’s visibility property computes to force-hidden.
+    noOverflow,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) PositionVisibility { return .{ .raw_ = r }; }
+
+    pub fn format(self: PositionVisibility, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// print-color-adjust
+/// - **W3C**: https://drafts.csswg.org/css-color-adjust-1/#propdef-print-color-adjust
+pub const PrintColorAdjust = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The user agent should make adjustments to the page’s styling as it deems necessary and prudent for the output device. For example, if the document is being printed, a user agent might ignore any backgrounds and adjust text color to be sufficiently dark, to minimize ink usage.
+    economy,
+    ///     /// This value indicates that the page is using color and styling on the specified element in a way which is important and significant, and which should not be tweaked or changed except at the user’s request. For example, a mapping website offering printed directions might "zebra-stripe" the steps in the directions, alternating between white and light gray backgrounds. Losing this zebra-striping and having a pure-white background would make the directions harder to read with a quick glance when distracted in a car.
+    exact,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) PrintColorAdjust { return .{ .raw_ = r }; }
+
+    pub fn format(self: PrintColorAdjust, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// quotes
+/// - **W3C**: https://drafts.csswg.org/css-content-3/#propdef-quotes
+pub const Quotes = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// A typographically appropriate quotation mark system is automatically chosen by the UA based on the content language of the parent (or, if there is no parent, of the element itself).
+    auto,
+    ///     /// Specifies the same quotation mark system as the parent. In general this is equivalent to inheriting the parent’s computed value, except that auto it resolves using the same content language that the parent used. Two possible approaches here, currently speccing the latter: a) this computes to the relevant string values, and inherits as such. b) this value effectively inherits as a keyword + a language code, meaning auto, but with this language.
+    matchParent,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Quotes { return .{ .raw_ = r }; }
+
+    pub fn format(self: Quotes, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// r
+/// - **W3C**: https://svgwg.org/svg2-draft/geometry.html#RProperty
+pub const R = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) R { return .{ .px_ = v }; }
+    pub fn em(v: f32) R { return .{ .em_ = v }; }
+    pub fn rem(v: f32) R { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) R { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) R { return .{ .raw_ = r }; }
+
+    pub fn format(self: R, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// reading-flow
+/// - **W3C**: https://drafts.csswg.org/css-display-4/#propdef-reading-flow
+pub const ReadingFlow = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Follow the order of elements in the DOM.
+    normal,
+    ///     /// Applies to grid, flex, and block layouts. Creates a reading flow container, and enables the use of the reading-order property on direct children. Other than respecting the reading-order property, follows the order of elements in the DOM.
+    sourceOrder,
+    ///     /// Only takes effect on flex containers. Follows the visual reading order of flex items, taking the writing mode into account. Therefore, a document in English, with flex-direction: row-reverse and reading-flow: flex-visual would have a reading order of left to right.
+    flexVisual,
+    ///     /// Only takes effect on flex containers. Follows the flex-flow direction.
+    flexFlow,
+    ///     /// Only takes effect on grid containers. Follows the visual order of grid items by row, taking the writing mode into account.
+    gridRows,
+    ///     /// Only takes effect on grid containers. Follows the visual order of grid items by column, taking the writing mode into account.
+    gridColumns,
+    ///     /// Only takes effect on grid containers. Follows the order-modified document order. Therefore, as normal unless the order property has been used to change the order of items.
+    gridOrder,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ReadingFlow { return .{ .raw_ = r }; }
+
+    pub fn format(self: ReadingFlow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// reading-order
+/// - **W3C**: https://drafts.csswg.org/css-display-4/#propdef-reading-order
+pub const ReadingOrder = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ReadingOrder { return .{ .raw_ = r }; }
+
+    pub fn format(self: ReadingOrder, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// region-fragment
+/// - **W3C**: https://drafts.csswg.org/css-regions-1/#propdef-region-fragment
+pub const RegionFragment = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    break_,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) RegionFragment { return .{ .raw_ = r }; }
+
+    pub fn format(self: RegionFragment, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// resize
+/// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-resize
+pub const Resize = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    both,
+    horizontal,
+    vertical,
+    block,
+    inline_,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Resize { return .{ .raw_ = r }; }
+
+    pub fn format(self: Resize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// rest
+/// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-rest
+pub const Rest = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Rest { return .{ .raw_ = r }; }
+
+    pub fn format(self: Rest, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// rest-after
+/// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-rest-after
+pub const RestAfter = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Expresses the rest by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
+    xWeak,
+    ///     /// Expresses the rest by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
+    weak,
+    ///     /// Expresses the rest by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
+    medium,
+    ///     /// Expresses the rest by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
+    strong,
+    ///     /// Expresses the rest by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
+    xStrong,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) RestAfter { return .{ .raw_ = r }; }
+
+    pub fn format(self: RestAfter, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// rest-before
+/// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-rest-before
+pub const RestBefore = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Expresses the rest by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
+    xWeak,
+    ///     /// Expresses the rest by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
+    weak,
+    ///     /// Expresses the rest by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
+    medium,
+    ///     /// Expresses the rest by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
+    strong,
+    ///     /// Expresses the rest by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
+    xStrong,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) RestBefore { return .{ .raw_ = r }; }
+
+    pub fn format(self: RestBefore, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// right
+/// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-right
+pub const Right = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Represents an unconstrained inset; the exact meaning depends on the positioning scheme.
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) Right { return .{ .px_ = v }; }
+    pub fn em(v: f32) Right { return .{ .em_ = v }; }
+    pub fn rem(v: f32) Right { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) Right { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) Right { return .{ .raw_ = r }; }
+
+    pub fn format(self: Right, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// rotate
+/// - **W3C**: https://drafts.csswg.org/css-transforms-2/#propdef-rotate
+pub const Rotate = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The axis can be specified with either the x, y, or z keywords, which specify a rotation around that axis, equivalent to the rotateX(), rotateY(), and rotateZ() transform functions. Alternately, the axis can be specified explicitly by giving three numbers representing the x, y, and z components of an origin-centered vector, equivalent to the rotate3d() function.
+    x,
+    ///     /// The axis can be specified with either the x, y, or z keywords, which specify a rotation around that axis, equivalent to the rotateX(), rotateY(), and rotateZ() transform functions. Alternately, the axis can be specified explicitly by giving three numbers representing the x, y, and z components of an origin-centered vector, equivalent to the rotate3d() function.
+    y,
+    ///     /// The axis can be specified with either the x, y, or z keywords, which specify a rotation around that axis, equivalent to the rotateX(), rotateY(), and rotateZ() transform functions. Alternately, the axis can be specified explicitly by giving three numbers representing the x, y, and z components of an origin-centered vector, equivalent to the rotate3d() function.
+    z,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Rotate { return .{ .raw_ = r }; }
+
+    pub fn format(self: Rotate, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// row-gap
+/// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-row-gap
+pub const RowGap = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The value normal represents a used value of 1em on multi-column containers, and a used value of 0px in all other contexts.
+    normal,
+    hairline,
+    thin,
+    medium,
+    thick,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) RowGap { return .{ .px_ = v }; }
+    pub fn em(v: f32) RowGap { return .{ .em_ = v }; }
+    pub fn rem(v: f32) RowGap { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) RowGap { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) RowGap { return .{ .raw_ = r }; }
+
+    pub fn format(self: RowGap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// row-rule
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule
+pub const RowRule = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hairline,
+    thin,
+    medium,
+    thick,
+    hidden,
+    dotted,
+    dashed,
+    solid,
+    double,
+    groove,
+    ridge,
+    inset,
+    outset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn px(v: f32) RowRule { return .{ .px_ = v }; }
+    pub fn em(v: f32) RowRule { return .{ .em_ = v }; }
+    pub fn rem(v: f32) RowRule { return .{ .rem_ = v }; }
+    pub fn hex(v: u32) RowRule { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) RowRule { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) RowRule { return .{ .raw_ = r }; }
+
+    pub fn format(self: RowRule, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// row-rule-break
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-break
+pub const RowRuleBreak = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Behavior depends on the type of container.
+    normal,
+    ///     /// Gap decorations start and end at visible "T" and "cross" intersections.
+    intersection,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) RowRuleBreak { return .{ .raw_ = r }; }
+
+    pub fn format(self: RowRuleBreak, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// row-rule-color
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-color
+pub const RowRuleColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    auto,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) RowRuleColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) RowRuleColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) RowRuleColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: RowRuleColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// row-rule-edge-inset
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-edge-inset
+pub const RowRuleEdgeInset = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) RowRuleEdgeInset { return .{ .px_ = v }; }
+    pub fn em(v: f32) RowRuleEdgeInset { return .{ .em_ = v }; }
+    pub fn rem(v: f32) RowRuleEdgeInset { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) RowRuleEdgeInset { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) RowRuleEdgeInset { return .{ .raw_ = r }; }
+
+    pub fn format(self: RowRuleEdgeInset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// row-rule-edge-inset-end
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-edge-inset-end
+pub const RowRuleEdgeInsetEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) RowRuleEdgeInsetEnd { return .{ .px_ = v }; }
+    pub fn em(v: f32) RowRuleEdgeInsetEnd { return .{ .em_ = v }; }
+    pub fn rem(v: f32) RowRuleEdgeInsetEnd { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) RowRuleEdgeInsetEnd { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) RowRuleEdgeInsetEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: RowRuleEdgeInsetEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// row-rule-edge-inset-start
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-edge-inset-start
+pub const RowRuleEdgeInsetStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) RowRuleEdgeInsetStart { return .{ .px_ = v }; }
+    pub fn em(v: f32) RowRuleEdgeInsetStart { return .{ .em_ = v }; }
+    pub fn rem(v: f32) RowRuleEdgeInsetStart { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) RowRuleEdgeInsetStart { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) RowRuleEdgeInsetStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: RowRuleEdgeInsetStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// row-rule-inset
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-inset
+pub const RowRuleInset = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) RowRuleInset { return .{ .raw_ = r }; }
+
+    pub fn format(self: RowRuleInset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// row-rule-inset-end
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-inset-end
+pub const RowRuleInsetEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) RowRuleInsetEnd { return .{ .px_ = v }; }
+    pub fn em(v: f32) RowRuleInsetEnd { return .{ .em_ = v }; }
+    pub fn rem(v: f32) RowRuleInsetEnd { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) RowRuleInsetEnd { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) RowRuleInsetEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: RowRuleInsetEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// row-rule-inset-start
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-inset-start
+pub const RowRuleInsetStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) RowRuleInsetStart { return .{ .px_ = v }; }
+    pub fn em(v: f32) RowRuleInsetStart { return .{ .em_ = v }; }
+    pub fn rem(v: f32) RowRuleInsetStart { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) RowRuleInsetStart { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) RowRuleInsetStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: RowRuleInsetStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// row-rule-interior-inset
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-interior-inset
+pub const RowRuleInteriorInset = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) RowRuleInteriorInset { return .{ .px_ = v }; }
+    pub fn em(v: f32) RowRuleInteriorInset { return .{ .em_ = v }; }
+    pub fn rem(v: f32) RowRuleInteriorInset { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) RowRuleInteriorInset { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) RowRuleInteriorInset { return .{ .raw_ = r }; }
+
+    pub fn format(self: RowRuleInteriorInset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// row-rule-interior-inset-end
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-interior-inset-end
+pub const RowRuleInteriorInsetEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) RowRuleInteriorInsetEnd { return .{ .px_ = v }; }
+    pub fn em(v: f32) RowRuleInteriorInsetEnd { return .{ .em_ = v }; }
+    pub fn rem(v: f32) RowRuleInteriorInsetEnd { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) RowRuleInteriorInsetEnd { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) RowRuleInteriorInsetEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: RowRuleInteriorInsetEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// row-rule-interior-inset-start
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-interior-inset-start
+pub const RowRuleInteriorInsetStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) RowRuleInteriorInsetStart { return .{ .px_ = v }; }
+    pub fn em(v: f32) RowRuleInteriorInsetStart { return .{ .em_ = v }; }
+    pub fn rem(v: f32) RowRuleInteriorInsetStart { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) RowRuleInteriorInsetStart { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) RowRuleInteriorInsetStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: RowRuleInteriorInsetStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// row-rule-style
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-style
+pub const RowRuleStyle = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hidden,
+    dotted,
+    dashed,
+    solid,
+    double,
+    groove,
+    ridge,
+    inset,
+    outset,
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) RowRuleStyle { return .{ .raw_ = r }; }
+
+    pub fn format(self: RowRuleStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// row-rule-visibility-items
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-visibility-items
+pub const RowRuleVisibilityItems = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Paint decorations in all gap segments, regardless of whether adjacent items are present.
+    all,
+    ///     /// Paint decorations in a gap segment if at least one of the two adjacent areas is occupied by an item.
+    around,
+    ///     /// Paint decorations in a gap segment if both adjacent areas are occupied by items.
+    between,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) RowRuleVisibilityItems { return .{ .raw_ = r }; }
+
+    pub fn format(self: RowRuleVisibilityItems, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// row-rule-width
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-width
+pub const RowRuleWidth = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hairline,
+    thin,
+    medium,
+    thick,
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) RowRuleWidth { return .{ .px_ = v }; }
+    pub fn em(v: f32) RowRuleWidth { return .{ .em_ = v }; }
+    pub fn rem(v: f32) RowRuleWidth { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) RowRuleWidth { return .{ .raw_ = r }; }
+
+    pub fn format(self: RowRuleWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// ruby-align
+/// - **W3C**: https://drafts.csswg.org/css-ruby-1/#propdef-ruby-align
+pub const RubyAlign = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The ruby content is aligned with the start edge of its box. start ruby distribution "Katatsuki ruby" (肩付きルビ) is close to, but not quite the same as, this start value. In particular, its behavior when overhanging its base can differ from start alignment depending on surrounding context, see JLREQ. Also, it’s only ever used in vertical writing, and the JLTF considers it not particularly important, so it may not be worth the effort to make this value smart enough to deal with katatsuki ruby. If start is needed for some other purpose, we should keep it. Otherwise, maybe just drop it?
+    start,
+    ///     /// The ruby content is centered within its box. center ruby distribution
+    center,
+    ///     /// The ruby content expands as defined for normal text justification (as defined by text-justify), except that if there are no justification opportunities the content is centered. space-between ruby distribution
+    spaceBetween,
+    ///     /// As for space-between except that there exists an extra justification opportunities whose space is distributed half before and half after the ruby content. space-around ruby distribution
+    spaceAround,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) RubyAlign { return .{ .raw_ = r }; }
+
+    pub fn format(self: RubyAlign, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// ruby-merge
+/// - **W3C**: https://drafts.csswg.org/css-ruby-1/#propdef-ruby-merge
+pub const RubyMerge = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Each ruby annotation box is rendered within the same column(s) as its corresponding base box(es), i.e. without overlapping adjacent bases on either side. This style is called “mono ruby” in [JLREQ]. ruby-merge: separate with center alignment For example, the following two lines render the same: <p><ruby>無<rt>む</ruby><ruby>常<rt>じょう</ruby> <p><ruby style="ruby-merge:separate"><rb>無<rb>常<rt>む<rt>じょう</ruby>
+    separate,
+    ///     /// All ruby annotation boxes within the same ruby segment on the same line are concatenated as inline boxes within their annotation container, and laid out in a single anonymous ruby annotation box spanning all their associated ruby base boxes. When laid out on a single line, this style renders similar to “group ruby” in [JLREQ]. However, when it breaks across lines, ruby annotations are kept together with their respective ruby bases. ruby-merge: merge with center alignment The following two lines render the same if both characters fit on one line: <p><ruby>無常<rt>むじょう</ruby> <p><ruby style="ruby-merge:merge"><rb>無<rb>常<rt>む<rt>じょう</ruby> However, the second one renders the same as ruby-position: separate when the two bases are split across lines.
+    merge,
+    ///     /// The user agent may use any algorithm to determine how each ruby annotation box is rendered to its corresponding base box, with the intention that if all annotations fit over their respective bases, the result is identical to separate, but if some annotations are wider than their bases the space is shared in some way to avoid imposing space between bases. ruby-merge: auto with center alignment
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) RubyMerge { return .{ .raw_ = r }; }
+
+    pub fn format(self: RubyMerge, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// ruby-overhang
+/// - **W3C**: https://drafts.csswg.org/css-ruby-1/#propdef-ruby-overhang
+pub const RubyOverhang = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// When a ruby annotation container is longer than its corresponding ruby base container, the ruby annotation container may partially overlap adjacent boxes. Whether, how much, and under which conditions to overhang are determined by the UA.
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) RubyOverhang { return .{ .raw_ = r }; }
+
+    pub fn format(self: RubyOverhang, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// ruby-position
+/// - **W3C**: https://drafts.csswg.org/css-ruby-1/#propdef-ruby-position
+pub const RubyPosition = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Different levels of annotations alternate between over and under. If the annotation container is the first level of annotation in its ruby segment, or if all prior levels are inter-character, then alternate, either on its own or in combination with over, behaves the same as over, while alternate in combination with under behaves the same as under. Otherwise, if the previous level of interlinear annotation is over, alternate behaves like under, and vice versa. (In this case, whether alternate is specified alone or in combination with over or under makes no difference.)
+    alternate,
+    ///     /// The ruby annotation appears line-over the base. Ruby over Japanese base text in horizontal layout Ruby to the right of Japanese base text in vertical layout
+    over,
+    ///     /// The ruby annotation appears line-under the base. This is a relatively rare setting used in ideographic East Asian writing systems, most easily found in educational text. Ruby under Japanese base text in horizontal layout Ruby to the left of Japanese base text in vertical layout
+    under,
+    ///     /// If the writing mode of the enclosing ruby container is vertical, this value has the same effect as over. Otherwise, the ruby annotation becomes an inter-character annotation. The annotation appears on the right of the base in horizontal text. This forces the computed value of writing-mode of the ruby annotation children of this ruby annotation container to be vertical-rl. This value is provided for the special case of traditional Chinese as used especially in Taiwan: ruby (made of bopomofo glyphs) in that context appears vertically along the right side of the base glyph, even when the layout of the base characters is horizontal: “Bopomofo” ruby in traditional Chinese (ruby annotation shown in blue for clarity) in horizontal layout
+    interCharacter,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) RubyPosition { return .{ .raw_ = r }; }
+
+    pub fn format(self: RubyPosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// rule
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule
+pub const Rule = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Rule { return .{ .raw_ = r }; }
+
+    pub fn format(self: Rule, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// rule-break
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-break
+pub const RuleBreak = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) RuleBreak { return .{ .raw_ = r }; }
+
+    pub fn format(self: RuleBreak, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// rule-color
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-color
+pub const RuleColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) RuleColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) RuleColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) RuleColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: RuleColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// rule-edge-inset
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-edge-inset
+pub const RuleEdgeInset = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) RuleEdgeInset { return .{ .raw_ = r }; }
+
+    pub fn format(self: RuleEdgeInset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// rule-inset
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-inset
+pub const RuleInset = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) RuleInset { return .{ .raw_ = r }; }
+
+    pub fn format(self: RuleInset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// rule-inset-end
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-inset-end
+pub const RuleInsetEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) RuleInsetEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: RuleInsetEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// rule-inset-start
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-inset-start
+pub const RuleInsetStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) RuleInsetStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: RuleInsetStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// rule-interior-inset
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-interior-inset
+pub const RuleInteriorInset = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) RuleInteriorInset { return .{ .raw_ = r }; }
+
+    pub fn format(self: RuleInteriorInset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// rule-overlap
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-overlap
+pub const RuleOverlap = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Row-direction decorations are painted above column-direction decorations.
+    rowOverColumn,
+    ///     /// Column-direction decorations are painted above row-direction decorations.
+    columnOverRow,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) RuleOverlap { return .{ .raw_ = r }; }
+
+    pub fn format(self: RuleOverlap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// rule-style
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-style
+pub const RuleStyle = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) RuleStyle { return .{ .raw_ = r }; }
+
+    pub fn format(self: RuleStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// rule-visibility-items
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-visibility-items
+pub const RuleVisibilityItems = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) RuleVisibilityItems { return .{ .raw_ = r }; }
+
+    pub fn format(self: RuleVisibilityItems, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// rule-width
+/// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-width
+pub const RuleWidth = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) RuleWidth { return .{ .raw_ = r }; }
+
+    pub fn format(self: RuleWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// rx
+/// - **W3C**: https://svgwg.org/svg2-draft/geometry.html#RxProperty
+pub const Rx = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) Rx { return .{ .px_ = v }; }
+    pub fn em(v: f32) Rx { return .{ .em_ = v }; }
+    pub fn rem(v: f32) Rx { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) Rx { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) Rx { return .{ .raw_ = r }; }
+
+    pub fn format(self: Rx, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// ry
+/// - **W3C**: https://svgwg.org/svg2-draft/geometry.html#RyProperty
+pub const Ry = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) Ry { return .{ .px_ = v }; }
+    pub fn em(v: f32) Ry { return .{ .em_ = v }; }
+    pub fn rem(v: f32) Ry { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) Ry { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) Ry { return .{ .raw_ = r }; }
+
+    pub fn format(self: Ry, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scale
+/// - **W3C**: https://drafts.csswg.org/css-transforms-2/#propdef-scale
+pub const Scale = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn percent(v: f32) Scale { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) Scale { return .{ .raw_ = r }; }
+
+    pub fn format(self: Scale, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-behavior
+/// - **W3C**: https://drafts.csswg.org/css-overflow-3/#propdef-scroll-behavior
+pub const ScrollBehavior = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The scroll container is scrolled in an instant fashion.
+    auto,
+    ///     /// The scroll container is scrolled in a smooth fashion using a user-agent-defined timing function over a user-agent-defined period of time. User agents should follow platform conventions, if any.
+    smooth,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ScrollBehavior { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollBehavior, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-initial-target
+/// - **W3C**: https://drafts.csswg.org/css-scroll-snap-2/#propdef-scroll-initial-target
+pub const ScrollInitialTarget = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The element is potentially an initial scroll target for its nearest scroll container ancestor.
+    nearest,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ScrollInitialTarget { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollInitialTarget, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-margin
+/// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin
+pub const ScrollMargin = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ScrollMargin { return .{ .px_ = v }; }
+    pub fn em(v: f32) ScrollMargin { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ScrollMargin { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) ScrollMargin { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollMargin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-margin-block
+/// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-block
+pub const ScrollMarginBlock = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ScrollMarginBlock { return .{ .px_ = v }; }
+    pub fn em(v: f32) ScrollMarginBlock { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ScrollMarginBlock { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) ScrollMarginBlock { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollMarginBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-margin-block-end
+/// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-block-end
+pub const ScrollMarginBlockEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ScrollMarginBlockEnd { return .{ .px_ = v }; }
+    pub fn em(v: f32) ScrollMarginBlockEnd { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ScrollMarginBlockEnd { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) ScrollMarginBlockEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollMarginBlockEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-margin-block-start
+/// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-block-start
+pub const ScrollMarginBlockStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ScrollMarginBlockStart { return .{ .px_ = v }; }
+    pub fn em(v: f32) ScrollMarginBlockStart { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ScrollMarginBlockStart { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) ScrollMarginBlockStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollMarginBlockStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-margin-bottom
+/// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-bottom
+pub const ScrollMarginBottom = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ScrollMarginBottom { return .{ .px_ = v }; }
+    pub fn em(v: f32) ScrollMarginBottom { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ScrollMarginBottom { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) ScrollMarginBottom { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollMarginBottom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-margin-inline
+/// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-inline
+pub const ScrollMarginInline = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ScrollMarginInline { return .{ .px_ = v }; }
+    pub fn em(v: f32) ScrollMarginInline { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ScrollMarginInline { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) ScrollMarginInline { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollMarginInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-margin-inline-end
+/// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-inline-end
+pub const ScrollMarginInlineEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ScrollMarginInlineEnd { return .{ .px_ = v }; }
+    pub fn em(v: f32) ScrollMarginInlineEnd { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ScrollMarginInlineEnd { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) ScrollMarginInlineEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollMarginInlineEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-margin-inline-start
+/// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-inline-start
+pub const ScrollMarginInlineStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ScrollMarginInlineStart { return .{ .px_ = v }; }
+    pub fn em(v: f32) ScrollMarginInlineStart { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ScrollMarginInlineStart { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) ScrollMarginInlineStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollMarginInlineStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-margin-left
+/// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-left
+pub const ScrollMarginLeft = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ScrollMarginLeft { return .{ .px_ = v }; }
+    pub fn em(v: f32) ScrollMarginLeft { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ScrollMarginLeft { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) ScrollMarginLeft { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollMarginLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-margin-right
+/// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-right
+pub const ScrollMarginRight = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ScrollMarginRight { return .{ .px_ = v }; }
+    pub fn em(v: f32) ScrollMarginRight { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ScrollMarginRight { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) ScrollMarginRight { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollMarginRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-margin-top
+/// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-top
+pub const ScrollMarginTop = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ScrollMarginTop { return .{ .px_ = v }; }
+    pub fn em(v: f32) ScrollMarginTop { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ScrollMarginTop { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) ScrollMarginTop { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollMarginTop, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-marker-group
+/// - **W3C**: https://drafts.csswg.org/css-overflow-5/#propdef-scroll-marker-group
+pub const ScrollMarkerGroup = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The scroll container generates a ::scroll-marker-group pseudo-element. When originating from the root element, the generated pseudo-element’s box is the first child of the originating element. Otherwise, its box is an immediate preceding sibling to its originating element.
+    before,
+    ///     /// The scroll container generates a ::scroll-marker-group pseudo-element. When originating from the root element, the generated pseudo-element’s box is the last child of the originating element. Otherwise, its box is an immediate following sibling to its originating element.
+    after,
+    ///     /// The generated ::scroll-marker-group operates in "links" mode, functioning like a navigation list. This is the default mode if omitted.
+    links,
+    ///     /// The generated ::scroll-marker-group operates in "tabs" mode, functioning like a tablist.
+    tabs,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ScrollMarkerGroup { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollMarkerGroup, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-padding
+/// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding
+pub const ScrollPadding = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Indicates that the offset for the corresponding edge of the scrollport is UA-determined. This should generally default to a used length of 0px, but UAs may use heuristics to detect when a non-zero value is more appropriate. For example, a UA could detect when a position:fixed element is being used as an opaque unscrollable “header” that obscures the content below it, and resolve the top offset to the height of that element so that a “page down” operation (such as pressing PgDn) automatically scrolls by one “visible page” of content.
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ScrollPadding { return .{ .px_ = v }; }
+    pub fn em(v: f32) ScrollPadding { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ScrollPadding { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) ScrollPadding { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) ScrollPadding { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollPadding, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-padding-block
+/// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-block
+pub const ScrollPaddingBlock = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Indicates that the offset for the corresponding edge of the scrollport is UA-determined. This should generally default to a used length of 0px, but UAs may use heuristics to detect when a non-zero value is more appropriate. For example, a UA could detect when a position:fixed element is being used as an opaque unscrollable “header” that obscures the content below it, and resolve the top offset to the height of that element so that a “page down” operation (such as pressing PgDn) automatically scrolls by one “visible page” of content.
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ScrollPaddingBlock { return .{ .px_ = v }; }
+    pub fn em(v: f32) ScrollPaddingBlock { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ScrollPaddingBlock { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) ScrollPaddingBlock { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) ScrollPaddingBlock { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollPaddingBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-padding-block-end
+/// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-block-end
+pub const ScrollPaddingBlockEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Indicates that the offset for the corresponding edge of the scrollport is UA-determined. This should generally default to a used length of 0px, but UAs may use heuristics to detect when a non-zero value is more appropriate. For example, a UA could detect when a position:fixed element is being used as an opaque unscrollable “header” that obscures the content below it, and resolve the top offset to the height of that element so that a “page down” operation (such as pressing PgDn) automatically scrolls by one “visible page” of content.
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ScrollPaddingBlockEnd { return .{ .px_ = v }; }
+    pub fn em(v: f32) ScrollPaddingBlockEnd { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ScrollPaddingBlockEnd { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) ScrollPaddingBlockEnd { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) ScrollPaddingBlockEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollPaddingBlockEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-padding-block-start
+/// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-block-start
+pub const ScrollPaddingBlockStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Indicates that the offset for the corresponding edge of the scrollport is UA-determined. This should generally default to a used length of 0px, but UAs may use heuristics to detect when a non-zero value is more appropriate. For example, a UA could detect when a position:fixed element is being used as an opaque unscrollable “header” that obscures the content below it, and resolve the top offset to the height of that element so that a “page down” operation (such as pressing PgDn) automatically scrolls by one “visible page” of content.
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ScrollPaddingBlockStart { return .{ .px_ = v }; }
+    pub fn em(v: f32) ScrollPaddingBlockStart { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ScrollPaddingBlockStart { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) ScrollPaddingBlockStart { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) ScrollPaddingBlockStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollPaddingBlockStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-padding-bottom
+/// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-bottom
+pub const ScrollPaddingBottom = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ScrollPaddingBottom { return .{ .px_ = v }; }
+    pub fn em(v: f32) ScrollPaddingBottom { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ScrollPaddingBottom { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) ScrollPaddingBottom { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) ScrollPaddingBottom { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollPaddingBottom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-padding-inline
+/// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-inline
+pub const ScrollPaddingInline = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Indicates that the offset for the corresponding edge of the scrollport is UA-determined. This should generally default to a used length of 0px, but UAs may use heuristics to detect when a non-zero value is more appropriate. For example, a UA could detect when a position:fixed element is being used as an opaque unscrollable “header” that obscures the content below it, and resolve the top offset to the height of that element so that a “page down” operation (such as pressing PgDn) automatically scrolls by one “visible page” of content.
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ScrollPaddingInline { return .{ .px_ = v }; }
+    pub fn em(v: f32) ScrollPaddingInline { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ScrollPaddingInline { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) ScrollPaddingInline { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) ScrollPaddingInline { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollPaddingInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-padding-inline-end
+/// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-inline-end
+pub const ScrollPaddingInlineEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Indicates that the offset for the corresponding edge of the scrollport is UA-determined. This should generally default to a used length of 0px, but UAs may use heuristics to detect when a non-zero value is more appropriate. For example, a UA could detect when a position:fixed element is being used as an opaque unscrollable “header” that obscures the content below it, and resolve the top offset to the height of that element so that a “page down” operation (such as pressing PgDn) automatically scrolls by one “visible page” of content.
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ScrollPaddingInlineEnd { return .{ .px_ = v }; }
+    pub fn em(v: f32) ScrollPaddingInlineEnd { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ScrollPaddingInlineEnd { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) ScrollPaddingInlineEnd { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) ScrollPaddingInlineEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollPaddingInlineEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-padding-inline-start
+/// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-inline-start
+pub const ScrollPaddingInlineStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Indicates that the offset for the corresponding edge of the scrollport is UA-determined. This should generally default to a used length of 0px, but UAs may use heuristics to detect when a non-zero value is more appropriate. For example, a UA could detect when a position:fixed element is being used as an opaque unscrollable “header” that obscures the content below it, and resolve the top offset to the height of that element so that a “page down” operation (such as pressing PgDn) automatically scrolls by one “visible page” of content.
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ScrollPaddingInlineStart { return .{ .px_ = v }; }
+    pub fn em(v: f32) ScrollPaddingInlineStart { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ScrollPaddingInlineStart { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) ScrollPaddingInlineStart { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) ScrollPaddingInlineStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollPaddingInlineStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-padding-left
+/// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-left
+pub const ScrollPaddingLeft = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ScrollPaddingLeft { return .{ .px_ = v }; }
+    pub fn em(v: f32) ScrollPaddingLeft { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ScrollPaddingLeft { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) ScrollPaddingLeft { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) ScrollPaddingLeft { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollPaddingLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-padding-right
+/// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-right
+pub const ScrollPaddingRight = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ScrollPaddingRight { return .{ .px_ = v }; }
+    pub fn em(v: f32) ScrollPaddingRight { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ScrollPaddingRight { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) ScrollPaddingRight { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) ScrollPaddingRight { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollPaddingRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-padding-top
+/// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-top
+pub const ScrollPaddingTop = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ScrollPaddingTop { return .{ .px_ = v }; }
+    pub fn em(v: f32) ScrollPaddingTop { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ScrollPaddingTop { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) ScrollPaddingTop { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) ScrollPaddingTop { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollPaddingTop, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-snap-align
+/// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-snap-align
+pub const ScrollSnapAlign = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Start alignment of this box’s scroll snap area within the scroll container’s snapport is a snap position in the specified axis.
+    start,
+    ///     /// End alignment of this box’s scroll snap area within the scroll container’s snapport is a snap position in the specified axis.
+    end,
+    ///     /// Center alignment of this box’s scroll snap area within the scroll container’s snapport is a snap position in the specified axis.
+    center,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ScrollSnapAlign { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollSnapAlign, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-snap-stop
+/// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-snap-stop
+pub const ScrollSnapStop = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The scroll container may pass over a snap position defined by this element during the execution of a scrolling operation.
+    normal,
+    ///     /// The scroll container must not pass over a snap position defined by this element during the execution of a scrolling operation; it must instead snap to the first of this element’s snap positions.
+    always,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ScrollSnapStop { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollSnapStop, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-snap-type
+/// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-snap-type
+pub const ScrollSnapType = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The scroll container snaps to snap positions in its horizontal axis only.
+    x,
+    ///     /// The scroll container snaps to snap positions in its vertical axis only.
+    y,
+    ///     /// The scroll container snaps to snap positions in its block axis only.
+    block,
+    ///     /// The scroll container snaps to snap positions in its inline axis only.
+    inline_,
+    ///     /// The scroll container snaps to snap positions in both of its axes independently (potentially snapping to different elements in each axis).
+    both,
+    ///     /// If specified on a scroll container, the scroll container is required to be snapped to a snap position when there are no active scrolling operations. If a valid snap position exists then the scroll container must snap at the termination of a scroll (if none exist then no snapping occurs).
+    mandatory,
+    ///     /// If specified on a scroll container, the scroll container may snap to a snap position at the termination of a scroll, at the discretion of the UA given the parameters of the scroll.
+    proximity,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ScrollSnapType { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollSnapType, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-target-group
+/// - **W3C**: https://drafts.csswg.org/css-overflow-5/#propdef-scroll-target-group
+pub const ScrollTargetGroup = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The element establishes a scroll marker group container forming a scroll marker group containing all of the scroll marker elements for which this is the nearest ancestor scroll marker group container.
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ScrollTargetGroup { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollTargetGroup, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-timeline
+/// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-scroll-timeline
+pub const ScrollTimeline = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ScrollTimeline { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollTimeline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-timeline-axis
+/// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-scroll-timeline-axis
+pub const ScrollTimelineAxis = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Specifies to use the measure of progress along the block axis of the scroll container. (Default.)
+    block,
+    ///     /// Specifies to use the measure of progress along the inline axis of the scroll container.
+    inline_,
+    ///     /// Specifies to use the measure of progress along the horizontal axis of the scroll container.
+    x,
+    ///     /// Specifies to use the measure of progress along the vertical axis of the scroll container.
+    y,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ScrollTimelineAxis { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollTimelineAxis, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scroll-timeline-name
+/// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-scroll-timeline-name
+pub const ScrollTimelineName = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ScrollTimelineName { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollTimelineName, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scrollbar-color
+/// - **W3C**: https://drafts.csswg.org/css-scrollbars-1/#propdef-scrollbar-color
+pub const ScrollbarColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The user agent determines the colors of the scrollbar. It should follow platform conventions, but may adjust the colors in accordance with color-scheme or other contextual information to better suit the page.
+    auto,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) ScrollbarColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) ScrollbarColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) ScrollbarColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollbarColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scrollbar-gutter
+/// - **W3C**: https://drafts.csswg.org/css-overflow-3/#propdef-scrollbar-gutter
+pub const ScrollbarGutter = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Classic scrollbars consume space by creating a scrollbar gutter when overflow is scroll, or when overflow is auto and the box is overflowing. Overlay scrollbars do not consume space.
+    auto,
+    ///     /// The scrollbar gutter is present for classic scrollbars when overflow is hidden, scroll, or auto, regardless of whether the box is actually overflowing. Overlay scrollbars do not consume space.
+    stable,
+    ///     /// If a scrollbar gutter would be present on one of the inline start edge or the inline end edge of the box, another scrollbar gutter must be present on the opposite edge as well.
+    bothEdges,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ScrollbarGutter { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollbarGutter, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// scrollbar-width
+/// - **W3C**: https://drafts.csswg.org/css-scrollbars-1/#propdef-scrollbar-width
+pub const ScrollbarWidth = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Implementations must use the default scrollbar width.
+    auto,
+    ///     /// Implementations should use thinner scrollbars than auto. This may mean a thin variant of scrollbar provided by the platform, or a custom scrollbar thinner than the default platform scrollbar. The scrollbar must nonetheless remain wide enough to be usable. (Implementers may wish to consult WCAG 2.1 SC 2.5.5 Target Size. [WCAG21]) User agents may disregard this value and treat it as auto, for instance when the user has indicated discomfort for thin scrollbars through some UA or OS setting. (User agents are encouraged to provide such a setting.)
+    thin,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ScrollbarWidth { return .{ .raw_ = r }; }
+
+    pub fn format(self: ScrollbarWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// shape-image-threshold
+/// - **W3C**: https://drafts.csswg.org/css-shapes-1/#propdef-shape-image-threshold
+pub const ShapeImageThreshold = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn percent(v: f32) ShapeImageThreshold { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) ShapeImageThreshold { return .{ .raw_ = r }; }
+
+    pub fn format(self: ShapeImageThreshold, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// shape-inside
+/// - **W3C**: https://drafts.csswg.org/css-shapes-2/#propdef-shape-inside
+pub const ShapeInside = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The shape is computed based on the content box of the element.
+    auto,
+    ///     /// The shape is computed based on the shape defined by the shape-outside and shape-margin properties.
+    outsideShape,
+    shapeBox,
+    ///     /// The shape is computed based on the shape of the display as described in css-round-display.
+    display,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ShapeInside { return .{ .raw_ = r }; }
+
+    pub fn format(self: ShapeInside, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// shape-margin
+/// - **W3C**: https://drafts.csswg.org/css-shapes-1/#propdef-shape-margin
+pub const ShapeMargin = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ShapeMargin { return .{ .px_ = v }; }
+    pub fn em(v: f32) ShapeMargin { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ShapeMargin { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) ShapeMargin { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) ShapeMargin { return .{ .raw_ = r }; }
+
+    pub fn format(self: ShapeMargin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// shape-outside
+/// - **W3C**: https://drafts.csswg.org/css-shapes-1/#propdef-shape-outside
+pub const ShapeOutside = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    contentBox,
+    paddingBox,
+    borderBox,
+    marginBox,
+    halfBorderBox,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ShapeOutside { return .{ .raw_ = r }; }
+
+    pub fn format(self: ShapeOutside, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// shape-padding
+/// - **W3C**: https://drafts.csswg.org/css-shapes-2/#propdef-shape-padding
+pub const ShapePadding = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ShapePadding { return .{ .px_ = v }; }
+    pub fn em(v: f32) ShapePadding { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ShapePadding { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) ShapePadding { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) ShapePadding { return .{ .raw_ = r }; }
+
+    pub fn format(self: ShapePadding, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// shape-rendering
+/// - **W3C**: https://svgwg.org/svg2-draft/painting.html#ShapeRenderingProperty
+pub const ShapeRendering = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    optimizeSpeed,
+    crispEdges,
+    geometricPrecision,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ShapeRendering { return .{ .raw_ = r }; }
+
+    pub fn format(self: ShapeRendering, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// shape-subtract
+/// - **W3C**: https://svgwg.org/svg2-draft/text.html#ShapesubtractProperty
+pub const ShapeSubtract = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ShapeSubtract { return .{ .raw_ = r }; }
+
+    pub fn format(self: ShapeSubtract, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// slider-orientation
+/// - **W3C**: https://drafts.csswg.org/css-forms-1/#propdef-slider-orientation
+pub const SliderOrientation = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The slider-like control orientation is defined by the writing mode and direction.
+    auto,
+    ///     /// The slider-like control is rendered horizontally and ::slider-fill is left-aligned within the control.
+    leftToRight,
+    ///     /// The slider-like control is rendered horizontally and ::slider-fill is right-aligned within the control.
+    rightToLeft,
+    ///     /// The slider-like control is rendered vertically and ::slider-fill is top-aligned within the control.
+    topToBottom,
+    ///     /// The slider-like control is rendered vertically and ::slider-fill is bottom-aligned within the control.
+    bottomToTop,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) SliderOrientation { return .{ .raw_ = r }; }
+
+    pub fn format(self: SliderOrientation, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// spatial-navigation-action
+/// - **W3C**: https://drafts.csswg.org/css-nav-1/#propdef-spatial-navigation-action
+pub const SpatialNavigationAction = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// If there are visible focusable elements within the scroll container in the direction requested, the closest one becomes focused. Otherwise, the scroll container is scrolled in the direction requested.
+    auto,
+    ///     /// The focus is moved to the nearest focusable element within the scroll container, regardless of whether it is visible. If there are none, the scroll container is not scrolled, and the search continues up the ancestry chain instead.
+    focus,
+    ///     /// If the currently focused element is not itself a scroll container, this value on an ancestor scroll container has the same effect as auto. If the currently focused element is a scroll container, it is scrolled in the direction requested without changing which element is in focus, regardless of the presence of focusable descendants.
+    scroll,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) SpatialNavigationAction { return .{ .raw_ = r }; }
+
+    pub fn format(self: SpatialNavigationAction, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// spatial-navigation-contain
+/// - **W3C**: https://drafts.csswg.org/css-nav-1/#propdef-spatial-navigation-contain
+pub const SpatialNavigationContain = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// If the element is a scroll container then it establishes a spatial navigation container, otherwise it does not.
+    auto,
+    ///     /// The element establishes a spatial navigation container
+    contain,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) SpatialNavigationContain { return .{ .raw_ = r }; }
+
+    pub fn format(self: SpatialNavigationContain, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// spatial-navigation-function
+/// - **W3C**: https://drafts.csswg.org/css-nav-1/#propdef-spatial-navigation-function
+pub const SpatialNavigationFunction = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Moves the focus with the default focus navigation algorithm defined by UA. In general, the focus moves to the element with the closest distance calculated by finding the shortest distance.
+    normal,
+    ///     /// Moves the focus to the element which is aligned most in the navigation direction. If there are more than one aligned candidates in the navigation direction, select the element with the closest distance along the axis which corresponds to the navigation direction. In case of multiple elements with the same distance, select the element with the minimum amount of alignment. Else if there isn’t any aligned candidate in a given direction, select the element with the closest distance along the axis which corresponds to the navigation direction. In case of multiple elements with the same distance, select the element with the minimum distance along the axis which is orthogonal to the navigation direction.
+    grid,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) SpatialNavigationFunction { return .{ .raw_ = r }; }
+
+    pub fn format(self: SpatialNavigationFunction, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// speak
+/// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-speak
+pub const Speak = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Resolves to a computed value of never when display is none, otherwise resolves to a computed value of auto. The used value of a computed auto is equivalent to always if visibility is visible and to never otherwise.
+    auto,
+    ///     /// This value causes an element (including pauses, cues, rests and actual content) to not be rendered (i.e., the element has no effect in the aural dimension).
+    never,
+    ///     /// The element is rendered aurally (regardless of its display value, or the display or speak values of its ancestors).
+    always,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Speak { return .{ .raw_ = r }; }
+
+    pub fn format(self: Speak, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// speak-as
+/// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-speak-as
+pub const SpeakAs = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Uses language-dependent pronunciation rules for rendering the element’s content. For example, punctuation is not spoken as-is, but instead rendered naturally as appropriate pauses.
+    normal,
+    ///     /// Spells the text one letter at a time (useful for acronyms and abbreviations). In languages where accented characters are rare, it is permitted to drop accents in favor of alternative unaccented spellings. As an example, in English, the word “rôle” can also be written as “role”. A conforming implementation would thus be able to spell-out “rôle” as “R O L E”.
+    spellOut,
+    ///     /// Speak numbers one digit at a time, for instance, “twelve” would be spoken as “one two”, and “31” as “three one”.
+    digits,
+    ///     /// Punctuation such as semicolons, braces, and so on is named aloud (i.e. spoken literally) rather than rendered naturally as appropriate pauses.
+    literalPunctuation,
+    ///     /// Punctuation is not rendered: neither spoken nor rendered as pauses.
+    noPunctuation,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) SpeakAs { return .{ .raw_ = r }; }
+
+    pub fn format(self: SpeakAs, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// stop-color
+/// - **W3C**: https://svgwg.org/svg2-draft/pservers.html#StopColorProperty
+pub const StopColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) StopColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) StopColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) StopColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: StopColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// stop-opacity
+/// - **W3C**: https://svgwg.org/svg2-draft/pservers.html#StopOpacityProperty
+pub const StopOpacity = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) StopOpacity { return .{ .raw_ = r }; }
+
+    pub fn format(self: StopOpacity, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// string-set
+/// - **W3C**: https://drafts.csswg.org/css-content-3/#propdef-string-set
+pub const StringSet = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) StringSet { return .{ .raw_ = r }; }
+
+    pub fn format(self: StringSet, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// stroke
+/// - **W3C**: https://svgwg.org/svg2-draft/painting.html#StrokeProperty
+pub const Stroke = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    child,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Stroke { return .{ .raw_ = r }; }
+
+    pub fn format(self: Stroke, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// stroke-align
+/// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-align
+pub const StrokeAlign = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The stroke for each subpath is centered on the outline.
+    center,
+    ///     /// The stroke for each subpath lies on the “inside” of the outline (into the fill area). The stroke-linejoin property must be ignored. Why is stroke-linejoin ignored? It’s still needed for interior corners.
+    inset,
+    ///     /// The stroke for each subpath lies on the “outside” of the outline (outside the fill area).
+    outset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) StrokeAlign { return .{ .raw_ = r }; }
+
+    pub fn format(self: StrokeAlign, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// stroke-alignment
+/// - **W3C**: https://svgwg.org/specs/strokes/#StrokeAlignmentProperty
+pub const StrokeAlignment = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    center,
+    inner,
+    outer,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) StrokeAlignment { return .{ .raw_ = r }; }
+
+    pub fn format(self: StrokeAlignment, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// stroke-break
+/// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-break
+pub const StrokeBreak = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    boundingBox,
+    slice,
+    clone,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) StrokeBreak { return .{ .raw_ = r }; }
+
+    pub fn format(self: StrokeBreak, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// stroke-color
+/// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-color
+pub const StrokeColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) StrokeColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) StrokeColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) StrokeColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: StrokeColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// stroke-dash-corner
+/// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-dash-corner
+pub const StrokeDashCorner = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) StrokeDashCorner { return .{ .px_ = v }; }
+    pub fn em(v: f32) StrokeDashCorner { return .{ .em_ = v }; }
+    pub fn rem(v: f32) StrokeDashCorner { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) StrokeDashCorner { return .{ .raw_ = r }; }
+
+    pub fn format(self: StrokeDashCorner, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// stroke-dash-justify
+/// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-dash-justify
+pub const StrokeDashJustify = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Indicates that when the dash pattern does not fit into a subpath a whole number times, the dashes or gaps (or both) will be lengthened so that it does.
+    stretch,
+    ///     /// Indicates that when the dash pattern does not fit into a subpath a whole number times, the dashes or gaps (or both) will be shortened so that it does.
+    compress,
+    ///     /// Indicates that when a dash pattern is to be stretched or compressed, the length of the dashes will be adjusted.
+    dashes,
+    ///     /// Indicates that when a dash pattern is to be stretched or compressed, the length of the gaps will be adjusted.
+    gaps,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) StrokeDashJustify { return .{ .raw_ = r }; }
+
+    pub fn format(self: StrokeDashJustify, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// stroke-dashadjust
+/// - **W3C**: https://svgwg.org/specs/strokes/#StrokeDashadjustProperty
+pub const StrokeDashadjust = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    stretch,
+    compress,
+    dashes,
+    gaps,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) StrokeDashadjust { return .{ .raw_ = r }; }
+
+    pub fn format(self: StrokeDashadjust, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// stroke-dasharray
+/// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-dasharray
+pub const StrokeDasharray = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) StrokeDasharray { return .{ .px_ = v }; }
+    pub fn em(v: f32) StrokeDasharray { return .{ .em_ = v }; }
+    pub fn rem(v: f32) StrokeDasharray { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) StrokeDasharray { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) StrokeDasharray { return .{ .raw_ = r }; }
+
+    pub fn format(self: StrokeDasharray, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// stroke-dashcorner
+/// - **W3C**: https://svgwg.org/specs/strokes/#StrokeDashcornerProperty
+pub const StrokeDashcorner = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) StrokeDashcorner { return .{ .px_ = v }; }
+    pub fn em(v: f32) StrokeDashcorner { return .{ .em_ = v }; }
+    pub fn rem(v: f32) StrokeDashcorner { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) StrokeDashcorner { return .{ .raw_ = r }; }
+
+    pub fn format(self: StrokeDashcorner, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// stroke-dashoffset
+/// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-dashoffset
+pub const StrokeDashoffset = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) StrokeDashoffset { return .{ .px_ = v }; }
+    pub fn em(v: f32) StrokeDashoffset { return .{ .em_ = v }; }
+    pub fn rem(v: f32) StrokeDashoffset { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) StrokeDashoffset { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) StrokeDashoffset { return .{ .raw_ = r }; }
+
+    pub fn format(self: StrokeDashoffset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// stroke-image
+/// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-image
+pub const StrokeImage = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    child,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) StrokeImage { return .{ .raw_ = r }; }
+
+    pub fn format(self: StrokeImage, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// stroke-linecap
+/// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-linecap
+pub const StrokeLinecap = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The stroke for each subpath does not extend beyond its two endpoints. (A zero length subpath will therefore not have any stroke.)
+    butt,
+    ///     /// At each end of each subpath, the stroke is extended by a half circle with a radius equal to half the stroke width. (The stroke for a zero-length subpath is a full circle centered at the subpath’s point.)
+    round,
+    ///     /// At the end of each subpath, the stroke is extended by a rectangle with the same width as the stroke width and whose length is half of the stroke width. (The stroke for a zero-length subpath is a square with side length equal to the stroke width, centered at the subpath’s point, and oriented such that two of its sides are parallel to the effective tangent at that subpath’s point. See § 4.6 Computing the Shape of the Stroke for details on how to determine the tangent at a zero-length subpath.) Adding a rectangle to the end of dashes on a curved outline looks bad. It should just extend the dash by stroke-width/2, following the outline.
+    square,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) StrokeLinecap { return .{ .raw_ = r }; }
+
+    pub fn format(self: StrokeLinecap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// stroke-linejoin
+/// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-linejoin
+pub const StrokeLinejoin = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The stroke extends the minimal amount past the corner necessary to form a convex corner. This acts identically to miter, but forces stroke-miterlimit to behave as if it had its minimum value of 1.
+    crop,
+    ///     /// An arcs corner is used to join path segments. The arcs shape is formed by extending the outer edges of the stroke at the join point with arcs that have the same curvature as the outer edges at the join point.
+    arcs,
+    ///     /// A sharp corner is used to join path segments. The corner is formed by extending the outer edges of the stroke at the tangents of the path segments until they intersect.
+    miter,
+    ///     /// The corner is cropped at the stroke-miterlimit by the perpendicular to its diagonal.
+    bevel,
+    ///     /// The corner is cropped as for bevel, and a filled arc tangent to the truncated stroke edges is appended to round the corner.
+    round,
+    ///     /// When the stroke-miterlimit is exceeded, this behaves as if crop bevel were specified. Can we just remove fallback? It’s a stupid value, useful only because we didn’t have the clip-at-miterlimit behavior in SVG1. Question is if people are mostly just *accidentally* getting the bevel behavior right now, and would be okay with their joins extending up to the miterlimit and only getting the excess corners clipped, or if they actually wanted the discontinuous behavior currently specified. The breakpoint is between 29 and 30 degrees.
+    fallback,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) StrokeLinejoin { return .{ .raw_ = r }; }
+
+    pub fn format(self: StrokeLinejoin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// stroke-miterlimit
+/// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-miterlimit
+pub const StrokeMiterlimit = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) StrokeMiterlimit { return .{ .raw_ = r }; }
+
+    pub fn format(self: StrokeMiterlimit, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// stroke-opacity
+/// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-opacity
+pub const StrokeOpacity = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) StrokeOpacity { return .{ .raw_ = r }; }
+
+    pub fn format(self: StrokeOpacity, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// stroke-origin
+/// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-origin
+pub const StrokeOrigin = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Use the same stroke positioning area as the parent. If it has no parent, use the initial containing block.
+    matchParent,
+    ///     /// For SVG shapes or SVG text, use the object bounding box of the element. For CSS boxes, use the bounding box of the text glyph outlines of the element and all in-flow or floated descendants.
+    fillBox,
+    ///     /// For SVG shapes or SVG text, use the stroke bounding box of the element. For CSS boxes, use the bounding box of the text glyph stroke outlines of the element and all in-flow or floated descendants.
+    strokeBox,
+    ///     /// Use the box’s own content-box/padding-box/border-box as the stroke positioning area. For SVG shapes, content-box and padding-box are treated as fill-box, while border-box is treated as stroke-box.
+    contentBox,
+    ///     /// Use the box’s own content-box/padding-box/border-box as the stroke positioning area. For SVG shapes, content-box and padding-box are treated as fill-box, while border-box is treated as stroke-box.
+    paddingBox,
+    ///     /// Use the box’s own content-box/padding-box/border-box as the stroke positioning area. For SVG shapes, content-box and padding-box are treated as fill-box, while border-box is treated as stroke-box.
+    borderBox,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) StrokeOrigin { return .{ .raw_ = r }; }
+
+    pub fn format(self: StrokeOrigin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// stroke-position
+/// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-position
+pub const StrokePosition = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    left,
+    center,
+    right,
+    top,
+    bottom,
+    xStart,
+    xEnd,
+    yStart,
+    yEnd,
+    blockStart,
+    blockEnd,
+    inlineStart,
+    inlineEnd,
+    start,
+    end,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) StrokePosition { return .{ .px_ = v }; }
+    pub fn em(v: f32) StrokePosition { return .{ .em_ = v }; }
+    pub fn rem(v: f32) StrokePosition { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) StrokePosition { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) StrokePosition { return .{ .raw_ = r }; }
+
+    pub fn format(self: StrokePosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// stroke-repeat
+/// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-repeat
+pub const StrokeRepeat = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    repeatX,
+    repeatY,
+    repeatBlock,
+    repeatInline,
+    repeat,
+    space,
+    round,
+    noRepeat,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) StrokeRepeat { return .{ .raw_ = r }; }
+
+    pub fn format(self: StrokeRepeat, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// stroke-size
+/// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-size
+pub const StrokeSize = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    cover,
+    contain,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) StrokeSize { return .{ .px_ = v }; }
+    pub fn em(v: f32) StrokeSize { return .{ .em_ = v }; }
+    pub fn rem(v: f32) StrokeSize { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) StrokeSize { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) StrokeSize { return .{ .raw_ = r }; }
+
+    pub fn format(self: StrokeSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// stroke-width
+/// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-width
+pub const StrokeWidth = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) StrokeWidth { return .{ .px_ = v }; }
+    pub fn em(v: f32) StrokeWidth { return .{ .em_ = v }; }
+    pub fn rem(v: f32) StrokeWidth { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) StrokeWidth { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) StrokeWidth { return .{ .raw_ = r }; }
+
+    pub fn format(self: StrokeWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// tab-size
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-tab-size
+pub const TabSize = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) TabSize { return .{ .px_ = v }; }
+    pub fn em(v: f32) TabSize { return .{ .em_ = v }; }
+    pub fn rem(v: f32) TabSize { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) TabSize { return .{ .raw_ = r }; }
+
+    pub fn format(self: TabSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// table-layout
+/// - **W3C**: https://drafts.csswg.org/css-tables-3/#propdef-table-layout
+pub const TableLayout = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    fixed,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TableLayout { return .{ .raw_ = r }; }
+
+    pub fn format(self: TableLayout, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-align
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-align
+pub const TextAlign = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Inline-level content is aligned to the start edge of the line box.
+    start,
+    ///     /// Inline-level content is aligned to the end edge of the line box.
+    end,
+    ///     /// Inline-level content is aligned to the line-left edge of the line box. (In vertical writing modes, this can be either the physical top or bottom, depending on writing-mode.) [CSS-WRITING-MODES-4]
+    left,
+    ///     /// Inline-level content is aligned to the line-right edge of the line box. (In vertical writing modes, this can be either the physical top or bottom, depending on writing-mode.) [CSS-WRITING-MODES-4]
+    right,
+    ///     /// Inline-level content is centered within the line box.
+    center,
+    ///     /// Text is justified according to the method specified by the text-justify property, in order to exactly fill the line box. Unless otherwise specified by text-align-last, the last line before a forced break or the end of the block is start-aligned.
+    justify,
+    ///     /// This value behaves the same as inherit (computes to its parent’s computed value) except that an inherited value of start or end is interpreted against the parent’s direction value and results in a computed value of either left or right. Computes to start when specified on the root element. When specified on the text-align shorthand, sets both text-align-all and text-align-last to match-parent.
+    matchParent,
+    ///     /// Sets both text-align-all and text-align-last to justify, forcing the last line to justify as well.
+    justifyAll,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextAlign { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextAlign, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-align-all
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-align-all
+pub const TextAlignAll = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    start,
+    end,
+    left,
+    right,
+    center,
+    justify,
+    matchParent,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextAlignAll { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextAlignAll, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-align-last
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-align-last
+pub const TextAlignLast = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// If auto is specified, content on the affected line is aligned per text-align-all unless text-align-all is set to justify, in which case it is start-aligned. All other values are interpreted as described for text-align.
+    auto,
+    start,
+    end,
+    left,
+    right,
+    center,
+    justify,
+    matchParent,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextAlignLast { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextAlignLast, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-anchor
+/// - **W3C**: https://svgwg.org/svg2-draft/text.html#TextAnchorProperty
+pub const TextAnchor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    start,
+    middle,
+    end,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextAnchor { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextAnchor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-autospace
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-autospace
+pub const TextAutospace = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Same behavior as ideograph-alpha ideograph-numeric.
+    normal,
+    ///     /// No automatic space is inserted.
+    noAutospace,
+    ///     /// Creates extra spacing between runs of ideographs and non-ideographic letters, see § 8.4.1 Inter-script Spacing.
+    ideographAlpha,
+    ///     /// Creates extra spacing between runs of ideographs and non-ideographic numerals, see § 8.4.1 Inter-script Spacing.
+    ideographNumeric,
+    ///     /// Creates extra non-breaking spacing around punctuation as required by language-specific typographic conventions. In this level, if the element’s content language is French, narrow no-break space (U+202F) and no-break space (U+00A0) is inserted where required by French typographic guidelines. Otherwise this value has no effect. However future specifications may add automatic spacing behavior for other languages.
+    punctuation,
+    ///     /// The specified spacing is automatically inserted if there are no space characters of any kind (Unicode general category Z) already there. If neither insert nor replace are specified, the behavior is the same as insert.
+    insert,
+    ///     /// The specified spacing is automatically inserted even if there is already a space (U+0020) at that point; additionally, the space (U+0020) is removed. Other types of space characters (Unicode general category Z) suppress automatic spacing, as for insert.
+    replace,
+    ///     /// The user agent chooses a set of typographically high quality spacing values. Different user agents running on different platforms may pick different values.
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextAutospace { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextAutospace, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-box
+/// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-text-box
+pub const TextBox = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// If the single keyword normal is specified, it sets text-box-trim to none and text-box-edge to auto. Otherwise, omitting the text-box-trim value sets it to trim-both (not the initial value), while omitting the text-box-edge value sets it to auto (the initial value).
+    normal,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextBox { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextBox, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-box-edge
+/// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-text-box-edge
+pub const TextBoxEdge = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// This property specifies the metrics to use for text-box-trim effects. Values have the same meanings as for line-fit-edge; the auto keyword uses the value of line-fit-edge, interpreting leading (the initial value) as text.
+    auto,
+    text,
+    ideographic,
+    ideographicInk,
+    cap,
+    ex,
+    alphabetic,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextBoxEdge { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextBoxEdge, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-box-trim
+/// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-text-box-trim
+pub const TextBoxTrim = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// For block containers and column boxes: trim the block-start side of the first formatted line to the specified metric of its root inline box. If there is no such line, or if there is intervening non-zero padding or borders, there is no effect. For inline boxes: trims the block-start side of the box to match its content edge to the metric specified by text-box-edge.
+    trimStart,
+    ///     /// For block containers and column boxes: trim the block-end side of the last formatted line to the specified metric of its root inline box. If there is no such line, or if there is intervening non-zero padding or borders, there is no effect. For inline boxes: trims the block-end side of the box to match its content edge to the metric specified by text-box-edge.
+    trimEnd,
+    ///     /// Specifies the behavior of trim-start and trim-end simultaneously.
+    trimBoth,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextBoxTrim { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextBoxTrim, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-combine-upright
+/// - **W3C**: https://drafts.csswg.org/css-writing-modes-4/#propdef-text-combine-upright
+pub const TextCombineUpright = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Attempt to typeset horizontally all consecutive typographic character units within the box and text run such that they take up the space of a single typographic character unit within the vertical line box.
+    all,
+    digits,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextCombineUpright { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextCombineUpright, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-decoration
+/// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration
+pub const TextDecoration = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) TextDecoration { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) TextDecoration { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) TextDecoration { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextDecoration, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-decoration-color
+/// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-color
+pub const TextDecorationColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) TextDecorationColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) TextDecorationColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) TextDecorationColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextDecorationColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-decoration-inset
+/// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-inset
+pub const TextDecorationInset = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The UA chooses an inset amount that ensures that if two identical underlined elements appear side-by-side they do not appear to have a single underline. (This is important in Chinese, where underlining is a form of punctuation.) text-decoration-inset: auto for <u>石井</u><u>艾俐俐</u>
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) TextDecorationInset { return .{ .px_ = v }; }
+    pub fn em(v: f32) TextDecorationInset { return .{ .em_ = v }; }
+    pub fn rem(v: f32) TextDecorationInset { return .{ .rem_ = v }; }
+    pub fn raw(r: []const u8) TextDecorationInset { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextDecorationInset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-decoration-line
+/// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-line
+pub const TextDecorationLine = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Each line of text is underlined.
+    underline,
+    ///     /// Each line of text has a line over it (i.e. on the opposite side from an underline).
+    overline,
+    ///     /// Each line of text has a line through the middle.
+    lineThrough,
+    ///     /// The text blinks (alternates between visible and invisible). Conforming user agents may simply not blink the text. Note that not blinking the text is one technique to satisfy checkpoint 3.3 of WAI-UAAG. This value is deprecated in favor of Animations [CSS3-ANIMATIONS].
+    blink,
+    ///     /// This value indicates the type of text decoration used by the user agent to highlight spelling mistakes. Its appearance is UA-defined, and may be platform-dependent.
+    spellingError,
+    ///     /// This value indicates the type of text decoration used by the user agent to highlight grammar mistakes. Its appearance is UA defined, and may be platform-dependent.
+    grammarError,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextDecorationLine { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextDecorationLine, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-decoration-skip
+/// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip
+pub const TextDecorationSkip = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The text-decoration-skip property and its sub-properties (text-decoration-skip-self, text-decoration-skip-box, text-decoration-skip-spaces, text-decoration-skip-ink) control interruptions in line decorations for which the element or an ancestor is the decorating box. The none value sets all sub-properties to none, and the auto value sets all sub-properties to their initial values.
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextDecorationSkip { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextDecorationSkip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-decoration-skip-box
+/// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip-box
+pub const TextDecorationSkipBox = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// When drawing text decoration lines applied to an ancestor decorating box, skip over the box’s own margin, border, and padding areas and only draw line decorations within its content area. This value only has an effect for decorations imposed by an ancestor; a decorating box never draws over its own box decoration.
+    all,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextDecorationSkipBox { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextDecorationSkipBox, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-decoration-skip-ink
+/// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip-ink
+pub const TextDecorationSkipInk = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// UAs may interrupt underlines and overlines where the line would cross glyph ink and to some distance to either side of the glyph outline. UAs should consider the script of the text (see note below) when determining whether to apply ink-skipping behavior to a given range of content.
+    auto,
+    ///     /// UAs must interrupt underlines and overlines where the line would cross glyph ink and to some distance to either side of the glyph outline.
+    all,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextDecorationSkipInk { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextDecorationSkipInk, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-decoration-skip-self
+/// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip-self
+pub const TextDecorationSkipSelf = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Skip this element (its entire margin box) if it is an atomic inline (such as an image or inline-block).
+    auto,
+    ///     /// Skip this element (its entire margin box) unconditionally. Don’t draw across it, don’t propagate to it.
+    skipAll,
+    ///     /// Skip this element (its entire margin box) unconditionally when drawing ancestor underlines.
+    skipUnderline,
+    ///     /// Skip this element (its entire margin box) unconditionally when drawing ancestor overlines.
+    skipOverline,
+    ///     /// Skip this element (its entire margin box) unconditionally when drawing ancestor line-throughs.
+    skipLineThrough,
+    ///     /// Line decorations from ancestor decorating boxes are applied to this box unconditionally: drawn across it as if it were text if it is an atomic inline, or propagated to it according to the usual rules if it is not.
+    noSkip,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextDecorationSkipSelf { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextDecorationSkipSelf, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-decoration-skip-spaces
+/// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip-spaces
+pub const TextDecorationSkipSpaces = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Skip all spacers and all word separators plus any adjacent letter-spacing or word-spacing.
+    all,
+    ///     /// Skip all spacers, plus any adjacent letter-spacing or word-spacing, when located at the start of the line.
+    start,
+    ///     /// Skip all spacers, plus any adjacent letter-spacing or word-spacing, when located at the end of the line.
+    end,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextDecorationSkipSpaces { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextDecorationSkipSpaces, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-decoration-style
+/// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-style
+pub const TextDecorationStyle = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    solid,
+    double,
+    dotted,
+    dashed,
+    ///     /// Values have the same meaning as for the border-style properties [CSS-BACKGROUNDS-3]. wavy indicates a wavy line.
+    wavy,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextDecorationStyle { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextDecorationStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-decoration-thickness
+/// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-thickness
+pub const TextDecorationThickness = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The UA chooses an appropriate thickness for text decoration lines; see below.
+    auto,
+    ///     /// If the first available font has metrics indicating a preferred underline width, use that width, otherwise behaves as auto.
+    fromFont,
+    hairline,
+    thin,
+    medium,
+    thick,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) TextDecorationThickness { return .{ .px_ = v }; }
+    pub fn em(v: f32) TextDecorationThickness { return .{ .em_ = v }; }
+    pub fn rem(v: f32) TextDecorationThickness { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) TextDecorationThickness { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) TextDecorationThickness { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextDecorationThickness, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-emphasis
+/// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis
+pub const TextEmphasis = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) TextEmphasis { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) TextEmphasis { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) TextEmphasis { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextEmphasis, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-emphasis-color
+/// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis-color
+pub const TextEmphasisColor = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn hex(v: u32) TextEmphasisColor { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) TextEmphasisColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) TextEmphasisColor { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextEmphasisColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-emphasis-position
+/// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis-position
+pub const TextEmphasisPosition = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Draw marks over the text in horizontal typographic modes.
+    over,
+    ///     /// Draw marks under the text in horizontal typographic modes.
+    under,
+    ///     /// Draw marks to the right of the text in vertical typographic modes.
+    right,
+    ///     /// Draw marks to the left of the text in vertical typographic modes.
+    left,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextEmphasisPosition { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextEmphasisPosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-emphasis-skip
+/// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis-skip
+pub const TextEmphasisSkip = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Skip word separators or other characters belonging to the Unicode separator category (Z*). (But note that emphasis marks are drawn for a space that combines with any combining characters.)
+    spaces,
+    ///     /// Skip punctuation. Punctuation in this definition includes characters belonging to the Unicode P* category that are not defined as symbols (see below).
+    punctuation,
+    ///     /// Skip symbols. Symbols in this definition includes all typographic character units belonging to the Unicode S* general category as well as any which are NFKD-equivalent [UAX15] to the following characters from the Unicode Po category: # U+0023 NUMBER SIGN % U+0025 PERCENT SIGN ‰ U+2030 PER MILLE SIGN ‱ U+2031 PER TEN THOUSAND SIGN ٪ U+066A ARABIC PERCENT SIGN ؉ U+0609 ARABIC-INDIC PER MILLE SIGN ؊ U+060A ARABIC-INDIC PER TEN THOUSAND SIGN & U+0026 AMPERSAND ⁊ U+204A TIRONIAN SIGN ET @ U+0040 COMMERCIAL AT § U+00A7 SECTION SIGN ¶ U+00B6 PILCROW SIGN ⁋ U+204B REVERSED PILCROW SIGN ⁓ U+2053 SWUNG DASH 〽️ U+303D PART ALTERNATION MARK
+    symbols,
+    ///     /// Skip characters where the East_Asian_Width property [UAX11] of the Unicode database [UAX44] is not F (Fullwidth) or W (Wide).
+    narrow,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextEmphasisSkip { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextEmphasisSkip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-emphasis-style
+/// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis-style
+pub const TextEmphasisStyle = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The shape is filled with solid color.
+    filled,
+    open,
+    ///     /// Display small circles as marks. The filled dot is U+2022 '•', and the open dot is U+25E6 '◦'.
+    dot,
+    ///     /// Display large circles as marks. The filled circle is U+25CF '●', and the open circle is U+25CB '○'.
+    circle,
+    ///     /// Display double circles as marks. The filled double-circle is U+25C9 '◉', and the open double-circle is U+25CE '◎'.
+    doubleCircle,
+    ///     /// Display triangles as marks. The filled triangle is U+25B2 '▲', and the open triangle is U+25B3 '△'.
+    triangle,
+    ///     /// Display sesames as marks. The filled sesame is U+FE45 '﹅', and the open sesame is U+FE46 '﹆'.
+    sesame,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextEmphasisStyle { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextEmphasisStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-group-align
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-group-align
+pub const TextGroupAlign = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Inline-level content is group-aligned to the inline start side, by padding the inline end side of each line box.
+    start,
+    ///     /// Inline-level content is group-aligned to the inline end side, by padding the inline start side of each line box.
+    end,
+    ///     /// Inline-level content is group-aligned to the line-left side, by padding the line-right side of each line box.
+    left,
+    ///     /// Inline-level content is group-aligned to the line-right side, by padding the line-left side of each line box.
+    right,
+    ///     /// Inline-level content is group-aligned to the center, by padding both sides of each line box, half the spacing to each side.
+    center,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextGroupAlign { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextGroupAlign, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-indent
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-indent
+pub const TextIndent = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Inverts which lines are affected.
+    hanging,
+    ///     /// Indentation affects the first line of each block container and each line after a forced line break (but not lines after a soft wrap break).
+    eachLine,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) TextIndent { return .{ .px_ = v }; }
+    pub fn em(v: f32) TextIndent { return .{ .em_ = v }; }
+    pub fn rem(v: f32) TextIndent { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) TextIndent { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) TextIndent { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextIndent, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-justify
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-justify
+pub const TextJustify = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The UA determines the justification algorithm to follow, based on a balance between performance and adequate presentation quality. Since justification rules vary by writing system and language, UAs should, where possible, use a justification algorithm appropriate to the text. For example, the UA could use by default a justification method that is a simple universal compromise for all writing systems—​such as primarily expanding word separators and between CJK typographic letter units along with secondarily expanding between Southeast Asian typographic letter units. Then, in cases where the content language of the paragraph is known, it could choose a more language-tailored justification behavior e.g. following the Requirements for Japanese Text Layout for Japanese [JLREQ], using cursive elongation for Arabic, using inter-word for German, etc. An example of cursively-justified Arabic text, rendered by Tasmeem. Like English, Arabic can be justified by adjusting the spacing between words, but in most styles it can also be justified by calligraphically elongating or compressing the letterforms themselves. In this example, the upper text is extended to fill the line by the use of elongated (kashida) forms and swash forms, while the bottom line is compressed slightly by using a stacked combination for the characters between ت and م. By employing traditional calligraphic techniques, a typesetter can justify the line while preserving flow and color, providing a very high quality justification effect. However, this is by its nature a very script-specific effect. Mixed-script text with text-justify: auto: this interpretation uses a universal-compromise justification method, expanding at spaces as well as between CJK and Southeast Asian letters. This effectively uses inter-word + inter-ideograph spacing for lines that have word-separators and/or CJK characters and falls back to inter-cluster behavior for lines that don’t or for which the space stretches too far.
+    auto,
+    ///     /// Justification adjusts spacing at word separators only (effectively varying the used word-spacing on the line). This behavior is typical for languages that separate words using spaces, like English or Korean. Mixed-script text with text-justify: inter-word
+    interWord,
+    ///     /// Justification adjusts spacing between each pair of adjacent typographic character units (effectively varying the used letter-spacing on the line). This value is sometimes used in East Asian systems such as Japanese. Mixed-script text with text-justify: inter-character For legacy reasons, UAs must also support the alternate keyword distribute which must compute to inter-character, thus having the exact same meaning and behavior. UAs may treat this as a legacy value alias.
+    interCharacter,
+    ///     /// Justification adjusts spacing as for auto except: Justification opportunities are disabled at word separators. Justification opportunities are disabled between Bopomofo characters
+    ruby,
+    ///     /// Justification must not compress spacing controlled by text-spacing-trim or text-autospace. (If this value is not specified, the justification process may reduce such spacing except when the spacing is at the start or end of the line.) This keyword used to be part of text-spacing; it might need renaming to be more specific now that it’s here, as it implies that e.g. U+0020 cannot be compressed. [Issue #7079]
+    noCompress,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextJustify { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextJustify, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-orientation
+/// - **W3C**: https://drafts.csswg.org/css-writing-modes-4/#propdef-text-orientation
+pub const TextOrientation = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Typographic character units from horizontal-only scripts are typeset sideways, i.e. 90° clockwise from their standard orientation in horizontal text. Typographic character units from vertical scripts are typeset with their intrinsic orientation. See Vertical Orientations for further details. This value is typical for layout of dominantly vertical-script text.
+    mixed,
+    ///     /// Typographic character units from horizontal-only scripts are typeset upright, i.e. in their standard horizontal orientation. Typographic character units from vertical scripts are typeset with their intrinsic orientation and shaped normally. See Vertical Orientations for further details. This value causes the used value of direction to be ltr, and for the purposes of bidi reordering, causes all characters to be treated as strong LTR.
+    upright,
+    ///     /// Causes all text to be typeset sideways, as if in a horizontal layout, but rotated 90° clockwise.
+    sideways,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextOrientation { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextOrientation, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-overflow
+/// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-text-overflow
+pub const TextOverflow = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Clip inline content that overflows its block container element. Characters may be only partially rendered.
+    clip,
+    ///     /// Render an ellipsis character (U+2026) to represent clipped inline content. Implementations may substitute a more language, script, or writing-mode appropriate ellipsis character, or three dots "..." if the ellipsis character is unavailable.
+    ellipsis,
+    ///     /// Same as fade(), but the distance over which the fading effect is applied is determined by the UA. 1em is suggested as a reasonable value.
+    fade,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextOverflow { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextOverflow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-rendering
+/// - **W3C**: https://svgwg.org/svg2-draft/painting.html#TextRenderingProperty
+pub const TextRendering = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    optimizeSpeed,
+    optimizeLegibility,
+    geometricPrecision,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextRendering { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextRendering, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-shadow
+/// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-shadow
+pub const TextShadow = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    aliceblue,
+    antiquewhite,
+    aqua,
+    aquamarine,
+    azure,
+    beige,
+    bisque,
+    black,
+    blanchedalmond,
+    blue,
+    blueviolet,
+    brown,
+    burlywood,
+    cadetblue,
+    chartreuse,
+    chocolate,
+    coral,
+    cornflowerblue,
+    cornsilk,
+    crimson,
+    cyan,
+    darkblue,
+    darkcyan,
+    darkgoldenrod,
+    darkgray,
+    darkgreen,
+    darkgrey,
+    darkkhaki,
+    darkmagenta,
+    darkolivegreen,
+    darkorange,
+    darkorchid,
+    darkred,
+    darksalmon,
+    darkseagreen,
+    darkslateblue,
+    darkslategray,
+    darkslategrey,
+    darkturquoise,
+    darkviolet,
+    deeppink,
+    deepskyblue,
+    dimgray,
+    dimgrey,
+    dodgerblue,
+    firebrick,
+    floralwhite,
+    forestgreen,
+    fuchsia,
+    gainsboro,
+    ghostwhite,
+    gold,
+    goldenrod,
+    gray,
+    green,
+    greenyellow,
+    grey,
+    honeydew,
+    hotpink,
+    indianred,
+    indigo,
+    ivory,
+    khaki,
+    lavender,
+    lavenderblush,
+    lawngreen,
+    lemonchiffon,
+    lightblue,
+    lightcoral,
+    lightcyan,
+    lightgoldenrodyellow,
+    lightgray,
+    lightgreen,
+    lightgrey,
+    lightpink,
+    lightsalmon,
+    lightseagreen,
+    lightskyblue,
+    lightslategray,
+    lightslategrey,
+    lightsteelblue,
+    lightyellow,
+    lime,
+    limegreen,
+    linen,
+    magenta,
+    maroon,
+    mediumaquamarine,
+    mediumblue,
+    mediumorchid,
+    mediumpurple,
+    mediumseagreen,
+    mediumslateblue,
+    mediumspringgreen,
+    mediumturquoise,
+    mediumvioletred,
+    midnightblue,
+    mintcream,
+    mistyrose,
+    moccasin,
+    navajowhite,
+    navy,
+    oldlace,
+    olive,
+    olivedrab,
+    orange,
+    orangered,
+    orchid,
+    palegoldenrod,
+    palegreen,
+    paleturquoise,
+    palevioletred,
+    papayawhip,
+    peachpuff,
+    peru,
+    pink,
+    plum,
+    powderblue,
+    purple,
+    rebeccapurple,
+    red,
+    rosybrown,
+    royalblue,
+    saddlebrown,
+    salmon,
+    sandybrown,
+    seagreen,
+    seashell,
+    sienna,
+    silver,
+    skyblue,
+    slateblue,
+    slategray,
+    slategrey,
+    snow,
+    springgreen,
+    steelblue,
+    tan,
+    teal,
+    thistle,
+    tomato,
+    turquoise,
+    violet,
+    wheat,
+    white,
+    whitesmoke,
+    yellow,
+    yellowgreen,
+    transparent,
+    currentColor,
+    AccentColor,
+    AccentColorText,
+    ActiveText,
+    ButtonBorder,
+    ButtonFace,
+    ButtonText,
+    Canvas,
+    CanvasText,
+    Field,
+    FieldText,
+    GrayText,
+    Highlight,
+    HighlightText,
+    LinkText,
+    Mark,
+    MarkText,
+    SelectedItem,
+    SelectedItemText,
+    VisitedText,
+    ActiveBorder,
+    ActiveCaption,
+    AppWorkspace,
+    Background,
+    ButtonHighlight,
+    ButtonShadow,
+    CaptionText,
+    InactiveBorder,
+    InactiveCaption,
+    InactiveCaptionText,
+    InfoBackground,
+    InfoText,
+    Menu,
+    MenuText,
+    Scrollbar,
+    ThreeDDarkShadow,
+    ThreeDFace,
+    ThreeDHighlight,
+    ThreeDLightShadow,
+    ThreeDShadow,
+    Window,
+    WindowFrame,
+    WindowText,
+    inset,
+    px_: f32, em_: f32, rem_: f32,
+    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    raw_: []const u8,
+    pub fn px(v: f32) TextShadow { return .{ .px_ = v }; }
+    pub fn em(v: f32) TextShadow { return .{ .em_ = v }; }
+    pub fn rem(v: f32) TextShadow { return .{ .rem_ = v }; }
+    pub fn hex(v: u32) TextShadow { return .{ .hex_ = v }; }
+    pub fn rgb(r: u8, g: u8, b: u8) TextShadow { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
+    pub fn raw(r: []const u8) TextShadow { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextShadow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-size-adjust
+/// - **W3C**: https://drafts.csswg.org/css-size-adjust-1/#propdef-text-size-adjust
+pub const TextSizeAdjust = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Renderers must use the default size adjustment when displaying on a small device.
+    auto,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn percent(v: f32) TextSizeAdjust { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) TextSizeAdjust { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextSizeAdjust, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-spacing
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-spacing
+pub const TextSpacing = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Sets both text-spacing-trim and text-autospace to auto.
+    auto,
+    spaceAll,
+    normal,
+    spaceFirst,
+    trimStart,
+    trimBoth,
+    trimAll,
+    noAutospace,
+    ideographAlpha,
+    ideographNumeric,
+    punctuation,
+    insert,
+    replace,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextSpacing { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextSpacing, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-spacing-trim
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-spacing-trim
+pub const TextSpacingTrim = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// All fullwidth punctuation characters are set with full-width glyphs (spaced).
+    spaceAll,
+    ///     /// Set fullwidth opening punctuation with full-width glyphs (spaced) at the start of each line; set fullwidth closing punctuation with half-width glyphs (flush) at the end of each line if it does not otherwise fit prior to justification, else set the punctuation with full-width glyphs; and collapse spacing between punctuation glyphs as described below.
+    normal,
+    ///     /// Set fullwidth opening punctuation with full-width glyphs (spaced) on the first line of the block container and each line after a forced line break. Otherwise as normal.
+    spaceFirst,
+    ///     /// Set fullwidth opening punctuation with half-width glyphs (flush) at the start of each line. Otherwise as normal.
+    trimStart,
+    ///     /// Set fullwidth opening punctuation with half-width glyphs (flush) at the start of each line; set fullwidth closing punctuation with half-width glyphs (flush) at the end of each line; and collapse spacing between punctuation glyphs as described below.
+    trimBoth,
+    ///     /// Set fullwidth opening punctuation, fullwidth closing punctuation, and fullwidth middle dot punctuation with half-width glyphs, without regards for the position within the line nor for adjacent characters.
+    trimAll,
+    ///     /// The user agent chooses a set of typographically high quality spacing values. Different user agents running on different platforms may pick different values. Do we need auto? It would be weird for the author to choose platform-dependent behavior at the start of the first line, and it should otherwise use trim-both.
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextSpacingTrim { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextSpacingTrim, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-transform
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-transform
+pub const TextTransform = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Puts the first typographic letter unit of each word, if lowercase, in titlecase; other characters are unaffected.
+    capitalize,
+    ///     /// Puts all letters in uppercase.
+    uppercase,
+    ///     /// Puts all letters in lowercase.
+    lowercase,
+    ///     /// Puts all typographic character units in full-width form. If a character does not have a corresponding full-width form, it is left as is. This value is typically used to typeset Latin letters and digits as if they were ideographic characters.
+    fullWidth,
+    ///     /// Converts all small Kana characters to the equivalent full-size Kana. This value is typically used for ruby annotation text, where authors may want all small Kana to be drawn as large Kana to compensate for legibility issues at the small font sizes typically used in ruby.
+    fullSizeKana,
+    ///     /// See MathML Core § 4.2 The math-auto transform.
+    mathAuto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextTransform { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextTransform, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-underline-offset
+/// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-underline-offset
+pub const TextUnderlineOffset = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The UA chooses an appropriate offset for underlines. However, this offset must be zero if the computed value of text-underline-position is from-font and the UA was able to extract an appropriate metric to use from the font.
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) TextUnderlineOffset { return .{ .px_ = v }; }
+    pub fn em(v: f32) TextUnderlineOffset { return .{ .em_ = v }; }
+    pub fn rem(v: f32) TextUnderlineOffset { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) TextUnderlineOffset { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) TextUnderlineOffset { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextUnderlineOffset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-underline-position
+/// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-underline-position
+pub const TextUnderlinePosition = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The user agent may use any algorithm to determine the underline’s position; however it must be placed at or under the alphabetic baseline. A typical “alphabetic” underline is positioned just below the alphabetic baseline
+    auto,
+    ///     /// If the first available font has metrics indicating a preferred underline offset, use that offset, otherwise behaves as auto.
+    fromFont,
+    ///     /// The underline is positioned under the element’s text content. In this case the underline usually does not cross the descenders. (This is sometimes called “accounting” underline.) This value can be combined with left or right if a particular side is preferred in vertical typographic modes. text-underline-position: under Because text-underline-position inherits, and is not reset by the text-decoration shorthand, the following example switches the document to use under underlining, which can be more appropriate for writing systems with long, complicated descenders. It is also often useful for mathematical or chemical texts that use many subscripts. :root { text-underline-position: under; }
+    under,
+    ///     /// In vertical typographic modes, the underline is aligned as for under, except it is always aligned to the left edge of the text. If this causes the underline to be drawn on the "over" side of the text, then an overline also switches sides and is drawn on the "under" side.
+    left,
+    ///     /// In vertical typographic modes, the underline is aligned as for under, except it is always aligned to the right edge of the text. If this causes the underline to be drawn on the "over" side of the text, then an overline also switches sides and is drawn on the "under" side.
+    right,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextUnderlinePosition { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextUnderlinePosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-wrap
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-wrap
+pub const TextWrap = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextWrap { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextWrap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-wrap-mode
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-wrap-mode
+pub const TextWrapMode = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Content may break across lines at allowed soft wrap opportunities, as determined by the line-breaking rules in effect, in order to minimize inline-axis overflow.
+    wrap,
+    ///     /// Inline-level content does not break across lines; content that does not fit within the block container overflows it.
+    nowrap,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextWrapMode { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextWrapMode, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// text-wrap-style
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-wrap-style
+pub const TextWrapStyle = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The exact algorithm for selecting which soft wrap opportunity to break at is UA-defined. The algorithm may consider multiple lines when making break decisions. The UA may bias for speed over best layout. The UA must not attempt to even out all lines (including the last) as for balance. This value selects the UA’s preferred (or most Web-compatible) wrapping algorithm.
+    auto,
+    ///     /// Line breaks are chosen to balance the remaining (empty) space in each line box, if better balance than auto is possible. This should avoid changing—​and in the case of 5 or fewer lines must not change—​the number of line boxes the block would contain if text-wrap were set to auto. The remaining space to consider is that which remains after placing floats and inline content, but before any adjustments due to text justification. Line boxes are balanced when the standard deviation from the average inline-size of the remaining space in each line box is reduced over the block (including lines that end in a forced break). Groups of lines separated by a forced line break are processed separately. If the element is affected by line-clamp, the clamping effect is applied first, then the remaining lines are balanced. The exact algorithm is UA-defined. UAs may treat this value as auto if there are more than ten lines to balance.
+    balance,
+    ///     /// Specifies that content on subsequent lines should not be considered when making break decisions so that when editing text any content before the cursor remains stable; otherwise equivalent to auto,
+    stable,
+    ///     /// Specifies the UA should bias for better layout over speed, and is expected to consider multiple lines when making break decisions. Otherwise equivalent to auto. The user agent may among other things attempt to avoid excessively short last lines, similarly to avoid-orphans, but it should also improve the layout in additional ways. The precise set of improvements is user agent dependent, and may include things such as: reducing the variation in length between lines; avoiding typographic rivers; prioritizing different classes of soft wrap opportunities, hyphenation opportunities, or justification opportunities; avoiding hyphenation on too many consecutive lines… The necessary computations may be expensive, especially when applied to large amounts of text. Authors are encouraged to assess the impact on performance when using text-wrap-style: pretty, and possibly use it selectively where it matters most.
+    pretty,
+    ///     /// Specifies the UA should avoid excessively short last lines, and is expected to consider more than one line when making break decisions (for example, to avoid "fixing" an orphan by making the previous line too short). The user agent may decide against improving the last line when it would make some prior line(s) substantially unbalanced. The user agent should not attempt to improve other aspects of the layout beyond what auto if those improvements come at a significant performance cost. For instance, with the given line length, the following test would be wrapped with a single word on the last line, which could be judged too short. ἄνδρα μοι ἔννεπε, μοῦσα, πολύτροπον, ὃς μάλα πολλὰ πλάγχθη, ἐπεὶ Τροίης ἱερὸν πτολίεθρον ἔπερσεν. Applying text-wrap-style: avoid-orphans could yield something like this instead, which is arguably more pleasing: ἄνδρα μοι ἔννεπε, μοῦσα, πολύτροπον, ὃς μάλα πολλὰ πλάγχθη, ἐπεὶ Τροίης ἱερὸν πτολίεθρον ἔπερσεν. However, the following fragment is more vexing: Circumnavigating the Mississippi river An attempt to make the last line less short by wrapping the previous line earlier would result in the following: Circumnavigating the Mississippi river While the last line would indeed no longer be short, the penultimate line would be unsightly. In such cases, user agents are expected to prefer the first rendering despite text-wrap-style: avoid-orphans being set.
+    avoidOrphans,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TextWrapStyle { return .{ .raw_ = r }; }
+
+    pub fn format(self: TextWrapStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// timeline-scope
+/// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-timeline-scope
+pub const TimelineScope = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Specifies that all timeline names defined by this element or its flat tree descendants—​whose scope is not already limited by a descendant using timeline-scope—​to be in scope only for this element’s flat tree descendants; and limits descendants to only match timeline names to elements within this subtree.
+    all,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TimelineScope { return .{ .raw_ = r }; }
+
+    pub fn format(self: TimelineScope, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// timeline-trigger
+/// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger
+pub const TimelineTrigger = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TimelineTrigger { return .{ .raw_ = r }; }
+
+    pub fn format(self: TimelineTrigger, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// timeline-trigger-activation-range
+/// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-activation-range
+pub const TimelineTriggerActivationRange = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TimelineTriggerActivationRange { return .{ .raw_ = r }; }
+
+    pub fn format(self: TimelineTriggerActivationRange, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// timeline-trigger-activation-range-end
+/// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-activation-range-end
+pub const TimelineTriggerActivationRangeEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    normal,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) TimelineTriggerActivationRangeEnd { return .{ .px_ = v }; }
+    pub fn em(v: f32) TimelineTriggerActivationRangeEnd { return .{ .em_ = v }; }
+    pub fn rem(v: f32) TimelineTriggerActivationRangeEnd { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) TimelineTriggerActivationRangeEnd { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) TimelineTriggerActivationRangeEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: TimelineTriggerActivationRangeEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// timeline-trigger-activation-range-start
+/// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-activation-range-start
+pub const TimelineTriggerActivationRangeStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    normal,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) TimelineTriggerActivationRangeStart { return .{ .px_ = v }; }
+    pub fn em(v: f32) TimelineTriggerActivationRangeStart { return .{ .em_ = v }; }
+    pub fn rem(v: f32) TimelineTriggerActivationRangeStart { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) TimelineTriggerActivationRangeStart { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) TimelineTriggerActivationRangeStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: TimelineTriggerActivationRangeStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// timeline-trigger-active-range
+/// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-active-range
+pub const TimelineTriggerActiveRange = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TimelineTriggerActiveRange { return .{ .raw_ = r }; }
+
+    pub fn format(self: TimelineTriggerActiveRange, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// timeline-trigger-active-range-end
+/// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-active-range-end
+pub const TimelineTriggerActiveRangeEnd = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The start (for timeline-trigger-active-range-start) or end (for timeline-trigger-active-range-end) is equal to the start/end of the timeline trigger’s activation range.
+    auto,
+    normal,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) TimelineTriggerActiveRangeEnd { return .{ .px_ = v }; }
+    pub fn em(v: f32) TimelineTriggerActiveRangeEnd { return .{ .em_ = v }; }
+    pub fn rem(v: f32) TimelineTriggerActiveRangeEnd { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) TimelineTriggerActiveRangeEnd { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) TimelineTriggerActiveRangeEnd { return .{ .raw_ = r }; }
+
+    pub fn format(self: TimelineTriggerActiveRangeEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// timeline-trigger-active-range-start
+/// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-active-range-start
+pub const TimelineTriggerActiveRangeStart = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The start (for timeline-trigger-active-range-start) or end (for timeline-trigger-active-range-end) is equal to the start/end of the timeline trigger’s activation range.
+    auto,
+    normal,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) TimelineTriggerActiveRangeStart { return .{ .px_ = v }; }
+    pub fn em(v: f32) TimelineTriggerActiveRangeStart { return .{ .em_ = v }; }
+    pub fn rem(v: f32) TimelineTriggerActiveRangeStart { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) TimelineTriggerActiveRangeStart { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) TimelineTriggerActiveRangeStart { return .{ .raw_ = r }; }
+
+    pub fn format(self: TimelineTriggerActiveRangeStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// timeline-trigger-name
+/// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-name
+pub const TimelineTriggerName = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TimelineTriggerName { return .{ .raw_ = r }; }
+
+    pub fn format(self: TimelineTriggerName, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// timeline-trigger-source
+/// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-source
+pub const TimelineTriggerSource = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TimelineTriggerSource { return .{ .raw_ = r }; }
+
+    pub fn format(self: TimelineTriggerSource, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// top
+/// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-top
+pub const Top = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Represents an unconstrained inset; the exact meaning depends on the positioning scheme.
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) Top { return .{ .px_ = v }; }
+    pub fn em(v: f32) Top { return .{ .em_ = v }; }
+    pub fn rem(v: f32) Top { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) Top { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) Top { return .{ .raw_ = r }; }
+
+    pub fn format(self: Top, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// touch-action
+/// - **W3C**: https://compat.spec.whatwg.org/#propdef-touch-action
+pub const TouchAction = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    auto,
+    panX,
+    panLeft,
+    panRight,
+    panY,
+    panUp,
+    panDown,
+    pinchZoom,
+    manipulation,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TouchAction { return .{ .raw_ = r }; }
+
+    pub fn format(self: TouchAction, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// transform
+/// - **W3C**: https://drafts.csswg.org/css-transforms-1/#propdef-transform
+pub const Transform = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Transform { return .{ .raw_ = r }; }
+
+    pub fn format(self: Transform, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// transform-box
+/// - **W3C**: https://drafts.csswg.org/css-transforms-1/#propdef-transform-box
+pub const TransformBox = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Uses the content box as reference box. The reference box of a table is the border box of its table wrapper box, not its table box.
+    contentBox,
+    ///     /// Uses the border box as reference box. The reference box of a table is the border box of its table wrapper box, not its table box.
+    borderBox,
+    ///     /// Uses the object bounding box as reference box.
+    fillBox,
+    ///     /// Uses the stroke bounding box as reference box.
+    strokeBox,
+    ///     /// Uses the nearest SVG viewport as reference box.
+    viewBox,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TransformBox { return .{ .raw_ = r }; }
+
+    pub fn format(self: TransformBox, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// transform-origin
+/// - **W3C**: https://drafts.csswg.org/css-transforms-1/#propdef-transform-origin
+pub const TransformOrigin = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Computes to 0% for the horizontal position.
+    left,
+    ///     /// Computes to 50% (left 50%) for the horizontal position if the horizontal position is not otherwise specified, or 50% (top 50%) for the vertical position if it is.
+    center,
+    ///     /// Computes to 100% for the horizontal position.
+    right,
+    ///     /// Computes to 0% for the vertical position.
+    top,
+    ///     /// Computes to 100% for the vertical position.
+    bottom,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) TransformOrigin { return .{ .px_ = v }; }
+    pub fn em(v: f32) TransformOrigin { return .{ .em_ = v }; }
+    pub fn rem(v: f32) TransformOrigin { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) TransformOrigin { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) TransformOrigin { return .{ .raw_ = r }; }
+
+    pub fn format(self: TransformOrigin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// transform-style
+/// - **W3C**: https://drafts.csswg.org/css-transforms-2/#propdef-transform-style
+pub const TransformStyle = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    flat,
+    preserve3d,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TransformStyle { return .{ .raw_ = r }; }
+
+    pub fn format(self: TransformStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// transition
+/// - **W3C**: https://drafts.csswg.org/css-transitions-1/#propdef-transition
+pub const Transition = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    all,
+    linear,
+    ease,
+    easeIn,
+    easeOut,
+    easeInOut,
+    stepStart,
+    stepEnd,
+    normal,
+    allowDiscrete,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Transition { return .{ .raw_ = r }; }
+
+    pub fn format(self: Transition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// transition-behavior
+/// - **W3C**: https://drafts.csswg.org/css-transitions-2/#propdef-transition-behavior
+pub const TransitionBehavior = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    normal,
+    allowDiscrete,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TransitionBehavior { return .{ .raw_ = r }; }
+
+    pub fn format(self: TransitionBehavior, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// transition-delay
+/// - **W3C**: https://drafts.csswg.org/css-transitions-1/#propdef-transition-delay
+pub const TransitionDelay = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TransitionDelay { return .{ .raw_ = r }; }
+
+    pub fn format(self: TransitionDelay, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// transition-duration
+/// - **W3C**: https://drafts.csswg.org/css-transitions-1/#propdef-transition-duration
+pub const TransitionDuration = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TransitionDuration { return .{ .raw_ = r }; }
+
+    pub fn format(self: TransitionDuration, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// transition-property
+/// - **W3C**: https://drafts.csswg.org/css-transitions-1/#propdef-transition-property
+pub const TransitionProperty = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// A value of none means that no property will transition. Otherwise, a list of properties to be transitioned, or the keyword all which indicates that all properties are to be transitioned, is given.
+    all,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TransitionProperty { return .{ .raw_ = r }; }
+
+    pub fn format(self: TransitionProperty, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// transition-timing-function
+/// - **W3C**: https://drafts.csswg.org/css-transitions-1/#propdef-transition-timing-function
+pub const TransitionTimingFunction = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    linear,
+    ease,
+    easeIn,
+    easeOut,
+    easeInOut,
+    stepStart,
+    stepEnd,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TransitionTimingFunction { return .{ .raw_ = r }; }
+
+    pub fn format(self: TransitionTimingFunction, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// translate
+/// - **W3C**: https://drafts.csswg.org/css-transforms-2/#propdef-translate
+pub const Translate = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) Translate { return .{ .px_ = v }; }
+    pub fn em(v: f32) Translate { return .{ .em_ = v }; }
+    pub fn rem(v: f32) Translate { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) Translate { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) Translate { return .{ .raw_ = r }; }
+
+    pub fn format(self: Translate, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// trigger-scope
+/// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-trigger-scope
+pub const TriggerScope = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Specifies that all trigger names defined by this element or its descendants—​whose scope is not already limited by a descendant using trigger-scope—​to be in scope only for this element’s flat tree descendants; and limits descendants to only match trigger names to triggers within this subtree. This value only affects trigger names in the same tree scope, as if it were a strictly matched tree-scoped name. (That is, trigger-scope: all acts identically to trigger-scope: --foo, --bar, ..., listing all relevant trigger names.)
+    all,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) TriggerScope { return .{ .raw_ = r }; }
+
+    pub fn format(self: TriggerScope, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// unicode-bidi
+/// - **W3C**: https://drafts.csswg.org/css-writing-modes-4/#propdef-unicode-bidi
+pub const UnicodeBidi = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The box does not open an additional level of embedding with respect to the bidirectional algorithm. For inline boxes, implicit reordering works across box boundaries.
+    normal,
+    ///     /// If the box is inline, this value creates a directional embedding by opening an additional level of embedding with respect to the bidirectional algorithm. The direction of this embedding level is given by the direction property. Inside the box, reordering is done implicitly.
+    embed,
+    ///     /// On an inline box, this bidi-isolates its contents. This is similar to a directional embedding (and increases the embedding level accordingly) except that each sequence of inline-level boxes uninterrupted by any block boundary or forced paragraph break is treated as an isolated sequence: the content within the sequence is ordered as if inside an independent paragraph with the base directionality specified by the box’s direction property. for the purpose of bidi resolution in its containing bidi paragraph, the sequence is treated as if it were a single Object Replacement Character (U+FFFC). In effect, neither is the content inside the box bidi-affected by the content surrounding the box, nor is the content surrounding the box bidi-affected by the content or specified directionality of the box. However, forced paragraph breaks within the box still create a corresponding break in the containing paragraph.
+    isolate,
+    ///     /// This value puts the box’s immediate inline content in a directional override. For an inline, this means that the box acts like a directional embedding in the bidirectional algorithm, except that reordering within it is strictly in sequence according to the direction property; the implicit part of the bidirectional algorithm is ignored. For a block container, the override is applied to an anonymous inline box that surrounds all of its content.
+    bidiOverride,
+    ///     /// This combines the isolation behavior of isolate with the directional override behavior of bidi-override: to surrounding content, it is equivalent to isolate, but within the box content is ordered as if bidi-override were specified. It effectively nests a directional override inside an isolated sequence.
+    isolateOverride,
+    ///     /// This value behaves as isolate except that for the purposes of the Unicode bidirectional algorithm, the base directionality of each of the box’s bidi paragraphs (if a block container) or isolated sequences (if an inline) is determined by following the heuristic in rules P2 and P3 of the Unicode bidirectional algorithm (rather than by using the direction property of the box).
+    plaintext,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) UnicodeBidi { return .{ .raw_ = r }; }
+
+    pub fn format(self: UnicodeBidi, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// user-select
+/// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-user-select
+pub const UserSelect = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The used value of auto is determined as follows: On the ::before and ::after pseudo-elements, the used value is none If the element is an editable element, the used value is contain Otherwise, if the used value of user-select on the parent of this element is all, the used value is all Otherwise, if the used value of user-select on the parent of this element is none, the used value is none Otherwise, the used value is text
+    auto,
+    ///     /// The element imposes no constraint on the selection.
+    text,
+    ///     /// UAs must not allow a selection which is started in this element to be extended outside of this element. A selection started outside of this element must not end in this element. If the user attempts to create such a selection, the UA must instead end the selection range at the element boundary. The UA must allow selections to extend across this element, and such selections must include the content of the element.
+    contain,
+    ///     /// The content of the element must be selected atomically: If a selection would contain part of the element, then the selection must contain the entire element including all its descendants. If the element is selected and the used value of user-select on its parent is all, then the parent must be included in the selection, recursively. If this element has descendants on which the used value of user-select is not all and if a selection is entirely contained in these descendants, then the selection is not extended to include this whole element.
+    all,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) UserSelect { return .{ .raw_ = r }; }
+
+    pub fn format(self: UserSelect, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// vector-effect
+/// - **W3C**: https://svgwg.org/svg2-draft/coords.html#VectorEffectProperty
+pub const VectorEffect = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    nonScalingStroke,
+    nonScalingSize,
+    nonRotation,
+    fixedPosition,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) VectorEffect { return .{ .raw_ = r }; }
+
+    pub fn format(self: VectorEffect, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// vertical-align
+/// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-vertical-align
+pub const VerticalAlign = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Specifies first-baseline alignment.
+    first,
+    ///     /// Specifies last-baseline alignment.
+    last,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) VerticalAlign { return .{ .raw_ = r }; }
+
+    pub fn format(self: VerticalAlign, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// view-timeline
+/// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-view-timeline
+pub const ViewTimeline = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ViewTimeline { return .{ .raw_ = r }; }
+
+    pub fn format(self: ViewTimeline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// view-timeline-axis
+/// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-view-timeline-axis
+pub const ViewTimelineAxis = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Specifies to use the measure of progress along the block axis of the scroll container. (Default.)
+    block,
+    ///     /// Specifies to use the measure of progress along the inline axis of the scroll container.
+    inline_,
+    ///     /// Specifies to use the measure of progress along the horizontal axis of the scroll container.
+    x,
+    ///     /// Specifies to use the measure of progress along the vertical axis of the scroll container.
+    y,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ViewTimelineAxis { return .{ .raw_ = r }; }
+
+    pub fn format(self: ViewTimelineAxis, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// view-timeline-inset
+/// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-view-timeline-inset
+pub const ViewTimelineInset = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Indicates to use the value of scroll-padding.
+    auto,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) ViewTimelineInset { return .{ .px_ = v }; }
+    pub fn em(v: f32) ViewTimelineInset { return .{ .em_ = v }; }
+    pub fn rem(v: f32) ViewTimelineInset { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) ViewTimelineInset { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) ViewTimelineInset { return .{ .raw_ = r }; }
+
+    pub fn format(self: ViewTimelineInset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// view-timeline-name
+/// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-view-timeline-name
+pub const ViewTimelineName = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ViewTimelineName { return .{ .raw_ = r }; }
+
+    pub fn format(self: ViewTimelineName, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// view-transition-class
+/// - **W3C**: https://drafts.csswg.org/css-view-transitions-2/#propdef-view-transition-class
+pub const ViewTransitionClass = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ViewTransitionClass { return .{ .raw_ = r }; }
+
+    pub fn format(self: ViewTransitionClass, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// view-transition-group
+/// - **W3C**: https://drafts.csswg.org/css-view-transitions-2/#propdef-view-transition-group
+pub const ViewTransitionGroup = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The view-transition-group() pseudo-element generated by this element is a child of the view-transition-group-children() pseudo-element generated by this element’s nearest view-transition-group() generating flat tree ancestor element with a non-normal view-transition-group value, if any. If no such element is present, the view-transition-group() pseudo-element generated by this element is a direct child of the ::view-transition pseudo-element associated with this view transition.
+    normal,
+    ///     /// The view-transition-group-children() pseudo-element generated by this element acts as a container for its descendants. See normal for the effect it has on other elements.
+    contain,
+    ///     /// The view-transition-group() pseudo-element generated by this element is a child of the view-transition-group-children() pseudo-element generated by this element’s nearest view-transition-group() generating flat tree ancestor element, if any. If no such element is present, the view-transition-group() pseudo-element generated by this element is a direct child of the ::view-transition pseudo-element associated with this view transition.
+    nearest,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ViewTransitionGroup { return .{ .raw_ = r }; }
+
+    pub fn format(self: ViewTransitionGroup, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// view-transition-name
+/// - **W3C**: https://drafts.csswg.org/css-view-transitions-2/#propdef-view-transition-name
+pub const ViewTransitionName = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ViewTransitionName { return .{ .raw_ = r }; }
+
+    pub fn format(self: ViewTransitionName, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// view-transition-scope
+/// - **W3C**: https://drafts.csswg.org/css-view-transitions-2/#propdef-view-transition-scope
+pub const ViewTransitionScope = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    all,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ViewTransitionScope { return .{ .raw_ = r }; }
+
+    pub fn format(self: ViewTransitionScope, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// visibility
+/// - **W3C**: https://drafts.csswg.org/css-display-4/#propdef-visibility
+pub const Visibility = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The generated box is visible, as normal.
+    visible,
+    ///     /// Any boxes generated by the element are invisible. Descendants of the element can, however, be visible if they have visibility: visible.
+    hidden,
+    ///     /// Any boxes generated by the element and its descendants are invisible (regardless of their visibility value).
+    forceHidden,
+    ///     /// Indicates that the box is collapsed, which can cause it to take up less space than otherwise in a formatting-context–specific way. See dynamic row and column effects in tables [CSS2] and collapsed flex items in flex layout [CSS-FLEXBOX-1]. In all other cases, however, (i.e. unless otherwise specified) this simply makes the box invisible, just like hidden.
+    collapse,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Visibility { return .{ .raw_ = r }; }
+
+    pub fn format(self: Visibility, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// voice-balance
+/// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-voice-balance
+pub const VoiceBalance = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Same as -100.
+    left,
+    ///     /// Same as 0.
+    center,
+    ///     /// Same as 100.
+    right,
+    ///     /// Moves the sound to the left by subtracting 20 from the inherited voice-balance value (and by clamping the resulting number to -100).
+    leftwards,
+    ///     /// Moves the sound to the right, by adding 20 to the inherited voice-balance value (and by clamping the resulting number to 100).
+    rightwards,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) VoiceBalance { return .{ .raw_ = r }; }
+
+    pub fn format(self: VoiceBalance, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// voice-duration
+/// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-voice-duration
+pub const VoiceDuration = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Resolves to a used value corresponding to the duration of the speech synthesis when using the inherited voice-rate.
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) VoiceDuration { return .{ .raw_ = r }; }
+
+    pub fn format(self: VoiceDuration, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// voice-family
+/// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-voice-family
+pub const VoiceFamily = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Indicates that the voice-family value gets inherited and used regardless of any potential language change within the content markup (see the section below about voice selection and language handling). This value behaves as inherit when applied to the root element. Note: Descendants of the element automatically inherit the preserve value, unless it is explicitly overridden by other voice-family values (e.g. name, gender, age).
+    preserve,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) VoiceFamily { return .{ .raw_ = r }; }
+
+    pub fn format(self: VoiceFamily, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// voice-pitch
+/// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-voice-pitch
+pub const VoicePitch = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// If specified, this keyword indicates that the specified frequency represents an absolute value. If a negative frequency is specified, the computed frequency will be zero.
+    absolute,
+    ///     /// A sequence of monotonically non-decreasing pitch levels that are implementation and voice specific. When the computed value for a given element is only a keyword (i.e. no relative offset is specified), then the corresponding absolute frequency will be re-evaluated on a voice change. Conversely, the application of a relative offset requires the calculation of the resulting frequency based on the current voice at the point at which the relative offset is specified, so the computed frequency will inherit absolutely regardless of any voice change further down the style cascade. Authors should therefore only use keyword values in cases where they wish that voice changes trigger the re-evaluation of the conversion from a keyword to a concrete, voice-dependent frequency.
+    xLow,
+    ///     /// A sequence of monotonically non-decreasing pitch levels that are implementation and voice specific. When the computed value for a given element is only a keyword (i.e. no relative offset is specified), then the corresponding absolute frequency will be re-evaluated on a voice change. Conversely, the application of a relative offset requires the calculation of the resulting frequency based on the current voice at the point at which the relative offset is specified, so the computed frequency will inherit absolutely regardless of any voice change further down the style cascade. Authors should therefore only use keyword values in cases where they wish that voice changes trigger the re-evaluation of the conversion from a keyword to a concrete, voice-dependent frequency.
+    low,
+    ///     /// A sequence of monotonically non-decreasing pitch levels that are implementation and voice specific. When the computed value for a given element is only a keyword (i.e. no relative offset is specified), then the corresponding absolute frequency will be re-evaluated on a voice change. Conversely, the application of a relative offset requires the calculation of the resulting frequency based on the current voice at the point at which the relative offset is specified, so the computed frequency will inherit absolutely regardless of any voice change further down the style cascade. Authors should therefore only use keyword values in cases where they wish that voice changes trigger the re-evaluation of the conversion from a keyword to a concrete, voice-dependent frequency.
+    medium,
+    ///     /// A sequence of monotonically non-decreasing pitch levels that are implementation and voice specific. When the computed value for a given element is only a keyword (i.e. no relative offset is specified), then the corresponding absolute frequency will be re-evaluated on a voice change. Conversely, the application of a relative offset requires the calculation of the resulting frequency based on the current voice at the point at which the relative offset is specified, so the computed frequency will inherit absolutely regardless of any voice change further down the style cascade. Authors should therefore only use keyword values in cases where they wish that voice changes trigger the re-evaluation of the conversion from a keyword to a concrete, voice-dependent frequency.
+    high,
+    ///     /// A sequence of monotonically non-decreasing pitch levels that are implementation and voice specific. When the computed value for a given element is only a keyword (i.e. no relative offset is specified), then the corresponding absolute frequency will be re-evaluated on a voice change. Conversely, the application of a relative offset requires the calculation of the resulting frequency based on the current voice at the point at which the relative offset is specified, so the computed frequency will inherit absolutely regardless of any voice change further down the style cascade. Authors should therefore only use keyword values in cases where they wish that voice changes trigger the re-evaluation of the conversion from a keyword to a concrete, voice-dependent frequency.
+    xHigh,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn percent(v: f32) VoicePitch { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) VoicePitch { return .{ .raw_ = r }; }
+
+    pub fn format(self: VoicePitch, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// voice-range
+/// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-voice-range
+pub const VoiceRange = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// If specified, this keyword indicates that the specified frequency represents an absolute value. If a negative frequency is specified, the computed frequency will be zero.
+    absolute,
+    ///     /// A sequence of monotonically non-decreasing pitch levels that are implementation and voice specific. When the computed value for a given element is only a keyword (i.e. no relative offset is specified), then the corresponding absolute frequency will be re-evaluated on a voice change. Conversely, the application of a relative offset requires the calculation of the resulting frequency based on the current voice at the point at which the relative offset is specified, so the computed frequency will inherit absolutely regardless of any voice change further down the style cascade. Authors should therefore only use keyword values in cases where they wish that voice changes trigger the re-evaluation of the conversion from a keyword to a concrete, voice-dependent frequency.
+    xLow,
+    ///     /// A sequence of monotonically non-decreasing pitch levels that are implementation and voice specific. When the computed value for a given element is only a keyword (i.e. no relative offset is specified), then the corresponding absolute frequency will be re-evaluated on a voice change. Conversely, the application of a relative offset requires the calculation of the resulting frequency based on the current voice at the point at which the relative offset is specified, so the computed frequency will inherit absolutely regardless of any voice change further down the style cascade. Authors should therefore only use keyword values in cases where they wish that voice changes trigger the re-evaluation of the conversion from a keyword to a concrete, voice-dependent frequency.
+    low,
+    ///     /// A sequence of monotonically non-decreasing pitch levels that are implementation and voice specific. When the computed value for a given element is only a keyword (i.e. no relative offset is specified), then the corresponding absolute frequency will be re-evaluated on a voice change. Conversely, the application of a relative offset requires the calculation of the resulting frequency based on the current voice at the point at which the relative offset is specified, so the computed frequency will inherit absolutely regardless of any voice change further down the style cascade. Authors should therefore only use keyword values in cases where they wish that voice changes trigger the re-evaluation of the conversion from a keyword to a concrete, voice-dependent frequency.
+    medium,
+    ///     /// A sequence of monotonically non-decreasing pitch levels that are implementation and voice specific. When the computed value for a given element is only a keyword (i.e. no relative offset is specified), then the corresponding absolute frequency will be re-evaluated on a voice change. Conversely, the application of a relative offset requires the calculation of the resulting frequency based on the current voice at the point at which the relative offset is specified, so the computed frequency will inherit absolutely regardless of any voice change further down the style cascade. Authors should therefore only use keyword values in cases where they wish that voice changes trigger the re-evaluation of the conversion from a keyword to a concrete, voice-dependent frequency.
+    high,
+    ///     /// A sequence of monotonically non-decreasing pitch levels that are implementation and voice specific. When the computed value for a given element is only a keyword (i.e. no relative offset is specified), then the corresponding absolute frequency will be re-evaluated on a voice change. Conversely, the application of a relative offset requires the calculation of the resulting frequency based on the current voice at the point at which the relative offset is specified, so the computed frequency will inherit absolutely regardless of any voice change further down the style cascade. Authors should therefore only use keyword values in cases where they wish that voice changes trigger the re-evaluation of the conversion from a keyword to a concrete, voice-dependent frequency.
+    xHigh,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn percent(v: f32) VoiceRange { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) VoiceRange { return .{ .raw_ = r }; }
+
+    pub fn format(self: VoiceRange, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// voice-rate
+/// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-voice-rate
+pub const VoiceRate = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Represents the default rate produced by the speech synthesizer for the currently active voice. This is processor-specific and depends on the language and dialect, and on the "personality" of the voice.
+    normal,
+    ///     /// A sequence of monotonically non-decreasing speaking rates that are implementation- and voice-specific. For example, typical values for the English language are (in words per minute) x-slow = 80, slow = 120, medium = between 180 and 200, fast = 500.
+    xSlow,
+    ///     /// A sequence of monotonically non-decreasing speaking rates that are implementation- and voice-specific. For example, typical values for the English language are (in words per minute) x-slow = 80, slow = 120, medium = between 180 and 200, fast = 500.
+    slow,
+    ///     /// A sequence of monotonically non-decreasing speaking rates that are implementation- and voice-specific. For example, typical values for the English language are (in words per minute) x-slow = 80, slow = 120, medium = between 180 and 200, fast = 500.
+    medium,
+    ///     /// A sequence of monotonically non-decreasing speaking rates that are implementation- and voice-specific. For example, typical values for the English language are (in words per minute) x-slow = 80, slow = 120, medium = between 180 and 200, fast = 500.
+    fast,
+    ///     /// A sequence of monotonically non-decreasing speaking rates that are implementation- and voice-specific. For example, typical values for the English language are (in words per minute) x-slow = 80, slow = 120, medium = between 180 and 200, fast = 500.
+    xFast,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn percent(v: f32) VoiceRate { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) VoiceRate { return .{ .raw_ = r }; }
+
+    pub fn format(self: VoiceRate, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// voice-stress
+/// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-voice-stress
+pub const VoiceStress = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Represents the default emphasis produced by the speech synthesizer.
+    normal,
+    ///     /// These values are monotonically non-decreasing in strength. Their application results in more emphasis than what the speech synthesizer would normally produce (i.e. more than the value corresponding to normal).
+    strong,
+    ///     /// These values are monotonically non-decreasing in strength. Their application results in more emphasis than what the speech synthesizer would normally produce (i.e. more than the value corresponding to normal).
+    moderate,
+    ///     /// Effectively the opposite of emphasizing a word.
+    reduced,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) VoiceStress { return .{ .raw_ = r }; }
+
+    pub fn format(self: VoiceStress, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// voice-volume
+/// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-voice-volume
+pub const VoiceVolume = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Specifies that no sound is generated (the text is read "silently").
+    silent,
+    ///     /// This sequence of keywords corresponds to monotonically non-decreasing volume levels, mapped to implementation-dependent values that meet the listener’s requirements with regards to perceived loudness. These audio levels are typically provided via a preference mechanism that allow users to calibrate sound options according to their auditory environment. The keyword x-soft maps to the user’s minimum audible volume level, x-loud maps to the user’s maximum tolerable volume level, medium maps to the user’s preferred volume level, soft and loud map to intermediary values.
+    xSoft,
+    ///     /// This sequence of keywords corresponds to monotonically non-decreasing volume levels, mapped to implementation-dependent values that meet the listener’s requirements with regards to perceived loudness. These audio levels are typically provided via a preference mechanism that allow users to calibrate sound options according to their auditory environment. The keyword x-soft maps to the user’s minimum audible volume level, x-loud maps to the user’s maximum tolerable volume level, medium maps to the user’s preferred volume level, soft and loud map to intermediary values.
+    soft,
+    ///     /// This sequence of keywords corresponds to monotonically non-decreasing volume levels, mapped to implementation-dependent values that meet the listener’s requirements with regards to perceived loudness. These audio levels are typically provided via a preference mechanism that allow users to calibrate sound options according to their auditory environment. The keyword x-soft maps to the user’s minimum audible volume level, x-loud maps to the user’s maximum tolerable volume level, medium maps to the user’s preferred volume level, soft and loud map to intermediary values.
+    medium,
+    ///     /// This sequence of keywords corresponds to monotonically non-decreasing volume levels, mapped to implementation-dependent values that meet the listener’s requirements with regards to perceived loudness. These audio levels are typically provided via a preference mechanism that allow users to calibrate sound options according to their auditory environment. The keyword x-soft maps to the user’s minimum audible volume level, x-loud maps to the user’s maximum tolerable volume level, medium maps to the user’s preferred volume level, soft and loud map to intermediary values.
+    loud,
+    ///     /// This sequence of keywords corresponds to monotonically non-decreasing volume levels, mapped to implementation-dependent values that meet the listener’s requirements with regards to perceived loudness. These audio levels are typically provided via a preference mechanism that allow users to calibrate sound options according to their auditory environment. The keyword x-soft maps to the user’s minimum audible volume level, x-loud maps to the user’s maximum tolerable volume level, medium maps to the user’s preferred volume level, soft and loud map to intermediary values.
+    xLoud,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) VoiceVolume { return .{ .raw_ = r }; }
+
+    pub fn format(self: VoiceVolume, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// white-space
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-white-space
+pub const WhiteSpace = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// This value directs user agents to collapse sequences of white space into a single character (or in some cases, no character). Lines may wrap at allowed soft wrap opportunities, as determined by the line-breaking rules in effect, in order to minimize inline-axis overflow.
+    normal,
+    ///     /// This value prevents user agents from collapsing sequences of white space. Segment breaks such as line feeds are preserved as forced line breaks. Lines only break at forced line breaks; content that does not fit within the block container overflows it.
+    pre,
+    ///     /// Like pre, this value preserves white space; but like normal, it allows wrapping.
+    preWrap,
+    ///     /// Like normal, this value collapses consecutive white space characters and allows wrapping, but it preserves segment breaks in the source as forced line breaks.
+    preLine,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WhiteSpace { return .{ .raw_ = r }; }
+
+    pub fn format(self: WhiteSpace, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// white-space-collapse
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-white-space-collapse
+pub const WhiteSpaceCollapse = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// This value directs user agents to collapse sequences of white space into a single character (or in some cases, no character).
+    collapse,
+    ///     /// This value directs user agents to “discard” all white space in the element. Does this preserve line break opportunities or no? Do we need a distinct "hide" value? If it preserves line break opportunities, maybe it should be replaced with a word-space-transform value?
+    discard,
+    ///     /// This value prevents user agents from collapsing sequences of white space. Segment breaks such as line feeds are preserved as forced line breaks.
+    preserve,
+    ///     /// Like collapse, this value collapses consecutive white space characters, but preserves segment breaks in the source as forced line breaks.
+    preserveBreaks,
+    ///     /// This value prevents user agents from collapsing sequences of white space, and converts tabs and segment breaks to spaces. (This value is intended to represent the behavior of xml:space="preserve" in SVG.)
+    preserveSpaces,
+    ///     /// The behavior is identical to that of preserve, except that: Any sequence of preserved white space or other space separators always takes up space, including at the end of the line. A soft wrap opportunity exists after every preserved white space character and after every other space separator (including between adjacent spaces).
+    breakSpaces,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WhiteSpaceCollapse { return .{ .raw_ = r }; }
+
+    pub fn format(self: WhiteSpaceCollapse, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// white-space-trim
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-white-space-trim
+pub const WhiteSpaceTrim = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// This value directs the UA to collapse all collapsible whitespace immediately before the start of the element.
+    discardBefore,
+    ///     /// This value directs the UA to collapse all collapsible whitespace immediately after the end of the element.
+    discardAfter,
+    ///     /// For block containers this value directs UAs to discard all whitespace at the beginning of the element up to and including the last segment break before the first non-white-space character in the element as well as to discard all white space at the end of the element starting with the first segment break after the last non-white-space character in the element. For other elements this value directs UAs to discard all whitespace at the beginning and end of the element.
+    discardInner,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WhiteSpaceTrim { return .{ .raw_ = r }; }
+
+    pub fn format(self: WhiteSpaceTrim, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// widows
+/// - **W3C**: https://drafts.csswg.org/css-break-4/#propdef-widows
+pub const Widows = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) Widows { return .{ .raw_ = r }; }
+
+    pub fn format(self: Widows, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// width
+/// - **W3C**: https://drafts.csswg.org/css-sizing-3/#propdef-width
+pub const Width = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// For width/height, specifies an automatic size (automatic block size/automatic inline size). See the relevant layout module for how to calculate this. For min-width/min-height, specifies an automatic minimum size. Unless otherwise defined by the relevant layout module, however, it resolves to a used value of 0. For backwards-compatibility, the resolved value of this keyword is zero for boxes of all [CSS2] display types: block and inline boxes, inline blocks, and all the table layout boxes. It also resolves to zero when no box is generated.
+    auto,
+    ///     /// Use the min-content size in the relevant axis; for a box’s block size, unless otherwise specified, this is equivalent to its automatic size.
+    minContent,
+    ///     /// Use the max-content size in the relevant axis; for a box’s block size, unless otherwise specified, this is equivalent to its automatic size.
+    maxContent,
+    ///     /// Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.
+    stretch,
+    ///     /// Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).
+    fitContent,
+    ///     /// If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.
+    contain,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) Width { return .{ .px_ = v }; }
+    pub fn em(v: f32) Width { return .{ .em_ = v }; }
+    pub fn rem(v: f32) Width { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) Width { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) Width { return .{ .raw_ = r }; }
+
+    pub fn format(self: Width, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// will-change
+/// - **W3C**: https://drafts.csswg.org/css-will-change-1/#propdef-will-change
+pub const WillChange = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Expresses no particular intent; the user agent should apply whatever heuristics and optimizations it normally does.
+    auto,
+    ///     /// Indicates that the author expects to animate or change the scroll position of the element in the near future. For example, browsers often only render the content in the "scroll window" on a scrollable element, and some of the content past that window, balancing memory and time savings from the skipped rendering against making scrolling look nice. A browser might take this value as a signal to expand the range of content around the scroll window that is rendered, so that longer/faster scrolls can be done smoothly.
+    scrollPosition,
+    ///     /// Indicates that the author expects to animate or change something about the element’s contents in the near future. For example, browsers often “cache” rendering of elements over time, because most things don’t change very often, or only change their position. However, if an element does change its contents continually, producing and maintaining this cache is a waste of time. A browser might take this value as a signal to cache less aggressively on the element, or avoid caching at all and just continually re-render the element from scratch. This value is mostly intended to help browsers optimize JS-based animations of content, which change aspects of an element’s contents many times per second. This kind of optimization, when possible, is already done automatically by browsers when declarative animations are used.
+    contents,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WillChange { return .{ .raw_ = r }; }
+
+    pub fn format(self: WillChange, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// word-break
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-word-break
+pub const WordBreak = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Words break according to their customary rules, as described above. Korean, which commonly exhibits two different behaviors, allows breaks between any two consecutive Hangul/Hanja. For Ethiopic, which also exhibits two different behaviors, such breaks within words are not allowed. Some writing systems require specific processing to obtain the customarily expected soft wrap opportunities, as described in § 6.1.1 Analytical Word Breaking.
+    normal,
+    ///     /// Breaking is allowed within “words”: specifically, in addition to soft wrap opportunities allowed for normal, any typographic letter units (and any typographic character units resolving to the NU (“numeric”), AL (“alphabetic”), or SA (“Southeast Asian”) line breaking classes [UAX14]) are instead treated as ID (“ideographic characters”) for the purpose of line-breaking. Hyphenation is not applied.
+    breakAll,
+    ///     /// Breaking is forbidden within “words”: implicit soft wrap opportunities between typographic letter units (or other typographic character units belonging to the NU, AL, AI, or ID Unicode line breaking classes [UAX14]) are suppressed, i.e. breaks are prohibited between pairs of such characters (regardless of line-break settings other than anywhere) except where opportunities exist due to § 6.1.1.1 Lexical Word Breaking. Otherwise this option is equivalent to normal. In this style, sequences of CJK characters do not break.
+    keepAll,
+    ///     /// Behaves the same as normal, except that § 6.1.1.1 Lexical Word Breaking must not be performed. Specifically, typographic character units with class SA in [UAX14] must be treated as if they had class AL (i.e. assuming a value of line-break other than anywhere, there is no soft wrap opportunity between pairs of such characters). alternatively, this value could be based on keep-all rather than normal. Yet another variant is to merge this behavior with keep-all.
+    manual,
+    ///     /// Behaves the same as normal, except that this value directs the user agent to perform language-specific content analysis to prioritize keeping natural phrases (of multiple words) together. If the content language of the element is unknown, or if the user agent does not know how to detect phrase boundaries for that particular language, this value must behave as normal. Otherwise, the user agent should detect phrase boundaries and suppress soft wrap opportunities within each phrase. Regardless of the content language and support for phrase boundary detection, hyphenation opportunities are suppressed as if hyphens: none had been specified.
+    autoPhrase,
+    ///     /// For compatibility with legacy content, the word-break property also supports a deprecated break-word keyword. When specified, this has the same effect as word-break: normal and overflow-wrap: anywhere, regardless of the actual value of the overflow-wrap property.
+    breakWord,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WordBreak { return .{ .raw_ = r }; }
+
+    pub fn format(self: WordBreak, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// word-space-transform
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-word-space-transform
+pub const WordSpaceTransform = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Expandable separators within the child text of this element are replaced by U+0020 SPACE.
+    space,
+    ///     /// Expandable separators within the child text of this element are replaced by U+3000 IDEOGRAPHIC SPACE.
+    ideographicSpace,
+    ///     /// If the content language is known and the user agent supports linguistic analysis for this language, the user agent must detect phrase boundaries. If a word-separator character, other space separator, or U+200B ZERO WIDTH SPACE character does not already occur at that boundary, then the UA must insert a virtual expandable separator. If this value is omitted, or if the content language is unknown, or if the user agent does not support detecting phrase boundaries for that language, there are no virtual expandable separator.
+    autoPhrase,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WordSpaceTransform { return .{ .raw_ = r }; }
+
+    pub fn format(self: WordSpaceTransform, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// word-spacing
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-word-spacing
+pub const WordSpacing = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// No additional spacing is applied. Computes to zero.
+    normal,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) WordSpacing { return .{ .px_ = v }; }
+    pub fn em(v: f32) WordSpacing { return .{ .em_ = v }; }
+    pub fn rem(v: f32) WordSpacing { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) WordSpacing { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) WordSpacing { return .{ .raw_ = r }; }
+
+    pub fn format(self: WordSpacing, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// word-wrap
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-word-wrap
+pub const WordWrap = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    normal,
+    breakWord,
+    anywhere,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WordWrap { return .{ .raw_ = r }; }
+
+    pub fn format(self: WordWrap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// wrap-after
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-wrap-after
+pub const WrapAfter = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Lines may break at allowed break points before and after the box, as determined by the line-breaking rules in effect.
+    auto,
+    ///     /// Line breaking is suppressed immediately before/after the box: the UA may only break there if there are no other valid break points in the line. If the text breaks, line-breaking restrictions are honored as for auto.
+    avoid,
+    ///     /// Same as avoid, but only for line breaks.
+    avoidLine,
+    ///     /// Same as avoid, but only for flex line breaks.
+    avoidFlex,
+    ///     /// Force a line break immediately before/after the box if the box is an inline-level box.
+    line,
+    ///     /// Force a flex line break immediately before/after the box if the box is a flex item in a multi-line flex container.
+    flex,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WrapAfter { return .{ .raw_ = r }; }
+
+    pub fn format(self: WrapAfter, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// wrap-before
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-wrap-before
+pub const WrapBefore = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Lines may break at allowed break points before and after the box, as determined by the line-breaking rules in effect.
+    auto,
+    ///     /// Line breaking is suppressed immediately before/after the box: the UA may only break there if there are no other valid break points in the line. If the text breaks, line-breaking restrictions are honored as for auto.
+    avoid,
+    ///     /// Same as avoid, but only for line breaks.
+    avoidLine,
+    ///     /// Same as avoid, but only for flex line breaks.
+    avoidFlex,
+    ///     /// Force a line break immediately before/after the box if the box is an inline-level box.
+    line,
+    ///     /// Force a flex line break immediately before/after the box if the box is a flex item in a multi-line flex container.
+    flex,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WrapBefore { return .{ .raw_ = r }; }
+
+    pub fn format(self: WrapBefore, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// wrap-flow
+/// - **W3C**: https://drafts.csswg.org/css-exclusions-1/#propdef-wrap-flow
+pub const WrapFlow = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// No exclusion is created. Inline flow content interacts with the element as usual. In particular, if the element is a float (see [CSS2]), the behavior is unchanged.
+    auto,
+    ///     /// Inline flow content can flow on all sides of the exclusion.
+    both,
+    ///     /// Inline flow content can flow around the start edge of the exclusion area but must leave the area next to the end edge of the exclusion empty.
+    start,
+    ///     /// Inline flow content can flow around the end edge of the exclusion area but must leave the area next to the start edge of the exclusion empty.
+    end,
+    ///     /// Inline flow content can flow around the edge of the exclusion with the smallest available space within the flow content’s containing block, and must leave the other edge of the exclusion empty.
+    minimum,
+    ///     /// Inline flow content can flow around the edge of the exclusion with the largest available space within the flow content’s containing block, and must leave the other edge of the exclusion empty.
+    maximum,
+    ///     /// Inline flow content can only flow before and after the exclusion in the flow content’s block direction and must leave the areas next to the start and end edges of the exclusion empty.
+    clear,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WrapFlow { return .{ .raw_ = r }; }
+
+    pub fn format(self: WrapFlow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// wrap-inside
+/// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-wrap-inside
+pub const WrapInside = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Lines may break at allowed break points within the box, as determined by the line-breaking rules in effect.
+    auto,
+    ///     /// Line breaking is suppressed within the box: the UA may only break within the box if there are no other valid break points in the line. If the text breaks, line-breaking restrictions are honored as for auto. If boxes with avoid are nested and the UA must break within these boxes, a break in an outer box must be used before a break within an inner box may be used.
+    avoid,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WrapInside { return .{ .raw_ = r }; }
+
+    pub fn format(self: WrapInside, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// wrap-through
+/// - **W3C**: https://drafts.csswg.org/css-exclusions-1/#propdef-wrap-through
+pub const WrapThrough = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The element inherits its parent node’s wrapping context. Its descendant inline content wraps around exclusions defined outside the element.
+    wrap,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WrapThrough { return .{ .raw_ = r }; }
+
+    pub fn format(self: WrapThrough, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// writing-mode
+/// - **W3C**: https://drafts.csswg.org/css-writing-modes-4/#propdef-writing-mode
+pub const WritingMode = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// Top-to-bottom block flow direction. Both the writing mode and the typographic mode are horizontal.
+    horizontalTb,
+    ///     /// Right-to-left block flow direction. Both the writing mode and the typographic mode are vertical.
+    verticalRl,
+    ///     /// Left-to-right block flow direction. Both the writing mode and the typographic mode are vertical.
+    verticalLr,
+    ///     /// Right-to-left block flow direction. The writing mode is vertical, while the typographic mode is horizontal.
+    sidewaysRl,
+    ///     /// Left-to-right block flow direction. The writing mode is vertical, while the typographic mode is horizontal.
+    sidewaysLr,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) WritingMode { return .{ .raw_ = r }; }
+
+    pub fn format(self: WritingMode, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// x
+/// - **W3C**: https://svgwg.org/svg2-draft/geometry.html#XProperty
+pub const X = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) X { return .{ .px_ = v }; }
+    pub fn em(v: f32) X { return .{ .em_ = v }; }
+    pub fn rem(v: f32) X { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) X { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) X { return .{ .raw_ = r }; }
+
+    pub fn format(self: X, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// y
+/// - **W3C**: https://svgwg.org/svg2-draft/geometry.html#YProperty
+pub const Y = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    px_: f32, em_: f32, rem_: f32,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn px(v: f32) Y { return .{ .px_ = v }; }
+    pub fn em(v: f32) Y { return .{ .em_ = v }; }
+    pub fn rem(v: f32) Y { return .{ .rem_ = v }; }
+    pub fn percent(v: f32) Y { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) Y { return .{ .raw_ = r }; }
+
+    pub fn format(self: Y, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// z-index
+/// - **W3C**: https://drafts.csswg.org/css2/#propdef-z-index
+pub const ZIndex = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    ///     /// The stack level of the generated box in the current stacking context is 0. The box does not establish a new stacking context unless it is the root element.
+    auto,
+    raw_: []const u8,
+    pub fn raw(r: []const u8) ZIndex { return .{ .raw_ = r }; }
+
+    pub fn format(self: ZIndex, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+/// zoom
+/// - **W3C**: https://drafts.csswg.org/css-viewport/#propdef-zoom
+pub const Zoom = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revertLayer,
+    unset,
+    percent_: f32,
+    raw_: []const u8,
+    pub fn percent(v: f32) Zoom { return .{ .percent_ = v }; }
+    pub fn raw(r: []const u8) Zoom { return .{ .raw_ = r }; }
+
+    pub fn format(self: Zoom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
+};
+
+pub const Style = struct {
+
+    /// -webkit-align-content
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-align-content
+    webkitAlignContent: WebkitAlignContent = .none,
+
+    /// -webkit-align-items
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-align-items
+    webkitAlignItems: WebkitAlignItems = .none,
+
+    /// -webkit-align-self
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-align-self
+    webkitAlignSelf: WebkitAlignSelf = .none,
+
+    /// -webkit-animation
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-animation
+    webkitAnimation: WebkitAnimation = .none,
+
+    /// -webkit-animation-delay
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-animation-delay
+    webkitAnimationDelay: WebkitAnimationDelay = .none,
+
+    /// -webkit-animation-direction
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-animation-direction
+    webkitAnimationDirection: WebkitAnimationDirection = .none,
+
+    /// -webkit-animation-duration
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-animation-duration
+    webkitAnimationDuration: WebkitAnimationDuration = .none,
+
+    /// -webkit-animation-fill-mode
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-animation-fill-mode
+    webkitAnimationFillMode: WebkitAnimationFillMode = .none,
+
+    /// -webkit-animation-iteration-count
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-animation-iteration-count
+    webkitAnimationIterationCount: WebkitAnimationIterationCount = .none,
+
+    /// -webkit-animation-name
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-animation-name
+    webkitAnimationName: WebkitAnimationName = .none,
+
+    /// -webkit-animation-play-state
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-animation-play-state
+    webkitAnimationPlayState: WebkitAnimationPlayState = .none,
+
+    /// -webkit-animation-timing-function
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-animation-timing-function
+    webkitAnimationTimingFunction: WebkitAnimationTimingFunction = .none,
+
+    /// -webkit-appearance
+    /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef--webkit-appearance
+    webkitAppearance: WebkitAppearance = .none,
+
+    /// -webkit-backface-visibility
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-backface-visibility
+    webkitBackfaceVisibility: WebkitBackfaceVisibility = .none,
+
+    /// -webkit-background-clip
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-background-clip
+    webkitBackgroundClip: WebkitBackgroundClip = .none,
+
+    /// -webkit-background-origin
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-background-origin
+    webkitBackgroundOrigin: WebkitBackgroundOrigin = .none,
+
+    /// -webkit-background-size
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-background-size
+    webkitBackgroundSize: WebkitBackgroundSize = .none,
+
+    /// -webkit-border-bottom-left-radius
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-border-bottom-left-radius
+    webkitBorderBottomLeftRadius: WebkitBorderBottomLeftRadius = .none,
+
+    /// -webkit-border-bottom-right-radius
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-border-bottom-right-radius
+    webkitBorderBottomRightRadius: WebkitBorderBottomRightRadius = .none,
+
+    /// -webkit-border-radius
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-border-radius
+    webkitBorderRadius: WebkitBorderRadius = .none,
+
+    /// -webkit-border-top-left-radius
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-border-top-left-radius
+    webkitBorderTopLeftRadius: WebkitBorderTopLeftRadius = .none,
+
+    /// -webkit-border-top-right-radius
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-border-top-right-radius
+    webkitBorderTopRightRadius: WebkitBorderTopRightRadius = .none,
+
+    /// -webkit-box-align
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-box-align
+    webkitBoxAlign: WebkitBoxAlign = .none,
+
+    /// -webkit-box-flex
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-box-flex
+    webkitBoxFlex: WebkitBoxFlex = .none,
+
+    /// -webkit-box-ordinal-group
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-box-ordinal-group
+    webkitBoxOrdinalGroup: WebkitBoxOrdinalGroup = .none,
+
+    /// -webkit-box-orient
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-box-orient
+    webkitBoxOrient: WebkitBoxOrient = .none,
+
+    /// -webkit-box-pack
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-box-pack
+    webkitBoxPack: WebkitBoxPack = .none,
+
+    /// -webkit-box-shadow
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-box-shadow
+    webkitBoxShadow: WebkitBoxShadow = .none,
+
+    /// -webkit-box-sizing
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-box-sizing
+    webkitBoxSizing: WebkitBoxSizing = .none,
+
+    /// -webkit-filter
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-filter
+    webkitFilter: WebkitFilter = .none,
+
+    /// -webkit-flex
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-flex-propdef
+    webkitFlex: WebkitFlex = .none,
+
+    /// -webkit-flex-basis
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-flex-basis
+    webkitFlexBasis: WebkitFlexBasis = .none,
+
+    /// -webkit-flex-direction
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-flex-direction
+    webkitFlexDirection: WebkitFlexDirection = .none,
+
+    /// -webkit-flex-flow
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-flex-flow
+    webkitFlexFlow: WebkitFlexFlow = .none,
+
+    /// -webkit-flex-grow
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-flex-grow
+    webkitFlexGrow: WebkitFlexGrow = .none,
+
+    /// -webkit-flex-shrink
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-flex-shrink
+    webkitFlexShrink: WebkitFlexShrink = .none,
+
+    /// -webkit-flex-wrap
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-flex-wrap
+    webkitFlexWrap: WebkitFlexWrap = .none,
+
+    /// -webkit-justify-content
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-justify-content
+    webkitJustifyContent: WebkitJustifyContent = .none,
+
+    /// -webkit-line-clamp
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef--webkit-line-clamp
+    webkitLineClamp: WebkitLineClamp = .none,
+
+    /// -webkit-mask
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask
+    webkitMask: WebkitMask = .none,
+
+    /// -webkit-mask-box-image
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-box-image
+    webkitMaskBoxImage: WebkitMaskBoxImage = .none,
+
+    /// -webkit-mask-box-image-outset
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-box-image-outset
+    webkitMaskBoxImageOutset: WebkitMaskBoxImageOutset = .none,
+
+    /// -webkit-mask-box-image-repeat
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-box-image-repeat
+    webkitMaskBoxImageRepeat: WebkitMaskBoxImageRepeat = .none,
+
+    /// -webkit-mask-box-image-slice
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-box-image-slice
+    webkitMaskBoxImageSlice: WebkitMaskBoxImageSlice = .none,
+
+    /// -webkit-mask-box-image-source
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-box-image-source
+    webkitMaskBoxImageSource: WebkitMaskBoxImageSource = .none,
+
+    /// -webkit-mask-box-image-width
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-box-image-width
+    webkitMaskBoxImageWidth: WebkitMaskBoxImageWidth = .none,
+
+    /// -webkit-mask-clip
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-clip
+    webkitMaskClip: WebkitMaskClip = .none,
+
+    /// -webkit-mask-composite
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-composite
+    webkitMaskComposite: WebkitMaskComposite = .none,
+
+    /// -webkit-mask-image
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-image
+    webkitMaskImage: WebkitMaskImage = .none,
+
+    /// -webkit-mask-origin
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-origin
+    webkitMaskOrigin: WebkitMaskOrigin = .none,
+
+    /// -webkit-mask-position
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-position
+    webkitMaskPosition: WebkitMaskPosition = .none,
+
+    /// -webkit-mask-repeat
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-repeat
+    webkitMaskRepeat: WebkitMaskRepeat = .none,
+
+    /// -webkit-mask-size
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-size
+    webkitMaskSize: WebkitMaskSize = .none,
+
+    /// -webkit-order
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-order
+    webkitOrder: WebkitOrder = .none,
+
+    /// -webkit-perspective
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-perspective
+    webkitPerspective: WebkitPerspective = .none,
+
+    /// -webkit-perspective-origin
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-perspective-origin
+    webkitPerspectiveOrigin: WebkitPerspectiveOrigin = .none,
+
+    /// -webkit-text-fill-color
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-text-fill-color
+    webkitTextFillColor: WebkitTextFillColor = .none,
+
+    /// -webkit-text-size-adjust
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-text-size-adjust
+    webkitTextSizeAdjust: WebkitTextSizeAdjust = .none,
+
+    /// -webkit-text-stroke
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-text-stroke
+    webkitTextStroke: WebkitTextStroke = .none,
+
+    /// -webkit-text-stroke-color
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-text-stroke-color
+    webkitTextStrokeColor: WebkitTextStrokeColor = .none,
+
+    /// -webkit-text-stroke-width
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-text-stroke-width
+    webkitTextStrokeWidth: WebkitTextStrokeWidth = .none,
+
+    /// -webkit-transform
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-transform
+    webkitTransform: WebkitTransform = .none,
+
+    /// -webkit-transform-origin
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-transform-origin
+    webkitTransformOrigin: WebkitTransformOrigin = .none,
+
+    /// -webkit-transform-style
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-transform-style
+    webkitTransformStyle: WebkitTransformStyle = .none,
+
+    /// -webkit-transition
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-transition
+    webkitTransition: WebkitTransition = .none,
+
+    /// -webkit-transition-delay
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-transition-delay
+    webkitTransitionDelay: WebkitTransitionDelay = .none,
+
+    /// -webkit-transition-duration
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-transition-duration
+    webkitTransitionDuration: WebkitTransitionDuration = .none,
+
+    /// -webkit-transition-property
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-transition-property
+    webkitTransitionProperty: WebkitTransitionProperty = .none,
+
+    /// -webkit-transition-timing-function
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-transition-timing-function
+    webkitTransitionTimingFunction: WebkitTransitionTimingFunction = .none,
+
+    /// -webkit-user-select
+    /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef--webkit-user-select
+    webkitUserSelect: WebkitUserSelect = .none,
+
+    /// accent-color
+    /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-accent-color
+    accentColor: AccentColor = .none,
+
+    /// align-content
+    /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-align-content
+    alignContent: AlignContent = .none,
+
+    /// align-items
+    /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-align-items
+    alignItems: AlignItems = .none,
+
+    /// align-self
+    /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-align-self
+    alignSelf: AlignSelf = .none,
+
+    /// alignment-baseline
+    /// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-alignment-baseline
+    alignmentBaseline: AlignmentBaseline = .none,
+
+    /// all
+    /// - **W3C**: https://drafts.csswg.org/css-cascade-5/#propdef-all
+    all: All = .none,
+
+    /// anchor-name
+    /// - **W3C**: https://drafts.csswg.org/css-anchor-position-1/#propdef-anchor-name
+    anchorName: AnchorName = .none,
+
+    /// anchor-scope
+    /// - **W3C**: https://drafts.csswg.org/css-anchor-position-1/#propdef-anchor-scope
+    anchorScope: AnchorScope = .none,
+
+    /// animation
+    /// - **W3C**: https://drafts.csswg.org/css-animations-1/#propdef-animation
+    animation: Animation = .none,
+
+    /// animation-composition
+    /// - **W3C**: https://drafts.csswg.org/css-animations-2/#propdef-animation-composition
+    animationComposition: AnimationComposition = .none,
+
+    /// animation-delay
+    /// - **W3C**: https://drafts.csswg.org/css-animations-1/#propdef-animation-delay
+    animationDelay: AnimationDelay = .none,
+
+    /// animation-direction
+    /// - **W3C**: https://drafts.csswg.org/css-animations-1/#propdef-animation-direction
+    animationDirection: AnimationDirection = .none,
+
+    /// animation-duration
+    /// - **W3C**: https://drafts.csswg.org/css-animations-2/#propdef-animation-duration
+    animationDuration: AnimationDuration = .none,
+
+    /// animation-fill-mode
+    /// - **W3C**: https://drafts.csswg.org/css-animations-1/#propdef-animation-fill-mode
+    animationFillMode: AnimationFillMode = .none,
+
+    /// animation-iteration-count
+    /// - **W3C**: https://drafts.csswg.org/css-animations-1/#propdef-animation-iteration-count
+    animationIterationCount: AnimationIterationCount = .none,
+
+    /// animation-name
+    /// - **W3C**: https://drafts.csswg.org/css-animations-1/#propdef-animation-name
+    animationName: AnimationName = .none,
+
+    /// animation-play-state
+    /// - **W3C**: https://drafts.csswg.org/css-animations-1/#propdef-animation-play-state
+    animationPlayState: AnimationPlayState = .none,
+
+    /// animation-range
+    /// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-animation-range
+    animationRange: AnimationRange = .none,
+
+    /// animation-range-center
+    /// - **W3C**: https://drafts.csswg.org/pointer-animations-1/#propdef-animation-range-center
+    animationRangeCenter: AnimationRangeCenter = .none,
+
+    /// animation-range-end
+    /// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-animation-range-end
+    animationRangeEnd: AnimationRangeEnd = .none,
+
+    /// animation-range-start
+    /// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-animation-range-start
+    animationRangeStart: AnimationRangeStart = .none,
+
+    /// animation-timeline
+    /// - **W3C**: https://drafts.csswg.org/css-animations-2/#propdef-animation-timeline
+    animationTimeline: AnimationTimeline = .none,
+
+    /// animation-timing-function
+    /// - **W3C**: https://drafts.csswg.org/css-animations-1/#propdef-animation-timing-function
+    animationTimingFunction: AnimationTimingFunction = .none,
+
+    /// animation-trigger
+    /// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-animation-trigger
+    animationTrigger: AnimationTrigger = .none,
+
+    /// appearance
+    /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-appearance
+    appearance: Appearance = .none,
+
+    /// aspect-ratio
+    /// - **W3C**: https://drafts.csswg.org/css-sizing-4/#propdef-aspect-ratio
+    aspectRatio: AspectRatio = .none,
+
+    /// backdrop-filter
+    /// - **W3C**: https://drafts.csswg.org/filter-effects-2/#propdef-backdrop-filter
+    backdropFilter: BackdropFilter = .none,
+
+    /// backface-visibility
+    /// - **W3C**: https://drafts.csswg.org/css-transforms-2/#propdef-backface-visibility
+    backfaceVisibility: BackfaceVisibility = .none,
+
+    /// background
+    /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background
+    background: Background = .none,
+
+    /// background-attachment
+    /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-attachment
+    backgroundAttachment: BackgroundAttachment = .none,
+
+    /// background-blend-mode
+    /// - **W3C**: https://drafts.csswg.org/compositing-2/#propdef-background-blend-mode
+    backgroundBlendMode: BackgroundBlendMode = .none,
+
+    /// background-clip
+    /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-clip
+    backgroundClip: BackgroundClip = .none,
+
+    /// background-color
+    /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-color
+    backgroundColor: BackgroundColor = .none,
+
+    /// background-image
+    /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-image
+    backgroundImage: BackgroundImage = .none,
+
+    /// background-origin
+    /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-origin
+    backgroundOrigin: BackgroundOrigin = .none,
+
+    /// background-position
+    /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-position
+    backgroundPosition: BackgroundPosition = .none,
+
+    /// background-position-block
+    /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-position-block
+    backgroundPositionBlock: BackgroundPositionBlock = .none,
+
+    /// background-position-inline
+    /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-position-inline
+    backgroundPositionInline: BackgroundPositionInline = .none,
+
+    /// background-position-x
+    /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-position-x
+    backgroundPositionX: BackgroundPositionX = .none,
+
+    /// background-position-y
+    /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-position-y
+    backgroundPositionY: BackgroundPositionY = .none,
+
+    /// background-repeat
+    /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-repeat
+    backgroundRepeat: BackgroundRepeat = .none,
+
+    /// background-repeat-block
+    /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-repeat-block
+    backgroundRepeatBlock: BackgroundRepeatBlock = .none,
+
+    /// background-repeat-inline
+    /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-repeat-inline
+    backgroundRepeatInline: BackgroundRepeatInline = .none,
+
+    /// background-repeat-x
+    /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-repeat-x
+    backgroundRepeatX: BackgroundRepeatX = .none,
+
+    /// background-repeat-y
+    /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-repeat-y
+    backgroundRepeatY: BackgroundRepeatY = .none,
+
+    /// background-size
+    /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-size
+    backgroundSize: BackgroundSize = .none,
+
+    /// background-tbd
+    /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-tbd
+    backgroundTbd: BackgroundTbd = .none,
+
+    /// baseline-shift
+    /// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-baseline-shift
+    baselineShift: BaselineShift = .none,
+
+    /// baseline-source
+    /// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-baseline-source
+    baselineSource: BaselineSource = .none,
+
+    /// block-ellipsis
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-block-ellipsis
+    blockEllipsis: BlockEllipsis = .none,
+
+    /// block-size
+    /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-block-size
+    blockSize: BlockSize = .none,
+
+    /// block-step
+    /// - **W3C**: https://drafts.csswg.org/css-rhythm-1/#propdef-block-step
+    blockStep: BlockStep = .none,
+
+    /// block-step-align
+    /// - **W3C**: https://drafts.csswg.org/css-rhythm-1/#propdef-block-step-align
+    blockStepAlign: BlockStepAlign = .none,
+
+    /// block-step-insert
+    /// - **W3C**: https://drafts.csswg.org/css-rhythm-1/#propdef-block-step-insert
+    blockStepInsert: BlockStepInsert = .none,
+
+    /// block-step-round
+    /// - **W3C**: https://drafts.csswg.org/css-rhythm-1/#propdef-block-step-round
+    blockStepRound: BlockStepRound = .none,
+
+    /// block-step-size
+    /// - **W3C**: https://drafts.csswg.org/css-rhythm-1/#propdef-block-step-size
+    blockStepSize: BlockStepSize = .none,
+
+    /// bookmark-label
+    /// - **W3C**: https://drafts.csswg.org/css-content-3/#propdef-bookmark-label
+    bookmarkLabel: BookmarkLabel = .none,
+
+    /// bookmark-level
+    /// - **W3C**: https://drafts.csswg.org/css-content-3/#propdef-bookmark-level
+    bookmarkLevel: BookmarkLevel = .none,
+
+    /// bookmark-state
+    /// - **W3C**: https://drafts.csswg.org/css-content-3/#propdef-bookmark-state
+    bookmarkState: BookmarkState = .none,
+
+    /// border
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border
+    border: Border = .none,
+
+    /// border-block
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block
+    borderBlock: BorderBlock = .none,
+
+    /// border-block-clip
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-clip
+    borderBlockClip: BorderBlockClip = .none,
+
+    /// border-block-color
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-color
+    borderBlockColor: BorderBlockColor = .none,
+
+    /// border-block-end
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-end
+    borderBlockEnd: BorderBlockEnd = .none,
+
+    /// border-block-end-clip
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-end-clip
+    borderBlockEndClip: BorderBlockEndClip = .none,
+
+    /// border-block-end-color
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-end-color
+    borderBlockEndColor: BorderBlockEndColor = .none,
+
+    /// border-block-end-radius
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-end-radius
+    borderBlockEndRadius: BorderBlockEndRadius = .none,
+
+    /// border-block-end-style
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-end-style
+    borderBlockEndStyle: BorderBlockEndStyle = .none,
+
+    /// border-block-end-width
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-end-width
+    borderBlockEndWidth: BorderBlockEndWidth = .none,
+
+    /// border-block-start
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-start
+    borderBlockStart: BorderBlockStart = .none,
+
+    /// border-block-start-clip
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-start-clip
+    borderBlockStartClip: BorderBlockStartClip = .none,
+
+    /// border-block-start-color
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-start-color
+    borderBlockStartColor: BorderBlockStartColor = .none,
+
+    /// border-block-start-radius
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-start-radius
+    borderBlockStartRadius: BorderBlockStartRadius = .none,
+
+    /// border-block-start-style
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-start-style
+    borderBlockStartStyle: BorderBlockStartStyle = .none,
+
+    /// border-block-start-width
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-start-width
+    borderBlockStartWidth: BorderBlockStartWidth = .none,
+
+    /// border-block-style
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-style
+    borderBlockStyle: BorderBlockStyle = .none,
+
+    /// border-block-width
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-width
+    borderBlockWidth: BorderBlockWidth = .none,
+
+    /// border-bottom
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-bottom
+    borderBottom: BorderBottom = .none,
+
+    /// border-bottom-clip
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-bottom-clip
+    borderBottomClip: BorderBottomClip = .none,
+
+    /// border-bottom-color
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-bottom-color
+    borderBottomColor: BorderBottomColor = .none,
+
+    /// border-bottom-left-radius
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-bottom-left-radius
+    borderBottomLeftRadius: BorderBottomLeftRadius = .none,
+
+    /// border-bottom-radius
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-bottom-radius
+    borderBottomRadius: BorderBottomRadius = .none,
+
+    /// border-bottom-right-radius
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-bottom-right-radius
+    borderBottomRightRadius: BorderBottomRightRadius = .none,
+
+    /// border-bottom-style
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-bottom-style
+    borderBottomStyle: BorderBottomStyle = .none,
+
+    /// border-bottom-width
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-bottom-width
+    borderBottomWidth: BorderBottomWidth = .none,
+
+    /// border-boundary
+    /// - **W3C**: https://drafts.csswg.org/css-round-display-1/#propdef-border-boundary
+    borderBoundary: BorderBoundary = .none,
+
+    /// border-clip
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-clip
+    borderClip: BorderClip = .none,
+
+    /// border-collapse
+    /// - **W3C**: https://drafts.csswg.org/css-tables-3/#propdef-border-collapse
+    borderCollapse: BorderCollapse = .none,
+
+    /// border-color
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-color
+    borderColor: BorderColor = .none,
+
+    /// border-end-end-radius
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-end-end-radius
+    borderEndEndRadius: BorderEndEndRadius = .none,
+
+    /// border-end-start-radius
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-end-start-radius
+    borderEndStartRadius: BorderEndStartRadius = .none,
+
+    /// border-image
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-image
+    borderImage: BorderImage = .none,
+
+    /// border-image-outset
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-image-outset
+    borderImageOutset: BorderImageOutset = .none,
+
+    /// border-image-repeat
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-image-repeat
+    borderImageRepeat: BorderImageRepeat = .none,
+
+    /// border-image-slice
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-image-slice
+    borderImageSlice: BorderImageSlice = .none,
+
+    /// border-image-source
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-image-source
+    borderImageSource: BorderImageSource = .none,
+
+    /// border-image-width
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-image-width
+    borderImageWidth: BorderImageWidth = .none,
+
+    /// border-inline
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline
+    borderInline: BorderInline = .none,
+
+    /// border-inline-clip
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-clip
+    borderInlineClip: BorderInlineClip = .none,
+
+    /// border-inline-color
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-color
+    borderInlineColor: BorderInlineColor = .none,
+
+    /// border-inline-end
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-end
+    borderInlineEnd: BorderInlineEnd = .none,
+
+    /// border-inline-end-clip
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-end-clip
+    borderInlineEndClip: BorderInlineEndClip = .none,
+
+    /// border-inline-end-color
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-end-color
+    borderInlineEndColor: BorderInlineEndColor = .none,
+
+    /// border-inline-end-radius
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-end-radius
+    borderInlineEndRadius: BorderInlineEndRadius = .none,
+
+    /// border-inline-end-style
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-end-style
+    borderInlineEndStyle: BorderInlineEndStyle = .none,
+
+    /// border-inline-end-width
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-end-width
+    borderInlineEndWidth: BorderInlineEndWidth = .none,
+
+    /// border-inline-start
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-start
+    borderInlineStart: BorderInlineStart = .none,
+
+    /// border-inline-start-clip
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-start-clip
+    borderInlineStartClip: BorderInlineStartClip = .none,
+
+    /// border-inline-start-color
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-start-color
+    borderInlineStartColor: BorderInlineStartColor = .none,
+
+    /// border-inline-start-radius
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-start-radius
+    borderInlineStartRadius: BorderInlineStartRadius = .none,
+
+    /// border-inline-start-style
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-start-style
+    borderInlineStartStyle: BorderInlineStartStyle = .none,
+
+    /// border-inline-start-width
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-start-width
+    borderInlineStartWidth: BorderInlineStartWidth = .none,
+
+    /// border-inline-style
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-style
+    borderInlineStyle: BorderInlineStyle = .none,
+
+    /// border-inline-width
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-width
+    borderInlineWidth: BorderInlineWidth = .none,
+
+    /// border-left
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-left
+    borderLeft: BorderLeft = .none,
+
+    /// border-left-clip
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-left-clip
+    borderLeftClip: BorderLeftClip = .none,
+
+    /// border-left-color
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-left-color
+    borderLeftColor: BorderLeftColor = .none,
+
+    /// border-left-radius
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-left-radius
+    borderLeftRadius: BorderLeftRadius = .none,
+
+    /// border-left-style
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-left-style
+    borderLeftStyle: BorderLeftStyle = .none,
+
+    /// border-left-width
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-left-width
+    borderLeftWidth: BorderLeftWidth = .none,
+
+    /// border-limit
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-limit
+    borderLimit: BorderLimit = .none,
+
+    /// border-radius
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-radius
+    borderRadius: BorderRadius = .none,
+
+    /// border-right
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-right
+    borderRight: BorderRight = .none,
+
+    /// border-right-clip
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-right-clip
+    borderRightClip: BorderRightClip = .none,
+
+    /// border-right-color
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-right-color
+    borderRightColor: BorderRightColor = .none,
+
+    /// border-right-radius
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-right-radius
+    borderRightRadius: BorderRightRadius = .none,
+
+    /// border-right-style
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-right-style
+    borderRightStyle: BorderRightStyle = .none,
+
+    /// border-right-width
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-right-width
+    borderRightWidth: BorderRightWidth = .none,
+
+    /// border-shape
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-shape
+    borderShape: BorderShape = .none,
+
+    /// border-spacing
+    /// - **W3C**: https://drafts.csswg.org/css-tables-3/#propdef-border-spacing
+    borderSpacing: BorderSpacing = .none,
+
+    /// border-start-end-radius
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-start-end-radius
+    borderStartEndRadius: BorderStartEndRadius = .none,
+
+    /// border-start-start-radius
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-start-start-radius
+    borderStartStartRadius: BorderStartStartRadius = .none,
+
+    /// border-style
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-style
+    borderStyle: BorderStyle = .none,
+
+    /// border-top
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-top
+    borderTop: BorderTop = .none,
+
+    /// border-top-clip
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-top-clip
+    borderTopClip: BorderTopClip = .none,
+
+    /// border-top-color
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-top-color
+    borderTopColor: BorderTopColor = .none,
+
+    /// border-top-left-radius
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-top-left-radius
+    borderTopLeftRadius: BorderTopLeftRadius = .none,
+
+    /// border-top-radius
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-top-radius
+    borderTopRadius: BorderTopRadius = .none,
+
+    /// border-top-right-radius
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-top-right-radius
+    borderTopRightRadius: BorderTopRightRadius = .none,
+
+    /// border-top-style
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-top-style
+    borderTopStyle: BorderTopStyle = .none,
+
+    /// border-top-width
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-top-width
+    borderTopWidth: BorderTopWidth = .none,
+
+    /// border-width
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-width
+    borderWidth: BorderWidth = .none,
+
+    /// bottom
+    /// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-bottom
+    bottom: Bottom = .none,
+
+    /// box-decoration-break
+    /// - **W3C**: https://drafts.csswg.org/css-break-4/#propdef-box-decoration-break
+    boxDecorationBreak: BoxDecorationBreak = .none,
+
+    /// box-shadow
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-box-shadow
+    boxShadow: BoxShadow = .none,
+
+    /// box-shadow-blur
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-box-shadow-blur
+    boxShadowBlur: BoxShadowBlur = .none,
+
+    /// box-shadow-color
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-box-shadow-color
+    boxShadowColor: BoxShadowColor = .none,
+
+    /// box-shadow-offset
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-box-shadow-offset
+    boxShadowOffset: BoxShadowOffset = .none,
+
+    /// box-shadow-position
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-box-shadow-position
+    boxShadowPosition: BoxShadowPosition = .none,
+
+    /// box-shadow-spread
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-box-shadow-spread
+    boxShadowSpread: BoxShadowSpread = .none,
+
+    /// box-sizing
+    /// - **W3C**: https://drafts.csswg.org/css-sizing-3/#propdef-box-sizing
+    boxSizing: BoxSizing = .none,
+
+    /// box-snap
+    /// - **W3C**: https://drafts.csswg.org/css-line-grid-1/#propdef-box-snap
+    boxSnap: BoxSnap = .none,
+
+    /// break-after
+    /// - **W3C**: https://drafts.csswg.org/css-break-4/#propdef-break-after
+    breakAfter: BreakAfter = .none,
+
+    /// break-before
+    /// - **W3C**: https://drafts.csswg.org/css-break-4/#propdef-break-before
+    breakBefore: BreakBefore = .none,
+
+    /// break-inside
+    /// - **W3C**: https://drafts.csswg.org/css-break-4/#propdef-break-inside
+    breakInside: BreakInside = .none,
+
+    /// caption-side
+    /// - **W3C**: https://drafts.csswg.org/css-tables-3/#propdef-caption-side
+    captionSide: CaptionSide = .none,
+
+    /// caret
+    /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-caret
+    caret: Caret = .none,
+
+    /// caret-animation
+    /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-caret-animation
+    caretAnimation: CaretAnimation = .none,
+
+    /// caret-color
+    /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-caret-color
+    caretColor: CaretColor = .none,
+
+    /// caret-shape
+    /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-caret-shape
+    caretShape: CaretShape = .none,
+
+    /// clear
+    /// - **W3C**: https://drafts.csswg.org/css-page-floats-3/#propdef-clear
+    clear: Clear = .none,
+
+    /// clip
+    /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-clip
+    clip: Clip = .none,
+
+    /// clip-path
+    /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-clip-path
+    clipPath: ClipPath = .none,
+
+    /// clip-rule
+    /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-clip-rule
+    clipRule: ClipRule = .none,
+
+    /// color
+    /// - **W3C**: https://drafts.csswg.org/css-color-4/#propdef-color
+    color: CssColor = .none,
+
+    /// color-adjust
+    /// - **W3C**: https://drafts.csswg.org/css-color-adjust-1/#propdef-color-adjust
+    colorAdjust: ColorAdjust = .none,
+
+    /// color-interpolation
+    /// - **W3C**: https://svgwg.org/svg2-draft/painting.html#ColorInterpolationProperty
+    colorInterpolation: ColorInterpolation = .none,
+
+    /// color-interpolation-filters
+    /// - **W3C**: https://drafts.csswg.org/filter-effects-1/#propdef-color-interpolation-filters
+    colorInterpolationFilters: ColorInterpolationFilters = .none,
+
+    /// color-scheme
+    /// - **W3C**: https://drafts.csswg.org/css-color-adjust-1/#propdef-color-scheme
+    colorScheme: ColorScheme = .none,
+
+    /// column-count
+    /// - **W3C**: https://drafts.csswg.org/css-multicol-2/#propdef-column-count
+    columnCount: ColumnCount = .none,
+
+    /// column-fill
+    /// - **W3C**: https://drafts.csswg.org/css-multicol-2/#propdef-column-fill
+    columnFill: ColumnFill = .none,
+
+    /// column-gap
+    /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-column-gap
+    columnGap: ColumnGap = .none,
+
+    /// column-height
+    /// - **W3C**: https://drafts.csswg.org/css-multicol-2/#propdef-column-height
+    columnHeight: ColumnHeight = .none,
+
+    /// column-rule
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule
+    columnRule: ColumnRule = .none,
+
+    /// column-rule-break
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-break
+    columnRuleBreak: ColumnRuleBreak = .none,
+
+    /// column-rule-color
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-color
+    columnRuleColor: ColumnRuleColor = .none,
+
+    /// column-rule-edge-inset
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-edge-inset
+    columnRuleEdgeInset: ColumnRuleEdgeInset = .none,
+
+    /// column-rule-edge-inset-end
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-edge-inset-end
+    columnRuleEdgeInsetEnd: ColumnRuleEdgeInsetEnd = .none,
+
+    /// column-rule-edge-inset-start
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-edge-inset-start
+    columnRuleEdgeInsetStart: ColumnRuleEdgeInsetStart = .none,
+
+    /// column-rule-inset
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-inset
+    columnRuleInset: ColumnRuleInset = .none,
+
+    /// column-rule-inset-end
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-inset-end
+    columnRuleInsetEnd: ColumnRuleInsetEnd = .none,
+
+    /// column-rule-inset-start
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-inset-start
+    columnRuleInsetStart: ColumnRuleInsetStart = .none,
+
+    /// column-rule-interior-inset
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-interior-inset
+    columnRuleInteriorInset: ColumnRuleInteriorInset = .none,
+
+    /// column-rule-interior-inset-end
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-interior-inset-end
+    columnRuleInteriorInsetEnd: ColumnRuleInteriorInsetEnd = .none,
+
+    /// column-rule-interior-inset-start
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-interior-inset-start
+    columnRuleInteriorInsetStart: ColumnRuleInteriorInsetStart = .none,
+
+    /// column-rule-style
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-style
+    columnRuleStyle: ColumnRuleStyle = .none,
+
+    /// column-rule-visibility-items
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-visibility-items
+    columnRuleVisibilityItems: ColumnRuleVisibilityItems = .none,
+
+    /// column-rule-width
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-width
+    columnRuleWidth: ColumnRuleWidth = .none,
+
+    /// column-span
+    /// - **W3C**: https://drafts.csswg.org/css-multicol-2/#propdef-column-span
+    columnSpan: ColumnSpan = .none,
+
+    /// column-width
+    /// - **W3C**: https://drafts.csswg.org/css-multicol-2/#propdef-column-width
+    columnWidth: ColumnWidth = .none,
+
+    /// column-wrap
+    /// - **W3C**: https://drafts.csswg.org/css-multicol-2/#propdef-column-wrap
+    columnWrap: ColumnWrap = .none,
+
+    /// columns
+    /// - **W3C**: https://drafts.csswg.org/css-multicol-2/#propdef-columns
+    columns: Columns = .none,
+
+    /// contain
+    /// - **W3C**: https://drafts.csswg.org/css-contain-2/#propdef-contain
+    contain: Contain = .none,
+
+    /// contain-intrinsic-block-size
+    /// - **W3C**: https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-block-size
+    containIntrinsicBlockSize: ContainIntrinsicBlockSize = .none,
+
+    /// contain-intrinsic-height
+    /// - **W3C**: https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-height
+    containIntrinsicHeight: ContainIntrinsicHeight = .none,
+
+    /// contain-intrinsic-inline-size
+    /// - **W3C**: https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-inline-size
+    containIntrinsicInlineSize: ContainIntrinsicInlineSize = .none,
+
+    /// contain-intrinsic-size
+    /// - **W3C**: https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-size
+    containIntrinsicSize: ContainIntrinsicSize = .none,
+
+    /// contain-intrinsic-width
+    /// - **W3C**: https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-width
+    containIntrinsicWidth: ContainIntrinsicWidth = .none,
+
+    /// container
+    /// - **W3C**: https://drafts.csswg.org/css-conditional-5/#propdef-container
+    container: Container = .none,
+
+    /// container-name
+    /// - **W3C**: https://drafts.csswg.org/css-conditional-5/#propdef-container-name
+    containerName: ContainerName = .none,
+
+    /// container-type
+    /// - **W3C**: https://drafts.csswg.org/css-conditional-5/#propdef-container-type
+    containerType: ContainerType = .none,
+
+    /// content
+    /// - **W3C**: https://drafts.csswg.org/css-content-3/#propdef-content
+    content: Content = .none,
+
+    /// content-visibility
+    /// - **W3C**: https://drafts.csswg.org/css-contain-2/#propdef-content-visibility
+    contentVisibility: ContentVisibility = .none,
+
+    /// continue
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-continue
+    continue_: Continue = .none,
+
+    /// copy-into
+    /// - **W3C**: https://drafts.csswg.org/css-gcpm-4/#propdef-copy-into
+    copyInto: CopyInto = .none,
+
+    /// corner
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner
+    corner: Corner = .none,
+
+    /// corner-block-end
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-block-end
+    cornerBlockEnd: CornerBlockEnd = .none,
+
+    /// corner-block-end-shape
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-block-end-shape
+    cornerBlockEndShape: CornerBlockEndShape = .none,
+
+    /// corner-block-start
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-block-start
+    cornerBlockStart: CornerBlockStart = .none,
+
+    /// corner-block-start-shape
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-block-start-shape
+    cornerBlockStartShape: CornerBlockStartShape = .none,
+
+    /// corner-bottom
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-bottom
+    cornerBottom: CornerBottom = .none,
+
+    /// corner-bottom-left
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-bottom-left
+    cornerBottomLeft: CornerBottomLeft = .none,
+
+    /// corner-bottom-left-shape
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-bottom-left-shape
+    cornerBottomLeftShape: CornerBottomLeftShape = .none,
+
+    /// corner-bottom-right
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-bottom-right
+    cornerBottomRight: CornerBottomRight = .none,
+
+    /// corner-bottom-right-shape
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-bottom-right-shape
+    cornerBottomRightShape: CornerBottomRightShape = .none,
+
+    /// corner-bottom-shape
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-bottom-shape
+    cornerBottomShape: CornerBottomShape = .none,
+
+    /// corner-end-end
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-end-end
+    cornerEndEnd: CornerEndEnd = .none,
+
+    /// corner-end-end-shape
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-end-end-shape
+    cornerEndEndShape: CornerEndEndShape = .none,
+
+    /// corner-end-start
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-end-start
+    cornerEndStart: CornerEndStart = .none,
+
+    /// corner-end-start-shape
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-end-start-shape
+    cornerEndStartShape: CornerEndStartShape = .none,
+
+    /// corner-inline-end
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-inline-end
+    cornerInlineEnd: CornerInlineEnd = .none,
+
+    /// corner-inline-end-shape
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-inline-end-shape
+    cornerInlineEndShape: CornerInlineEndShape = .none,
+
+    /// corner-inline-start
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-inline-start
+    cornerInlineStart: CornerInlineStart = .none,
+
+    /// corner-inline-start-shape
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-inline-start-shape
+    cornerInlineStartShape: CornerInlineStartShape = .none,
+
+    /// corner-left
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-left
+    cornerLeft: CornerLeft = .none,
+
+    /// corner-left-shape
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-left-shape
+    cornerLeftShape: CornerLeftShape = .none,
+
+    /// corner-right
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-right
+    cornerRight: CornerRight = .none,
+
+    /// corner-right-shape
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-right-shape
+    cornerRightShape: CornerRightShape = .none,
+
+    /// corner-shape
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-shape
+    cornerShape: CornerShape = .none,
+
+    /// corner-start-end
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-start-end
+    cornerStartEnd: CornerStartEnd = .none,
+
+    /// corner-start-end-shape
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-start-end-shape
+    cornerStartEndShape: CornerStartEndShape = .none,
+
+    /// corner-start-start
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-start-start
+    cornerStartStart: CornerStartStart = .none,
+
+    /// corner-start-start-shape
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-start-start-shape
+    cornerStartStartShape: CornerStartStartShape = .none,
+
+    /// corner-top
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-top
+    cornerTop: CornerTop = .none,
+
+    /// corner-top-left
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-top-left
+    cornerTopLeft: CornerTopLeft = .none,
+
+    /// corner-top-left-shape
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-top-left-shape
+    cornerTopLeftShape: CornerTopLeftShape = .none,
+
+    /// corner-top-right
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-top-right
+    cornerTopRight: CornerTopRight = .none,
+
+    /// corner-top-right-shape
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-top-right-shape
+    cornerTopRightShape: CornerTopRightShape = .none,
+
+    /// corner-top-shape
+    /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-top-shape
+    cornerTopShape: CornerTopShape = .none,
+
+    /// counter-increment
+    /// - **W3C**: https://drafts.csswg.org/css-lists-3/#propdef-counter-increment
+    counterIncrement: CounterIncrement = .none,
+
+    /// counter-reset
+    /// - **W3C**: https://drafts.csswg.org/css-lists-3/#propdef-counter-reset
+    counterReset: CounterReset = .none,
+
+    /// counter-set
+    /// - **W3C**: https://drafts.csswg.org/css-lists-3/#propdef-counter-set
+    counterSet: CounterSet = .none,
+
+    /// cue
+    /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-cue
+    cue: Cue = .none,
+
+    /// cue-after
+    /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-cue-after
+    cueAfter: CueAfter = .none,
+
+    /// cue-before
+    /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-cue-before
+    cueBefore: CueBefore = .none,
+
+    /// cursor
+    /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-cursor
+    cursor: Cursor = .none,
+
+    /// cx
+    /// - **W3C**: https://svgwg.org/svg2-draft/geometry.html#CxProperty
+    cx: Cx = .none,
+
+    /// cy
+    /// - **W3C**: https://svgwg.org/svg2-draft/geometry.html#CyProperty
+    cy: Cy = .none,
+
+    /// d
+    /// - **W3C**: https://svgwg.org/svg2-draft/paths.html#DProperty
+    d: D = .none,
+
+    /// direction
+    /// - **W3C**: https://drafts.csswg.org/css-writing-modes-4/#propdef-direction
+    direction: Direction = .none,
+
+    /// display
+    /// - **W3C**: https://drafts.csswg.org/css-display-4/#propdef-display
+    display: Display = .none,
+
+    /// dominant-baseline
+    /// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-dominant-baseline
+    dominantBaseline: DominantBaseline = .none,
+
+    /// dynamic-range-limit
+    /// - **W3C**: https://drafts.csswg.org/css-color-hdr-1/#propdef-dynamic-range-limit
+    dynamicRangeLimit: DynamicRangeLimit = .none,
+
+    /// empty-cells
+    /// - **W3C**: https://drafts.csswg.org/css-tables-3/#propdef-empty-cells
+    emptyCells: EmptyCells = .none,
+
+    /// event-trigger
+    /// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-event-trigger
+    eventTrigger: EventTrigger = .none,
+
+    /// event-trigger-name
+    /// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-event-trigger-name
+    eventTriggerName: EventTriggerName = .none,
+
+    /// event-trigger-source
+    /// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-event-trigger-source
+    eventTriggerSource: EventTriggerSource = .none,
+
+    /// field-sizing
+    /// - **W3C**: https://drafts.csswg.org/css-forms-1/#propdef-field-sizing
+    fieldSizing: FieldSizing = .none,
+
+    /// fill
+    /// - **W3C**: https://svgwg.org/svg2-draft/painting.html#FillProperty
+    fill: Fill = .none,
+
+    /// fill-break
+    /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-fill-break
+    fillBreak: FillBreak = .none,
+
+    /// fill-color
+    /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-fill-color
+    fillColor: FillColor = .none,
+
+    /// fill-image
+    /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-fill-image
+    fillImage: FillImage = .none,
+
+    /// fill-opacity
+    /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-fill-opacity
+    fillOpacity: FillOpacity = .none,
+
+    /// fill-origin
+    /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-fill-origin
+    fillOrigin: FillOrigin = .none,
+
+    /// fill-position
+    /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-fill-position
+    fillPosition: FillPosition = .none,
+
+    /// fill-repeat
+    /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-fill-repeat
+    fillRepeat: FillRepeat = .none,
+
+    /// fill-rule
+    /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-fill-rule
+    fillRule: FillRule = .none,
+
+    /// fill-size
+    /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-fill-size
+    fillSize: FillSize = .none,
+
+    /// filter
+    /// - **W3C**: https://drafts.csswg.org/filter-effects-1/#propdef-filter
+    filter: Filter = .none,
+
+    /// flex
+    /// - **W3C**: https://drafts.csswg.org/css-flexbox-1/#propdef-flex
+    flex: Flex = .none,
+
+    /// flex-basis
+    /// - **W3C**: https://drafts.csswg.org/css-flexbox-1/#propdef-flex-basis
+    flexBasis: FlexBasis = .none,
+
+    /// flex-direction
+    /// - **W3C**: https://drafts.csswg.org/css-flexbox-1/#propdef-flex-direction
+    flexDirection: FlexDirection = .none,
+
+    /// flex-flow
+    /// - **W3C**: https://drafts.csswg.org/css-flexbox-1/#propdef-flex-flow
+    flexFlow: FlexFlow = .none,
+
+    /// flex-grow
+    /// - **W3C**: https://drafts.csswg.org/css-flexbox-1/#propdef-flex-grow
+    flexGrow: FlexGrow = .none,
+
+    /// flex-shrink
+    /// - **W3C**: https://drafts.csswg.org/css-flexbox-1/#propdef-flex-shrink
+    flexShrink: FlexShrink = .none,
+
+    /// flex-wrap
+    /// - **W3C**: https://drafts.csswg.org/css-flexbox-1/#propdef-flex-wrap
+    flexWrap: FlexWrap = .none,
+
+    /// float
+    /// - **W3C**: https://drafts.csswg.org/css-page-floats-3/#propdef-float
+    float: Float = .none,
+
+    /// float-defer
+    /// - **W3C**: https://drafts.csswg.org/css-page-floats-3/#propdef-float-defer
+    floatDefer: FloatDefer = .none,
+
+    /// float-offset
+    /// - **W3C**: https://drafts.csswg.org/css-page-floats-3/#propdef-float-offset
+    floatOffset: FloatOffset = .none,
+
+    /// float-reference
+    /// - **W3C**: https://drafts.csswg.org/css-page-floats-3/#propdef-float-reference
+    floatReference: FloatReference = .none,
+
+    /// flood-color
+    /// - **W3C**: https://drafts.csswg.org/filter-effects-1/#propdef-flood-color
+    floodColor: FloodColor = .none,
+
+    /// flood-opacity
+    /// - **W3C**: https://drafts.csswg.org/filter-effects-1/#propdef-flood-opacity
+    floodOpacity: FloodOpacity = .none,
+
+    /// flow-from
+    /// - **W3C**: https://drafts.csswg.org/css-regions-1/#propdef-flow-from
+    flowFrom: FlowFrom = .none,
+
+    /// flow-into
+    /// - **W3C**: https://drafts.csswg.org/css-regions-1/#propdef-flow-into
+    flowInto: FlowInto = .none,
+
+    /// flow-tolerance
+    /// - **W3C**: https://drafts.csswg.org/css-grid-3/#propdef-flow-tolerance
+    flowTolerance: FlowTolerance = .none,
+
+    /// font
+    /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font
+    font: Font = .none,
+
+    /// font-family
+    /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-family
+    fontFamily: FontFamily = .none,
+
+    /// font-feature-settings
+    /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-feature-settings
+    fontFeatureSettings: FontFeatureSettings = .none,
+
+    /// font-kerning
+    /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-kerning
+    fontKerning: FontKerning = .none,
+
+    /// font-language-override
+    /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-language-override
+    fontLanguageOverride: FontLanguageOverride = .none,
+
+    /// font-optical-sizing
+    /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-optical-sizing
+    fontOpticalSizing: FontOpticalSizing = .none,
+
+    /// font-palette
+    /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-palette
+    fontPalette: FontPalette = .none,
+
+    /// font-size
+    /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-size
+    fontSize: FontSize = .none,
+
+    /// font-size-adjust
+    /// - **W3C**: https://drafts.csswg.org/css-fonts-5/#propdef-font-size-adjust
+    fontSizeAdjust: FontSizeAdjust = .none,
+
+    /// font-stretch
+    /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-stretch
+    fontStretch: FontStretch = .none,
+
+    /// font-style
+    /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-style
+    fontStyle: FontStyle = .none,
+
+    /// font-synthesis
+    /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-synthesis
+    fontSynthesis: FontSynthesis = .none,
+
+    /// font-synthesis-position
+    /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-synthesis-position
+    fontSynthesisPosition: FontSynthesisPosition = .none,
+
+    /// font-synthesis-small-caps
+    /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-synthesis-small-caps
+    fontSynthesisSmallCaps: FontSynthesisSmallCaps = .none,
+
+    /// font-synthesis-style
+    /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-synthesis-style
+    fontSynthesisStyle: FontSynthesisStyle = .none,
+
+    /// font-synthesis-weight
+    /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-synthesis-weight
+    fontSynthesisWeight: FontSynthesisWeight = .none,
+
+    /// font-variant
+    /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-variant
+    fontVariant: FontVariant = .none,
+
+    /// font-variant-alternates
+    /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-alternates
+    fontVariantAlternates: FontVariantAlternates = .none,
+
+    /// font-variant-caps
+    /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-caps
+    fontVariantCaps: FontVariantCaps = .none,
+
+    /// font-variant-east-asian
+    /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-east-asian
+    fontVariantEastAsian: FontVariantEastAsian = .none,
+
+    /// font-variant-emoji
+    /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-emoji
+    fontVariantEmoji: FontVariantEmoji = .none,
+
+    /// font-variant-ligatures
+    /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-ligatures
+    fontVariantLigatures: FontVariantLigatures = .none,
+
+    /// font-variant-numeric
+    /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-numeric
+    fontVariantNumeric: FontVariantNumeric = .none,
+
+    /// font-variant-position
+    /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-position
+    fontVariantPosition: FontVariantPosition = .none,
+
+    /// font-variation-settings
+    /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-variation-settings
+    fontVariationSettings: FontVariationSettings = .none,
+
+    /// font-weight
+    /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-weight
+    fontWeight: FontWeight = .none,
+
+    /// font-width
+    /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-width
+    fontWidth: FontWidth = .none,
+
+    /// footnote-display
+    /// - **W3C**: https://drafts.csswg.org/css-gcpm-3/#propdef-footnote-display
+    footnoteDisplay: FootnoteDisplay = .none,
+
+    /// footnote-policy
+    /// - **W3C**: https://drafts.csswg.org/css-gcpm-3/#propdef-footnote-policy
+    footnotePolicy: FootnotePolicy = .none,
+
+    /// forced-color-adjust
+    /// - **W3C**: https://drafts.csswg.org/css-color-adjust-1/#propdef-forced-color-adjust
+    forcedColorAdjust: ForcedColorAdjust = .none,
+
+    /// gap
+    /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-gap
+    gap: Gap = .none,
+
+    /// glyph-orientation-vertical
+    /// - **W3C**: https://drafts.csswg.org/css-writing-modes-4/#propdef-glyph-orientation-vertical
+    glyphOrientationVertical: GlyphOrientationVertical = .none,
+
+    /// grid
+    /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid
+    grid: Grid = .none,
+
+    /// grid-area
+    /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-area
+    gridArea: GridArea = .none,
+
+    /// grid-auto-columns
+    /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-auto-columns
+    gridAutoColumns: GridAutoColumns = .none,
+
+    /// grid-auto-flow
+    /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-auto-flow
+    gridAutoFlow: GridAutoFlow = .none,
+
+    /// grid-auto-rows
+    /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-auto-rows
+    gridAutoRows: GridAutoRows = .none,
+
+    /// grid-column
+    /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-column
+    gridColumn: GridColumn = .none,
+
+    /// grid-column-end
+    /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-column-end
+    gridColumnEnd: GridColumnEnd = .none,
+
+    /// grid-column-gap
+    /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-grid-column-gap
+    gridColumnGap: GridColumnGap = .none,
+
+    /// grid-column-start
+    /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-column-start
+    gridColumnStart: GridColumnStart = .none,
+
+    /// grid-gap
+    /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-grid-gap
+    gridGap: GridGap = .none,
+
+    /// grid-row
+    /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-row
+    gridRow: GridRow = .none,
+
+    /// grid-row-end
+    /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-row-end
+    gridRowEnd: GridRowEnd = .none,
+
+    /// grid-row-gap
+    /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-grid-row-gap
+    gridRowGap: GridRowGap = .none,
+
+    /// grid-row-start
+    /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-row-start
+    gridRowStart: GridRowStart = .none,
+
+    /// grid-template
+    /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-template
+    gridTemplate: GridTemplate = .none,
+
+    /// grid-template-areas
+    /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-template-areas
+    gridTemplateAreas: GridTemplateAreas = .none,
+
+    /// grid-template-columns
+    /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-template-columns
+    gridTemplateColumns: GridTemplateColumns = .none,
+
+    /// grid-template-rows
+    /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-template-rows
+    gridTemplateRows: GridTemplateRows = .none,
+
+    /// hanging-punctuation
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-hanging-punctuation
+    hangingPunctuation: HangingPunctuation = .none,
+
+    /// height
+    /// - **W3C**: https://drafts.csswg.org/css-sizing-3/#propdef-height
+    height: Height = .none,
+
+    /// hyphenate-character
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-hyphenate-character
+    hyphenateCharacter: HyphenateCharacter = .none,
+
+    /// hyphenate-limit-chars
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-hyphenate-limit-chars
+    hyphenateLimitChars: HyphenateLimitChars = .none,
+
+    /// hyphenate-limit-last
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-hyphenate-limit-last
+    hyphenateLimitLast: HyphenateLimitLast = .none,
+
+    /// hyphenate-limit-lines
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-hyphenate-limit-lines
+    hyphenateLimitLines: HyphenateLimitLines = .none,
+
+    /// hyphenate-limit-zone
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-hyphenate-limit-zone
+    hyphenateLimitZone: HyphenateLimitZone = .none,
+
+    /// hyphens
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-hyphens
+    hyphens: Hyphens = .none,
+
+    /// image-animation
+    /// - **W3C**: https://drafts.csswg.org/css-image-animation-1/#propdef-image-animation
+    imageAnimation: ImageAnimation = .none,
+
+    /// image-orientation
+    /// - **W3C**: https://drafts.csswg.org/css-images-3/#propdef-image-orientation
+    imageOrientation: ImageOrientation = .none,
+
+    /// image-rendering
+    /// - **W3C**: https://drafts.csswg.org/css-images-3/#propdef-image-rendering
+    imageRendering: ImageRendering = .none,
+
+    /// image-resolution
+    /// - **W3C**: https://drafts.csswg.org/css-images-4/#propdef-image-resolution
+    imageResolution: ImageResolution = .none,
+
+    /// initial-letter
+    /// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-initial-letter
+    initialLetter: InitialLetter = .none,
+
+    /// initial-letter-align
+    /// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-initial-letter-align
+    initialLetterAlign: InitialLetterAlign = .none,
+
+    /// initial-letter-wrap
+    /// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-initial-letter-wrap
+    initialLetterWrap: InitialLetterWrap = .none,
+
+    /// inline-size
+    /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-inline-size
+    inlineSize: InlineSize = .none,
+
+    /// inline-sizing
+    /// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-inline-sizing
+    inlineSizing: InlineSizing = .none,
+
+    /// input-security
+    /// - **W3C**: https://drafts.csswg.org/css-forms-1/#propdef-input-security
+    inputSecurity: InputSecurity = .none,
+
+    /// inset
+    /// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-inset
+    inset: Inset = .none,
+
+    /// inset-block
+    /// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-inset-block
+    insetBlock: InsetBlock = .none,
+
+    /// inset-block-end
+    /// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-inset-block-end
+    insetBlockEnd: InsetBlockEnd = .none,
+
+    /// inset-block-start
+    /// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-inset-block-start
+    insetBlockStart: InsetBlockStart = .none,
+
+    /// inset-inline
+    /// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-inset-inline
+    insetInline: InsetInline = .none,
+
+    /// inset-inline-end
+    /// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-inset-inline-end
+    insetInlineEnd: InsetInlineEnd = .none,
+
+    /// inset-inline-start
+    /// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-inset-inline-start
+    insetInlineStart: InsetInlineStart = .none,
+
+    /// interactivity
+    /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-interactivity
+    interactivity: Interactivity = .none,
+
+    /// interest-delay
+    /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-interest-delay
+    interestDelay: InterestDelay = .none,
+
+    /// interest-delay-end
+    /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-interest-delay-end
+    interestDelayEnd: InterestDelayEnd = .none,
+
+    /// interest-delay-start
+    /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-interest-delay-start
+    interestDelayStart: InterestDelayStart = .none,
+
+    /// interpolate-size
+    /// - **W3C**: https://drafts.csswg.org/css-values-5/#propdef-interpolate-size
+    interpolateSize: InterpolateSize = .none,
+
+    /// isolation
+    /// - **W3C**: https://drafts.csswg.org/compositing-2/#propdef-isolation
+    isolation: Isolation = .none,
+
+    /// justify-content
+    /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-justify-content
+    justifyContent: JustifyContent = .none,
+
+    /// justify-items
+    /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-justify-items
+    justifyItems: JustifyItems = .none,
+
+    /// justify-self
+    /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-justify-self
+    justifySelf: JustifySelf = .none,
+
+    /// left
+    /// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-left
+    left: Left = .none,
+
+    /// letter-spacing
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-letter-spacing
+    letterSpacing: LetterSpacing = .none,
+
+    /// lighting-color
+    /// - **W3C**: https://drafts.csswg.org/filter-effects-1/#propdef-lighting-color
+    lightingColor: LightingColor = .none,
+
+    /// line-break
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-line-break
+    lineBreak: LineBreak = .none,
+
+    /// line-clamp
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-line-clamp
+    lineClamp: LineClamp = .none,
+
+    /// line-fit-edge
+    /// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-line-fit-edge
+    lineFitEdge: LineFitEdge = .none,
+
+    /// line-grid
+    /// - **W3C**: https://drafts.csswg.org/css-line-grid-1/#propdef-line-grid
+    lineGrid: LineGrid = .none,
+
+    /// line-height
+    /// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-line-height
+    lineHeight: LineHeight = .none,
+
+    /// line-height-step
+    /// - **W3C**: https://drafts.csswg.org/css-rhythm-1/#propdef-line-height-step
+    lineHeightStep: LineHeightStep = .none,
+
+    /// line-padding
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-line-padding
+    linePadding: LinePadding = .none,
+
+    /// line-snap
+    /// - **W3C**: https://drafts.csswg.org/css-line-grid-1/#propdef-line-snap
+    lineSnap: LineSnap = .none,
+
+    /// link-parameters
+    /// - **W3C**: https://drafts.csswg.org/css-link-params-1/#propdef-link-parameters
+    linkParameters: LinkParameters = .none,
+
+    /// list-style
+    /// - **W3C**: https://drafts.csswg.org/css-lists-3/#propdef-list-style
+    listStyle: ListStyle = .none,
+
+    /// list-style-image
+    /// - **W3C**: https://drafts.csswg.org/css-lists-3/#propdef-list-style-image
+    listStyleImage: ListStyleImage = .none,
+
+    /// list-style-position
+    /// - **W3C**: https://drafts.csswg.org/css-lists-3/#propdef-list-style-position
+    listStylePosition: ListStylePosition = .none,
+
+    /// list-style-type
+    /// - **W3C**: https://drafts.csswg.org/css-lists-3/#propdef-list-style-type
+    listStyleType: ListStyleType = .none,
+
+    /// margin
+    /// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-margin
+    margin: Margin = .none,
+
+    /// margin-block
+    /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-margin-block
+    marginBlock: MarginBlock = .none,
+
+    /// margin-block-end
+    /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-margin-block-end
+    marginBlockEnd: MarginBlockEnd = .none,
+
+    /// margin-block-start
+    /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-margin-block-start
+    marginBlockStart: MarginBlockStart = .none,
+
+    /// margin-bottom
+    /// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-margin-bottom
+    marginBottom: MarginBottom = .none,
+
+    /// margin-break
+    /// - **W3C**: https://drafts.csswg.org/css-break-4/#propdef-margin-break
+    marginBreak: MarginBreak = .none,
+
+    /// margin-inline
+    /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-margin-inline
+    marginInline: MarginInline = .none,
+
+    /// margin-inline-end
+    /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-margin-inline-end
+    marginInlineEnd: MarginInlineEnd = .none,
+
+    /// margin-inline-start
+    /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-margin-inline-start
+    marginInlineStart: MarginInlineStart = .none,
+
+    /// margin-left
+    /// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-margin-left
+    marginLeft: MarginLeft = .none,
+
+    /// margin-right
+    /// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-margin-right
+    marginRight: MarginRight = .none,
+
+    /// margin-top
+    /// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-margin-top
+    marginTop: MarginTop = .none,
+
+    /// margin-trim
+    /// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-margin-trim
+    marginTrim: MarginTrim = .none,
+
+    /// marker
+    /// - **W3C**: https://svgwg.org/svg2-draft/painting.html#MarkerProperty
+    marker: Marker = .none,
+
+    /// marker-end
+    /// - **W3C**: https://svgwg.org/svg2-draft/painting.html#MarkerEndProperty
+    markerEnd: MarkerEnd = .none,
+
+    /// marker-mid
+    /// - **W3C**: https://svgwg.org/svg2-draft/painting.html#MarkerMidProperty
+    markerMid: MarkerMid = .none,
+
+    /// marker-side
+    /// - **W3C**: https://drafts.csswg.org/css-lists-3/#propdef-marker-side
+    markerSide: MarkerSide = .none,
+
+    /// marker-start
+    /// - **W3C**: https://svgwg.org/svg2-draft/painting.html#MarkerStartProperty
+    markerStart: MarkerStart = .none,
+
+    /// mask
+    /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask
+    mask: Mask = .none,
+
+    /// mask-border
+    /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-border
+    maskBorder: MaskBorder = .none,
+
+    /// mask-border-mode
+    /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-border-mode
+    maskBorderMode: MaskBorderMode = .none,
+
+    /// mask-border-outset
+    /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-border-outset
+    maskBorderOutset: MaskBorderOutset = .none,
+
+    /// mask-border-repeat
+    /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-border-repeat
+    maskBorderRepeat: MaskBorderRepeat = .none,
+
+    /// mask-border-slice
+    /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-border-slice
+    maskBorderSlice: MaskBorderSlice = .none,
+
+    /// mask-border-source
+    /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-border-source
+    maskBorderSource: MaskBorderSource = .none,
+
+    /// mask-border-width
+    /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-border-width
+    maskBorderWidth: MaskBorderWidth = .none,
+
+    /// mask-clip
+    /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-clip
+    maskClip: MaskClip = .none,
+
+    /// mask-composite
+    /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-composite
+    maskComposite: MaskComposite = .none,
+
+    /// mask-image
+    /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-image
+    maskImage: MaskImage = .none,
+
+    /// mask-mode
+    /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-mode
+    maskMode: MaskMode = .none,
+
+    /// mask-origin
+    /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-origin
+    maskOrigin: MaskOrigin = .none,
+
+    /// mask-position
+    /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-position
+    maskPosition: MaskPosition = .none,
+
+    /// mask-repeat
+    /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-repeat
+    maskRepeat: MaskRepeat = .none,
+
+    /// mask-size
+    /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-size
+    maskSize: MaskSize = .none,
+
+    /// mask-type
+    /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-type
+    maskType: MaskType = .none,
+
+    /// math-depth
+    /// - **W3C**: https://w3c.github.io/mathml-core/#propdef-math-depth
+    mathDepth: MathDepth = .none,
+
+    /// math-shift
+    /// - **W3C**: https://w3c.github.io/mathml-core/#propdef-math-shift
+    mathShift: MathShift = .none,
+
+    /// math-style
+    /// - **W3C**: https://w3c.github.io/mathml-core/#propdef-math-style
+    mathStyle: MathStyle = .none,
+
+    /// max-block-size
+    /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-max-block-size
+    maxBlockSize: MaxBlockSize = .none,
+
+    /// max-height
+    /// - **W3C**: https://drafts.csswg.org/css-sizing-3/#propdef-max-height
+    maxHeight: MaxHeight = .none,
+
+    /// max-inline-size
+    /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-max-inline-size
+    maxInlineSize: MaxInlineSize = .none,
+
+    /// max-lines
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-max-lines
+    maxLines: MaxLines = .none,
+
+    /// max-width
+    /// - **W3C**: https://drafts.csswg.org/css-sizing-3/#propdef-max-width
+    maxWidth: MaxWidth = .none,
+
+    /// min-block-size
+    /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-min-block-size
+    minBlockSize: MinBlockSize = .none,
+
+    /// min-height
+    /// - **W3C**: https://drafts.csswg.org/css-sizing-3/#propdef-min-height
+    minHeight: MinHeight = .none,
+
+    /// min-inline-size
+    /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-min-inline-size
+    minInlineSize: MinInlineSize = .none,
+
+    /// min-intrinsic-sizing
+    /// - **W3C**: https://drafts.csswg.org/css-sizing-4/#propdef-min-intrinsic-sizing
+    minIntrinsicSizing: MinIntrinsicSizing = .none,
+
+    /// min-width
+    /// - **W3C**: https://drafts.csswg.org/css-sizing-3/#propdef-min-width
+    minWidth: MinWidth = .none,
+
+    /// mix-blend-mode
+    /// - **W3C**: https://drafts.csswg.org/compositing-2/#propdef-mix-blend-mode
+    mixBlendMode: MixBlendMode = .none,
+
+    /// nav-down
+    /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-nav-down
+    navDown: NavDown = .none,
+
+    /// nav-left
+    /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-nav-left
+    navLeft: NavLeft = .none,
+
+    /// nav-right
+    /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-nav-right
+    navRight: NavRight = .none,
+
+    /// nav-up
+    /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-nav-up
+    navUp: NavUp = .none,
+
+    /// object-fit
+    /// - **W3C**: https://drafts.csswg.org/css-images-4/#propdef-object-fit
+    objectFit: ObjectFit = .none,
+
+    /// object-position
+    /// - **W3C**: https://drafts.csswg.org/css-images-3/#propdef-object-position
+    objectPosition: ObjectPosition = .none,
+
+    /// object-view-box
+    /// - **W3C**: https://drafts.csswg.org/css-images-5/#propdef-object-view-box
+    objectViewBox: ObjectViewBox = .none,
+
+    /// offset
+    /// - **W3C**: https://drafts.csswg.org/motion-1/#propdef-offset
+    offset: Offset = .none,
+
+    /// offset-anchor
+    /// - **W3C**: https://drafts.csswg.org/motion-1/#propdef-offset-anchor
+    offsetAnchor: OffsetAnchor = .none,
+
+    /// offset-distance
+    /// - **W3C**: https://drafts.csswg.org/motion-1/#propdef-offset-distance
+    offsetDistance: OffsetDistance = .none,
+
+    /// offset-path
+    /// - **W3C**: https://drafts.csswg.org/motion-1/#propdef-offset-path
+    offsetPath: OffsetPath = .none,
+
+    /// offset-position
+    /// - **W3C**: https://drafts.csswg.org/motion-1/#propdef-offset-position
+    offsetPosition: OffsetPosition = .none,
+
+    /// offset-rotate
+    /// - **W3C**: https://drafts.csswg.org/motion-1/#propdef-offset-rotate
+    offsetRotate: OffsetRotate = .none,
+
+    /// opacity
+    /// - **W3C**: https://drafts.csswg.org/css-color-4/#propdef-opacity
+    opacity: Opacity = .none,
+
+    /// order
+    /// - **W3C**: https://drafts.csswg.org/css-display-4/#propdef-order
+    order: Order = .none,
+
+    /// orphans
+    /// - **W3C**: https://drafts.csswg.org/css-break-4/#propdef-orphans
+    orphans: Orphans = .none,
+
+    /// outline
+    /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-outline
+    outline: Outline = .none,
+
+    /// outline-color
+    /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-outline-color
+    outlineColor: OutlineColor = .none,
+
+    /// outline-offset
+    /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-outline-offset
+    outlineOffset: OutlineOffset = .none,
+
+    /// outline-style
+    /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-outline-style
+    outlineStyle: OutlineStyle = .none,
+
+    /// outline-width
+    /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-outline-width
+    outlineWidth: OutlineWidth = .none,
+
+    /// overflow
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-3/#propdef-overflow
+    overflow: Overflow = .none,
+
+    /// overflow-anchor
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-anchoring-1/#propdef-overflow-anchor
+    overflowAnchor: OverflowAnchor = .none,
+
+    /// overflow-block
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-3/#propdef-overflow-block
+    overflowBlock: OverflowBlock = .none,
+
+    /// overflow-clip-margin
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin
+    overflowClipMargin: OverflowClipMargin = .none,
+
+    /// overflow-clip-margin-block
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-block
+    overflowClipMarginBlock: OverflowClipMarginBlock = .none,
+
+    /// overflow-clip-margin-block-end
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-block-end
+    overflowClipMarginBlockEnd: OverflowClipMarginBlockEnd = .none,
+
+    /// overflow-clip-margin-block-start
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-block-start
+    overflowClipMarginBlockStart: OverflowClipMarginBlockStart = .none,
+
+    /// overflow-clip-margin-bottom
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-bottom
+    overflowClipMarginBottom: OverflowClipMarginBottom = .none,
+
+    /// overflow-clip-margin-inline
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-inline
+    overflowClipMarginInline: OverflowClipMarginInline = .none,
+
+    /// overflow-clip-margin-inline-end
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-inline-end
+    overflowClipMarginInlineEnd: OverflowClipMarginInlineEnd = .none,
+
+    /// overflow-clip-margin-inline-start
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-inline-start
+    overflowClipMarginInlineStart: OverflowClipMarginInlineStart = .none,
+
+    /// overflow-clip-margin-left
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-left
+    overflowClipMarginLeft: OverflowClipMarginLeft = .none,
+
+    /// overflow-clip-margin-right
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-right
+    overflowClipMarginRight: OverflowClipMarginRight = .none,
+
+    /// overflow-clip-margin-top
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-top
+    overflowClipMarginTop: OverflowClipMarginTop = .none,
+
+    /// overflow-inline
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-3/#propdef-overflow-inline
+    overflowInline: OverflowInline = .none,
+
+    /// overflow-wrap
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-overflow-wrap
+    overflowWrap: OverflowWrap = .none,
+
+    /// overflow-x
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-3/#propdef-overflow-x
+    overflowX: OverflowX = .none,
+
+    /// overflow-y
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-3/#propdef-overflow-y
+    overflowY: OverflowY = .none,
+
+    /// overlay
+    /// - **W3C**: https://drafts.csswg.org/css-position-4/#propdef-overlay
+    overlay: Overlay = .none,
+
+    /// overscroll-behavior
+    /// - **W3C**: https://drafts.csswg.org/css-overscroll-1/#propdef-overscroll-behavior
+    overscrollBehavior: OverscrollBehavior = .none,
+
+    /// overscroll-behavior-block
+    /// - **W3C**: https://drafts.csswg.org/css-overscroll-1/#propdef-overscroll-behavior-block
+    overscrollBehaviorBlock: OverscrollBehaviorBlock = .none,
+
+    /// overscroll-behavior-inline
+    /// - **W3C**: https://drafts.csswg.org/css-overscroll-1/#propdef-overscroll-behavior-inline
+    overscrollBehaviorInline: OverscrollBehaviorInline = .none,
+
+    /// overscroll-behavior-x
+    /// - **W3C**: https://drafts.csswg.org/css-overscroll-1/#propdef-overscroll-behavior-x
+    overscrollBehaviorX: OverscrollBehaviorX = .none,
+
+    /// overscroll-behavior-y
+    /// - **W3C**: https://drafts.csswg.org/css-overscroll-1/#propdef-overscroll-behavior-y
+    overscrollBehaviorY: OverscrollBehaviorY = .none,
+
+    /// padding
+    /// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-padding
+    padding: Padding = .none,
+
+    /// padding-block
+    /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-padding-block
+    paddingBlock: PaddingBlock = .none,
+
+    /// padding-block-end
+    /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-padding-block-end
+    paddingBlockEnd: PaddingBlockEnd = .none,
+
+    /// padding-block-start
+    /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-padding-block-start
+    paddingBlockStart: PaddingBlockStart = .none,
+
+    /// padding-bottom
+    /// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-padding-bottom
+    paddingBottom: PaddingBottom = .none,
+
+    /// padding-inline
+    /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-padding-inline
+    paddingInline: PaddingInline = .none,
+
+    /// padding-inline-end
+    /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-padding-inline-end
+    paddingInlineEnd: PaddingInlineEnd = .none,
+
+    /// padding-inline-start
+    /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-padding-inline-start
+    paddingInlineStart: PaddingInlineStart = .none,
+
+    /// padding-left
+    /// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-padding-left
+    paddingLeft: PaddingLeft = .none,
+
+    /// padding-right
+    /// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-padding-right
+    paddingRight: PaddingRight = .none,
+
+    /// padding-top
+    /// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-padding-top
+    paddingTop: PaddingTop = .none,
+
+    /// page
+    /// - **W3C**: https://drafts.csswg.org/css-page-3/#propdef-page
+    page: Page = .none,
+
+    /// page-break-after
+    /// - **W3C**: https://drafts.csswg.org/css2/#propdef-page-break-after
+    pageBreakAfter: PageBreakAfter = .none,
+
+    /// page-break-before
+    /// - **W3C**: https://drafts.csswg.org/css2/#propdef-page-break-before
+    pageBreakBefore: PageBreakBefore = .none,
+
+    /// page-break-inside
+    /// - **W3C**: https://drafts.csswg.org/css2/#propdef-page-break-inside
+    pageBreakInside: PageBreakInside = .none,
+
+    /// paint-order
+    /// - **W3C**: https://svgwg.org/svg2-draft/painting.html#PaintOrderProperty
+    paintOrder: PaintOrder = .none,
+
+    /// pause
+    /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-pause
+    pause: Pause = .none,
+
+    /// pause-after
+    /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-pause-after
+    pauseAfter: PauseAfter = .none,
+
+    /// pause-before
+    /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-pause-before
+    pauseBefore: PauseBefore = .none,
+
+    /// perspective
+    /// - **W3C**: https://drafts.csswg.org/css-transforms-2/#propdef-perspective
+    perspective: Perspective = .none,
+
+    /// perspective-origin
+    /// - **W3C**: https://drafts.csswg.org/css-transforms-2/#propdef-perspective-origin
+    perspectiveOrigin: PerspectiveOrigin = .none,
+
+    /// place-content
+    /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-place-content
+    placeContent: PlaceContent = .none,
+
+    /// place-items
+    /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-place-items
+    placeItems: PlaceItems = .none,
+
+    /// place-self
+    /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-place-self
+    placeSelf: PlaceSelf = .none,
+
+    /// pointer-events
+    /// - **W3C**: https://svgwg.org/svg2-draft/interact.html#PointerEventsProperty
+    pointerEvents: PointerEvents = .none,
+
+    /// pointer-timeline
+    /// - **W3C**: https://drafts.csswg.org/pointer-animations-1/#propdef-pointer-timeline
+    pointerTimeline: PointerTimeline = .none,
+
+    /// pointer-timeline-axis
+    /// - **W3C**: https://drafts.csswg.org/pointer-animations-1/#propdef-pointer-timeline-axis
+    pointerTimelineAxis: PointerTimelineAxis = .none,
+
+    /// pointer-timeline-name
+    /// - **W3C**: https://drafts.csswg.org/pointer-animations-1/#propdef-pointer-timeline-name
+    pointerTimelineName: PointerTimelineName = .none,
+
+    /// position
+    /// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-position
+    position: Position = .none,
+
+    /// position-anchor
+    /// - **W3C**: https://drafts.csswg.org/css-anchor-position-1/#propdef-position-anchor
+    positionAnchor: PositionAnchor = .none,
+
+    /// position-area
+    /// - **W3C**: https://drafts.csswg.org/css-anchor-position-1/#propdef-position-area
+    positionArea: PositionArea = .none,
+
+    /// position-try
+    /// - **W3C**: https://drafts.csswg.org/css-anchor-position-1/#propdef-position-try
+    positionTry: PositionTry = .none,
+
+    /// position-try-fallbacks
+    /// - **W3C**: https://drafts.csswg.org/css-anchor-position-1/#propdef-position-try-fallbacks
+    positionTryFallbacks: PositionTryFallbacks = .none,
+
+    /// position-try-order
+    /// - **W3C**: https://drafts.csswg.org/css-anchor-position-1/#propdef-position-try-order
+    positionTryOrder: PositionTryOrder = .none,
+
+    /// position-visibility
+    /// - **W3C**: https://drafts.csswg.org/css-anchor-position-1/#propdef-position-visibility
+    positionVisibility: PositionVisibility = .none,
+
+    /// print-color-adjust
+    /// - **W3C**: https://drafts.csswg.org/css-color-adjust-1/#propdef-print-color-adjust
+    printColorAdjust: PrintColorAdjust = .none,
+
+    /// quotes
+    /// - **W3C**: https://drafts.csswg.org/css-content-3/#propdef-quotes
+    quotes: Quotes = .none,
+
+    /// r
+    /// - **W3C**: https://svgwg.org/svg2-draft/geometry.html#RProperty
+    r: R = .none,
+
+    /// reading-flow
+    /// - **W3C**: https://drafts.csswg.org/css-display-4/#propdef-reading-flow
+    readingFlow: ReadingFlow = .none,
+
+    /// reading-order
+    /// - **W3C**: https://drafts.csswg.org/css-display-4/#propdef-reading-order
+    readingOrder: ReadingOrder = .none,
+
+    /// region-fragment
+    /// - **W3C**: https://drafts.csswg.org/css-regions-1/#propdef-region-fragment
+    regionFragment: RegionFragment = .none,
+
+    /// resize
+    /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-resize
+    resize: Resize = .none,
+
+    /// rest
+    /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-rest
+    rest: Rest = .none,
+
+    /// rest-after
+    /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-rest-after
+    restAfter: RestAfter = .none,
+
+    /// rest-before
+    /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-rest-before
+    restBefore: RestBefore = .none,
+
+    /// right
+    /// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-right
+    right: Right = .none,
+
+    /// rotate
+    /// - **W3C**: https://drafts.csswg.org/css-transforms-2/#propdef-rotate
+    rotate: Rotate = .none,
+
+    /// row-gap
+    /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-row-gap
+    rowGap: RowGap = .none,
+
+    /// row-rule
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule
+    rowRule: RowRule = .none,
+
+    /// row-rule-break
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-break
+    rowRuleBreak: RowRuleBreak = .none,
+
+    /// row-rule-color
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-color
+    rowRuleColor: RowRuleColor = .none,
+
+    /// row-rule-edge-inset
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-edge-inset
+    rowRuleEdgeInset: RowRuleEdgeInset = .none,
+
+    /// row-rule-edge-inset-end
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-edge-inset-end
+    rowRuleEdgeInsetEnd: RowRuleEdgeInsetEnd = .none,
+
+    /// row-rule-edge-inset-start
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-edge-inset-start
+    rowRuleEdgeInsetStart: RowRuleEdgeInsetStart = .none,
+
+    /// row-rule-inset
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-inset
+    rowRuleInset: RowRuleInset = .none,
+
+    /// row-rule-inset-end
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-inset-end
+    rowRuleInsetEnd: RowRuleInsetEnd = .none,
+
+    /// row-rule-inset-start
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-inset-start
+    rowRuleInsetStart: RowRuleInsetStart = .none,
+
+    /// row-rule-interior-inset
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-interior-inset
+    rowRuleInteriorInset: RowRuleInteriorInset = .none,
+
+    /// row-rule-interior-inset-end
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-interior-inset-end
+    rowRuleInteriorInsetEnd: RowRuleInteriorInsetEnd = .none,
+
+    /// row-rule-interior-inset-start
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-interior-inset-start
+    rowRuleInteriorInsetStart: RowRuleInteriorInsetStart = .none,
+
+    /// row-rule-style
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-style
+    rowRuleStyle: RowRuleStyle = .none,
+
+    /// row-rule-visibility-items
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-visibility-items
+    rowRuleVisibilityItems: RowRuleVisibilityItems = .none,
+
+    /// row-rule-width
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-width
+    rowRuleWidth: RowRuleWidth = .none,
+
+    /// ruby-align
+    /// - **W3C**: https://drafts.csswg.org/css-ruby-1/#propdef-ruby-align
+    rubyAlign: RubyAlign = .none,
+
+    /// ruby-merge
+    /// - **W3C**: https://drafts.csswg.org/css-ruby-1/#propdef-ruby-merge
+    rubyMerge: RubyMerge = .none,
+
+    /// ruby-overhang
+    /// - **W3C**: https://drafts.csswg.org/css-ruby-1/#propdef-ruby-overhang
+    rubyOverhang: RubyOverhang = .none,
+
+    /// ruby-position
+    /// - **W3C**: https://drafts.csswg.org/css-ruby-1/#propdef-ruby-position
+    rubyPosition: RubyPosition = .none,
+
+    /// rule
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule
+    rule: Rule = .none,
+
+    /// rule-break
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-break
+    ruleBreak: RuleBreak = .none,
+
+    /// rule-color
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-color
+    ruleColor: RuleColor = .none,
+
+    /// rule-edge-inset
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-edge-inset
+    ruleEdgeInset: RuleEdgeInset = .none,
+
+    /// rule-inset
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-inset
+    ruleInset: RuleInset = .none,
+
+    /// rule-inset-end
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-inset-end
+    ruleInsetEnd: RuleInsetEnd = .none,
+
+    /// rule-inset-start
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-inset-start
+    ruleInsetStart: RuleInsetStart = .none,
+
+    /// rule-interior-inset
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-interior-inset
+    ruleInteriorInset: RuleInteriorInset = .none,
+
+    /// rule-overlap
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-overlap
+    ruleOverlap: RuleOverlap = .none,
+
+    /// rule-style
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-style
+    ruleStyle: RuleStyle = .none,
+
+    /// rule-visibility-items
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-visibility-items
+    ruleVisibilityItems: RuleVisibilityItems = .none,
+
+    /// rule-width
+    /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-width
+    ruleWidth: RuleWidth = .none,
+
+    /// rx
+    /// - **W3C**: https://svgwg.org/svg2-draft/geometry.html#RxProperty
+    rx: Rx = .none,
+
+    /// ry
+    /// - **W3C**: https://svgwg.org/svg2-draft/geometry.html#RyProperty
+    ry: Ry = .none,
+
+    /// scale
+    /// - **W3C**: https://drafts.csswg.org/css-transforms-2/#propdef-scale
+    scale: Scale = .none,
+
+    /// scroll-behavior
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-3/#propdef-scroll-behavior
+    scrollBehavior: ScrollBehavior = .none,
+
+    /// scroll-initial-target
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-2/#propdef-scroll-initial-target
+    scrollInitialTarget: ScrollInitialTarget = .none,
+
+    /// scroll-margin
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin
+    scrollMargin: ScrollMargin = .none,
+
+    /// scroll-margin-block
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-block
+    scrollMarginBlock: ScrollMarginBlock = .none,
+
+    /// scroll-margin-block-end
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-block-end
+    scrollMarginBlockEnd: ScrollMarginBlockEnd = .none,
+
+    /// scroll-margin-block-start
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-block-start
+    scrollMarginBlockStart: ScrollMarginBlockStart = .none,
+
+    /// scroll-margin-bottom
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-bottom
+    scrollMarginBottom: ScrollMarginBottom = .none,
+
+    /// scroll-margin-inline
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-inline
+    scrollMarginInline: ScrollMarginInline = .none,
+
+    /// scroll-margin-inline-end
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-inline-end
+    scrollMarginInlineEnd: ScrollMarginInlineEnd = .none,
+
+    /// scroll-margin-inline-start
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-inline-start
+    scrollMarginInlineStart: ScrollMarginInlineStart = .none,
+
+    /// scroll-margin-left
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-left
+    scrollMarginLeft: ScrollMarginLeft = .none,
+
+    /// scroll-margin-right
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-right
+    scrollMarginRight: ScrollMarginRight = .none,
+
+    /// scroll-margin-top
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-top
+    scrollMarginTop: ScrollMarginTop = .none,
+
+    /// scroll-marker-group
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-5/#propdef-scroll-marker-group
+    scrollMarkerGroup: ScrollMarkerGroup = .none,
+
+    /// scroll-padding
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding
+    scrollPadding: ScrollPadding = .none,
+
+    /// scroll-padding-block
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-block
+    scrollPaddingBlock: ScrollPaddingBlock = .none,
+
+    /// scroll-padding-block-end
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-block-end
+    scrollPaddingBlockEnd: ScrollPaddingBlockEnd = .none,
+
+    /// scroll-padding-block-start
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-block-start
+    scrollPaddingBlockStart: ScrollPaddingBlockStart = .none,
+
+    /// scroll-padding-bottom
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-bottom
+    scrollPaddingBottom: ScrollPaddingBottom = .none,
+
+    /// scroll-padding-inline
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-inline
+    scrollPaddingInline: ScrollPaddingInline = .none,
+
+    /// scroll-padding-inline-end
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-inline-end
+    scrollPaddingInlineEnd: ScrollPaddingInlineEnd = .none,
+
+    /// scroll-padding-inline-start
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-inline-start
+    scrollPaddingInlineStart: ScrollPaddingInlineStart = .none,
+
+    /// scroll-padding-left
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-left
+    scrollPaddingLeft: ScrollPaddingLeft = .none,
+
+    /// scroll-padding-right
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-right
+    scrollPaddingRight: ScrollPaddingRight = .none,
+
+    /// scroll-padding-top
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-top
+    scrollPaddingTop: ScrollPaddingTop = .none,
+
+    /// scroll-snap-align
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-snap-align
+    scrollSnapAlign: ScrollSnapAlign = .none,
+
+    /// scroll-snap-stop
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-snap-stop
+    scrollSnapStop: ScrollSnapStop = .none,
+
+    /// scroll-snap-type
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-snap-type
+    scrollSnapType: ScrollSnapType = .none,
+
+    /// scroll-target-group
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-5/#propdef-scroll-target-group
+    scrollTargetGroup: ScrollTargetGroup = .none,
+
+    /// scroll-timeline
+    /// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-scroll-timeline
+    scrollTimeline: ScrollTimeline = .none,
+
+    /// scroll-timeline-axis
+    /// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-scroll-timeline-axis
+    scrollTimelineAxis: ScrollTimelineAxis = .none,
+
+    /// scroll-timeline-name
+    /// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-scroll-timeline-name
+    scrollTimelineName: ScrollTimelineName = .none,
+
+    /// scrollbar-color
+    /// - **W3C**: https://drafts.csswg.org/css-scrollbars-1/#propdef-scrollbar-color
+    scrollbarColor: ScrollbarColor = .none,
+
+    /// scrollbar-gutter
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-3/#propdef-scrollbar-gutter
+    scrollbarGutter: ScrollbarGutter = .none,
+
+    /// scrollbar-width
+    /// - **W3C**: https://drafts.csswg.org/css-scrollbars-1/#propdef-scrollbar-width
+    scrollbarWidth: ScrollbarWidth = .none,
+
+    /// shape-image-threshold
+    /// - **W3C**: https://drafts.csswg.org/css-shapes-1/#propdef-shape-image-threshold
+    shapeImageThreshold: ShapeImageThreshold = .none,
+
+    /// shape-inside
+    /// - **W3C**: https://drafts.csswg.org/css-shapes-2/#propdef-shape-inside
+    shapeInside: ShapeInside = .none,
+
+    /// shape-margin
+    /// - **W3C**: https://drafts.csswg.org/css-shapes-1/#propdef-shape-margin
+    shapeMargin: ShapeMargin = .none,
+
+    /// shape-outside
+    /// - **W3C**: https://drafts.csswg.org/css-shapes-1/#propdef-shape-outside
+    shapeOutside: ShapeOutside = .none,
+
+    /// shape-padding
+    /// - **W3C**: https://drafts.csswg.org/css-shapes-2/#propdef-shape-padding
+    shapePadding: ShapePadding = .none,
+
+    /// shape-rendering
+    /// - **W3C**: https://svgwg.org/svg2-draft/painting.html#ShapeRenderingProperty
+    shapeRendering: ShapeRendering = .none,
+
+    /// shape-subtract
+    /// - **W3C**: https://svgwg.org/svg2-draft/text.html#ShapesubtractProperty
+    shapeSubtract: ShapeSubtract = .none,
+
+    /// slider-orientation
+    /// - **W3C**: https://drafts.csswg.org/css-forms-1/#propdef-slider-orientation
+    sliderOrientation: SliderOrientation = .none,
+
+    /// spatial-navigation-action
+    /// - **W3C**: https://drafts.csswg.org/css-nav-1/#propdef-spatial-navigation-action
+    spatialNavigationAction: SpatialNavigationAction = .none,
+
+    /// spatial-navigation-contain
+    /// - **W3C**: https://drafts.csswg.org/css-nav-1/#propdef-spatial-navigation-contain
+    spatialNavigationContain: SpatialNavigationContain = .none,
+
+    /// spatial-navigation-function
+    /// - **W3C**: https://drafts.csswg.org/css-nav-1/#propdef-spatial-navigation-function
+    spatialNavigationFunction: SpatialNavigationFunction = .none,
+
+    /// speak
+    /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-speak
+    speak: Speak = .none,
+
+    /// speak-as
+    /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-speak-as
+    speakAs: SpeakAs = .none,
+
+    /// stop-color
+    /// - **W3C**: https://svgwg.org/svg2-draft/pservers.html#StopColorProperty
+    stopColor: StopColor = .none,
+
+    /// stop-opacity
+    /// - **W3C**: https://svgwg.org/svg2-draft/pservers.html#StopOpacityProperty
+    stopOpacity: StopOpacity = .none,
+
+    /// string-set
+    /// - **W3C**: https://drafts.csswg.org/css-content-3/#propdef-string-set
+    stringSet: StringSet = .none,
+
+    /// stroke
+    /// - **W3C**: https://svgwg.org/svg2-draft/painting.html#StrokeProperty
+    stroke: Stroke = .none,
+
+    /// stroke-align
+    /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-align
+    strokeAlign: StrokeAlign = .none,
+
+    /// stroke-alignment
+    /// - **W3C**: https://svgwg.org/specs/strokes/#StrokeAlignmentProperty
+    strokeAlignment: StrokeAlignment = .none,
+
+    /// stroke-break
+    /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-break
+    strokeBreak: StrokeBreak = .none,
+
+    /// stroke-color
+    /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-color
+    strokeColor: StrokeColor = .none,
+
+    /// stroke-dash-corner
+    /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-dash-corner
+    strokeDashCorner: StrokeDashCorner = .none,
+
+    /// stroke-dash-justify
+    /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-dash-justify
+    strokeDashJustify: StrokeDashJustify = .none,
+
+    /// stroke-dashadjust
+    /// - **W3C**: https://svgwg.org/specs/strokes/#StrokeDashadjustProperty
+    strokeDashadjust: StrokeDashadjust = .none,
+
+    /// stroke-dasharray
+    /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-dasharray
+    strokeDasharray: StrokeDasharray = .none,
+
+    /// stroke-dashcorner
+    /// - **W3C**: https://svgwg.org/specs/strokes/#StrokeDashcornerProperty
+    strokeDashcorner: StrokeDashcorner = .none,
+
+    /// stroke-dashoffset
+    /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-dashoffset
+    strokeDashoffset: StrokeDashoffset = .none,
+
+    /// stroke-image
+    /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-image
+    strokeImage: StrokeImage = .none,
+
+    /// stroke-linecap
+    /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-linecap
+    strokeLinecap: StrokeLinecap = .none,
+
+    /// stroke-linejoin
+    /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-linejoin
+    strokeLinejoin: StrokeLinejoin = .none,
+
+    /// stroke-miterlimit
+    /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-miterlimit
+    strokeMiterlimit: StrokeMiterlimit = .none,
+
+    /// stroke-opacity
+    /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-opacity
+    strokeOpacity: StrokeOpacity = .none,
+
+    /// stroke-origin
+    /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-origin
+    strokeOrigin: StrokeOrigin = .none,
+
+    /// stroke-position
+    /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-position
+    strokePosition: StrokePosition = .none,
+
+    /// stroke-repeat
+    /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-repeat
+    strokeRepeat: StrokeRepeat = .none,
+
+    /// stroke-size
+    /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-size
+    strokeSize: StrokeSize = .none,
+
+    /// stroke-width
+    /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-width
+    strokeWidth: StrokeWidth = .none,
+
+    /// tab-size
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-tab-size
+    tabSize: TabSize = .none,
+
+    /// table-layout
+    /// - **W3C**: https://drafts.csswg.org/css-tables-3/#propdef-table-layout
+    tableLayout: TableLayout = .none,
+
+    /// text-align
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-align
+    textAlign: TextAlign = .none,
+
+    /// text-align-all
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-align-all
+    textAlignAll: TextAlignAll = .none,
+
+    /// text-align-last
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-align-last
+    textAlignLast: TextAlignLast = .none,
+
+    /// text-anchor
+    /// - **W3C**: https://svgwg.org/svg2-draft/text.html#TextAnchorProperty
+    textAnchor: TextAnchor = .none,
+
+    /// text-autospace
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-autospace
+    textAutospace: TextAutospace = .none,
+
+    /// text-box
+    /// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-text-box
+    textBox: TextBox = .none,
+
+    /// text-box-edge
+    /// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-text-box-edge
+    textBoxEdge: TextBoxEdge = .none,
+
+    /// text-box-trim
+    /// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-text-box-trim
+    textBoxTrim: TextBoxTrim = .none,
+
+    /// text-combine-upright
+    /// - **W3C**: https://drafts.csswg.org/css-writing-modes-4/#propdef-text-combine-upright
+    textCombineUpright: TextCombineUpright = .none,
+
+    /// text-decoration
+    /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration
+    textDecoration: TextDecoration = .none,
+
+    /// text-decoration-color
+    /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-color
+    textDecorationColor: TextDecorationColor = .none,
+
+    /// text-decoration-inset
+    /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-inset
+    textDecorationInset: TextDecorationInset = .none,
+
+    /// text-decoration-line
+    /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-line
+    textDecorationLine: TextDecorationLine = .none,
+
+    /// text-decoration-skip
+    /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip
+    textDecorationSkip: TextDecorationSkip = .none,
+
+    /// text-decoration-skip-box
+    /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip-box
+    textDecorationSkipBox: TextDecorationSkipBox = .none,
+
+    /// text-decoration-skip-ink
+    /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip-ink
+    textDecorationSkipInk: TextDecorationSkipInk = .none,
+
+    /// text-decoration-skip-self
+    /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip-self
+    textDecorationSkipSelf: TextDecorationSkipSelf = .none,
+
+    /// text-decoration-skip-spaces
+    /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip-spaces
+    textDecorationSkipSpaces: TextDecorationSkipSpaces = .none,
+
+    /// text-decoration-style
+    /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-style
+    textDecorationStyle: TextDecorationStyle = .none,
+
+    /// text-decoration-thickness
+    /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-thickness
+    textDecorationThickness: TextDecorationThickness = .none,
+
+    /// text-emphasis
+    /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis
+    textEmphasis: TextEmphasis = .none,
+
+    /// text-emphasis-color
+    /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis-color
+    textEmphasisColor: TextEmphasisColor = .none,
+
+    /// text-emphasis-position
+    /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis-position
+    textEmphasisPosition: TextEmphasisPosition = .none,
+
+    /// text-emphasis-skip
+    /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis-skip
+    textEmphasisSkip: TextEmphasisSkip = .none,
+
+    /// text-emphasis-style
+    /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis-style
+    textEmphasisStyle: TextEmphasisStyle = .none,
+
+    /// text-group-align
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-group-align
+    textGroupAlign: TextGroupAlign = .none,
+
+    /// text-indent
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-indent
+    textIndent: TextIndent = .none,
+
+    /// text-justify
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-justify
+    textJustify: TextJustify = .none,
+
+    /// text-orientation
+    /// - **W3C**: https://drafts.csswg.org/css-writing-modes-4/#propdef-text-orientation
+    textOrientation: TextOrientation = .none,
+
+    /// text-overflow
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-text-overflow
+    textOverflow: TextOverflow = .none,
+
+    /// text-rendering
+    /// - **W3C**: https://svgwg.org/svg2-draft/painting.html#TextRenderingProperty
+    textRendering: TextRendering = .none,
+
+    /// text-shadow
+    /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-shadow
+    textShadow: TextShadow = .none,
+
+    /// text-size-adjust
+    /// - **W3C**: https://drafts.csswg.org/css-size-adjust-1/#propdef-text-size-adjust
+    textSizeAdjust: TextSizeAdjust = .none,
+
+    /// text-spacing
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-spacing
+    textSpacing: TextSpacing = .none,
+
+    /// text-spacing-trim
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-spacing-trim
+    textSpacingTrim: TextSpacingTrim = .none,
+
+    /// text-transform
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-transform
+    textTransform: TextTransform = .none,
+
+    /// text-underline-offset
+    /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-underline-offset
+    textUnderlineOffset: TextUnderlineOffset = .none,
+
+    /// text-underline-position
+    /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-underline-position
+    textUnderlinePosition: TextUnderlinePosition = .none,
+
+    /// text-wrap
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-wrap
+    textWrap: TextWrap = .none,
+
+    /// text-wrap-mode
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-wrap-mode
+    textWrapMode: TextWrapMode = .none,
+
+    /// text-wrap-style
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-wrap-style
+    textWrapStyle: TextWrapStyle = .none,
+
+    /// timeline-scope
+    /// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-timeline-scope
+    timelineScope: TimelineScope = .none,
+
+    /// timeline-trigger
+    /// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger
+    timelineTrigger: TimelineTrigger = .none,
+
+    /// timeline-trigger-activation-range
+    /// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-activation-range
+    timelineTriggerActivationRange: TimelineTriggerActivationRange = .none,
+
+    /// timeline-trigger-activation-range-end
+    /// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-activation-range-end
+    timelineTriggerActivationRangeEnd: TimelineTriggerActivationRangeEnd = .none,
+
+    /// timeline-trigger-activation-range-start
+    /// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-activation-range-start
+    timelineTriggerActivationRangeStart: TimelineTriggerActivationRangeStart = .none,
+
+    /// timeline-trigger-active-range
+    /// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-active-range
+    timelineTriggerActiveRange: TimelineTriggerActiveRange = .none,
+
+    /// timeline-trigger-active-range-end
+    /// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-active-range-end
+    timelineTriggerActiveRangeEnd: TimelineTriggerActiveRangeEnd = .none,
+
+    /// timeline-trigger-active-range-start
+    /// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-active-range-start
+    timelineTriggerActiveRangeStart: TimelineTriggerActiveRangeStart = .none,
+
+    /// timeline-trigger-name
+    /// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-name
+    timelineTriggerName: TimelineTriggerName = .none,
+
+    /// timeline-trigger-source
+    /// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-source
+    timelineTriggerSource: TimelineTriggerSource = .none,
+
+    /// top
+    /// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-top
+    top: Top = .none,
+
+    /// touch-action
+    /// - **W3C**: https://compat.spec.whatwg.org/#propdef-touch-action
+    touchAction: TouchAction = .none,
+
+    /// transform
+    /// - **W3C**: https://drafts.csswg.org/css-transforms-1/#propdef-transform
+    transform: Transform = .none,
+
+    /// transform-box
+    /// - **W3C**: https://drafts.csswg.org/css-transforms-1/#propdef-transform-box
+    transformBox: TransformBox = .none,
+
+    /// transform-origin
+    /// - **W3C**: https://drafts.csswg.org/css-transforms-1/#propdef-transform-origin
+    transformOrigin: TransformOrigin = .none,
+
+    /// transform-style
+    /// - **W3C**: https://drafts.csswg.org/css-transforms-2/#propdef-transform-style
+    transformStyle: TransformStyle = .none,
+
+    /// transition
+    /// - **W3C**: https://drafts.csswg.org/css-transitions-1/#propdef-transition
+    transition: Transition = .none,
+
+    /// transition-behavior
+    /// - **W3C**: https://drafts.csswg.org/css-transitions-2/#propdef-transition-behavior
+    transitionBehavior: TransitionBehavior = .none,
+
+    /// transition-delay
+    /// - **W3C**: https://drafts.csswg.org/css-transitions-1/#propdef-transition-delay
+    transitionDelay: TransitionDelay = .none,
+
+    /// transition-duration
+    /// - **W3C**: https://drafts.csswg.org/css-transitions-1/#propdef-transition-duration
+    transitionDuration: TransitionDuration = .none,
+
+    /// transition-property
+    /// - **W3C**: https://drafts.csswg.org/css-transitions-1/#propdef-transition-property
+    transitionProperty: TransitionProperty = .none,
+
+    /// transition-timing-function
+    /// - **W3C**: https://drafts.csswg.org/css-transitions-1/#propdef-transition-timing-function
+    transitionTimingFunction: TransitionTimingFunction = .none,
+
+    /// translate
+    /// - **W3C**: https://drafts.csswg.org/css-transforms-2/#propdef-translate
+    translate: Translate = .none,
+
+    /// trigger-scope
+    /// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-trigger-scope
+    triggerScope: TriggerScope = .none,
+
+    /// unicode-bidi
+    /// - **W3C**: https://drafts.csswg.org/css-writing-modes-4/#propdef-unicode-bidi
+    unicodeBidi: UnicodeBidi = .none,
+
+    /// user-select
+    /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-user-select
+    userSelect: UserSelect = .none,
+
+    /// vector-effect
+    /// - **W3C**: https://svgwg.org/svg2-draft/coords.html#VectorEffectProperty
+    vectorEffect: VectorEffect = .none,
+
+    /// vertical-align
+    /// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-vertical-align
+    verticalAlign: VerticalAlign = .none,
+
+    /// view-timeline
+    /// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-view-timeline
+    viewTimeline: ViewTimeline = .none,
+
+    /// view-timeline-axis
+    /// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-view-timeline-axis
+    viewTimelineAxis: ViewTimelineAxis = .none,
+
+    /// view-timeline-inset
+    /// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-view-timeline-inset
+    viewTimelineInset: ViewTimelineInset = .none,
+
+    /// view-timeline-name
+    /// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-view-timeline-name
+    viewTimelineName: ViewTimelineName = .none,
+
+    /// view-transition-class
+    /// - **W3C**: https://drafts.csswg.org/css-view-transitions-2/#propdef-view-transition-class
+    viewTransitionClass: ViewTransitionClass = .none,
+
+    /// view-transition-group
+    /// - **W3C**: https://drafts.csswg.org/css-view-transitions-2/#propdef-view-transition-group
+    viewTransitionGroup: ViewTransitionGroup = .none,
+
+    /// view-transition-name
+    /// - **W3C**: https://drafts.csswg.org/css-view-transitions-2/#propdef-view-transition-name
+    viewTransitionName: ViewTransitionName = .none,
+
+    /// view-transition-scope
+    /// - **W3C**: https://drafts.csswg.org/css-view-transitions-2/#propdef-view-transition-scope
+    viewTransitionScope: ViewTransitionScope = .none,
+
+    /// visibility
+    /// - **W3C**: https://drafts.csswg.org/css-display-4/#propdef-visibility
+    visibility: Visibility = .none,
+
+    /// voice-balance
+    /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-voice-balance
+    voiceBalance: VoiceBalance = .none,
+
+    /// voice-duration
+    /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-voice-duration
+    voiceDuration: VoiceDuration = .none,
+
+    /// voice-family
+    /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-voice-family
+    voiceFamily: VoiceFamily = .none,
+
+    /// voice-pitch
+    /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-voice-pitch
+    voicePitch: VoicePitch = .none,
+
+    /// voice-range
+    /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-voice-range
+    voiceRange: VoiceRange = .none,
+
+    /// voice-rate
+    /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-voice-rate
+    voiceRate: VoiceRate = .none,
+
+    /// voice-stress
+    /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-voice-stress
+    voiceStress: VoiceStress = .none,
+
+    /// voice-volume
+    /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-voice-volume
+    voiceVolume: VoiceVolume = .none,
+
+    /// white-space
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-white-space
+    whiteSpace: WhiteSpace = .none,
+
+    /// white-space-collapse
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-white-space-collapse
+    whiteSpaceCollapse: WhiteSpaceCollapse = .none,
+
+    /// white-space-trim
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-white-space-trim
+    whiteSpaceTrim: WhiteSpaceTrim = .none,
+
+    /// widows
+    /// - **W3C**: https://drafts.csswg.org/css-break-4/#propdef-widows
+    widows: Widows = .none,
+
+    /// width
+    /// - **W3C**: https://drafts.csswg.org/css-sizing-3/#propdef-width
+    width: Width = .none,
+
+    /// will-change
+    /// - **W3C**: https://drafts.csswg.org/css-will-change-1/#propdef-will-change
+    willChange: WillChange = .none,
+
+    /// word-break
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-word-break
+    wordBreak: WordBreak = .none,
+
+    /// word-space-transform
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-word-space-transform
+    wordSpaceTransform: WordSpaceTransform = .none,
+
+    /// word-spacing
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-word-spacing
+    wordSpacing: WordSpacing = .none,
+
+    /// word-wrap
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-word-wrap
+    wordWrap: WordWrap = .none,
+
+    /// wrap-after
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-wrap-after
+    wrapAfter: WrapAfter = .none,
+
+    /// wrap-before
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-wrap-before
+    wrapBefore: WrapBefore = .none,
+
+    /// wrap-flow
+    /// - **W3C**: https://drafts.csswg.org/css-exclusions-1/#propdef-wrap-flow
+    wrapFlow: WrapFlow = .none,
+
+    /// wrap-inside
+    /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-wrap-inside
+    wrapInside: WrapInside = .none,
+
+    /// wrap-through
+    /// - **W3C**: https://drafts.csswg.org/css-exclusions-1/#propdef-wrap-through
+    wrapThrough: WrapThrough = .none,
+
+    /// writing-mode
+    /// - **W3C**: https://drafts.csswg.org/css-writing-modes-4/#propdef-writing-mode
+    writingMode: WritingMode = .none,
+
+    /// x
+    /// - **W3C**: https://svgwg.org/svg2-draft/geometry.html#XProperty
+    x: X = .none,
+
+    /// y
+    /// - **W3C**: https://svgwg.org/svg2-draft/geometry.html#YProperty
+    y: Y = .none,
+
+    /// z-index
+    /// - **W3C**: https://drafts.csswg.org/css2/#propdef-z-index
+    zIndex: ZIndex = .none,
+
+    /// zoom
+    /// - **W3C**: https://drafts.csswg.org/css-viewport/#propdef-zoom
+    zoom: Zoom = .none,
+
+    pub fn format(self: Style, w: *std.io.Writer) std.io.Writer.Error!void {
+        @setEvalBranchQuota(10000);
+        const fields = std.meta.fields(Style);
+        inline for (fields) |f| {
+            const val = @field(self, f.name);
+            if (val != .none) {
+                try core.formatKebab(f.name, w);
+                try w.writeAll(": ");
+                try val.format(w);
+                try w.writeAll("; ");
+            }
+        }
+    }
+
+    pub fn toString(self: Style, allocator: std.mem.Allocator) ![]const u8 {
+        var list: std.ArrayList(u8) = .empty;
+        defer list.deinit(allocator);
+        const w = list.writer(allocator);
+        try self.format(w);
+        return list.toOwnedSlice(allocator);
+    }
+};

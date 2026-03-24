@@ -250,6 +250,17 @@ test "component_optional_error" {
     try test_fmt("component/optional_error");
 }
 
+// === Style ===
+test "style_basic" {
+    try test_fmt("style/basic");
+}
+test "style_component" {
+    try test_fmt("style/component");
+}
+test "style_inline" {
+    try test_fmt("style/inline");
+}
+
 // === Attribute ===
 test "attribute_builtin" {
     try test_fmt("attribute/builtin");

@@ -85,8 +85,9 @@ pub const ZxContext = struct {
         // Use a buffer writer to leverage the shared escaping logic
         // For text content, we only escape & < > (not quotes)
         var aw = std.io.Writer.Allocating.init(allocator);
+        defer aw.deinit();
         escapHtmlTextNode(&aw.writer, text) catch @panic("OOM");
-        return aw.written();
+        return allocator.dupe(u8, aw.written()) catch @panic("OOM");
     }
 
     pub fn ele(self: *ZxContext, tag: ElementTag, options: ZxOptions) Component {
@@ -291,6 +292,11 @@ pub const ZxContext = struct {
             .@"struct" => if (T == zx.EventHandler) .{
                 .name = name,
                 .handler = val,
+            } else if (T == zx.StyleSheet) blk: {
+                break :blk .{
+                    .name = name,
+                    .value = self.printf("{f}", .{val}),
+                };
             } else @compileError("Unsupported struct type for attribute: " ++ @typeName(T)),
 
             else => @compileError("Unsupported type for attribute value: " ++ @typeName(T)),

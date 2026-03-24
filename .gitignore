@@ -19,3 +19,6 @@ test/data/assets/
 
 # macOS
 .DS_Store
+
+# vendor
+vendor/webref

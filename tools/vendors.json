@@ -22,5 +22,11 @@
     "https": "https://github.com/nurulhudaapon/zig-tree-sitter",
     "branch": "master",
     "commit": "5373b8395bcf6cf17e6a02be1a9996bedb34abf6"
+  },
+  "webref": {
+    "repo": "git@github.com:w3c/webref.git",
+    "https": "https://github.com/w3c/webref",
+    "branch": "curated",
+    "commit": "e2748d3c96fea68f2ac16990a29d3331b067ab5f"
   }
 }

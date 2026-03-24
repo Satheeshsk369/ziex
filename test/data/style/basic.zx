@@ -1,0 +1,13 @@
+pub fn Page(allocator: zx.Allocator) zx.Component {
+    const style: zx.StyleSheet = .{
+        .display = .flex,
+        .backgroundColor = .hex(0xff0000),
+    };
+    return (
+        <div @allocator={allocator} style={style}>
+             Hello 
+        </div>
+    );
+}
+
+const zx = @import("zx");
