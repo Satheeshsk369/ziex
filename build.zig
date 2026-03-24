@@ -140,6 +140,28 @@ pub fn build(b: *std.Build) !void {
         if (b.args) |args| site_cmd.addArgs(args);
     }
 
+    // --- Steps: CSS Generator --- //
+    {
+        const css_gen_step = b.step("cssgen", "Generate CSS types from webref");
+
+        const css_gen_exe = b.addExecutable(.{
+            .name = "cssgen",
+            .root_module = b.createModule(.{
+                .root_source_file = b.path("tools/cssgen.zig"),
+                .target = target,
+                .optimize = optimize,
+            }),
+        });
+        const css_gen_run = b.addRunArtifact(css_gen_exe);
+
+        if (std.fs.cwd().access("vendor/webref", .{})) |_| {} else |_| {
+            const sync_cmd = b.addSystemCommand(&.{ "./tools/syncvendor", "webref" });
+            css_gen_run.step.dependOn(&sync_cmd.step);
+        }
+
+        css_gen_step.dependOn(&css_gen_run.step);
+    }
+
     // --- ZX Releases (Cross-compilation targets for all platforms) --- //
     {
         const release_targets = [_]struct {

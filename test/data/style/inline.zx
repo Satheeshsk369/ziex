@@ -1,0 +1,9 @@
+pub fn Page(allocator: zx.Allocator) zx.Component {
+    return (
+        <div @allocator={allocator} style={zx.StyleSheet{ .display = .flex, .rowGap = .px(10) }}>
+             Inline Style 
+        </div>
+    );
+}
+
+const zx = @import("zx");
