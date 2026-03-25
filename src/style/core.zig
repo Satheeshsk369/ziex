@@ -21,6 +21,7 @@ pub const Dimension = struct {
 };
 
 pub const Color = union(enum) {
+    none,
     hex_: u32,
     rgb_: struct { r: u8, g: u8, b: u8 },
     rgba_: struct { r: u8, g: u8, b: u8, a: f32 },
@@ -33,6 +34,7 @@ pub const Color = union(enum) {
 
     pub fn format(self: Color, w: *std.io.Writer) std.io.Writer.Error!void {
         switch (self) {
+            .none => {},
             .hex_ => |h| try w.print("#{x:0>6}", .{h}),
             .keyword_ => |k| try w.writeAll(k),
             .rgb_ => |c| try w.print("rgb({d},{d},{d})", .{ c.r, c.g, c.b }),

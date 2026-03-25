@@ -13,9 +13,9 @@ test "Style formatting" {
 
     const result = try std.fmt.allocPrint(allocator, "{f}", .{style});
     defer allocator.free(result);
-    
+
     std.debug.print("\nGenerated CSS: {s}\n", .{result});
-    
+
     try std.testing.expect(std.mem.indexOf(u8, result, "display: flex;") != null);
     try std.testing.expect(std.mem.indexOf(u8, result, "flex-direction: column;") != null);
     try std.testing.expect(std.mem.indexOf(u8, result, "background-color: #ff0000;") != null);
@@ -49,7 +49,7 @@ test "Style in Component" {
     defer comp.deinit(arena_allocator);
 
     try std.testing.expectEqual(zx.ElementTag.div, comp.element.tag);
-    
+
     var found_style = false;
     for (comp.element.attributes.?) |attr| {
         if (std.mem.eql(u8, attr.name, "style")) {
@@ -59,4 +59,16 @@ test "Style in Component" {
         }
     }
     try std.testing.expect(found_style);
+}
+
+test "Style pseudo-states" {
+    const style: zx.Style = .{
+        .background_color = .hex(0x0000ff),
+        .hover = &.{
+            .background_color = .hex(0xff0000),
+        },
+    };
+
+    try std.testing.expect(style.hover != null);
+    try std.testing.expectEqual(zx.style.generated.BackgroundColor.hex(0xff0000), style.hover.?.background_color);
 }

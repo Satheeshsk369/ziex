@@ -3,6 +3,7 @@
 
 const std = @import("std");
 const core = @import("core.zig");
+const CssColor = core.Color;
 
 /// -webkit-align-content
 /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-align-content
@@ -505,12 +506,11 @@ pub const WebkitBoxShadow = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn px(v: f32) WebkitBoxShadow { return .{ .px_ = v }; }
     pub fn em(v: f32) WebkitBoxShadow { return .{ .em_ = v }; }
     pub fn rem(v: f32) WebkitBoxShadow { return .{ .rem_ = v }; }
     pub fn hex(v: u32) WebkitBoxShadow { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) WebkitBoxShadow { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: WebkitBoxShadow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -1250,9 +1250,8 @@ pub const WebkitTextFillColor = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) WebkitTextFillColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) WebkitTextFillColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: WebkitTextFillColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -1479,12 +1478,11 @@ pub const WebkitTextStroke = union(enum) {
     WindowFrame,
     WindowText,
     px_: f32, em_: f32, rem_: f32,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn px(v: f32) WebkitTextStroke { return .{ .px_ = v }; }
     pub fn em(v: f32) WebkitTextStroke { return .{ .em_ = v }; }
     pub fn rem(v: f32) WebkitTextStroke { return .{ .rem_ = v }; }
     pub fn hex(v: u32) WebkitTextStroke { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) WebkitTextStroke { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: WebkitTextStroke, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -1690,9 +1688,8 @@ pub const WebkitTextStrokeColor = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) WebkitTextStrokeColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) WebkitTextStrokeColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: WebkitTextStrokeColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2073,9 +2070,8 @@ pub const AccentColor = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) AccentColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) AccentColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: AccentColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2638,13 +2634,12 @@ pub const Background = union(enum) {
     text,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn px(v: f32) Background { return .{ .px_ = v }; }
     pub fn em(v: f32) Background { return .{ .em_ = v }; }
     pub fn rem(v: f32) Background { return .{ .rem_ = v }; }
     pub fn percent(v: f32) Background { return .{ .percent_ = v }; }
     pub fn hex(v: u32) Background { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) Background { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: Background, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2903,9 +2898,8 @@ pub const BackgroundColor = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) BackgroundColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) BackgroundColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: BackgroundColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3691,12 +3685,11 @@ pub const Border = union(enum) {
     WindowFrame,
     WindowText,
     px_: f32, em_: f32, rem_: f32,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn px(v: f32) Border { return .{ .px_ = v }; }
     pub fn em(v: f32) Border { return .{ .em_ = v }; }
     pub fn rem(v: f32) Border { return .{ .rem_ = v }; }
     pub fn hex(v: u32) Border { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) Border { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: Border, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3736,9 +3729,8 @@ pub const BorderBlockColor = union(enum) {
     revert,
     revert_layer,
     unset,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) BorderBlockColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) BorderBlockColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: BorderBlockColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3958,12 +3950,11 @@ pub const BorderBlockEnd = union(enum) {
     WindowFrame,
     WindowText,
     px_: f32, em_: f32, rem_: f32,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn px(v: f32) BorderBlockEnd { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderBlockEnd { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderBlockEnd { return .{ .rem_ = v }; }
     pub fn hex(v: u32) BorderBlockEnd { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) BorderBlockEnd { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: BorderBlockEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -4188,9 +4179,8 @@ pub const BorderBlockEndColor = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) BorderBlockEndColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) BorderBlockEndColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: BorderBlockEndColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -4472,12 +4462,11 @@ pub const BorderBlockStart = union(enum) {
     WindowFrame,
     WindowText,
     px_: f32, em_: f32, rem_: f32,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn px(v: f32) BorderBlockStart { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderBlockStart { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderBlockStart { return .{ .rem_ = v }; }
     pub fn hex(v: u32) BorderBlockStart { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) BorderBlockStart { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: BorderBlockStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -4702,9 +4691,8 @@ pub const BorderBlockStartColor = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) BorderBlockStartColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) BorderBlockStartColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: BorderBlockStartColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5012,12 +5000,11 @@ pub const BorderBottom = union(enum) {
     WindowFrame,
     WindowText,
     px_: f32, em_: f32, rem_: f32,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn px(v: f32) BorderBottom { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderBottom { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderBottom { return .{ .rem_ = v }; }
     pub fn hex(v: u32) BorderBottom { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) BorderBottom { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: BorderBottom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5242,9 +5229,8 @@ pub const BorderBottomColor = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) BorderBottomColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) BorderBottomColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: BorderBottomColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5593,9 +5579,8 @@ pub const BorderColor = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) BorderColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) BorderColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: BorderColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5775,9 +5760,8 @@ pub const BorderInlineColor = union(enum) {
     revert,
     revert_layer,
     unset,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) BorderInlineColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) BorderInlineColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: BorderInlineColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5997,12 +5981,11 @@ pub const BorderInlineEnd = union(enum) {
     WindowFrame,
     WindowText,
     px_: f32, em_: f32, rem_: f32,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn px(v: f32) BorderInlineEnd { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderInlineEnd { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderInlineEnd { return .{ .rem_ = v }; }
     pub fn hex(v: u32) BorderInlineEnd { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) BorderInlineEnd { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: BorderInlineEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -6227,9 +6210,8 @@ pub const BorderInlineEndColor = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) BorderInlineEndColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) BorderInlineEndColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: BorderInlineEndColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -6511,12 +6493,11 @@ pub const BorderInlineStart = union(enum) {
     WindowFrame,
     WindowText,
     px_: f32, em_: f32, rem_: f32,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn px(v: f32) BorderInlineStart { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderInlineStart { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderInlineStart { return .{ .rem_ = v }; }
     pub fn hex(v: u32) BorderInlineStart { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) BorderInlineStart { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: BorderInlineStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -6741,9 +6722,8 @@ pub const BorderInlineStartColor = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) BorderInlineStartColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) BorderInlineStartColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: BorderInlineStartColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7051,12 +7031,11 @@ pub const BorderLeft = union(enum) {
     WindowFrame,
     WindowText,
     px_: f32, em_: f32, rem_: f32,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn px(v: f32) BorderLeft { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderLeft { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderLeft { return .{ .rem_ = v }; }
     pub fn hex(v: u32) BorderLeft { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) BorderLeft { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: BorderLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7281,9 +7260,8 @@ pub const BorderLeftColor = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) BorderLeftColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) BorderLeftColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: BorderLeftColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7617,12 +7595,11 @@ pub const BorderRight = union(enum) {
     WindowFrame,
     WindowText,
     px_: f32, em_: f32, rem_: f32,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn px(v: f32) BorderRight { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderRight { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderRight { return .{ .rem_ = v }; }
     pub fn hex(v: u32) BorderRight { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) BorderRight { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: BorderRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7847,9 +7824,8 @@ pub const BorderRightColor = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) BorderRightColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) BorderRightColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: BorderRightColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8220,12 +8196,11 @@ pub const BorderTop = union(enum) {
     WindowFrame,
     WindowText,
     px_: f32, em_: f32, rem_: f32,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn px(v: f32) BorderTop { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderTop { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderTop { return .{ .rem_ = v }; }
     pub fn hex(v: u32) BorderTop { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) BorderTop { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: BorderTop, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8450,9 +8425,8 @@ pub const BorderTopColor = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) BorderTopColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) BorderTopColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: BorderTopColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8618,12 +8592,11 @@ pub const BoxShadow = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn px(v: f32) BoxShadow { return .{ .px_ = v }; }
     pub fn em(v: f32) BoxShadow { return .{ .em_ = v }; }
     pub fn rem(v: f32) BoxShadow { return .{ .rem_ = v }; }
     pub fn hex(v: u32) BoxShadow { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) BoxShadow { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: BoxShadow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8846,9 +8819,8 @@ pub const BoxShadowColor = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) BoxShadowColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) BoxShadowColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: BoxShadowColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9075,9 +9047,8 @@ pub const Caret = union(enum) {
     revert,
     revert_layer,
     unset,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) Caret { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) Caret { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: Caret, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9301,9 +9272,8 @@ pub const CaretColor = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) CaretColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) CaretColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: CaretColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9419,214 +9389,6 @@ pub const ClipRule = union(enum) {
     pub fn format(self: ClipRule, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
 
-/// color
-/// - **W3C**: https://drafts.csswg.org/css-color-4/#propdef-color
-pub const CssColor = union(enum) {
-    none,
-    inherit,
-    initial,
-    revert,
-    revert_layer,
-    unset,
-    aliceblue,
-    antiquewhite,
-    aqua,
-    aquamarine,
-    azure,
-    beige,
-    bisque,
-    black,
-    blanchedalmond,
-    blue,
-    blueviolet,
-    brown,
-    burlywood,
-    cadetblue,
-    chartreuse,
-    chocolate,
-    coral,
-    cornflowerblue,
-    cornsilk,
-    crimson,
-    cyan,
-    darkblue,
-    darkcyan,
-    darkgoldenrod,
-    darkgray,
-    darkgreen,
-    darkgrey,
-    darkkhaki,
-    darkmagenta,
-    darkolivegreen,
-    darkorange,
-    darkorchid,
-    darkred,
-    darksalmon,
-    darkseagreen,
-    darkslateblue,
-    darkslategray,
-    darkslategrey,
-    darkturquoise,
-    darkviolet,
-    deeppink,
-    deepskyblue,
-    dimgray,
-    dimgrey,
-    dodgerblue,
-    firebrick,
-    floralwhite,
-    forestgreen,
-    fuchsia,
-    gainsboro,
-    ghostwhite,
-    gold,
-    goldenrod,
-    gray,
-    green,
-    greenyellow,
-    grey,
-    honeydew,
-    hotpink,
-    indianred,
-    indigo,
-    ivory,
-    khaki,
-    lavender,
-    lavenderblush,
-    lawngreen,
-    lemonchiffon,
-    lightblue,
-    lightcoral,
-    lightcyan,
-    lightgoldenrodyellow,
-    lightgray,
-    lightgreen,
-    lightgrey,
-    lightpink,
-    lightsalmon,
-    lightseagreen,
-    lightskyblue,
-    lightslategray,
-    lightslategrey,
-    lightsteelblue,
-    lightyellow,
-    lime,
-    limegreen,
-    linen,
-    magenta,
-    maroon,
-    mediumaquamarine,
-    mediumblue,
-    mediumorchid,
-    mediumpurple,
-    mediumseagreen,
-    mediumslateblue,
-    mediumspringgreen,
-    mediumturquoise,
-    mediumvioletred,
-    midnightblue,
-    mintcream,
-    mistyrose,
-    moccasin,
-    navajowhite,
-    navy,
-    oldlace,
-    olive,
-    olivedrab,
-    orange,
-    orangered,
-    orchid,
-    palegoldenrod,
-    palegreen,
-    paleturquoise,
-    palevioletred,
-    papayawhip,
-    peachpuff,
-    peru,
-    pink,
-    plum,
-    powderblue,
-    purple,
-    rebeccapurple,
-    red,
-    rosybrown,
-    royalblue,
-    saddlebrown,
-    salmon,
-    sandybrown,
-    seagreen,
-    seashell,
-    sienna,
-    silver,
-    skyblue,
-    slateblue,
-    slategray,
-    slategrey,
-    snow,
-    springgreen,
-    steelblue,
-    tan,
-    teal,
-    thistle,
-    tomato,
-    turquoise,
-    violet,
-    wheat,
-    white,
-    whitesmoke,
-    yellow,
-    yellowgreen,
-    transparent,
-    currentColor,
-    AccentColor,
-    AccentColorText,
-    ActiveText,
-    ButtonBorder,
-    ButtonFace,
-    ButtonText,
-    Canvas,
-    CanvasText,
-    Field,
-    FieldText,
-    GrayText,
-    Highlight,
-    HighlightText,
-    LinkText,
-    Mark,
-    MarkText,
-    SelectedItem,
-    SelectedItemText,
-    VisitedText,
-    ActiveBorder,
-    ActiveCaption,
-    AppWorkspace,
-    Background,
-    ButtonHighlight,
-    ButtonShadow,
-    CaptionText,
-    InactiveBorder,
-    InactiveCaption,
-    InactiveCaptionText,
-    InfoBackground,
-    InfoText,
-    Menu,
-    MenuText,
-    Scrollbar,
-    ThreeDDarkShadow,
-    ThreeDFace,
-    ThreeDHighlight,
-    ThreeDLightShadow,
-    ThreeDShadow,
-    Window,
-    WindowFrame,
-    WindowText,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    pub fn hex(v: u32) CssColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) CssColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-
-    pub fn format(self: CssColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
-};
-
 /// color-adjust
 /// - **W3C**: https://drafts.csswg.org/css-color-adjust-1/#propdef-color-adjust
 pub const ColorAdjust = union(enum) {
@@ -9636,9 +9398,8 @@ pub const ColorAdjust = union(enum) {
     revert,
     revert_layer,
     unset,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) ColorAdjust { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) ColorAdjust { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: ColorAdjust, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9993,12 +9754,11 @@ pub const ColumnRule = union(enum) {
     WindowText,
     auto,
     px_: f32, em_: f32, rem_: f32,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn px(v: f32) ColumnRule { return .{ .px_ = v }; }
     pub fn em(v: f32) ColumnRule { return .{ .em_ = v }; }
     pub fn rem(v: f32) ColumnRule { return .{ .rem_ = v }; }
     pub fn hex(v: u32) ColumnRule { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) ColumnRule { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: ColumnRule, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10222,9 +9982,8 @@ pub const ColumnRuleColor = union(enum) {
     WindowFrame,
     WindowText,
     auto,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) ColumnRuleColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) ColumnRuleColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: ColumnRuleColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11520,7 +11279,7 @@ pub const Display = union(enum) {
     revert_layer,
     unset,
     block,
-    inline_,
+    @"inline",
     run_in,
     flow,
     flow_root,
@@ -11918,9 +11677,8 @@ pub const FillColor = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) FillColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) FillColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: FillColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12269,7 +12027,7 @@ pub const FloatReference = union(enum) {
     revert_layer,
     unset,
     ///     /// The float reference is the line box of the float anchor. The float containing block formatting context is the same as that of the float anchor. The float is an inline float.
-    inline_,
+    @"inline",
     ///     /// The float reference is the column in a multi column environment in which the float anchor is placed. If the float anchor is not inside a column, the float reference is the line box of the float anchor. The float containing block formatting context is a new block formatting context with the same dimensions and placement as the float reference. The float is a page float.
     column,
     ///     /// The float reference is the region in a region-chain within which the float anchor is placed. If the float anchor is not inside a region, the float reference is the line box of the float anchor. The float containing block formatting context is a new block formatting context with the same dimensions and placement as the float reference. The float is a page float.
@@ -12481,9 +12239,8 @@ pub const FloodColor = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) FloodColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) FloodColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: FloodColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13176,7 +12933,7 @@ pub const FootnoteDisplay = union(enum) {
     ///     /// The footnote element is placed in the footnote area as a block element
     block,
     ///     /// The footnote element is placed in the footnote area as an inline element
-    inline_,
+    @"inline",
     ///     /// The user agent determines whether a given footnote element is placed as a block element or an inline element. If two or more footnotes could fit on the same line in the footnote area, they should be placed inline.
     compact,
 
@@ -14480,9 +14237,8 @@ pub const LightingColor = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) LightingColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) LightingColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: LightingColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14912,7 +14668,7 @@ pub const MarginTrim = union(enum) {
     ///     /// Computes to block-start block-end.
     block,
     ///     /// Computes to inline-start inline-end.
-    inline_,
+    @"inline",
     ///     /// For in-flow boxes contained by this box, margins adjacent to the box’s specified edges are truncated to zero. It also truncates any descendant margins collapsed with such a margin (but not its own, its siblings’, or its ancestors’).
     block_start,
     ///     /// Computes to block-start block-end.
@@ -15970,9 +15726,8 @@ pub const Outline = union(enum) {
     revert,
     revert_layer,
     unset,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) Outline { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) Outline { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: Outline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15988,9 +15743,8 @@ pub const OutlineColor = union(enum) {
     unset,
     ///     /// When outline-style is auto, outline-color: auto computes to auto and represents the accent color. Otherwise, outline-color: auto computes to currentColor.
     auto,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) OutlineColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) OutlineColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: OutlineColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16967,7 +16721,7 @@ pub const PointerTimelineAxis = union(enum) {
     ///     /// Specifies to use the measure of progress along the block axis of the pointer range.
     block,
     ///     /// Specifies to use the measure of progress along the inline axis of the pointer range. (Default.)
-    inline_,
+    @"inline",
     ///     /// Specifies to use the measure of progress along the horizontal axis of the pointer range.
     x,
     ///     /// Specifies to use the measure of progress along the vertical axis of the pointer range.
@@ -17325,7 +17079,7 @@ pub const RegionFragment = union(enum) {
     revert_layer,
     unset,
     auto,
-    break_,
+    @"break",
 
     pub fn format(self: RegionFragment, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17343,7 +17097,7 @@ pub const Resize = union(enum) {
     horizontal,
     vertical,
     block,
-    inline_,
+    @"inline",
 
     pub fn format(self: Resize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17688,12 +17442,11 @@ pub const RowRule = union(enum) {
     WindowText,
     auto,
     px_: f32, em_: f32, rem_: f32,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn px(v: f32) RowRule { return .{ .px_ = v }; }
     pub fn em(v: f32) RowRule { return .{ .em_ = v }; }
     pub fn rem(v: f32) RowRule { return .{ .rem_ = v }; }
     pub fn hex(v: u32) RowRule { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) RowRule { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: RowRule, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17917,9 +17670,8 @@ pub const RowRuleColor = union(enum) {
     WindowFrame,
     WindowText,
     auto,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) RowRuleColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) RowRuleColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: RowRuleColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18264,9 +18016,8 @@ pub const RuleColor = union(enum) {
     revert,
     revert_layer,
     unset,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) RuleColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) RuleColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: RuleColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18966,7 +18717,7 @@ pub const ScrollSnapType = union(enum) {
     ///     /// The scroll container snaps to snap positions in its block axis only.
     block,
     ///     /// The scroll container snaps to snap positions in its inline axis only.
-    inline_,
+    @"inline",
     ///     /// The scroll container snaps to snap positions in both of its axes independently (potentially snapping to different elements in each axis).
     both,
     ///     /// If specified on a scroll container, the scroll container is required to be snapped to a snap position when there are no active scrolling operations. If a valid snap position exists then the scroll container must snap at the termination of a scroll (if none exist then no snapping occurs).
@@ -19017,7 +18768,7 @@ pub const ScrollTimelineAxis = union(enum) {
     ///     /// Specifies to use the measure of progress along the block axis of the scroll container. (Default.)
     block,
     ///     /// Specifies to use the measure of progress along the inline axis of the scroll container.
-    inline_,
+    @"inline",
     ///     /// Specifies to use the measure of progress along the horizontal axis of the scroll container.
     x,
     ///     /// Specifies to use the measure of progress along the vertical axis of the scroll container.
@@ -19242,9 +18993,8 @@ pub const ScrollbarColor = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) ScrollbarColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) ScrollbarColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: ScrollbarColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19533,9 +19283,8 @@ pub const StopColor = union(enum) {
     revert,
     revert_layer,
     unset,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) StopColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) StopColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: StopColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19832,9 +19581,8 @@ pub const StrokeColor = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) StrokeColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) StrokeColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: StrokeColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20382,9 +20130,8 @@ pub const TextDecoration = union(enum) {
     revert,
     revert_layer,
     unset,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) TextDecoration { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) TextDecoration { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: TextDecoration, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20590,9 +20337,8 @@ pub const TextDecorationColor = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) TextDecorationColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) TextDecorationColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: TextDecorationColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20787,9 +20533,8 @@ pub const TextEmphasis = union(enum) {
     revert,
     revert_layer,
     unset,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) TextEmphasis { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) TextEmphasis { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: TextEmphasis, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20995,9 +20740,8 @@ pub const TextEmphasisColor = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn hex(v: u32) TextEmphasisColor { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) TextEmphasisColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: TextEmphasisColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21397,12 +21141,11 @@ pub const TextShadow = union(enum) {
     WindowText,
     inset,
     px_: f32, em_: f32, rem_: f32,
-    hex_: u32, rgb_: core.Color, rgba_: core.Color,
+    hex_: u32,
     pub fn px(v: f32) TextShadow { return .{ .px_ = v }; }
     pub fn em(v: f32) TextShadow { return .{ .em_ = v }; }
     pub fn rem(v: f32) TextShadow { return .{ .rem_ = v }; }
     pub fn hex(v: u32) TextShadow { return .{ .hex_ = v }; }
-    pub fn rgb(r: u8, g: u8, b: u8) TextShadow { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
 
     pub fn format(self: TextShadow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22126,7 +21869,7 @@ pub const ViewTimelineAxis = union(enum) {
     ///     /// Specifies to use the measure of progress along the block axis of the scroll container. (Default.)
     block,
     ///     /// Specifies to use the measure of progress along the inline axis of the scroll container.
-    inline_,
+    @"inline",
     ///     /// Specifies to use the measure of progress along the horizontal axis of the scroll container.
     x,
     ///     /// Specifies to use the measure of progress along the vertical axis of the scroll container.
@@ -23934,7 +23677,7 @@ pub const Style = struct {
 
     /// continue
     /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-continue
-    continue_: Continue = .none,
+    @"continue": Continue = .none,
 
     /// copy-into
     /// - **W3C**: https://drafts.csswg.org/css-gcpm-4/#propdef-copy-into
@@ -26084,19 +25827,678 @@ pub const Style = struct {
     /// - **W3C**: https://drafts.csswg.org/css-viewport/#propdef-zoom
     zoom: Zoom = .none,
 
+    // --- Selectors (Pseudo-classes & Elements) --- //
+
+    /// ::after
+    /// Represents a styleable child pseudo-element immediately after the originating element’s actual content.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-pseudo-4/#selectordef-after
+    after: ?*const Style = null,
+
+    /// ::backdrop
+    /// Each element rendered in the top layer has a ::backdrop pseudo-element, for which it is the originating element.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-position-4/#selectordef-backdrop
+    backdrop: ?*const Style = null,
+
+    /// ::before
+    /// Represents a styleable child pseudo-element immediately before the originating element’s actual content.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-pseudo-4/#selectordef-before
+    before: ?*const Style = null,
+
+    /// ::checkmark
+    /// The ::checkmark pseudo-element represents an indicator of whether the item is checked, and is present on checkboxes, radios, and option elements.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-forms-1/#selectordef-checkmark
+    checkmark: ?*const Style = null,
+
+    /// ::clear-icon
+    /// The ::clear-icon pseudo-element represents the portion of the input that allows the user to clear the input when clicked if provided by the user agent. With appearance: textfield, the user agent must not generate this part.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-forms-1/#selectordef-clear-icon
+    clear_icon: ?*const Style = null,
+
+    /// ::color-swatch
+    /// The ::color-swatch pseudo-element represents the portion of the control that displays the chosen color value.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-forms-1/#selectordef-color-swatch
+    color_swatch: ?*const Style = null,
+
+    /// ::column
+    /// The ::column pseudo-element represents the individual columns in a multi-column container. It only exists on multi-column containers.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-multicol-2/#selectordef-column
+    column: ?*const Style = null,
+
+    /// ::cue-region
+    /// The ::cue-region pseudo-element (with no argument) matches any list of WebVTT region objects constructed for the matched element.
+    ///
+    /// - **W3C**: https://w3c.github.io/webvtt/#selectordef-cue-region
+    cue_region: ?*const Style = null,
+
+    /// ::details-content
+    /// The ::details-content pseudo-element targets the additional information in a details element that can be expanded or collapsed. It is an element-backed pseudo-element.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-pseudo-4/#selectordef-details-content
+    details_content: ?*const Style = null,
+
+    /// ::field-component
+    /// The ::field-component pseudo-element represents the portions of the control that contain the date/time component values.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-forms-1/#selectordef-field-component
+    field_component: ?*const Style = null,
+
+    /// ::field-separator
+    /// The ::field-separator pseudo-element represents the portions of the control that separate the date/time component values if the user agent provides those portions.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-forms-1/#selectordef-field-separator
+    field_separator: ?*const Style = null,
+
+    /// ::field-text
+    /// The ::field-text pseudo-element represents the portion of the input that contains the editable text.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-forms-1/#selectordef-field-text
+    field_text: ?*const Style = null,
+
+    /// ::file-selector-button
+    /// The ::file-selector-button pseudo-element represents the button used to open a file picker, if the UA renders such a button.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-forms-1/#selectordef-file-selector-button
+    file_selector_button: ?*const Style = null,
+
+    /// ::first-letter
+    /// The ::first-letter pseudo-element represents the first Letter, Number, or Symbol (Unicode category L*, N*, or S*) typographic character unit on the first formatted line of its originating element (the first letter) as well as its associated punctuation. Collectively, this text is the first-letter text. The ::first-letter pseudo-element can be used to create “initial caps” and “drop caps”, which are common typographic effects.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-pseudo-4/#selectordef-first-letter
+    first_letter: ?*const Style = null,
+
+    /// ::first-line
+    /// The ::first-line pseudo-element represents the contents of the first formatted line of its originating element.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-pseudo-4/#selectordef-first-line
+    first_line: ?*const Style = null,
+
+    /// ::grammar-error
+    /// The ::grammar-error pseudo-element represents a portion of text that has been flagged by the user agent as grammatically incorrect.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-pseudo-4/#selectordef-grammar-error
+    grammar_error: ?*const Style = null,
+
+    /// ::picker-icon
+    /// The ::picker-icon pseudo-element represents the part of the control that represents the icon denoting the presence of the picker. It is only generated when the originating element has basic appearance and if it opens a picker. It is a fully styleable pseudo-element and inherits from its originating element.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-forms-1/#selectordef-picker-icon
+    picker_icon: ?*const Style = null,
+
+    /// ::placeholder
+    /// The ::placeholder pseudo-element represents the portion of the input that contains the placeholder text.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-forms-1/#selectordef-placeholder
+    placeholder: ?*const Style = null,
+
+    /// ::reveal-icon
+    /// The ::reveal-icon pseudo-element represents the portion of the input that allows the user to temporarily disable obscuring of sensitive text input when clicked if provided by the user agent. User agents providing ::reveal-icon may choose to remove it in some circumstances to help protect sensitive text input from being revealed unintentionally.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-forms-1/#selectordef-reveal-icon
+    reveal_icon: ?*const Style = null,
+
+    /// ::scroll-marker
+    /// When the computed content value of a ::scroll-marker pseudo-element is not none and its nearest ancestor scroll container scroll container has a computed scroll-marker-group property that is not none, the pseudo-element generates a box attached as a child of the ::scroll-marker-group pseudo-element’s generated box on its nearest ancestor scroll container. These boxes are added in the tree order of their originating element.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-5/#selectordef-scroll-marker
+    scroll_marker: ?*const Style = null,
+
+    /// ::search-text
+    /// The ::search-text pseudo-element represents text identified by the user agent’s find-in-page feature. Since not all UAs style matched text in ways expressible with the highlight pseudo-elements, this pseudo-element is optional to implement. The :current pseudo-class (but not ::current()) may be combined with ::search-text to represent the currently focused match instance. The :past and :future pseudo-classes are reserved for analogous use in the future. Any unsupported combination of these pseudo-classes with ::search-text must be treated as invalid.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-pseudo-4/#selectordef-search-text
+    search_text: ?*const Style = null,
+
+    /// ::selection
+    /// The ::selection pseudo-element represents the portion of a document that has been selected as the target or object of some possible future user-agent operation(s). It applies, for example, to selected text within an editable text field, which would be copied by a copy operation or replaced by a paste operation.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-pseudo-4/#selectordef-selection
+    selection: ?*const Style = null,
+
+    /// ::slider-fill
+    /// The ::slider-fill pseudo-element represents the portion containing the progressed portion of the control. When the progress of control is indeterminate (like with <progress>), the user agent must give this portion an inline-size of zero.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-forms-1/#selectordef-slider-fill
+    slider_fill: ?*const Style = null,
+
+    /// ::slider-thumb
+    /// The ::slider-thumb pseudo-element represents the portion that allows the user to adjust the progress of the control.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-forms-1/#selectordef-slider-thumb
+    slider_thumb: ?*const Style = null,
+
+    /// ::slider-track
+    /// The ::slider-track pseudo-element represents the portion containing both the progressed and unprogressed portions of the control.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-forms-1/#selectordef-slider-track
+    slider_track: ?*const Style = null,
+
+    /// ::spelling-error
+    /// The ::spelling-error pseudo-element represents a portion of text that has been flagged by the user agent as misspelled.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-pseudo-4/#selectordef-spelling-error
+    spelling_error: ?*const Style = null,
+
+    /// ::step-control
+    /// The ::step-control pseudo-element represents the portion of a number input that contains the up and down buttons.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-forms-1/#selectordef-step-control
+    step_control: ?*const Style = null,
+
+    /// ::step-down
+    /// The ::step-down pseudo-element represents the button that decrements the value inside a number input when activated.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-forms-1/#selectordef-step-down
+    step_down: ?*const Style = null,
+
+    /// ::step-up
+    /// The ::step-up pseudo-element represents the button that increments the value inside a number input when activated.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-forms-1/#selectordef-step-up
+    step_up: ?*const Style = null,
+
+    /// ::target-text
+    /// The ::target-text pseudo-element represents text directly targeted by the document URL’s fragment, if any.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-pseudo-4/#selectordef-target-text
+    target_text: ?*const Style = null,
+
+    /// ::view-transition
+    /// The ::view-transition pseudo-element is a tree-abiding pseudo-element that is also a pseudo-element root. Its originating element is the document’s document element, and its containing block is the snapshot containing block.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-view-transitions-2/#selectordef-view-transition
+    view_transition: ?*const Style = null,
+
+    /// :active
+    /// The :active pseudo-class applies while an element is being “activated” by the user, as defined by the host language; for example, while a hyperlink is being triggered.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#active-pseudo
+    active: ?*const Style = null,
+
+    /// :active-view-transition
+    /// The :active-view-transition pseudo-class applies to the root element of the document, if it has an active view transition.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-view-transitions-2/#active-view-transition-pseudo
+    active_view_transition: ?*const Style = null,
+
+    /// :animated-image
+    /// The :animated-image pseudo-class represents content image elements where a animated image has been loaded. For the animated-image pseudo-class to match, the image must not only be in a format that is capable of animation, but must also be an actually animated image.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-image-animation-1/#selectordef-animated-image
+    animated_image: ?*const Style = null,
+
+    /// :any-link
+    /// The :any-link pseudo-class represents an element that acts as the source anchor of a hyperlink. For example, in [HTML5], any a or area elements with an href attribute are hyperlinks, and thus match :any-link. It matches an element if the element would match either :link or :visited, and is equivalent to :is(:link, :visited).
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#any-link-pseudo
+    any_link: ?*const Style = null,
+
+    /// :autofill
+    /// The :autofill pseudo-class represents input elements that have been automatically filled by the user agent, and have not been subsequently altered by the user.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#selectordef-autofill
+    autofill: ?*const Style = null,
+
+    /// :blank
+    /// The :blank pseudo-class applies to user-input elements whose input value is empty (consists of the empty string or otherwise null input).
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-5/#blank-pseudo
+    blank: ?*const Style = null,
+
+    /// :buffering
+    /// The :buffering pseudo-class represents an element that is capable of being “played” or “paused”, when that element cannot continue playing because it is actively attempting to obtain media data but has not yet obtained enough data to resume playback. (Note that the element is still considered to be “playing” when it is “buffering”. Whenever :buffering matches an element, :playing also matches the element.)
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#selectordef-buffering
+    buffering: ?*const Style = null,
+
+    /// :checked
+    /// When such elements are toggled “on” the :checked pseudo-class applies. For example, [HTML5] defines that checked checkboxes, radio buttons, and selected <option> elements match :checked. Similarly, when such elements are toggled “off”, the :unchecked pseudo-class applies.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#checked-pseudo
+    checked: ?*const Style = null,
+
+    /// :current
+    /// The :current pseudo-class represents the element, or an ancestor of the element, that is currently being displayed.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-5/#current-pseudo
+    current: ?*const Style = null,
+
+    /// :default
+    /// The :default pseudo-class applies to the one or more UI elements that are the default among a set of similar elements. Typically applies to context menu items, buttons and select lists/menus.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#default-pseudo
+    default: ?*const Style = null,
+
+    /// :defined
+    /// In some host languages, elements can have a distinction between being “defined”/“constructed” or not. The :defined pseudo-class matches elements that are fully defined, as dictated by the host language.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#defined-pseudo
+    defined: ?*const Style = null,
+
+    /// :disabled
+    /// Conversely, the :disabled pseudo-class represents user interface elements that are in a disabled state; such elements must have a corresponding enabled state.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#disabled-pseudo
+    disabled: ?*const Style = null,
+
+    /// :empty
+    /// The :empty pseudo-class represents an element that has no children except, optionally, document white space characters. In terms of the document tree, only element nodes and content nodes (such as [DOM] text nodes, and entity references) whose data has a non-zero length must be considered as affecting emptiness; comments, processing instructions, and other nodes must not affect whether an element is considered empty or not.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#empty-pseudo
+    empty: ?*const Style = null,
+
+    /// :enabled
+    /// The :enabled pseudo-class represents user interface elements that are in an enabled state; such elements must have a corresponding disabled state.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#enabled-pseudo
+    enabled: ?*const Style = null,
+
+    /// :first
+    /// Authors may also specify style for the first page of a document with the :first pseudo-class:
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css2/#selectordef-first
+    first: ?*const Style = null,
+
+    /// :first-child
+    /// The :first-child pseudo-class represents an element that is first among its inclusive siblings. Same as :nth-child(1).
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#first-child-pseudo
+    first_child: ?*const Style = null,
+
+    /// :first-of-page
+    /// Same as :nth-of-page(n), but where n = 1 (it is the first matched element on the page).
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-gcpm-4/#selectordef-first-of-page
+    first_of_page: ?*const Style = null,
+
+    /// :first-of-type
+    /// The :first-of-type pseudo-class represents the same element as :nth-of-type(1).
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#first-of-type-pseudo
+    first_of_type: ?*const Style = null,
+
+    /// :focus
+    /// The :focus pseudo-class applies while an element (or pseudo-element) has the focus (accepts keyboard or other forms of input).
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#focus-pseudo
+    focus: ?*const Style = null,
+
+    /// :focus-visible
+    /// While the :focus pseudo-class always matches the currently-focused element, UAs only sometimes visibly indicate focus (such as by drawing a “focus ring”), instead using a variety of heuristics to visibly indicate the focus only when it would be most helpful to the user. The :focus-visible pseudo-class matches a focused element (or pseudo-element) in these situations only, allowing authors to change the appearance of the focus indicator without changing when a focus indicator appears.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#focus-visible-pseudo
+    focus_visible: ?*const Style = null,
+
+    /// :focus-within
+    /// The :focus-within pseudo-class applies to any element (or pseudo-element) for which the :focus pseudo-class applies, as well as to an element (or pseudo-element) whose descendant in the flat tree (including non-element nodes, such as text nodes) matches the conditions for matching :focus.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#focus-within-pseudo
+    focus_within: ?*const Style = null,
+
+    /// :fullscreen
+    /// The :fullscreen pseudo-class represents an element which is displayed in a mode that takes up most (usually all) of the screen, such as that defined by the Fullscreen API. [FULLSCREEN]
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#selectordef-fullscreen
+    fullscreen: ?*const Style = null,
+
+    /// :future
+    /// The :future pseudo-class represents any element that is defined to occur entirely after a :current element. For example, the WebVTT spec defines the :future pseudo-class relative to the current playback position of a media element. If a time-based order of elements is not defined by the document language, then this represents any element that is a (possibly indirect) next sibling of a :current element.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-5/#future-pseudo
+    future: ?*const Style = null,
+
+    /// :has-slotted
+    /// The :has-slotted pseudo-class matches slot elements which have a non-empty list of flattened slotted nodes.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-shadow-1/#selectordef-has-slotted
+    has_slotted: ?*const Style = null,
+
+    /// :heading
+    /// The (non-functional) :heading pseudo-class matches an element which has a heading level, with respect to the semantics defined by the document language (e.g. [HTML5]).
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-5/#heading-pseudo
+    heading: ?*const Style = null,
+
+    /// :high-value
+    /// The :high-value pseudo-class matches on a meter element when its value is over the value specified by the high HTML attribute.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-forms-1/#selectordef-high-value
+    high_value: ?*const Style = null,
+
+    /// :host
+    /// The :host pseudo-class, when evaluated in the context of a shadow tree, matches the shadow tree’s shadow host. In any other context, it matches nothing.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-shadow-1/#selectordef-host
+    host: ?*const Style = null,
+
+    /// :hover
+    /// The :hover pseudo-class applies while the user designates an element (or pseudo-element) with a pointing device, but does not necessarily activate it. For example, a visual user agent could apply this pseudo-class when the cursor (mouse pointer) hovers over a box generated by the element. Interactive user agents that cannot detect hovering due to hardware limitations (e.g., a pen device that does not detect hovering) are still conforming; the selector will simply never match in such a UA.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#hover-pseudo
+    hover: ?*const Style = null,
+
+    /// :in-range
+    /// The :in-range and :out-of-range pseudo-classes apply only to elements that have range limitations. An element is :in-range or :out-of-range when the value that the element is bound to is in range or out of range with respect to its range limits as defined by the document language. An element that lacks data range limits or is not a form control is neither :in-range nor :out-of-range. E.g. a slider element with a value of 11 presented as a slider control that only represents the values from 1-10 is :out-of-range. Another example is a menu element with a value of "E" that happens to be presented in a popup menu that only has choices "A", "B" and "C".
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#in-range-pseudo
+    in_range: ?*const Style = null,
+
+    /// :indeterminate
+    /// If an element that could match :checked or :unchecked is neither "on" nor "off", the :indeterminate pseudo-class applies. :indeterminate also matches elements which do not have a notion of being "checked", but whose "value" is still in an indeterminate state, such as a progress meter whose progress percentage is unknown.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#indeterminate-pseudo
+    indeterminate: ?*const Style = null,
+
+    /// :interest-source
+    /// The :interest-source pseudo-class applies to an interest source element that the user is currently "showing interest" in, and the :interest-target pseudo-class applies to the associated interest target of an element matching :interest-source.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-5/#selectordef-interest-source
+    interest_source: ?*const Style = null,
+
+    /// :interest-target
+    /// The :interest-source pseudo-class applies to an interest source element that the user is currently "showing interest" in, and the :interest-target pseudo-class applies to the associated interest target of an element matching :interest-source.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-5/#selectordef-interest-target
+    interest_target: ?*const Style = null,
+
+    /// :invalid
+    /// An element is :valid or :invalid when its contents or value is, respectively, valid or invalid with respect to data validity semantics defined by the document language (e.g. [XFORMS11] or [HTML5]). An element which lacks data validity semantics is neither :valid nor :invalid.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#invalid-pseudo
+    invalid: ?*const Style = null,
+
+    /// :last-child
+    /// The :last-child pseudo-class represents an element that is last among its inclusive siblings. Same as :nth-last-child(1).
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#last-child-pseudo
+    last_child: ?*const Style = null,
+
+    /// :last-of-page
+    /// The element is the last matched element on the page.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-gcpm-4/#selectordef-last-of-page
+    last_of_page: ?*const Style = null,
+
+    /// :last-of-type
+    /// The :last-of-type pseudo-class represents the same element as :nth-last-of-type(1).
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#last-of-type-pseudo
+    last_of_type: ?*const Style = null,
+
+    /// :link
+    /// User agents commonly display unvisited hyperlinks differently from previously visited ones. Selectors provides the pseudo-classes :link and :visited to distinguish them:
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#link-pseudo
+    link: ?*const Style = null,
+
+    /// :local-link
+    /// The :local-link pseudo-class allows authors to style hyperlinks based on the users current location within a site and to differentiate site-internal versus site-external links.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-5/#local-link-pseudo
+    local_link: ?*const Style = null,
+
+    /// :low-value
+    /// The :low-value pseudo-class matches on a meter element when its value is under the value specified by the low HTML attribute.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-forms-1/#selectordef-low-value
+    low_value: ?*const Style = null,
+
+    /// :modal
+    /// The :modal pseudo-class represents an element which is in a state that excludes all interaction with elements outside it until it has been dismissed. Multiple elements can be :modal simultaneously, with only one of them active (able to receive input).
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#selectordef-modal
+    modal: ?*const Style = null,
+
+    /// :muted
+    /// The :muted pseudo-class represents an element that is capable of making sound, but is currently “muted“ (forced silent). (For the audio and video elements of HTML, see muted. [HTML])
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#selectordef-muted
+    muted: ?*const Style = null,
+
+    /// :only-child
+    /// The :only-child pseudo-class represents an element that has no siblings. Same as :first-child:last-child or :nth-child(1):nth-last-child(1), but with a lower specificity.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#only-child-pseudo
+    only_child: ?*const Style = null,
+
+    /// :only-of-type
+    /// The :only-of-type pseudo-class represents the same element as :first-of-type:last-of-type.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#only-of-type-pseudo
+    only_of_type: ?*const Style = null,
+
+    /// :open
+    /// The :open pseudo-class represents an element that has both “open” and “closed” states, and which is currently in the “open” state.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#selectordef-open
+    open: ?*const Style = null,
+
+    /// :optimal-value
+    /// The :optimal-value pseudo-class matches on a meter element when its value is in the range determined by the optimum / low / high HTML attributes.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-forms-1/#selectordef-optimal-value
+    optimal_value: ?*const Style = null,
+
+    /// :optional
+    /// A form element is :required or :optional if a value for it is, respectively, required or optional before the form it belongs to can be validly submitted. Elements that are not form elements are neither required nor optional.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#optional-pseudo
+    optional: ?*const Style = null,
+
+    /// :out-of-range
+    /// The :in-range and :out-of-range pseudo-classes apply only to elements that have range limitations. An element is :in-range or :out-of-range when the value that the element is bound to is in range or out of range with respect to its range limits as defined by the document language. An element that lacks data range limits or is not a form control is neither :in-range nor :out-of-range. E.g. a slider element with a value of 11 presented as a slider control that only represents the values from 1-10 is :out-of-range. Another example is a menu element with a value of "E" that happens to be presented in a popup menu that only has choices "A", "B" and "C".
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#out-of-range-pseudo
+    out_of_range: ?*const Style = null,
+
+    /// :past
+    /// The :past pseudo-class represents any element that is defined to occur entirely prior to a :current element. For example, the WebVTT spec defines the :past pseudo-class relative to the current playback position of a media element. If a time-based order of elements is not defined by the document language, then this represents any element that is a (possibly indirect) previous sibling of a :current element.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-5/#past-pseudo
+    past: ?*const Style = null,
+
+    /// :paused
+    /// The :paused pseudo-class represents an element that is capable of being “played” or “paused”, when that element is “paused” (i.e. not ”playing”). (This includes both an explicit “paused” state, and other non-playing states like “loaded, hasn’t been activated yet”, etc.)
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#selectordef-paused
+    paused: ?*const Style = null,
+
+    /// :picture-in-picture
+    /// The :picture-in-picture pseudo-class represents an element which is displayed in a mode that takes up most (usually all) of the viewport, and whose viewport is confined to part of the screen while being displayed over other content, for example when using the Picture-in-Picture API. [picture-in-picture]
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#selectordef-picture-in-picture
+    picture_in_picture: ?*const Style = null,
+
+    /// :placeholder-shown
+    /// Input elements can sometimes show placeholder text as a hint to the user on what to type in. See, for example, the placeholder attribute in [HTML5]. The :placeholder-shown pseudo-class matches an input element that is showing such placeholder text, whether that text is given by an attribute or a real element, or is otherwise implied by the UA.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#placeholder-shown-pseudo
+    placeholder_shown: ?*const Style = null,
+
+    /// :playing
+    /// The :playing pseudo-class represents an element that is capable of being “played” or “paused”, when that element is “playing”. (This includes both when the element is explicitly playing, and when it’s temporarily stopped for some reason not connected to user intent, but will automatically resume when that reason is resolved, such as a “buffering” or “stalled” state.)
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#selectordef-playing
+    playing: ?*const Style = null,
+
+    /// :popover-open
+    /// The :popover-open pseudo-class represents an element that has both “popover-showing” and “popover-hidden” states and which is currently in the “popover-showing” state.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#selectordef-popover-open
+    popover_open: ?*const Style = null,
+
+    /// :read-only
+    /// An element matches :read-write if it is user-alterable, as defined by the document language. Otherwise, it is :read-only.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#read-only-pseudo
+    read_only: ?*const Style = null,
+
+    /// :read-write
+    /// An element matches :read-write if it is user-alterable, as defined by the document language. Otherwise, it is :read-only.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#read-write-pseudo
+    read_write: ?*const Style = null,
+
+    /// :required
+    /// A form element is :required or :optional if a value for it is, respectively, required or optional before the form it belongs to can be validly submitted. Elements that are not form elements are neither required nor optional.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#required-pseudo
+    required: ?*const Style = null,
+
+    /// :root
+    /// The :root pseudo-class represents an element that is the root of the document.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#root-pseudo
+    root: ?*const Style = null,
+
+    /// :scope
+    /// In some contexts, selectors are matched with respect to one or more scoping roots, such as when calling the querySelector() method in [DOM]. The :scope pseudo-class represents this scoping root, and may be either a true element or a virtual one (such as a DocumentFragment).
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#scope-pseudo
+    scope: ?*const Style = null,
+
+    /// :seeking
+    /// The :seeking pseudo-class represents an element that is capable of ”seeking” when that element is ”seeking”. (For the audio and video elements of HTML, see HTML § 4.8.11.9 Seeking.)
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#selectordef-seeking
+    seeking: ?*const Style = null,
+
+    /// :snapped
+    /// The :snapped pseudo-class matches any scroll snap targets, regardless of axis. The longform physical and logical pseudo-class selectors allow for more finite snapped children styling as they can target an individual axis.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped
+    snapped: ?*const Style = null,
+
+    /// :snapped-block
+    /// Matches the child snapped on the block axis.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped-block
+    snapped_block: ?*const Style = null,
+
+    /// :snapped-inline
+    /// Matches the child snapped on the inline axis.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped-inline
+    snapped_inline: ?*const Style = null,
+
+    /// :snapped-x
+    /// Matches the child snapped on the horizontal axis.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped-x
+    snapped_x: ?*const Style = null,
+
+    /// :snapped-y
+    /// Matches the child snapped on the vertical axis.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped-y
+    snapped_y: ?*const Style = null,
+
+    /// :stalled
+    /// The :stalled pseudo-class represents an element when that element cannot continue playing because it is actively attempting to obtain media data but it has failed to receive any data for some amount of time. For the audio and video elements of HTML, this amount of time is the media element stall timeout. [HTML] (Note that, like with the :buffering pseudo-class, the element is still considered to be “playing” when it is “stalled”. Whenever :stalled matches an element, :playing also matches the element.)
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#selectordef-stalled
+    stalled: ?*const Style = null,
+
+    /// :start-of-page
+    /// The element is the first matched element on the page, and neither it nor its ancestors have any previous siblings that appear on the page.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-gcpm-4/#selectordef-start-of-page
+    start_of_page: ?*const Style = null,
+
+    /// :target
+    /// The :target pseudo-class matches the document’s target elements. If the document’s URL has no fragment identifier, then the document has no target elements.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#target-pseudo
+    target: ?*const Style = null,
+
+    /// :target-after
+    /// In addition to the :target-current pseudo-class, this specification introduces the :target-before and :target-after pseudo-classes for use with scroll marker elements.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-5/#selectordef-target-after
+    target_after: ?*const Style = null,
+
+    /// :target-before
+    /// In addition to the :target-current pseudo-class, this specification introduces the :target-before and :target-after pseudo-classes for use with scroll marker elements.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-5/#selectordef-target-before
+    target_before: ?*const Style = null,
+
+    /// :target-current
+    /// Exactly one scroll marker within each scroll marker group is determined to be active at a time. Such "active" scroll markers match the :target-current pseudo-class.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/css-overflow-5/#selectordef-target-current
+    target_current: ?*const Style = null,
+
+    /// :unchecked
+    /// When such elements are toggled “on” the :checked pseudo-class applies. For example, [HTML5] defines that checked checkboxes, radio buttons, and selected <option> elements match :checked. Similarly, when such elements are toggled “off”, the :unchecked pseudo-class applies.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#unchecked-pseudo
+    unchecked: ?*const Style = null,
+
+    /// :user-invalid
+    /// The :user-invalid and the :user-valid pseudo-classes represent an element with incorrect or correct input, respectively, but only after the user has significantly interacted with it. Their purpose is to help the user identify mistakes in their input.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#user-invalid-pseudo
+    user_invalid: ?*const Style = null,
+
+    /// :user-valid
+    /// The :user-invalid and the :user-valid pseudo-classes represent an element with incorrect or correct input, respectively, but only after the user has significantly interacted with it. Their purpose is to help the user identify mistakes in their input.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#user-valid-pseudo
+    user_valid: ?*const Style = null,
+
+    /// :valid
+    /// An element is :valid or :invalid when its contents or value is, respectively, valid or invalid with respect to data validity semantics defined by the document language (e.g. [XFORMS11] or [HTML5]). An element which lacks data validity semantics is neither :valid nor :invalid.
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#valid-pseudo
+    valid: ?*const Style = null,
+
+    /// :visited
+    /// User agents commonly display unvisited hyperlinks differently from previously visited ones. Selectors provides the pseudo-classes :link and :visited to distinguish them:
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#visited-pseudo
+    visited: ?*const Style = null,
+
+    /// :volume-locked
+    /// The :volume-locked pseudo-class represents an element that is capable of making sound, and currently has its volume "locked" by the UA or the user, so the page author cannot change it. (For the audio and video elements of HTML, see the algorithm for setting the element’s effective media volume. [HTML])
+    ///
+    /// - **W3C**: https://drafts.csswg.org/selectors-4/#selectordef-volume-locked
+    volume_locked: ?*const Style = null,
+
+    /// :xr-overlay
+    /// The :xr-overlay pseudo-class MUST match the overlay element for the duration of an immersive session using a DOM Overlay.
+    ///
+    /// - **W3C**: https://immersive-web.github.io/dom-overlays/#selectordef-xr-overlay
+    xr_overlay: ?*const Style = null,
+
+    // Responsive Breakpoints
+    sm: ?*const Style = null,
+    md: ?*const Style = null,
+    lg: ?*const Style = null,
+    xl: ?*const Style = null,
+
     extra: []const u8 = "",
 
     pub fn format(self: Style, w: *std.io.Writer) std.io.Writer.Error!void {
         @setEvalBranchQuota(20000);
-        const fields = std.meta.fields(Style);
-        inline for (fields) |f| {
+        inline for (std.meta.fields(Style)) |f| {
+            const T = f.type;
             if (comptime std.mem.eql(u8, f.name, "extra")) continue;
-            const val = @field(self, f.name);
-            if (val != .none) {
-                try core.formatKebab(f.name, w);
-                try w.writeAll(": ");
-                try val.format(w);
-                try w.writeAll("; ");
+            
+            if (comptime @typeInfo(T) == .@"union") {
+                const val = @field(self, f.name);
+                if (val != .none) {
+                    try core.formatKebab(f.name, w);
+                    try w.writeAll(": ");
+                    try val.format(w);
+                    try w.writeAll("; ");
+                }
             }
         }
         if (self.extra.len > 0) try w.writeAll(self.extra);
