@@ -7,55 +7,62 @@
 ///                         ├─ /.well-known/_zx/  → WebSocket and related assets (served here)
 ///                         └─ everything else    → proxy → app binary (inner_port)
 ///
-/// WebSocket messages sent to browsers:
-///   {"type":"connected"}              → handshake confirmation
-///   {"type":"reload"}                 → app binary restarted, update page
-///   {"type":"error","message":"..."}  → build failed, show error overlay
-///   {"type":"clear"}                  → previous error resolved
-///
-/// On rebuild: dev.zig kills app binary → starts new one → calls notifyReload()
-///             DevServer sends reload message to all WebSocket clients.
+/// WebSocket messages sent to browsers are JSON-serialized `Notification`
+/// values. `dev.zig` decides which notification to send; DevServer just
+/// serializes, queues, and broadcasts them.
 const std = @import("std");
+const builtin = @import("builtin");
 const http = std.http;
 const assert = std.debug.assert;
 const Allocator = std.mem.Allocator;
 const log = std.log.scoped(.devserver);
 
-const dev_script_src = @embedFile("devscript.js");
-
 /// Minimal HTML shell served when the inner app is not running (e.g. initial
 /// build errors). It includes the devscript so the browser can connect to the
 /// DevServer WebSocket and display the error overlay immediately.
-const ERROR_SHELL_HTML =
-    "<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">" ++
-    "<title>ZX Dev</title><style>body{margin:0;background:#111;color:#aaa;font-family:system-ui,sans-serif;" ++
-    "display:flex;align-items:center;justify-content:center;height:100vh}" ++
-    ".c{text-align:center}.s{animation:_zx_spin 1.5s linear infinite;margin-bottom:16px}" ++
-    "@keyframes _zx_spin{to{transform:rotate(360deg)}}</style></head>" ++
-    "<body><div class=\"c\">" ++
-    "<svg class=\"s\" width=\"32\" height=\"32\" viewBox=\"0 0 16 16\"><circle cx=\"8\" cy=\"8\" r=\"6\" fill=\"none\" stroke=\"#333\" stroke-width=\"2\"/>" ++
-    "<path d=\"M8 2a6 6 0 0 1 6 6\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>" ++
-    "<div>Waiting for build...</div></div>" ++
-    "<script src=\"/.well-known/_zx/devscript.js\"></script></body></html>";
+const ERROR_SHELL_HTML = @embedFile("errorshell.html");
+const DEVSCRIPT_JS = @embedFile("devscript.js");
 
 const DevServer = @This();
 
-const EventType = enum { reload, @"error", clear, raw_json, building };
+pub const Notification = struct {
+    type: Type,
+    message: ?[]const u8 = null,
+    diagnostics: ?[]const Diagnostic = null,
+
+    pub const Type = enum {
+        connected,
+        reload,
+        @"error",
+        clear,
+        building,
+    };
+
+    pub const Kind = enum {
+        @"error",
+        warning,
+        note,
+    };
+
+    pub const Diagnostic = struct {
+        file: []const u8,
+        line: u32,
+        col: u32,
+        kind: Kind,
+        message: []const u8,
+        source: ?[]const u8 = null,
+    };
+};
 
 const QueuedEvent = struct {
-    event_type: EventType,
-    /// Owned payload for error/raw_json events; null otherwise.
-    payload: ?[]u8,
+    json: []u8,
 };
 
 const EVENT_QUEUE_CAP = 16;
 
 gpa: Allocator,
-/// User-facing address (what the browser connects to).
 address: std.net.Address,
-/// Port the app binary actually listens on (never exposed to users).
 inner_port: u16,
-
 tcp_server: ?std.net.Server,
 serve_thread: ?std.Thread,
 
@@ -72,7 +79,7 @@ pub const Options = struct {
     gpa: Allocator,
     /// Address to bind the user-facing proxy to.
     address: std.net.Address,
-    /// Port the app binary will listen on (must differ from address.getPort()).
+    /// Port the app binary will listen on.
     inner_port: u16,
 };
 
@@ -98,7 +105,7 @@ pub fn deinit(ds: *DevServer) void {
     // Drain any remaining queued events
     while (ds.event_tail != ds.event_head) {
         const idx = ds.event_tail % EVENT_QUEUE_CAP;
-        if (ds.event_queue[idx].payload) |p| ds.gpa.free(p);
+        ds.gpa.free(ds.event_queue[idx].json);
         ds.event_tail +%= 1;
     }
 }
@@ -121,50 +128,27 @@ pub fn start(ds: *DevServer) error{AlreadyReported}!void {
     };
 }
 
-/// Push an event onto the queue and wake WS threads. Thread-safe.
-fn pushEvent(ds: *DevServer, evt: EventType, payload: ?[]u8) void {
+/// Push a serialized notification onto the queue and wake WS threads.
+/// Thread-safe.
+fn pushEvent(ds: *DevServer, json: []u8) void {
     ds.event_mutex.lock();
     const idx = ds.event_head % EVENT_QUEUE_CAP;
     // If queue is full, drop oldest event
     if (ds.event_head -% ds.event_tail >= EVENT_QUEUE_CAP) {
         const old_idx = ds.event_tail % EVENT_QUEUE_CAP;
-        if (ds.event_queue[old_idx].payload) |p| ds.gpa.free(p);
+        ds.gpa.free(ds.event_queue[old_idx].json);
         ds.event_tail +%= 1;
     }
-    ds.event_queue[idx] = .{ .event_type = evt, .payload = payload };
+    ds.event_queue[idx] = .{ .json = json };
     ds.event_head +%= 1;
     ds.event_mutex.unlock();
     _ = ds.update_id.rmw(.Add, 1, .release);
     std.Thread.Futex.wake(&ds.update_id, std.math.maxInt(u32));
 }
 
-/// Signal all connected WebSocket clients to reload. Thread-safe.
-pub fn notifyReload(ds: *DevServer) void {
-    ds.pushEvent(.reload, null);
-}
-
-/// Signal all connected WebSocket clients to show a build error overlay.
-/// ANSI escape codes are stripped before sending. Thread-safe.
-pub fn notifyError(ds: *DevServer, message: []const u8) void {
-    const stripped = stripAnsi(ds.gpa, message) catch
-        ds.gpa.dupe(u8, message) catch return;
-    ds.pushEvent(.@"error", stripped);
-}
-
-/// Signal all connected WebSocket clients with a pre-built JSON payload. Thread-safe.
-pub fn notifyRawJson(ds: *DevServer, json: []const u8) void {
-    const owned = ds.gpa.dupe(u8, json) catch return;
-    ds.pushEvent(.raw_json, owned);
-}
-
-/// Signal all connected WebSocket clients that a build is in progress. Thread-safe.
-pub fn notifyBuilding(ds: *DevServer) void {
-    ds.pushEvent(.building, null);
-}
-
-/// Signal all connected WebSocket clients to clear the error overlay. Thread-safe.
-pub fn notifyClear(ds: *DevServer) void {
-    ds.pushEvent(.clear, null);
+pub fn notify(ds: *DevServer, notification: Notification) void {
+    const json = serializeNotification(ds.gpa, notification) catch return;
+    ds.pushEvent(json);
 }
 
 /// Find a free OS-assigned port by briefly binding to port 0.
@@ -241,7 +225,7 @@ fn serveRequest(ds: *DevServer, req: *http.Server.Request, client_stream: std.ne
     if (std.mem.indexOf(u8, target, "/.well-known/_zx/")) |_| {
         if (std.mem.indexOf(u8, target, "devscript") != null) {
             log.debug("devscript matched: {s}", .{target});
-            try req.respond(dev_script_src, .{
+            try req.respond(DEVSCRIPT_JS, .{
                 .extra_headers = &.{
                     .{ .name = "Content-Type", .value = "application/javascript" },
                     .{ .name = "Cache-Control", .value = "no-cache" },
@@ -298,7 +282,9 @@ fn serveRequest(ds: *DevServer, req: *http.Server.Request, client_stream: std.ne
 fn serveWebSocket(ds: *DevServer, sock: *http.Server.WebSocket) !noreturn {
     // Send initial connected message (also flushes the 101 handshake response).
     log.debug("ws: sending connected message", .{});
-    sock.writeMessage("{\"type\":\"connected\"}", .text) catch |err| {
+    const connected = try serializeNotification(ds.gpa, .{ .type = .connected });
+    defer ds.gpa.free(connected);
+    sock.writeMessage(connected, .text) catch |err| {
         log.err("ws: failed to send connected message: {s}", .{@errorName(err)});
         return err;
     };
@@ -340,38 +326,17 @@ fn serveWebSocket(ds: *DevServer, sock: *http.Server.WebSocket) !noreturn {
             last_id = head - EVENT_QUEUE_CAP;
         }
         const event_index = last_id % EVENT_QUEUE_CAP;
-        const evt = ds.event_queue[event_index].event_type;
-        const err_copy: ?[]u8 = if (ds.event_queue[event_index].payload) |p|
-            ds.gpa.dupe(u8, p) catch null
-        else
-            null;
+        const json_copy = ds.gpa.dupe(u8, ds.event_queue[event_index].json) catch {
+            ds.event_mutex.unlock();
+            last_id +%= 1;
+            continue;
+        };
         ds.event_mutex.unlock();
 
         last_id +%= 1;
 
-        log.debug("ws: broadcasting event: {s}", .{@tagName(evt)});
-        switch (evt) {
-            .reload => try sock.writeMessage("{\"type\":\"reload\"}", .text),
-            .clear => try sock.writeMessage("{\"type\":\"clear\"}", .text),
-            .building => try sock.writeMessage("{\"type\":\"building\"}", .text),
-            .raw_json => {
-                if (err_copy) |msg| {
-                    defer ds.gpa.free(msg);
-                    try sock.writeMessage(msg, .text);
-                }
-            },
-            .@"error" => {
-                if (err_copy) |msg| {
-                    defer ds.gpa.free(msg);
-                    var buf = std.ArrayList(u8).empty;
-                    defer buf.deinit(ds.gpa);
-                    try buf.appendSlice(ds.gpa, "{\"type\":\"error\",\"message\":\"");
-                    try jsonEscape(ds.gpa, &buf, msg);
-                    try buf.appendSlice(ds.gpa, "\"}");
-                    try sock.writeMessage(buf.items, .text);
-                }
-            },
-        }
+        defer ds.gpa.free(json_copy);
+        try sock.writeMessage(json_copy, .text);
     }
 }
 
@@ -388,62 +353,12 @@ fn recvWebSocketFrames(sock: *http.Server.WebSocket) void {
     }
 }
 
-/// JSON-escape a string and append to `list`.
-fn jsonEscape(gpa: Allocator, list: *std.ArrayList(u8), s: []const u8) !void {
-    for (s) |c| {
-        switch (c) {
-            '"' => try list.appendSlice(gpa, "\\\""),
-            '\\' => try list.appendSlice(gpa, "\\\\"),
-            '\n' => try list.appendSlice(gpa, "\\n"),
-            '\r' => try list.appendSlice(gpa, "\\r"),
-            '\t' => try list.appendSlice(gpa, "\\t"),
-            0x00...0x08, 0x0B, 0x0C, 0x0E...0x1F => {
-                var tmp: [6]u8 = undefined;
-                const encoded = try std.fmt.bufPrint(&tmp, "\\u{x:0>4}", .{c});
-                try list.appendSlice(gpa, encoded);
-            },
-            else => try list.append(gpa, c),
-        }
-    }
-}
-
-/// Strip ANSI escape sequences from `input` and return a newly-allocated string.
-fn stripAnsi(gpa: Allocator, input: []const u8) ![]u8 {
-    var out = std.ArrayList(u8).empty;
-    var i: usize = 0;
-    while (i < input.len) {
-        if (input[i] == 0x1B) {
-            i += 1;
-            if (i >= input.len) break;
-            switch (input[i]) {
-                '[' => {
-                    // CSI sequence: skip to final byte (0x40–0x7E).
-                    i += 1;
-                    while (i < input.len and (input[i] < 0x40 or input[i] > 0x7E)) : (i += 1) {}
-                    if (i < input.len) i += 1;
-                },
-                ']' => {
-                    // OSC sequence: skip to BEL (0x07) or ST (ESC \).
-                    i += 1;
-                    while (i < input.len) : (i += 1) {
-                        if (input[i] == 0x07) {
-                            i += 1;
-                            break;
-                        }
-                        if (input[i] == 0x1B and i + 1 < input.len and input[i + 1] == '\\') {
-                            i += 2;
-                            break;
-                        }
-                    }
-                },
-                else => i += 1,
-            }
-        } else {
-            try out.append(gpa, input[i]);
-            i += 1;
-        }
-    }
-    return out.toOwnedSlice(gpa);
+fn serializeNotification(gpa: Allocator, notification: Notification) ![]u8 {
+    return std.fmt.allocPrint(gpa, "{f}", .{
+        std.json.fmt(notification, .{
+            .emit_null_optional_fields = false,
+        }),
+    });
 }
 
 /// Proxy a request to the inner app binary.
@@ -494,6 +409,14 @@ fn proxyToInner(
     // Forward any body bytes already buffered by the http.Server reader.
     if (buffered_extra.len > 0) try inner.writeAll(buffered_extra);
 
+    // Windows can report ERROR_INVALID_PARAMETER from ReadFile when combining
+    // this shutdown-based bidirectional copy pattern with sockets. Use a
+    // simpler one-way response copy there.
+    if (builtin.os.tag == .windows) {
+        copyStream(inner, client);
+        return;
+    }
+
     // Bidirectional pipe: remaining request body client→inner, response inner→client.
     // The inner→client thread shuts down the client write side when inner closes,
     // which unblocks the client→inner copy loop below.
@@ -513,11 +436,17 @@ fn copyStreamThenShutdown(src: std.net.Stream, dst: std.net.Stream) void {
 }
 
 fn copyStream(src: std.net.Stream, dst: std.net.Stream) void {
-    var buf: [65536]u8 = undefined;
+    var read_buf: [65536]u8 = undefined;
+    var reader_state: [1024]u8 = undefined;
+    var writer_state: [1024]u8 = undefined;
+    var reader = src.reader(&reader_state);
+    var writer = dst.writer(&writer_state);
+
     while (true) {
-        const n = src.read(&buf) catch return;
+        const n = reader.interface().readSliceShort(&read_buf) catch return;
         if (n == 0) return;
-        dst.writeAll(buf[0..n]) catch return;
+        writer.interface.writeAll(read_buf[0..n]) catch return;
+        writer.interface.flush() catch return;
     }
 }
 
@@ -551,7 +480,7 @@ fn handleOpenInEditor(ds: *DevServer, target: []const u8) !void {
         const file_arg = try std.fmt.allocPrint(ds.gpa, "{s}:{s}:{s}", .{ decoded_file, l, c });
         defer ds.gpa.free(file_arg);
 
-        const args = try detectEditor(ds.gpa, decoded_file, l, c);
+        const args = try IdeScheme.detect(ds.gpa, decoded_file, l, c);
         defer {
             for (args) |arg| ds.gpa.free(arg);
             ds.gpa.free(args);
@@ -595,136 +524,4 @@ fn urlDecode(allocator: std.mem.Allocator, encoded: []const u8) ![]u8 {
     return out.toOwnedSlice(allocator);
 }
 
-fn replaceAll(allocator: std.mem.Allocator, input: []const u8, pattern: []const u8, replacement: []const u8) ![]u8 {
-    const size = std.mem.replacementSize(u8, input, pattern, replacement);
-    const output = try allocator.alloc(u8, size);
-    _ = std.mem.replace(u8, input, pattern, replacement, output);
-    allocator.free(input); // free previous string (used for chained replacement)
-    return output;
-}
-
-/// Detect editor and return command args to open file
-fn detectEditor(allocator: std.mem.Allocator, file: []const u8, line: []const u8, col: []const u8) ![]const []const u8 {
-    var env_map = try std.process.getEnvMap(allocator);
-    defer env_map.deinit();
-
-    // 1. ZIEX_EDITOR override (e.g., "zed --open {file}:{line}:{col}")
-    if (env_map.get("ZIEX_EDITOR")) |editor_cmd| {
-        var args_list = std.ArrayList([]const u8).empty;
-        var it = std.mem.tokenizeAny(u8, editor_cmd, " \t");
-        while (it.next()) |token| {
-            var arg = try allocator.dupe(u8, token);
-            arg = try replaceAll(allocator, arg, "{file}", file);
-            arg = try replaceAll(allocator, arg, "{line}", line);
-            arg = try replaceAll(allocator, arg, "{col}", col);
-            try args_list.append(allocator, arg);
-        }
-        if (args_list.items.len > 0) return try args_list.toOwnedSlice(allocator);
-    }
-
-    // 2. Auto-detect from environment using schema system
-    for (EDITORS) |scheme| {
-        if (scheme.match(env_map)) {
-            return scheme.format(allocator, file, line, col);
-        }
-    }
-
-    // Default to 'code' if nothing else matches
-    var args = try allocator.alloc([]const u8, 3);
-    args[0] = try allocator.dupe(u8, "code");
-    args[1] = try allocator.dupe(u8, "-g");
-    args[2] = try std.fmt.allocPrint(allocator, "{s}:{s}:{s}", .{ file, line, col });
-    return args;
-}
-
-const CodeEditorScheme = struct {
-    name: []const u8,
-    args: []const []const u8,
-    /// environment keys that must exist OR matches "KEY=VALUE" (value can have *)
-    envs: []const []const u8,
-
-    pub fn match(self: CodeEditorScheme, env_map: std.process.EnvMap) bool {
-        if (self.envs.len == 0) return false;
-
-        for (self.envs) |env_spec| {
-            if (std.mem.indexOfScalar(u8, env_spec, '=')) |eq_idx| {
-                const key = env_spec[0..eq_idx];
-                const pattern = env_spec[eq_idx + 1 ..];
-                const val = env_map.get(key) orelse return false;
-
-                if (std.mem.startsWith(u8, pattern, "*") and std.mem.endsWith(u8, pattern, "*")) {
-                    const inner = pattern[1 .. pattern.len - 1];
-                    if (std.mem.indexOf(u8, val, inner) == null) return false;
-                } else if (std.mem.startsWith(u8, pattern, "*")) {
-                    const inner = pattern[1..];
-                    if (!std.mem.endsWith(u8, val, inner)) return false;
-                } else if (std.mem.endsWith(u8, pattern, "*")) {
-                    const inner = pattern[0 .. pattern.len - 1];
-                    if (!std.mem.startsWith(u8, val, inner)) return false;
-                } else {
-                    if (!std.mem.eql(u8, val, pattern)) return false;
-                }
-            } else {
-                // Just check if key exists
-                if (env_map.get(env_spec) == null) return false;
-            }
-        }
-        return true;
-    }
-
-    pub fn format(self: CodeEditorScheme, allocator: std.mem.Allocator, file: []const u8, line: []const u8, col: []const u8) ![]const []const u8 {
-        var args_list = std.ArrayList([]const u8).empty;
-
-        for (self.args) |arg| {
-            var new_arg = try allocator.dupe(u8, arg);
-            new_arg = try replaceAll(allocator, new_arg, "{file}", file);
-            new_arg = try replaceAll(allocator, new_arg, "{line}", line);
-            new_arg = try replaceAll(allocator, new_arg, "{col}", col);
-            try args_list.append(allocator, new_arg);
-        }
-        return args_list.toOwnedSlice(allocator);
-    }
-};
-
-const EDITORS = [_]CodeEditorScheme{
-    .{
-        .name = "Antigravity",
-        .args = &.{ "agy", "-g", "{file}:{line}:{col}" },
-        .envs = &.{ "TERM_PROGRAM=vscode", "VSCODE_GIT_ASKPASS_NODE=*Antigravity*" },
-    },
-    .{
-        .name = "Cursor",
-        .args = &.{ "cursor", "-g", "{file}:{line}:{col}" },
-        .envs = &.{ "TERM_PROGRAM=vscode", "VSCODE_GIT_ASKPASS_NODE=*Cursor*" },
-    },
-    .{
-        .name = "VS Code",
-        .args = &.{ "code", "-g", "{file}:{line}:{col}" },
-        .envs = &.{"TERM_PROGRAM=vscode"},
-    },
-    .{
-        .name = "Zed",
-        .args = &.{ "zed", "{file}:{line}:{col}" },
-        .envs = &.{"ZED_TERM"},
-    },
-    .{
-        .name = "IntelliJ IDEA",
-        .args = &.{ "idea", "--line", "{line}", "--column", "{col}", "{file}" },
-        .envs = &.{"TERMINAL_EMULATOR=JetBrains*"},
-    },
-    .{
-        .name = "Emacs",
-        .args = &.{ "emacsclient", "-n", "+{line}:{col} {file}" },
-        .envs = &.{"INSIDE_EMACS"},
-    },
-    .{
-        .name = "Vim",
-        .args = &.{ "vim", "+{line}", "{file}" },
-        .envs = &.{"VIM"},
-    },
-    .{
-        .name = "Vim (Runtime)",
-        .args = &.{ "vim", "+{line}", "{file}" },
-        .envs = &.{"VIMRUNTIME"},
-    },
-};
+const IdeScheme = @import("IdeScheme.zig");

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ZX Dev</title>
+    <style>
+        body {
+            margin: 0;
+            background: #111;
+            color: #aaa;
+            font-family: system-ui, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh
+        }
+
+        .c {
+            text-align: center
+        }
+
+        .s {
+            animation: _zx_spin 1.5s linear infinite;
+            margin-bottom: 16px
+        }
+
+        @keyframes _zx_spin {
+            to {
+                transform: rotate(360deg)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c"><svg class="s" width="32" height="32" viewBox="0 0 16 16">
+            <circle cx="8" cy="8" r="6" fill="none" stroke="#333" stroke-width="2" />
+            <path d="M8 2a6 6 0 0 1 6 6" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <div>Waiting for build...</div>
+    </div>
+    <script src="/.well-known/_zx/devscript.js"></script>
+</body>
+
+</html>

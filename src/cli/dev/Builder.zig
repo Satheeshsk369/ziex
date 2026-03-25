@@ -14,6 +14,7 @@
 //!   errors           — structured diagnostics, emitted when the error block ends
 //!   resolved         — previous build had errors, current succeeded
 const std = @import("std");
+const builtin = @import("builtin");
 const log = std.log.scoped(.builder);
 const RESTART_COOLDOWN_NS = std.time.ns_per_ms * 10;
 
@@ -55,6 +56,7 @@ pub const Event = union(enum) {
 
 pub const BuildState = struct {
     allocator: std.mem.Allocator,
+    os_tag: std.Target.Os.Tag,
     binary_path: ?[]const u8,
     last_binary_mtime: i128,
     last_restart_time_ns: i128,
@@ -75,6 +77,7 @@ pub const BuildState = struct {
     ) BuildState {
         return .{
             .allocator = allocator,
+            .os_tag = builtin.os.tag,
             .binary_path = binary_path,
             .last_binary_mtime = initial_mtime,
             .last_restart_time_ns = 0,
@@ -116,7 +119,7 @@ pub const BuildState = struct {
         }
 
         // zig build-exe/lib/obj: next compilation cycle starting
-        if (isBuildCommand(line)) {
+        if (isBuildCommandForOs(self.os_tag, line)) {
             if (self.skip_next_build_cmd) {
                 self.skip_next_build_cmd = false;
                 return null;
@@ -292,10 +295,47 @@ pub fn formatDiagnostics(allocator: std.mem.Allocator, diagnostics: []const Diag
 
 // Helpers
 fn isBuildCommand(line: []const u8) bool {
-    if (std.mem.indexOf(u8, line, "zig build-exe") != null) return true;
-    if (std.mem.indexOf(u8, line, "zig build-lib") != null) return true;
-    if (std.mem.indexOf(u8, line, "zig build-obj") != null) return true;
-    return false;
+    return isBuildCommandForOs(builtin.os.tag, line);
+}
+
+fn isBuildCommandForOs(os_tag: std.Target.Os.Tag, line: []const u8) bool {
+    const trimmed = std.mem.trim(u8, line, " \t");
+    if (trimmed.len == 0) return false;
+
+    const exe, const rest = nextCommandToken(trimmed) orelse return false;
+    const subcommand, _ = nextCommandToken(rest) orelse return false;
+
+    const exe_name = switch (os_tag) {
+        .windows => commandBasenameWindows(exe),
+        else => std.fs.path.basename(exe),
+    };
+    const expected_exe_name = switch (os_tag) {
+        .windows => "zig.exe",
+        else => "zig",
+    };
+    if (!std.mem.eql(u8, exe_name, expected_exe_name)) return false;
+
+    return std.mem.eql(u8, subcommand, "build-exe") or
+        std.mem.eql(u8, subcommand, "build-lib") or
+        std.mem.eql(u8, subcommand, "build-obj");
+}
+
+fn nextCommandToken(input: []const u8) ?struct { []const u8, []const u8 } {
+    const trimmed = std.mem.trimLeft(u8, input, " \t");
+    if (trimmed.len == 0) return null;
+
+    if (trimmed[0] == '"') {
+        const end = std.mem.indexOfScalarPos(u8, trimmed, 1, '"') orelse return null;
+        return .{ trimmed[1..end], trimmed[end + 1 ..] };
+    }
+
+    const end = std.mem.indexOfAny(u8, trimmed, " \t") orelse trimmed.len;
+    return .{ trimmed[0..end], trimmed[end..] };
+}
+
+fn commandBasenameWindows(path: []const u8) []const u8 {
+    const idx = std.mem.lastIndexOfAny(u8, path, "/\\") orelse return path;
+    return path[idx + 1 ..];
 }
 
 fn freeDiagnostics(allocator: std.mem.Allocator, diagnostics: *std.ArrayList(Diagnostic)) void {
@@ -408,6 +448,7 @@ fn parseDurationMs(text: []const u8) ?u64 {
 // Test fixtures
 const err_sample = @embedFile("ErrorOutput.txt");
 const sample = @embedFile("Output.txt");
+const sample_win = @embedFile("Output_Win.txt");
 const sampel_err_start_then_fix = @embedFile("ErrorThenFix.txt");
 
 /// Feed a multi-line string through processLine, collecting events.
@@ -432,6 +473,41 @@ test "parseDiagnostic - errors" {
     try std.testing.expectEqual(@as(u32, 12), diag.col);
     try std.testing.expectEqual(DiagKind.@"error", diag.kind);
     try std.testing.expectEqualStrings("expected ',' after field", diag.message);
+}
+
+test "isBuildCommand handles windows zig path and rejects other tools" {
+    try std.testing.expect(isBuildCommandForOs(.windows, "\"C:\\\\Users\\\\nurulhudaapon\\\\zig.exe\" build-exe -ODebug"));
+    try std.testing.expect(isBuildCommandForOs(.macos, "/Users/nurulhudaapon/.asdf/installs/zig/0.15.2/zig build-lib -ODebug"));
+    try std.testing.expect(!isBuildCommandForOs(.windows, "\".\\\\.zig-cache\\\\o\\\\5384a3c8b1037b5c28da89d504e40f08\\\\zx.exe\" transpile \"C:\\\\Users\\\\nurulhudaapon\\\\Projects\\\\ziex\\\\bench\\\\ziex\\\\app\""));
+    try std.testing.expect(!isBuildCommandForOs(.windows, "install -C \".zig-cache\\\\o\\\\bba952c8582f0151b715d5b91817bb9c\\\\zx_bench_client.exe\""));
+}
+
+test "nextCommandToken handles quoted and unquoted tokens" {
+    const first1, const rest1 = nextCommandToken("\"C:\\\\Program Files\\\\Zig\\\\zig.exe\" build-exe -ODebug").?;
+    try std.testing.expectEqualStrings("C:\\\\Program Files\\\\Zig\\\\zig.exe", first1);
+    try std.testing.expectEqualStrings(" build-exe -ODebug", rest1);
+
+    const first2, const rest2 = nextCommandToken("zig build-lib -ODebug").?;
+    try std.testing.expectEqualStrings("zig", first2);
+    try std.testing.expectEqualStrings(" build-lib -ODebug", rest2);
+
+    try std.testing.expect(nextCommandToken("   ") == null);
+}
+
+test "isBuildCommand rejects malformed or incomplete commands" {
+    try std.testing.expect(!isBuildCommandForOs(.windows, "\"C:\\\\Users\\\\nurulhudaapon\\\\zig.exe\""));
+    try std.testing.expect(!isBuildCommandForOs(.windows, "\"C:\\\\Users\\\\nurulhudaapon\\\\zig.exe\" version"));
+    try std.testing.expect(!isBuildCommandForOs(.macos, "/Users/nurulhudaapon/.asdf/installs/zig/0.15.2/zig build"));
+    try std.testing.expect(!isBuildCommandForOs(.linux, "build-exe -ODebug"));
+}
+
+test "parseDurationMs handles common units" {
+    try std.testing.expectEqual(@as(?u64, 23), parseDurationMs("23ms"));
+    try std.testing.expectEqual(@as(?u64, 1500), parseDurationMs("1.5s"));
+    try std.testing.expectEqual(@as(?u64, 0), parseDurationMs("999us"));
+    try std.testing.expectEqual(@as(?u64, 120000), parseDurationMs("2m"));
+    try std.testing.expectEqual(@as(?u64, null), parseDurationMs("cached"));
+    try std.testing.expectEqual(@as(?u64, null), parseDurationMs("ms"));
 }
 
 test "error build cycle emits errors" {
@@ -650,10 +726,11 @@ test "full lifecycle: initial error build, fix, then error again" {
     }
 }
 
-test "no false change_detected from error command path" {
+test "windows watch output detects build start and restart" {
     const allocator = std.testing.allocator;
 
-    var state = BuildState.init(allocator, "nonexistent", 0);
+    var state = BuildState.init(allocator, null, 0);
+    state.os_tag = .windows;
     state.first_build_done = true;
     defer state.deinit();
 
@@ -668,17 +745,20 @@ test "no false change_detected from error command path" {
         events.deinit(allocator);
     }
 
-    try feedLines(&state, err_sample, &events);
+    try feedLines(&state, sample_win, &events);
 
-    // Count change_detected events — should be exactly 1
-    var change_count: usize = 0;
+    var change_detected_count: usize = 0;
+    var found_restart = false;
     for (events.items) |e| {
         switch (e) {
-            .change_detected => change_count += 1,
+            .change_detected => change_detected_count += 1,
+            .should_restart => found_restart = true,
             else => {},
         }
     }
-    try std.testing.expectEqual(@as(usize, 1), change_count);
+
+    try std.testing.expect(change_detected_count >= 1);
+    try std.testing.expect(found_restart);
 }
 
 // Standalone main for manual testing
