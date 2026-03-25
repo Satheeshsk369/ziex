@@ -28,8 +28,6 @@ pub const WebkitAlignContent = union(enum) {
     end,
     flex_start,
     flex_end,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitAlignContent { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitAlignContent, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -57,8 +55,6 @@ pub const WebkitAlignItems = union(enum) {
     self_end,
     flex_start,
     flex_end,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitAlignItems { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitAlignItems, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -87,8 +83,6 @@ pub const WebkitAlignSelf = union(enum) {
     first,
     last,
     baseline,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitAlignSelf { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitAlignSelf, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -120,8 +114,6 @@ pub const WebkitAnimation = union(enum) {
     running,
     paused,
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitAnimation { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitAnimation, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -135,8 +127,6 @@ pub const WebkitAnimationDelay = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitAnimationDelay { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitAnimationDelay, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -154,8 +144,6 @@ pub const WebkitAnimationDirection = union(enum) {
     reverse,
     alternate,
     alternate_reverse,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitAnimationDirection { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitAnimationDirection, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -169,8 +157,6 @@ pub const WebkitAnimationDuration = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitAnimationDuration { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitAnimationDuration, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -187,8 +173,6 @@ pub const WebkitAnimationFillMode = union(enum) {
     forwards,
     backwards,
     both,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitAnimationFillMode { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitAnimationFillMode, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -203,8 +187,6 @@ pub const WebkitAnimationIterationCount = union(enum) {
     revert_layer,
     unset,
     infinite,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitAnimationIterationCount { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitAnimationIterationCount, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -218,8 +200,6 @@ pub const WebkitAnimationName = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitAnimationName { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitAnimationName, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -235,8 +215,6 @@ pub const WebkitAnimationPlayState = union(enum) {
     unset,
     running,
     paused,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitAnimationPlayState { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitAnimationPlayState, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -257,8 +235,6 @@ pub const WebkitAnimationTimingFunction = union(enum) {
     ease_in_out,
     step_start,
     step_end,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitAnimationTimingFunction { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitAnimationTimingFunction, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -286,8 +262,6 @@ pub const WebkitAppearance = union(enum) {
     button,
     textfield,
     menulist_button,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitAppearance { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitAppearance, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -303,8 +277,6 @@ pub const WebkitBackfaceVisibility = union(enum) {
     unset,
     visible,
     hidden,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitBackfaceVisibility { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitBackfaceVisibility, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -321,8 +293,6 @@ pub const WebkitBackgroundClip = union(enum) {
     content_box,
     padding_box,
     border_box,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitBackgroundClip { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitBackgroundClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -339,8 +309,6 @@ pub const WebkitBackgroundOrigin = union(enum) {
     content_box,
     padding_box,
     border_box,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitBackgroundOrigin { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitBackgroundOrigin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -359,12 +327,10 @@ pub const WebkitBackgroundSize = union(enum) {
     contain,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) WebkitBackgroundSize { return .{ .px_ = v }; }
     pub fn em(v: f32) WebkitBackgroundSize { return .{ .em_ = v }; }
     pub fn rem(v: f32) WebkitBackgroundSize { return .{ .rem_ = v }; }
     pub fn percent(v: f32) WebkitBackgroundSize { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) WebkitBackgroundSize { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitBackgroundSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -380,12 +346,10 @@ pub const WebkitBorderBottomLeftRadius = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) WebkitBorderBottomLeftRadius { return .{ .px_ = v }; }
     pub fn em(v: f32) WebkitBorderBottomLeftRadius { return .{ .em_ = v }; }
     pub fn rem(v: f32) WebkitBorderBottomLeftRadius { return .{ .rem_ = v }; }
     pub fn percent(v: f32) WebkitBorderBottomLeftRadius { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) WebkitBorderBottomLeftRadius { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitBorderBottomLeftRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -401,12 +365,10 @@ pub const WebkitBorderBottomRightRadius = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) WebkitBorderBottomRightRadius { return .{ .px_ = v }; }
     pub fn em(v: f32) WebkitBorderBottomRightRadius { return .{ .em_ = v }; }
     pub fn rem(v: f32) WebkitBorderBottomRightRadius { return .{ .rem_ = v }; }
     pub fn percent(v: f32) WebkitBorderBottomRightRadius { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) WebkitBorderBottomRightRadius { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitBorderBottomRightRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -422,12 +384,10 @@ pub const WebkitBorderRadius = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) WebkitBorderRadius { return .{ .px_ = v }; }
     pub fn em(v: f32) WebkitBorderRadius { return .{ .em_ = v }; }
     pub fn rem(v: f32) WebkitBorderRadius { return .{ .rem_ = v }; }
     pub fn percent(v: f32) WebkitBorderRadius { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) WebkitBorderRadius { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitBorderRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -443,12 +403,10 @@ pub const WebkitBorderTopLeftRadius = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) WebkitBorderTopLeftRadius { return .{ .px_ = v }; }
     pub fn em(v: f32) WebkitBorderTopLeftRadius { return .{ .em_ = v }; }
     pub fn rem(v: f32) WebkitBorderTopLeftRadius { return .{ .rem_ = v }; }
     pub fn percent(v: f32) WebkitBorderTopLeftRadius { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) WebkitBorderTopLeftRadius { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitBorderTopLeftRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -464,12 +422,10 @@ pub const WebkitBorderTopRightRadius = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) WebkitBorderTopRightRadius { return .{ .px_ = v }; }
     pub fn em(v: f32) WebkitBorderTopRightRadius { return .{ .em_ = v }; }
     pub fn rem(v: f32) WebkitBorderTopRightRadius { return .{ .rem_ = v }; }
     pub fn percent(v: f32) WebkitBorderTopRightRadius { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) WebkitBorderTopRightRadius { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitBorderTopRightRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -483,8 +439,6 @@ pub const WebkitBoxAlign = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitBoxAlign { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitBoxAlign, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -498,8 +452,6 @@ pub const WebkitBoxFlex = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitBoxFlex { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitBoxFlex, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -513,8 +465,6 @@ pub const WebkitBoxOrdinalGroup = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitBoxOrdinalGroup { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitBoxOrdinalGroup, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -528,8 +478,6 @@ pub const WebkitBoxOrient = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitBoxOrient { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitBoxOrient, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -543,8 +491,6 @@ pub const WebkitBoxPack = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitBoxPack { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitBoxPack, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -560,13 +506,11 @@ pub const WebkitBoxShadow = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn px(v: f32) WebkitBoxShadow { return .{ .px_ = v }; }
     pub fn em(v: f32) WebkitBoxShadow { return .{ .em_ = v }; }
     pub fn rem(v: f32) WebkitBoxShadow { return .{ .rem_ = v }; }
     pub fn hex(v: u32) WebkitBoxShadow { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) WebkitBoxShadow { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) WebkitBoxShadow { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitBoxShadow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -582,8 +526,6 @@ pub const WebkitBoxSizing = union(enum) {
     unset,
     content_box,
     border_box,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitBoxSizing { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitBoxSizing, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -597,8 +539,6 @@ pub const WebkitFilter = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitFilter { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitFilter, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -612,8 +552,6 @@ pub const WebkitFlex = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitFlex { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitFlex, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -628,8 +566,6 @@ pub const WebkitFlexBasis = union(enum) {
     revert_layer,
     unset,
     content,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitFlexBasis { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitFlexBasis, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -647,8 +583,6 @@ pub const WebkitFlexDirection = union(enum) {
     row_reverse,
     column,
     column_reverse,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitFlexDirection { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitFlexDirection, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -662,8 +596,6 @@ pub const WebkitFlexFlow = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitFlexFlow { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitFlexFlow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -677,8 +609,6 @@ pub const WebkitFlexGrow = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitFlexGrow { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitFlexGrow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -692,8 +622,6 @@ pub const WebkitFlexShrink = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitFlexShrink { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitFlexShrink, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -710,8 +638,6 @@ pub const WebkitFlexWrap = union(enum) {
     nowrap,
     wrap,
     wrap_reverse,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitFlexWrap { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitFlexWrap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -739,8 +665,6 @@ pub const WebkitJustifyContent = union(enum) {
     flex_end,
     left,
     right,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitJustifyContent { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitJustifyContent, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -754,8 +678,6 @@ pub const WebkitLineClamp = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitLineClamp { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitLineClamp, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -813,12 +735,10 @@ pub const WebkitMask = union(enum) {
     match_source,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) WebkitMask { return .{ .px_ = v }; }
     pub fn em(v: f32) WebkitMask { return .{ .em_ = v }; }
     pub fn rem(v: f32) WebkitMask { return .{ .rem_ = v }; }
     pub fn percent(v: f32) WebkitMask { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) WebkitMask { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitMask, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -832,8 +752,6 @@ pub const WebkitMaskBoxImage = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitMaskBoxImage { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitMaskBoxImage, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -848,11 +766,9 @@ pub const WebkitMaskBoxImageOutset = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) WebkitMaskBoxImageOutset { return .{ .px_ = v }; }
     pub fn em(v: f32) WebkitMaskBoxImageOutset { return .{ .em_ = v }; }
     pub fn rem(v: f32) WebkitMaskBoxImageOutset { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) WebkitMaskBoxImageOutset { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitMaskBoxImageOutset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -870,8 +786,6 @@ pub const WebkitMaskBoxImageRepeat = union(enum) {
     repeat,
     round,
     space,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitMaskBoxImageRepeat { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitMaskBoxImageRepeat, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -887,9 +801,7 @@ pub const WebkitMaskBoxImageSlice = union(enum) {
     unset,
     fill,
     percent_: f32,
-    raw_: []const u8,
     pub fn percent(v: f32) WebkitMaskBoxImageSlice { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) WebkitMaskBoxImageSlice { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitMaskBoxImageSlice, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -903,8 +815,6 @@ pub const WebkitMaskBoxImageSource = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitMaskBoxImageSource { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitMaskBoxImageSource, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -921,12 +831,10 @@ pub const WebkitMaskBoxImageWidth = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) WebkitMaskBoxImageWidth { return .{ .px_ = v }; }
     pub fn em(v: f32) WebkitMaskBoxImageWidth { return .{ .em_ = v }; }
     pub fn rem(v: f32) WebkitMaskBoxImageWidth { return .{ .rem_ = v }; }
     pub fn percent(v: f32) WebkitMaskBoxImageWidth { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) WebkitMaskBoxImageWidth { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitMaskBoxImageWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -947,8 +855,6 @@ pub const WebkitMaskClip = union(enum) {
     stroke_box,
     view_box,
     no_clip,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitMaskClip { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitMaskClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -966,8 +872,6 @@ pub const WebkitMaskComposite = union(enum) {
     subtract,
     intersect,
     exclude,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitMaskComposite { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitMaskComposite, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -981,8 +885,6 @@ pub const WebkitMaskImage = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitMaskImage { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitMaskImage, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -1002,8 +904,6 @@ pub const WebkitMaskOrigin = union(enum) {
     fill_box,
     stroke_box,
     view_box,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitMaskOrigin { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitMaskOrigin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -1034,12 +934,10 @@ pub const WebkitMaskPosition = union(enum) {
     end,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) WebkitMaskPosition { return .{ .px_ = v }; }
     pub fn em(v: f32) WebkitMaskPosition { return .{ .em_ = v }; }
     pub fn rem(v: f32) WebkitMaskPosition { return .{ .rem_ = v }; }
     pub fn percent(v: f32) WebkitMaskPosition { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) WebkitMaskPosition { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitMaskPosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -1061,8 +959,6 @@ pub const WebkitMaskRepeat = union(enum) {
     space,
     round,
     no_repeat,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitMaskRepeat { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitMaskRepeat, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -1081,12 +977,10 @@ pub const WebkitMaskSize = union(enum) {
     contain,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) WebkitMaskSize { return .{ .px_ = v }; }
     pub fn em(v: f32) WebkitMaskSize { return .{ .em_ = v }; }
     pub fn rem(v: f32) WebkitMaskSize { return .{ .rem_ = v }; }
     pub fn percent(v: f32) WebkitMaskSize { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) WebkitMaskSize { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitMaskSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -1100,8 +994,6 @@ pub const WebkitOrder = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitOrder { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitOrder, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -1116,11 +1008,9 @@ pub const WebkitPerspective = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) WebkitPerspective { return .{ .px_ = v }; }
     pub fn em(v: f32) WebkitPerspective { return .{ .em_ = v }; }
     pub fn rem(v: f32) WebkitPerspective { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) WebkitPerspective { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitPerspective, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -1151,12 +1041,10 @@ pub const WebkitPerspectiveOrigin = union(enum) {
     end,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) WebkitPerspectiveOrigin { return .{ .px_ = v }; }
     pub fn em(v: f32) WebkitPerspectiveOrigin { return .{ .em_ = v }; }
     pub fn rem(v: f32) WebkitPerspectiveOrigin { return .{ .rem_ = v }; }
     pub fn percent(v: f32) WebkitPerspectiveOrigin { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) WebkitPerspectiveOrigin { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitPerspectiveOrigin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -1363,10 +1251,8 @@ pub const WebkitTextFillColor = union(enum) {
     WindowFrame,
     WindowText,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) WebkitTextFillColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) WebkitTextFillColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) WebkitTextFillColor { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitTextFillColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -1382,9 +1268,7 @@ pub const WebkitTextSizeAdjust = union(enum) {
     unset,
     auto,
     percent_: f32,
-    raw_: []const u8,
     pub fn percent(v: f32) WebkitTextSizeAdjust { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) WebkitTextSizeAdjust { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitTextSizeAdjust, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -1596,13 +1480,11 @@ pub const WebkitTextStroke = union(enum) {
     WindowText,
     px_: f32, em_: f32, rem_: f32,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn px(v: f32) WebkitTextStroke { return .{ .px_ = v }; }
     pub fn em(v: f32) WebkitTextStroke { return .{ .em_ = v }; }
     pub fn rem(v: f32) WebkitTextStroke { return .{ .rem_ = v }; }
     pub fn hex(v: u32) WebkitTextStroke { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) WebkitTextStroke { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) WebkitTextStroke { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitTextStroke, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -1809,10 +1691,8 @@ pub const WebkitTextStrokeColor = union(enum) {
     WindowFrame,
     WindowText,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) WebkitTextStrokeColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) WebkitTextStrokeColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) WebkitTextStrokeColor { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitTextStrokeColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -1831,11 +1711,9 @@ pub const WebkitTextStrokeWidth = union(enum) {
     medium,
     thick,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) WebkitTextStrokeWidth { return .{ .px_ = v }; }
     pub fn em(v: f32) WebkitTextStrokeWidth { return .{ .em_ = v }; }
     pub fn rem(v: f32) WebkitTextStrokeWidth { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) WebkitTextStrokeWidth { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitTextStrokeWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -1849,8 +1727,6 @@ pub const WebkitTransform = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitTransform { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitTransform, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -1871,12 +1747,10 @@ pub const WebkitTransformOrigin = union(enum) {
     bottom,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) WebkitTransformOrigin { return .{ .px_ = v }; }
     pub fn em(v: f32) WebkitTransformOrigin { return .{ .em_ = v }; }
     pub fn rem(v: f32) WebkitTransformOrigin { return .{ .rem_ = v }; }
     pub fn percent(v: f32) WebkitTransformOrigin { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) WebkitTransformOrigin { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitTransformOrigin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -1892,8 +1766,6 @@ pub const WebkitTransformStyle = union(enum) {
     unset,
     flat,
     preserve_3d,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitTransformStyle { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitTransformStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -1917,8 +1789,6 @@ pub const WebkitTransition = union(enum) {
     step_end,
     normal,
     allow_discrete,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitTransition { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitTransition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -1932,8 +1802,6 @@ pub const WebkitTransitionDelay = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitTransitionDelay { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitTransitionDelay, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -1947,8 +1815,6 @@ pub const WebkitTransitionDuration = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitTransitionDuration { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitTransitionDuration, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -1963,8 +1829,6 @@ pub const WebkitTransitionProperty = union(enum) {
     revert_layer,
     unset,
     all,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitTransitionProperty { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitTransitionProperty, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -1985,8 +1849,6 @@ pub const WebkitTransitionTimingFunction = union(enum) {
     ease_in_out,
     step_start,
     step_end,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitTransitionTimingFunction { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitTransitionTimingFunction, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2004,8 +1866,6 @@ pub const WebkitUserSelect = union(enum) {
     text,
     contain,
     all,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WebkitUserSelect { return .{ .raw_ = r }; }
 
     pub fn format(self: WebkitUserSelect, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2214,10 +2074,8 @@ pub const AccentColor = union(enum) {
     WindowFrame,
     WindowText,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) AccentColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) AccentColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) AccentColor { return .{ .raw_ = r }; }
 
     pub fn format(self: AccentColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2247,8 +2105,6 @@ pub const AlignContent = union(enum) {
     end,
     flex_start,
     flex_end,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) AlignContent { return .{ .raw_ = r }; }
 
     pub fn format(self: AlignContent, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2278,8 +2134,6 @@ pub const AlignItems = union(enum) {
     flex_end,
     ///     /// The new anchor-center value makes this case extremely simple: if the positioned box has a default anchor box, then it is centered (insofar as possible) over the default anchor box in the relevant axis. Additionally:
     anchor_center,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) AlignItems { return .{ .raw_ = r }; }
 
     pub fn format(self: AlignItems, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2313,8 +2167,6 @@ pub const AlignSelf = union(enum) {
     baseline,
     ///     /// The new anchor-center value makes this case extremely simple: if the positioned box has a default anchor box, then it is centered (insofar as possible) over the default anchor box in the relevant axis. Additionally:
     anchor_center,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) AlignSelf { return .{ .raw_ = r }; }
 
     pub fn format(self: AlignSelf, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2338,8 +2190,6 @@ pub const AlignmentBaseline = union(enum) {
     mathematical,
     hanging,
     text_top,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) AlignmentBaseline { return .{ .raw_ = r }; }
 
     pub fn format(self: AlignmentBaseline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2355,8 +2205,6 @@ pub const All = union(enum) {
     unset,
     ///     /// The revert-rule CSS-wide keyword rolls back the cascade similar to revert and revert-layer, except it works by style rule rather than cascade origin or cascade layer.
     revert_rule,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) All { return .{ .raw_ = r }; }
 
     pub fn format(self: All, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2370,8 +2218,6 @@ pub const AnchorName = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) AnchorName { return .{ .raw_ = r }; }
 
     pub fn format(self: AnchorName, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2387,8 +2233,6 @@ pub const AnchorScope = union(enum) {
     unset,
     ///     /// Specifies that all anchor names defined by this element or its descendants—​whose scope is not already limited by a descendant using anchor-scope—​to be in scope only for this element’s descendants; and limits descendants to only match anchor names to anchor elements within this subtree. This value only affects anchor names in the same tree scope, as if it were a strictly matched tree-scoped name. (That is, anchor-scope: all acts identically to anchor-scope: --foo, --bar, ..., listing all relevant anchor names.)
     all,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) AnchorScope { return .{ .raw_ = r }; }
 
     pub fn format(self: AnchorScope, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2420,8 +2264,6 @@ pub const Animation = union(enum) {
     running,
     paused,
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Animation { return .{ .raw_ = r }; }
 
     pub fn format(self: Animation, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2438,8 +2280,6 @@ pub const AnimationComposition = union(enum) {
     replace,
     add,
     accumulate,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) AnimationComposition { return .{ .raw_ = r }; }
 
     pub fn format(self: AnimationComposition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2453,8 +2293,6 @@ pub const AnimationDelay = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) AnimationDelay { return .{ .raw_ = r }; }
 
     pub fn format(self: AnimationDelay, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2476,8 +2314,6 @@ pub const AnimationDirection = union(enum) {
     alternate,
     ///     /// The animation cycle iterations that are odd counts are played in the reverse direction, and the animation cycle iterations that are even counts are played in a normal direction.
     alternate_reverse,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) AnimationDirection { return .{ .raw_ = r }; }
 
     pub fn format(self: AnimationDirection, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2493,8 +2329,6 @@ pub const AnimationDuration = union(enum) {
     unset,
     ///     /// For time-driven animations, equivalent to 0s. For scroll-driven animations, equivalent to the duration necessary to fill the timeline in consideration of animation-range, animation-delay, and animation-iteration-count. See Scroll-driven Animations § 4.1 Finite Timeline Calculations.
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) AnimationDuration { return .{ .raw_ = r }; }
 
     pub fn format(self: AnimationDuration, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2514,8 +2348,6 @@ pub const AnimationFillMode = union(enum) {
     backwards,
     ///     /// The effects of both forwards and backwards fill apply.
     both,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) AnimationFillMode { return .{ .raw_ = r }; }
 
     pub fn format(self: AnimationFillMode, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2531,8 +2363,6 @@ pub const AnimationIterationCount = union(enum) {
     unset,
     ///     /// The animation will repeat forever.
     infinite,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) AnimationIterationCount { return .{ .raw_ = r }; }
 
     pub fn format(self: AnimationIterationCount, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2546,8 +2376,6 @@ pub const AnimationName = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) AnimationName { return .{ .raw_ = r }; }
 
     pub fn format(self: AnimationName, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2565,8 +2393,6 @@ pub const AnimationPlayState = union(enum) {
     running,
     ///     /// While this property is set to paused, the animation is paused. The animation continues to apply to the element with the progress it had made before being paused. When unpaused (set back to running), it restarts from where it left off, as if the "clock" that controls the animation had stopped and started again. If the property is set to paused during the delay phase of the animation, the delay clock is also paused and resumes as soon as animation-play-state is set back to running.
     paused,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) AnimationPlayState { return .{ .raw_ = r }; }
 
     pub fn format(self: AnimationPlayState, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2580,8 +2406,6 @@ pub const AnimationRange = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) AnimationRange { return .{ .raw_ = r }; }
 
     pub fn format(self: AnimationRange, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2599,12 +2423,10 @@ pub const AnimationRangeCenter = union(enum) {
     normal,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) AnimationRangeCenter { return .{ .px_ = v }; }
     pub fn em(v: f32) AnimationRangeCenter { return .{ .em_ = v }; }
     pub fn rem(v: f32) AnimationRangeCenter { return .{ .rem_ = v }; }
     pub fn percent(v: f32) AnimationRangeCenter { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) AnimationRangeCenter { return .{ .raw_ = r }; }
 
     pub fn format(self: AnimationRangeCenter, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2622,12 +2444,10 @@ pub const AnimationRangeEnd = union(enum) {
     normal,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) AnimationRangeEnd { return .{ .px_ = v }; }
     pub fn em(v: f32) AnimationRangeEnd { return .{ .em_ = v }; }
     pub fn rem(v: f32) AnimationRangeEnd { return .{ .rem_ = v }; }
     pub fn percent(v: f32) AnimationRangeEnd { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) AnimationRangeEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: AnimationRangeEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2645,12 +2465,10 @@ pub const AnimationRangeStart = union(enum) {
     normal,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) AnimationRangeStart { return .{ .px_ = v }; }
     pub fn em(v: f32) AnimationRangeStart { return .{ .em_ = v }; }
     pub fn rem(v: f32) AnimationRangeStart { return .{ .rem_ = v }; }
     pub fn percent(v: f32) AnimationRangeStart { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) AnimationRangeStart { return .{ .raw_ = r }; }
 
     pub fn format(self: AnimationRangeStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2665,8 +2483,6 @@ pub const AnimationTimeline = union(enum) {
     revert_layer,
     unset,
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) AnimationTimeline { return .{ .raw_ = r }; }
 
     pub fn format(self: AnimationTimeline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2687,8 +2503,6 @@ pub const AnimationTimingFunction = union(enum) {
     ease_in_out,
     step_start,
     step_end,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) AnimationTimingFunction { return .{ .raw_ = r }; }
 
     pub fn format(self: AnimationTimingFunction, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2702,8 +2516,6 @@ pub const AnimationTrigger = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) AnimationTrigger { return .{ .raw_ = r }; }
 
     pub fn format(self: AnimationTrigger, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2734,8 +2546,6 @@ pub const Appearance = union(enum) {
     button,
     textfield,
     menulist_button,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Appearance { return .{ .raw_ = r }; }
 
     pub fn format(self: Appearance, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2751,8 +2561,6 @@ pub const AspectRatio = union(enum) {
     unset,
     ///     /// Replaced elements with a natural aspect ratio use that aspect ratio; otherwise the box has no preferred aspect ratio. Size calculations involving the aspect ratio work with the content box dimensions always.
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) AspectRatio { return .{ .raw_ = r }; }
 
     pub fn format(self: AspectRatio, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2766,8 +2574,6 @@ pub const BackdropFilter = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BackdropFilter { return .{ .raw_ = r }; }
 
     pub fn format(self: BackdropFilter, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2783,8 +2589,6 @@ pub const BackfaceVisibility = union(enum) {
     unset,
     visible,
     hidden,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BackfaceVisibility { return .{ .raw_ = r }; }
 
     pub fn format(self: BackfaceVisibility, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2835,14 +2639,12 @@ pub const Background = union(enum) {
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn px(v: f32) Background { return .{ .px_ = v }; }
     pub fn em(v: f32) Background { return .{ .em_ = v }; }
     pub fn rem(v: f32) Background { return .{ .rem_ = v }; }
     pub fn percent(v: f32) Background { return .{ .percent_ = v }; }
     pub fn hex(v: u32) Background { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) Background { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) Background { return .{ .raw_ = r }; }
 
     pub fn format(self: Background, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2862,8 +2664,6 @@ pub const BackgroundAttachment = union(enum) {
     fixed,
     ///     /// The background is fixed with regard to the box’s contents: if the box has a scrolling mechanism, the background scrolls with the box’s contents, and the background painting area and background positioning area are relative to the scrollable overflow area of the box rather than to the border framing them. Because the scrollable overflow area does not include the border area, for scroll containers the border-box value of background-clip may be treated the same as padding-box.
     local,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BackgroundAttachment { return .{ .raw_ = r }; }
 
     pub fn format(self: BackgroundAttachment, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2877,8 +2677,6 @@ pub const BackgroundBlendMode = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BackgroundBlendMode { return .{ .raw_ = r }; }
 
     pub fn format(self: BackgroundBlendMode, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2900,8 +2698,6 @@ pub const BackgroundClip = union(enum) {
     border_box,
     border_area,
     text,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BackgroundClip { return .{ .raw_ = r }; }
 
     pub fn format(self: BackgroundClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3108,10 +2904,8 @@ pub const BackgroundColor = union(enum) {
     WindowFrame,
     WindowText,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) BackgroundColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) BackgroundColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) BackgroundColor { return .{ .raw_ = r }; }
 
     pub fn format(self: BackgroundColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3125,8 +2919,6 @@ pub const BackgroundImage = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BackgroundImage { return .{ .raw_ = r }; }
 
     pub fn format(self: BackgroundImage, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3146,8 +2938,6 @@ pub const BackgroundOrigin = union(enum) {
     padding_box,
     ///     /// The position is relative to the border box.
     border_box,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BackgroundOrigin { return .{ .raw_ = r }; }
 
     pub fn format(self: BackgroundOrigin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3183,12 +2973,10 @@ pub const BackgroundPosition = union(enum) {
     end,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BackgroundPosition { return .{ .px_ = v }; }
     pub fn em(v: f32) BackgroundPosition { return .{ .em_ = v }; }
     pub fn rem(v: f32) BackgroundPosition { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BackgroundPosition { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BackgroundPosition { return .{ .raw_ = r }; }
 
     pub fn format(self: BackgroundPosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3207,12 +2995,10 @@ pub const BackgroundPositionBlock = union(enum) {
     end,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BackgroundPositionBlock { return .{ .px_ = v }; }
     pub fn em(v: f32) BackgroundPositionBlock { return .{ .em_ = v }; }
     pub fn rem(v: f32) BackgroundPositionBlock { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BackgroundPositionBlock { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BackgroundPositionBlock { return .{ .raw_ = r }; }
 
     pub fn format(self: BackgroundPositionBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3231,12 +3017,10 @@ pub const BackgroundPositionInline = union(enum) {
     end,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BackgroundPositionInline { return .{ .px_ = v }; }
     pub fn em(v: f32) BackgroundPositionInline { return .{ .em_ = v }; }
     pub fn rem(v: f32) BackgroundPositionInline { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BackgroundPositionInline { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BackgroundPositionInline { return .{ .raw_ = r }; }
 
     pub fn format(self: BackgroundPositionInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3257,12 +3041,10 @@ pub const BackgroundPositionX = union(enum) {
     x_end,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BackgroundPositionX { return .{ .px_ = v }; }
     pub fn em(v: f32) BackgroundPositionX { return .{ .em_ = v }; }
     pub fn rem(v: f32) BackgroundPositionX { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BackgroundPositionX { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BackgroundPositionX { return .{ .raw_ = r }; }
 
     pub fn format(self: BackgroundPositionX, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3283,12 +3065,10 @@ pub const BackgroundPositionY = union(enum) {
     y_end,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BackgroundPositionY { return .{ .px_ = v }; }
     pub fn em(v: f32) BackgroundPositionY { return .{ .em_ = v }; }
     pub fn rem(v: f32) BackgroundPositionY { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BackgroundPositionY { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BackgroundPositionY { return .{ .raw_ = r }; }
 
     pub fn format(self: BackgroundPositionY, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3318,8 +3098,6 @@ pub const BackgroundRepeat = union(enum) {
     round,
     ///     /// The image is placed once and not repeated in this direction.
     no_repeat,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BackgroundRepeat { return .{ .raw_ = r }; }
 
     pub fn format(self: BackgroundRepeat, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3341,8 +3119,6 @@ pub const BackgroundRepeatBlock = union(enum) {
     round,
     ///     /// The image is placed once and not repeated in the given direction.
     no_repeat,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BackgroundRepeatBlock { return .{ .raw_ = r }; }
 
     pub fn format(self: BackgroundRepeatBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3364,8 +3140,6 @@ pub const BackgroundRepeatInline = union(enum) {
     round,
     ///     /// The image is placed once and not repeated in the given direction.
     no_repeat,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BackgroundRepeatInline { return .{ .raw_ = r }; }
 
     pub fn format(self: BackgroundRepeatInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3387,8 +3161,6 @@ pub const BackgroundRepeatX = union(enum) {
     round,
     ///     /// The image is placed once and not repeated in the given direction.
     no_repeat,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BackgroundRepeatX { return .{ .raw_ = r }; }
 
     pub fn format(self: BackgroundRepeatX, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3410,8 +3182,6 @@ pub const BackgroundRepeatY = union(enum) {
     round,
     ///     /// The image is placed once and not repeated in the given direction.
     no_repeat,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BackgroundRepeatY { return .{ .raw_ = r }; }
 
     pub fn format(self: BackgroundRepeatY, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3433,12 +3203,10 @@ pub const BackgroundSize = union(enum) {
     contain,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BackgroundSize { return .{ .px_ = v }; }
     pub fn em(v: f32) BackgroundSize { return .{ .em_ = v }; }
     pub fn rem(v: f32) BackgroundSize { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BackgroundSize { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BackgroundSize { return .{ .raw_ = r }; }
 
     pub fn format(self: BackgroundSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3488,12 +3256,10 @@ pub const BackgroundTbd = union(enum) {
     text,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BackgroundTbd { return .{ .px_ = v }; }
     pub fn em(v: f32) BackgroundTbd { return .{ .em_ = v }; }
     pub fn rem(v: f32) BackgroundTbd { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BackgroundTbd { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BackgroundTbd { return .{ .raw_ = r }; }
 
     pub fn format(self: BackgroundTbd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3519,12 +3285,10 @@ pub const BaselineShift = union(enum) {
     bottom,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BaselineShift { return .{ .px_ = v }; }
     pub fn em(v: f32) BaselineShift { return .{ .em_ = v }; }
     pub fn rem(v: f32) BaselineShift { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BaselineShift { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BaselineShift { return .{ .raw_ = r }; }
 
     pub fn format(self: BaselineShift, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3544,8 +3308,6 @@ pub const BaselineSource = union(enum) {
     first,
     ///     /// Specifies last-baseline alignment.
     last,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BaselineSource { return .{ .raw_ = r }; }
 
     pub fn format(self: BaselineSource, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3563,8 +3325,6 @@ pub const BlockEllipsis = union(enum) {
     no_ellipsis,
     ///     /// Render an ellipsis character (U+2026)—​or a more typographically-appropriate equivalent—​as the block overflow ellipsis at the end of the affected line box. UAs should use the conventions of the content language, writing system, and writing mode to determine the most appropriate ellipsis string.
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BlockEllipsis { return .{ .raw_ = r }; }
 
     pub fn format(self: BlockEllipsis, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3578,8 +3338,6 @@ pub const BlockSize = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BlockSize { return .{ .raw_ = r }; }
 
     pub fn format(self: BlockSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3593,8 +3351,6 @@ pub const BlockStep = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BlockStep { return .{ .raw_ = r }; }
 
     pub fn format(self: BlockStep, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3616,8 +3372,6 @@ pub const BlockStepAlign = union(enum) {
     start,
     ///     /// Any extra space resulting from a block-step-size-induced adjustment is inserted on the start side of the box.
     end,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BlockStepAlign { return .{ .raw_ = r }; }
 
     pub fn format(self: BlockStepAlign, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3637,8 +3391,6 @@ pub const BlockStepInsert = union(enum) {
     padding_box,
     ///     /// Any extra space resulting from a block-step-size-induced adjustment is inserted inside the box’s border by increasing the height of the content area.
     content_box,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BlockStepInsert { return .{ .raw_ = r }; }
 
     pub fn format(self: BlockStepInsert, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3655,8 +3407,6 @@ pub const BlockStepRound = union(enum) {
     up,
     down,
     nearest,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BlockStepRound { return .{ .raw_ = r }; }
 
     pub fn format(self: BlockStepRound, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3671,11 +3421,9 @@ pub const BlockStepSize = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BlockStepSize { return .{ .px_ = v }; }
     pub fn em(v: f32) BlockStepSize { return .{ .em_ = v }; }
     pub fn rem(v: f32) BlockStepSize { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) BlockStepSize { return .{ .raw_ = r }; }
 
     pub fn format(self: BlockStepSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3694,8 +3442,6 @@ pub const BookmarkLabel = union(enum) {
     close_quote,
     no_open_quote,
     no_close_quote,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BookmarkLabel { return .{ .raw_ = r }; }
 
     pub fn format(self: BookmarkLabel, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3709,8 +3455,6 @@ pub const BookmarkLevel = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BookmarkLevel { return .{ .raw_ = r }; }
 
     pub fn format(self: BookmarkLevel, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3728,8 +3472,6 @@ pub const BookmarkState = union(enum) {
     open,
     ///     /// Subsequent bookmarks of bookmark-level greater than the given bookmark are not displayed, until reaching another bookmark of the same level or lower.
     closed,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BookmarkState { return .{ .raw_ = r }; }
 
     pub fn format(self: BookmarkState, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3950,13 +3692,11 @@ pub const Border = union(enum) {
     WindowText,
     px_: f32, em_: f32, rem_: f32,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn px(v: f32) Border { return .{ .px_ = v }; }
     pub fn em(v: f32) Border { return .{ .em_ = v }; }
     pub fn rem(v: f32) Border { return .{ .rem_ = v }; }
     pub fn hex(v: u32) Border { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) Border { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) Border { return .{ .raw_ = r }; }
 
     pub fn format(self: Border, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3970,8 +3710,6 @@ pub const BorderBlock = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BorderBlock { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3985,8 +3723,6 @@ pub const BorderBlockClip = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BorderBlockClip { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderBlockClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -4001,10 +3737,8 @@ pub const BorderBlockColor = union(enum) {
     revert_layer,
     unset,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) BorderBlockColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) BorderBlockColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) BorderBlockColor { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderBlockColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -4225,13 +3959,11 @@ pub const BorderBlockEnd = union(enum) {
     WindowText,
     px_: f32, em_: f32, rem_: f32,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn px(v: f32) BorderBlockEnd { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderBlockEnd { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderBlockEnd { return .{ .rem_ = v }; }
     pub fn hex(v: u32) BorderBlockEnd { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) BorderBlockEnd { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) BorderBlockEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderBlockEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -4247,12 +3979,10 @@ pub const BorderBlockEndClip = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderBlockEndClip { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderBlockEndClip { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderBlockEndClip { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BorderBlockEndClip { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BorderBlockEndClip { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderBlockEndClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -4459,10 +4189,8 @@ pub const BorderBlockEndColor = union(enum) {
     WindowFrame,
     WindowText,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) BorderBlockEndColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) BorderBlockEndColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) BorderBlockEndColor { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderBlockEndColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -4478,12 +4206,10 @@ pub const BorderBlockEndRadius = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderBlockEndRadius { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderBlockEndRadius { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderBlockEndRadius { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BorderBlockEndRadius { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BorderBlockEndRadius { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderBlockEndRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -4506,8 +4232,6 @@ pub const BorderBlockEndStyle = union(enum) {
     ridge,
     inset,
     outset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BorderBlockEndStyle { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderBlockEndStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -4526,11 +4250,9 @@ pub const BorderBlockEndWidth = union(enum) {
     medium,
     thick,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderBlockEndWidth { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderBlockEndWidth { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderBlockEndWidth { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) BorderBlockEndWidth { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderBlockEndWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -4751,13 +4473,11 @@ pub const BorderBlockStart = union(enum) {
     WindowText,
     px_: f32, em_: f32, rem_: f32,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn px(v: f32) BorderBlockStart { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderBlockStart { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderBlockStart { return .{ .rem_ = v }; }
     pub fn hex(v: u32) BorderBlockStart { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) BorderBlockStart { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) BorderBlockStart { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderBlockStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -4773,12 +4493,10 @@ pub const BorderBlockStartClip = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderBlockStartClip { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderBlockStartClip { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderBlockStartClip { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BorderBlockStartClip { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BorderBlockStartClip { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderBlockStartClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -4985,10 +4703,8 @@ pub const BorderBlockStartColor = union(enum) {
     WindowFrame,
     WindowText,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) BorderBlockStartColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) BorderBlockStartColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) BorderBlockStartColor { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderBlockStartColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5004,12 +4720,10 @@ pub const BorderBlockStartRadius = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderBlockStartRadius { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderBlockStartRadius { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderBlockStartRadius { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BorderBlockStartRadius { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BorderBlockStartRadius { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderBlockStartRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5032,8 +4746,6 @@ pub const BorderBlockStartStyle = union(enum) {
     ridge,
     inset,
     outset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BorderBlockStartStyle { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderBlockStartStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5052,11 +4764,9 @@ pub const BorderBlockStartWidth = union(enum) {
     medium,
     thick,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderBlockStartWidth { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderBlockStartWidth { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderBlockStartWidth { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) BorderBlockStartWidth { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderBlockStartWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5070,8 +4780,6 @@ pub const BorderBlockStyle = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BorderBlockStyle { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderBlockStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5085,8 +4793,6 @@ pub const BorderBlockWidth = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BorderBlockWidth { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderBlockWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5307,13 +5013,11 @@ pub const BorderBottom = union(enum) {
     WindowText,
     px_: f32, em_: f32, rem_: f32,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn px(v: f32) BorderBottom { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderBottom { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderBottom { return .{ .rem_ = v }; }
     pub fn hex(v: u32) BorderBottom { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) BorderBottom { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) BorderBottom { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderBottom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5329,12 +5033,10 @@ pub const BorderBottomClip = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderBottomClip { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderBottomClip { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderBottomClip { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BorderBottomClip { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BorderBottomClip { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderBottomClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5541,10 +5243,8 @@ pub const BorderBottomColor = union(enum) {
     WindowFrame,
     WindowText,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) BorderBottomColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) BorderBottomColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) BorderBottomColor { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderBottomColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5560,12 +5260,10 @@ pub const BorderBottomLeftRadius = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderBottomLeftRadius { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderBottomLeftRadius { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderBottomLeftRadius { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BorderBottomLeftRadius { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BorderBottomLeftRadius { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderBottomLeftRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5581,12 +5279,10 @@ pub const BorderBottomRadius = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderBottomRadius { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderBottomRadius { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderBottomRadius { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BorderBottomRadius { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BorderBottomRadius { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderBottomRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5602,12 +5298,10 @@ pub const BorderBottomRightRadius = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderBottomRightRadius { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderBottomRightRadius { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderBottomRightRadius { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BorderBottomRightRadius { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BorderBottomRightRadius { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderBottomRightRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5630,8 +5324,6 @@ pub const BorderBottomStyle = union(enum) {
     ridge,
     inset,
     outset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BorderBottomStyle { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderBottomStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5650,11 +5342,9 @@ pub const BorderBottomWidth = union(enum) {
     medium,
     thick,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderBottomWidth { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderBottomWidth { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderBottomWidth { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) BorderBottomWidth { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderBottomWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5670,8 +5360,6 @@ pub const BorderBoundary = union(enum) {
     unset,
     parent,
     display,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BorderBoundary { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderBoundary, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5685,8 +5373,6 @@ pub const BorderClip = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BorderClip { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5702,8 +5388,6 @@ pub const BorderCollapse = union(enum) {
     unset,
     separate,
     collapse,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BorderCollapse { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderCollapse, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5910,10 +5594,8 @@ pub const BorderColor = union(enum) {
     WindowFrame,
     WindowText,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) BorderColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) BorderColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) BorderColor { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5929,12 +5611,10 @@ pub const BorderEndEndRadius = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderEndEndRadius { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderEndEndRadius { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderEndEndRadius { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BorderEndEndRadius { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BorderEndEndRadius { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderEndEndRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5950,12 +5630,10 @@ pub const BorderEndStartRadius = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderEndStartRadius { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderEndStartRadius { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderEndStartRadius { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BorderEndStartRadius { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BorderEndStartRadius { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderEndStartRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5969,8 +5647,6 @@ pub const BorderImage = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BorderImage { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderImage, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5985,11 +5661,9 @@ pub const BorderImageOutset = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderImageOutset { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderImageOutset { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderImageOutset { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) BorderImageOutset { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderImageOutset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -6011,8 +5685,6 @@ pub const BorderImageRepeat = union(enum) {
     round,
     ///     /// The image is tiled (repeated) to fill its corresponding region. If it does not fill the region with a whole number of tiles, the extra space is distributed around the tiles.
     space,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BorderImageRepeat { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderImageRepeat, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -6029,9 +5701,7 @@ pub const BorderImageSlice = union(enum) {
     ///     /// The fill keyword, if present, causes the middle part of the border-image to be preserved. (By default it is discarded, i.e., treated as empty.)
     fill,
     percent_: f32,
-    raw_: []const u8,
     pub fn percent(v: f32) BorderImageSlice { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BorderImageSlice { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderImageSlice, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -6045,8 +5715,6 @@ pub const BorderImageSource = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BorderImageSource { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderImageSource, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -6064,12 +5732,10 @@ pub const BorderImageWidth = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderImageWidth { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderImageWidth { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderImageWidth { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BorderImageWidth { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BorderImageWidth { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderImageWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -6083,8 +5749,6 @@ pub const BorderInline = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BorderInline { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -6098,8 +5762,6 @@ pub const BorderInlineClip = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BorderInlineClip { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderInlineClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -6114,10 +5776,8 @@ pub const BorderInlineColor = union(enum) {
     revert_layer,
     unset,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) BorderInlineColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) BorderInlineColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) BorderInlineColor { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderInlineColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -6338,13 +5998,11 @@ pub const BorderInlineEnd = union(enum) {
     WindowText,
     px_: f32, em_: f32, rem_: f32,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn px(v: f32) BorderInlineEnd { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderInlineEnd { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderInlineEnd { return .{ .rem_ = v }; }
     pub fn hex(v: u32) BorderInlineEnd { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) BorderInlineEnd { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) BorderInlineEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderInlineEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -6360,12 +6018,10 @@ pub const BorderInlineEndClip = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderInlineEndClip { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderInlineEndClip { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderInlineEndClip { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BorderInlineEndClip { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BorderInlineEndClip { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderInlineEndClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -6572,10 +6228,8 @@ pub const BorderInlineEndColor = union(enum) {
     WindowFrame,
     WindowText,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) BorderInlineEndColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) BorderInlineEndColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) BorderInlineEndColor { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderInlineEndColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -6591,12 +6245,10 @@ pub const BorderInlineEndRadius = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderInlineEndRadius { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderInlineEndRadius { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderInlineEndRadius { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BorderInlineEndRadius { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BorderInlineEndRadius { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderInlineEndRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -6619,8 +6271,6 @@ pub const BorderInlineEndStyle = union(enum) {
     ridge,
     inset,
     outset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BorderInlineEndStyle { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderInlineEndStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -6639,11 +6289,9 @@ pub const BorderInlineEndWidth = union(enum) {
     medium,
     thick,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderInlineEndWidth { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderInlineEndWidth { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderInlineEndWidth { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) BorderInlineEndWidth { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderInlineEndWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -6864,13 +6512,11 @@ pub const BorderInlineStart = union(enum) {
     WindowText,
     px_: f32, em_: f32, rem_: f32,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn px(v: f32) BorderInlineStart { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderInlineStart { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderInlineStart { return .{ .rem_ = v }; }
     pub fn hex(v: u32) BorderInlineStart { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) BorderInlineStart { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) BorderInlineStart { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderInlineStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -6886,12 +6532,10 @@ pub const BorderInlineStartClip = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderInlineStartClip { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderInlineStartClip { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderInlineStartClip { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BorderInlineStartClip { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BorderInlineStartClip { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderInlineStartClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7098,10 +6742,8 @@ pub const BorderInlineStartColor = union(enum) {
     WindowFrame,
     WindowText,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) BorderInlineStartColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) BorderInlineStartColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) BorderInlineStartColor { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderInlineStartColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7117,12 +6759,10 @@ pub const BorderInlineStartRadius = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderInlineStartRadius { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderInlineStartRadius { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderInlineStartRadius { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BorderInlineStartRadius { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BorderInlineStartRadius { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderInlineStartRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7145,8 +6785,6 @@ pub const BorderInlineStartStyle = union(enum) {
     ridge,
     inset,
     outset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BorderInlineStartStyle { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderInlineStartStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7165,11 +6803,9 @@ pub const BorderInlineStartWidth = union(enum) {
     medium,
     thick,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderInlineStartWidth { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderInlineStartWidth { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderInlineStartWidth { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) BorderInlineStartWidth { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderInlineStartWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7183,8 +6819,6 @@ pub const BorderInlineStyle = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BorderInlineStyle { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderInlineStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7198,8 +6832,6 @@ pub const BorderInlineWidth = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BorderInlineWidth { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderInlineWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7420,13 +7052,11 @@ pub const BorderLeft = union(enum) {
     WindowText,
     px_: f32, em_: f32, rem_: f32,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn px(v: f32) BorderLeft { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderLeft { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderLeft { return .{ .rem_ = v }; }
     pub fn hex(v: u32) BorderLeft { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) BorderLeft { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) BorderLeft { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7442,12 +7072,10 @@ pub const BorderLeftClip = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderLeftClip { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderLeftClip { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderLeftClip { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BorderLeftClip { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BorderLeftClip { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderLeftClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7654,10 +7282,8 @@ pub const BorderLeftColor = union(enum) {
     WindowFrame,
     WindowText,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) BorderLeftColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) BorderLeftColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) BorderLeftColor { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderLeftColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7673,12 +7299,10 @@ pub const BorderLeftRadius = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderLeftRadius { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderLeftRadius { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderLeftRadius { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BorderLeftRadius { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BorderLeftRadius { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderLeftRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7701,8 +7325,6 @@ pub const BorderLeftStyle = union(enum) {
     ridge,
     inset,
     outset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BorderLeftStyle { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderLeftStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7721,11 +7343,9 @@ pub const BorderLeftWidth = union(enum) {
     medium,
     thick,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderLeftWidth { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderLeftWidth { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderLeftWidth { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) BorderLeftWidth { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderLeftWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7755,12 +7375,10 @@ pub const BorderLimit = union(enum) {
     left,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderLimit { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderLimit { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderLimit { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BorderLimit { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BorderLimit { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderLimit, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7776,12 +7394,10 @@ pub const BorderRadius = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderRadius { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderRadius { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderRadius { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BorderRadius { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BorderRadius { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8002,13 +7618,11 @@ pub const BorderRight = union(enum) {
     WindowText,
     px_: f32, em_: f32, rem_: f32,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn px(v: f32) BorderRight { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderRight { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderRight { return .{ .rem_ = v }; }
     pub fn hex(v: u32) BorderRight { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) BorderRight { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) BorderRight { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8024,12 +7638,10 @@ pub const BorderRightClip = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderRightClip { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderRightClip { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderRightClip { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BorderRightClip { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BorderRightClip { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderRightClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8236,10 +7848,8 @@ pub const BorderRightColor = union(enum) {
     WindowFrame,
     WindowText,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) BorderRightColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) BorderRightColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) BorderRightColor { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderRightColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8255,12 +7865,10 @@ pub const BorderRightRadius = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderRightRadius { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderRightRadius { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderRightRadius { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BorderRightRadius { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BorderRightRadius { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderRightRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8283,8 +7891,6 @@ pub const BorderRightStyle = union(enum) {
     ridge,
     inset,
     outset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BorderRightStyle { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderRightStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8303,11 +7909,9 @@ pub const BorderRightWidth = union(enum) {
     medium,
     thick,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderRightWidth { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderRightWidth { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderRightWidth { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) BorderRightWidth { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderRightWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8329,8 +7933,6 @@ pub const BorderShape = union(enum) {
     fill_box,
     stroke_box,
     view_box,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BorderShape { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8345,11 +7947,9 @@ pub const BorderSpacing = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderSpacing { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderSpacing { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderSpacing { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) BorderSpacing { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderSpacing, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8365,12 +7965,10 @@ pub const BorderStartEndRadius = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderStartEndRadius { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderStartEndRadius { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderStartEndRadius { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BorderStartEndRadius { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BorderStartEndRadius { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderStartEndRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8386,12 +7984,10 @@ pub const BorderStartStartRadius = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderStartStartRadius { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderStartStartRadius { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderStartStartRadius { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BorderStartStartRadius { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BorderStartStartRadius { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderStartStartRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8405,8 +8001,6 @@ pub const BorderStyle = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BorderStyle { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8627,13 +8221,11 @@ pub const BorderTop = union(enum) {
     WindowText,
     px_: f32, em_: f32, rem_: f32,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn px(v: f32) BorderTop { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderTop { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderTop { return .{ .rem_ = v }; }
     pub fn hex(v: u32) BorderTop { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) BorderTop { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) BorderTop { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderTop, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8649,12 +8241,10 @@ pub const BorderTopClip = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderTopClip { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderTopClip { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderTopClip { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BorderTopClip { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BorderTopClip { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderTopClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8861,10 +8451,8 @@ pub const BorderTopColor = union(enum) {
     WindowFrame,
     WindowText,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) BorderTopColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) BorderTopColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) BorderTopColor { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderTopColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8880,12 +8468,10 @@ pub const BorderTopLeftRadius = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderTopLeftRadius { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderTopLeftRadius { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderTopLeftRadius { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BorderTopLeftRadius { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BorderTopLeftRadius { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderTopLeftRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8901,12 +8487,10 @@ pub const BorderTopRadius = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderTopRadius { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderTopRadius { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderTopRadius { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BorderTopRadius { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BorderTopRadius { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderTopRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8922,12 +8506,10 @@ pub const BorderTopRightRadius = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderTopRightRadius { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderTopRightRadius { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderTopRightRadius { return .{ .rem_ = v }; }
     pub fn percent(v: f32) BorderTopRightRadius { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) BorderTopRightRadius { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderTopRightRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8950,8 +8532,6 @@ pub const BorderTopStyle = union(enum) {
     ridge,
     inset,
     outset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BorderTopStyle { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderTopStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8970,11 +8550,9 @@ pub const BorderTopWidth = union(enum) {
     medium,
     thick,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BorderTopWidth { return .{ .px_ = v }; }
     pub fn em(v: f32) BorderTopWidth { return .{ .em_ = v }; }
     pub fn rem(v: f32) BorderTopWidth { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) BorderTopWidth { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderTopWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8988,8 +8566,6 @@ pub const BorderWidth = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BorderWidth { return .{ .raw_ = r }; }
 
     pub fn format(self: BorderWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9007,12 +8583,10 @@ pub const Bottom = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) Bottom { return .{ .px_ = v }; }
     pub fn em(v: f32) Bottom { return .{ .em_ = v }; }
     pub fn rem(v: f32) Bottom { return .{ .rem_ = v }; }
     pub fn percent(v: f32) Bottom { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) Bottom { return .{ .raw_ = r }; }
 
     pub fn format(self: Bottom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9030,8 +8604,6 @@ pub const BoxDecorationBreak = union(enum) {
     slice,
     ///     /// Each box fragment is independently wrapped with the border, padding, and margin. The border-radius and border-image and box-shadow, if any, are applied to each fragment independently. The background is drawn independently in each fragment of the element. A no-repeat background image will thus be rendered once in each fragment of the element.
     clone,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BoxDecorationBreak { return .{ .raw_ = r }; }
 
     pub fn format(self: BoxDecorationBreak, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9047,13 +8619,11 @@ pub const BoxShadow = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn px(v: f32) BoxShadow { return .{ .px_ = v }; }
     pub fn em(v: f32) BoxShadow { return .{ .em_ = v }; }
     pub fn rem(v: f32) BoxShadow { return .{ .rem_ = v }; }
     pub fn hex(v: u32) BoxShadow { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) BoxShadow { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) BoxShadow { return .{ .raw_ = r }; }
 
     pub fn format(self: BoxShadow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9068,11 +8638,9 @@ pub const BoxShadowBlur = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BoxShadowBlur { return .{ .px_ = v }; }
     pub fn em(v: f32) BoxShadowBlur { return .{ .em_ = v }; }
     pub fn rem(v: f32) BoxShadowBlur { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) BoxShadowBlur { return .{ .raw_ = r }; }
 
     pub fn format(self: BoxShadowBlur, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9279,10 +8847,8 @@ pub const BoxShadowColor = union(enum) {
     WindowFrame,
     WindowText,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) BoxShadowColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) BoxShadowColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) BoxShadowColor { return .{ .raw_ = r }; }
 
     pub fn format(self: BoxShadowColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9297,11 +8863,9 @@ pub const BoxShadowOffset = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BoxShadowOffset { return .{ .px_ = v }; }
     pub fn em(v: f32) BoxShadowOffset { return .{ .em_ = v }; }
     pub fn rem(v: f32) BoxShadowOffset { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) BoxShadowOffset { return .{ .raw_ = r }; }
 
     pub fn format(self: BoxShadowOffset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9319,8 +8883,6 @@ pub const BoxShadowPosition = union(enum) {
     outset,
     ///     /// Causes the drop shadow to be an inner box-shadow. That means, one that shadows the canvas onto the box, as if the box were cut out of the canvas and shifted behind it.
     inset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BoxShadowPosition { return .{ .raw_ = r }; }
 
     pub fn format(self: BoxShadowPosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9335,11 +8897,9 @@ pub const BoxShadowSpread = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) BoxShadowSpread { return .{ .px_ = v }; }
     pub fn em(v: f32) BoxShadowSpread { return .{ .em_ = v }; }
     pub fn rem(v: f32) BoxShadowSpread { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) BoxShadowSpread { return .{ .raw_ = r }; }
 
     pub fn format(self: BoxShadowSpread, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9357,8 +8917,6 @@ pub const BoxSizing = union(enum) {
     content_box,
     ///     /// Sizes specified on sizing properties as <length-percentage> represent the box’s visually-apparent sizes, including the borders/padding (but not margin): they are applied to the border box. The padding and border of the box are laid out and drawn inside the specified width and height, with the content box sized to fill the remaining space, floored at zero. The content width and height are calculated by subtracting the border and padding widths of the respective sides from the specified <length-percentage>. As the content width and height cannot be negative, this computation is floored at zero. Used values, as exposed for instance through getComputedStyle(), also refer to the border box.
     border_box,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BoxSizing { return .{ .raw_ = r }; }
 
     pub fn format(self: BoxSizing, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9382,8 +8940,6 @@ pub const BoxSnap = union(enum) {
     baseline,
     ///     /// The last line box’s dominant baseline is snapped to the nearest grid line.
     last_baseline,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BoxSnap { return .{ .raw_ = r }; }
 
     pub fn format(self: BoxSnap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9425,8 +8981,6 @@ pub const BreakAfter = union(enum) {
     avoid_region,
     ///     /// Always force a region break before/after the principal box.
     region,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BreakAfter { return .{ .raw_ = r }; }
 
     pub fn format(self: BreakAfter, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9468,8 +9022,6 @@ pub const BreakBefore = union(enum) {
     avoid_region,
     ///     /// Always force a region break before/after the principal box.
     region,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BreakBefore { return .{ .raw_ = r }; }
 
     pub fn format(self: BreakBefore, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9493,8 +9045,6 @@ pub const BreakInside = union(enum) {
     avoid_column,
     ///     /// Avoid a region break within the box.
     avoid_region,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) BreakInside { return .{ .raw_ = r }; }
 
     pub fn format(self: BreakInside, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9512,8 +9062,6 @@ pub const CaptionSide = union(enum) {
     top,
     ///     /// Positions the caption box below the table grid box.
     bottom,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CaptionSide { return .{ .raw_ = r }; }
 
     pub fn format(self: CaptionSide, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9528,10 +9076,8 @@ pub const Caret = union(enum) {
     revert_layer,
     unset,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) Caret { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) Caret { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) Caret { return .{ .raw_ = r }; }
 
     pub fn format(self: Caret, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9549,8 +9095,6 @@ pub const CaretAnimation = union(enum) {
     auto,
     ///     /// The UA must not animate the caret.
     manual,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CaretAnimation { return .{ .raw_ = r }; }
 
     pub fn format(self: CaretAnimation, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9758,10 +9302,8 @@ pub const CaretColor = union(enum) {
     WindowFrame,
     WindowText,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) CaretColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) CaretColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) CaretColor { return .{ .raw_ = r }; }
 
     pub fn format(self: CaretColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9783,8 +9325,6 @@ pub const CaretShape = union(enum) {
     block,
     ///     /// The UA must render the insertion caret as a thin line under (as defined in [CSS-WRITING-MODES-3]) the next visible character following the insertion point. If there is no visible character after the insertion point, the UA must render the caret after the last visible character.
     underscore,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CaretShape { return .{ .raw_ = r }; }
 
     pub fn format(self: CaretShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9820,8 +9360,6 @@ pub const Clear = union(enum) {
     both_block,
     ///     /// Behave like both-inline.
     both,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Clear { return .{ .raw_ = r }; }
 
     pub fn format(self: Clear, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9836,8 +9374,6 @@ pub const Clip = union(enum) {
     revert_layer,
     unset,
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Clip { return .{ .raw_ = r }; }
 
     pub fn format(self: Clip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9862,8 +9398,6 @@ pub const ClipPath = union(enum) {
     stroke_box,
     ///     /// Uses the nearest SVG viewport as reference box. If a viewBox attribute is specified for the SVG viewport creating element: The reference box is positioned at the origin of the coordinate system established by the viewBox attribute. The dimension of the reference box is set to the width and height values of the viewBox attribute.
     view_box,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ClipPath { return .{ .raw_ = r }; }
 
     pub fn format(self: ClipPath, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9881,8 +9415,6 @@ pub const ClipRule = union(enum) {
     nonzero,
     ///     /// See description of fill-rule property [SVG11].
     evenodd,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ClipRule { return .{ .raw_ = r }; }
 
     pub fn format(self: ClipRule, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10089,10 +9621,8 @@ pub const CssColor = union(enum) {
     WindowFrame,
     WindowText,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) CssColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) CssColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) CssColor { return .{ .raw_ = r }; }
 
     pub fn format(self: CssColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10107,10 +9637,8 @@ pub const ColorAdjust = union(enum) {
     revert_layer,
     unset,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) ColorAdjust { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) ColorAdjust { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) ColorAdjust { return .{ .raw_ = r }; }
 
     pub fn format(self: ColorAdjust, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10127,8 +9655,6 @@ pub const ColorInterpolation = union(enum) {
     auto,
     sRGB,
     linearRGB,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ColorInterpolation { return .{ .raw_ = r }; }
 
     pub fn format(self: ColorInterpolation, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10148,8 +9674,6 @@ pub const ColorInterpolationFilters = union(enum) {
     sRGB,
     ///     /// Indicates that filter effects color operations should occur in the linear-light sRGB color space.
     linearRGB,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ColorInterpolationFilters { return .{ .raw_ = r }; }
 
     pub fn format(self: ColorInterpolationFilters, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10171,8 +9695,6 @@ pub const ColorScheme = union(enum) {
     dark,
     ///     /// Forbids the user agent from overriding the color scheme for the element.
     only,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ColorScheme { return .{ .raw_ = r }; }
 
     pub fn format(self: ColorScheme, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10188,8 +9710,6 @@ pub const ColumnCount = union(enum) {
     unset,
     ///     /// means that the number of columns will be determined by other properties (e.g., column-width, if it has a non-auto value).
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ColumnCount { return .{ .raw_ = r }; }
 
     pub fn format(self: ColumnCount, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10209,8 +9729,6 @@ pub const ColumnFill = union(enum) {
     balance,
     ///     /// Balance content equally between columns, as far as possible. In fragmented contexts, all fragments are balanced.
     balance_all,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ColumnFill { return .{ .raw_ = r }; }
 
     pub fn format(self: ColumnFill, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10232,12 +9750,10 @@ pub const ColumnGap = union(enum) {
     thick,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ColumnGap { return .{ .px_ = v }; }
     pub fn em(v: f32) ColumnGap { return .{ .em_ = v }; }
     pub fn rem(v: f32) ColumnGap { return .{ .rem_ = v }; }
     pub fn percent(v: f32) ColumnGap { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) ColumnGap { return .{ .raw_ = r }; }
 
     pub fn format(self: ColumnGap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10254,11 +9770,9 @@ pub const ColumnHeight = union(enum) {
     ///     /// means that the column height will be determined by the amount of content and other properties.
     auto,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ColumnHeight { return .{ .px_ = v }; }
     pub fn em(v: f32) ColumnHeight { return .{ .em_ = v }; }
     pub fn rem(v: f32) ColumnHeight { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) ColumnHeight { return .{ .raw_ = r }; }
 
     pub fn format(self: ColumnHeight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10480,13 +9994,11 @@ pub const ColumnRule = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn px(v: f32) ColumnRule { return .{ .px_ = v }; }
     pub fn em(v: f32) ColumnRule { return .{ .em_ = v }; }
     pub fn rem(v: f32) ColumnRule { return .{ .rem_ = v }; }
     pub fn hex(v: u32) ColumnRule { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) ColumnRule { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) ColumnRule { return .{ .raw_ = r }; }
 
     pub fn format(self: ColumnRule, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10504,8 +10016,6 @@ pub const ColumnRuleBreak = union(enum) {
     normal,
     ///     /// Gap decorations start and end at visible "T" and "cross" intersections.
     intersection,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ColumnRuleBreak { return .{ .raw_ = r }; }
 
     pub fn format(self: ColumnRuleBreak, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10713,10 +10223,8 @@ pub const ColumnRuleColor = union(enum) {
     WindowText,
     auto,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) ColumnRuleColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) ColumnRuleColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) ColumnRuleColor { return .{ .raw_ = r }; }
 
     pub fn format(self: ColumnRuleColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10732,12 +10240,10 @@ pub const ColumnRuleEdgeInset = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ColumnRuleEdgeInset { return .{ .px_ = v }; }
     pub fn em(v: f32) ColumnRuleEdgeInset { return .{ .em_ = v }; }
     pub fn rem(v: f32) ColumnRuleEdgeInset { return .{ .rem_ = v }; }
     pub fn percent(v: f32) ColumnRuleEdgeInset { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) ColumnRuleEdgeInset { return .{ .raw_ = r }; }
 
     pub fn format(self: ColumnRuleEdgeInset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10753,12 +10259,10 @@ pub const ColumnRuleEdgeInsetEnd = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ColumnRuleEdgeInsetEnd { return .{ .px_ = v }; }
     pub fn em(v: f32) ColumnRuleEdgeInsetEnd { return .{ .em_ = v }; }
     pub fn rem(v: f32) ColumnRuleEdgeInsetEnd { return .{ .rem_ = v }; }
     pub fn percent(v: f32) ColumnRuleEdgeInsetEnd { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) ColumnRuleEdgeInsetEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: ColumnRuleEdgeInsetEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10774,12 +10278,10 @@ pub const ColumnRuleEdgeInsetStart = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ColumnRuleEdgeInsetStart { return .{ .px_ = v }; }
     pub fn em(v: f32) ColumnRuleEdgeInsetStart { return .{ .em_ = v }; }
     pub fn rem(v: f32) ColumnRuleEdgeInsetStart { return .{ .rem_ = v }; }
     pub fn percent(v: f32) ColumnRuleEdgeInsetStart { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) ColumnRuleEdgeInsetStart { return .{ .raw_ = r }; }
 
     pub fn format(self: ColumnRuleEdgeInsetStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10793,8 +10295,6 @@ pub const ColumnRuleInset = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ColumnRuleInset { return .{ .raw_ = r }; }
 
     pub fn format(self: ColumnRuleInset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10810,12 +10310,10 @@ pub const ColumnRuleInsetEnd = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ColumnRuleInsetEnd { return .{ .px_ = v }; }
     pub fn em(v: f32) ColumnRuleInsetEnd { return .{ .em_ = v }; }
     pub fn rem(v: f32) ColumnRuleInsetEnd { return .{ .rem_ = v }; }
     pub fn percent(v: f32) ColumnRuleInsetEnd { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) ColumnRuleInsetEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: ColumnRuleInsetEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10831,12 +10329,10 @@ pub const ColumnRuleInsetStart = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ColumnRuleInsetStart { return .{ .px_ = v }; }
     pub fn em(v: f32) ColumnRuleInsetStart { return .{ .em_ = v }; }
     pub fn rem(v: f32) ColumnRuleInsetStart { return .{ .rem_ = v }; }
     pub fn percent(v: f32) ColumnRuleInsetStart { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) ColumnRuleInsetStart { return .{ .raw_ = r }; }
 
     pub fn format(self: ColumnRuleInsetStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10852,12 +10348,10 @@ pub const ColumnRuleInteriorInset = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ColumnRuleInteriorInset { return .{ .px_ = v }; }
     pub fn em(v: f32) ColumnRuleInteriorInset { return .{ .em_ = v }; }
     pub fn rem(v: f32) ColumnRuleInteriorInset { return .{ .rem_ = v }; }
     pub fn percent(v: f32) ColumnRuleInteriorInset { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) ColumnRuleInteriorInset { return .{ .raw_ = r }; }
 
     pub fn format(self: ColumnRuleInteriorInset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10873,12 +10367,10 @@ pub const ColumnRuleInteriorInsetEnd = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ColumnRuleInteriorInsetEnd { return .{ .px_ = v }; }
     pub fn em(v: f32) ColumnRuleInteriorInsetEnd { return .{ .em_ = v }; }
     pub fn rem(v: f32) ColumnRuleInteriorInsetEnd { return .{ .rem_ = v }; }
     pub fn percent(v: f32) ColumnRuleInteriorInsetEnd { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) ColumnRuleInteriorInsetEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: ColumnRuleInteriorInsetEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10894,12 +10386,10 @@ pub const ColumnRuleInteriorInsetStart = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ColumnRuleInteriorInsetStart { return .{ .px_ = v }; }
     pub fn em(v: f32) ColumnRuleInteriorInsetStart { return .{ .em_ = v }; }
     pub fn rem(v: f32) ColumnRuleInteriorInsetStart { return .{ .rem_ = v }; }
     pub fn percent(v: f32) ColumnRuleInteriorInsetStart { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) ColumnRuleInteriorInsetStart { return .{ .raw_ = r }; }
 
     pub fn format(self: ColumnRuleInteriorInsetStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10923,8 +10413,6 @@ pub const ColumnRuleStyle = union(enum) {
     inset,
     outset,
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ColumnRuleStyle { return .{ .raw_ = r }; }
 
     pub fn format(self: ColumnRuleStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10944,8 +10432,6 @@ pub const ColumnRuleVisibilityItems = union(enum) {
     around,
     ///     /// Paint decorations in a gap segment if both adjacent areas are occupied by items.
     between,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ColumnRuleVisibilityItems { return .{ .raw_ = r }; }
 
     pub fn format(self: ColumnRuleVisibilityItems, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10965,11 +10451,9 @@ pub const ColumnRuleWidth = union(enum) {
     thick,
     auto,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ColumnRuleWidth { return .{ .px_ = v }; }
     pub fn em(v: f32) ColumnRuleWidth { return .{ .em_ = v }; }
     pub fn rem(v: f32) ColumnRuleWidth { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) ColumnRuleWidth { return .{ .raw_ = r }; }
 
     pub fn format(self: ColumnRuleWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10987,8 +10471,6 @@ pub const ColumnSpan = union(enum) {
     all,
     ///     /// The number of columns spanned by the element depends on its min-content outer size in the inline direction of the multi-column container. If it is smaller than the used value of column-width, this is the same as if column-span: none had been specified. Otherwise, the number of columns spanned is the smallest positive integer n for which n × column-width + (n - 1) × column-gap is larger than the min-content outer size. If this would be larger than the number of columns, the number of columns spanned will be the same as if column-span: all had been specified. If column-span: 1 does not do the same as column-span: none, should this behave as column-span: 1 or as column-span: none when the element is small enough?
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ColumnSpan { return .{ .raw_ = r }; }
 
     pub fn format(self: ColumnSpan, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11009,11 +10491,9 @@ pub const ColumnWidth = union(enum) {
     ///     /// Specifies the optimal column width as the max-content inline size of the multi-column container’s contents.
     max_content,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ColumnWidth { return .{ .px_ = v }; }
     pub fn em(v: f32) ColumnWidth { return .{ .em_ = v }; }
     pub fn rem(v: f32) ColumnWidth { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) ColumnWidth { return .{ .raw_ = r }; }
 
     pub fn format(self: ColumnWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11033,8 +10513,6 @@ pub const ColumnWrap = union(enum) {
     nowrap,
     ///     /// Overflow columns create a new multicol row in the block direction.
     wrap,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ColumnWrap { return .{ .raw_ = r }; }
 
     pub fn format(self: ColumnWrap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11048,8 +10526,6 @@ pub const Columns = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Columns { return .{ .raw_ = r }; }
 
     pub fn format(self: Columns, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11077,8 +10553,6 @@ pub const Contain = union(enum) {
     style,
     ///     /// This value turns on paint containment for the element. This ensures that the descendants of the containment box don’t display outside its bounds, so if an element is off-screen or otherwise not visible, its descendants are also guaranteed to be not visible.
     paint,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Contain { return .{ .raw_ = r }; }
 
     pub fn format(self: Contain, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11097,11 +10571,9 @@ pub const ContainIntrinsicBlockSize = union(enum) {
     ///     /// If from-element is specified and the element is a replaced element with an internal layout intrinsic size, its explicit intrinsic inner size in the corresponding axis is that size. Should this apply even when contain:layout isn’t specified? The name needs further discussion.
     from_element,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ContainIntrinsicBlockSize { return .{ .px_ = v }; }
     pub fn em(v: f32) ContainIntrinsicBlockSize { return .{ .em_ = v }; }
     pub fn rem(v: f32) ContainIntrinsicBlockSize { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) ContainIntrinsicBlockSize { return .{ .raw_ = r }; }
 
     pub fn format(self: ContainIntrinsicBlockSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11120,11 +10592,9 @@ pub const ContainIntrinsicHeight = union(enum) {
     ///     /// If from-element is specified and the element is a replaced element with an internal layout intrinsic size, its explicit intrinsic inner size in the corresponding axis is that size. Should this apply even when contain:layout isn’t specified? The name needs further discussion.
     from_element,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ContainIntrinsicHeight { return .{ .px_ = v }; }
     pub fn em(v: f32) ContainIntrinsicHeight { return .{ .em_ = v }; }
     pub fn rem(v: f32) ContainIntrinsicHeight { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) ContainIntrinsicHeight { return .{ .raw_ = r }; }
 
     pub fn format(self: ContainIntrinsicHeight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11143,11 +10613,9 @@ pub const ContainIntrinsicInlineSize = union(enum) {
     ///     /// If from-element is specified and the element is a replaced element with an internal layout intrinsic size, its explicit intrinsic inner size in the corresponding axis is that size. Should this apply even when contain:layout isn’t specified? The name needs further discussion.
     from_element,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ContainIntrinsicInlineSize { return .{ .px_ = v }; }
     pub fn em(v: f32) ContainIntrinsicInlineSize { return .{ .em_ = v }; }
     pub fn rem(v: f32) ContainIntrinsicInlineSize { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) ContainIntrinsicInlineSize { return .{ .raw_ = r }; }
 
     pub fn format(self: ContainIntrinsicInlineSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11166,11 +10634,9 @@ pub const ContainIntrinsicSize = union(enum) {
     ///     /// If from-element is specified and the element is a replaced element with an internal layout intrinsic size, its explicit intrinsic inner size in the corresponding axis is that size. Should this apply even when contain:layout isn’t specified? The name needs further discussion.
     from_element,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ContainIntrinsicSize { return .{ .px_ = v }; }
     pub fn em(v: f32) ContainIntrinsicSize { return .{ .em_ = v }; }
     pub fn rem(v: f32) ContainIntrinsicSize { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) ContainIntrinsicSize { return .{ .raw_ = r }; }
 
     pub fn format(self: ContainIntrinsicSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11189,11 +10655,9 @@ pub const ContainIntrinsicWidth = union(enum) {
     ///     /// If from-element is specified and the element is a replaced element with an internal layout intrinsic size, its explicit intrinsic inner size in the corresponding axis is that size. Should this apply even when contain:layout isn’t specified? The name needs further discussion.
     from_element,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ContainIntrinsicWidth { return .{ .px_ = v }; }
     pub fn em(v: f32) ContainIntrinsicWidth { return .{ .em_ = v }; }
     pub fn rem(v: f32) ContainIntrinsicWidth { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) ContainIntrinsicWidth { return .{ .raw_ = r }; }
 
     pub fn format(self: ContainIntrinsicWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11207,8 +10671,6 @@ pub const Container = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Container { return .{ .raw_ = r }; }
 
     pub fn format(self: Container, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11222,8 +10684,6 @@ pub const ContainerName = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ContainerName { return .{ .raw_ = r }; }
 
     pub fn format(self: ContainerName, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11245,8 +10705,6 @@ pub const ContainerType = union(enum) {
     inline_size,
     ///     /// Establishes a query container for container scroll-state queries
     scroll_state,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ContainerType { return .{ .raw_ = r }; }
 
     pub fn format(self: ContainerType, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11267,8 +10725,6 @@ pub const Content = union(enum) {
     close_quote,
     no_open_quote,
     no_close_quote,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Content { return .{ .raw_ = r }; }
 
     pub fn format(self: Content, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11288,8 +10744,6 @@ pub const ContentVisibility = union(enum) {
     auto,
     ///     /// The element skips its contents. The skipped contents must not be accessible to user-agent features, such as find-in-page, tab-order navigation, etc., nor be selectable or focusable.
     hidden,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ContentVisibility { return .{ .raw_ = r }; }
 
     pub fn format(self: ContentVisibility, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11317,8 +10771,6 @@ pub const Continue = union(enum) {
     paginate,
     ///     /// content that doesn’t fit causes the element to copy itself and continue laying out. See fragment overflow.
     fragments,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Continue { return .{ .raw_ = r }; }
 
     pub fn format(self: Continue, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11335,8 +10787,6 @@ pub const CopyInto = union(enum) {
     element,
     content,
     text,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CopyInto { return .{ .raw_ = r }; }
 
     pub fn format(self: CopyInto, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11350,8 +10800,6 @@ pub const Corner = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Corner { return .{ .raw_ = r }; }
 
     pub fn format(self: Corner, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11365,8 +10813,6 @@ pub const CornerBlockEnd = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerBlockEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerBlockEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11380,8 +10826,6 @@ pub const CornerBlockEndShape = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerBlockEndShape { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerBlockEndShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11395,8 +10839,6 @@ pub const CornerBlockStart = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerBlockStart { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerBlockStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11410,8 +10852,6 @@ pub const CornerBlockStartShape = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerBlockStartShape { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerBlockStartShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11425,8 +10865,6 @@ pub const CornerBottom = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerBottom { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerBottom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11440,8 +10878,6 @@ pub const CornerBottomLeft = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerBottomLeft { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerBottomLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11461,8 +10897,6 @@ pub const CornerBottomLeftShape = union(enum) {
     notch,
     square,
     squircle,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerBottomLeftShape { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerBottomLeftShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11476,8 +10910,6 @@ pub const CornerBottomRight = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerBottomRight { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerBottomRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11497,8 +10929,6 @@ pub const CornerBottomRightShape = union(enum) {
     notch,
     square,
     squircle,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerBottomRightShape { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerBottomRightShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11512,8 +10942,6 @@ pub const CornerBottomShape = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerBottomShape { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerBottomShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11527,8 +10955,6 @@ pub const CornerEndEnd = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerEndEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerEndEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11548,8 +10974,6 @@ pub const CornerEndEndShape = union(enum) {
     notch,
     square,
     squircle,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerEndEndShape { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerEndEndShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11563,8 +10987,6 @@ pub const CornerEndStart = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerEndStart { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerEndStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11584,8 +11006,6 @@ pub const CornerEndStartShape = union(enum) {
     notch,
     square,
     squircle,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerEndStartShape { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerEndStartShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11599,8 +11019,6 @@ pub const CornerInlineEnd = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerInlineEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerInlineEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11614,8 +11032,6 @@ pub const CornerInlineEndShape = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerInlineEndShape { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerInlineEndShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11629,8 +11045,6 @@ pub const CornerInlineStart = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerInlineStart { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerInlineStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11644,8 +11058,6 @@ pub const CornerInlineStartShape = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerInlineStartShape { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerInlineStartShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11659,8 +11071,6 @@ pub const CornerLeft = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerLeft { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11674,8 +11084,6 @@ pub const CornerLeftShape = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerLeftShape { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerLeftShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11689,8 +11097,6 @@ pub const CornerRight = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerRight { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11704,8 +11110,6 @@ pub const CornerRightShape = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerRightShape { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerRightShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11719,8 +11123,6 @@ pub const CornerShape = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerShape { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11734,8 +11136,6 @@ pub const CornerStartEnd = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerStartEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerStartEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11755,8 +11155,6 @@ pub const CornerStartEndShape = union(enum) {
     notch,
     square,
     squircle,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerStartEndShape { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerStartEndShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11770,8 +11168,6 @@ pub const CornerStartStart = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerStartStart { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerStartStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11791,8 +11187,6 @@ pub const CornerStartStartShape = union(enum) {
     notch,
     square,
     squircle,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerStartStartShape { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerStartStartShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11806,8 +11200,6 @@ pub const CornerTop = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerTop { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerTop, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11821,8 +11213,6 @@ pub const CornerTopLeft = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerTopLeft { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerTopLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11842,8 +11232,6 @@ pub const CornerTopLeftShape = union(enum) {
     notch,
     square,
     squircle,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerTopLeftShape { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerTopLeftShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11857,8 +11245,6 @@ pub const CornerTopRight = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerTopRight { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerTopRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11878,8 +11264,6 @@ pub const CornerTopRightShape = union(enum) {
     notch,
     square,
     squircle,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerTopRightShape { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerTopRightShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11893,8 +11277,6 @@ pub const CornerTopShape = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CornerTopShape { return .{ .raw_ = r }; }
 
     pub fn format(self: CornerTopShape, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11908,8 +11290,6 @@ pub const CounterIncrement = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CounterIncrement { return .{ .raw_ = r }; }
 
     pub fn format(self: CounterIncrement, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11923,8 +11303,6 @@ pub const CounterReset = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CounterReset { return .{ .raw_ = r }; }
 
     pub fn format(self: CounterReset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11938,8 +11316,6 @@ pub const CounterSet = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CounterSet { return .{ .raw_ = r }; }
 
     pub fn format(self: CounterSet, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11953,8 +11329,6 @@ pub const Cue = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Cue { return .{ .raw_ = r }; }
 
     pub fn format(self: Cue, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11968,8 +11342,6 @@ pub const CueAfter = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CueAfter { return .{ .raw_ = r }; }
 
     pub fn format(self: CueAfter, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11983,8 +11355,6 @@ pub const CueBefore = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) CueBefore { return .{ .raw_ = r }; }
 
     pub fn format(self: CueBefore, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12068,8 +11438,6 @@ pub const Cursor = union(enum) {
     zoom_in,
     ///     /// Indicates that something can be zoomed (magnified) in or out, and often rendered as a magnifying glass with a "+" or "-" in the center of the glass, for zoom-in and zoom-out respectively.
     zoom_out,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Cursor { return .{ .raw_ = r }; }
 
     pub fn format(self: Cursor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12085,12 +11453,10 @@ pub const Cx = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) Cx { return .{ .px_ = v }; }
     pub fn em(v: f32) Cx { return .{ .em_ = v }; }
     pub fn rem(v: f32) Cx { return .{ .rem_ = v }; }
     pub fn percent(v: f32) Cx { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) Cx { return .{ .raw_ = r }; }
 
     pub fn format(self: Cx, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12106,12 +11472,10 @@ pub const Cy = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) Cy { return .{ .px_ = v }; }
     pub fn em(v: f32) Cy { return .{ .em_ = v }; }
     pub fn rem(v: f32) Cy { return .{ .rem_ = v }; }
     pub fn percent(v: f32) Cy { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) Cy { return .{ .raw_ = r }; }
 
     pub fn format(self: Cy, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12125,8 +11489,6 @@ pub const D = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) D { return .{ .raw_ = r }; }
 
     pub fn format(self: D, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12144,8 +11506,6 @@ pub const Direction = union(enum) {
     ltr,
     ///     /// This value sets inline base direction (bidi directionality) to line-right-to-line-left.
     rtl,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Direction { return .{ .raw_ = r }; }
 
     pub fn format(self: Direction, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12197,8 +11557,6 @@ pub const Display = union(enum) {
     ///     /// This value causes an element to generate an inline-level grid lanes container box.
     inline_grid_lanes,
     math,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Display { return .{ .raw_ = r }; }
 
     pub fn format(self: Display, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12230,8 +11588,6 @@ pub const DominantBaseline = union(enum) {
     hanging,
     ///     /// Use the text-over baselines.
     text_top,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) DominantBaseline { return .{ .raw_ = r }; }
 
     pub fn format(self: DominantBaseline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12251,8 +11607,6 @@ pub const DynamicRangeLimit = union(enum) {
     no_limit,
     ///     /// The highest peak luminance that is displayed is somewhat greater than HDR reference white, i.e. the CSS color white, such that a mix of SDR and HDR content can be comfortably viewed together.
     constrained,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) DynamicRangeLimit { return .{ .raw_ = r }; }
 
     pub fn format(self: DynamicRangeLimit, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12268,8 +11622,6 @@ pub const EmptyCells = union(enum) {
     unset,
     show,
     hide,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) EmptyCells { return .{ .raw_ = r }; }
 
     pub fn format(self: EmptyCells, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12283,8 +11635,6 @@ pub const EventTrigger = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) EventTrigger { return .{ .raw_ = r }; }
 
     pub fn format(self: EventTrigger, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12298,8 +11648,6 @@ pub const EventTriggerName = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) EventTriggerName { return .{ .raw_ = r }; }
 
     pub fn format(self: EventTriggerName, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12318,8 +11666,6 @@ pub const EventTriggerSource = union(enum) {
     click,
     touch,
     dblclick,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) EventTriggerSource { return .{ .raw_ = r }; }
 
     pub fn format(self: EventTriggerSource, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12337,8 +11683,6 @@ pub const FieldSizing = union(enum) {
     fixed,
     ///     /// The UA must determine the element’s intrinsic size based on its content, and must ignore any default preferred size defined by the host language for that element. If the element is an element with default preferred size and is listed in compressible replaced elements, the UA must stop treating the element as a replaced element for min-content contribution.
     content,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FieldSizing { return .{ .raw_ = r }; }
 
     pub fn format(self: FieldSizing, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12353,8 +11697,6 @@ pub const Fill = union(enum) {
     revert_layer,
     unset,
     child,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Fill { return .{ .raw_ = r }; }
 
     pub fn format(self: Fill, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12371,8 +11713,6 @@ pub const FillBreak = union(enum) {
     bounding_box,
     slice,
     clone,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FillBreak { return .{ .raw_ = r }; }
 
     pub fn format(self: FillBreak, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12579,10 +11919,8 @@ pub const FillColor = union(enum) {
     WindowFrame,
     WindowText,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) FillColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) FillColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) FillColor { return .{ .raw_ = r }; }
 
     pub fn format(self: FillColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12597,8 +11935,6 @@ pub const FillImage = union(enum) {
     revert_layer,
     unset,
     child,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FillImage { return .{ .raw_ = r }; }
 
     pub fn format(self: FillImage, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12612,8 +11948,6 @@ pub const FillOpacity = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FillOpacity { return .{ .raw_ = r }; }
 
     pub fn format(self: FillOpacity, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12639,8 +11973,6 @@ pub const FillOrigin = union(enum) {
     padding_box,
     ///     /// Use the box’s own content-box/padding-box/border-box as the fill positioning area. For SVG shapes, content-box and padding-box are treated as fill-box, while border-box is treated as stroke-box.
     border_box,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FillOrigin { return .{ .raw_ = r }; }
 
     pub fn format(self: FillOrigin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12671,12 +12003,10 @@ pub const FillPosition = union(enum) {
     end,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) FillPosition { return .{ .px_ = v }; }
     pub fn em(v: f32) FillPosition { return .{ .em_ = v }; }
     pub fn rem(v: f32) FillPosition { return .{ .rem_ = v }; }
     pub fn percent(v: f32) FillPosition { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) FillPosition { return .{ .raw_ = r }; }
 
     pub fn format(self: FillPosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12698,8 +12028,6 @@ pub const FillRepeat = union(enum) {
     space,
     round,
     no_repeat,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FillRepeat { return .{ .raw_ = r }; }
 
     pub fn format(self: FillRepeat, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12717,8 +12045,6 @@ pub const FillRule = union(enum) {
     nonzero,
     ///     /// This rule determines the “insideness” of a point on the canvas by drawing a ray from that point to infinity in any direction and counting the number of path segments from the given shape that the ray crosses. If this number is odd, the point is inside; if even, the point is outside. The effect of an evenodd fill rule on paths with self-intersections and enclosed subpaths.
     evenodd,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FillRule { return .{ .raw_ = r }; }
 
     pub fn format(self: FillRule, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12737,12 +12063,10 @@ pub const FillSize = union(enum) {
     contain,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) FillSize { return .{ .px_ = v }; }
     pub fn em(v: f32) FillSize { return .{ .em_ = v }; }
     pub fn rem(v: f32) FillSize { return .{ .rem_ = v }; }
     pub fn percent(v: f32) FillSize { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) FillSize { return .{ .raw_ = r }; }
 
     pub fn format(self: FillSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12756,8 +12080,6 @@ pub const Filter = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Filter { return .{ .raw_ = r }; }
 
     pub fn format(self: Filter, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12771,8 +12093,6 @@ pub const Flex = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Flex { return .{ .raw_ = r }; }
 
     pub fn format(self: Flex, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12788,8 +12108,6 @@ pub const FlexBasis = union(enum) {
     unset,
     ///     /// Indicates an automatic size based on the flex item’s content. (This is typically equivalent to the max-content size, but with adjustments to handle preferred aspect ratios, intrinsic sizing constraints, and orthogonal flows; see details in § 9 Flex Layout Algorithm.)
     content,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FlexBasis { return .{ .raw_ = r }; }
 
     pub fn format(self: FlexBasis, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12811,8 +12129,6 @@ pub const FlexDirection = union(enum) {
     column,
     ///     /// Same as column, except the main-start and main-end directions are swapped.
     column_reverse,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FlexDirection { return .{ .raw_ = r }; }
 
     pub fn format(self: FlexDirection, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12826,8 +12142,6 @@ pub const FlexFlow = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FlexFlow { return .{ .raw_ = r }; }
 
     pub fn format(self: FlexFlow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12841,8 +12155,6 @@ pub const FlexGrow = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FlexGrow { return .{ .raw_ = r }; }
 
     pub fn format(self: FlexGrow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12856,8 +12168,6 @@ pub const FlexShrink = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FlexShrink { return .{ .raw_ = r }; }
 
     pub fn format(self: FlexShrink, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12877,8 +12187,6 @@ pub const FlexWrap = union(enum) {
     wrap,
     ///     /// Same as wrap.
     wrap_reverse,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FlexWrap { return .{ .raw_ = r }; }
 
     pub fn format(self: FlexWrap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12914,8 +12222,6 @@ pub const Float = union(enum) {
     bottom,
     ///     /// each footnote element is placed in the footnote area of the page
     footnote,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Float { return .{ .raw_ = r }; }
 
     pub fn format(self: Float, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12930,8 +12236,6 @@ pub const FloatDefer = union(enum) {
     revert_layer,
     unset,
     last,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FloatDefer { return .{ .raw_ = r }; }
 
     pub fn format(self: FloatDefer, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12947,12 +12251,10 @@ pub const FloatOffset = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) FloatOffset { return .{ .px_ = v }; }
     pub fn em(v: f32) FloatOffset { return .{ .em_ = v }; }
     pub fn rem(v: f32) FloatOffset { return .{ .rem_ = v }; }
     pub fn percent(v: f32) FloatOffset { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) FloatOffset { return .{ .raw_ = r }; }
 
     pub fn format(self: FloatOffset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12974,8 +12276,6 @@ pub const FloatReference = union(enum) {
     region,
     ///     /// The float reference of the float is the page within which the float anchor is placed. If the float anchor is not inside a page, the float reference is the line box of the float anchor. The float containing block formatting context is a new block formatting context with the same dimensions and placement as the float reference. The float is a page float.
     page,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FloatReference { return .{ .raw_ = r }; }
 
     pub fn format(self: FloatReference, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13182,10 +12482,8 @@ pub const FloodColor = union(enum) {
     WindowFrame,
     WindowText,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) FloodColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) FloodColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) FloodColor { return .{ .raw_ = r }; }
 
     pub fn format(self: FloodColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13199,8 +12497,6 @@ pub const FloodOpacity = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FloodOpacity { return .{ .raw_ = r }; }
 
     pub fn format(self: FloodOpacity, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13214,8 +12510,6 @@ pub const FlowFrom = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FlowFrom { return .{ .raw_ = r }; }
 
     pub fn format(self: FlowFrom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13231,8 +12525,6 @@ pub const FlowInto = union(enum) {
     unset,
     element,
     content,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FlowInto { return .{ .raw_ = r }; }
 
     pub fn format(self: FlowInto, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13252,12 +12544,10 @@ pub const FlowTolerance = union(enum) {
     infinite,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) FlowTolerance { return .{ .px_ = v }; }
     pub fn em(v: f32) FlowTolerance { return .{ .em_ = v }; }
     pub fn rem(v: f32) FlowTolerance { return .{ .rem_ = v }; }
     pub fn percent(v: f32) FlowTolerance { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) FlowTolerance { return .{ .raw_ = r }; }
 
     pub fn format(self: FlowTolerance, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13293,8 +12583,6 @@ pub const Font = union(enum) {
     small_caption,
     ///     /// The font used in window status bars.
     status_bar,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Font { return .{ .raw_ = r }; }
 
     pub fn format(self: Font, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13319,8 +12607,6 @@ pub const FontFamily = union(enum) {
     ui_sans_serif,
     ui_monospace,
     ui_rounded,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FontFamily { return .{ .raw_ = r }; }
 
     pub fn format(self: FontFamily, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13338,8 +12624,6 @@ pub const FontFeatureSettings = union(enum) {
     normal,
     on,
     off,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FontFeatureSettings { return .{ .raw_ = r }; }
 
     pub fn format(self: FontFeatureSettings, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13357,8 +12641,6 @@ pub const FontKerning = union(enum) {
     auto,
     ///     /// Specifies that kerning is applied
     normal,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FontKerning { return .{ .raw_ = r }; }
 
     pub fn format(self: FontKerning, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13373,8 +12655,6 @@ pub const FontLanguageOverride = union(enum) {
     revert_layer,
     unset,
     normal,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FontLanguageOverride { return .{ .raw_ = r }; }
 
     pub fn format(self: FontLanguageOverride, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13390,8 +12670,6 @@ pub const FontOpticalSizing = union(enum) {
     unset,
     ///     /// The user agent may modify the shape of glyphs based on the font-size and the pixel density of the screen. For OpenType and TrueType fonts using font variations, this is often done by using the "opsz" font variation.
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FontOpticalSizing { return .{ .raw_ = r }; }
 
     pub fn format(self: FontOpticalSizing, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13411,8 +12689,6 @@ pub const FontPalette = union(enum) {
     light,
     ///     /// Some color font formats include metadata marking certain palettes as applicable on a dark (close to black) background. This keyword causes the user-agent to use the first available palette in the font file marked this way. If the font file format does not account for this metadata, or no palette in the font is marked this way, this value behaves as normal.
     dark,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FontPalette { return .{ .raw_ = r }; }
 
     pub fn format(self: FontPalette, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13440,12 +12716,10 @@ pub const FontSize = union(enum) {
     math,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) FontSize { return .{ .px_ = v }; }
     pub fn em(v: f32) FontSize { return .{ .em_ = v }; }
     pub fn rem(v: f32) FontSize { return .{ .rem_ = v }; }
     pub fn percent(v: f32) FontSize { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) FontSize { return .{ .raw_ = r }; }
 
     pub fn format(self: FontSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13471,8 +12745,6 @@ pub const FontSizeAdjust = union(enum) {
     ic_height,
     ///     /// Computes to the <number> corresponding to the specified metric of the first available font, if it exists. Otherwise, the same as none.
     from_font,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FontSizeAdjust { return .{ .raw_ = r }; }
 
     pub fn format(self: FontSizeAdjust, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13496,9 +12768,7 @@ pub const FontStretch = union(enum) {
     extra_expanded,
     ultra_expanded,
     percent_: f32,
-    raw_: []const u8,
     pub fn percent(v: f32) FontStretch { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) FontStretch { return .{ .raw_ = r }; }
 
     pub fn format(self: FontStretch, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13521,8 +12791,6 @@ pub const FontStyle = union(enum) {
     ///     /// Matches against a font that is labeled as an italic face, with a negative (counter-clockwise) slant; or an oblique face with negative slant, if one does not exist.
     right,
     oblique,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FontStyle { return .{ .raw_ = r }; }
 
     pub fn format(self: FontStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13540,8 +12808,6 @@ pub const FontSynthesis = union(enum) {
     style,
     small_caps,
     position,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FontSynthesis { return .{ .raw_ = r }; }
 
     pub fn format(self: FontSynthesis, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13557,8 +12823,6 @@ pub const FontSynthesisPosition = union(enum) {
     unset,
     ///     /// Synthesis of superscript and subscript forms is required
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FontSynthesisPosition { return .{ .raw_ = r }; }
 
     pub fn format(self: FontSynthesisPosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13574,8 +12838,6 @@ pub const FontSynthesisSmallCaps = union(enum) {
     unset,
     ///     /// Synthesis of small caps faces is allowed
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FontSynthesisSmallCaps { return .{ .raw_ = r }; }
 
     pub fn format(self: FontSynthesisSmallCaps, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13593,8 +12855,6 @@ pub const FontSynthesisStyle = union(enum) {
     auto,
     ///     /// Synthesis of oblique faces is allowed, but they must not be used as fallback if italic is specified
     oblique_only,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FontSynthesisStyle { return .{ .raw_ = r }; }
 
     pub fn format(self: FontSynthesisStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13610,8 +12870,6 @@ pub const FontSynthesisWeight = union(enum) {
     unset,
     ///     /// Synthesis of bold faces is allowed
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FontSynthesisWeight { return .{ .raw_ = r }; }
 
     pub fn format(self: FontSynthesisWeight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13664,8 +12922,6 @@ pub const FontVariant = union(enum) {
     text,
     emoji,
     unicode,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FontVariant { return .{ .raw_ = r }; }
 
     pub fn format(self: FontVariant, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13683,8 +12939,6 @@ pub const FontVariantAlternates = union(enum) {
     normal,
     ///     /// Enables display of historical forms (OpenType feature: hist).
     historical_forms,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FontVariantAlternates { return .{ .raw_ = r }; }
 
     pub fn format(self: FontVariantAlternates, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13712,8 +12966,6 @@ pub const FontVariantCaps = union(enum) {
     unicase,
     ///     /// Enables display of titling capitals (OpenType feature: titl). Uppercase letter glyphs are often designed for use with lowercase letters. When used in all uppercase titling sequences they can appear too strong. Titling capitals are designed specifically for this situation.
     titling_caps,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FontVariantCaps { return .{ .raw_ = r }; }
 
     pub fn format(self: FontVariantCaps, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13747,8 +12999,6 @@ pub const FontVariantEastAsian = union(enum) {
     proportional_width,
     ///     /// Enables display of ruby variant glyphs (OpenType feature: ruby). Since ruby text is generally smaller than the associated body text, font designers can design special glyphs for use with ruby that are more readable than scaled down versions of the default glyphs. Only glyph selection is affected, there is no associated font scaling or other change that affects line layout. The red ruby text below is shown with default glyphs (top) and with ruby variant glyphs (bottom). Note the slight difference in stroke thickness.
     ruby,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FontVariantEastAsian { return .{ .raw_ = r }; }
 
     pub fn format(self: FontVariantEastAsian, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13770,8 +13020,6 @@ pub const FontVariantEmoji = union(enum) {
     emoji,
     ///     /// Code points are rendered in accordance with [UTS51] as either emoji-default, text-default, or text-only, depending on the values of the Emoji and Emoji_Presentation properties for each Emoji Presentation Participating Code Point. If present, FE0E VARIATION SELECTOR-15 and U+FE0F VARIATION SELECTOR-16 will override the default presentation of individual Emoji Presentation Participating Code Points.
     unicode,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FontVariantEmoji { return .{ .raw_ = r }; }
 
     pub fn format(self: FontVariantEmoji, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13803,8 +13051,6 @@ pub const FontVariantLigatures = union(enum) {
     contextual,
     ///     /// Disables display of contextual alternates (OpenType feature: calt).
     no_contextual,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FontVariantLigatures { return .{ .raw_ = r }; }
 
     pub fn format(self: FontVariantLigatures, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13836,8 +13082,6 @@ pub const FontVariantNumeric = union(enum) {
     ordinal,
     ///     /// Enables display of slashed zeros (OpenType feature: zero).
     slashed_zero,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FontVariantNumeric { return .{ .raw_ = r }; }
 
     pub fn format(self: FontVariantNumeric, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13857,8 +13101,6 @@ pub const FontVariantPosition = union(enum) {
     sub,
     ///     /// Enables display of superscript variants (OpenType feature: sups).
     super,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FontVariantPosition { return .{ .raw_ = r }; }
 
     pub fn format(self: FontVariantPosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13873,8 +13115,6 @@ pub const FontVariationSettings = union(enum) {
     revert_layer,
     unset,
     normal,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FontVariationSettings { return .{ .raw_ = r }; }
 
     pub fn format(self: FontVariationSettings, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13896,8 +13136,6 @@ pub const FontWeight = union(enum) {
     bolder,
     ///     /// Specifies a lighter weight than the inherited value. See § 2.2.1 Relative Weights.
     lighter,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FontWeight { return .{ .raw_ = r }; }
 
     pub fn format(self: FontWeight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13921,9 +13159,7 @@ pub const FontWidth = union(enum) {
     extra_expanded,
     ultra_expanded,
     percent_: f32,
-    raw_: []const u8,
     pub fn percent(v: f32) FontWidth { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) FontWidth { return .{ .raw_ = r }; }
 
     pub fn format(self: FontWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13943,8 +13179,6 @@ pub const FootnoteDisplay = union(enum) {
     inline_,
     ///     /// The user agent determines whether a given footnote element is placed as a block element or an inline element. If two or more footnotes could fit on the same line in the footnote area, they should be placed inline.
     compact,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FootnoteDisplay { return .{ .raw_ = r }; }
 
     pub fn format(self: FootnoteDisplay, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13964,8 +13198,6 @@ pub const FootnotePolicy = union(enum) {
     line,
     ///     /// As with line, except a forced page break is introduced before the paragraph that contains the footnote.
     block,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) FootnotePolicy { return .{ .raw_ = r }; }
 
     pub fn format(self: FootnotePolicy, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13983,8 +13215,6 @@ pub const ForcedColorAdjust = union(enum) {
     auto,
     ///     /// In forced colors mode, if the color property inherits from its parent (i.e. there is no cascaded value or the cascaded value is currentColor, inherit, or another keyword that inherits from the parent), then it computes to the used color of its parent’s color value. In all other respects, behaves the same as none.
     preserve_parent_color,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ForcedColorAdjust { return .{ .raw_ = r }; }
 
     pub fn format(self: ForcedColorAdjust, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13998,8 +13228,6 @@ pub const Gap = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Gap { return .{ .raw_ = r }; }
 
     pub fn format(self: Gap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14015,8 +13243,6 @@ pub const GlyphOrientationVertical = union(enum) {
     unset,
     auto,
     @"0",
-    raw_: []const u8,
-    pub fn raw(r: []const u8) GlyphOrientationVertical { return .{ .raw_ = r }; }
 
     pub fn format(self: GlyphOrientationVertical, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14032,8 +13258,6 @@ pub const Grid = union(enum) {
     unset,
     auto_flow,
     dense,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Grid { return .{ .raw_ = r }; }
 
     pub fn format(self: Grid, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14049,8 +13273,6 @@ pub const GridArea = union(enum) {
     unset,
     auto,
     span,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) GridArea { return .{ .raw_ = r }; }
 
     pub fn format(self: GridArea, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14069,12 +13291,10 @@ pub const GridAutoColumns = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) GridAutoColumns { return .{ .px_ = v }; }
     pub fn em(v: f32) GridAutoColumns { return .{ .em_ = v }; }
     pub fn rem(v: f32) GridAutoColumns { return .{ .rem_ = v }; }
     pub fn percent(v: f32) GridAutoColumns { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) GridAutoColumns { return .{ .raw_ = r }; }
 
     pub fn format(self: GridAutoColumns, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14094,8 +13314,6 @@ pub const GridAutoFlow = union(enum) {
     column,
     ///     /// If specified, the auto-placement algorithm uses a “dense” packing algorithm, which attempts to fill in holes earlier in the grid if smaller items come up later. This may cause items to appear out-of-order, when doing so would fill in holes left by larger items. If omitted, a “sparse” algorithm is used, where the placement algorithm only ever moves “forward” in the grid when placing items, never backtracking to fill holes. This ensures that all of the auto-placed items appear “in order”, even if this leaves holes that could have been filled by later items.
     dense,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) GridAutoFlow { return .{ .raw_ = r }; }
 
     pub fn format(self: GridAutoFlow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14114,12 +13332,10 @@ pub const GridAutoRows = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) GridAutoRows { return .{ .px_ = v }; }
     pub fn em(v: f32) GridAutoRows { return .{ .em_ = v }; }
     pub fn rem(v: f32) GridAutoRows { return .{ .rem_ = v }; }
     pub fn percent(v: f32) GridAutoRows { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) GridAutoRows { return .{ .raw_ = r }; }
 
     pub fn format(self: GridAutoRows, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14135,8 +13351,6 @@ pub const GridColumn = union(enum) {
     unset,
     auto,
     span,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) GridColumn { return .{ .raw_ = r }; }
 
     pub fn format(self: GridColumn, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14152,8 +13366,6 @@ pub const GridColumnEnd = union(enum) {
     unset,
     auto,
     span,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) GridColumnEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: GridColumnEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14174,12 +13386,10 @@ pub const GridColumnGap = union(enum) {
     thick,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) GridColumnGap { return .{ .px_ = v }; }
     pub fn em(v: f32) GridColumnGap { return .{ .em_ = v }; }
     pub fn rem(v: f32) GridColumnGap { return .{ .rem_ = v }; }
     pub fn percent(v: f32) GridColumnGap { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) GridColumnGap { return .{ .raw_ = r }; }
 
     pub fn format(self: GridColumnGap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14195,8 +13405,6 @@ pub const GridColumnStart = union(enum) {
     unset,
     auto,
     span,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) GridColumnStart { return .{ .raw_ = r }; }
 
     pub fn format(self: GridColumnStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14210,8 +13418,6 @@ pub const GridGap = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) GridGap { return .{ .raw_ = r }; }
 
     pub fn format(self: GridGap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14227,8 +13433,6 @@ pub const GridRow = union(enum) {
     unset,
     auto,
     span,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) GridRow { return .{ .raw_ = r }; }
 
     pub fn format(self: GridRow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14244,8 +13448,6 @@ pub const GridRowEnd = union(enum) {
     unset,
     auto,
     span,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) GridRowEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: GridRowEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14266,12 +13468,10 @@ pub const GridRowGap = union(enum) {
     thick,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) GridRowGap { return .{ .px_ = v }; }
     pub fn em(v: f32) GridRowGap { return .{ .em_ = v }; }
     pub fn rem(v: f32) GridRowGap { return .{ .rem_ = v }; }
     pub fn percent(v: f32) GridRowGap { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) GridRowGap { return .{ .raw_ = r }; }
 
     pub fn format(self: GridRowGap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14287,8 +13487,6 @@ pub const GridRowStart = union(enum) {
     unset,
     auto,
     span,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) GridRowStart { return .{ .raw_ = r }; }
 
     pub fn format(self: GridRowStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14307,12 +13505,10 @@ pub const GridTemplate = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) GridTemplate { return .{ .px_ = v }; }
     pub fn em(v: f32) GridTemplate { return .{ .em_ = v }; }
     pub fn rem(v: f32) GridTemplate { return .{ .rem_ = v }; }
     pub fn percent(v: f32) GridTemplate { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) GridTemplate { return .{ .raw_ = r }; }
 
     pub fn format(self: GridTemplate, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14326,8 +13522,6 @@ pub const GridTemplateAreas = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) GridTemplateAreas { return .{ .raw_ = r }; }
 
     pub fn format(self: GridTemplateAreas, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14352,12 +13546,10 @@ pub const GridTemplateColumns = union(enum) {
     subgrid,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) GridTemplateColumns { return .{ .px_ = v }; }
     pub fn em(v: f32) GridTemplateColumns { return .{ .em_ = v }; }
     pub fn rem(v: f32) GridTemplateColumns { return .{ .rem_ = v }; }
     pub fn percent(v: f32) GridTemplateColumns { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) GridTemplateColumns { return .{ .raw_ = r }; }
 
     pub fn format(self: GridTemplateColumns, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14382,12 +13574,10 @@ pub const GridTemplateRows = union(enum) {
     subgrid,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) GridTemplateRows { return .{ .px_ = v }; }
     pub fn em(v: f32) GridTemplateRows { return .{ .em_ = v }; }
     pub fn rem(v: f32) GridTemplateRows { return .{ .rem_ = v }; }
     pub fn percent(v: f32) GridTemplateRows { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) GridTemplateRows { return .{ .raw_ = r }; }
 
     pub fn format(self: GridTemplateRows, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14409,8 +13599,6 @@ pub const HangingPunctuation = union(enum) {
     allow_end,
     ///     /// A closing bracket or quote at the end of the last formatted line of an element hangs. This applies to all characters in the Unicode categories Pe, Pf, Pi plus the ASCII quote marks U+0027 ' APOSTROPHE and U+0022 " QUOTATION MARK.
     last,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) HangingPunctuation { return .{ .raw_ = r }; }
 
     pub fn format(self: HangingPunctuation, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14438,12 +13626,10 @@ pub const Height = union(enum) {
     contain,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) Height { return .{ .px_ = v }; }
     pub fn em(v: f32) Height { return .{ .em_ = v }; }
     pub fn rem(v: f32) Height { return .{ .rem_ = v }; }
     pub fn percent(v: f32) Height { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) Height { return .{ .raw_ = r }; }
 
     pub fn format(self: Height, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14459,8 +13645,6 @@ pub const HyphenateCharacter = union(enum) {
     unset,
     ///     /// Specifies that the user agent should find an appropriate string based on the content language’s typographic conventions, possibly from the same source as the hyphenation dictionary.
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) HyphenateCharacter { return .{ .raw_ = r }; }
 
     pub fn format(self: HyphenateCharacter, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14476,8 +13660,6 @@ pub const HyphenateLimitChars = union(enum) {
     unset,
     ///     /// If three values are specified, the first value is the required minimum for the total characters in a word, the second value is the minimum for characters before the hyphenation point, and the third value is the minimum for characters after the hyphenation point. If the third value is missing, it is the same as the second. If the second value is missing, then it is auto. The auto value means that the UA chooses a value that adapts to the current layout.
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) HyphenateLimitChars { return .{ .raw_ = r }; }
 
     pub fn format(self: HyphenateLimitChars, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14495,8 +13677,6 @@ pub const HyphenateLimitLast = union(enum) {
     column,
     page,
     spread,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) HyphenateLimitLast { return .{ .raw_ = r }; }
 
     pub fn format(self: HyphenateLimitLast, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14511,8 +13691,6 @@ pub const HyphenateLimitLines = union(enum) {
     revert_layer,
     unset,
     no_limit,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) HyphenateLimitLines { return .{ .raw_ = r }; }
 
     pub fn format(self: HyphenateLimitLines, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14528,12 +13706,10 @@ pub const HyphenateLimitZone = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) HyphenateLimitZone { return .{ .px_ = v }; }
     pub fn em(v: f32) HyphenateLimitZone { return .{ .em_ = v }; }
     pub fn rem(v: f32) HyphenateLimitZone { return .{ .rem_ = v }; }
     pub fn percent(v: f32) HyphenateLimitZone { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) HyphenateLimitZone { return .{ .raw_ = r }; }
 
     pub fn format(self: HyphenateLimitZone, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14551,8 +13727,6 @@ pub const Hyphens = union(enum) {
     manual,
     ///     /// Words may be broken at hyphenation opportunities determined automatically by a language-appropriate hyphenation resource in addition to those indicated explicitly by a conditional hyphen. Automatic hyphenation opportunities elsewhere within a word must be ignored if the word contains a conditional hyphen (&shy; or U+00AD SOFT HYPHEN), in favor of the conditional hyphen(s). However, if, even after breaking at such opportunities, a portion of that word is still too long to fit on one line, an automatic hyphenation opportunity may be used.
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Hyphens { return .{ .raw_ = r }; }
 
     pub fn format(self: Hyphens, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14574,8 +13748,6 @@ pub const ImageAnimation = union(enum) {
     stopped,
     ///     /// Like normal, the animation of animated images is run normally, as determined by the image format and the host language. However, animation timelines are scoped per element: among the content image and decorative images of a single element, any animated images with the same absolute URL, the same image data, and with an image-animation computed value of running must be rendered synchronized to the same timeline as a group, distinct from the timeline of images in other elements. If images are added to the element while the computed value is running, the timeline starts at the time of the least recent addition to the group. If the element is created or made visible after having previously been set to display: none, with images already added and with image-animation already set to running, the timeline starts when the element is included in the layout. If this property is switched to running from another value, the beginnig of this timeline is set so that the animation continues from the state that was displayed at the timem of the switch.
     running,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ImageAnimation { return .{ .raw_ = r }; }
 
     pub fn format(self: ImageAnimation, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14592,8 +13764,6 @@ pub const ImageOrientation = union(enum) {
     ///     /// If the image has an orientation specified in its metadata, such as EXIF, this value computes to the angle that the metadata specifies is necessary to correctly orient the image. If necessary, this angle is then rounded and normalized as described above for an <angle> value. If there is no orientation specified in its metadata, this value computes to none.
     from_image,
     flip,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ImageOrientation { return .{ .raw_ = r }; }
 
     pub fn format(self: ImageOrientation, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14617,8 +13787,6 @@ pub const ImageRendering = union(enum) {
     pixelated,
     ///     /// The image is scaled in a way that preserves contrast and edges, and which avoids smoothing colors or introducing blur to the image in the process. This is intended for images such as line drawings. The image may be scaled using nearest neighbor or any other UA-chosen algorithm that does not blur edges or blend colors from the source image. It can, however, detect diagonal or curved lines and render them as such (rather than as jagged-looking “giant pixels”).
     crisp_edges,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ImageRendering { return .{ .raw_ = r }; }
 
     pub fn format(self: ImageRendering, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14636,8 +13804,6 @@ pub const ImageResolution = union(enum) {
     from_image,
     ///     /// If the "snap" keyword is provided, the computed <resolution> (if any) is the specified resolution rounded to the nearest value that would map one image pixel to an integer number of device pixels. If the resolution is taken from the image, then the used natural resolution is the image’s native resolution similarly adjusted.
     snap,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ImageResolution { return .{ .raw_ = r }; }
 
     pub fn format(self: ImageResolution, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14657,8 +13823,6 @@ pub const InitialLetter = union(enum) {
     drop,
     ///     /// Computes to an initial letter sink of 1.
     raise,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) InitialLetter { return .{ .raw_ = r }; }
 
     pub fn format(self: InitialLetter, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14682,8 +13846,6 @@ pub const InitialLetterAlign = union(enum) {
     hanging,
     ///     /// Use the over/under half-leading edges (i.e. ascent/descent + half-leading) of the surrounding text to align the initial letter.
     leading,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) InitialLetterAlign { return .{ .raw_ = r }; }
 
     pub fn format(self: InitialLetterAlign, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14705,12 +13867,10 @@ pub const InitialLetterWrap = union(enum) {
     grid,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) InitialLetterWrap { return .{ .px_ = v }; }
     pub fn em(v: f32) InitialLetterWrap { return .{ .em_ = v }; }
     pub fn rem(v: f32) InitialLetterWrap { return .{ .rem_ = v }; }
     pub fn percent(v: f32) InitialLetterWrap { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) InitialLetterWrap { return .{ .raw_ = r }; }
 
     pub fn format(self: InitialLetterWrap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14724,8 +13884,6 @@ pub const InlineSize = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) InlineSize { return .{ .raw_ = r }; }
 
     pub fn format(self: InlineSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14743,8 +13901,6 @@ pub const InlineSizing = union(enum) {
     normal,
     ///     /// Once the line box has been sized and its contents positioned as for normal, the inline box’s box edges are shifted such that its over/under margin edges coincide with the corresponding line box’s edges, stretching the inline box’s inner logical height so that its block-axis outer size fills the line box. (The sizes and positions of its in-flow contents are not affected.)
     stretch,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) InlineSizing { return .{ .raw_ = r }; }
 
     pub fn format(self: InlineSizing, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14760,8 +13916,6 @@ pub const InputSecurity = union(enum) {
     unset,
     ///     /// The UA should obscure the text in the control, so that it cannot be read by the user.
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) InputSecurity { return .{ .raw_ = r }; }
 
     pub fn format(self: InputSecurity, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14775,8 +13929,6 @@ pub const Inset = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Inset { return .{ .raw_ = r }; }
 
     pub fn format(self: Inset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14790,8 +13942,6 @@ pub const InsetBlock = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) InsetBlock { return .{ .raw_ = r }; }
 
     pub fn format(self: InsetBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14809,12 +13959,10 @@ pub const InsetBlockEnd = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) InsetBlockEnd { return .{ .px_ = v }; }
     pub fn em(v: f32) InsetBlockEnd { return .{ .em_ = v }; }
     pub fn rem(v: f32) InsetBlockEnd { return .{ .rem_ = v }; }
     pub fn percent(v: f32) InsetBlockEnd { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) InsetBlockEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: InsetBlockEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14832,12 +13980,10 @@ pub const InsetBlockStart = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) InsetBlockStart { return .{ .px_ = v }; }
     pub fn em(v: f32) InsetBlockStart { return .{ .em_ = v }; }
     pub fn rem(v: f32) InsetBlockStart { return .{ .rem_ = v }; }
     pub fn percent(v: f32) InsetBlockStart { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) InsetBlockStart { return .{ .raw_ = r }; }
 
     pub fn format(self: InsetBlockStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14851,8 +13997,6 @@ pub const InsetInline = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) InsetInline { return .{ .raw_ = r }; }
 
     pub fn format(self: InsetInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14870,12 +14014,10 @@ pub const InsetInlineEnd = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) InsetInlineEnd { return .{ .px_ = v }; }
     pub fn em(v: f32) InsetInlineEnd { return .{ .em_ = v }; }
     pub fn rem(v: f32) InsetInlineEnd { return .{ .rem_ = v }; }
     pub fn percent(v: f32) InsetInlineEnd { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) InsetInlineEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: InsetInlineEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14893,12 +14035,10 @@ pub const InsetInlineStart = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) InsetInlineStart { return .{ .px_ = v }; }
     pub fn em(v: f32) InsetInlineStart { return .{ .em_ = v }; }
     pub fn rem(v: f32) InsetInlineStart { return .{ .rem_ = v }; }
     pub fn percent(v: f32) InsetInlineStart { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) InsetInlineStart { return .{ .raw_ = r }; }
 
     pub fn format(self: InsetInlineStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14916,8 +14056,6 @@ pub const Interactivity = union(enum) {
     auto,
     ///     /// The element is inert.
     inert,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Interactivity { return .{ .raw_ = r }; }
 
     pub fn format(self: Interactivity, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14931,8 +14069,6 @@ pub const InterestDelay = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) InterestDelay { return .{ .raw_ = r }; }
 
     pub fn format(self: InterestDelay, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14948,8 +14084,6 @@ pub const InterestDelayEnd = union(enum) {
     unset,
     ///     /// The interest start delay and/or the interest end delay are UA-defined. They can be chosen to match platform conventions. These delays should not be zero. They may be different from each other, and may vary depending on the way the user is showing interest. (For example, a "hover" and a "long press" might use different delays for indicating interest.)
     normal,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) InterestDelayEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: InterestDelayEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14965,8 +14099,6 @@ pub const InterestDelayStart = union(enum) {
     unset,
     ///     /// The interest start delay and/or the interest end delay are UA-defined. They can be chosen to match platform conventions. These delays should not be zero. They may be different from each other, and may vary depending on the way the user is showing interest. (For example, a "hover" and a "long press" might use different delays for indicating interest.)
     normal,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) InterestDelayStart { return .{ .raw_ = r }; }
 
     pub fn format(self: InterestDelayStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14984,8 +14116,6 @@ pub const InterpolateSize = union(enum) {
     numeric_only,
     ///     /// Two values can also be interpolated if one of them is an <intrinsic-size-keyword> and the other is a <length-percentage>. This is done by treating the <intrinsic-size-keyword> keyword as though it is calc-size(keyword, size) and applying the rules in § 11.3 Interpolating calc-size(). In other cases, an <intrinsic-size-keyword> still cannot be interpolated.
     allow_keywords,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) InterpolateSize { return .{ .raw_ = r }; }
 
     pub fn format(self: InterpolateSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15001,8 +14131,6 @@ pub const Isolation = union(enum) {
     unset,
     auto,
     isolate,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Isolation { return .{ .raw_ = r }; }
 
     pub fn format(self: Isolation, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15033,8 +14161,6 @@ pub const JustifyContent = union(enum) {
     left,
     ///     /// Aligns the alignment subject to be flush with the alignment container’s line-right or physical right edge, whichever is in the appropriate axis. If the property’s axis is not parallel with either left↔right axis, this value behaves as start. Currently, the only case where the property’s axis is not parallel with either left↔right axis is in a column flexbox.
     right,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) JustifyContent { return .{ .raw_ = r }; }
 
     pub fn format(self: JustifyContent, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15070,8 +14196,6 @@ pub const JustifyItems = union(enum) {
     legacy,
     ///     /// The new anchor-center value makes this case extremely simple: if the positioned box has a default anchor box, then it is centered (insofar as possible) over the default anchor box in the relevant axis. Additionally:
     anchor_center,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) JustifyItems { return .{ .raw_ = r }; }
 
     pub fn format(self: JustifyItems, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15109,8 +14233,6 @@ pub const JustifySelf = union(enum) {
     baseline,
     ///     /// The new anchor-center value makes this case extremely simple: if the positioned box has a default anchor box, then it is centered (insofar as possible) over the default anchor box in the relevant axis. Additionally:
     anchor_center,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) JustifySelf { return .{ .raw_ = r }; }
 
     pub fn format(self: JustifySelf, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15128,12 +14250,10 @@ pub const Left = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) Left { return .{ .px_ = v }; }
     pub fn em(v: f32) Left { return .{ .em_ = v }; }
     pub fn rem(v: f32) Left { return .{ .rem_ = v }; }
     pub fn percent(v: f32) Left { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) Left { return .{ .raw_ = r }; }
 
     pub fn format(self: Left, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15151,12 +14271,10 @@ pub const LetterSpacing = union(enum) {
     normal,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) LetterSpacing { return .{ .px_ = v }; }
     pub fn em(v: f32) LetterSpacing { return .{ .em_ = v }; }
     pub fn rem(v: f32) LetterSpacing { return .{ .rem_ = v }; }
     pub fn percent(v: f32) LetterSpacing { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) LetterSpacing { return .{ .raw_ = r }; }
 
     pub fn format(self: LetterSpacing, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15363,10 +14481,8 @@ pub const LightingColor = union(enum) {
     WindowFrame,
     WindowText,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) LightingColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) LightingColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) LightingColor { return .{ .raw_ = r }; }
 
     pub fn format(self: LightingColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15390,8 +14506,6 @@ pub const LineBreak = union(enum) {
     strict,
     ///     /// There is a soft wrap opportunity around every typographic character unit, including around any punctuation character or preserved white spaces, or in the middle of words, disregarding any prohibition against line breaks, even those introduced by characters with the GL, WJ, or ZWJ line breaking classes or mandated by the word-break property. [UAX14] The different wrapping opportunities must not be prioritized. Hyphenation is not applied.
     anywhere,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) LineBreak { return .{ .raw_ = r }; }
 
     pub fn format(self: LineBreak, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15407,8 +14521,6 @@ pub const LineClamp = union(enum) {
     unset,
     ///     /// Sets continue to -webkit-legacy.
     webkit_legacy,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) LineClamp { return .{ .raw_ = r }; }
 
     pub fn format(self: LineClamp, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15436,8 +14548,6 @@ pub const LineFitEdge = union(enum) {
     ex,
     ///     /// Use the alphabetic baseline as the under edge.
     alphabetic,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) LineFitEdge { return .{ .raw_ = r }; }
 
     pub fn format(self: LineFitEdge, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15455,8 +14565,6 @@ pub const LineGrid = union(enum) {
     match_parent,
     ///     /// Box creates a new line grid using its own font and line layout settings, including any adjustment to the line height caused by the line-height-step property. The line grid consists of a series of horizontal lines corresponding to all the baselines (alphabetic, text-top, text-bottom, mathematic, central, hanging, etc.) and to the line-over and line-under edges, positioned where they would fall if the contents of this element consisted entirely of line boxes filled with text (no sub-elements) using the first available font. If the box is paginated, the line grid is restarted on each page; since line boxes cannot be fragmented, no page begins with the bottom part of a line’s grid.
     create,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) LineGrid { return .{ .raw_ = r }; }
 
     pub fn format(self: LineGrid, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15474,12 +14582,10 @@ pub const LineHeight = union(enum) {
     normal,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) LineHeight { return .{ .px_ = v }; }
     pub fn em(v: f32) LineHeight { return .{ .em_ = v }; }
     pub fn rem(v: f32) LineHeight { return .{ .rem_ = v }; }
     pub fn percent(v: f32) LineHeight { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) LineHeight { return .{ .raw_ = r }; }
 
     pub fn format(self: LineHeight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15494,11 +14600,9 @@ pub const LineHeightStep = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) LineHeightStep { return .{ .px_ = v }; }
     pub fn em(v: f32) LineHeightStep { return .{ .em_ = v }; }
     pub fn rem(v: f32) LineHeightStep { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) LineHeightStep { return .{ .raw_ = r }; }
 
     pub fn format(self: LineHeightStep, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15513,11 +14617,9 @@ pub const LinePadding = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) LinePadding { return .{ .px_ = v }; }
     pub fn em(v: f32) LinePadding { return .{ .em_ = v }; }
     pub fn rem(v: f32) LinePadding { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) LinePadding { return .{ .raw_ = r }; }
 
     pub fn format(self: LinePadding, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15535,8 +14637,6 @@ pub const LineSnap = union(enum) {
     baseline,
     ///     /// Two baselines are used to align the line box: the line box is snapped so that its central baseline is centered between one of the line grid’s text-over-edge baselines and a subsequent (but not necessarily consecutive) text-under-edge baseline.
     contain,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) LineSnap { return .{ .raw_ = r }; }
 
     pub fn format(self: LineSnap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15550,8 +14650,6 @@ pub const LinkParameters = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) LinkParameters { return .{ .raw_ = r }; }
 
     pub fn format(self: LinkParameters, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15565,8 +14663,6 @@ pub const ListStyle = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ListStyle { return .{ .raw_ = r }; }
 
     pub fn format(self: ListStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15580,8 +14676,6 @@ pub const ListStyleImage = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ListStyleImage { return .{ .raw_ = r }; }
 
     pub fn format(self: ListStyleImage, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15599,8 +14693,6 @@ pub const ListStylePosition = union(enum) {
     inside,
     ///     /// If the list item is a block container: the marker box is a block container and is placed outside the principal block box; however, the position of the list-item marker adjacent to floats is undefined. CSS does not specify the precise location of the marker box or its position in the painting order, but does require that it be placed on the inline-start side of the box, using the writing mode of the box indicated by marker-side. The marker box is fixed with respect to the principal block box’s border and does not scroll with the principal box’s content. A UA may hide the marker if the element’s overflow is other than visible. (This allowance may change in the future.) The size or contents of the marker box may affect the height of the principal block box and/or the height of its first line box, and in some cases may cause the creation of a new line box; this interaction is also not defined. This is handwavey nonsense from CSS2, and needs a real definition. If the list item is an inline box: this value is equivalent to inside. Alternatively, outside could lay out the marker as a previous sibling of the principal inline box.
     outside,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ListStylePosition { return .{ .raw_ = r }; }
 
     pub fn format(self: ListStylePosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15614,8 +14706,6 @@ pub const ListStyleType = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ListStyleType { return .{ .raw_ = r }; }
 
     pub fn format(self: ListStyleType, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15629,8 +14719,6 @@ pub const Margin = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Margin { return .{ .raw_ = r }; }
 
     pub fn format(self: Margin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15644,8 +14732,6 @@ pub const MarginBlock = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MarginBlock { return .{ .raw_ = r }; }
 
     pub fn format(self: MarginBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15659,8 +14745,6 @@ pub const MarginBlockEnd = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MarginBlockEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: MarginBlockEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15674,8 +14758,6 @@ pub const MarginBlockStart = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MarginBlockStart { return .{ .raw_ = r }; }
 
     pub fn format(self: MarginBlockStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15692,12 +14774,10 @@ pub const MarginBottom = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) MarginBottom { return .{ .px_ = v }; }
     pub fn em(v: f32) MarginBottom { return .{ .em_ = v }; }
     pub fn rem(v: f32) MarginBottom { return .{ .rem_ = v }; }
     pub fn percent(v: f32) MarginBottom { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) MarginBottom { return .{ .raw_ = r }; }
 
     pub fn format(self: MarginBottom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15717,8 +14797,6 @@ pub const MarginBreak = union(enum) {
     keep,
     ///     /// Margins adjoining a fragmentation break are always truncated, including at the start and end of a fragmentation context.
     discard,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MarginBreak { return .{ .raw_ = r }; }
 
     pub fn format(self: MarginBreak, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15732,8 +14810,6 @@ pub const MarginInline = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MarginInline { return .{ .raw_ = r }; }
 
     pub fn format(self: MarginInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15747,8 +14823,6 @@ pub const MarginInlineEnd = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MarginInlineEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: MarginInlineEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15762,8 +14836,6 @@ pub const MarginInlineStart = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MarginInlineStart { return .{ .raw_ = r }; }
 
     pub fn format(self: MarginInlineStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15780,12 +14852,10 @@ pub const MarginLeft = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) MarginLeft { return .{ .px_ = v }; }
     pub fn em(v: f32) MarginLeft { return .{ .em_ = v }; }
     pub fn rem(v: f32) MarginLeft { return .{ .rem_ = v }; }
     pub fn percent(v: f32) MarginLeft { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) MarginLeft { return .{ .raw_ = r }; }
 
     pub fn format(self: MarginLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15802,12 +14872,10 @@ pub const MarginRight = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) MarginRight { return .{ .px_ = v }; }
     pub fn em(v: f32) MarginRight { return .{ .em_ = v }; }
     pub fn rem(v: f32) MarginRight { return .{ .rem_ = v }; }
     pub fn percent(v: f32) MarginRight { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) MarginRight { return .{ .raw_ = r }; }
 
     pub fn format(self: MarginRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15824,12 +14892,10 @@ pub const MarginTop = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) MarginTop { return .{ .px_ = v }; }
     pub fn em(v: f32) MarginTop { return .{ .em_ = v }; }
     pub fn rem(v: f32) MarginTop { return .{ .rem_ = v }; }
     pub fn percent(v: f32) MarginTop { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) MarginTop { return .{ .raw_ = r }; }
 
     pub fn format(self: MarginTop, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15855,8 +14921,6 @@ pub const MarginTrim = union(enum) {
     block_end,
     ///     /// Computes to block-start block-end.
     inline_end,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MarginTrim { return .{ .raw_ = r }; }
 
     pub fn format(self: MarginTrim, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15870,8 +14934,6 @@ pub const Marker = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Marker { return .{ .raw_ = r }; }
 
     pub fn format(self: Marker, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15885,8 +14947,6 @@ pub const MarkerEnd = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MarkerEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: MarkerEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15900,8 +14960,6 @@ pub const MarkerMid = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MarkerMid { return .{ .raw_ = r }; }
 
     pub fn format(self: MarkerMid, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15919,8 +14977,6 @@ pub const MarkerSide = union(enum) {
     match_self,
     ///     /// The marker box is positioned using the directionality of the ::marker’s originating element’s parent element.
     match_parent,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MarkerSide { return .{ .raw_ = r }; }
 
     pub fn format(self: MarkerSide, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15934,8 +14990,6 @@ pub const MarkerStart = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MarkerStart { return .{ .raw_ = r }; }
 
     pub fn format(self: MarkerStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15993,12 +15047,10 @@ pub const Mask = union(enum) {
     match_source,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) Mask { return .{ .px_ = v }; }
     pub fn em(v: f32) Mask { return .{ .em_ = v }; }
     pub fn rem(v: f32) Mask { return .{ .rem_ = v }; }
     pub fn percent(v: f32) Mask { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) Mask { return .{ .raw_ = r }; }
 
     pub fn format(self: Mask, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16012,8 +15064,6 @@ pub const MaskBorder = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MaskBorder { return .{ .raw_ = r }; }
 
     pub fn format(self: MaskBorder, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16031,8 +15081,6 @@ pub const MaskBorderMode = union(enum) {
     luminance,
     ///     /// A value of alpha indicates that the alpha values of the mask border image should be used as the mask values. See Calculating mask values.
     alpha,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MaskBorderMode { return .{ .raw_ = r }; }
 
     pub fn format(self: MaskBorderMode, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16047,11 +15095,9 @@ pub const MaskBorderOutset = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) MaskBorderOutset { return .{ .px_ = v }; }
     pub fn em(v: f32) MaskBorderOutset { return .{ .em_ = v }; }
     pub fn rem(v: f32) MaskBorderOutset { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) MaskBorderOutset { return .{ .raw_ = r }; }
 
     pub fn format(self: MaskBorderOutset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16069,8 +15115,6 @@ pub const MaskBorderRepeat = union(enum) {
     repeat,
     round,
     space,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MaskBorderRepeat { return .{ .raw_ = r }; }
 
     pub fn format(self: MaskBorderRepeat, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16087,9 +15131,7 @@ pub const MaskBorderSlice = union(enum) {
     ///     /// This property specifies inward offsets from the top, right, bottom, and left edges of the mask border image, dividing it into nine regions: four corners, four edges and a middle. The middle image part is discarded and treated as fully opaque white (the content covered by the middle part is not masked and shines through) unless the fill keyword is present.
     fill,
     percent_: f32,
-    raw_: []const u8,
     pub fn percent(v: f32) MaskBorderSlice { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) MaskBorderSlice { return .{ .raw_ = r }; }
 
     pub fn format(self: MaskBorderSlice, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16103,8 +15145,6 @@ pub const MaskBorderSource = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MaskBorderSource { return .{ .raw_ = r }; }
 
     pub fn format(self: MaskBorderSource, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16121,12 +15161,10 @@ pub const MaskBorderWidth = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) MaskBorderWidth { return .{ .px_ = v }; }
     pub fn em(v: f32) MaskBorderWidth { return .{ .em_ = v }; }
     pub fn rem(v: f32) MaskBorderWidth { return .{ .rem_ = v }; }
     pub fn percent(v: f32) MaskBorderWidth { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) MaskBorderWidth { return .{ .raw_ = r }; }
 
     pub fn format(self: MaskBorderWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16154,8 +15192,6 @@ pub const MaskClip = union(enum) {
     view_box,
     ///     /// The painted content is not restricted (not clipped).
     no_clip,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MaskClip { return .{ .raw_ = r }; }
 
     pub fn format(self: MaskClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16177,8 +15213,6 @@ pub const MaskComposite = union(enum) {
     intersect,
     ///     /// The non-overlapping regions of source and destination are combined. (See Porter-Duff compositing operator XOR.)
     exclude,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MaskComposite { return .{ .raw_ = r }; }
 
     pub fn format(self: MaskComposite, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16192,8 +15226,6 @@ pub const MaskImage = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MaskImage { return .{ .raw_ = r }; }
 
     pub fn format(self: MaskImage, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16213,8 +15245,6 @@ pub const MaskMode = union(enum) {
     luminance,
     ///     /// If the <mask-reference> of the mask-image property is of type <mask-source> the value specified by the referenced mask element’s mask-type property must be used. If the <mask-reference> of the mask-image property is of type <image> the alpha values of the mask layer image should be used as the mask values.
     match_source,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MaskMode { return .{ .raw_ = r }; }
 
     pub fn format(self: MaskMode, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16240,8 +15270,6 @@ pub const MaskOrigin = union(enum) {
     stroke_box,
     ///     /// Uses the nearest SVG viewport as reference box. If a viewBox attribute is specified for the SVG viewport creating element: The reference box is positioned at the origin of the coordinate system established by the viewBox attribute. The dimension of the reference box is set to the width and height values of the viewBox attribute.
     view_box,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MaskOrigin { return .{ .raw_ = r }; }
 
     pub fn format(self: MaskOrigin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16272,12 +15300,10 @@ pub const MaskPosition = union(enum) {
     end,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) MaskPosition { return .{ .px_ = v }; }
     pub fn em(v: f32) MaskPosition { return .{ .em_ = v }; }
     pub fn rem(v: f32) MaskPosition { return .{ .rem_ = v }; }
     pub fn percent(v: f32) MaskPosition { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) MaskPosition { return .{ .raw_ = r }; }
 
     pub fn format(self: MaskPosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16299,8 +15325,6 @@ pub const MaskRepeat = union(enum) {
     space,
     round,
     no_repeat,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MaskRepeat { return .{ .raw_ = r }; }
 
     pub fn format(self: MaskRepeat, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16319,12 +15343,10 @@ pub const MaskSize = union(enum) {
     contain,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) MaskSize { return .{ .px_ = v }; }
     pub fn em(v: f32) MaskSize { return .{ .em_ = v }; }
     pub fn rem(v: f32) MaskSize { return .{ .rem_ = v }; }
     pub fn percent(v: f32) MaskSize { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) MaskSize { return .{ .raw_ = r }; }
 
     pub fn format(self: MaskSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16342,8 +15364,6 @@ pub const MaskType = union(enum) {
     luminance,
     ///     /// Indicates that the alpha values of the mask should be used.
     alpha,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MaskType { return .{ .raw_ = r }; }
 
     pub fn format(self: MaskType, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16358,8 +15378,6 @@ pub const MathDepth = union(enum) {
     revert_layer,
     unset,
     auto_add,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MathDepth { return .{ .raw_ = r }; }
 
     pub fn format(self: MathDepth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16375,8 +15393,6 @@ pub const MathShift = union(enum) {
     unset,
     normal,
     compact,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MathShift { return .{ .raw_ = r }; }
 
     pub fn format(self: MathShift, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16392,8 +15408,6 @@ pub const MathStyle = union(enum) {
     unset,
     normal,
     compact,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MathStyle { return .{ .raw_ = r }; }
 
     pub fn format(self: MathStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16407,8 +15421,6 @@ pub const MaxBlockSize = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MaxBlockSize { return .{ .raw_ = r }; }
 
     pub fn format(self: MaxBlockSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16434,12 +15446,10 @@ pub const MaxHeight = union(enum) {
     contain,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) MaxHeight { return .{ .px_ = v }; }
     pub fn em(v: f32) MaxHeight { return .{ .em_ = v }; }
     pub fn rem(v: f32) MaxHeight { return .{ .rem_ = v }; }
     pub fn percent(v: f32) MaxHeight { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) MaxHeight { return .{ .raw_ = r }; }
 
     pub fn format(self: MaxHeight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16453,8 +15463,6 @@ pub const MaxInlineSize = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MaxInlineSize { return .{ .raw_ = r }; }
 
     pub fn format(self: MaxInlineSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16468,8 +15476,6 @@ pub const MaxLines = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MaxLines { return .{ .raw_ = r }; }
 
     pub fn format(self: MaxLines, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16495,12 +15501,10 @@ pub const MaxWidth = union(enum) {
     contain,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) MaxWidth { return .{ .px_ = v }; }
     pub fn em(v: f32) MaxWidth { return .{ .em_ = v }; }
     pub fn rem(v: f32) MaxWidth { return .{ .rem_ = v }; }
     pub fn percent(v: f32) MaxWidth { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) MaxWidth { return .{ .raw_ = r }; }
 
     pub fn format(self: MaxWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16514,8 +15518,6 @@ pub const MinBlockSize = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MinBlockSize { return .{ .raw_ = r }; }
 
     pub fn format(self: MinBlockSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16543,12 +15545,10 @@ pub const MinHeight = union(enum) {
     contain,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) MinHeight { return .{ .px_ = v }; }
     pub fn em(v: f32) MinHeight { return .{ .em_ = v }; }
     pub fn rem(v: f32) MinHeight { return .{ .rem_ = v }; }
     pub fn percent(v: f32) MinHeight { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) MinHeight { return .{ .raw_ = r }; }
 
     pub fn format(self: MinHeight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16562,8 +15562,6 @@ pub const MinInlineSize = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MinInlineSize { return .{ .raw_ = r }; }
 
     pub fn format(self: MinInlineSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16583,8 +15581,6 @@ pub const MinIntrinsicSizing = union(enum) {
     zero_if_scroll,
     ///     /// The box’s min-content contribution is “compressed” if has an extrinsic preferred or maximum size.
     zero_if_extrinsic,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MinIntrinsicSizing { return .{ .raw_ = r }; }
 
     pub fn format(self: MinIntrinsicSizing, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16612,12 +15608,10 @@ pub const MinWidth = union(enum) {
     contain,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) MinWidth { return .{ .px_ = v }; }
     pub fn em(v: f32) MinWidth { return .{ .em_ = v }; }
     pub fn rem(v: f32) MinWidth { return .{ .rem_ = v }; }
     pub fn percent(v: f32) MinWidth { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) MinWidth { return .{ .raw_ = r }; }
 
     pub fn format(self: MinWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16648,8 +15642,6 @@ pub const MixBlendMode = union(enum) {
     color,
     luminosity,
     plus_lighter,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) MixBlendMode { return .{ .raw_ = r }; }
 
     pub fn format(self: MixBlendMode, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16666,8 +15658,6 @@ pub const NavDown = union(enum) {
     auto,
     current,
     root,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) NavDown { return .{ .raw_ = r }; }
 
     pub fn format(self: NavDown, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16684,8 +15674,6 @@ pub const NavLeft = union(enum) {
     auto,
     current,
     root,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) NavLeft { return .{ .raw_ = r }; }
 
     pub fn format(self: NavLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16702,8 +15690,6 @@ pub const NavRight = union(enum) {
     auto,
     current,
     root,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) NavRight { return .{ .raw_ = r }; }
 
     pub fn format(self: NavRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16720,8 +15706,6 @@ pub const NavUp = union(enum) {
     auto,
     current,
     root,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) NavUp { return .{ .raw_ = r }; }
 
     pub fn format(self: NavUp, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16743,8 +15727,6 @@ pub const ObjectFit = union(enum) {
     cover,
     ///     /// Equivalent to contain scale-down.
     scale_down,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ObjectFit { return .{ .raw_ = r }; }
 
     pub fn format(self: ObjectFit, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16775,12 +15757,10 @@ pub const ObjectPosition = union(enum) {
     end,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ObjectPosition { return .{ .px_ = v }; }
     pub fn em(v: f32) ObjectPosition { return .{ .em_ = v }; }
     pub fn rem(v: f32) ObjectPosition { return .{ .rem_ = v }; }
     pub fn percent(v: f32) ObjectPosition { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) ObjectPosition { return .{ .raw_ = r }; }
 
     pub fn format(self: ObjectPosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16794,8 +15774,6 @@ pub const ObjectViewBox = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ObjectViewBox { return .{ .raw_ = r }; }
 
     pub fn format(self: ObjectViewBox, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16809,8 +15787,6 @@ pub const Offset = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Offset { return .{ .raw_ = r }; }
 
     pub fn format(self: Offset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16843,12 +15819,10 @@ pub const OffsetAnchor = union(enum) {
     end,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) OffsetAnchor { return .{ .px_ = v }; }
     pub fn em(v: f32) OffsetAnchor { return .{ .em_ = v }; }
     pub fn rem(v: f32) OffsetAnchor { return .{ .rem_ = v }; }
     pub fn percent(v: f32) OffsetAnchor { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) OffsetAnchor { return .{ .raw_ = r }; }
 
     pub fn format(self: OffsetAnchor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16864,12 +15838,10 @@ pub const OffsetDistance = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) OffsetDistance { return .{ .px_ = v }; }
     pub fn em(v: f32) OffsetDistance { return .{ .em_ = v }; }
     pub fn rem(v: f32) OffsetDistance { return .{ .rem_ = v }; }
     pub fn percent(v: f32) OffsetDistance { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) OffsetDistance { return .{ .raw_ = r }; }
 
     pub fn format(self: OffsetDistance, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16889,8 +15861,6 @@ pub const OffsetPath = union(enum) {
     fill_box,
     stroke_box,
     view_box,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) OffsetPath { return .{ .raw_ = r }; }
 
     pub fn format(self: OffsetPath, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16925,12 +15895,10 @@ pub const OffsetPosition = union(enum) {
     end,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) OffsetPosition { return .{ .px_ = v }; }
     pub fn em(v: f32) OffsetPosition { return .{ .em_ = v }; }
     pub fn rem(v: f32) OffsetPosition { return .{ .rem_ = v }; }
     pub fn percent(v: f32) OffsetPosition { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) OffsetPosition { return .{ .raw_ = r }; }
 
     pub fn format(self: OffsetPosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16948,8 +15916,6 @@ pub const OffsetRotate = union(enum) {
     auto,
     ///     /// Identical to auto, but adds an additional 180deg to the rotation.
     reverse,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) OffsetRotate { return .{ .raw_ = r }; }
 
     pub fn format(self: OffsetRotate, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16964,9 +15930,7 @@ pub const Opacity = union(enum) {
     revert_layer,
     unset,
     percent_: f32,
-    raw_: []const u8,
     pub fn percent(v: f32) Opacity { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) Opacity { return .{ .raw_ = r }; }
 
     pub fn format(self: Opacity, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16980,8 +15944,6 @@ pub const Order = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Order { return .{ .raw_ = r }; }
 
     pub fn format(self: Order, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16995,8 +15957,6 @@ pub const Orphans = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Orphans { return .{ .raw_ = r }; }
 
     pub fn format(self: Orphans, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17011,10 +15971,8 @@ pub const Outline = union(enum) {
     revert_layer,
     unset,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) Outline { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) Outline { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) Outline { return .{ .raw_ = r }; }
 
     pub fn format(self: Outline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17031,10 +15989,8 @@ pub const OutlineColor = union(enum) {
     ///     /// When outline-style is auto, outline-color: auto computes to auto and represents the accent color. Otherwise, outline-color: auto computes to currentColor.
     auto,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) OutlineColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) OutlineColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) OutlineColor { return .{ .raw_ = r }; }
 
     pub fn format(self: OutlineColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17049,11 +16005,9 @@ pub const OutlineOffset = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) OutlineOffset { return .{ .px_ = v }; }
     pub fn em(v: f32) OutlineOffset { return .{ .em_ = v }; }
     pub fn rem(v: f32) OutlineOffset { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) OutlineOffset { return .{ .raw_ = r }; }
 
     pub fn format(self: OutlineOffset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17076,8 +16030,6 @@ pub const OutlineStyle = union(enum) {
     ridge,
     inset,
     outset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) OutlineStyle { return .{ .raw_ = r }; }
 
     pub fn format(self: OutlineStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17096,11 +16048,9 @@ pub const OutlineWidth = union(enum) {
     medium,
     thick,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) OutlineWidth { return .{ .px_ = v }; }
     pub fn em(v: f32) OutlineWidth { return .{ .em_ = v }; }
     pub fn rem(v: f32) OutlineWidth { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) OutlineWidth { return .{ .raw_ = r }; }
 
     pub fn format(self: OutlineWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17114,8 +16064,6 @@ pub const Overflow = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Overflow { return .{ .raw_ = r }; }
 
     pub fn format(self: Overflow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17131,8 +16079,6 @@ pub const OverflowAnchor = union(enum) {
     unset,
     ///     /// Declares that the element is potentially eligible to participate in the anchor node selection algorithm for any scrolling box created by the element or an ancestor.
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) OverflowAnchor { return .{ .raw_ = r }; }
 
     pub fn format(self: OverflowAnchor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17151,8 +16097,6 @@ pub const OverflowBlock = union(enum) {
     clip,
     scroll,
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) OverflowBlock { return .{ .raw_ = r }; }
 
     pub fn format(self: OverflowBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17170,11 +16114,9 @@ pub const OverflowClipMargin = union(enum) {
     padding_box,
     border_box,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) OverflowClipMargin { return .{ .px_ = v }; }
     pub fn em(v: f32) OverflowClipMargin { return .{ .em_ = v }; }
     pub fn rem(v: f32) OverflowClipMargin { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) OverflowClipMargin { return .{ .raw_ = r }; }
 
     pub fn format(self: OverflowClipMargin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17192,11 +16134,9 @@ pub const OverflowClipMarginBlock = union(enum) {
     padding_box,
     border_box,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) OverflowClipMarginBlock { return .{ .px_ = v }; }
     pub fn em(v: f32) OverflowClipMarginBlock { return .{ .em_ = v }; }
     pub fn rem(v: f32) OverflowClipMarginBlock { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) OverflowClipMarginBlock { return .{ .raw_ = r }; }
 
     pub fn format(self: OverflowClipMarginBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17214,11 +16154,9 @@ pub const OverflowClipMarginBlockEnd = union(enum) {
     padding_box,
     border_box,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) OverflowClipMarginBlockEnd { return .{ .px_ = v }; }
     pub fn em(v: f32) OverflowClipMarginBlockEnd { return .{ .em_ = v }; }
     pub fn rem(v: f32) OverflowClipMarginBlockEnd { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) OverflowClipMarginBlockEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: OverflowClipMarginBlockEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17236,11 +16174,9 @@ pub const OverflowClipMarginBlockStart = union(enum) {
     padding_box,
     border_box,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) OverflowClipMarginBlockStart { return .{ .px_ = v }; }
     pub fn em(v: f32) OverflowClipMarginBlockStart { return .{ .em_ = v }; }
     pub fn rem(v: f32) OverflowClipMarginBlockStart { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) OverflowClipMarginBlockStart { return .{ .raw_ = r }; }
 
     pub fn format(self: OverflowClipMarginBlockStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17258,11 +16194,9 @@ pub const OverflowClipMarginBottom = union(enum) {
     padding_box,
     border_box,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) OverflowClipMarginBottom { return .{ .px_ = v }; }
     pub fn em(v: f32) OverflowClipMarginBottom { return .{ .em_ = v }; }
     pub fn rem(v: f32) OverflowClipMarginBottom { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) OverflowClipMarginBottom { return .{ .raw_ = r }; }
 
     pub fn format(self: OverflowClipMarginBottom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17280,11 +16214,9 @@ pub const OverflowClipMarginInline = union(enum) {
     padding_box,
     border_box,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) OverflowClipMarginInline { return .{ .px_ = v }; }
     pub fn em(v: f32) OverflowClipMarginInline { return .{ .em_ = v }; }
     pub fn rem(v: f32) OverflowClipMarginInline { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) OverflowClipMarginInline { return .{ .raw_ = r }; }
 
     pub fn format(self: OverflowClipMarginInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17302,11 +16234,9 @@ pub const OverflowClipMarginInlineEnd = union(enum) {
     padding_box,
     border_box,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) OverflowClipMarginInlineEnd { return .{ .px_ = v }; }
     pub fn em(v: f32) OverflowClipMarginInlineEnd { return .{ .em_ = v }; }
     pub fn rem(v: f32) OverflowClipMarginInlineEnd { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) OverflowClipMarginInlineEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: OverflowClipMarginInlineEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17324,11 +16254,9 @@ pub const OverflowClipMarginInlineStart = union(enum) {
     padding_box,
     border_box,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) OverflowClipMarginInlineStart { return .{ .px_ = v }; }
     pub fn em(v: f32) OverflowClipMarginInlineStart { return .{ .em_ = v }; }
     pub fn rem(v: f32) OverflowClipMarginInlineStart { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) OverflowClipMarginInlineStart { return .{ .raw_ = r }; }
 
     pub fn format(self: OverflowClipMarginInlineStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17346,11 +16274,9 @@ pub const OverflowClipMarginLeft = union(enum) {
     padding_box,
     border_box,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) OverflowClipMarginLeft { return .{ .px_ = v }; }
     pub fn em(v: f32) OverflowClipMarginLeft { return .{ .em_ = v }; }
     pub fn rem(v: f32) OverflowClipMarginLeft { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) OverflowClipMarginLeft { return .{ .raw_ = r }; }
 
     pub fn format(self: OverflowClipMarginLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17368,11 +16294,9 @@ pub const OverflowClipMarginRight = union(enum) {
     padding_box,
     border_box,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) OverflowClipMarginRight { return .{ .px_ = v }; }
     pub fn em(v: f32) OverflowClipMarginRight { return .{ .em_ = v }; }
     pub fn rem(v: f32) OverflowClipMarginRight { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) OverflowClipMarginRight { return .{ .raw_ = r }; }
 
     pub fn format(self: OverflowClipMarginRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17390,11 +16314,9 @@ pub const OverflowClipMarginTop = union(enum) {
     padding_box,
     border_box,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) OverflowClipMarginTop { return .{ .px_ = v }; }
     pub fn em(v: f32) OverflowClipMarginTop { return .{ .em_ = v }; }
     pub fn rem(v: f32) OverflowClipMarginTop { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) OverflowClipMarginTop { return .{ .raw_ = r }; }
 
     pub fn format(self: OverflowClipMarginTop, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17413,8 +16335,6 @@ pub const OverflowInline = union(enum) {
     clip,
     scroll,
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) OverflowInline { return .{ .raw_ = r }; }
 
     pub fn format(self: OverflowInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17434,8 +16354,6 @@ pub const OverflowWrap = union(enum) {
     break_word,
     ///     /// An otherwise unbreakable sequence of characters may be broken at an arbitrary point if there are no otherwise-acceptable break points in the line. Shaping characters are still shaped as if the word were not broken, and grapheme clusters must stay together as one unit. No hyphenation character is inserted at the break point. Soft wrap opportunities introduced by anywhere are considered when calculating min-content intrinsic sizes. In the case of word-break: auto-phrase, these additional soft wrap opportunities are only introduced if relaxing the restrictions introduced by word-break: auto-phrase as described in overflow-wrap: normal is insufficient to prevent overflow.
     anywhere,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) OverflowWrap { return .{ .raw_ = r }; }
 
     pub fn format(self: OverflowWrap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17459,8 +16377,6 @@ pub const OverflowX = union(enum) {
     scroll,
     ///     /// Like scroll when the box has scrollable overflow; like hidden otherwise. Thus, if the user agent uses a scrolling mechanism that is visible on the screen (such as a scroll bar or a panner), that mechanism will only be displayed if there is overflow.
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) OverflowX { return .{ .raw_ = r }; }
 
     pub fn format(self: OverflowX, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17484,8 +16400,6 @@ pub const OverflowY = union(enum) {
     scroll,
     ///     /// Like scroll when the box has scrollable overflow; like hidden otherwise. Thus, if the user agent uses a scrolling mechanism that is visible on the screen (such as a scroll bar or a panner), that mechanism will only be displayed if there is overflow.
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) OverflowY { return .{ .raw_ = r }; }
 
     pub fn format(self: OverflowY, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17501,8 +16415,6 @@ pub const Overlay = union(enum) {
     unset,
     ///     /// The element is rendered in the top layer if it is in the top layer. Rather than generating boxes as part of its normal position in the document, it generates boxes as a sibling of the root element, rendered "above" it.
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Overlay { return .{ .raw_ = r }; }
 
     pub fn format(self: Overlay, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17520,8 +16432,6 @@ pub const OverscrollBehavior = union(enum) {
     contain,
     ///     /// This value indicates that the user agent should perform the usual boundary default action with respect to scroll chaining, overscroll and navigation gestures.
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) OverscrollBehavior { return .{ .raw_ = r }; }
 
     pub fn format(self: OverscrollBehavior, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17539,8 +16449,6 @@ pub const OverscrollBehaviorBlock = union(enum) {
     contain,
     ///     /// This value indicates that the user agent should perform the usual boundary default action with respect to scroll chaining, overscroll and navigation gestures.
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) OverscrollBehaviorBlock { return .{ .raw_ = r }; }
 
     pub fn format(self: OverscrollBehaviorBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17558,8 +16466,6 @@ pub const OverscrollBehaviorInline = union(enum) {
     contain,
     ///     /// This value indicates that the user agent should perform the usual boundary default action with respect to scroll chaining, overscroll and navigation gestures.
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) OverscrollBehaviorInline { return .{ .raw_ = r }; }
 
     pub fn format(self: OverscrollBehaviorInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17577,8 +16483,6 @@ pub const OverscrollBehaviorX = union(enum) {
     contain,
     ///     /// This value indicates that the user agent should perform the usual boundary default action with respect to scroll chaining, overscroll and navigation gestures.
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) OverscrollBehaviorX { return .{ .raw_ = r }; }
 
     pub fn format(self: OverscrollBehaviorX, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17596,8 +16500,6 @@ pub const OverscrollBehaviorY = union(enum) {
     contain,
     ///     /// This value indicates that the user agent should perform the usual boundary default action with respect to scroll chaining, overscroll and navigation gestures.
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) OverscrollBehaviorY { return .{ .raw_ = r }; }
 
     pub fn format(self: OverscrollBehaviorY, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17611,8 +16513,6 @@ pub const Padding = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Padding { return .{ .raw_ = r }; }
 
     pub fn format(self: Padding, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17626,8 +16526,6 @@ pub const PaddingBlock = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) PaddingBlock { return .{ .raw_ = r }; }
 
     pub fn format(self: PaddingBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17641,8 +16539,6 @@ pub const PaddingBlockEnd = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) PaddingBlockEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: PaddingBlockEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17656,8 +16552,6 @@ pub const PaddingBlockStart = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) PaddingBlockStart { return .{ .raw_ = r }; }
 
     pub fn format(self: PaddingBlockStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17673,12 +16567,10 @@ pub const PaddingBottom = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) PaddingBottom { return .{ .px_ = v }; }
     pub fn em(v: f32) PaddingBottom { return .{ .em_ = v }; }
     pub fn rem(v: f32) PaddingBottom { return .{ .rem_ = v }; }
     pub fn percent(v: f32) PaddingBottom { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) PaddingBottom { return .{ .raw_ = r }; }
 
     pub fn format(self: PaddingBottom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17692,8 +16584,6 @@ pub const PaddingInline = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) PaddingInline { return .{ .raw_ = r }; }
 
     pub fn format(self: PaddingInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17707,8 +16597,6 @@ pub const PaddingInlineEnd = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) PaddingInlineEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: PaddingInlineEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17722,8 +16610,6 @@ pub const PaddingInlineStart = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) PaddingInlineStart { return .{ .raw_ = r }; }
 
     pub fn format(self: PaddingInlineStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17739,12 +16625,10 @@ pub const PaddingLeft = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) PaddingLeft { return .{ .px_ = v }; }
     pub fn em(v: f32) PaddingLeft { return .{ .em_ = v }; }
     pub fn rem(v: f32) PaddingLeft { return .{ .rem_ = v }; }
     pub fn percent(v: f32) PaddingLeft { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) PaddingLeft { return .{ .raw_ = r }; }
 
     pub fn format(self: PaddingLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17760,12 +16644,10 @@ pub const PaddingRight = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) PaddingRight { return .{ .px_ = v }; }
     pub fn em(v: f32) PaddingRight { return .{ .em_ = v }; }
     pub fn rem(v: f32) PaddingRight { return .{ .rem_ = v }; }
     pub fn percent(v: f32) PaddingRight { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) PaddingRight { return .{ .raw_ = r }; }
 
     pub fn format(self: PaddingRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17781,12 +16663,10 @@ pub const PaddingTop = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) PaddingTop { return .{ .px_ = v }; }
     pub fn em(v: f32) PaddingTop { return .{ .em_ = v }; }
     pub fn rem(v: f32) PaddingTop { return .{ .rem_ = v }; }
     pub fn percent(v: f32) PaddingTop { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) PaddingTop { return .{ .raw_ = r }; }
 
     pub fn format(self: PaddingTop, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17801,8 +16681,6 @@ pub const Page = union(enum) {
     revert_layer,
     unset,
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Page { return .{ .raw_ = r }; }
 
     pub fn format(self: Page, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17826,8 +16704,6 @@ pub const PageBreakAfter = union(enum) {
     left,
     ///     /// Force one or two page breaks before (after) the generated box so that the next page is formatted as a right page.
     right,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) PageBreakAfter { return .{ .raw_ = r }; }
 
     pub fn format(self: PageBreakAfter, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17851,8 +16727,6 @@ pub const PageBreakBefore = union(enum) {
     left,
     ///     /// Force one or two page breaks before (after) the generated box so that the next page is formatted as a right page.
     right,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) PageBreakBefore { return .{ .raw_ = r }; }
 
     pub fn format(self: PageBreakBefore, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17870,8 +16744,6 @@ pub const PageBreakInside = union(enum) {
     avoid,
     ///     /// Neither force nor forbid a page break before (after, inside) the generated box.
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) PageBreakInside { return .{ .raw_ = r }; }
 
     pub fn format(self: PageBreakInside, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17889,8 +16761,6 @@ pub const PaintOrder = union(enum) {
     fill,
     stroke,
     markers,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) PaintOrder { return .{ .raw_ = r }; }
 
     pub fn format(self: PaintOrder, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17904,8 +16774,6 @@ pub const Pause = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Pause { return .{ .raw_ = r }; }
 
     pub fn format(self: Pause, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17929,8 +16797,6 @@ pub const PauseAfter = union(enum) {
     strong,
     ///     /// Expresses the pause by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
     x_strong,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) PauseAfter { return .{ .raw_ = r }; }
 
     pub fn format(self: PauseAfter, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17954,8 +16820,6 @@ pub const PauseBefore = union(enum) {
     strong,
     ///     /// Expresses the pause by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
     x_strong,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) PauseBefore { return .{ .raw_ = r }; }
 
     pub fn format(self: PauseBefore, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17970,11 +16834,9 @@ pub const Perspective = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) Perspective { return .{ .px_ = v }; }
     pub fn em(v: f32) Perspective { return .{ .em_ = v }; }
     pub fn rem(v: f32) Perspective { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) Perspective { return .{ .raw_ = r }; }
 
     pub fn format(self: Perspective, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18010,12 +16872,10 @@ pub const PerspectiveOrigin = union(enum) {
     end,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) PerspectiveOrigin { return .{ .px_ = v }; }
     pub fn em(v: f32) PerspectiveOrigin { return .{ .em_ = v }; }
     pub fn rem(v: f32) PerspectiveOrigin { return .{ .rem_ = v }; }
     pub fn percent(v: f32) PerspectiveOrigin { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) PerspectiveOrigin { return .{ .raw_ = r }; }
 
     pub fn format(self: PerspectiveOrigin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18029,8 +16889,6 @@ pub const PlaceContent = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) PlaceContent { return .{ .raw_ = r }; }
 
     pub fn format(self: PlaceContent, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18044,8 +16902,6 @@ pub const PlaceItems = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) PlaceItems { return .{ .raw_ = r }; }
 
     pub fn format(self: PlaceItems, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18059,8 +16915,6 @@ pub const PlaceSelf = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) PlaceSelf { return .{ .raw_ = r }; }
 
     pub fn format(self: PlaceSelf, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18084,8 +16938,6 @@ pub const PointerEvents = union(enum) {
     fill,
     stroke,
     all,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) PointerEvents { return .{ .raw_ = r }; }
 
     pub fn format(self: PointerEvents, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18099,8 +16951,6 @@ pub const PointerTimeline = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) PointerTimeline { return .{ .raw_ = r }; }
 
     pub fn format(self: PointerTimeline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18122,8 +16972,6 @@ pub const PointerTimelineAxis = union(enum) {
     x,
     ///     /// Specifies to use the measure of progress along the vertical axis of the pointer range.
     y,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) PointerTimelineAxis { return .{ .raw_ = r }; }
 
     pub fn format(self: PointerTimelineAxis, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18137,8 +16985,6 @@ pub const PointerTimelineName = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) PointerTimelineName { return .{ .raw_ = r }; }
 
     pub fn format(self: PointerTimelineName, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18162,8 +17008,6 @@ pub const Position = union(enum) {
     sticky,
     ///     /// Same as absolute, except the box is positioned and sized relative to a fixed positioning containing block (usually the viewport in continuous media, or the page area in paged media). The box’s position is fixed with respect to this reference rectangle: when attached to the viewport it does not move when the document is scrolled, and when attached to the page area is replicated on every page when the document is paginated. This positioning scheme is called fixed positioning and is considered a subset of absolute positioning. Authors may wish to specify fixed in a media-dependent way. For instance, an author may want a box to remain at the top of the viewport on the screen, but not at the top of each printed page. The two specifications may be separated by using an '@media' rule, as in: @media screen { h1#first { position: fixed } } @media print { h1#first { position: static } }
     fixed,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Position { return .{ .raw_ = r }; }
 
     pub fn format(self: Position, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18181,8 +17025,6 @@ pub const PositionAnchor = union(enum) {
     normal,
     ///     /// Use the implicit anchor element if it exists; otherwise the box has no default anchor element.
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) PositionAnchor { return .{ .raw_ = r }; }
 
     pub fn format(self: PositionAnchor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18246,8 +17088,6 @@ pub const PositionArea = union(enum) {
     self_end,
     span_self_start,
     span_self_end,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) PositionArea { return .{ .raw_ = r }; }
 
     pub fn format(self: PositionArea, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18261,8 +17101,6 @@ pub const PositionTry = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) PositionTry { return .{ .raw_ = r }; }
 
     pub fn format(self: PositionTry, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18336,8 +17174,6 @@ pub const PositionTryFallbacks = union(enum) {
     self_end,
     span_self_start,
     span_self_end,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) PositionTryFallbacks { return .{ .raw_ = r }; }
 
     pub fn format(self: PositionTryFallbacks, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18361,8 +17197,6 @@ pub const PositionTryOrder = union(enum) {
     most_block_size,
     ///     /// For each entry in the position options list, apply that position option to the box, and find the inset-modified containing block size that results from those styles (treating auto inset values as zero). Stably sort the position options list according to this size, with the largest coming first. Logical directions are resolved against the writing mode of the containing block.
     most_inline_size,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) PositionTryOrder { return .{ .raw_ = r }; }
 
     pub fn format(self: PositionTryOrder, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18384,8 +17218,6 @@ pub const PositionVisibility = union(enum) {
     anchors_visible,
     ///     /// If the box overflows its inset-modified containing block even after applying position-try, the box’s visibility property computes to force-hidden.
     no_overflow,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) PositionVisibility { return .{ .raw_ = r }; }
 
     pub fn format(self: PositionVisibility, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18403,8 +17235,6 @@ pub const PrintColorAdjust = union(enum) {
     economy,
     ///     /// This value indicates that the page is using color and styling on the specified element in a way which is important and significant, and which should not be tweaked or changed except at the user’s request. For example, a mapping website offering printed directions might "zebra-stripe" the steps in the directions, alternating between white and light gray backgrounds. Losing this zebra-striping and having a pure-white background would make the directions harder to read with a quick glance when distracted in a car.
     exact,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) PrintColorAdjust { return .{ .raw_ = r }; }
 
     pub fn format(self: PrintColorAdjust, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18422,8 +17252,6 @@ pub const Quotes = union(enum) {
     auto,
     ///     /// Specifies the same quotation mark system as the parent. In general this is equivalent to inheriting the parent’s computed value, except that auto it resolves using the same content language that the parent used. Two possible approaches here, currently speccing the latter: a) this computes to the relevant string values, and inherits as such. b) this value effectively inherits as a keyword + a language code, meaning auto, but with this language.
     match_parent,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Quotes { return .{ .raw_ = r }; }
 
     pub fn format(self: Quotes, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18439,12 +17267,10 @@ pub const R = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) R { return .{ .px_ = v }; }
     pub fn em(v: f32) R { return .{ .em_ = v }; }
     pub fn rem(v: f32) R { return .{ .rem_ = v }; }
     pub fn percent(v: f32) R { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) R { return .{ .raw_ = r }; }
 
     pub fn format(self: R, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18472,8 +17298,6 @@ pub const ReadingFlow = union(enum) {
     grid_columns,
     ///     /// Only takes effect on grid containers. Follows the order-modified document order. Therefore, as normal unless the order property has been used to change the order of items.
     grid_order,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ReadingFlow { return .{ .raw_ = r }; }
 
     pub fn format(self: ReadingFlow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18487,8 +17311,6 @@ pub const ReadingOrder = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ReadingOrder { return .{ .raw_ = r }; }
 
     pub fn format(self: ReadingOrder, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18504,8 +17326,6 @@ pub const RegionFragment = union(enum) {
     unset,
     auto,
     break_,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) RegionFragment { return .{ .raw_ = r }; }
 
     pub fn format(self: RegionFragment, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18524,8 +17344,6 @@ pub const Resize = union(enum) {
     vertical,
     block,
     inline_,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Resize { return .{ .raw_ = r }; }
 
     pub fn format(self: Resize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18539,8 +17357,6 @@ pub const Rest = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Rest { return .{ .raw_ = r }; }
 
     pub fn format(self: Rest, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18564,8 +17380,6 @@ pub const RestAfter = union(enum) {
     strong,
     ///     /// Expresses the rest by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
     x_strong,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) RestAfter { return .{ .raw_ = r }; }
 
     pub fn format(self: RestAfter, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18589,8 +17403,6 @@ pub const RestBefore = union(enum) {
     strong,
     ///     /// Expresses the rest by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
     x_strong,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) RestBefore { return .{ .raw_ = r }; }
 
     pub fn format(self: RestBefore, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18608,12 +17420,10 @@ pub const Right = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) Right { return .{ .px_ = v }; }
     pub fn em(v: f32) Right { return .{ .em_ = v }; }
     pub fn rem(v: f32) Right { return .{ .rem_ = v }; }
     pub fn percent(v: f32) Right { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) Right { return .{ .raw_ = r }; }
 
     pub fn format(self: Right, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18633,8 +17443,6 @@ pub const Rotate = union(enum) {
     y,
     ///     /// The axis can be specified with either the x, y, or z keywords, which specify a rotation around that axis, equivalent to the rotateX(), rotateY(), and rotateZ() transform functions. Alternately, the axis can be specified explicitly by giving three numbers representing the x, y, and z components of an origin-centered vector, equivalent to the rotate3d() function.
     z,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Rotate { return .{ .raw_ = r }; }
 
     pub fn format(self: Rotate, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18656,12 +17464,10 @@ pub const RowGap = union(enum) {
     thick,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) RowGap { return .{ .px_ = v }; }
     pub fn em(v: f32) RowGap { return .{ .em_ = v }; }
     pub fn rem(v: f32) RowGap { return .{ .rem_ = v }; }
     pub fn percent(v: f32) RowGap { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) RowGap { return .{ .raw_ = r }; }
 
     pub fn format(self: RowGap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18883,13 +17689,11 @@ pub const RowRule = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn px(v: f32) RowRule { return .{ .px_ = v }; }
     pub fn em(v: f32) RowRule { return .{ .em_ = v }; }
     pub fn rem(v: f32) RowRule { return .{ .rem_ = v }; }
     pub fn hex(v: u32) RowRule { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) RowRule { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) RowRule { return .{ .raw_ = r }; }
 
     pub fn format(self: RowRule, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18907,8 +17711,6 @@ pub const RowRuleBreak = union(enum) {
     normal,
     ///     /// Gap decorations start and end at visible "T" and "cross" intersections.
     intersection,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) RowRuleBreak { return .{ .raw_ = r }; }
 
     pub fn format(self: RowRuleBreak, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19116,10 +17918,8 @@ pub const RowRuleColor = union(enum) {
     WindowText,
     auto,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) RowRuleColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) RowRuleColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) RowRuleColor { return .{ .raw_ = r }; }
 
     pub fn format(self: RowRuleColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19135,12 +17935,10 @@ pub const RowRuleEdgeInset = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) RowRuleEdgeInset { return .{ .px_ = v }; }
     pub fn em(v: f32) RowRuleEdgeInset { return .{ .em_ = v }; }
     pub fn rem(v: f32) RowRuleEdgeInset { return .{ .rem_ = v }; }
     pub fn percent(v: f32) RowRuleEdgeInset { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) RowRuleEdgeInset { return .{ .raw_ = r }; }
 
     pub fn format(self: RowRuleEdgeInset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19156,12 +17954,10 @@ pub const RowRuleEdgeInsetEnd = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) RowRuleEdgeInsetEnd { return .{ .px_ = v }; }
     pub fn em(v: f32) RowRuleEdgeInsetEnd { return .{ .em_ = v }; }
     pub fn rem(v: f32) RowRuleEdgeInsetEnd { return .{ .rem_ = v }; }
     pub fn percent(v: f32) RowRuleEdgeInsetEnd { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) RowRuleEdgeInsetEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: RowRuleEdgeInsetEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19177,12 +17973,10 @@ pub const RowRuleEdgeInsetStart = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) RowRuleEdgeInsetStart { return .{ .px_ = v }; }
     pub fn em(v: f32) RowRuleEdgeInsetStart { return .{ .em_ = v }; }
     pub fn rem(v: f32) RowRuleEdgeInsetStart { return .{ .rem_ = v }; }
     pub fn percent(v: f32) RowRuleEdgeInsetStart { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) RowRuleEdgeInsetStart { return .{ .raw_ = r }; }
 
     pub fn format(self: RowRuleEdgeInsetStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19196,8 +17990,6 @@ pub const RowRuleInset = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) RowRuleInset { return .{ .raw_ = r }; }
 
     pub fn format(self: RowRuleInset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19213,12 +18005,10 @@ pub const RowRuleInsetEnd = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) RowRuleInsetEnd { return .{ .px_ = v }; }
     pub fn em(v: f32) RowRuleInsetEnd { return .{ .em_ = v }; }
     pub fn rem(v: f32) RowRuleInsetEnd { return .{ .rem_ = v }; }
     pub fn percent(v: f32) RowRuleInsetEnd { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) RowRuleInsetEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: RowRuleInsetEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19234,12 +18024,10 @@ pub const RowRuleInsetStart = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) RowRuleInsetStart { return .{ .px_ = v }; }
     pub fn em(v: f32) RowRuleInsetStart { return .{ .em_ = v }; }
     pub fn rem(v: f32) RowRuleInsetStart { return .{ .rem_ = v }; }
     pub fn percent(v: f32) RowRuleInsetStart { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) RowRuleInsetStart { return .{ .raw_ = r }; }
 
     pub fn format(self: RowRuleInsetStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19255,12 +18043,10 @@ pub const RowRuleInteriorInset = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) RowRuleInteriorInset { return .{ .px_ = v }; }
     pub fn em(v: f32) RowRuleInteriorInset { return .{ .em_ = v }; }
     pub fn rem(v: f32) RowRuleInteriorInset { return .{ .rem_ = v }; }
     pub fn percent(v: f32) RowRuleInteriorInset { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) RowRuleInteriorInset { return .{ .raw_ = r }; }
 
     pub fn format(self: RowRuleInteriorInset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19276,12 +18062,10 @@ pub const RowRuleInteriorInsetEnd = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) RowRuleInteriorInsetEnd { return .{ .px_ = v }; }
     pub fn em(v: f32) RowRuleInteriorInsetEnd { return .{ .em_ = v }; }
     pub fn rem(v: f32) RowRuleInteriorInsetEnd { return .{ .rem_ = v }; }
     pub fn percent(v: f32) RowRuleInteriorInsetEnd { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) RowRuleInteriorInsetEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: RowRuleInteriorInsetEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19297,12 +18081,10 @@ pub const RowRuleInteriorInsetStart = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) RowRuleInteriorInsetStart { return .{ .px_ = v }; }
     pub fn em(v: f32) RowRuleInteriorInsetStart { return .{ .em_ = v }; }
     pub fn rem(v: f32) RowRuleInteriorInsetStart { return .{ .rem_ = v }; }
     pub fn percent(v: f32) RowRuleInteriorInsetStart { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) RowRuleInteriorInsetStart { return .{ .raw_ = r }; }
 
     pub fn format(self: RowRuleInteriorInsetStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19326,8 +18108,6 @@ pub const RowRuleStyle = union(enum) {
     inset,
     outset,
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) RowRuleStyle { return .{ .raw_ = r }; }
 
     pub fn format(self: RowRuleStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19347,8 +18127,6 @@ pub const RowRuleVisibilityItems = union(enum) {
     around,
     ///     /// Paint decorations in a gap segment if both adjacent areas are occupied by items.
     between,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) RowRuleVisibilityItems { return .{ .raw_ = r }; }
 
     pub fn format(self: RowRuleVisibilityItems, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19368,11 +18146,9 @@ pub const RowRuleWidth = union(enum) {
     thick,
     auto,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) RowRuleWidth { return .{ .px_ = v }; }
     pub fn em(v: f32) RowRuleWidth { return .{ .em_ = v }; }
     pub fn rem(v: f32) RowRuleWidth { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) RowRuleWidth { return .{ .raw_ = r }; }
 
     pub fn format(self: RowRuleWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19394,8 +18170,6 @@ pub const RubyAlign = union(enum) {
     space_between,
     ///     /// As for space-between except that there exists an extra justification opportunities whose space is distributed half before and half after the ruby content. space-around ruby distribution
     space_around,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) RubyAlign { return .{ .raw_ = r }; }
 
     pub fn format(self: RubyAlign, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19415,8 +18189,6 @@ pub const RubyMerge = union(enum) {
     merge,
     ///     /// The user agent may use any algorithm to determine how each ruby annotation box is rendered to its corresponding base box, with the intention that if all annotations fit over their respective bases, the result is identical to separate, but if some annotations are wider than their bases the space is shared in some way to avoid imposing space between bases. ruby-merge: auto with center alignment
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) RubyMerge { return .{ .raw_ = r }; }
 
     pub fn format(self: RubyMerge, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19432,8 +18204,6 @@ pub const RubyOverhang = union(enum) {
     unset,
     ///     /// When a ruby annotation container is longer than its corresponding ruby base container, the ruby annotation container may partially overlap adjacent boxes. Whether, how much, and under which conditions to overhang are determined by the UA.
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) RubyOverhang { return .{ .raw_ = r }; }
 
     pub fn format(self: RubyOverhang, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19455,8 +18225,6 @@ pub const RubyPosition = union(enum) {
     under,
     ///     /// If the writing mode of the enclosing ruby container is vertical, this value has the same effect as over. Otherwise, the ruby annotation becomes an inter-character annotation. The annotation appears on the right of the base in horizontal text. This forces the computed value of writing-mode of the ruby annotation children of this ruby annotation container to be vertical-rl. This value is provided for the special case of traditional Chinese as used especially in Taiwan: ruby (made of bopomofo glyphs) in that context appears vertically along the right side of the base glyph, even when the layout of the base characters is horizontal: “Bopomofo” ruby in traditional Chinese (ruby annotation shown in blue for clarity) in horizontal layout
     inter_character,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) RubyPosition { return .{ .raw_ = r }; }
 
     pub fn format(self: RubyPosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19470,8 +18238,6 @@ pub const Rule = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Rule { return .{ .raw_ = r }; }
 
     pub fn format(self: Rule, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19485,8 +18251,6 @@ pub const RuleBreak = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) RuleBreak { return .{ .raw_ = r }; }
 
     pub fn format(self: RuleBreak, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19501,10 +18265,8 @@ pub const RuleColor = union(enum) {
     revert_layer,
     unset,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) RuleColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) RuleColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) RuleColor { return .{ .raw_ = r }; }
 
     pub fn format(self: RuleColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19518,8 +18280,6 @@ pub const RuleEdgeInset = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) RuleEdgeInset { return .{ .raw_ = r }; }
 
     pub fn format(self: RuleEdgeInset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19533,8 +18293,6 @@ pub const RuleInset = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) RuleInset { return .{ .raw_ = r }; }
 
     pub fn format(self: RuleInset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19548,8 +18306,6 @@ pub const RuleInsetEnd = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) RuleInsetEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: RuleInsetEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19563,8 +18319,6 @@ pub const RuleInsetStart = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) RuleInsetStart { return .{ .raw_ = r }; }
 
     pub fn format(self: RuleInsetStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19578,8 +18332,6 @@ pub const RuleInteriorInset = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) RuleInteriorInset { return .{ .raw_ = r }; }
 
     pub fn format(self: RuleInteriorInset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19597,8 +18349,6 @@ pub const RuleOverlap = union(enum) {
     row_over_column,
     ///     /// Column-direction decorations are painted above row-direction decorations.
     column_over_row,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) RuleOverlap { return .{ .raw_ = r }; }
 
     pub fn format(self: RuleOverlap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19612,8 +18362,6 @@ pub const RuleStyle = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) RuleStyle { return .{ .raw_ = r }; }
 
     pub fn format(self: RuleStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19627,8 +18375,6 @@ pub const RuleVisibilityItems = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) RuleVisibilityItems { return .{ .raw_ = r }; }
 
     pub fn format(self: RuleVisibilityItems, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19642,8 +18388,6 @@ pub const RuleWidth = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) RuleWidth { return .{ .raw_ = r }; }
 
     pub fn format(self: RuleWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19660,12 +18404,10 @@ pub const Rx = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) Rx { return .{ .px_ = v }; }
     pub fn em(v: f32) Rx { return .{ .em_ = v }; }
     pub fn rem(v: f32) Rx { return .{ .rem_ = v }; }
     pub fn percent(v: f32) Rx { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) Rx { return .{ .raw_ = r }; }
 
     pub fn format(self: Rx, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19682,12 +18424,10 @@ pub const Ry = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) Ry { return .{ .px_ = v }; }
     pub fn em(v: f32) Ry { return .{ .em_ = v }; }
     pub fn rem(v: f32) Ry { return .{ .rem_ = v }; }
     pub fn percent(v: f32) Ry { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) Ry { return .{ .raw_ = r }; }
 
     pub fn format(self: Ry, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19702,9 +18442,7 @@ pub const Scale = union(enum) {
     revert_layer,
     unset,
     percent_: f32,
-    raw_: []const u8,
     pub fn percent(v: f32) Scale { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) Scale { return .{ .raw_ = r }; }
 
     pub fn format(self: Scale, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19722,8 +18460,6 @@ pub const ScrollBehavior = union(enum) {
     auto,
     ///     /// The scroll container is scrolled in a smooth fashion using a user-agent-defined timing function over a user-agent-defined period of time. User agents should follow platform conventions, if any.
     smooth,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ScrollBehavior { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollBehavior, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19739,8 +18475,6 @@ pub const ScrollInitialTarget = union(enum) {
     unset,
     ///     /// The element is potentially an initial scroll target for its nearest scroll container ancestor.
     nearest,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ScrollInitialTarget { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollInitialTarget, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19755,11 +18489,9 @@ pub const ScrollMargin = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ScrollMargin { return .{ .px_ = v }; }
     pub fn em(v: f32) ScrollMargin { return .{ .em_ = v }; }
     pub fn rem(v: f32) ScrollMargin { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) ScrollMargin { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollMargin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19774,11 +18506,9 @@ pub const ScrollMarginBlock = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ScrollMarginBlock { return .{ .px_ = v }; }
     pub fn em(v: f32) ScrollMarginBlock { return .{ .em_ = v }; }
     pub fn rem(v: f32) ScrollMarginBlock { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) ScrollMarginBlock { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollMarginBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19793,11 +18523,9 @@ pub const ScrollMarginBlockEnd = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ScrollMarginBlockEnd { return .{ .px_ = v }; }
     pub fn em(v: f32) ScrollMarginBlockEnd { return .{ .em_ = v }; }
     pub fn rem(v: f32) ScrollMarginBlockEnd { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) ScrollMarginBlockEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollMarginBlockEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19812,11 +18540,9 @@ pub const ScrollMarginBlockStart = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ScrollMarginBlockStart { return .{ .px_ = v }; }
     pub fn em(v: f32) ScrollMarginBlockStart { return .{ .em_ = v }; }
     pub fn rem(v: f32) ScrollMarginBlockStart { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) ScrollMarginBlockStart { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollMarginBlockStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19831,11 +18557,9 @@ pub const ScrollMarginBottom = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ScrollMarginBottom { return .{ .px_ = v }; }
     pub fn em(v: f32) ScrollMarginBottom { return .{ .em_ = v }; }
     pub fn rem(v: f32) ScrollMarginBottom { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) ScrollMarginBottom { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollMarginBottom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19850,11 +18574,9 @@ pub const ScrollMarginInline = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ScrollMarginInline { return .{ .px_ = v }; }
     pub fn em(v: f32) ScrollMarginInline { return .{ .em_ = v }; }
     pub fn rem(v: f32) ScrollMarginInline { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) ScrollMarginInline { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollMarginInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19869,11 +18591,9 @@ pub const ScrollMarginInlineEnd = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ScrollMarginInlineEnd { return .{ .px_ = v }; }
     pub fn em(v: f32) ScrollMarginInlineEnd { return .{ .em_ = v }; }
     pub fn rem(v: f32) ScrollMarginInlineEnd { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) ScrollMarginInlineEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollMarginInlineEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19888,11 +18608,9 @@ pub const ScrollMarginInlineStart = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ScrollMarginInlineStart { return .{ .px_ = v }; }
     pub fn em(v: f32) ScrollMarginInlineStart { return .{ .em_ = v }; }
     pub fn rem(v: f32) ScrollMarginInlineStart { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) ScrollMarginInlineStart { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollMarginInlineStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19907,11 +18625,9 @@ pub const ScrollMarginLeft = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ScrollMarginLeft { return .{ .px_ = v }; }
     pub fn em(v: f32) ScrollMarginLeft { return .{ .em_ = v }; }
     pub fn rem(v: f32) ScrollMarginLeft { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) ScrollMarginLeft { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollMarginLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19926,11 +18642,9 @@ pub const ScrollMarginRight = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ScrollMarginRight { return .{ .px_ = v }; }
     pub fn em(v: f32) ScrollMarginRight { return .{ .em_ = v }; }
     pub fn rem(v: f32) ScrollMarginRight { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) ScrollMarginRight { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollMarginRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19945,11 +18659,9 @@ pub const ScrollMarginTop = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ScrollMarginTop { return .{ .px_ = v }; }
     pub fn em(v: f32) ScrollMarginTop { return .{ .em_ = v }; }
     pub fn rem(v: f32) ScrollMarginTop { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) ScrollMarginTop { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollMarginTop, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19971,8 +18683,6 @@ pub const ScrollMarkerGroup = union(enum) {
     links,
     ///     /// The generated ::scroll-marker-group operates in "tabs" mode, functioning like a tablist.
     tabs,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ScrollMarkerGroup { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollMarkerGroup, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19990,12 +18700,10 @@ pub const ScrollPadding = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ScrollPadding { return .{ .px_ = v }; }
     pub fn em(v: f32) ScrollPadding { return .{ .em_ = v }; }
     pub fn rem(v: f32) ScrollPadding { return .{ .rem_ = v }; }
     pub fn percent(v: f32) ScrollPadding { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) ScrollPadding { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollPadding, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20013,12 +18721,10 @@ pub const ScrollPaddingBlock = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ScrollPaddingBlock { return .{ .px_ = v }; }
     pub fn em(v: f32) ScrollPaddingBlock { return .{ .em_ = v }; }
     pub fn rem(v: f32) ScrollPaddingBlock { return .{ .rem_ = v }; }
     pub fn percent(v: f32) ScrollPaddingBlock { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) ScrollPaddingBlock { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollPaddingBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20036,12 +18742,10 @@ pub const ScrollPaddingBlockEnd = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ScrollPaddingBlockEnd { return .{ .px_ = v }; }
     pub fn em(v: f32) ScrollPaddingBlockEnd { return .{ .em_ = v }; }
     pub fn rem(v: f32) ScrollPaddingBlockEnd { return .{ .rem_ = v }; }
     pub fn percent(v: f32) ScrollPaddingBlockEnd { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) ScrollPaddingBlockEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollPaddingBlockEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20059,12 +18763,10 @@ pub const ScrollPaddingBlockStart = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ScrollPaddingBlockStart { return .{ .px_ = v }; }
     pub fn em(v: f32) ScrollPaddingBlockStart { return .{ .em_ = v }; }
     pub fn rem(v: f32) ScrollPaddingBlockStart { return .{ .rem_ = v }; }
     pub fn percent(v: f32) ScrollPaddingBlockStart { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) ScrollPaddingBlockStart { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollPaddingBlockStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20081,12 +18783,10 @@ pub const ScrollPaddingBottom = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ScrollPaddingBottom { return .{ .px_ = v }; }
     pub fn em(v: f32) ScrollPaddingBottom { return .{ .em_ = v }; }
     pub fn rem(v: f32) ScrollPaddingBottom { return .{ .rem_ = v }; }
     pub fn percent(v: f32) ScrollPaddingBottom { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) ScrollPaddingBottom { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollPaddingBottom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20104,12 +18804,10 @@ pub const ScrollPaddingInline = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ScrollPaddingInline { return .{ .px_ = v }; }
     pub fn em(v: f32) ScrollPaddingInline { return .{ .em_ = v }; }
     pub fn rem(v: f32) ScrollPaddingInline { return .{ .rem_ = v }; }
     pub fn percent(v: f32) ScrollPaddingInline { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) ScrollPaddingInline { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollPaddingInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20127,12 +18825,10 @@ pub const ScrollPaddingInlineEnd = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ScrollPaddingInlineEnd { return .{ .px_ = v }; }
     pub fn em(v: f32) ScrollPaddingInlineEnd { return .{ .em_ = v }; }
     pub fn rem(v: f32) ScrollPaddingInlineEnd { return .{ .rem_ = v }; }
     pub fn percent(v: f32) ScrollPaddingInlineEnd { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) ScrollPaddingInlineEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollPaddingInlineEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20150,12 +18846,10 @@ pub const ScrollPaddingInlineStart = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ScrollPaddingInlineStart { return .{ .px_ = v }; }
     pub fn em(v: f32) ScrollPaddingInlineStart { return .{ .em_ = v }; }
     pub fn rem(v: f32) ScrollPaddingInlineStart { return .{ .rem_ = v }; }
     pub fn percent(v: f32) ScrollPaddingInlineStart { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) ScrollPaddingInlineStart { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollPaddingInlineStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20172,12 +18866,10 @@ pub const ScrollPaddingLeft = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ScrollPaddingLeft { return .{ .px_ = v }; }
     pub fn em(v: f32) ScrollPaddingLeft { return .{ .em_ = v }; }
     pub fn rem(v: f32) ScrollPaddingLeft { return .{ .rem_ = v }; }
     pub fn percent(v: f32) ScrollPaddingLeft { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) ScrollPaddingLeft { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollPaddingLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20194,12 +18886,10 @@ pub const ScrollPaddingRight = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ScrollPaddingRight { return .{ .px_ = v }; }
     pub fn em(v: f32) ScrollPaddingRight { return .{ .em_ = v }; }
     pub fn rem(v: f32) ScrollPaddingRight { return .{ .rem_ = v }; }
     pub fn percent(v: f32) ScrollPaddingRight { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) ScrollPaddingRight { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollPaddingRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20216,12 +18906,10 @@ pub const ScrollPaddingTop = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ScrollPaddingTop { return .{ .px_ = v }; }
     pub fn em(v: f32) ScrollPaddingTop { return .{ .em_ = v }; }
     pub fn rem(v: f32) ScrollPaddingTop { return .{ .rem_ = v }; }
     pub fn percent(v: f32) ScrollPaddingTop { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) ScrollPaddingTop { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollPaddingTop, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20241,8 +18929,6 @@ pub const ScrollSnapAlign = union(enum) {
     end,
     ///     /// Center alignment of this box’s scroll snap area within the scroll container’s snapport is a snap position in the specified axis.
     center,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ScrollSnapAlign { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollSnapAlign, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20260,8 +18946,6 @@ pub const ScrollSnapStop = union(enum) {
     normal,
     ///     /// The scroll container must not pass over a snap position defined by this element during the execution of a scrolling operation; it must instead snap to the first of this element’s snap positions.
     always,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ScrollSnapStop { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollSnapStop, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20289,8 +18973,6 @@ pub const ScrollSnapType = union(enum) {
     mandatory,
     ///     /// If specified on a scroll container, the scroll container may snap to a snap position at the termination of a scroll, at the discretion of the UA given the parameters of the scroll.
     proximity,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ScrollSnapType { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollSnapType, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20306,8 +18988,6 @@ pub const ScrollTargetGroup = union(enum) {
     unset,
     ///     /// The element establishes a scroll marker group container forming a scroll marker group containing all of the scroll marker elements for which this is the nearest ancestor scroll marker group container.
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ScrollTargetGroup { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollTargetGroup, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20321,8 +19001,6 @@ pub const ScrollTimeline = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ScrollTimeline { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollTimeline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20344,8 +19022,6 @@ pub const ScrollTimelineAxis = union(enum) {
     x,
     ///     /// Specifies to use the measure of progress along the vertical axis of the scroll container.
     y,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ScrollTimelineAxis { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollTimelineAxis, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20359,8 +19035,6 @@ pub const ScrollTimelineName = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ScrollTimelineName { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollTimelineName, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20569,10 +19243,8 @@ pub const ScrollbarColor = union(enum) {
     WindowFrame,
     WindowText,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) ScrollbarColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) ScrollbarColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) ScrollbarColor { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollbarColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20592,8 +19264,6 @@ pub const ScrollbarGutter = union(enum) {
     stable,
     ///     /// If a scrollbar gutter would be present on one of the inline start edge or the inline end edge of the box, another scrollbar gutter must be present on the opposite edge as well.
     both_edges,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ScrollbarGutter { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollbarGutter, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20611,8 +19281,6 @@ pub const ScrollbarWidth = union(enum) {
     auto,
     ///     /// Implementations should use thinner scrollbars than auto. This may mean a thin variant of scrollbar provided by the platform, or a custom scrollbar thinner than the default platform scrollbar. The scrollbar must nonetheless remain wide enough to be usable. (Implementers may wish to consult WCAG 2.1 SC 2.5.5 Target Size. [WCAG21]) User agents may disregard this value and treat it as auto, for instance when the user has indicated discomfort for thin scrollbars through some UA or OS setting. (User agents are encouraged to provide such a setting.)
     thin,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ScrollbarWidth { return .{ .raw_ = r }; }
 
     pub fn format(self: ScrollbarWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20627,9 +19295,7 @@ pub const ShapeImageThreshold = union(enum) {
     revert_layer,
     unset,
     percent_: f32,
-    raw_: []const u8,
     pub fn percent(v: f32) ShapeImageThreshold { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) ShapeImageThreshold { return .{ .raw_ = r }; }
 
     pub fn format(self: ShapeImageThreshold, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20650,8 +19316,6 @@ pub const ShapeInside = union(enum) {
     shape_box,
     ///     /// The shape is computed based on the shape of the display as described in css-round-display.
     display,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ShapeInside { return .{ .raw_ = r }; }
 
     pub fn format(self: ShapeInside, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20667,12 +19331,10 @@ pub const ShapeMargin = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ShapeMargin { return .{ .px_ = v }; }
     pub fn em(v: f32) ShapeMargin { return .{ .em_ = v }; }
     pub fn rem(v: f32) ShapeMargin { return .{ .rem_ = v }; }
     pub fn percent(v: f32) ShapeMargin { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) ShapeMargin { return .{ .raw_ = r }; }
 
     pub fn format(self: ShapeMargin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20691,8 +19353,6 @@ pub const ShapeOutside = union(enum) {
     border_box,
     margin_box,
     half_border_box,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ShapeOutside { return .{ .raw_ = r }; }
 
     pub fn format(self: ShapeOutside, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20708,12 +19368,10 @@ pub const ShapePadding = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ShapePadding { return .{ .px_ = v }; }
     pub fn em(v: f32) ShapePadding { return .{ .em_ = v }; }
     pub fn rem(v: f32) ShapePadding { return .{ .rem_ = v }; }
     pub fn percent(v: f32) ShapePadding { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) ShapePadding { return .{ .raw_ = r }; }
 
     pub fn format(self: ShapePadding, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20731,8 +19389,6 @@ pub const ShapeRendering = union(enum) {
     optimizeSpeed,
     crispEdges,
     geometricPrecision,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ShapeRendering { return .{ .raw_ = r }; }
 
     pub fn format(self: ShapeRendering, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20746,8 +19402,6 @@ pub const ShapeSubtract = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ShapeSubtract { return .{ .raw_ = r }; }
 
     pub fn format(self: ShapeSubtract, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20771,8 +19425,6 @@ pub const SliderOrientation = union(enum) {
     top_to_bottom,
     ///     /// The slider-like control is rendered vertically and ::slider-fill is bottom-aligned within the control.
     bottom_to_top,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) SliderOrientation { return .{ .raw_ = r }; }
 
     pub fn format(self: SliderOrientation, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20792,8 +19444,6 @@ pub const SpatialNavigationAction = union(enum) {
     focus,
     ///     /// If the currently focused element is not itself a scroll container, this value on an ancestor scroll container has the same effect as auto. If the currently focused element is a scroll container, it is scrolled in the direction requested without changing which element is in focus, regardless of the presence of focusable descendants.
     scroll,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) SpatialNavigationAction { return .{ .raw_ = r }; }
 
     pub fn format(self: SpatialNavigationAction, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20811,8 +19461,6 @@ pub const SpatialNavigationContain = union(enum) {
     auto,
     ///     /// The element establishes a spatial navigation container
     contain,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) SpatialNavigationContain { return .{ .raw_ = r }; }
 
     pub fn format(self: SpatialNavigationContain, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20830,8 +19478,6 @@ pub const SpatialNavigationFunction = union(enum) {
     normal,
     ///     /// Moves the focus to the element which is aligned most in the navigation direction. If there are more than one aligned candidates in the navigation direction, select the element with the closest distance along the axis which corresponds to the navigation direction. In case of multiple elements with the same distance, select the element with the minimum amount of alignment. Else if there isn’t any aligned candidate in a given direction, select the element with the closest distance along the axis which corresponds to the navigation direction. In case of multiple elements with the same distance, select the element with the minimum distance along the axis which is orthogonal to the navigation direction.
     grid,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) SpatialNavigationFunction { return .{ .raw_ = r }; }
 
     pub fn format(self: SpatialNavigationFunction, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20851,8 +19497,6 @@ pub const Speak = union(enum) {
     never,
     ///     /// The element is rendered aurally (regardless of its display value, or the display or speak values of its ancestors).
     always,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Speak { return .{ .raw_ = r }; }
 
     pub fn format(self: Speak, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20876,8 +19520,6 @@ pub const SpeakAs = union(enum) {
     literal_punctuation,
     ///     /// Punctuation is not rendered: neither spoken nor rendered as pauses.
     no_punctuation,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) SpeakAs { return .{ .raw_ = r }; }
 
     pub fn format(self: SpeakAs, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20892,10 +19534,8 @@ pub const StopColor = union(enum) {
     revert_layer,
     unset,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) StopColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) StopColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) StopColor { return .{ .raw_ = r }; }
 
     pub fn format(self: StopColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20909,8 +19549,6 @@ pub const StopOpacity = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) StopOpacity { return .{ .raw_ = r }; }
 
     pub fn format(self: StopOpacity, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20924,8 +19562,6 @@ pub const StringSet = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) StringSet { return .{ .raw_ = r }; }
 
     pub fn format(self: StringSet, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20940,8 +19576,6 @@ pub const Stroke = union(enum) {
     revert_layer,
     unset,
     child,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Stroke { return .{ .raw_ = r }; }
 
     pub fn format(self: Stroke, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20961,8 +19595,6 @@ pub const StrokeAlign = union(enum) {
     inset,
     ///     /// The stroke for each subpath lies on the “outside” of the outline (outside the fill area).
     outset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) StrokeAlign { return .{ .raw_ = r }; }
 
     pub fn format(self: StrokeAlign, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20979,8 +19611,6 @@ pub const StrokeAlignment = union(enum) {
     center,
     inner,
     outer,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) StrokeAlignment { return .{ .raw_ = r }; }
 
     pub fn format(self: StrokeAlignment, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20997,8 +19627,6 @@ pub const StrokeBreak = union(enum) {
     bounding_box,
     slice,
     clone,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) StrokeBreak { return .{ .raw_ = r }; }
 
     pub fn format(self: StrokeBreak, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21205,10 +19833,8 @@ pub const StrokeColor = union(enum) {
     WindowFrame,
     WindowText,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) StrokeColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) StrokeColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) StrokeColor { return .{ .raw_ = r }; }
 
     pub fn format(self: StrokeColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21223,11 +19849,9 @@ pub const StrokeDashCorner = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) StrokeDashCorner { return .{ .px_ = v }; }
     pub fn em(v: f32) StrokeDashCorner { return .{ .em_ = v }; }
     pub fn rem(v: f32) StrokeDashCorner { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) StrokeDashCorner { return .{ .raw_ = r }; }
 
     pub fn format(self: StrokeDashCorner, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21249,8 +19873,6 @@ pub const StrokeDashJustify = union(enum) {
     dashes,
     ///     /// Indicates that when a dash pattern is to be stretched or compressed, the length of the gaps will be adjusted.
     gaps,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) StrokeDashJustify { return .{ .raw_ = r }; }
 
     pub fn format(self: StrokeDashJustify, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21268,8 +19890,6 @@ pub const StrokeDashadjust = union(enum) {
     compress,
     dashes,
     gaps,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) StrokeDashadjust { return .{ .raw_ = r }; }
 
     pub fn format(self: StrokeDashadjust, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21285,12 +19905,10 @@ pub const StrokeDasharray = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) StrokeDasharray { return .{ .px_ = v }; }
     pub fn em(v: f32) StrokeDasharray { return .{ .em_ = v }; }
     pub fn rem(v: f32) StrokeDasharray { return .{ .rem_ = v }; }
     pub fn percent(v: f32) StrokeDasharray { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) StrokeDasharray { return .{ .raw_ = r }; }
 
     pub fn format(self: StrokeDasharray, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21305,11 +19923,9 @@ pub const StrokeDashcorner = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) StrokeDashcorner { return .{ .px_ = v }; }
     pub fn em(v: f32) StrokeDashcorner { return .{ .em_ = v }; }
     pub fn rem(v: f32) StrokeDashcorner { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) StrokeDashcorner { return .{ .raw_ = r }; }
 
     pub fn format(self: StrokeDashcorner, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21325,12 +19941,10 @@ pub const StrokeDashoffset = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) StrokeDashoffset { return .{ .px_ = v }; }
     pub fn em(v: f32) StrokeDashoffset { return .{ .em_ = v }; }
     pub fn rem(v: f32) StrokeDashoffset { return .{ .rem_ = v }; }
     pub fn percent(v: f32) StrokeDashoffset { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) StrokeDashoffset { return .{ .raw_ = r }; }
 
     pub fn format(self: StrokeDashoffset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21345,8 +19959,6 @@ pub const StrokeImage = union(enum) {
     revert_layer,
     unset,
     child,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) StrokeImage { return .{ .raw_ = r }; }
 
     pub fn format(self: StrokeImage, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21366,8 +19978,6 @@ pub const StrokeLinecap = union(enum) {
     round,
     ///     /// At the end of each subpath, the stroke is extended by a rectangle with the same width as the stroke width and whose length is half of the stroke width. (The stroke for a zero-length subpath is a square with side length equal to the stroke width, centered at the subpath’s point, and oriented such that two of its sides are parallel to the effective tangent at that subpath’s point. See § 4.6 Computing the Shape of the Stroke for details on how to determine the tangent at a zero-length subpath.) Adding a rectangle to the end of dashes on a curved outline looks bad. It should just extend the dash by stroke-width/2, following the outline.
     square,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) StrokeLinecap { return .{ .raw_ = r }; }
 
     pub fn format(self: StrokeLinecap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21393,8 +20003,6 @@ pub const StrokeLinejoin = union(enum) {
     round,
     ///     /// When the stroke-miterlimit is exceeded, this behaves as if crop bevel were specified. Can we just remove fallback? It’s a stupid value, useful only because we didn’t have the clip-at-miterlimit behavior in SVG1. Question is if people are mostly just *accidentally* getting the bevel behavior right now, and would be okay with their joins extending up to the miterlimit and only getting the excess corners clipped, or if they actually wanted the discontinuous behavior currently specified. The breakpoint is between 29 and 30 degrees.
     fallback,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) StrokeLinejoin { return .{ .raw_ = r }; }
 
     pub fn format(self: StrokeLinejoin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21408,8 +20016,6 @@ pub const StrokeMiterlimit = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) StrokeMiterlimit { return .{ .raw_ = r }; }
 
     pub fn format(self: StrokeMiterlimit, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21423,8 +20029,6 @@ pub const StrokeOpacity = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) StrokeOpacity { return .{ .raw_ = r }; }
 
     pub fn format(self: StrokeOpacity, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21450,8 +20054,6 @@ pub const StrokeOrigin = union(enum) {
     padding_box,
     ///     /// Use the box’s own content-box/padding-box/border-box as the stroke positioning area. For SVG shapes, content-box and padding-box are treated as fill-box, while border-box is treated as stroke-box.
     border_box,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) StrokeOrigin { return .{ .raw_ = r }; }
 
     pub fn format(self: StrokeOrigin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21482,12 +20084,10 @@ pub const StrokePosition = union(enum) {
     end,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) StrokePosition { return .{ .px_ = v }; }
     pub fn em(v: f32) StrokePosition { return .{ .em_ = v }; }
     pub fn rem(v: f32) StrokePosition { return .{ .rem_ = v }; }
     pub fn percent(v: f32) StrokePosition { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) StrokePosition { return .{ .raw_ = r }; }
 
     pub fn format(self: StrokePosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21509,8 +20109,6 @@ pub const StrokeRepeat = union(enum) {
     space,
     round,
     no_repeat,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) StrokeRepeat { return .{ .raw_ = r }; }
 
     pub fn format(self: StrokeRepeat, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21529,12 +20127,10 @@ pub const StrokeSize = union(enum) {
     contain,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) StrokeSize { return .{ .px_ = v }; }
     pub fn em(v: f32) StrokeSize { return .{ .em_ = v }; }
     pub fn rem(v: f32) StrokeSize { return .{ .rem_ = v }; }
     pub fn percent(v: f32) StrokeSize { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) StrokeSize { return .{ .raw_ = r }; }
 
     pub fn format(self: StrokeSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21550,12 +20146,10 @@ pub const StrokeWidth = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) StrokeWidth { return .{ .px_ = v }; }
     pub fn em(v: f32) StrokeWidth { return .{ .em_ = v }; }
     pub fn rem(v: f32) StrokeWidth { return .{ .rem_ = v }; }
     pub fn percent(v: f32) StrokeWidth { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) StrokeWidth { return .{ .raw_ = r }; }
 
     pub fn format(self: StrokeWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21570,11 +20164,9 @@ pub const TabSize = union(enum) {
     revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) TabSize { return .{ .px_ = v }; }
     pub fn em(v: f32) TabSize { return .{ .em_ = v }; }
     pub fn rem(v: f32) TabSize { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) TabSize { return .{ .raw_ = r }; }
 
     pub fn format(self: TabSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21590,8 +20182,6 @@ pub const TableLayout = union(enum) {
     unset,
     auto,
     fixed,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TableLayout { return .{ .raw_ = r }; }
 
     pub fn format(self: TableLayout, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21621,8 +20211,6 @@ pub const TextAlign = union(enum) {
     match_parent,
     ///     /// Sets both text-align-all and text-align-last to justify, forcing the last line to justify as well.
     justify_all,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextAlign { return .{ .raw_ = r }; }
 
     pub fn format(self: TextAlign, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21643,8 +20231,6 @@ pub const TextAlignAll = union(enum) {
     center,
     justify,
     match_parent,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextAlignAll { return .{ .raw_ = r }; }
 
     pub fn format(self: TextAlignAll, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21667,8 +20253,6 @@ pub const TextAlignLast = union(enum) {
     center,
     justify,
     match_parent,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextAlignLast { return .{ .raw_ = r }; }
 
     pub fn format(self: TextAlignLast, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21685,8 +20269,6 @@ pub const TextAnchor = union(enum) {
     start,
     middle,
     end,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextAnchor { return .{ .raw_ = r }; }
 
     pub fn format(self: TextAnchor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21716,8 +20298,6 @@ pub const TextAutospace = union(enum) {
     replace,
     ///     /// The user agent chooses a set of typographically high quality spacing values. Different user agents running on different platforms may pick different values.
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextAutospace { return .{ .raw_ = r }; }
 
     pub fn format(self: TextAutospace, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21733,8 +20313,6 @@ pub const TextBox = union(enum) {
     unset,
     ///     /// If the single keyword normal is specified, it sets text-box-trim to none and text-box-edge to auto. Otherwise, omitting the text-box-trim value sets it to trim-both (not the initial value), while omitting the text-box-edge value sets it to auto (the initial value).
     normal,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextBox { return .{ .raw_ = r }; }
 
     pub fn format(self: TextBox, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21756,8 +20334,6 @@ pub const TextBoxEdge = union(enum) {
     cap,
     ex,
     alphabetic,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextBoxEdge { return .{ .raw_ = r }; }
 
     pub fn format(self: TextBoxEdge, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21777,8 +20353,6 @@ pub const TextBoxTrim = union(enum) {
     trim_end,
     ///     /// Specifies the behavior of trim-start and trim-end simultaneously.
     trim_both,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextBoxTrim { return .{ .raw_ = r }; }
 
     pub fn format(self: TextBoxTrim, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21795,8 +20369,6 @@ pub const TextCombineUpright = union(enum) {
     ///     /// Attempt to typeset horizontally all consecutive typographic character units within the box and text run such that they take up the space of a single typographic character unit within the vertical line box.
     all,
     digits,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextCombineUpright { return .{ .raw_ = r }; }
 
     pub fn format(self: TextCombineUpright, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21811,10 +20383,8 @@ pub const TextDecoration = union(enum) {
     revert_layer,
     unset,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) TextDecoration { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) TextDecoration { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) TextDecoration { return .{ .raw_ = r }; }
 
     pub fn format(self: TextDecoration, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22021,10 +20591,8 @@ pub const TextDecorationColor = union(enum) {
     WindowFrame,
     WindowText,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) TextDecorationColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) TextDecorationColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) TextDecorationColor { return .{ .raw_ = r }; }
 
     pub fn format(self: TextDecorationColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22041,11 +20609,9 @@ pub const TextDecorationInset = union(enum) {
     ///     /// The UA chooses an inset amount that ensures that if two identical underlined elements appear side-by-side they do not appear to have a single underline. (This is important in Chinese, where underlining is a form of punctuation.) text-decoration-inset: auto for <u>石井</u><u>艾俐俐</u>
     auto,
     px_: f32, em_: f32, rem_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) TextDecorationInset { return .{ .px_ = v }; }
     pub fn em(v: f32) TextDecorationInset { return .{ .em_ = v }; }
     pub fn rem(v: f32) TextDecorationInset { return .{ .rem_ = v }; }
-    pub fn raw(r: []const u8) TextDecorationInset { return .{ .raw_ = r }; }
 
     pub fn format(self: TextDecorationInset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22071,8 +20637,6 @@ pub const TextDecorationLine = union(enum) {
     spelling_error,
     ///     /// This value indicates the type of text decoration used by the user agent to highlight grammar mistakes. Its appearance is UA defined, and may be platform-dependent.
     grammar_error,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextDecorationLine { return .{ .raw_ = r }; }
 
     pub fn format(self: TextDecorationLine, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22088,8 +20652,6 @@ pub const TextDecorationSkip = union(enum) {
     unset,
     ///     /// The text-decoration-skip property and its sub-properties (text-decoration-skip-self, text-decoration-skip-box, text-decoration-skip-spaces, text-decoration-skip-ink) control interruptions in line decorations for which the element or an ancestor is the decorating box. The none value sets all sub-properties to none, and the auto value sets all sub-properties to their initial values.
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextDecorationSkip { return .{ .raw_ = r }; }
 
     pub fn format(self: TextDecorationSkip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22105,8 +20667,6 @@ pub const TextDecorationSkipBox = union(enum) {
     unset,
     ///     /// When drawing text decoration lines applied to an ancestor decorating box, skip over the box’s own margin, border, and padding areas and only draw line decorations within its content area. This value only has an effect for decorations imposed by an ancestor; a decorating box never draws over its own box decoration.
     all,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextDecorationSkipBox { return .{ .raw_ = r }; }
 
     pub fn format(self: TextDecorationSkipBox, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22124,8 +20684,6 @@ pub const TextDecorationSkipInk = union(enum) {
     auto,
     ///     /// UAs must interrupt underlines and overlines where the line would cross glyph ink and to some distance to either side of the glyph outline.
     all,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextDecorationSkipInk { return .{ .raw_ = r }; }
 
     pub fn format(self: TextDecorationSkipInk, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22151,8 +20709,6 @@ pub const TextDecorationSkipSelf = union(enum) {
     skip_line_through,
     ///     /// Line decorations from ancestor decorating boxes are applied to this box unconditionally: drawn across it as if it were text if it is an atomic inline, or propagated to it according to the usual rules if it is not.
     no_skip,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextDecorationSkipSelf { return .{ .raw_ = r }; }
 
     pub fn format(self: TextDecorationSkipSelf, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22172,8 +20728,6 @@ pub const TextDecorationSkipSpaces = union(enum) {
     start,
     ///     /// Skip all spacers, plus any adjacent letter-spacing or word-spacing, when located at the end of the line.
     end,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextDecorationSkipSpaces { return .{ .raw_ = r }; }
 
     pub fn format(self: TextDecorationSkipSpaces, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22193,8 +20747,6 @@ pub const TextDecorationStyle = union(enum) {
     dashed,
     ///     /// Values have the same meaning as for the border-style properties [CSS-BACKGROUNDS-3]. wavy indicates a wavy line.
     wavy,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextDecorationStyle { return .{ .raw_ = r }; }
 
     pub fn format(self: TextDecorationStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22218,12 +20770,10 @@ pub const TextDecorationThickness = union(enum) {
     thick,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) TextDecorationThickness { return .{ .px_ = v }; }
     pub fn em(v: f32) TextDecorationThickness { return .{ .em_ = v }; }
     pub fn rem(v: f32) TextDecorationThickness { return .{ .rem_ = v }; }
     pub fn percent(v: f32) TextDecorationThickness { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) TextDecorationThickness { return .{ .raw_ = r }; }
 
     pub fn format(self: TextDecorationThickness, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22238,10 +20788,8 @@ pub const TextEmphasis = union(enum) {
     revert_layer,
     unset,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) TextEmphasis { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) TextEmphasis { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) TextEmphasis { return .{ .raw_ = r }; }
 
     pub fn format(self: TextEmphasis, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22448,10 +20996,8 @@ pub const TextEmphasisColor = union(enum) {
     WindowFrame,
     WindowText,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn hex(v: u32) TextEmphasisColor { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) TextEmphasisColor { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) TextEmphasisColor { return .{ .raw_ = r }; }
 
     pub fn format(self: TextEmphasisColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22473,8 +21019,6 @@ pub const TextEmphasisPosition = union(enum) {
     right,
     ///     /// Draw marks to the left of the text in vertical typographic modes.
     left,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextEmphasisPosition { return .{ .raw_ = r }; }
 
     pub fn format(self: TextEmphasisPosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22496,8 +21040,6 @@ pub const TextEmphasisSkip = union(enum) {
     symbols,
     ///     /// Skip characters where the East_Asian_Width property [UAX11] of the Unicode database [UAX44] is not F (Fullwidth) or W (Wide).
     narrow,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextEmphasisSkip { return .{ .raw_ = r }; }
 
     pub fn format(self: TextEmphasisSkip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22524,8 +21066,6 @@ pub const TextEmphasisStyle = union(enum) {
     triangle,
     ///     /// Display sesames as marks. The filled sesame is U+FE45 '﹅', and the open sesame is U+FE46 '﹆'.
     sesame,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextEmphasisStyle { return .{ .raw_ = r }; }
 
     pub fn format(self: TextEmphasisStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22549,8 +21089,6 @@ pub const TextGroupAlign = union(enum) {
     right,
     ///     /// Inline-level content is group-aligned to the center, by padding both sides of each line box, half the spacing to each side.
     center,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextGroupAlign { return .{ .raw_ = r }; }
 
     pub fn format(self: TextGroupAlign, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22570,12 +21108,10 @@ pub const TextIndent = union(enum) {
     each_line,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) TextIndent { return .{ .px_ = v }; }
     pub fn em(v: f32) TextIndent { return .{ .em_ = v }; }
     pub fn rem(v: f32) TextIndent { return .{ .rem_ = v }; }
     pub fn percent(v: f32) TextIndent { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) TextIndent { return .{ .raw_ = r }; }
 
     pub fn format(self: TextIndent, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22599,8 +21135,6 @@ pub const TextJustify = union(enum) {
     ruby,
     ///     /// Justification must not compress spacing controlled by text-spacing-trim or text-autospace. (If this value is not specified, the justification process may reduce such spacing except when the spacing is at the start or end of the line.) This keyword used to be part of text-spacing; it might need renaming to be more specific now that it’s here, as it implies that e.g. U+0020 cannot be compressed. [Issue #7079]
     no_compress,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextJustify { return .{ .raw_ = r }; }
 
     pub fn format(self: TextJustify, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22620,8 +21154,6 @@ pub const TextOrientation = union(enum) {
     upright,
     ///     /// Causes all text to be typeset sideways, as if in a horizontal layout, but rotated 90° clockwise.
     sideways,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextOrientation { return .{ .raw_ = r }; }
 
     pub fn format(self: TextOrientation, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22641,8 +21173,6 @@ pub const TextOverflow = union(enum) {
     ellipsis,
     ///     /// Same as fade(), but the distance over which the fading effect is applied is determined by the UA. 1em is suggested as a reasonable value.
     fade,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextOverflow { return .{ .raw_ = r }; }
 
     pub fn format(self: TextOverflow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22660,8 +21190,6 @@ pub const TextRendering = union(enum) {
     optimizeSpeed,
     optimizeLegibility,
     geometricPrecision,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextRendering { return .{ .raw_ = r }; }
 
     pub fn format(self: TextRendering, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22870,13 +21398,11 @@ pub const TextShadow = union(enum) {
     inset,
     px_: f32, em_: f32, rem_: f32,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
-    raw_: []const u8,
     pub fn px(v: f32) TextShadow { return .{ .px_ = v }; }
     pub fn em(v: f32) TextShadow { return .{ .em_ = v }; }
     pub fn rem(v: f32) TextShadow { return .{ .rem_ = v }; }
     pub fn hex(v: u32) TextShadow { return .{ .hex_ = v }; }
     pub fn rgb(r: u8, g: u8, b: u8) TextShadow { return .{ .rgb_ = core.Color.rgb(r, g, b) }; }
-    pub fn raw(r: []const u8) TextShadow { return .{ .raw_ = r }; }
 
     pub fn format(self: TextShadow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22893,9 +21419,7 @@ pub const TextSizeAdjust = union(enum) {
     ///     /// Renderers must use the default size adjustment when displaying on a small device.
     auto,
     percent_: f32,
-    raw_: []const u8,
     pub fn percent(v: f32) TextSizeAdjust { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) TextSizeAdjust { return .{ .raw_ = r }; }
 
     pub fn format(self: TextSizeAdjust, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22923,8 +21447,6 @@ pub const TextSpacing = union(enum) {
     punctuation,
     insert,
     replace,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextSpacing { return .{ .raw_ = r }; }
 
     pub fn format(self: TextSpacing, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22952,8 +21474,6 @@ pub const TextSpacingTrim = union(enum) {
     trim_all,
     ///     /// The user agent chooses a set of typographically high quality spacing values. Different user agents running on different platforms may pick different values. Do we need auto? It would be weird for the author to choose platform-dependent behavior at the start of the first line, and it should otherwise use trim-both.
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextSpacingTrim { return .{ .raw_ = r }; }
 
     pub fn format(self: TextSpacingTrim, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22979,8 +21499,6 @@ pub const TextTransform = union(enum) {
     full_size_kana,
     ///     /// See MathML Core § 4.2 The math-auto transform.
     math_auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextTransform { return .{ .raw_ = r }; }
 
     pub fn format(self: TextTransform, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22998,12 +21516,10 @@ pub const TextUnderlineOffset = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) TextUnderlineOffset { return .{ .px_ = v }; }
     pub fn em(v: f32) TextUnderlineOffset { return .{ .em_ = v }; }
     pub fn rem(v: f32) TextUnderlineOffset { return .{ .rem_ = v }; }
     pub fn percent(v: f32) TextUnderlineOffset { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) TextUnderlineOffset { return .{ .raw_ = r }; }
 
     pub fn format(self: TextUnderlineOffset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23027,8 +21543,6 @@ pub const TextUnderlinePosition = union(enum) {
     left,
     ///     /// In vertical typographic modes, the underline is aligned as for under, except it is always aligned to the right edge of the text. If this causes the underline to be drawn on the "over" side of the text, then an overline also switches sides and is drawn on the "under" side.
     right,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextUnderlinePosition { return .{ .raw_ = r }; }
 
     pub fn format(self: TextUnderlinePosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23042,8 +21556,6 @@ pub const TextWrap = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextWrap { return .{ .raw_ = r }; }
 
     pub fn format(self: TextWrap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23061,8 +21573,6 @@ pub const TextWrapMode = union(enum) {
     wrap,
     ///     /// Inline-level content does not break across lines; content that does not fit within the block container overflows it.
     nowrap,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextWrapMode { return .{ .raw_ = r }; }
 
     pub fn format(self: TextWrapMode, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23086,8 +21596,6 @@ pub const TextWrapStyle = union(enum) {
     pretty,
     ///     /// Specifies the UA should avoid excessively short last lines, and is expected to consider more than one line when making break decisions (for example, to avoid "fixing" an orphan by making the previous line too short). The user agent may decide against improving the last line when it would make some prior line(s) substantially unbalanced. The user agent should not attempt to improve other aspects of the layout beyond what auto if those improvements come at a significant performance cost. For instance, with the given line length, the following test would be wrapped with a single word on the last line, which could be judged too short. ἄνδρα μοι ἔννεπε, μοῦσα, πολύτροπον, ὃς μάλα πολλὰ πλάγχθη, ἐπεὶ Τροίης ἱερὸν πτολίεθρον ἔπερσεν. Applying text-wrap-style: avoid-orphans could yield something like this instead, which is arguably more pleasing: ἄνδρα μοι ἔννεπε, μοῦσα, πολύτροπον, ὃς μάλα πολλὰ πλάγχθη, ἐπεὶ Τροίης ἱερὸν πτολίεθρον ἔπερσεν. However, the following fragment is more vexing: Circumnavigating the Mississippi river An attempt to make the last line less short by wrapping the previous line earlier would result in the following: Circumnavigating the Mississippi river While the last line would indeed no longer be short, the penultimate line would be unsightly. In such cases, user agents are expected to prefer the first rendering despite text-wrap-style: avoid-orphans being set.
     avoid_orphans,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TextWrapStyle { return .{ .raw_ = r }; }
 
     pub fn format(self: TextWrapStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23103,8 +21611,6 @@ pub const TimelineScope = union(enum) {
     unset,
     ///     /// Specifies that all timeline names defined by this element or its flat tree descendants—​whose scope is not already limited by a descendant using timeline-scope—​to be in scope only for this element’s flat tree descendants; and limits descendants to only match timeline names to elements within this subtree.
     all,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TimelineScope { return .{ .raw_ = r }; }
 
     pub fn format(self: TimelineScope, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23118,8 +21624,6 @@ pub const TimelineTrigger = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TimelineTrigger { return .{ .raw_ = r }; }
 
     pub fn format(self: TimelineTrigger, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23133,8 +21637,6 @@ pub const TimelineTriggerActivationRange = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TimelineTriggerActivationRange { return .{ .raw_ = r }; }
 
     pub fn format(self: TimelineTriggerActivationRange, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23151,12 +21653,10 @@ pub const TimelineTriggerActivationRangeEnd = union(enum) {
     normal,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) TimelineTriggerActivationRangeEnd { return .{ .px_ = v }; }
     pub fn em(v: f32) TimelineTriggerActivationRangeEnd { return .{ .em_ = v }; }
     pub fn rem(v: f32) TimelineTriggerActivationRangeEnd { return .{ .rem_ = v }; }
     pub fn percent(v: f32) TimelineTriggerActivationRangeEnd { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) TimelineTriggerActivationRangeEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: TimelineTriggerActivationRangeEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23173,12 +21673,10 @@ pub const TimelineTriggerActivationRangeStart = union(enum) {
     normal,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) TimelineTriggerActivationRangeStart { return .{ .px_ = v }; }
     pub fn em(v: f32) TimelineTriggerActivationRangeStart { return .{ .em_ = v }; }
     pub fn rem(v: f32) TimelineTriggerActivationRangeStart { return .{ .rem_ = v }; }
     pub fn percent(v: f32) TimelineTriggerActivationRangeStart { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) TimelineTriggerActivationRangeStart { return .{ .raw_ = r }; }
 
     pub fn format(self: TimelineTriggerActivationRangeStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23192,8 +21690,6 @@ pub const TimelineTriggerActiveRange = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TimelineTriggerActiveRange { return .{ .raw_ = r }; }
 
     pub fn format(self: TimelineTriggerActiveRange, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23212,12 +21708,10 @@ pub const TimelineTriggerActiveRangeEnd = union(enum) {
     normal,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) TimelineTriggerActiveRangeEnd { return .{ .px_ = v }; }
     pub fn em(v: f32) TimelineTriggerActiveRangeEnd { return .{ .em_ = v }; }
     pub fn rem(v: f32) TimelineTriggerActiveRangeEnd { return .{ .rem_ = v }; }
     pub fn percent(v: f32) TimelineTriggerActiveRangeEnd { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) TimelineTriggerActiveRangeEnd { return .{ .raw_ = r }; }
 
     pub fn format(self: TimelineTriggerActiveRangeEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23236,12 +21730,10 @@ pub const TimelineTriggerActiveRangeStart = union(enum) {
     normal,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) TimelineTriggerActiveRangeStart { return .{ .px_ = v }; }
     pub fn em(v: f32) TimelineTriggerActiveRangeStart { return .{ .em_ = v }; }
     pub fn rem(v: f32) TimelineTriggerActiveRangeStart { return .{ .rem_ = v }; }
     pub fn percent(v: f32) TimelineTriggerActiveRangeStart { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) TimelineTriggerActiveRangeStart { return .{ .raw_ = r }; }
 
     pub fn format(self: TimelineTriggerActiveRangeStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23255,8 +21747,6 @@ pub const TimelineTriggerName = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TimelineTriggerName { return .{ .raw_ = r }; }
 
     pub fn format(self: TimelineTriggerName, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23271,8 +21761,6 @@ pub const TimelineTriggerSource = union(enum) {
     revert_layer,
     unset,
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TimelineTriggerSource { return .{ .raw_ = r }; }
 
     pub fn format(self: TimelineTriggerSource, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23290,12 +21778,10 @@ pub const Top = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) Top { return .{ .px_ = v }; }
     pub fn em(v: f32) Top { return .{ .em_ = v }; }
     pub fn rem(v: f32) Top { return .{ .rem_ = v }; }
     pub fn percent(v: f32) Top { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) Top { return .{ .raw_ = r }; }
 
     pub fn format(self: Top, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23318,8 +21804,6 @@ pub const TouchAction = union(enum) {
     pan_down,
     pinch_zoom,
     manipulation,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TouchAction { return .{ .raw_ = r }; }
 
     pub fn format(self: TouchAction, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23333,8 +21817,6 @@ pub const Transform = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Transform { return .{ .raw_ = r }; }
 
     pub fn format(self: Transform, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23358,8 +21840,6 @@ pub const TransformBox = union(enum) {
     stroke_box,
     ///     /// Uses the nearest SVG viewport as reference box.
     view_box,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TransformBox { return .{ .raw_ = r }; }
 
     pub fn format(self: TransformBox, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23385,12 +21865,10 @@ pub const TransformOrigin = union(enum) {
     bottom,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) TransformOrigin { return .{ .px_ = v }; }
     pub fn em(v: f32) TransformOrigin { return .{ .em_ = v }; }
     pub fn rem(v: f32) TransformOrigin { return .{ .rem_ = v }; }
     pub fn percent(v: f32) TransformOrigin { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) TransformOrigin { return .{ .raw_ = r }; }
 
     pub fn format(self: TransformOrigin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23406,8 +21884,6 @@ pub const TransformStyle = union(enum) {
     unset,
     flat,
     preserve_3d,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TransformStyle { return .{ .raw_ = r }; }
 
     pub fn format(self: TransformStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23431,8 +21907,6 @@ pub const Transition = union(enum) {
     step_end,
     normal,
     allow_discrete,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Transition { return .{ .raw_ = r }; }
 
     pub fn format(self: Transition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23448,8 +21922,6 @@ pub const TransitionBehavior = union(enum) {
     unset,
     normal,
     allow_discrete,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TransitionBehavior { return .{ .raw_ = r }; }
 
     pub fn format(self: TransitionBehavior, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23463,8 +21935,6 @@ pub const TransitionDelay = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TransitionDelay { return .{ .raw_ = r }; }
 
     pub fn format(self: TransitionDelay, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23478,8 +21948,6 @@ pub const TransitionDuration = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TransitionDuration { return .{ .raw_ = r }; }
 
     pub fn format(self: TransitionDuration, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23495,8 +21963,6 @@ pub const TransitionProperty = union(enum) {
     unset,
     ///     /// A value of none means that no property will transition. Otherwise, a list of properties to be transitioned, or the keyword all which indicates that all properties are to be transitioned, is given.
     all,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TransitionProperty { return .{ .raw_ = r }; }
 
     pub fn format(self: TransitionProperty, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23517,8 +21983,6 @@ pub const TransitionTimingFunction = union(enum) {
     ease_in_out,
     step_start,
     step_end,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TransitionTimingFunction { return .{ .raw_ = r }; }
 
     pub fn format(self: TransitionTimingFunction, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23534,12 +21998,10 @@ pub const Translate = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) Translate { return .{ .px_ = v }; }
     pub fn em(v: f32) Translate { return .{ .em_ = v }; }
     pub fn rem(v: f32) Translate { return .{ .rem_ = v }; }
     pub fn percent(v: f32) Translate { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) Translate { return .{ .raw_ = r }; }
 
     pub fn format(self: Translate, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23555,8 +22017,6 @@ pub const TriggerScope = union(enum) {
     unset,
     ///     /// Specifies that all trigger names defined by this element or its descendants—​whose scope is not already limited by a descendant using trigger-scope—​to be in scope only for this element’s flat tree descendants; and limits descendants to only match trigger names to triggers within this subtree. This value only affects trigger names in the same tree scope, as if it were a strictly matched tree-scoped name. (That is, trigger-scope: all acts identically to trigger-scope: --foo, --bar, ..., listing all relevant trigger names.)
     all,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) TriggerScope { return .{ .raw_ = r }; }
 
     pub fn format(self: TriggerScope, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23582,8 +22042,6 @@ pub const UnicodeBidi = union(enum) {
     isolate_override,
     ///     /// This value behaves as isolate except that for the purposes of the Unicode bidirectional algorithm, the base directionality of each of the box’s bidi paragraphs (if a block container) or isolated sequences (if an inline) is determined by following the heuristic in rules P2 and P3 of the Unicode bidirectional algorithm (rather than by using the direction property of the box).
     plaintext,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) UnicodeBidi { return .{ .raw_ = r }; }
 
     pub fn format(self: UnicodeBidi, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23605,8 +22063,6 @@ pub const UserSelect = union(enum) {
     contain,
     ///     /// The content of the element must be selected atomically: If a selection would contain part of the element, then the selection must contain the entire element including all its descendants. If the element is selected and the used value of user-select on its parent is all, then the parent must be included in the selection, recursively. If this element has descendants on which the used value of user-select is not all and if a selection is entirely contained in these descendants, then the selection is not extended to include this whole element.
     all,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) UserSelect { return .{ .raw_ = r }; }
 
     pub fn format(self: UserSelect, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23624,8 +22080,6 @@ pub const VectorEffect = union(enum) {
     non_scaling_size,
     non_rotation,
     fixed_position,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) VectorEffect { return .{ .raw_ = r }; }
 
     pub fn format(self: VectorEffect, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23643,8 +22097,6 @@ pub const VerticalAlign = union(enum) {
     first,
     ///     /// Specifies last-baseline alignment.
     last,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) VerticalAlign { return .{ .raw_ = r }; }
 
     pub fn format(self: VerticalAlign, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23658,8 +22110,6 @@ pub const ViewTimeline = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ViewTimeline { return .{ .raw_ = r }; }
 
     pub fn format(self: ViewTimeline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23681,8 +22131,6 @@ pub const ViewTimelineAxis = union(enum) {
     x,
     ///     /// Specifies to use the measure of progress along the vertical axis of the scroll container.
     y,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ViewTimelineAxis { return .{ .raw_ = r }; }
 
     pub fn format(self: ViewTimelineAxis, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23700,12 +22148,10 @@ pub const ViewTimelineInset = union(enum) {
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) ViewTimelineInset { return .{ .px_ = v }; }
     pub fn em(v: f32) ViewTimelineInset { return .{ .em_ = v }; }
     pub fn rem(v: f32) ViewTimelineInset { return .{ .rem_ = v }; }
     pub fn percent(v: f32) ViewTimelineInset { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) ViewTimelineInset { return .{ .raw_ = r }; }
 
     pub fn format(self: ViewTimelineInset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23719,8 +22165,6 @@ pub const ViewTimelineName = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ViewTimelineName { return .{ .raw_ = r }; }
 
     pub fn format(self: ViewTimelineName, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23734,8 +22178,6 @@ pub const ViewTransitionClass = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ViewTransitionClass { return .{ .raw_ = r }; }
 
     pub fn format(self: ViewTransitionClass, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23755,8 +22197,6 @@ pub const ViewTransitionGroup = union(enum) {
     contain,
     ///     /// The view-transition-group() pseudo-element generated by this element is a child of the view-transition-group-children() pseudo-element generated by this element’s nearest view-transition-group() generating flat tree ancestor element, if any. If no such element is present, the view-transition-group() pseudo-element generated by this element is a direct child of the ::view-transition pseudo-element associated with this view transition.
     nearest,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ViewTransitionGroup { return .{ .raw_ = r }; }
 
     pub fn format(self: ViewTransitionGroup, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23770,8 +22210,6 @@ pub const ViewTransitionName = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ViewTransitionName { return .{ .raw_ = r }; }
 
     pub fn format(self: ViewTransitionName, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23786,8 +22224,6 @@ pub const ViewTransitionScope = union(enum) {
     revert_layer,
     unset,
     all,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ViewTransitionScope { return .{ .raw_ = r }; }
 
     pub fn format(self: ViewTransitionScope, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23809,8 +22245,6 @@ pub const Visibility = union(enum) {
     force_hidden,
     ///     /// Indicates that the box is collapsed, which can cause it to take up less space than otherwise in a formatting-context–specific way. See dynamic row and column effects in tables [CSS2] and collapsed flex items in flex layout [CSS-FLEXBOX-1]. In all other cases, however, (i.e. unless otherwise specified) this simply makes the box invisible, just like hidden.
     collapse,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Visibility { return .{ .raw_ = r }; }
 
     pub fn format(self: Visibility, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23834,8 +22268,6 @@ pub const VoiceBalance = union(enum) {
     leftwards,
     ///     /// Moves the sound to the right, by adding 20 to the inherited voice-balance value (and by clamping the resulting number to 100).
     rightwards,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) VoiceBalance { return .{ .raw_ = r }; }
 
     pub fn format(self: VoiceBalance, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23851,8 +22283,6 @@ pub const VoiceDuration = union(enum) {
     unset,
     ///     /// Resolves to a used value corresponding to the duration of the speech synthesis when using the inherited voice-rate.
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) VoiceDuration { return .{ .raw_ = r }; }
 
     pub fn format(self: VoiceDuration, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23868,8 +22298,6 @@ pub const VoiceFamily = union(enum) {
     unset,
     ///     /// Indicates that the voice-family value gets inherited and used regardless of any potential language change within the content markup (see the section below about voice selection and language handling). This value behaves as inherit when applied to the root element. Note: Descendants of the element automatically inherit the preserve value, unless it is explicitly overridden by other voice-family values (e.g. name, gender, age).
     preserve,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) VoiceFamily { return .{ .raw_ = r }; }
 
     pub fn format(self: VoiceFamily, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23896,9 +22324,7 @@ pub const VoicePitch = union(enum) {
     ///     /// A sequence of monotonically non-decreasing pitch levels that are implementation and voice specific. When the computed value for a given element is only a keyword (i.e. no relative offset is specified), then the corresponding absolute frequency will be re-evaluated on a voice change. Conversely, the application of a relative offset requires the calculation of the resulting frequency based on the current voice at the point at which the relative offset is specified, so the computed frequency will inherit absolutely regardless of any voice change further down the style cascade. Authors should therefore only use keyword values in cases where they wish that voice changes trigger the re-evaluation of the conversion from a keyword to a concrete, voice-dependent frequency.
     x_high,
     percent_: f32,
-    raw_: []const u8,
     pub fn percent(v: f32) VoicePitch { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) VoicePitch { return .{ .raw_ = r }; }
 
     pub fn format(self: VoicePitch, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23925,9 +22351,7 @@ pub const VoiceRange = union(enum) {
     ///     /// A sequence of monotonically non-decreasing pitch levels that are implementation and voice specific. When the computed value for a given element is only a keyword (i.e. no relative offset is specified), then the corresponding absolute frequency will be re-evaluated on a voice change. Conversely, the application of a relative offset requires the calculation of the resulting frequency based on the current voice at the point at which the relative offset is specified, so the computed frequency will inherit absolutely regardless of any voice change further down the style cascade. Authors should therefore only use keyword values in cases where they wish that voice changes trigger the re-evaluation of the conversion from a keyword to a concrete, voice-dependent frequency.
     x_high,
     percent_: f32,
-    raw_: []const u8,
     pub fn percent(v: f32) VoiceRange { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) VoiceRange { return .{ .raw_ = r }; }
 
     pub fn format(self: VoiceRange, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23954,9 +22378,7 @@ pub const VoiceRate = union(enum) {
     ///     /// A sequence of monotonically non-decreasing speaking rates that are implementation- and voice-specific. For example, typical values for the English language are (in words per minute) x-slow = 80, slow = 120, medium = between 180 and 200, fast = 500.
     x_fast,
     percent_: f32,
-    raw_: []const u8,
     pub fn percent(v: f32) VoiceRate { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) VoiceRate { return .{ .raw_ = r }; }
 
     pub fn format(self: VoiceRate, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -23978,8 +22400,6 @@ pub const VoiceStress = union(enum) {
     moderate,
     ///     /// Effectively the opposite of emphasizing a word.
     reduced,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) VoiceStress { return .{ .raw_ = r }; }
 
     pub fn format(self: VoiceStress, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -24005,8 +22425,6 @@ pub const VoiceVolume = union(enum) {
     loud,
     ///     /// This sequence of keywords corresponds to monotonically non-decreasing volume levels, mapped to implementation-dependent values that meet the listener’s requirements with regards to perceived loudness. These audio levels are typically provided via a preference mechanism that allow users to calibrate sound options according to their auditory environment. The keyword x-soft maps to the user’s minimum audible volume level, x-loud maps to the user’s maximum tolerable volume level, medium maps to the user’s preferred volume level, soft and loud map to intermediary values.
     x_loud,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) VoiceVolume { return .{ .raw_ = r }; }
 
     pub fn format(self: VoiceVolume, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -24028,8 +22446,6 @@ pub const WhiteSpace = union(enum) {
     pre_wrap,
     ///     /// Like normal, this value collapses consecutive white space characters and allows wrapping, but it preserves segment breaks in the source as forced line breaks.
     pre_line,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WhiteSpace { return .{ .raw_ = r }; }
 
     pub fn format(self: WhiteSpace, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -24055,8 +22471,6 @@ pub const WhiteSpaceCollapse = union(enum) {
     preserve_spaces,
     ///     /// The behavior is identical to that of preserve, except that: Any sequence of preserved white space or other space separators always takes up space, including at the end of the line. A soft wrap opportunity exists after every preserved white space character and after every other space separator (including between adjacent spaces).
     break_spaces,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WhiteSpaceCollapse { return .{ .raw_ = r }; }
 
     pub fn format(self: WhiteSpaceCollapse, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -24076,8 +22490,6 @@ pub const WhiteSpaceTrim = union(enum) {
     discard_after,
     ///     /// For block containers this value directs UAs to discard all whitespace at the beginning of the element up to and including the last segment break before the first non-white-space character in the element as well as to discard all white space at the end of the element starting with the first segment break after the last non-white-space character in the element. For other elements this value directs UAs to discard all whitespace at the beginning and end of the element.
     discard_inner,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WhiteSpaceTrim { return .{ .raw_ = r }; }
 
     pub fn format(self: WhiteSpaceTrim, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -24091,8 +22503,6 @@ pub const Widows = union(enum) {
     revert,
     revert_layer,
     unset,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) Widows { return .{ .raw_ = r }; }
 
     pub fn format(self: Widows, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -24120,12 +22530,10 @@ pub const Width = union(enum) {
     contain,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) Width { return .{ .px_ = v }; }
     pub fn em(v: f32) Width { return .{ .em_ = v }; }
     pub fn rem(v: f32) Width { return .{ .rem_ = v }; }
     pub fn percent(v: f32) Width { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) Width { return .{ .raw_ = r }; }
 
     pub fn format(self: Width, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -24145,8 +22553,6 @@ pub const WillChange = union(enum) {
     scroll_position,
     ///     /// Indicates that the author expects to animate or change something about the element’s contents in the near future. For example, browsers often “cache” rendering of elements over time, because most things don’t change very often, or only change their position. However, if an element does change its contents continually, producing and maintaining this cache is a waste of time. A browser might take this value as a signal to cache less aggressively on the element, or avoid caching at all and just continually re-render the element from scratch. This value is mostly intended to help browsers optimize JS-based animations of content, which change aspects of an element’s contents many times per second. This kind of optimization, when possible, is already done automatically by browsers when declarative animations are used.
     contents,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WillChange { return .{ .raw_ = r }; }
 
     pub fn format(self: WillChange, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -24172,8 +22578,6 @@ pub const WordBreak = union(enum) {
     auto_phrase,
     ///     /// For compatibility with legacy content, the word-break property also supports a deprecated break-word keyword. When specified, this has the same effect as word-break: normal and overflow-wrap: anywhere, regardless of the actual value of the overflow-wrap property.
     break_word,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WordBreak { return .{ .raw_ = r }; }
 
     pub fn format(self: WordBreak, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -24193,8 +22597,6 @@ pub const WordSpaceTransform = union(enum) {
     ideographic_space,
     ///     /// If the content language is known and the user agent supports linguistic analysis for this language, the user agent must detect phrase boundaries. If a word-separator character, other space separator, or U+200B ZERO WIDTH SPACE character does not already occur at that boundary, then the UA must insert a virtual expandable separator. If this value is omitted, or if the content language is unknown, or if the user agent does not support detecting phrase boundaries for that language, there are no virtual expandable separator.
     auto_phrase,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WordSpaceTransform { return .{ .raw_ = r }; }
 
     pub fn format(self: WordSpaceTransform, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -24212,12 +22614,10 @@ pub const WordSpacing = union(enum) {
     normal,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) WordSpacing { return .{ .px_ = v }; }
     pub fn em(v: f32) WordSpacing { return .{ .em_ = v }; }
     pub fn rem(v: f32) WordSpacing { return .{ .rem_ = v }; }
     pub fn percent(v: f32) WordSpacing { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) WordSpacing { return .{ .raw_ = r }; }
 
     pub fn format(self: WordSpacing, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -24234,8 +22634,6 @@ pub const WordWrap = union(enum) {
     normal,
     break_word,
     anywhere,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WordWrap { return .{ .raw_ = r }; }
 
     pub fn format(self: WordWrap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -24261,8 +22659,6 @@ pub const WrapAfter = union(enum) {
     line,
     ///     /// Force a flex line break immediately before/after the box if the box is a flex item in a multi-line flex container.
     flex,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WrapAfter { return .{ .raw_ = r }; }
 
     pub fn format(self: WrapAfter, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -24288,8 +22684,6 @@ pub const WrapBefore = union(enum) {
     line,
     ///     /// Force a flex line break immediately before/after the box if the box is a flex item in a multi-line flex container.
     flex,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WrapBefore { return .{ .raw_ = r }; }
 
     pub fn format(self: WrapBefore, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -24317,8 +22711,6 @@ pub const WrapFlow = union(enum) {
     maximum,
     ///     /// Inline flow content can only flow before and after the exclusion in the flow content’s block direction and must leave the areas next to the start and end edges of the exclusion empty.
     clear,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WrapFlow { return .{ .raw_ = r }; }
 
     pub fn format(self: WrapFlow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -24336,8 +22728,6 @@ pub const WrapInside = union(enum) {
     auto,
     ///     /// Line breaking is suppressed within the box: the UA may only break within the box if there are no other valid break points in the line. If the text breaks, line-breaking restrictions are honored as for auto. If boxes with avoid are nested and the UA must break within these boxes, a break in an outer box must be used before a break within an inner box may be used.
     avoid,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WrapInside { return .{ .raw_ = r }; }
 
     pub fn format(self: WrapInside, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -24353,8 +22743,6 @@ pub const WrapThrough = union(enum) {
     unset,
     ///     /// The element inherits its parent node’s wrapping context. Its descendant inline content wraps around exclusions defined outside the element.
     wrap,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WrapThrough { return .{ .raw_ = r }; }
 
     pub fn format(self: WrapThrough, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -24378,8 +22766,6 @@ pub const WritingMode = union(enum) {
     sideways_rl,
     ///     /// Left-to-right block flow direction. The writing mode is vertical, while the typographic mode is horizontal.
     sideways_lr,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) WritingMode { return .{ .raw_ = r }; }
 
     pub fn format(self: WritingMode, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -24395,12 +22781,10 @@ pub const X = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) X { return .{ .px_ = v }; }
     pub fn em(v: f32) X { return .{ .em_ = v }; }
     pub fn rem(v: f32) X { return .{ .rem_ = v }; }
     pub fn percent(v: f32) X { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) X { return .{ .raw_ = r }; }
 
     pub fn format(self: X, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -24416,12 +22800,10 @@ pub const Y = union(enum) {
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
-    raw_: []const u8,
     pub fn px(v: f32) Y { return .{ .px_ = v }; }
     pub fn em(v: f32) Y { return .{ .em_ = v }; }
     pub fn rem(v: f32) Y { return .{ .rem_ = v }; }
     pub fn percent(v: f32) Y { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) Y { return .{ .raw_ = r }; }
 
     pub fn format(self: Y, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -24437,8 +22819,6 @@ pub const ZIndex = union(enum) {
     unset,
     ///     /// The stack level of the generated box in the current stacking context is 0. The box does not establish a new stacking context unless it is the root element.
     auto,
-    raw_: []const u8,
-    pub fn raw(r: []const u8) ZIndex { return .{ .raw_ = r }; }
 
     pub fn format(self: ZIndex, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -24453,9 +22833,7 @@ pub const Zoom = union(enum) {
     revert_layer,
     unset,
     percent_: f32,
-    raw_: []const u8,
     pub fn percent(v: f32) Zoom { return .{ .percent_ = v }; }
-    pub fn raw(r: []const u8) Zoom { return .{ .raw_ = r }; }
 
     pub fn format(self: Zoom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -27706,10 +26084,13 @@ pub const Style = struct {
     /// - **W3C**: https://drafts.csswg.org/css-viewport/#propdef-zoom
     zoom: Zoom = .none,
 
+    extra: []const u8 = "",
+
     pub fn format(self: Style, w: *std.io.Writer) std.io.Writer.Error!void {
-        @setEvalBranchQuota(10000);
+        @setEvalBranchQuota(20000);
         const fields = std.meta.fields(Style);
         inline for (fields) |f| {
+            if (comptime std.mem.eql(u8, f.name, "extra")) continue;
             const val = @field(self, f.name);
             if (val != .none) {
                 try core.formatKebab(f.name, w);
@@ -27718,6 +26099,7 @@ pub const Style = struct {
                 try w.writeAll("; ");
             }
         }
+        if (self.extra.len > 0) try w.writeAll(self.extra);
     }
 
     pub fn toString(self: Style, allocator: std.mem.Allocator) ![]const u8 {
