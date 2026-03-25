@@ -11,6 +11,7 @@ test {
     _ = @import("core/vdom.zig");
     _ = @import("core/dx.zig");
     _ = @import("style.zig");
+    _ = @import("size.zig");
 }
 
 pub const std_options = std.Options{

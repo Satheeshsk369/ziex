@@ -1,5 +1,5 @@
 pub fn Page(allocator: zx.Allocator) zx.Component {
-    const style: zx.StyleSheet = .{
+    const style: zx.Style = .{
         .color = .hex(0x0000ff),
     };
     var _zx = @import("zx").allocInit(allocator);
@@ -12,7 +12,7 @@ pub fn Page(allocator: zx.Allocator) zx.Component {
     );
 }
 
-const StyledCardProps = struct { style: zx.StyleSheet, children: zx.Component };
+const StyledCardProps = struct { style: zx.Style, children: zx.Component };
 fn StyledCard(allocator: zx.Allocator, props: StyledCardProps) zx.Component {
     var _zx = @import("zx").allocInit(allocator);
     return _zx.ele(
