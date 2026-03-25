@@ -292,7 +292,7 @@ pub const ZxContext = struct {
             .@"struct" => if (T == zx.EventHandler) .{
                 .name = name,
                 .handler = val,
-            } else if (T == zx.StyleSheet) blk: {
+            } else if (T == zx.Style) blk: {
                 break :blk .{
                     .name = name,
                     .value = self.printf("{f}", .{val}),

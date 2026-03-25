@@ -41,22 +41,23 @@ pub const Color = union(enum) {
     }
 };
 
-/// Formats a Zig camelCase name into a CSS kebab-case string
+/// Formats a Zig snake_case name into a CSS kebab-case string
 pub fn formatKebab(name: []const u8, w: anytype) !void {
     const prefixes = [_][]const u8{ "webkit", "moz", "ms", "apple", "epub", "hp", "atsc", "rim", "ro", "tc", "xhtml" };
     for (prefixes) |p| {
-        if (std.mem.startsWith(u8, name, p) and name.len > p.len and std.ascii.isUpper(name[p.len])) {
+        if (std.mem.startsWith(u8, name, p) and name.len > p.len and (name[p.len] == '_' or std.ascii.isUpper(name[p.len]))) {
             try w.writeByte('-');
             break;
         }
     }
 
     for (name, 0..) |c, i| {
-        if (std.ascii.isUpper(c)) {
+        if (c == '_') {
+            if (i == name.len - 1) continue; // Skip trailing _ (Zig keyword escape)
+            try w.writeByte('-');
+        } else if (std.ascii.isUpper(c)) {
             try w.writeByte('-');
             try w.writeByte(std.ascii.toLower(c));
-        } else if (c == '_' and i == name.len - 1) {
-            continue;
         } else {
             try w.writeByte(c);
         }

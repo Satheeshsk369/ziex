@@ -1,13 +1,13 @@
 const std = @import("std");
 const zx = @import("zx");
 
-test "StyleSheet formatting" {
+test "Style formatting" {
     const allocator = std.testing.allocator;
-    const style: zx.StyleSheet = .{
+    const style: zx.Style = .{
         .display = .flex,
-        .flexDirection = .column,
-        .backgroundColor = .hex(0xff0000),
-        .paddingTop = .px(10),
+        .flex_direction = .column,
+        .background_color = .hex(0xff0000),
+        .padding_top = .px(10),
         .width = .px(100),
     };
 
@@ -23,7 +23,7 @@ test "StyleSheet formatting" {
     try std.testing.expect(std.mem.indexOf(u8, result, "width: 100px;") != null);
 }
 
-test "StyleSheet in Component" {
+test "Style in Component" {
     const allocator = std.testing.allocator;
     var arena = std.heap.ArenaAllocator.init(allocator);
     defer arena.deinit();
@@ -31,9 +31,9 @@ test "StyleSheet in Component" {
 
     var ctx = zx.allocInit(arena_allocator);
 
-    const style: zx.StyleSheet = .{
+    const style: zx.Style = .{
         .color = .hex(0x0000ff),
-        .marginTop = .px(20),
+        .margin_top = .px(20),
     };
 
     const comp = ctx.ele(.div, .{
@@ -60,4 +60,3 @@ test "StyleSheet in Component" {
     }
     try std.testing.expect(found_style);
 }
-

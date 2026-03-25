@@ -11,23 +11,23 @@ pub const WebkitAlignContent = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     normal,
     first,
     last,
     baseline,
-    spaceBetween,
-    spaceAround,
-    spaceEvenly,
+    space_between,
+    space_around,
+    space_evenly,
     stretch,
     unsafe,
     safe,
     center,
     start,
     end,
-    flexStart,
-    flexEnd,
+    flex_start,
+    flex_end,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitAlignContent { return .{ .raw_ = r }; }
 
@@ -41,7 +41,7 @@ pub const WebkitAlignItems = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     normal,
     stretch,
@@ -53,10 +53,10 @@ pub const WebkitAlignItems = union(enum) {
     center,
     start,
     end,
-    selfStart,
-    selfEnd,
-    flexStart,
-    flexEnd,
+    self_start,
+    self_end,
+    flex_start,
+    flex_end,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitAlignItems { return .{ .raw_ = r }; }
 
@@ -70,7 +70,7 @@ pub const WebkitAlignSelf = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     unsafe,
@@ -79,10 +79,10 @@ pub const WebkitAlignSelf = union(enum) {
     center,
     start,
     end,
-    selfStart,
-    selfEnd,
-    flexStart,
-    flexEnd,
+    self_start,
+    self_end,
+    flex_start,
+    flex_end,
     stretch,
     first,
     last,
@@ -100,20 +100,20 @@ pub const WebkitAnimation = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     linear,
     ease,
-    easeIn,
-    easeOut,
-    easeInOut,
-    stepStart,
-    stepEnd,
+    ease_in,
+    ease_out,
+    ease_in_out,
+    step_start,
+    step_end,
     infinite,
     normal,
     reverse,
     alternate,
-    alternateReverse,
+    alternate_reverse,
     forwards,
     backwards,
     both,
@@ -133,7 +133,7 @@ pub const WebkitAnimationDelay = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitAnimationDelay { return .{ .raw_ = r }; }
@@ -148,12 +148,12 @@ pub const WebkitAnimationDirection = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     normal,
     reverse,
     alternate,
-    alternateReverse,
+    alternate_reverse,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitAnimationDirection { return .{ .raw_ = r }; }
 
@@ -167,7 +167,7 @@ pub const WebkitAnimationDuration = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitAnimationDuration { return .{ .raw_ = r }; }
@@ -182,7 +182,7 @@ pub const WebkitAnimationFillMode = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     forwards,
     backwards,
@@ -200,7 +200,7 @@ pub const WebkitAnimationIterationCount = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     infinite,
     raw_: []const u8,
@@ -216,7 +216,7 @@ pub const WebkitAnimationName = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitAnimationName { return .{ .raw_ = r }; }
@@ -231,7 +231,7 @@ pub const WebkitAnimationPlayState = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     running,
     paused,
@@ -248,15 +248,15 @@ pub const WebkitAnimationTimingFunction = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     linear,
     ease,
-    easeIn,
-    easeOut,
-    easeInOut,
-    stepStart,
-    stepEnd,
+    ease_in,
+    ease_out,
+    ease_in_out,
+    step_start,
+    step_end,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitAnimationTimingFunction { return .{ .raw_ = r }; }
 
@@ -270,11 +270,11 @@ pub const WebkitAppearance = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     base,
-    baseSelect,
+    base_select,
     searchfield,
     textarea,
     checkbox,
@@ -282,10 +282,10 @@ pub const WebkitAppearance = union(enum) {
     menulist,
     listbox,
     meter,
-    progressBar,
+    progress_bar,
     button,
     textfield,
-    menulistButton,
+    menulist_button,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitAppearance { return .{ .raw_ = r }; }
 
@@ -299,7 +299,7 @@ pub const WebkitBackfaceVisibility = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     visible,
     hidden,
@@ -316,11 +316,11 @@ pub const WebkitBackgroundClip = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    contentBox,
-    paddingBox,
-    borderBox,
+    content_box,
+    padding_box,
+    border_box,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitBackgroundClip { return .{ .raw_ = r }; }
 
@@ -334,11 +334,11 @@ pub const WebkitBackgroundOrigin = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    contentBox,
-    paddingBox,
-    borderBox,
+    content_box,
+    padding_box,
+    border_box,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitBackgroundOrigin { return .{ .raw_ = r }; }
 
@@ -352,7 +352,7 @@ pub const WebkitBackgroundSize = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     cover,
@@ -376,7 +376,7 @@ pub const WebkitBorderBottomLeftRadius = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -397,7 +397,7 @@ pub const WebkitBorderBottomRightRadius = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -418,7 +418,7 @@ pub const WebkitBorderRadius = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -439,7 +439,7 @@ pub const WebkitBorderTopLeftRadius = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -460,7 +460,7 @@ pub const WebkitBorderTopRightRadius = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -481,7 +481,7 @@ pub const WebkitBoxAlign = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitBoxAlign { return .{ .raw_ = r }; }
@@ -496,7 +496,7 @@ pub const WebkitBoxFlex = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitBoxFlex { return .{ .raw_ = r }; }
@@ -511,7 +511,7 @@ pub const WebkitBoxOrdinalGroup = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitBoxOrdinalGroup { return .{ .raw_ = r }; }
@@ -526,7 +526,7 @@ pub const WebkitBoxOrient = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitBoxOrient { return .{ .raw_ = r }; }
@@ -541,7 +541,7 @@ pub const WebkitBoxPack = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitBoxPack { return .{ .raw_ = r }; }
@@ -556,7 +556,7 @@ pub const WebkitBoxShadow = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
@@ -578,10 +578,10 @@ pub const WebkitBoxSizing = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    contentBox,
-    borderBox,
+    content_box,
+    border_box,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitBoxSizing { return .{ .raw_ = r }; }
 
@@ -595,7 +595,7 @@ pub const WebkitFilter = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitFilter { return .{ .raw_ = r }; }
@@ -610,7 +610,7 @@ pub const WebkitFlex = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitFlex { return .{ .raw_ = r }; }
@@ -625,7 +625,7 @@ pub const WebkitFlexBasis = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     content,
     raw_: []const u8,
@@ -641,12 +641,12 @@ pub const WebkitFlexDirection = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     row,
-    rowReverse,
+    row_reverse,
     column,
-    columnReverse,
+    column_reverse,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitFlexDirection { return .{ .raw_ = r }; }
 
@@ -660,7 +660,7 @@ pub const WebkitFlexFlow = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitFlexFlow { return .{ .raw_ = r }; }
@@ -675,7 +675,7 @@ pub const WebkitFlexGrow = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitFlexGrow { return .{ .raw_ = r }; }
@@ -690,7 +690,7 @@ pub const WebkitFlexShrink = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitFlexShrink { return .{ .raw_ = r }; }
@@ -705,11 +705,11 @@ pub const WebkitFlexWrap = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     nowrap,
     wrap,
-    wrapReverse,
+    wrap_reverse,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitFlexWrap { return .{ .raw_ = r }; }
 
@@ -723,20 +723,20 @@ pub const WebkitJustifyContent = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     normal,
-    spaceBetween,
-    spaceAround,
-    spaceEvenly,
+    space_between,
+    space_around,
+    space_evenly,
     stretch,
     unsafe,
     safe,
     center,
     start,
     end,
-    flexStart,
-    flexEnd,
+    flex_start,
+    flex_end,
     left,
     right,
     raw_: []const u8,
@@ -752,7 +752,7 @@ pub const WebkitLineClamp = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitLineClamp { return .{ .raw_ = r }; }
@@ -767,50 +767,50 @@ pub const WebkitMask = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     left,
     center,
     right,
     top,
     bottom,
-    xStart,
-    xEnd,
-    yStart,
-    yEnd,
-    blockStart,
-    blockEnd,
-    inlineStart,
-    inlineEnd,
+    x_start,
+    x_end,
+    y_start,
+    y_end,
+    block_start,
+    block_end,
+    inline_start,
+    inline_end,
     start,
     end,
     auto,
     cover,
     contain,
-    repeatX,
-    repeatY,
-    repeatBlock,
-    repeatInline,
+    repeat_x,
+    repeat_y,
+    repeat_block,
+    repeat_inline,
     repeat,
     space,
     round,
-    noRepeat,
-    contentBox,
-    paddingBox,
-    borderBox,
-    marginBox,
-    halfBorderBox,
-    fillBox,
-    strokeBox,
-    viewBox,
-    noClip,
+    no_repeat,
+    content_box,
+    padding_box,
+    border_box,
+    margin_box,
+    half_border_box,
+    fill_box,
+    stroke_box,
+    view_box,
+    no_clip,
     add,
     subtract,
     intersect,
     exclude,
     alpha,
     luminance,
-    matchSource,
+    match_source,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
     raw_: []const u8,
@@ -830,7 +830,7 @@ pub const WebkitMaskBoxImage = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitMaskBoxImage { return .{ .raw_ = r }; }
@@ -845,7 +845,7 @@ pub const WebkitMaskBoxImageOutset = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
@@ -864,7 +864,7 @@ pub const WebkitMaskBoxImageRepeat = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     stretch,
     repeat,
@@ -883,7 +883,7 @@ pub const WebkitMaskBoxImageSlice = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     fill,
     percent_: f32,
@@ -901,7 +901,7 @@ pub const WebkitMaskBoxImageSource = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitMaskBoxImageSource { return .{ .raw_ = r }; }
@@ -916,7 +916,7 @@ pub const WebkitMaskBoxImageWidth = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     px_: f32, em_: f32, rem_: f32,
@@ -938,15 +938,15 @@ pub const WebkitMaskClip = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    contentBox,
-    paddingBox,
-    borderBox,
-    fillBox,
-    strokeBox,
-    viewBox,
-    noClip,
+    content_box,
+    padding_box,
+    border_box,
+    fill_box,
+    stroke_box,
+    view_box,
+    no_clip,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitMaskClip { return .{ .raw_ = r }; }
 
@@ -960,7 +960,7 @@ pub const WebkitMaskComposite = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     add,
     subtract,
@@ -979,7 +979,7 @@ pub const WebkitMaskImage = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitMaskImage { return .{ .raw_ = r }; }
@@ -994,14 +994,14 @@ pub const WebkitMaskOrigin = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    contentBox,
-    paddingBox,
-    borderBox,
-    fillBox,
-    strokeBox,
-    viewBox,
+    content_box,
+    padding_box,
+    border_box,
+    fill_box,
+    stroke_box,
+    view_box,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitMaskOrigin { return .{ .raw_ = r }; }
 
@@ -1015,21 +1015,21 @@ pub const WebkitMaskPosition = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     left,
     center,
     right,
     top,
     bottom,
-    xStart,
-    xEnd,
-    yStart,
-    yEnd,
-    blockStart,
-    blockEnd,
-    inlineStart,
-    inlineEnd,
+    x_start,
+    x_end,
+    y_start,
+    y_end,
+    block_start,
+    block_end,
+    inline_start,
+    inline_end,
     start,
     end,
     px_: f32, em_: f32, rem_: f32,
@@ -1051,16 +1051,16 @@ pub const WebkitMaskRepeat = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    repeatX,
-    repeatY,
-    repeatBlock,
-    repeatInline,
+    repeat_x,
+    repeat_y,
+    repeat_block,
+    repeat_inline,
     repeat,
     space,
     round,
-    noRepeat,
+    no_repeat,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitMaskRepeat { return .{ .raw_ = r }; }
 
@@ -1074,7 +1074,7 @@ pub const WebkitMaskSize = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     cover,
@@ -1098,7 +1098,7 @@ pub const WebkitOrder = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitOrder { return .{ .raw_ = r }; }
@@ -1113,7 +1113,7 @@ pub const WebkitPerspective = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
@@ -1132,21 +1132,21 @@ pub const WebkitPerspectiveOrigin = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     left,
     center,
     right,
     top,
     bottom,
-    xStart,
-    xEnd,
-    yStart,
-    yEnd,
-    blockStart,
-    blockEnd,
-    inlineStart,
-    inlineEnd,
+    x_start,
+    x_end,
+    y_start,
+    y_end,
+    block_start,
+    block_end,
+    inline_start,
+    inline_end,
     start,
     end,
     px_: f32, em_: f32, rem_: f32,
@@ -1168,7 +1168,7 @@ pub const WebkitTextFillColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     aliceblue,
     antiquewhite,
@@ -1378,7 +1378,7 @@ pub const WebkitTextSizeAdjust = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     percent_: f32,
@@ -1396,7 +1396,7 @@ pub const WebkitTextStroke = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hairline,
     thin,
@@ -1614,7 +1614,7 @@ pub const WebkitTextStrokeColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     aliceblue,
     antiquewhite,
@@ -1824,7 +1824,7 @@ pub const WebkitTextStrokeWidth = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hairline,
     thin,
@@ -1847,7 +1847,7 @@ pub const WebkitTransform = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitTransform { return .{ .raw_ = r }; }
@@ -1862,7 +1862,7 @@ pub const WebkitTransformOrigin = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     left,
     center,
@@ -1888,10 +1888,10 @@ pub const WebkitTransformStyle = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     flat,
-    preserve3d,
+    preserve_3d,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitTransformStyle { return .{ .raw_ = r }; }
 
@@ -1905,18 +1905,18 @@ pub const WebkitTransition = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     all,
     linear,
     ease,
-    easeIn,
-    easeOut,
-    easeInOut,
-    stepStart,
-    stepEnd,
+    ease_in,
+    ease_out,
+    ease_in_out,
+    step_start,
+    step_end,
     normal,
-    allowDiscrete,
+    allow_discrete,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitTransition { return .{ .raw_ = r }; }
 
@@ -1930,7 +1930,7 @@ pub const WebkitTransitionDelay = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitTransitionDelay { return .{ .raw_ = r }; }
@@ -1945,7 +1945,7 @@ pub const WebkitTransitionDuration = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitTransitionDuration { return .{ .raw_ = r }; }
@@ -1960,7 +1960,7 @@ pub const WebkitTransitionProperty = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     all,
     raw_: []const u8,
@@ -1976,15 +1976,15 @@ pub const WebkitTransitionTimingFunction = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     linear,
     ease,
-    easeIn,
-    easeOut,
-    easeInOut,
-    stepStart,
-    stepEnd,
+    ease_in,
+    ease_out,
+    ease_in_out,
+    step_start,
+    step_end,
     raw_: []const u8,
     pub fn raw(r: []const u8) WebkitTransitionTimingFunction { return .{ .raw_ = r }; }
 
@@ -1998,7 +1998,7 @@ pub const WebkitUserSelect = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     text,
@@ -2017,7 +2017,7 @@ pub const AccentColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Represents a UA-chosen color, which should match the accent color of the platform, if any.
     auto,
@@ -2229,24 +2229,24 @@ pub const AlignContent = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Aligns the contents of the box as a whole (as the alignment subject) within the box itself (as the alignment container): along the inline/row/main axis of the box (for justify-content) or the block/column/cross axis of the box (for align-content). Values other than normal are defined in § 4 Alignment Keywords, above.
     normal,
     first,
     last,
     baseline,
-    spaceBetween,
-    spaceAround,
-    spaceEvenly,
+    space_between,
+    space_around,
+    space_evenly,
     stretch,
     unsafe,
     safe,
     center,
     start,
     end,
-    flexStart,
-    flexEnd,
+    flex_start,
+    flex_end,
     raw_: []const u8,
     pub fn raw(r: []const u8) AlignContent { return .{ .raw_ = r }; }
 
@@ -2260,7 +2260,7 @@ pub const AlignItems = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     normal,
     stretch,
@@ -2272,12 +2272,12 @@ pub const AlignItems = union(enum) {
     center,
     start,
     end,
-    selfStart,
-    selfEnd,
-    flexStart,
-    flexEnd,
+    self_start,
+    self_end,
+    flex_start,
+    flex_end,
     ///     /// The new anchor-center value makes this case extremely simple: if the positioned box has a default anchor box, then it is centered (insofar as possible) over the default anchor box in the relevant axis. Additionally:
-    anchorCenter,
+    anchor_center,
     raw_: []const u8,
     pub fn raw(r: []const u8) AlignItems { return .{ .raw_ = r }; }
 
@@ -2291,7 +2291,7 @@ pub const AlignSelf = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Behaves as normal if the box has no parent, or when determining the actual position of an absolutely positioned box. It behaves as the computed align-items value of the parent box (minus any legacy keywords) otherwise (including when determining the static position of an absolutely positioned box).
     auto,
@@ -2302,17 +2302,17 @@ pub const AlignSelf = union(enum) {
     center,
     start,
     end,
-    selfStart,
-    selfEnd,
-    flexStart,
-    flexEnd,
+    self_start,
+    self_end,
+    flex_start,
+    flex_end,
     ///     /// As defined for justify-self in § 6.1 Inline-Axis (or Main-Axis) Self-Alignment: the justify-self property.
     stretch,
     first,
     last,
     baseline,
     ///     /// The new anchor-center value makes this case extremely simple: if the positioned box has a default anchor box, then it is centered (insofar as possible) over the default anchor box in the relevant axis. Additionally:
-    anchorCenter,
+    anchor_center,
     raw_: []const u8,
     pub fn raw(r: []const u8) AlignSelf { return .{ .raw_ = r }; }
 
@@ -2326,18 +2326,18 @@ pub const AlignmentBaseline = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// This property specifies the box’s alignment baseline: the baseline used to align the box prior to applying its post-alignment shift (if applicable). Values have the same meanings as for dominant-baseline; the baseline keyword uses the dominant baseline choice of the parent.
     baseline,
-    textBottom,
+    text_bottom,
     alphabetic,
     ideographic,
     middle,
     central,
     mathematical,
     hanging,
-    textTop,
+    text_top,
     raw_: []const u8,
     pub fn raw(r: []const u8) AlignmentBaseline { return .{ .raw_ = r }; }
 
@@ -2351,10 +2351,10 @@ pub const All = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The revert-rule CSS-wide keyword rolls back the cascade similar to revert and revert-layer, except it works by style rule rather than cascade origin or cascade layer.
-    revertRule,
+    revert_rule,
     raw_: []const u8,
     pub fn raw(r: []const u8) All { return .{ .raw_ = r }; }
 
@@ -2368,7 +2368,7 @@ pub const AnchorName = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) AnchorName { return .{ .raw_ = r }; }
@@ -2383,7 +2383,7 @@ pub const AnchorScope = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Specifies that all anchor names defined by this element or its descendants—​whose scope is not already limited by a descendant using anchor-scope—​to be in scope only for this element’s descendants; and limits descendants to only match anchor names to anchor elements within this subtree. This value only affects anchor names in the same tree scope, as if it were a strictly matched tree-scoped name. (That is, anchor-scope: all acts identically to anchor-scope: --foo, --bar, ..., listing all relevant anchor names.)
     all,
@@ -2400,20 +2400,20 @@ pub const Animation = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     linear,
     ease,
-    easeIn,
-    easeOut,
-    easeInOut,
-    stepStart,
-    stepEnd,
+    ease_in,
+    ease_out,
+    ease_in_out,
+    step_start,
+    step_end,
     infinite,
     normal,
     reverse,
     alternate,
-    alternateReverse,
+    alternate_reverse,
     forwards,
     backwards,
     both,
@@ -2433,7 +2433,7 @@ pub const AnimationComposition = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     replace,
     add,
@@ -2451,7 +2451,7 @@ pub const AnimationDelay = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) AnimationDelay { return .{ .raw_ = r }; }
@@ -2466,7 +2466,7 @@ pub const AnimationDirection = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// All iterations of the animation are played as specified.
     normal,
@@ -2475,7 +2475,7 @@ pub const AnimationDirection = union(enum) {
     ///     /// The animation cycle iterations that are odd counts are played in the normal direction, and the animation cycle iterations that are even counts are played in a reverse direction.
     alternate,
     ///     /// The animation cycle iterations that are odd counts are played in the reverse direction, and the animation cycle iterations that are even counts are played in a normal direction.
-    alternateReverse,
+    alternate_reverse,
     raw_: []const u8,
     pub fn raw(r: []const u8) AnimationDirection { return .{ .raw_ = r }; }
 
@@ -2489,7 +2489,7 @@ pub const AnimationDuration = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// For time-driven animations, equivalent to 0s. For scroll-driven animations, equivalent to the duration necessary to fill the timeline in consideration of animation-range, animation-delay, and animation-iteration-count. See Scroll-driven Animations § 4.1 Finite Timeline Calculations.
     auto,
@@ -2506,7 +2506,7 @@ pub const AnimationFillMode = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// After the animation ends (as determined by its animation-iteration-count), the animation will apply the property values for the time the animation ended. When animation-iteration-count is an integer greater than zero, the values applied will be those for the end of the last completed iteration of the animation (rather than the values for the start of the iteration that would be next). When animation-iteration-count is zero, the values applied will be those that would start the first iteration (just as when animation-fill-mode is backwards).
     forwards,
@@ -2527,7 +2527,7 @@ pub const AnimationIterationCount = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The animation will repeat forever.
     infinite,
@@ -2544,7 +2544,7 @@ pub const AnimationName = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) AnimationName { return .{ .raw_ = r }; }
@@ -2559,7 +2559,7 @@ pub const AnimationPlayState = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// While this property is set to running, the animation proceeds as normal.
     running,
@@ -2578,7 +2578,7 @@ pub const AnimationRange = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) AnimationRange { return .{ .raw_ = r }; }
@@ -2593,7 +2593,7 @@ pub const AnimationRangeCenter = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The 50% progress point of the animation’s active interval is at the center of the animation attachment range.
     normal,
@@ -2616,7 +2616,7 @@ pub const AnimationRangeEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The end of the animation’s attachment range is the end of its associated timeline; the end of the animation’s active interval is determined as normal.
     normal,
@@ -2639,7 +2639,7 @@ pub const AnimationRangeStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The start of the animation’s attachment range is the start of its associated timeline; the start of the animation’s active interval is determined as normal.
     normal,
@@ -2662,7 +2662,7 @@ pub const AnimationTimeline = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     raw_: []const u8,
@@ -2678,15 +2678,15 @@ pub const AnimationTimingFunction = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     linear,
     ease,
-    easeIn,
-    easeOut,
-    easeInOut,
-    stepStart,
-    stepEnd,
+    ease_in,
+    ease_out,
+    ease_in_out,
+    step_start,
+    step_end,
     raw_: []const u8,
     pub fn raw(r: []const u8) AnimationTimingFunction { return .{ .raw_ = r }; }
 
@@ -2700,7 +2700,7 @@ pub const AnimationTrigger = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) AnimationTrigger { return .{ .raw_ = r }; }
@@ -2715,14 +2715,14 @@ pub const Appearance = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The element’s box is laid out like a regular replaced element. Within that box, elements representing widgets should have the native appearance of that widget. The host language is responsible for defining which elements represent which widgets. Elements other than widgets must be rendered as for none.
     auto,
     ///     /// The effect of base depends on the element it is applied to:
     base,
     ///     /// The effect of base-select depends on the element it is applied to:
-    baseSelect,
+    base_select,
     searchfield,
     textarea,
     checkbox,
@@ -2730,10 +2730,10 @@ pub const Appearance = union(enum) {
     menulist,
     listbox,
     meter,
-    progressBar,
+    progress_bar,
     button,
     textfield,
-    menulistButton,
+    menulist_button,
     raw_: []const u8,
     pub fn raw(r: []const u8) Appearance { return .{ .raw_ = r }; }
 
@@ -2747,7 +2747,7 @@ pub const AspectRatio = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Replaced elements with a natural aspect ratio use that aspect ratio; otherwise the box has no preferred aspect ratio. Size calculations involving the aspect ratio work with the content box dimensions always.
     auto,
@@ -2764,7 +2764,7 @@ pub const BackdropFilter = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) BackdropFilter { return .{ .raw_ = r }; }
@@ -2779,7 +2779,7 @@ pub const BackfaceVisibility = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     visible,
     hidden,
@@ -2796,41 +2796,41 @@ pub const Background = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     left,
     center,
     right,
     top,
     bottom,
-    xStart,
-    xEnd,
-    yStart,
-    yEnd,
-    blockStart,
-    blockEnd,
-    inlineStart,
-    inlineEnd,
+    x_start,
+    x_end,
+    y_start,
+    y_end,
+    block_start,
+    block_end,
+    inline_start,
+    inline_end,
     start,
     end,
     auto,
     cover,
     contain,
-    repeatX,
-    repeatY,
-    repeatBlock,
-    repeatInline,
+    repeat_x,
+    repeat_y,
+    repeat_block,
+    repeat_inline,
     repeat,
     space,
     round,
-    noRepeat,
+    no_repeat,
     scroll,
     fixed,
     local,
-    contentBox,
-    paddingBox,
-    borderBox,
-    borderArea,
+    content_box,
+    padding_box,
+    border_box,
+    border_area,
     text,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -2854,7 +2854,7 @@ pub const BackgroundAttachment = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The background is fixed with regard to the box itself and does not scroll with its contents. (It is effectively attached to the box’s border.)
     scroll,
@@ -2875,7 +2875,7 @@ pub const BackgroundBlendMode = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) BackgroundBlendMode { return .{ .raw_ = r }; }
@@ -2890,15 +2890,15 @@ pub const BackgroundClip = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The background is painted within (clipped to) the content box.
-    contentBox,
+    content_box,
     ///     /// The background is painted within (clipped to) the padding box.
-    paddingBox,
+    padding_box,
     ///     /// The background is painted within (clipped to) the border box.
-    borderBox,
-    borderArea,
+    border_box,
+    border_area,
     text,
     raw_: []const u8,
     pub fn raw(r: []const u8) BackgroundClip { return .{ .raw_ = r }; }
@@ -2913,7 +2913,7 @@ pub const BackgroundColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     aliceblue,
     antiquewhite,
@@ -3123,7 +3123,7 @@ pub const BackgroundImage = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) BackgroundImage { return .{ .raw_ = r }; }
@@ -3138,14 +3138,14 @@ pub const BackgroundOrigin = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The position is relative to the content box.
-    contentBox,
+    content_box,
     ///     /// The position is relative to the padding box. (For single boxes 0 0 is the upper left corner of the padding edge, 100% 100% is the lower right corner.)
-    paddingBox,
+    padding_box,
     ///     /// The position is relative to the border box.
-    borderBox,
+    border_box,
     raw_: []const u8,
     pub fn raw(r: []const u8) BackgroundOrigin { return .{ .raw_ = r }; }
 
@@ -3159,7 +3159,7 @@ pub const BackgroundPosition = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Computes to 0% for the horizontal position if one or two values are given, otherwise specifies the left edge as the origin for the next offset.
     left,
@@ -3171,14 +3171,14 @@ pub const BackgroundPosition = union(enum) {
     top,
     ///     /// Computes to 100% for the vertical position if one or two values are given, otherwise specifies the bottom edge as the origin for the next offset.
     bottom,
-    xStart,
-    xEnd,
-    yStart,
-    yEnd,
-    blockStart,
-    blockEnd,
-    inlineStart,
-    inlineEnd,
+    x_start,
+    x_end,
+    y_start,
+    y_end,
+    block_start,
+    block_end,
+    inline_start,
+    inline_end,
     start,
     end,
     px_: f32, em_: f32, rem_: f32,
@@ -3200,7 +3200,7 @@ pub const BackgroundPositionBlock = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     center,
     start,
@@ -3224,7 +3224,7 @@ pub const BackgroundPositionInline = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     center,
     start,
@@ -3248,13 +3248,13 @@ pub const BackgroundPositionX = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     center,
     left,
     right,
-    xStart,
-    xEnd,
+    x_start,
+    x_end,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
     raw_: []const u8,
@@ -3274,13 +3274,13 @@ pub const BackgroundPositionY = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     center,
     top,
     bottom,
-    yStart,
-    yEnd,
+    y_start,
+    y_end,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
     raw_: []const u8,
@@ -3300,16 +3300,16 @@ pub const BackgroundRepeat = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Computes to repeat no-repeat.
-    repeatX,
+    repeat_x,
     ///     /// Computes to no-repeat repeat.
-    repeatY,
+    repeat_y,
     ///     /// Computes to repeat in the block axis and no-repeat in the inline axis.
-    repeatBlock,
+    repeat_block,
     ///     /// Computes to repeat in the inline axis and no-repeat in the block axis.
-    repeatInline,
+    repeat_inline,
     ///     /// The image is repeated in this direction as often as needed to cover the background painting area.
     repeat,
     ///     /// The image is repeated as often as will fit within the background positioning area without being clipped, and then the images are spaced out to fill the area. The first and last images touch the edges of the area. If the background painting area is larger than the background positioning area, then the pattern repeats to fill the background painting area. The value of background-position for this direction is ignored unless there is not enough space for two copies of the image in this axis, in which case only one image is placed, and background-position determines its position in this axis.
@@ -3317,7 +3317,7 @@ pub const BackgroundRepeat = union(enum) {
     ///     /// The image is repeated as often as will fit within the background positioning area. If it doesn’t fit a whole number of times, it is rescaled so that it does. See the formula under background-size. If the background painting area is larger than the background positioning area, then the pattern repeats to fill the background painting area.
     round,
     ///     /// The image is placed once and not repeated in this direction.
-    noRepeat,
+    no_repeat,
     raw_: []const u8,
     pub fn raw(r: []const u8) BackgroundRepeat { return .{ .raw_ = r }; }
 
@@ -3331,7 +3331,7 @@ pub const BackgroundRepeatBlock = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The image is repeated in the given direction as often as needed to cover the background painting area.
     repeat,
@@ -3340,7 +3340,7 @@ pub const BackgroundRepeatBlock = union(enum) {
     ///     /// The image is repeated in the given direction as often as will fit within the background positioning area. If it doesn’t fit a whole number of times, it is rescaled so that it does. See the formula under background-size. If the background painting area is larger than the background positioning area, then the pattern repeats to fill the background painting area.
     round,
     ///     /// The image is placed once and not repeated in the given direction.
-    noRepeat,
+    no_repeat,
     raw_: []const u8,
     pub fn raw(r: []const u8) BackgroundRepeatBlock { return .{ .raw_ = r }; }
 
@@ -3354,7 +3354,7 @@ pub const BackgroundRepeatInline = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The image is repeated in the given direction as often as needed to cover the background painting area.
     repeat,
@@ -3363,7 +3363,7 @@ pub const BackgroundRepeatInline = union(enum) {
     ///     /// The image is repeated in the given direction as often as will fit within the background positioning area. If it doesn’t fit a whole number of times, it is rescaled so that it does. See the formula under background-size. If the background painting area is larger than the background positioning area, then the pattern repeats to fill the background painting area.
     round,
     ///     /// The image is placed once and not repeated in the given direction.
-    noRepeat,
+    no_repeat,
     raw_: []const u8,
     pub fn raw(r: []const u8) BackgroundRepeatInline { return .{ .raw_ = r }; }
 
@@ -3377,7 +3377,7 @@ pub const BackgroundRepeatX = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The image is repeated in the given direction as often as needed to cover the background painting area.
     repeat,
@@ -3386,7 +3386,7 @@ pub const BackgroundRepeatX = union(enum) {
     ///     /// The image is repeated in the given direction as often as will fit within the background positioning area. If it doesn’t fit a whole number of times, it is rescaled so that it does. See the formula under background-size. If the background painting area is larger than the background positioning area, then the pattern repeats to fill the background painting area.
     round,
     ///     /// The image is placed once and not repeated in the given direction.
-    noRepeat,
+    no_repeat,
     raw_: []const u8,
     pub fn raw(r: []const u8) BackgroundRepeatX { return .{ .raw_ = r }; }
 
@@ -3400,7 +3400,7 @@ pub const BackgroundRepeatY = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The image is repeated in the given direction as often as needed to cover the background painting area.
     repeat,
@@ -3409,7 +3409,7 @@ pub const BackgroundRepeatY = union(enum) {
     ///     /// The image is repeated in the given direction as often as will fit within the background positioning area. If it doesn’t fit a whole number of times, it is rescaled so that it does. See the formula under background-size. If the background painting area is larger than the background positioning area, then the pattern repeats to fill the background painting area.
     round,
     ///     /// The image is placed once and not repeated in the given direction.
-    noRepeat,
+    no_repeat,
     raw_: []const u8,
     pub fn raw(r: []const u8) BackgroundRepeatY { return .{ .raw_ = r }; }
 
@@ -3423,7 +3423,7 @@ pub const BackgroundSize = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The first value gives the width of the corresponding image, the second value its height. If only one value is given the second is assumed to be auto. A <percentage> is relative to the background positioning area. An auto value for one dimension is resolved by using the image’s natural aspect ratio and the size of the other dimension, or failing that, using the image’s natural size, or failing that, treating it as 100%. If both values are auto then the natural width and/or height of the image should be used, if any, the missing dimension (if any) behaving as auto as described above. If the image has neither natural size, its size is determined as for contain. Negative values are invalid.
     auto,
@@ -3450,41 +3450,41 @@ pub const BackgroundTbd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     left,
     center,
     right,
     top,
     bottom,
-    xStart,
-    xEnd,
-    yStart,
-    yEnd,
-    blockStart,
-    blockEnd,
-    inlineStart,
-    inlineEnd,
+    x_start,
+    x_end,
+    y_start,
+    y_end,
+    block_start,
+    block_end,
+    inline_start,
+    inline_end,
     start,
     end,
     auto,
     cover,
     contain,
-    repeatX,
-    repeatY,
-    repeatBlock,
-    repeatInline,
+    repeat_x,
+    repeat_y,
+    repeat_block,
+    repeat_inline,
     repeat,
     space,
     round,
-    noRepeat,
+    no_repeat,
     scroll,
     fixed,
     local,
-    contentBox,
-    paddingBox,
-    borderBox,
-    borderArea,
+    content_box,
+    padding_box,
+    border_box,
+    border_area,
     text,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -3505,7 +3505,7 @@ pub const BaselineShift = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Lower by the offset appropriate for subscripts of the parent’s box. The UA may use the parent’s font metrics to find this offset; otherwise it defaults to dropping by one fifth of the parent’s used font-size.
     sub,
@@ -3536,7 +3536,7 @@ pub const BaselineSource = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Specifies last-baseline alignment for inline-block, first-baseline alignment for everything else.
     auto,
@@ -3557,10 +3557,10 @@ pub const BlockEllipsis = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The rendering is unaffected.
-    noEllipsis,
+    no_ellipsis,
     ///     /// Render an ellipsis character (U+2026)—​or a more typographically-appropriate equivalent—​as the block overflow ellipsis at the end of the affected line box. UAs should use the conventions of the content language, writing system, and writing mode to determine the most appropriate ellipsis string.
     auto,
     raw_: []const u8,
@@ -3576,7 +3576,7 @@ pub const BlockSize = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) BlockSize { return .{ .raw_ = r }; }
@@ -3591,7 +3591,7 @@ pub const BlockStep = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) BlockStep { return .{ .raw_ = r }; }
@@ -3606,7 +3606,7 @@ pub const BlockStepAlign = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// If block-step-insert is margin-box: if align-self is start, end, or center, treat as that value, otherwise treat as center.
     auto,
@@ -3629,14 +3629,14 @@ pub const BlockStepInsert = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Any extra space resulting from a block-step-size-induced adjustment is inserted outside the box’s border, as extra margin.
-    marginBox,
+    margin_box,
     ///     /// Any extra space resulting from a block-step-size-induced adjustment is inserted inside the box’s border, as extra padding.
-    paddingBox,
+    padding_box,
     ///     /// Any extra space resulting from a block-step-size-induced adjustment is inserted inside the box’s border by increasing the height of the content area.
-    contentBox,
+    content_box,
     raw_: []const u8,
     pub fn raw(r: []const u8) BlockStepInsert { return .{ .raw_ = r }; }
 
@@ -3650,7 +3650,7 @@ pub const BlockStepRound = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     up,
     down,
@@ -3668,7 +3668,7 @@ pub const BlockStepSize = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
@@ -3687,13 +3687,13 @@ pub const BookmarkLabel = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     contents,
-    openQuote,
-    closeQuote,
-    noOpenQuote,
-    noCloseQuote,
+    open_quote,
+    close_quote,
+    no_open_quote,
+    no_close_quote,
     raw_: []const u8,
     pub fn raw(r: []const u8) BookmarkLabel { return .{ .raw_ = r }; }
 
@@ -3707,7 +3707,7 @@ pub const BookmarkLevel = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) BookmarkLevel { return .{ .raw_ = r }; }
@@ -3722,7 +3722,7 @@ pub const BookmarkState = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Subsequent bookmarks with bookmark-level greater than the given bookmark are displayed, until reaching another bookmark of the same level or lower. If one of subsequent bookmark is closed, apply the same test to determine if its subsequent bookmarks should be displayed.
     open,
@@ -3741,7 +3741,7 @@ pub const Border = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hairline,
     thin,
@@ -3968,7 +3968,7 @@ pub const BorderBlock = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) BorderBlock { return .{ .raw_ = r }; }
@@ -3983,7 +3983,7 @@ pub const BorderBlockClip = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) BorderBlockClip { return .{ .raw_ = r }; }
@@ -3998,7 +3998,7 @@ pub const BorderBlockColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
     raw_: []const u8,
@@ -4016,7 +4016,7 @@ pub const BorderBlockEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hairline,
     thin,
@@ -4243,7 +4243,7 @@ pub const BorderBlockEndClip = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -4264,7 +4264,7 @@ pub const BorderBlockEndColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     aliceblue,
     antiquewhite,
@@ -4474,7 +4474,7 @@ pub const BorderBlockEndRadius = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -4495,7 +4495,7 @@ pub const BorderBlockEndStyle = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hidden,
     dotted,
@@ -4519,7 +4519,7 @@ pub const BorderBlockEndWidth = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hairline,
     thin,
@@ -4542,7 +4542,7 @@ pub const BorderBlockStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hairline,
     thin,
@@ -4769,7 +4769,7 @@ pub const BorderBlockStartClip = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -4790,7 +4790,7 @@ pub const BorderBlockStartColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     aliceblue,
     antiquewhite,
@@ -5000,7 +5000,7 @@ pub const BorderBlockStartRadius = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -5021,7 +5021,7 @@ pub const BorderBlockStartStyle = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hidden,
     dotted,
@@ -5045,7 +5045,7 @@ pub const BorderBlockStartWidth = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hairline,
     thin,
@@ -5068,7 +5068,7 @@ pub const BorderBlockStyle = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) BorderBlockStyle { return .{ .raw_ = r }; }
@@ -5083,7 +5083,7 @@ pub const BorderBlockWidth = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) BorderBlockWidth { return .{ .raw_ = r }; }
@@ -5098,7 +5098,7 @@ pub const BorderBottom = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hairline,
     thin,
@@ -5325,7 +5325,7 @@ pub const BorderBottomClip = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -5346,7 +5346,7 @@ pub const BorderBottomColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     aliceblue,
     antiquewhite,
@@ -5556,7 +5556,7 @@ pub const BorderBottomLeftRadius = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -5577,7 +5577,7 @@ pub const BorderBottomRadius = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -5598,7 +5598,7 @@ pub const BorderBottomRightRadius = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -5619,7 +5619,7 @@ pub const BorderBottomStyle = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hidden,
     dotted,
@@ -5643,7 +5643,7 @@ pub const BorderBottomWidth = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hairline,
     thin,
@@ -5666,7 +5666,7 @@ pub const BorderBoundary = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     parent,
     display,
@@ -5683,7 +5683,7 @@ pub const BorderClip = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) BorderClip { return .{ .raw_ = r }; }
@@ -5698,7 +5698,7 @@ pub const BorderCollapse = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     separate,
     collapse,
@@ -5715,7 +5715,7 @@ pub const BorderColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     aliceblue,
     antiquewhite,
@@ -5925,7 +5925,7 @@ pub const BorderEndEndRadius = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -5946,7 +5946,7 @@ pub const BorderEndStartRadius = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -5967,7 +5967,7 @@ pub const BorderImage = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) BorderImage { return .{ .raw_ = r }; }
@@ -5982,7 +5982,7 @@ pub const BorderImageOutset = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
@@ -6001,7 +6001,7 @@ pub const BorderImageRepeat = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The image is stretched to fill its corresponding region.
     stretch,
@@ -6024,7 +6024,7 @@ pub const BorderImageSlice = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The fill keyword, if present, causes the middle part of the border-image to be preserved. (By default it is discarded, i.e., treated as empty.)
     fill,
@@ -6043,7 +6043,7 @@ pub const BorderImageSource = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) BorderImageSource { return .{ .raw_ = r }; }
@@ -6058,7 +6058,7 @@ pub const BorderImageWidth = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// If auto is specified then the used border-image-width is the natural width or height (whichever is applicable) of the corresponding image slice (see border-image-slice). If the image does not have the required natural dimension then the corresponding computed border-width is used instead.
     auto,
@@ -6081,7 +6081,7 @@ pub const BorderInline = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) BorderInline { return .{ .raw_ = r }; }
@@ -6096,7 +6096,7 @@ pub const BorderInlineClip = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) BorderInlineClip { return .{ .raw_ = r }; }
@@ -6111,7 +6111,7 @@ pub const BorderInlineColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
     raw_: []const u8,
@@ -6129,7 +6129,7 @@ pub const BorderInlineEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hairline,
     thin,
@@ -6356,7 +6356,7 @@ pub const BorderInlineEndClip = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -6377,7 +6377,7 @@ pub const BorderInlineEndColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     aliceblue,
     antiquewhite,
@@ -6587,7 +6587,7 @@ pub const BorderInlineEndRadius = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -6608,7 +6608,7 @@ pub const BorderInlineEndStyle = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hidden,
     dotted,
@@ -6632,7 +6632,7 @@ pub const BorderInlineEndWidth = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hairline,
     thin,
@@ -6655,7 +6655,7 @@ pub const BorderInlineStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hairline,
     thin,
@@ -6882,7 +6882,7 @@ pub const BorderInlineStartClip = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -6903,7 +6903,7 @@ pub const BorderInlineStartColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     aliceblue,
     antiquewhite,
@@ -7113,7 +7113,7 @@ pub const BorderInlineStartRadius = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -7134,7 +7134,7 @@ pub const BorderInlineStartStyle = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hidden,
     dotted,
@@ -7158,7 +7158,7 @@ pub const BorderInlineStartWidth = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hairline,
     thin,
@@ -7181,7 +7181,7 @@ pub const BorderInlineStyle = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) BorderInlineStyle { return .{ .raw_ = r }; }
@@ -7196,7 +7196,7 @@ pub const BorderInlineWidth = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) BorderInlineWidth { return .{ .raw_ = r }; }
@@ -7211,7 +7211,7 @@ pub const BorderLeft = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hairline,
     thin,
@@ -7438,7 +7438,7 @@ pub const BorderLeftClip = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -7459,7 +7459,7 @@ pub const BorderLeftColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     aliceblue,
     antiquewhite,
@@ -7669,7 +7669,7 @@ pub const BorderLeftRadius = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -7690,7 +7690,7 @@ pub const BorderLeftStyle = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hidden,
     dotted,
@@ -7714,7 +7714,7 @@ pub const BorderLeftWidth = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hairline,
     thin,
@@ -7737,7 +7737,7 @@ pub const BorderLimit = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The entire border is drawn.
     all,
@@ -7772,7 +7772,7 @@ pub const BorderRadius = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -7793,7 +7793,7 @@ pub const BorderRight = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hairline,
     thin,
@@ -8020,7 +8020,7 @@ pub const BorderRightClip = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -8041,7 +8041,7 @@ pub const BorderRightColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     aliceblue,
     antiquewhite,
@@ -8251,7 +8251,7 @@ pub const BorderRightRadius = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -8272,7 +8272,7 @@ pub const BorderRightStyle = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hidden,
     dotted,
@@ -8296,7 +8296,7 @@ pub const BorderRightWidth = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hairline,
     thin,
@@ -8319,16 +8319,16 @@ pub const BorderShape = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    contentBox,
-    paddingBox,
-    borderBox,
-    marginBox,
-    halfBorderBox,
-    fillBox,
-    strokeBox,
-    viewBox,
+    content_box,
+    padding_box,
+    border_box,
+    margin_box,
+    half_border_box,
+    fill_box,
+    stroke_box,
+    view_box,
     raw_: []const u8,
     pub fn raw(r: []const u8) BorderShape { return .{ .raw_ = r }; }
 
@@ -8342,7 +8342,7 @@ pub const BorderSpacing = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
@@ -8361,7 +8361,7 @@ pub const BorderStartEndRadius = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -8382,7 +8382,7 @@ pub const BorderStartStartRadius = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -8403,7 +8403,7 @@ pub const BorderStyle = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) BorderStyle { return .{ .raw_ = r }; }
@@ -8418,7 +8418,7 @@ pub const BorderTop = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hairline,
     thin,
@@ -8645,7 +8645,7 @@ pub const BorderTopClip = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -8666,7 +8666,7 @@ pub const BorderTopColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     aliceblue,
     antiquewhite,
@@ -8876,7 +8876,7 @@ pub const BorderTopLeftRadius = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -8897,7 +8897,7 @@ pub const BorderTopRadius = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -8918,7 +8918,7 @@ pub const BorderTopRightRadius = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -8939,7 +8939,7 @@ pub const BorderTopStyle = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hidden,
     dotted,
@@ -8963,7 +8963,7 @@ pub const BorderTopWidth = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hairline,
     thin,
@@ -8986,7 +8986,7 @@ pub const BorderWidth = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) BorderWidth { return .{ .raw_ = r }; }
@@ -9001,7 +9001,7 @@ pub const Bottom = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Represents an unconstrained inset; the exact meaning depends on the positioning scheme.
     auto,
@@ -9024,7 +9024,7 @@ pub const BoxDecorationBreak = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The effect is as though the element were rendered with no breaks present, and then sliced by the breaks afterward: no border and no padding are inserted at a break; no box-shadow is drawn at a broken edge; and backgrounds, border-radius, and the border-image are applied to the geometry of the whole box as if it were unbroken.
     slice,
@@ -9043,7 +9043,7 @@ pub const BoxShadow = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
@@ -9065,7 +9065,7 @@ pub const BoxShadowBlur = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
@@ -9084,7 +9084,7 @@ pub const BoxShadowColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     aliceblue,
     antiquewhite,
@@ -9294,7 +9294,7 @@ pub const BoxShadowOffset = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
@@ -9313,7 +9313,7 @@ pub const BoxShadowPosition = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Causes the drop shadow to be an outer box-shadow. That means, one that shadows the box onto the canvas, as if it were lifted above the canvas.
     outset,
@@ -9332,7 +9332,7 @@ pub const BoxShadowSpread = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
@@ -9351,12 +9351,12 @@ pub const BoxSizing = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Sizes specified on sizing properties as <length-percentage> represent the box’s inner sizes, excluding the margins/border/padding: they are applied to the content box. The padding and border of the box are laid out and drawn outside the specified width and height.
-    contentBox,
+    content_box,
     ///     /// Sizes specified on sizing properties as <length-percentage> represent the box’s visually-apparent sizes, including the borders/padding (but not margin): they are applied to the border box. The padding and border of the box are laid out and drawn inside the specified width and height, with the content box sized to fill the remaining space, floored at zero. The content width and height are calculated by subtracting the border and padding widths of the respective sides from the specified <length-percentage>. As the content width and height cannot be negative, this computation is floored at zero. Used values, as exposed for instance through getComputedStyle(), also refer to the border box.
-    borderBox,
+    border_box,
     raw_: []const u8,
     pub fn raw(r: []const u8) BoxSizing { return .{ .raw_ = r }; }
 
@@ -9370,18 +9370,18 @@ pub const BoxSnap = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The block-start edge is snapped to the nearest grid line.
-    blockStart,
+    block_start,
     ///     /// The block-end edge is snapped to the nearest grid line.
-    blockEnd,
+    block_end,
     ///     /// The block is centered between one of the baseline grid’s text-over baselines and a subsequent (but not necessarily consecutive) text-under baseline.
     center,
     ///     /// The first line box’s dominant baseline is snapped to the nearest grid line.
     baseline,
     ///     /// The last line box’s dominant baseline is snapped to the nearest grid line.
-    lastBaseline,
+    last_baseline,
     raw_: []const u8,
     pub fn raw(r: []const u8) BoxSnap { return .{ .raw_ = r }; }
 
@@ -9395,7 +9395,7 @@ pub const BreakAfter = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Neither force nor forbid a break before/after the principal box.
     auto,
@@ -9406,7 +9406,7 @@ pub const BreakAfter = union(enum) {
     ///     /// Always force a break before/after the principal box. This value breaks through all containing fragmentation contexts. For example, inside a multi-column container in a region in a multi-column container in paged media, it forces simultaneously a column break in the inner multi-column container, a region break, a column break in the outer multi-column container, and a page break. It’s unclear if this value is needed.
     all,
     ///     /// Avoid a page break before/after the principal box.
-    avoidPage,
+    avoid_page,
     ///     /// Always force a page break before/after the principal box.
     page,
     ///     /// Force one or two page breaks before/after the principal box so that the next page is formatted as a left page.
@@ -9418,11 +9418,11 @@ pub const BreakAfter = union(enum) {
     ///     /// Force one or two page breaks before/after the principal box so that the next page is formatted as either a left page or a right page, whichever is first (according to the page progression) in a page spread.
     verso,
     ///     /// Avoid a column break before/after the principal box.
-    avoidColumn,
+    avoid_column,
     ///     /// Always force a column break before/after the principal box.
     column,
     ///     /// Avoid a region break before/after the principal box.
-    avoidRegion,
+    avoid_region,
     ///     /// Always force a region break before/after the principal box.
     region,
     raw_: []const u8,
@@ -9438,7 +9438,7 @@ pub const BreakBefore = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Neither force nor forbid a break before/after the principal box.
     auto,
@@ -9449,7 +9449,7 @@ pub const BreakBefore = union(enum) {
     ///     /// Always force a break before/after the principal box. This value breaks through all containing fragmentation contexts. For example, inside a multi-column container in a region in a multi-column container in paged media, it forces simultaneously a column break in the inner multi-column container, a region break, a column break in the outer multi-column container, and a page break. It’s unclear if this value is needed.
     all,
     ///     /// Avoid a page break before/after the principal box.
-    avoidPage,
+    avoid_page,
     ///     /// Always force a page break before/after the principal box.
     page,
     ///     /// Force one or two page breaks before/after the principal box so that the next page is formatted as a left page.
@@ -9461,11 +9461,11 @@ pub const BreakBefore = union(enum) {
     ///     /// Force one or two page breaks before/after the principal box so that the next page is formatted as either a left page or a right page, whichever is first (according to the page progression) in a page spread.
     verso,
     ///     /// Avoid a column break before/after the principal box.
-    avoidColumn,
+    avoid_column,
     ///     /// Always force a column break before/after the principal box.
     column,
     ///     /// Avoid a region break before/after the principal box.
-    avoidRegion,
+    avoid_region,
     ///     /// Always force a region break before/after the principal box.
     region,
     raw_: []const u8,
@@ -9481,18 +9481,18 @@ pub const BreakInside = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Impose no additional breaking constraints within the box.
     auto,
     ///     /// Avoid breaks within the box.
     avoid,
     ///     /// Avoid a page break within the box.
-    avoidPage,
+    avoid_page,
     ///     /// Avoid a column break within the box.
-    avoidColumn,
+    avoid_column,
     ///     /// Avoid a region break within the box.
-    avoidRegion,
+    avoid_region,
     raw_: []const u8,
     pub fn raw(r: []const u8) BreakInside { return .{ .raw_ = r }; }
 
@@ -9506,7 +9506,7 @@ pub const CaptionSide = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Positions the caption box above the table grid box.
     top,
@@ -9525,7 +9525,7 @@ pub const Caret = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
     raw_: []const u8,
@@ -9543,7 +9543,7 @@ pub const CaretAnimation = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The UA determines how the caret should be animated, if at all, as well as the speed of any such animation. It should match platform conventions and settings, and may be adjusted based on context.
     auto,
@@ -9562,7 +9562,7 @@ pub const CaretColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     aliceblue,
@@ -9773,7 +9773,7 @@ pub const CaretShape = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The UA determines the shape of the caret. It should match platform conventions, and may be adjusted based on context. For example, if a UA switches between insert mode and overtype mode when the user presses the insert key on their keyboard, it may show a bar caret in insert mode, and a block caret in overtype mode.
     auto,
@@ -9796,16 +9796,16 @@ pub const Clear = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// If applied to an inline float, requires that the block-start outer edge of the box comes after the block-end outer edge of any inline-start-floats with an inline-start-float-reference that resulted from elements earlier in the source document. If applied to a page float, the float reference in which the page float is placed will be seen as full when determining whether it can host subsequent page floats that float in the inline-start direction.
-    inlineStart,
+    inline_start,
     ///     /// If applied to a block-level element or an inline float, requires that the block-start outer edge of the box comes after the block-end outer edge of any inline-end-floats with an inline-end-float-reference that resulted from elements earlier in the source document. If applied to a page float, the float reference in which the page float is placed will be seen as full when determining whether it can host subsequent page floats that float in the inline-end direction.
-    inlineEnd,
+    inline_end,
     ///     /// If applied to a block-level element or an inline float, behaves like inline-start. If applied to a page float, the float reference in which the page float is placed will be seen as full when determining whether it can host subsequent page floats that float in the block-start direction.
-    blockStart,
+    block_start,
     ///     /// If applied to a block-level element or an inline float, behaves like inline-end. If applied to a page float, the float reference in which the page float is placed will be seen as full when determining whether it can host subsequent page floats that float in the block-end direction.
-    blockEnd,
+    block_end,
     ///     /// Behave like block-end, inline-start or inline-end depending on the float containing block’s direction and writing-mode.
     left,
     ///     /// Behave like block-start, inline-start or inline-end depending on the float containing block’s direction and writing-mode.
@@ -9815,9 +9815,9 @@ pub const Clear = union(enum) {
     ///     /// Behave like block-end or inline-end depending on the float containing block’s direction and writing-mode.
     bottom,
     ///     /// Behave like inline-start and inline-end.
-    bothInline,
+    both_inline,
     ///     /// Behave like block-start and block-end.
-    bothBlock,
+    both_block,
     ///     /// Behave like both-inline.
     both,
     raw_: []const u8,
@@ -9833,7 +9833,7 @@ pub const Clip = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     raw_: []const u8,
@@ -9849,19 +9849,19 @@ pub const ClipPath = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    contentBox,
-    paddingBox,
-    borderBox,
-    marginBox,
-    halfBorderBox,
+    content_box,
+    padding_box,
+    border_box,
+    margin_box,
+    half_border_box,
     ///     /// Uses the object bounding box as reference box.
-    fillBox,
+    fill_box,
     ///     /// Uses the stroke bounding box as reference box.
-    strokeBox,
+    stroke_box,
     ///     /// Uses the nearest SVG viewport as reference box. If a viewBox attribute is specified for the SVG viewport creating element: The reference box is positioned at the origin of the coordinate system established by the viewBox attribute. The dimension of the reference box is set to the width and height values of the viewBox attribute.
-    viewBox,
+    view_box,
     raw_: []const u8,
     pub fn raw(r: []const u8) ClipPath { return .{ .raw_ = r }; }
 
@@ -9875,7 +9875,7 @@ pub const ClipRule = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// See description of fill-rule property [SVG11].
     nonzero,
@@ -9894,7 +9894,7 @@ pub const CssColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     aliceblue,
     antiquewhite,
@@ -10104,7 +10104,7 @@ pub const ColorAdjust = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
     raw_: []const u8,
@@ -10122,7 +10122,7 @@ pub const ColorInterpolation = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     sRGB,
@@ -10140,7 +10140,7 @@ pub const ColorInterpolationFilters = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Indicates that the user agent can choose either the sRGB or linearRGB spaces for filter effects color operations. This option indicates that the author doesn’t require that color operations occur in a particular color space.
     auto,
@@ -10161,7 +10161,7 @@ pub const ColorScheme = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Indicates that the element supports the page’s supported color schemes, if they are set, or that it supports no color schemes at all otherwise.
     normal,
@@ -10184,7 +10184,7 @@ pub const ColumnCount = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// means that the number of columns will be determined by other properties (e.g., column-width, if it has a non-auto value).
     auto,
@@ -10201,14 +10201,14 @@ pub const ColumnFill = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// fill columns sequentially
     auto,
     ///     /// Balance content equally between columns, as far as possible. In fragmented contexts, only the last fragment is balanced.
     balance,
     ///     /// Balance content equally between columns, as far as possible. In fragmented contexts, all fragments are balanced.
-    balanceAll,
+    balance_all,
     raw_: []const u8,
     pub fn raw(r: []const u8) ColumnFill { return .{ .raw_ = r }; }
 
@@ -10222,7 +10222,7 @@ pub const ColumnGap = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The value normal represents a used value of 1em on multi-column containers, and a used value of 0px in all other contexts.
     normal,
@@ -10249,7 +10249,7 @@ pub const ColumnHeight = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// means that the column height will be determined by the amount of content and other properties.
     auto,
@@ -10270,7 +10270,7 @@ pub const ColumnRule = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hairline,
     thin,
@@ -10498,7 +10498,7 @@ pub const ColumnRuleBreak = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Behavior depends on the type of container.
     normal,
@@ -10517,7 +10517,7 @@ pub const ColumnRuleColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     aliceblue,
     antiquewhite,
@@ -10728,7 +10728,7 @@ pub const ColumnRuleEdgeInset = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -10749,7 +10749,7 @@ pub const ColumnRuleEdgeInsetEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -10770,7 +10770,7 @@ pub const ColumnRuleEdgeInsetStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -10791,7 +10791,7 @@ pub const ColumnRuleInset = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) ColumnRuleInset { return .{ .raw_ = r }; }
@@ -10806,7 +10806,7 @@ pub const ColumnRuleInsetEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -10827,7 +10827,7 @@ pub const ColumnRuleInsetStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -10848,7 +10848,7 @@ pub const ColumnRuleInteriorInset = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -10869,7 +10869,7 @@ pub const ColumnRuleInteriorInsetEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -10890,7 +10890,7 @@ pub const ColumnRuleInteriorInsetStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -10911,7 +10911,7 @@ pub const ColumnRuleStyle = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hidden,
     dotted,
@@ -10936,7 +10936,7 @@ pub const ColumnRuleVisibilityItems = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Paint decorations in all gap segments, regardless of whether adjacent items are present.
     all,
@@ -10957,7 +10957,7 @@ pub const ColumnRuleWidth = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hairline,
     thin,
@@ -10981,7 +10981,7 @@ pub const ColumnSpan = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The element forces a column break and is taken out of flow to span across all columns of the current multicol row in the same block formatting context. Content in the normal flow that appears before the element is automatically balanced across all columns in the immediately preceding multi-column line before the element appears, and any subsequent content flows into a new multi-column line after the element. The element establishes an independent formatting context.
     all,
@@ -11000,14 +11000,14 @@ pub const ColumnWidth = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// means that the column width will be determined by other properties (e.g., column-count, if it has a non-auto value).
     auto,
     ///     /// Specifies the optimal column width as the min-content inline size of the multi-column container’s contents.
-    minContent,
+    min_content,
     ///     /// Specifies the optimal column width as the max-content inline size of the multi-column container’s contents.
-    maxContent,
+    max_content,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
     pub fn px(v: f32) ColumnWidth { return .{ .px_ = v }; }
@@ -11025,7 +11025,7 @@ pub const ColumnWrap = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// If column-height is not 'column-height/auto' behaves as the value 'column-wrap/wrap' otherwise acts as 'column-wrap/nowrap'.
     auto,
@@ -11046,7 +11046,7 @@ pub const Columns = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) Columns { return .{ .raw_ = r }; }
@@ -11061,7 +11061,7 @@ pub const Contain = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// This value computes to size layout paint style, and thus turns on all forms of containment for the element.
     strict,
@@ -11070,7 +11070,7 @@ pub const Contain = union(enum) {
     ///     /// The value turns on size containment for the element. This ensures that the containment box can be laid out without needing to examine its descendants.
     size,
     ///     /// This value turns on inline-size containment for the element. This prevents the inline-size of its principal box from directly depending on its contents.
-    inlineSize,
+    inline_size,
     ///     /// This value turns on layout containment for the element. This ensures that the containment box is totally opaque for layout purposes; nothing outside can affect its internal layout, and vice versa.
     layout,
     ///     /// This value turns on style containment for the element. This ensures that, for properties which can have effects on more than just an element and its descendants, those effects don’t escape the element.
@@ -11090,12 +11090,12 @@ pub const ContainIntrinsicBlockSize = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// If auto is specified and the element has a last remembered size and is currently skipping its contents, its explicit intrinsic inner size in the corresponding axis is the last remembered size in that axis.
     auto,
     ///     /// If from-element is specified and the element is a replaced element with an internal layout intrinsic size, its explicit intrinsic inner size in the corresponding axis is that size. Should this apply even when contain:layout isn’t specified? The name needs further discussion.
-    fromElement,
+    from_element,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
     pub fn px(v: f32) ContainIntrinsicBlockSize { return .{ .px_ = v }; }
@@ -11113,12 +11113,12 @@ pub const ContainIntrinsicHeight = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// If auto is specified and the element has a last remembered size and is currently skipping its contents, its explicit intrinsic inner size in the corresponding axis is the last remembered size in that axis.
     auto,
     ///     /// If from-element is specified and the element is a replaced element with an internal layout intrinsic size, its explicit intrinsic inner size in the corresponding axis is that size. Should this apply even when contain:layout isn’t specified? The name needs further discussion.
-    fromElement,
+    from_element,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
     pub fn px(v: f32) ContainIntrinsicHeight { return .{ .px_ = v }; }
@@ -11136,12 +11136,12 @@ pub const ContainIntrinsicInlineSize = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// If auto is specified and the element has a last remembered size and is currently skipping its contents, its explicit intrinsic inner size in the corresponding axis is the last remembered size in that axis.
     auto,
     ///     /// If from-element is specified and the element is a replaced element with an internal layout intrinsic size, its explicit intrinsic inner size in the corresponding axis is that size. Should this apply even when contain:layout isn’t specified? The name needs further discussion.
-    fromElement,
+    from_element,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
     pub fn px(v: f32) ContainIntrinsicInlineSize { return .{ .px_ = v }; }
@@ -11159,12 +11159,12 @@ pub const ContainIntrinsicSize = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// If auto is specified and the element has a last remembered size and is currently skipping its contents, its explicit intrinsic inner size in the corresponding axis is the last remembered size in that axis.
     auto,
     ///     /// If from-element is specified and the element is a replaced element with an internal layout intrinsic size, its explicit intrinsic inner size in the corresponding axis is that size. Should this apply even when contain:layout isn’t specified? The name needs further discussion.
-    fromElement,
+    from_element,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
     pub fn px(v: f32) ContainIntrinsicSize { return .{ .px_ = v }; }
@@ -11182,12 +11182,12 @@ pub const ContainIntrinsicWidth = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// If auto is specified and the element has a last remembered size and is currently skipping its contents, its explicit intrinsic inner size in the corresponding axis is the last remembered size in that axis.
     auto,
     ///     /// If from-element is specified and the element is a replaced element with an internal layout intrinsic size, its explicit intrinsic inner size in the corresponding axis is that size. Should this apply even when contain:layout isn’t specified? The name needs further discussion.
-    fromElement,
+    from_element,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
     pub fn px(v: f32) ContainIntrinsicWidth { return .{ .px_ = v }; }
@@ -11205,7 +11205,7 @@ pub const Container = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) Container { return .{ .raw_ = r }; }
@@ -11220,7 +11220,7 @@ pub const ContainerName = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) ContainerName { return .{ .raw_ = r }; }
@@ -11235,16 +11235,16 @@ pub const ContainerType = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The element is not a query container for any container size queries or container scroll-state queries, but remains a query container for container style queries.
     normal,
     ///     /// Establishes a query container for container size queries on both the inline and block axis. Applies style containment and size containment to the principal box, and establishes an independent formatting context.
     size,
     ///     /// Establishes a query container for container size queries on the container’s own inline axis. Applies style containment and inline-size containment to the principal box, and establishes an independent formatting context.
-    inlineSize,
+    inline_size,
     ///     /// Establishes a query container for container scroll-state queries
-    scrollState,
+    scroll_state,
     raw_: []const u8,
     pub fn raw(r: []const u8) ContainerType { return .{ .raw_ = r }; }
 
@@ -11258,15 +11258,15 @@ pub const Content = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// For an element or page margin box, this computes to contents. For ::before and ::after, this computes to none. For ::marker, ::placeholder, and ::file-selector-button, this computes to itself (normal).
     normal,
     contents,
-    openQuote,
-    closeQuote,
-    noOpenQuote,
-    noCloseQuote,
+    open_quote,
+    close_quote,
+    no_open_quote,
+    no_close_quote,
     raw_: []const u8,
     pub fn raw(r: []const u8) Content { return .{ .raw_ = r }; }
 
@@ -11280,7 +11280,7 @@ pub const ContentVisibility = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// No effect. The element’s contents are laid out and rendered as normal.
     visible,
@@ -11301,7 +11301,7 @@ pub const Continue = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// If the box has more content than can fit, the excess content is handled according to the usual rules.
     auto,
@@ -11310,7 +11310,7 @@ pub const Continue = union(enum) {
     ///     /// If the box is a block container, then it must establish an independent formatting context that also becomes a line-clamp container. This causes all content after the clamp point to be visually hidden, and to not be taken into account for the box’s automatic block size. If the box is a multicol container, the behavior is the same as auto.
     collapse,
     ///     /// The -webkit-legacy value behaves identically to collapse, except that it only takes effect if the specified value of the display property is -webkit-box or -webkit-inline-box and the value of the -webkit-box-orient property is vertical.
-    webkitLegacy,
+    webkit_legacy,
     ///     /// Content that doesn’t fit overflows, according to the overflow property
     overflow,
     ///     /// Content that doesn’t fit paginates. This creates a paginated view inside the element similar to the way that 'overflow: scroll' creates a scrollable view. See paginated overflow
@@ -11330,7 +11330,7 @@ pub const CopyInto = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     element,
     content,
@@ -11348,7 +11348,7 @@ pub const Corner = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) Corner { return .{ .raw_ = r }; }
@@ -11363,7 +11363,7 @@ pub const CornerBlockEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CornerBlockEnd { return .{ .raw_ = r }; }
@@ -11378,7 +11378,7 @@ pub const CornerBlockEndShape = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CornerBlockEndShape { return .{ .raw_ = r }; }
@@ -11393,7 +11393,7 @@ pub const CornerBlockStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CornerBlockStart { return .{ .raw_ = r }; }
@@ -11408,7 +11408,7 @@ pub const CornerBlockStartShape = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CornerBlockStartShape { return .{ .raw_ = r }; }
@@ -11423,7 +11423,7 @@ pub const CornerBottom = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CornerBottom { return .{ .raw_ = r }; }
@@ -11438,7 +11438,7 @@ pub const CornerBottomLeft = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CornerBottomLeft { return .{ .raw_ = r }; }
@@ -11453,7 +11453,7 @@ pub const CornerBottomLeftShape = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     round,
     scoop,
@@ -11474,7 +11474,7 @@ pub const CornerBottomRight = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CornerBottomRight { return .{ .raw_ = r }; }
@@ -11489,7 +11489,7 @@ pub const CornerBottomRightShape = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     round,
     scoop,
@@ -11510,7 +11510,7 @@ pub const CornerBottomShape = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CornerBottomShape { return .{ .raw_ = r }; }
@@ -11525,7 +11525,7 @@ pub const CornerEndEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CornerEndEnd { return .{ .raw_ = r }; }
@@ -11540,7 +11540,7 @@ pub const CornerEndEndShape = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     round,
     scoop,
@@ -11561,7 +11561,7 @@ pub const CornerEndStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CornerEndStart { return .{ .raw_ = r }; }
@@ -11576,7 +11576,7 @@ pub const CornerEndStartShape = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     round,
     scoop,
@@ -11597,7 +11597,7 @@ pub const CornerInlineEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CornerInlineEnd { return .{ .raw_ = r }; }
@@ -11612,7 +11612,7 @@ pub const CornerInlineEndShape = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CornerInlineEndShape { return .{ .raw_ = r }; }
@@ -11627,7 +11627,7 @@ pub const CornerInlineStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CornerInlineStart { return .{ .raw_ = r }; }
@@ -11642,7 +11642,7 @@ pub const CornerInlineStartShape = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CornerInlineStartShape { return .{ .raw_ = r }; }
@@ -11657,7 +11657,7 @@ pub const CornerLeft = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CornerLeft { return .{ .raw_ = r }; }
@@ -11672,7 +11672,7 @@ pub const CornerLeftShape = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CornerLeftShape { return .{ .raw_ = r }; }
@@ -11687,7 +11687,7 @@ pub const CornerRight = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CornerRight { return .{ .raw_ = r }; }
@@ -11702,7 +11702,7 @@ pub const CornerRightShape = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CornerRightShape { return .{ .raw_ = r }; }
@@ -11717,7 +11717,7 @@ pub const CornerShape = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CornerShape { return .{ .raw_ = r }; }
@@ -11732,7 +11732,7 @@ pub const CornerStartEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CornerStartEnd { return .{ .raw_ = r }; }
@@ -11747,7 +11747,7 @@ pub const CornerStartEndShape = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     round,
     scoop,
@@ -11768,7 +11768,7 @@ pub const CornerStartStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CornerStartStart { return .{ .raw_ = r }; }
@@ -11783,7 +11783,7 @@ pub const CornerStartStartShape = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     round,
     scoop,
@@ -11804,7 +11804,7 @@ pub const CornerTop = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CornerTop { return .{ .raw_ = r }; }
@@ -11819,7 +11819,7 @@ pub const CornerTopLeft = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CornerTopLeft { return .{ .raw_ = r }; }
@@ -11834,7 +11834,7 @@ pub const CornerTopLeftShape = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     round,
     scoop,
@@ -11855,7 +11855,7 @@ pub const CornerTopRight = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CornerTopRight { return .{ .raw_ = r }; }
@@ -11870,7 +11870,7 @@ pub const CornerTopRightShape = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     round,
     scoop,
@@ -11891,7 +11891,7 @@ pub const CornerTopShape = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CornerTopShape { return .{ .raw_ = r }; }
@@ -11906,7 +11906,7 @@ pub const CounterIncrement = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CounterIncrement { return .{ .raw_ = r }; }
@@ -11921,7 +11921,7 @@ pub const CounterReset = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CounterReset { return .{ .raw_ = r }; }
@@ -11936,7 +11936,7 @@ pub const CounterSet = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CounterSet { return .{ .raw_ = r }; }
@@ -11951,7 +11951,7 @@ pub const Cue = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) Cue { return .{ .raw_ = r }; }
@@ -11966,7 +11966,7 @@ pub const CueAfter = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CueAfter { return .{ .raw_ = r }; }
@@ -11981,7 +11981,7 @@ pub const CueBefore = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) CueBefore { return .{ .raw_ = r }; }
@@ -11996,14 +11996,14 @@ pub const Cursor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The UA determines the cursor to display based on the current context: auto behaves as text over selectable text or editable elements, and default otherwise.
     auto,
     ///     /// The platform-dependent default cursor. Often rendered as an arrow.
     default,
     ///     /// A context menu is available for the object under the cursor. Often rendered as an arrow with a small menu-like graphic next to it.
-    contextMenu,
+    context_menu,
     ///     /// Help is available for the object under the cursor. Often rendered as a question mark or a balloon.
     help,
     ///     /// The cursor is a pointer that indicates a link.
@@ -12019,7 +12019,7 @@ pub const Cursor = union(enum) {
     ///     /// Indicates text that may be selected. Often rendered as a vertical I-beam. User agents may automatically display a horizontal I-beam/cursor (e.g. same as the vertical-text keyword) for vertical text, or for that matter, any angle of I-beam/cursor for text that is rendered at any particular angle.
     text,
     ///     /// Indicates vertical-text that may be selected. Often rendered as a horizontal I-beam.
-    verticalText,
+    vertical_text,
     ///     /// Indicates an alias of/shortcut to something is to be created. Often rendered as an arrow with a small curved arrow next to it.
     alias,
     ///     /// Indicates something is to be copied. Often rendered as an arrow with a small plus sign next to it.
@@ -12027,47 +12027,47 @@ pub const Cursor = union(enum) {
     ///     /// Indicates something is to be moved.
     move,
     ///     /// Indicates that the dragged item cannot be dropped at the current cursor location. Often rendered as a hand or pointer with a small circle with a line through it.
-    noDrop,
+    no_drop,
     ///     /// Indicates that the requested action will not be carried out. Often rendered as a circle with a line through it.
-    notAllowed,
+    not_allowed,
     ///     /// Indicates that something can be grabbed (dragged to be moved). Often rendered as the backside of an open hand.
     grab,
     ///     /// Indicates that something is being grabbed (dragged to be moved). Often rendered as the backside of a hand with fingers closed mostly out of view.
     grabbing,
     ///     /// Indicates that some edge is to be moved. For example, the se-resize cursor is used when the movement starts from the south-east corner of the box.
-    eResize,
+    e_resize,
     ///     /// Indicates that some edge is to be moved. For example, the se-resize cursor is used when the movement starts from the south-east corner of the box.
-    nResize,
+    n_resize,
     ///     /// Indicates that some edge is to be moved. For example, the se-resize cursor is used when the movement starts from the south-east corner of the box.
-    neResize,
+    ne_resize,
     ///     /// Indicates that some edge is to be moved. For example, the se-resize cursor is used when the movement starts from the south-east corner of the box.
-    nwResize,
+    nw_resize,
     ///     /// Indicates that some edge is to be moved. For example, the se-resize cursor is used when the movement starts from the south-east corner of the box.
-    sResize,
+    s_resize,
     ///     /// Indicates that some edge is to be moved. For example, the se-resize cursor is used when the movement starts from the south-east corner of the box.
-    seResize,
+    se_resize,
     ///     /// Indicates that some edge is to be moved. For example, the se-resize cursor is used when the movement starts from the south-east corner of the box.
-    swResize,
+    sw_resize,
     ///     /// Indicates that some edge is to be moved. For example, the se-resize cursor is used when the movement starts from the south-east corner of the box.
-    wResize,
+    w_resize,
     ///     /// Indicates a bidirectional resize cursor.
-    ewResize,
+    ew_resize,
     ///     /// Indicates a bidirectional resize cursor.
-    nsResize,
+    ns_resize,
     ///     /// Indicates a bidirectional resize cursor.
-    neswResize,
+    nesw_resize,
     ///     /// Indicates a bidirectional resize cursor.
-    nwseResize,
+    nwse_resize,
     ///     /// Indicates that the item/column can be resized horizontally. Often rendered as arrows pointing left and right with a vertical bar separating them.
-    colResize,
+    col_resize,
     ///     /// Indicates that the item/row can be resized vertically. Often rendered as arrows pointing up and down with a horizontal bar separating them.
-    rowResize,
+    row_resize,
     ///     /// Indicates that the something can be scrolled in any direction. Often rendered as arrows pointing up, down, left, and right with a dot in the middle.
-    allScroll,
+    all_scroll,
     ///     /// Indicates that something can be zoomed (magnified) in or out, and often rendered as a magnifying glass with a "+" or "-" in the center of the glass, for zoom-in and zoom-out respectively.
-    zoomIn,
+    zoom_in,
     ///     /// Indicates that something can be zoomed (magnified) in or out, and often rendered as a magnifying glass with a "+" or "-" in the center of the glass, for zoom-in and zoom-out respectively.
-    zoomOut,
+    zoom_out,
     raw_: []const u8,
     pub fn raw(r: []const u8) Cursor { return .{ .raw_ = r }; }
 
@@ -12081,7 +12081,7 @@ pub const Cx = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -12102,7 +12102,7 @@ pub const Cy = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -12123,7 +12123,7 @@ pub const D = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) D { return .{ .raw_ = r }; }
@@ -12138,7 +12138,7 @@ pub const Direction = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// This value sets inline base direction (bidi directionality) to line-left-to-line-right.
     ltr,
@@ -12157,45 +12157,45 @@ pub const Display = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     block,
     inline_,
-    runIn,
+    run_in,
     flow,
-    flowRoot,
+    flow_root,
     table,
     flex,
     grid,
     ///     /// Specifies that an element generates a ruby container box. (Corresponds to HTML/XHTML <ruby> elements.)
     ruby,
     ///     /// The list-item keyword causes the element to generate a ::marker pseudo-element [CSS-PSEUDO-4] with the content specified by its list-style properties (CSS 2.1§12.5 Lists) [CSS2] together with a principal box of the specified type for its own contents.
-    listItem,
-    tableRowGroup,
-    tableHeaderGroup,
-    tableFooterGroup,
-    tableRow,
-    tableCell,
-    tableColumnGroup,
-    tableColumn,
-    tableCaption,
+    list_item,
+    table_row_group,
+    table_header_group,
+    table_footer_group,
+    table_row,
+    table_cell,
+    table_column_group,
+    table_column,
+    table_caption,
     ///     /// Specifies that an element generates a ruby base box. (Corresponds to HTML/XHTML <rb> elements.)
-    rubyBase,
+    ruby_base,
     ///     /// Specifies that an element generates a ruby annotation box. (Corresponds to HTML/XHTML <rt> elements.)
-    rubyText,
+    ruby_text,
     ///     /// Specifies that an element generates a ruby base container box. (Corresponds to XHTML <rbc> elements; generated as an anonymous box in HTML.)
-    rubyBaseContainer,
+    ruby_base_container,
     ///     /// Specifies that an element generates a ruby annotation container box. (Corresponds to HTML/XHTML <rtc> elements.)
-    rubyTextContainer,
+    ruby_text_container,
     contents,
-    inlineBlock,
-    inlineTable,
-    inlineFlex,
-    inlineGrid,
+    inline_block,
+    inline_table,
+    inline_flex,
+    inline_grid,
     ///     /// This value causes an element to generate a block-level grid lanes container box.
-    gridLanes,
+    grid_lanes,
     ///     /// This value causes an element to generate an inline-level grid lanes container box.
-    inlineGridLanes,
+    inline_grid_lanes,
     math,
     raw_: []const u8,
     pub fn raw(r: []const u8) Display { return .{ .raw_ = r }; }
@@ -12210,12 +12210,12 @@ pub const DominantBaseline = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Equivalent to alphabetic in horizontal writing modes and in vertical writing modes when text-orientation is sideways. Equivalent to central in vertical writing modes when text-orientation is mixed or upright. However, in SVG text, the origin point of glyphs (used for coordinate-based glyph positioning) is always handled as for central in vertical writing modes.
     auto,
     ///     /// Use the text-under baselines.
-    textBottom,
+    text_bottom,
     ///     /// Use the alphabetic baselines.
     alphabetic,
     ///     /// Use the ideographic-under baselines.
@@ -12229,7 +12229,7 @@ pub const DominantBaseline = union(enum) {
     ///     /// Use the hanging baselines.
     hanging,
     ///     /// Use the text-over baselines.
-    textTop,
+    text_top,
     raw_: []const u8,
     pub fn raw(r: []const u8) DominantBaseline { return .{ .raw_ = r }; }
 
@@ -12243,12 +12243,12 @@ pub const DynamicRangeLimit = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The highest luminance color that is displayed is the same as HDR reference white, i.e. the CSS color white.
     standard,
     ///     /// The highest peak luminance that is displayed is much greater than HDR reference white, i.e. the CSS color white; the precise level is not specified.
-    noLimit,
+    no_limit,
     ///     /// The highest peak luminance that is displayed is somewhat greater than HDR reference white, i.e. the CSS color white, such that a mix of SDR and HDR content can be comfortably viewed together.
     constrained,
     raw_: []const u8,
@@ -12264,7 +12264,7 @@ pub const EmptyCells = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     show,
     hide,
@@ -12281,7 +12281,7 @@ pub const EventTrigger = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) EventTrigger { return .{ .raw_ = r }; }
@@ -12296,7 +12296,7 @@ pub const EventTriggerName = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) EventTriggerName { return .{ .raw_ = r }; }
@@ -12311,7 +12311,7 @@ pub const EventTriggerSource = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     activate,
     interest,
@@ -12331,7 +12331,7 @@ pub const FieldSizing = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// For element with default preferred size, the UA must set the intrinsic size to the default preferred size defined by the host language for that element. Otherwise, the UA must behave the same as content.
     fixed,
@@ -12350,7 +12350,7 @@ pub const Fill = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     child,
     raw_: []const u8,
@@ -12366,9 +12366,9 @@ pub const FillBreak = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    boundingBox,
+    bounding_box,
     slice,
     clone,
     raw_: []const u8,
@@ -12384,7 +12384,7 @@ pub const FillColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     aliceblue,
     antiquewhite,
@@ -12594,7 +12594,7 @@ pub const FillImage = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     child,
     raw_: []const u8,
@@ -12610,7 +12610,7 @@ pub const FillOpacity = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) FillOpacity { return .{ .raw_ = r }; }
@@ -12625,20 +12625,20 @@ pub const FillOrigin = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Use the same fill positioning area as the parent. If it has no parent, use the initial containing block.
-    matchParent,
+    match_parent,
     ///     /// For SVG shapes or SVG text, use the object bounding box of the element. For CSS boxes, use the bounding box of the text glyph outlines of the element and all in-flow or floated descendants.
-    fillBox,
+    fill_box,
     ///     /// For SVG shapes or SVG text, use the stroke bounding box of the element. For CSS boxes, use the bounding box of the text glyph stroke outlines of the element and all in-flow or floated descendants.
-    strokeBox,
+    stroke_box,
     ///     /// Use the box’s own content-box/padding-box/border-box as the fill positioning area. For SVG shapes, content-box and padding-box are treated as fill-box, while border-box is treated as stroke-box.
-    contentBox,
+    content_box,
     ///     /// Use the box’s own content-box/padding-box/border-box as the fill positioning area. For SVG shapes, content-box and padding-box are treated as fill-box, while border-box is treated as stroke-box.
-    paddingBox,
+    padding_box,
     ///     /// Use the box’s own content-box/padding-box/border-box as the fill positioning area. For SVG shapes, content-box and padding-box are treated as fill-box, while border-box is treated as stroke-box.
-    borderBox,
+    border_box,
     raw_: []const u8,
     pub fn raw(r: []const u8) FillOrigin { return .{ .raw_ = r }; }
 
@@ -12652,21 +12652,21 @@ pub const FillPosition = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     left,
     center,
     right,
     top,
     bottom,
-    xStart,
-    xEnd,
-    yStart,
-    yEnd,
-    blockStart,
-    blockEnd,
-    inlineStart,
-    inlineEnd,
+    x_start,
+    x_end,
+    y_start,
+    y_end,
+    block_start,
+    block_end,
+    inline_start,
+    inline_end,
     start,
     end,
     px_: f32, em_: f32, rem_: f32,
@@ -12688,16 +12688,16 @@ pub const FillRepeat = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    repeatX,
-    repeatY,
-    repeatBlock,
-    repeatInline,
+    repeat_x,
+    repeat_y,
+    repeat_block,
+    repeat_inline,
     repeat,
     space,
     round,
-    noRepeat,
+    no_repeat,
     raw_: []const u8,
     pub fn raw(r: []const u8) FillRepeat { return .{ .raw_ = r }; }
 
@@ -12711,7 +12711,7 @@ pub const FillRule = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// This rule determines the “insideness” of a point on the canvas by drawing a ray from that point to infinity in any direction and then examining the places where a segment of the shape crosses the ray. Starting with a count of zero, add one each time a path segment crosses the ray from left to right and subtract one each time a path segment crosses the ray from right to left. After counting the crossings, if the result is zero then the point is outside the path. Otherwise, it is inside. The effect of a nonzero fill rule on paths with self-intersections and enclosed subpaths.
     nonzero,
@@ -12730,7 +12730,7 @@ pub const FillSize = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     cover,
@@ -12754,7 +12754,7 @@ pub const Filter = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) Filter { return .{ .raw_ = r }; }
@@ -12769,7 +12769,7 @@ pub const Flex = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) Flex { return .{ .raw_ = r }; }
@@ -12784,7 +12784,7 @@ pub const FlexBasis = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Indicates an automatic size based on the flex item’s content. (This is typically equivalent to the max-content size, but with adjustments to handle preferred aspect ratios, intrinsic sizing constraints, and orthogonal flows; see details in § 9 Flex Layout Algorithm.)
     content,
@@ -12801,16 +12801,16 @@ pub const FlexDirection = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The flex container’s main axis has the same orientation as the inline axis of the current writing mode. The main-start and main-end directions are equivalent to the inline-start and inline-end directions, respectively, of the current writing mode.
     row,
     ///     /// Same as row, except the main-start and main-end directions are swapped.
-    rowReverse,
+    row_reverse,
     ///     /// The flex container’s main axis has the same orientation as the block axis of the current writing mode. The main-start and main-end directions are equivalent to the block-start and block-end directions, respectively, of the current writing mode.
     column,
     ///     /// Same as column, except the main-start and main-end directions are swapped.
-    columnReverse,
+    column_reverse,
     raw_: []const u8,
     pub fn raw(r: []const u8) FlexDirection { return .{ .raw_ = r }; }
 
@@ -12824,7 +12824,7 @@ pub const FlexFlow = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) FlexFlow { return .{ .raw_ = r }; }
@@ -12839,7 +12839,7 @@ pub const FlexGrow = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) FlexGrow { return .{ .raw_ = r }; }
@@ -12854,7 +12854,7 @@ pub const FlexShrink = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) FlexShrink { return .{ .raw_ = r }; }
@@ -12869,14 +12869,14 @@ pub const FlexWrap = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The flex container is single-line.
     nowrap,
     ///     /// The flex container is multi-line.
     wrap,
     ///     /// Same as wrap.
-    wrapReverse,
+    wrap_reverse,
     raw_: []const u8,
     pub fn raw(r: []const u8) FlexWrap { return .{ .raw_ = r }; }
 
@@ -12890,20 +12890,20 @@ pub const Float = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// If the float reference is a line box, block-start behaves like inline-start. If the float reference is not a line box, the element generates a box that is floated to the block-start and line-start outer edges of the float reference. The initial value of the max-width or max-height property that refers to the inline size of the float is '100%'. Content flows on the block-end side of the box.
-    blockStart,
+    block_start,
     ///     /// If the float reference is a line box, block-end behaves like inline-end. If the float reference is not a line box, the element generates a box that is floated to the block-end and line-end outer edges of the float reference. The initial value of the max-width or max-height property that refers to the inline size of the float is '100%'. Content flows on the block-start side of the box.
-    blockEnd,
+    block_end,
     ///     /// If the float reference is a line box, the element generates a box that is floated to the line-start outer edge of the float reference and content flows on the line-end side of the box. If the float reference is not a line box, the element generates a box that is floated to the line-start and block-start outer edges of the float reference.
-    inlineStart,
+    inline_start,
     ///     /// If the float reference is a line box, the element generates a box that is floated to the line-ebd outer edge of the float reference and content flows on the line-start side of the box. If the float reference is not a line box, the element generates a box that is floated to the line-end and block-end outer edges of the float reference.
-    inlineEnd,
+    inline_end,
     ///     /// Behaves as snap-block(2em, near)
-    snapBlock,
+    snap_block,
     ///     /// same as snap-inline(2em, near)
-    snapInline,
+    snap_inline,
     ///     /// If the float reference is a line box, behaves like inline-start or inline-end, whichever corresponds to line-left for the float reference. Otherwise, behaves like block-end, inline-start or inline-end depending on the float containing block’s direction and writing-mode.
     left,
     ///     /// If the float reference is a line box, behaves like inline-start or inline-end, whichever corresponds to line-right for the float reference. Otherwise, behaves like block-start, inline-start or inline-end depending on the float containing block’s direction and writing-mode.
@@ -12927,7 +12927,7 @@ pub const FloatDefer = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     last,
     raw_: []const u8,
@@ -12943,7 +12943,7 @@ pub const FloatOffset = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -12964,7 +12964,7 @@ pub const FloatReference = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The float reference is the line box of the float anchor. The float containing block formatting context is the same as that of the float anchor. The float is an inline float.
     inline_,
@@ -12987,7 +12987,7 @@ pub const FloodColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     aliceblue,
     antiquewhite,
@@ -13197,7 +13197,7 @@ pub const FloodOpacity = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) FloodOpacity { return .{ .raw_ = r }; }
@@ -13212,7 +13212,7 @@ pub const FlowFrom = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) FlowFrom { return .{ .raw_ = r }; }
@@ -13227,7 +13227,7 @@ pub const FlowInto = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     element,
     content,
@@ -13244,7 +13244,7 @@ pub const FlowTolerance = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Resolves to a used value of 1em in grid lanes layout and a used value of 0 in all other layout modes.
     normal,
@@ -13269,18 +13269,18 @@ pub const Font = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     normal,
-    smallCaps,
-    ultraCondensed,
-    extraCondensed,
+    small_caps,
+    ultra_condensed,
+    extra_condensed,
     condensed,
-    semiCondensed,
-    semiExpanded,
+    semi_condensed,
+    semi_expanded,
     expanded,
-    extraExpanded,
-    ultraExpanded,
+    extra_expanded,
+    ultra_expanded,
     ///     /// The font used for captioned controls (e.g., buttons, drop-downs, etc.).
     caption,
     ///     /// The font used to label icons.
@@ -13288,11 +13288,11 @@ pub const Font = union(enum) {
     ///     /// The font used in menus (e.g., dropdown menus and menu lists).
     menu,
     ///     /// The font used in dialog boxes.
-    messageBox,
+    message_box,
     ///     /// The font used for labeling small controls.
-    smallCaption,
+    small_caption,
     ///     /// The font used in window status bars.
-    statusBar,
+    status_bar,
     raw_: []const u8,
     pub fn raw(r: []const u8) Font { return .{ .raw_ = r }; }
 
@@ -13306,19 +13306,19 @@ pub const FontFamily = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     serif,
-    sansSerif,
-    systemUi,
+    sans_serif,
+    system_ui,
     cursive,
     fantasy,
     math,
     monospace,
-    uiSerif,
-    uiSansSerif,
-    uiMonospace,
-    uiRounded,
+    ui_serif,
+    ui_sans_serif,
+    ui_monospace,
+    ui_rounded,
     raw_: []const u8,
     pub fn raw(r: []const u8) FontFamily { return .{ .raw_ = r }; }
 
@@ -13332,7 +13332,7 @@ pub const FontFeatureSettings = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// A value of normal means that no change in glyph selection or positioning occurs due to this property.
     normal,
@@ -13351,7 +13351,7 @@ pub const FontKerning = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Specifies that kerning is applied at the discretion of the user agent
     auto,
@@ -13370,7 +13370,7 @@ pub const FontLanguageOverride = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     normal,
     raw_: []const u8,
@@ -13386,7 +13386,7 @@ pub const FontOpticalSizing = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The user agent may modify the shape of glyphs based on the font-size and the pixel density of the screen. For OpenType and TrueType fonts using font variations, this is often done by using the "opsz" font variation.
     auto,
@@ -13403,7 +13403,7 @@ pub const FontPalette = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// If the color-scheme property is set to a value other than normal', user-agents should select the first light or dark palette as appropriate. Otherwise, user-agents display the color font with the default palette or default glyph colorisation. User-agents should take the computed value of the color property into consideration when a color font format requires use of the foreground color In the COLR [OPENTYPE] table, color index 0xFFFF should be rendered according the color property. For COLR/CPAL [OPENTYPE] fonts, font-palette: normal usually means rendering the font with the palette in the font at index 0.
     normal,
@@ -13424,16 +13424,16 @@ pub const FontSize = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    xxSmall,
-    xSmall,
+    xx_small,
+    x_small,
     small,
     medium,
     large,
-    xLarge,
-    xxLarge,
-    xxxLarge,
+    x_large,
+    xx_large,
+    xxx_large,
     larger,
     smaller,
     ///     /// Special mathematical scaling rules must be applied when determining the computed value of the font-size property.
@@ -13457,20 +13457,20 @@ pub const FontSizeAdjust = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Normalize the aspect value of the fonts, using the x-height divided by the font size.
-    exHeight,
+    ex_height,
     ///     /// Normalize the cap-height of the fonts, using the cap-height by the font size.
-    capHeight,
+    cap_height,
     ///     /// Normalize the horizontal narrow pitch of the fonts, using the advance width of “0” (ZERO, U+0030) divided by the font size.
-    chWidth,
+    ch_width,
     ///     /// Normalize the horizontal wide pitch of the font, using the advance width of “水” (CJK water ideograph, U+6C34) divided by the font size.
-    icWidth,
+    ic_width,
     ///     /// Normalize the vertical wide pitch of the font, using the advance height of “水” (CJK water ideograph, U+6C34) divided by the font size.
-    icHeight,
+    ic_height,
     ///     /// Computes to the <number> corresponding to the specified metric of the first available font, if it exists. Otherwise, the same as none.
-    fromFont,
+    from_font,
     raw_: []const u8,
     pub fn raw(r: []const u8) FontSizeAdjust { return .{ .raw_ = r }; }
 
@@ -13484,17 +13484,17 @@ pub const FontStretch = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     normal,
-    ultraCondensed,
-    extraCondensed,
+    ultra_condensed,
+    extra_condensed,
     condensed,
-    semiCondensed,
-    semiExpanded,
+    semi_condensed,
+    semi_expanded,
     expanded,
-    extraExpanded,
-    ultraExpanded,
+    extra_expanded,
+    ultra_expanded,
     percent_: f32,
     raw_: []const u8,
     pub fn percent(v: f32) FontStretch { return .{ .percent_ = v }; }
@@ -13510,7 +13510,7 @@ pub const FontStyle = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Matches against a face that is classified as a normal face, one that is neither italic or obliqued. This represents an oblique value of "0".
     normal,
@@ -13534,11 +13534,11 @@ pub const FontSynthesis = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     weight,
     style,
-    smallCaps,
+    small_caps,
     position,
     raw_: []const u8,
     pub fn raw(r: []const u8) FontSynthesis { return .{ .raw_ = r }; }
@@ -13553,7 +13553,7 @@ pub const FontSynthesisPosition = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Synthesis of superscript and subscript forms is required
     auto,
@@ -13570,7 +13570,7 @@ pub const FontSynthesisSmallCaps = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Synthesis of small caps faces is allowed
     auto,
@@ -13587,12 +13587,12 @@ pub const FontSynthesisStyle = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Synthesis of oblique faces is allowed
     auto,
     ///     /// Synthesis of oblique faces is allowed, but they must not be used as fallback if italic is specified
-    obliqueOnly,
+    oblique_only,
     raw_: []const u8,
     pub fn raw(r: []const u8) FontSynthesisStyle { return .{ .raw_ = r }; }
 
@@ -13606,7 +13606,7 @@ pub const FontSynthesisWeight = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Synthesis of bold faces is allowed
     auto,
@@ -13623,41 +13623,41 @@ pub const FontVariant = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The value normal resets all subproperties of font-variant to their initial value. The none value sets font-variant-ligatures to 'font-variant-ligatures/none' and resets all other font feature properties to their initial value. Like other shorthands, using font-variant resets unspecified font-variant subproperties to their initial values.
     normal,
-    commonLigatures,
-    noCommonLigatures,
-    discretionaryLigatures,
-    noDiscretionaryLigatures,
-    historicalLigatures,
-    noHistoricalLigatures,
+    common_ligatures,
+    no_common_ligatures,
+    discretionary_ligatures,
+    no_discretionary_ligatures,
+    historical_ligatures,
+    no_historical_ligatures,
     contextual,
-    noContextual,
-    smallCaps,
-    allSmallCaps,
-    petiteCaps,
-    allPetiteCaps,
+    no_contextual,
+    small_caps,
+    all_small_caps,
+    petite_caps,
+    all_petite_caps,
     unicase,
-    titlingCaps,
-    historicalForms,
-    liningNums,
-    oldstyleNums,
-    proportionalNums,
-    tabularNums,
-    diagonalFractions,
-    stackedFractions,
+    titling_caps,
+    historical_forms,
+    lining_nums,
+    oldstyle_nums,
+    proportional_nums,
+    tabular_nums,
+    diagonal_fractions,
+    stacked_fractions,
     ordinal,
-    slashedZero,
+    slashed_zero,
     jis78,
     jis83,
     jis90,
     jis04,
     simplified,
     traditional,
-    fullWidth,
-    proportionalWidth,
+    full_width,
+    proportional_width,
     ruby,
     sub,
     super,
@@ -13677,12 +13677,12 @@ pub const FontVariantAlternates = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// None of the features listed below are enabled.
     normal,
     ///     /// Enables display of historical forms (OpenType feature: hist).
-    historicalForms,
+    historical_forms,
     raw_: []const u8,
     pub fn raw(r: []const u8) FontVariantAlternates { return .{ .raw_ = r }; }
 
@@ -13696,22 +13696,22 @@ pub const FontVariantCaps = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// None of the features listed below are enabled.
     normal,
     ///     /// Enables display of small capitals (OpenType feature: smcp). Small-caps glyphs typically use the form of uppercase letters but are reduced to the size of lowercase letters.
-    smallCaps,
+    small_caps,
     ///     /// Enables display of small capitals for both upper and lowercase letters (OpenType features: c2sc, smcp).
-    allSmallCaps,
+    all_small_caps,
     ///     /// Enables display of petite capitals (OpenType feature: pcap).
-    petiteCaps,
+    petite_caps,
     ///     /// Enables display of petite capitals for both upper and lowercase letters (OpenType features: c2pc, pcap).
-    allPetiteCaps,
+    all_petite_caps,
     ///     /// Enables display of mixture of small capitals for uppercase letters with normal lowercase letters (OpenType feature: unic).
     unicase,
     ///     /// Enables display of titling capitals (OpenType feature: titl). Uppercase letter glyphs are often designed for use with lowercase letters. When used in all uppercase titling sequences they can appear too strong. Titling capitals are designed specifically for this situation.
-    titlingCaps,
+    titling_caps,
     raw_: []const u8,
     pub fn raw(r: []const u8) FontVariantCaps { return .{ .raw_ = r }; }
 
@@ -13725,7 +13725,7 @@ pub const FontVariantEastAsian = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// None of the features listed below are enabled.
     normal,
@@ -13742,9 +13742,9 @@ pub const FontVariantEastAsian = union(enum) {
     ///     /// Enables rendering of traditional forms (OpenType feature: trad). The simplified and traditional values allow control over the glyph forms for characters which have been simplified over time but for which the older, traditional form is still used in some contexts. The exact set of characters and glyph forms will vary to some degree by the context for which a given font was designed.
     traditional,
     ///     /// Enables rendering of full-width variants (OpenType feature: fwid).
-    fullWidth,
+    full_width,
     ///     /// Enables rendering of proportionally-spaced variants (OpenType feature: pwid).
-    proportionalWidth,
+    proportional_width,
     ///     /// Enables display of ruby variant glyphs (OpenType feature: ruby). Since ruby text is generally smaller than the associated body text, font designers can design special glyphs for use with ruby that are more readable than scaled down versions of the default glyphs. Only glyph selection is affected, there is no associated font scaling or other change that affects line layout. The red ruby text below is shown with default glyphs (top) and with ruby variant glyphs (bottom). Note the slight difference in stroke thickness.
     ruby,
     raw_: []const u8,
@@ -13760,7 +13760,7 @@ pub const FontVariantEmoji = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// User agents can choose to draw a Emoji Presentation Participating Code Point in either emoji style or text style. User agents typically follow platform conventions when performing this decision.
     normal,
@@ -13783,26 +13783,26 @@ pub const FontVariantLigatures = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// A value of normal specifies that common default features are enabled, as described in detail in the next section. For OpenType fonts, common ligatures and contextual forms are on by default, discretionary and historical ligatures are not.
     normal,
     ///     /// Enables display of common ligatures (OpenType features: liga, clig). For OpenType fonts, common ligatures are enabled by default.
-    commonLigatures,
+    common_ligatures,
     ///     /// Disables display of common ligatures (OpenType features: liga, clig).
-    noCommonLigatures,
+    no_common_ligatures,
     ///     /// Enables display of discretionary ligatures (OpenType feature: dlig). Which ligatures are discretionary or optional is decided by the type designer, so authors will need to refer to the documentation of a given font to understand which ligatures are considered discretionary.
-    discretionaryLigatures,
+    discretionary_ligatures,
     ///     /// Disables display of discretionary ligatures (OpenType feature: dlig).
-    noDiscretionaryLigatures,
+    no_discretionary_ligatures,
     ///     /// Enables display of historical ligatures (OpenType feature: hlig).
-    historicalLigatures,
+    historical_ligatures,
     ///     /// Disables display of historical ligatures (OpenType feature: hlig).
-    noHistoricalLigatures,
+    no_historical_ligatures,
     ///     /// Enables display of contextual alternates (OpenType feature: calt). Although not strictly a ligature feature, like ligatures this feature is commonly used to harmonize the shapes of glyphs with the surrounding context. For OpenType fonts, this feature is on by default.
     contextual,
     ///     /// Disables display of contextual alternates (OpenType feature: calt).
-    noContextual,
+    no_contextual,
     raw_: []const u8,
     pub fn raw(r: []const u8) FontVariantLigatures { return .{ .raw_ = r }; }
 
@@ -13816,26 +13816,26 @@ pub const FontVariantNumeric = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// None of the features listed below are enabled.
     normal,
     ///     /// Enables display of lining numerals (OpenType feature: lnum).
-    liningNums,
+    lining_nums,
     ///     /// Enables display of old-style numerals (OpenType feature: onum).
-    oldstyleNums,
+    oldstyle_nums,
     ///     /// Enables display of proportional numerals (OpenType feature: pnum).
-    proportionalNums,
+    proportional_nums,
     ///     /// Enables display of tabular numerals (OpenType feature: tnum).
-    tabularNums,
+    tabular_nums,
     ///     /// Enables display of lining diagonal fractions (OpenType feature: frac).
-    diagonalFractions,
+    diagonal_fractions,
     ///     /// Enables display of lining stacked fractions (OpenType feature: afrc).
-    stackedFractions,
+    stacked_fractions,
     ///     /// Enables display of letter forms used with ordinal numbers (OpenType feature: ordn).
     ordinal,
     ///     /// Enables display of slashed zeros (OpenType feature: zero).
-    slashedZero,
+    slashed_zero,
     raw_: []const u8,
     pub fn raw(r: []const u8) FontVariantNumeric { return .{ .raw_ = r }; }
 
@@ -13849,7 +13849,7 @@ pub const FontVariantPosition = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// None of the features listed below are enabled.
     normal,
@@ -13870,7 +13870,7 @@ pub const FontVariationSettings = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     normal,
     raw_: []const u8,
@@ -13886,7 +13886,7 @@ pub const FontWeight = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Same as 400.
     normal,
@@ -13909,17 +13909,17 @@ pub const FontWidth = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     normal,
-    ultraCondensed,
-    extraCondensed,
+    ultra_condensed,
+    extra_condensed,
     condensed,
-    semiCondensed,
-    semiExpanded,
+    semi_condensed,
+    semi_expanded,
     expanded,
-    extraExpanded,
-    ultraExpanded,
+    extra_expanded,
+    ultra_expanded,
     percent_: f32,
     raw_: []const u8,
     pub fn percent(v: f32) FontWidth { return .{ .percent_ = v }; }
@@ -13935,7 +13935,7 @@ pub const FootnoteDisplay = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The footnote element is placed in the footnote area as a block element
     block,
@@ -13956,7 +13956,7 @@ pub const FootnotePolicy = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The user agent chooses how to render footnotes, and may place the footnote body on a later page than the footnote reference. A footnote body must never be placed on a page before the footnote reference.
     auto,
@@ -13977,12 +13977,12 @@ pub const ForcedColorAdjust = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The element’s colors are automatically adjusted by the UA in forced colors mode.
     auto,
     ///     /// In forced colors mode, if the color property inherits from its parent (i.e. there is no cascaded value or the cascaded value is currentColor, inherit, or another keyword that inherits from the parent), then it computes to the used color of its parent’s color value. In all other respects, behaves the same as none.
-    preserveParentColor,
+    preserve_parent_color,
     raw_: []const u8,
     pub fn raw(r: []const u8) ForcedColorAdjust { return .{ .raw_ = r }; }
 
@@ -13996,7 +13996,7 @@ pub const Gap = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) Gap { return .{ .raw_ = r }; }
@@ -14011,7 +14011,7 @@ pub const GlyphOrientationVertical = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     @"0",
@@ -14028,9 +14028,9 @@ pub const Grid = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    autoFlow,
+    auto_flow,
     dense,
     raw_: []const u8,
     pub fn raw(r: []const u8) Grid { return .{ .raw_ = r }; }
@@ -14045,7 +14045,7 @@ pub const GridArea = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     span,
@@ -14062,10 +14062,10 @@ pub const GridAutoColumns = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    minContent,
-    maxContent,
+    min_content,
+    max_content,
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -14086,7 +14086,7 @@ pub const GridAutoFlow = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The auto-placement algorithm places items by filling each row in turn, adding new rows as necessary. If neither row nor column is provided, row is assumed.
     row,
@@ -14107,10 +14107,10 @@ pub const GridAutoRows = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    minContent,
-    maxContent,
+    min_content,
+    max_content,
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -14131,7 +14131,7 @@ pub const GridColumn = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     span,
@@ -14148,7 +14148,7 @@ pub const GridColumnEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     span,
@@ -14165,7 +14165,7 @@ pub const GridColumnGap = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     normal,
     hairline,
@@ -14191,7 +14191,7 @@ pub const GridColumnStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     span,
@@ -14208,7 +14208,7 @@ pub const GridGap = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) GridGap { return .{ .raw_ = r }; }
@@ -14223,7 +14223,7 @@ pub const GridRow = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     span,
@@ -14240,7 +14240,7 @@ pub const GridRowEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     span,
@@ -14257,7 +14257,7 @@ pub const GridRowGap = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     normal,
     hairline,
@@ -14283,7 +14283,7 @@ pub const GridRowStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     span,
@@ -14300,10 +14300,10 @@ pub const GridTemplate = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    minContent,
-    maxContent,
+    min_content,
+    max_content,
     auto,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -14324,7 +14324,7 @@ pub const GridTemplateAreas = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) GridTemplateAreas { return .{ .raw_ = r }; }
@@ -14339,16 +14339,16 @@ pub const GridTemplateColumns = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Represents the largest min-content contribution of the grid items occupying the grid track.
-    minContent,
+    min_content,
     ///     /// Represents the largest max-content contribution of the grid items occupying the grid track.
-    maxContent,
+    max_content,
     ///     /// As a maximum: represents the largest max-content contribution of the grid items occupying the grid track; however, unlike max-content, allows expansion of the track by the align-content and justify-content properties. As a minimum: represents the largest minimum size (specified by min-width/min-height) of the grid items occupying the grid track. (This initially is often, but not always, equal to a min-content minimum—​see § 6.6 Automatic Minimum Size of Grid Items.) When appearing outside a minmax() notation: equivalent to minmax(auto, auto), representing the range between the minimum and maximum described above. (This behaves similar to minmax(min-content, max-content) in the most basic cases, but with extra abilities.)
     auto,
-    autoFill,
-    autoFit,
+    auto_fill,
+    auto_fit,
     subgrid,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -14369,16 +14369,16 @@ pub const GridTemplateRows = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Represents the largest min-content contribution of the grid items occupying the grid track.
-    minContent,
+    min_content,
     ///     /// Represents the largest max-content contribution of the grid items occupying the grid track.
-    maxContent,
+    max_content,
     ///     /// As a maximum: represents the largest max-content contribution of the grid items occupying the grid track; however, unlike max-content, allows expansion of the track by the align-content and justify-content properties. As a minimum: represents the largest minimum size (specified by min-width/min-height) of the grid items occupying the grid track. (This initially is often, but not always, equal to a min-content minimum—​see § 6.6 Automatic Minimum Size of Grid Items.) When appearing outside a minmax() notation: equivalent to minmax(auto, auto), representing the range between the minimum and maximum described above. (This behaves similar to minmax(min-content, max-content) in the most basic cases, but with extra abilities.)
     auto,
-    autoFill,
-    autoFit,
+    auto_fill,
+    auto_fit,
     subgrid,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -14399,14 +14399,14 @@ pub const HangingPunctuation = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// An opening bracket, quote, or ideographic space at the start of the first formatted line of an element hangs. This applies to all characters in the Unicode categories Ps, Pf, Pi plus the ASCII quote marks U+0027 ' APOSTROPHE and U+0022 " QUOTATION MARK and the IDEOGRAPHIC SPACE U+3000.
     first,
     ///     /// A stop or comma at the end of a line hangs.
-    forceEnd,
+    force_end,
     ///     /// A stop or comma at the end of a line conditionally hangs.
-    allowEnd,
+    allow_end,
     ///     /// A closing bracket or quote at the end of the last formatted line of an element hangs. This applies to all characters in the Unicode categories Pe, Pf, Pi plus the ASCII quote marks U+0027 ' APOSTROPHE and U+0022 " QUOTATION MARK.
     last,
     raw_: []const u8,
@@ -14422,18 +14422,18 @@ pub const Height = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// For width/height, specifies an automatic size (automatic block size/automatic inline size). See the relevant layout module for how to calculate this. For min-width/min-height, specifies an automatic minimum size. Unless otherwise defined by the relevant layout module, however, it resolves to a used value of 0. For backwards-compatibility, the resolved value of this keyword is zero for boxes of all [CSS2] display types: block and inline boxes, inline blocks, and all the table layout boxes. It also resolves to zero when no box is generated.
     auto,
     ///     /// Use the min-content size in the relevant axis; for a box’s block size, unless otherwise specified, this is equivalent to its automatic size.
-    minContent,
+    min_content,
     ///     /// Use the max-content size in the relevant axis; for a box’s block size, unless otherwise specified, this is equivalent to its automatic size.
-    maxContent,
+    max_content,
     ///     /// Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.
     stretch,
     ///     /// Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).
-    fitContent,
+    fit_content,
     ///     /// If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.
     contain,
     px_: f32, em_: f32, rem_: f32,
@@ -14455,7 +14455,7 @@ pub const HyphenateCharacter = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Specifies that the user agent should find an appropriate string based on the content language’s typographic conventions, possibly from the same source as the hyphenation dictionary.
     auto,
@@ -14472,7 +14472,7 @@ pub const HyphenateLimitChars = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// If three values are specified, the first value is the required minimum for the total characters in a word, the second value is the minimum for characters before the hyphenation point, and the third value is the minimum for characters after the hyphenation point. If the third value is missing, it is the same as the second. If the second value is missing, then it is auto. The auto value means that the UA chooses a value that adapts to the current layout.
     auto,
@@ -14489,7 +14489,7 @@ pub const HyphenateLimitLast = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     always,
     column,
@@ -14508,9 +14508,9 @@ pub const HyphenateLimitLines = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    noLimit,
+    no_limit,
     raw_: []const u8,
     pub fn raw(r: []const u8) HyphenateLimitLines { return .{ .raw_ = r }; }
 
@@ -14524,7 +14524,7 @@ pub const HyphenateLimitZone = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -14545,7 +14545,7 @@ pub const Hyphens = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Words are only hyphenated where there are characters inside the word that explicitly suggest hyphenation opportunities. The UA must use the appropriate language-specific hyphenation character(s) and should apply any appropriate spelling changes just as for automatic hyphenation at the same point. In Unicode, U+00AD is a conditional "soft hyphen" and U+2010 is an unconditional hyphen. Unicode Standard Annex #14 describes the role of soft hyphens in Unicode line breaking. [UAX14] In HTML, &shy; represents the soft hyphen character, which suggests a hyphenation opportunity. ex&shy;ample
     manual,
@@ -14564,7 +14564,7 @@ pub const ImageAnimation = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The animation of animated images is run normally, as determined by the image format and the host language. Further, all animated images with the same absolute URL, the same image data, and with an image-animation computed value of normal' must be rendered synchronized to the same timeline as a group, with the timeline starting at the time of the least recent addition to the group.
     normal,
@@ -14587,10 +14587,10 @@ pub const ImageOrientation = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// If the image has an orientation specified in its metadata, such as EXIF, this value computes to the angle that the metadata specifies is necessary to correctly orient the image. If necessary, this angle is then rounded and normalized as described above for an <angle> value. If there is no orientation specified in its metadata, this value computes to none.
-    fromImage,
+    from_image,
     flip,
     raw_: []const u8,
     pub fn raw(r: []const u8) ImageOrientation { return .{ .raw_ = r }; }
@@ -14605,18 +14605,18 @@ pub const ImageRendering = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The scaling algorithm is UA-dependent.
     auto,
     ///     /// The image should be scaled with an algorithm that maximizes the appearance of the image. In particular, scaling algorithms that "smooth" colors are acceptable, such as bilinear interpolation. This is intended for images such as photos.
     smooth,
     ///     /// Identical to smooth, but with a preference for higher-quality scaling. If system resources are constrained, images with high-quality should be prioritized over those with any other value, when considering which images to degrade the quality of and to what degree.
-    highQuality,
+    high_quality,
     ///     /// The image is scaled in a way that preserves the pixelation of the original as much as possible, but allows minor smoothing as necessary to avoid distorting the image when the target size is not a clean multiple of the original. For each axis independently, first determine the integer multiple of its natural size that puts it closest to the target size and is greater than zero. Scale it to this integer-multiple-size using nearest neighbor, then scale it the rest of the way to the target size as for smooth.
     pixelated,
     ///     /// The image is scaled in a way that preserves contrast and edges, and which avoids smoothing colors or introducing blur to the image in the process. This is intended for images such as line drawings. The image may be scaled using nearest neighbor or any other UA-chosen algorithm that does not blur edges or blend colors from the source image. It can, however, detect diagonal or curved lines and render them as such (rather than as jagged-looking “giant pixels”).
-    crispEdges,
+    crisp_edges,
     raw_: []const u8,
     pub fn raw(r: []const u8) ImageRendering { return .{ .raw_ = r }; }
 
@@ -14630,10 +14630,10 @@ pub const ImageResolution = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The image’s preferred resolution is taken as that specified by the image format (the natural resolution). If the image does not specify its own resolution, the explicitly specified resolution is used (if given), else it defaults to 1dppx.
-    fromImage,
+    from_image,
     ///     /// If the "snap" keyword is provided, the computed <resolution> (if any) is the specified resolution rounded to the nearest value that would map one image pixel to an integer number of device pixels. If the resolution is taken from the image, then the used natural resolution is the image’s native resolution similarly adjusted.
     snap,
     raw_: []const u8,
@@ -14649,7 +14649,7 @@ pub const InitialLetter = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// No special initial letter effect. Text behaves as normal.
     normal,
@@ -14670,10 +14670,10 @@ pub const InitialLetterAlign = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Use the initial letter box’s line-under and line-over border edges as the over and under alignment points, respectively.
-    borderBox,
+    border_box,
     ///     /// Use the cap-height and alphabetic baselines of the surrounding text to align the initial letter.
     alphabetic,
     ///     /// Use the ideographic-ink-over and ideographic-ink-under baselines of the surrounding text to align the initial letter.
@@ -14695,7 +14695,7 @@ pub const InitialLetterWrap = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Behaves as none if the first typographic character unit after the initial letter belongs to Unicode General Category Zs. Otherwise behaves as for all on the first line of the block containing the initial letter and as none on the rest. This example shows why contour-fitting the first line is necessary, and why it is dropped when the initial letter is followed by a space: In the top paragraph, the initial letter "A" has a word space after it: the gap between the top of the "A" and the next letter provides the necessary word separation. In the next paragraph, the initial letter "A" is part of the first word, and leaving a gap between the top of the "A" and the next letter would create a jarring visual break within the word. In this case, the first line of text should be kerned into the initial letter’s area, as shown in the bottom paragraph. Do we need an unconditional first? (I.e. Should we rename this value to auto and add a first value that does not check for spaces?) See GitHub issue 410
     first,
@@ -14722,7 +14722,7 @@ pub const InlineSize = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) InlineSize { return .{ .raw_ = r }; }
@@ -14737,7 +14737,7 @@ pub const InlineSizing = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The content area of the inline box is sized and positioned to fit (possibly hypothetical) text from its first available font. If text-box-trim indicates trimming, then the specified metric must be used. Otherwise, this specification does not specify how. A UA may, e.g., use the maximum ascender and descender of the font. (This would ensure that glyphs with parts above or below the em-box still fall within the content area, but leads to differently sized boxes for different fonts.)
     normal,
@@ -14756,7 +14756,7 @@ pub const InputSecurity = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The UA should obscure the text in the control, so that it cannot be read by the user.
     auto,
@@ -14773,7 +14773,7 @@ pub const Inset = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) Inset { return .{ .raw_ = r }; }
@@ -14788,7 +14788,7 @@ pub const InsetBlock = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) InsetBlock { return .{ .raw_ = r }; }
@@ -14803,7 +14803,7 @@ pub const InsetBlockEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Represents an unconstrained inset; the exact meaning depends on the positioning scheme.
     auto,
@@ -14826,7 +14826,7 @@ pub const InsetBlockStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Represents an unconstrained inset; the exact meaning depends on the positioning scheme.
     auto,
@@ -14849,7 +14849,7 @@ pub const InsetInline = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) InsetInline { return .{ .raw_ = r }; }
@@ -14864,7 +14864,7 @@ pub const InsetInlineEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Represents an unconstrained inset; the exact meaning depends on the positioning scheme.
     auto,
@@ -14887,7 +14887,7 @@ pub const InsetInlineStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Represents an unconstrained inset; the exact meaning depends on the positioning scheme.
     auto,
@@ -14910,7 +14910,7 @@ pub const Interactivity = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The element’s inertness is determined by the host language. (This will usually mean the element is not inert.)
     auto,
@@ -14929,7 +14929,7 @@ pub const InterestDelay = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) InterestDelay { return .{ .raw_ = r }; }
@@ -14944,7 +14944,7 @@ pub const InterestDelayEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The interest start delay and/or the interest end delay are UA-defined. They can be chosen to match platform conventions. These delays should not be zero. They may be different from each other, and may vary depending on the way the user is showing interest. (For example, a "hover" and a "long press" might use different delays for indicating interest.)
     normal,
@@ -14961,7 +14961,7 @@ pub const InterestDelayStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The interest start delay and/or the interest end delay are UA-defined. They can be chosen to match platform conventions. These delays should not be zero. They may be different from each other, and may vary depending on the way the user is showing interest. (For example, a "hover" and a "long press" might use different delays for indicating interest.)
     normal,
@@ -14978,12 +14978,12 @@ pub const InterpolateSize = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// An <intrinsic-size-keyword> cannot be interpolated.
-    numericOnly,
+    numeric_only,
     ///     /// Two values can also be interpolated if one of them is an <intrinsic-size-keyword> and the other is a <length-percentage>. This is done by treating the <intrinsic-size-keyword> keyword as though it is calc-size(keyword, size) and applying the rules in § 11.3 Interpolating calc-size(). In other cases, an <intrinsic-size-keyword> still cannot be interpolated.
-    allowKeywords,
+    allow_keywords,
     raw_: []const u8,
     pub fn raw(r: []const u8) InterpolateSize { return .{ .raw_ = r }; }
 
@@ -14997,7 +14997,7 @@ pub const Isolation = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     isolate,
@@ -15014,21 +15014,21 @@ pub const JustifyContent = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Aligns the contents of the box as a whole (as the alignment subject) within the box itself (as the alignment container): along the inline/row/main axis of the box (for justify-content) or the block/column/cross axis of the box (for align-content). Values other than normal are defined in § 4 Alignment Keywords, above.
     normal,
-    spaceBetween,
-    spaceAround,
-    spaceEvenly,
+    space_between,
+    space_around,
+    space_evenly,
     stretch,
     unsafe,
     safe,
     center,
     start,
     end,
-    flexStart,
-    flexEnd,
+    flex_start,
+    flex_end,
     ///     /// Aligns the alignment subject to be flush with the alignment container’s line-left or physical left edge, whichever is in the appropriate axis. If the property’s axis is not parallel with either left↔right axis, this value behaves as start. Currently, the only case where the property’s axis is not parallel with either left↔right axis is in a column flexbox.
     left,
     ///     /// Aligns the alignment subject to be flush with the alignment container’s line-right or physical right edge, whichever is in the appropriate axis. If the property’s axis is not parallel with either left↔right axis, this value behaves as start. Currently, the only case where the property’s axis is not parallel with either left↔right axis is in a column flexbox.
@@ -15046,7 +15046,7 @@ pub const JustifyItems = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     normal,
     stretch,
@@ -15058,10 +15058,10 @@ pub const JustifyItems = union(enum) {
     center,
     start,
     end,
-    selfStart,
-    selfEnd,
-    flexStart,
-    flexEnd,
+    self_start,
+    self_end,
+    flex_start,
+    flex_end,
     ///     /// Aligns the alignment subject to be flush with the alignment container’s line-left or physical left edge, whichever is in the appropriate axis. If the property’s axis is not parallel with either left↔right axis, this value behaves as start. Currently, the only case where the property’s axis is not parallel with either left↔right axis is in a column flexbox.
     left,
     ///     /// Aligns the alignment subject to be flush with the alignment container’s line-right or physical right edge, whichever is in the appropriate axis. If the property’s axis is not parallel with either left↔right axis, this value behaves as start. Currently, the only case where the property’s axis is not parallel with either left↔right axis is in a column flexbox.
@@ -15069,7 +15069,7 @@ pub const JustifyItems = union(enum) {
     ///     /// This keyword causes the value to effectively inherit into descendants. If the legacy keyword appears on its own (without an accompanying left, right, or center keyword): if the inherited value of justify-items includes the legacy keyword, this value computes to the inherited value; otherwise it computes to normal. When justify-self:auto references the value of justify-items, only the alignment keyword, not the legacy keyword, is referenced by it. It exists to implement the legacy alignment behavior of HTML’s <center> element and align attribute.
     legacy,
     ///     /// The new anchor-center value makes this case extremely simple: if the positioned box has a default anchor box, then it is centered (insofar as possible) over the default anchor box in the relevant axis. Additionally:
-    anchorCenter,
+    anchor_center,
     raw_: []const u8,
     pub fn raw(r: []const u8) JustifyItems { return .{ .raw_ = r }; }
 
@@ -15083,7 +15083,7 @@ pub const JustifySelf = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Behaves as normal if the box has no parent, or when determining the actual position of an absolutely positioned box. It behaves as the computed justify-items value of the parent box (minus any legacy keywords) otherwise (including when determining the static position of an absolutely positioned box).
     auto,
@@ -15094,10 +15094,10 @@ pub const JustifySelf = union(enum) {
     center,
     start,
     end,
-    selfStart,
-    selfEnd,
-    flexStart,
-    flexEnd,
+    self_start,
+    self_end,
+    flex_start,
+    flex_end,
     ///     /// Aligns the alignment subject to be flush with the alignment container’s line-left or physical left edge, whichever is in the appropriate axis. If the property’s axis is not parallel with either left↔right axis, this value behaves as start. Currently, the only case where the property’s axis is not parallel with either left↔right axis is in a column flexbox.
     left,
     ///     /// Aligns the alignment subject to be flush with the alignment container’s line-right or physical right edge, whichever is in the appropriate axis. If the property’s axis is not parallel with either left↔right axis, this value behaves as start. Currently, the only case where the property’s axis is not parallel with either left↔right axis is in a column flexbox.
@@ -15108,7 +15108,7 @@ pub const JustifySelf = union(enum) {
     last,
     baseline,
     ///     /// The new anchor-center value makes this case extremely simple: if the positioned box has a default anchor box, then it is centered (insofar as possible) over the default anchor box in the relevant axis. Additionally:
-    anchorCenter,
+    anchor_center,
     raw_: []const u8,
     pub fn raw(r: []const u8) JustifySelf { return .{ .raw_ = r }; }
 
@@ -15122,7 +15122,7 @@ pub const Left = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Represents an unconstrained inset; the exact meaning depends on the positioning scheme.
     auto,
@@ -15145,7 +15145,7 @@ pub const LetterSpacing = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// No additional spacing is applied. Computes to zero.
     normal,
@@ -15168,7 +15168,7 @@ pub const LightingColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     aliceblue,
     antiquewhite,
@@ -15378,7 +15378,7 @@ pub const LineBreak = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The UA determines the set of line-breaking restrictions to use, and it may vary the restrictions based on the length of the line; e.g., use a less restrictive set of line-break rules for short lines.
     auto,
@@ -15403,10 +15403,10 @@ pub const LineClamp = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Sets continue to -webkit-legacy.
-    webkitLegacy,
+    webkit_legacy,
     raw_: []const u8,
     pub fn raw(r: []const u8) LineClamp { return .{ .raw_ = r }; }
 
@@ -15420,7 +15420,7 @@ pub const LineFitEdge = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Use the ascent/descent plus any positive half-leading. Margin/padding/border is ignored for the purpose of sizing the line box.
     leading,
@@ -15429,7 +15429,7 @@ pub const LineFitEdge = union(enum) {
     ///     /// Use the ideographic-over baseline/ideographic-under baseline as the over/under edge.
     ideographic,
     ///     /// Use the ideographic-ink-over baseline/ideographic-ink-under baseline as the over/under edge.
-    ideographicInk,
+    ideographic_ink,
     ///     /// Use the cap-height baseline as the over edge.
     cap,
     ///     /// Use the x-height baseline as the over edge.
@@ -15449,10 +15449,10 @@ pub const LineGrid = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Box assumes the line grid of its parent if its writing mode is the same as its parent. If the box has a writing mode that is different than its parent, then the box creates a new line grid as create below.
-    matchParent,
+    match_parent,
     ///     /// Box creates a new line grid using its own font and line layout settings, including any adjustment to the line height caused by the line-height-step property. The line grid consists of a series of horizontal lines corresponding to all the baselines (alphabetic, text-top, text-bottom, mathematic, central, hanging, etc.) and to the line-over and line-under edges, positioned where they would fall if the contents of this element consisted entirely of line boxes filled with text (no sub-elements) using the first available font. If the box is paginated, the line grid is restarted on each page; since line boxes cannot be fragmented, no page begins with the bottom part of a line’s grid.
     create,
     raw_: []const u8,
@@ -15468,7 +15468,7 @@ pub const LineHeight = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Determine the preferred line height automatically based on font metrics.
     normal,
@@ -15491,7 +15491,7 @@ pub const LineHeightStep = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
@@ -15510,7 +15510,7 @@ pub const LinePadding = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
@@ -15529,7 +15529,7 @@ pub const LineSnap = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The dominant baseline snaps with the matching baseline on the line grid applying to the element.
     baseline,
@@ -15548,7 +15548,7 @@ pub const LinkParameters = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) LinkParameters { return .{ .raw_ = r }; }
@@ -15563,7 +15563,7 @@ pub const ListStyle = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) ListStyle { return .{ .raw_ = r }; }
@@ -15578,7 +15578,7 @@ pub const ListStyleImage = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) ListStyleImage { return .{ .raw_ = r }; }
@@ -15593,7 +15593,7 @@ pub const ListStylePosition = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// No special effect. (The ::marker is an inline element at the start of the list item’s contents.)
     inside,
@@ -15612,7 +15612,7 @@ pub const ListStyleType = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) ListStyleType { return .{ .raw_ = r }; }
@@ -15627,7 +15627,7 @@ pub const Margin = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) Margin { return .{ .raw_ = r }; }
@@ -15642,7 +15642,7 @@ pub const MarginBlock = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) MarginBlock { return .{ .raw_ = r }; }
@@ -15657,7 +15657,7 @@ pub const MarginBlockEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) MarginBlockEnd { return .{ .raw_ = r }; }
@@ -15672,7 +15672,7 @@ pub const MarginBlockStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) MarginBlockStart { return .{ .raw_ = r }; }
@@ -15687,7 +15687,7 @@ pub const MarginBottom = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     px_: f32, em_: f32, rem_: f32,
@@ -15709,7 +15709,7 @@ pub const MarginBreak = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// When an unforced break occurs before or after the box, any margins adjoining the break truncate to the remaining fragmentainer extent before the break, and are truncated to zero after the break. When a forced break occurs there, adjoining margins before the break are truncated, but margins after the break are preserved. Cloned margins are always truncated to zero.
     auto,
@@ -15730,7 +15730,7 @@ pub const MarginInline = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) MarginInline { return .{ .raw_ = r }; }
@@ -15745,7 +15745,7 @@ pub const MarginInlineEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) MarginInlineEnd { return .{ .raw_ = r }; }
@@ -15760,7 +15760,7 @@ pub const MarginInlineStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) MarginInlineStart { return .{ .raw_ = r }; }
@@ -15775,7 +15775,7 @@ pub const MarginLeft = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     px_: f32, em_: f32, rem_: f32,
@@ -15797,7 +15797,7 @@ pub const MarginRight = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     px_: f32, em_: f32, rem_: f32,
@@ -15819,7 +15819,7 @@ pub const MarginTop = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     px_: f32, em_: f32, rem_: f32,
@@ -15841,20 +15841,20 @@ pub const MarginTrim = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Computes to block-start block-end.
     block,
     ///     /// Computes to inline-start inline-end.
     inline_,
     ///     /// For in-flow boxes contained by this box, margins adjacent to the box’s specified edges are truncated to zero. It also truncates any descendant margins collapsed with such a margin (but not its own, its siblings’, or its ancestors’).
-    blockStart,
+    block_start,
     ///     /// Computes to block-start block-end.
-    inlineStart,
+    inline_start,
     ///     /// For in-flow boxes contained by this box, margins adjacent to the box’s specified edges are truncated to zero. It also truncates any descendant margins collapsed with such a margin (but not its own, its siblings’, or its ancestors’).
-    blockEnd,
+    block_end,
     ///     /// Computes to block-start block-end.
-    inlineEnd,
+    inline_end,
     raw_: []const u8,
     pub fn raw(r: []const u8) MarginTrim { return .{ .raw_ = r }; }
 
@@ -15868,7 +15868,7 @@ pub const Marker = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) Marker { return .{ .raw_ = r }; }
@@ -15883,7 +15883,7 @@ pub const MarkerEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) MarkerEnd { return .{ .raw_ = r }; }
@@ -15898,7 +15898,7 @@ pub const MarkerMid = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) MarkerMid { return .{ .raw_ = r }; }
@@ -15913,12 +15913,12 @@ pub const MarkerSide = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The marker box is positioned using the directionality of the ::marker’s originating element.
-    matchSelf,
+    match_self,
     ///     /// The marker box is positioned using the directionality of the ::marker’s originating element’s parent element.
-    matchParent,
+    match_parent,
     raw_: []const u8,
     pub fn raw(r: []const u8) MarkerSide { return .{ .raw_ = r }; }
 
@@ -15932,7 +15932,7 @@ pub const MarkerStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) MarkerStart { return .{ .raw_ = r }; }
@@ -15947,50 +15947,50 @@ pub const Mask = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     left,
     center,
     right,
     top,
     bottom,
-    xStart,
-    xEnd,
-    yStart,
-    yEnd,
-    blockStart,
-    blockEnd,
-    inlineStart,
-    inlineEnd,
+    x_start,
+    x_end,
+    y_start,
+    y_end,
+    block_start,
+    block_end,
+    inline_start,
+    inline_end,
     start,
     end,
     auto,
     cover,
     contain,
-    repeatX,
-    repeatY,
-    repeatBlock,
-    repeatInline,
+    repeat_x,
+    repeat_y,
+    repeat_block,
+    repeat_inline,
     repeat,
     space,
     round,
-    noRepeat,
-    contentBox,
-    paddingBox,
-    borderBox,
-    marginBox,
-    halfBorderBox,
-    fillBox,
-    strokeBox,
-    viewBox,
-    noClip,
+    no_repeat,
+    content_box,
+    padding_box,
+    border_box,
+    margin_box,
+    half_border_box,
+    fill_box,
+    stroke_box,
+    view_box,
+    no_clip,
     add,
     subtract,
     intersect,
     exclude,
     alpha,
     luminance,
-    matchSource,
+    match_source,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
     raw_: []const u8,
@@ -16010,7 +16010,7 @@ pub const MaskBorder = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) MaskBorder { return .{ .raw_ = r }; }
@@ -16025,7 +16025,7 @@ pub const MaskBorderMode = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// A value of luminance indicates that the luminance values of the mask border image should be used as the mask values. See Calculating mask values.
     luminance,
@@ -16044,7 +16044,7 @@ pub const MaskBorderOutset = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
@@ -16063,7 +16063,7 @@ pub const MaskBorderRepeat = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     stretch,
     repeat,
@@ -16082,7 +16082,7 @@ pub const MaskBorderSlice = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// This property specifies inward offsets from the top, right, bottom, and left edges of the mask border image, dividing it into nine regions: four corners, four edges and a middle. The middle image part is discarded and treated as fully opaque white (the content covered by the middle part is not masked and shines through) unless the fill keyword is present.
     fill,
@@ -16101,7 +16101,7 @@ pub const MaskBorderSource = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) MaskBorderSource { return .{ .raw_ = r }; }
@@ -16116,7 +16116,7 @@ pub const MaskBorderWidth = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     px_: f32, em_: f32, rem_: f32,
@@ -16138,22 +16138,22 @@ pub const MaskClip = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The painted content is restricted to (clipped to) the content box.
-    contentBox,
+    content_box,
     ///     /// The painted content is restricted to (clipped to) the padding box.
-    paddingBox,
+    padding_box,
     ///     /// The painted content is restricted to (clipped to) the border box.
-    borderBox,
+    border_box,
     ///     /// The painted content is restricted to (clipped to) the object bounding box.
-    fillBox,
+    fill_box,
     ///     /// The painted content is restricted to (clipped to) the stroke bounding box.
-    strokeBox,
+    stroke_box,
     ///     /// Uses the nearest SVG viewport as reference box. If a viewBox attribute is specified for the SVG viewport creating element: The reference box is positioned at the origin of the coordinate system established by the viewBox attribute. The dimension of the reference box is set to the width and height values of the viewBox attribute.
-    viewBox,
+    view_box,
     ///     /// The painted content is not restricted (not clipped).
-    noClip,
+    no_clip,
     raw_: []const u8,
     pub fn raw(r: []const u8) MaskClip { return .{ .raw_ = r }; }
 
@@ -16167,7 +16167,7 @@ pub const MaskComposite = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The source is placed over the destination. (See Porter-Duff compositing operator source over for more details.)
     add,
@@ -16190,7 +16190,7 @@ pub const MaskImage = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) MaskImage { return .{ .raw_ = r }; }
@@ -16205,14 +16205,14 @@ pub const MaskMode = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// A value of alpha indicates that the alpha values of the mask layer image should be used as the mask values. See Calculating mask values.
     alpha,
     ///     /// A value of luminance indicates that the luminance values of the mask layer image should be used as the mask values. See Calculating mask values.
     luminance,
     ///     /// If the <mask-reference> of the mask-image property is of type <mask-source> the value specified by the referenced mask element’s mask-type property must be used. If the <mask-reference> of the mask-image property is of type <image> the alpha values of the mask layer image should be used as the mask values.
-    matchSource,
+    match_source,
     raw_: []const u8,
     pub fn raw(r: []const u8) MaskMode { return .{ .raw_ = r }; }
 
@@ -16226,20 +16226,20 @@ pub const MaskOrigin = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The position is relative to the content box.
-    contentBox,
+    content_box,
     ///     /// The position is relative to the padding box. (For single boxes 0 0 is the upper left corner of the padding edge, 100% 100% is the lower right corner.)
-    paddingBox,
+    padding_box,
     ///     /// The position is relative to the border box.
-    borderBox,
+    border_box,
     ///     /// The position is relative to the object bounding box.
-    fillBox,
+    fill_box,
     ///     /// The position is relative to the stroke bounding box.
-    strokeBox,
+    stroke_box,
     ///     /// Uses the nearest SVG viewport as reference box. If a viewBox attribute is specified for the SVG viewport creating element: The reference box is positioned at the origin of the coordinate system established by the viewBox attribute. The dimension of the reference box is set to the width and height values of the viewBox attribute.
-    viewBox,
+    view_box,
     raw_: []const u8,
     pub fn raw(r: []const u8) MaskOrigin { return .{ .raw_ = r }; }
 
@@ -16253,21 +16253,21 @@ pub const MaskPosition = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     left,
     center,
     right,
     top,
     bottom,
-    xStart,
-    xEnd,
-    yStart,
-    yEnd,
-    blockStart,
-    blockEnd,
-    inlineStart,
-    inlineEnd,
+    x_start,
+    x_end,
+    y_start,
+    y_end,
+    block_start,
+    block_end,
+    inline_start,
+    inline_end,
     start,
     end,
     px_: f32, em_: f32, rem_: f32,
@@ -16289,16 +16289,16 @@ pub const MaskRepeat = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    repeatX,
-    repeatY,
-    repeatBlock,
-    repeatInline,
+    repeat_x,
+    repeat_y,
+    repeat_block,
+    repeat_inline,
     repeat,
     space,
     round,
-    noRepeat,
+    no_repeat,
     raw_: []const u8,
     pub fn raw(r: []const u8) MaskRepeat { return .{ .raw_ = r }; }
 
@@ -16312,7 +16312,7 @@ pub const MaskSize = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     cover,
@@ -16336,7 +16336,7 @@ pub const MaskType = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Indicates that the luminance values of the mask should be used.
     luminance,
@@ -16355,9 +16355,9 @@ pub const MathDepth = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    autoAdd,
+    auto_add,
     raw_: []const u8,
     pub fn raw(r: []const u8) MathDepth { return .{ .raw_ = r }; }
 
@@ -16371,7 +16371,7 @@ pub const MathShift = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     normal,
     compact,
@@ -16388,7 +16388,7 @@ pub const MathStyle = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     normal,
     compact,
@@ -16405,7 +16405,7 @@ pub const MaxBlockSize = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) MaxBlockSize { return .{ .raw_ = r }; }
@@ -16420,16 +16420,16 @@ pub const MaxHeight = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Use the min-content size in the relevant axis; for a box’s block size, unless otherwise specified, this is equivalent to its automatic size.
-    minContent,
+    min_content,
     ///     /// Use the max-content size in the relevant axis; for a box’s block size, unless otherwise specified, this is equivalent to its automatic size.
-    maxContent,
+    max_content,
     ///     /// Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.
     stretch,
     ///     /// Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).
-    fitContent,
+    fit_content,
     ///     /// If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.
     contain,
     px_: f32, em_: f32, rem_: f32,
@@ -16451,7 +16451,7 @@ pub const MaxInlineSize = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) MaxInlineSize { return .{ .raw_ = r }; }
@@ -16466,7 +16466,7 @@ pub const MaxLines = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) MaxLines { return .{ .raw_ = r }; }
@@ -16481,16 +16481,16 @@ pub const MaxWidth = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Use the min-content size in the relevant axis; for a box’s block size, unless otherwise specified, this is equivalent to its automatic size.
-    minContent,
+    min_content,
     ///     /// Use the max-content size in the relevant axis; for a box’s block size, unless otherwise specified, this is equivalent to its automatic size.
-    maxContent,
+    max_content,
     ///     /// Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.
     stretch,
     ///     /// Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).
-    fitContent,
+    fit_content,
     ///     /// If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.
     contain,
     px_: f32, em_: f32, rem_: f32,
@@ -16512,7 +16512,7 @@ pub const MinBlockSize = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) MinBlockSize { return .{ .raw_ = r }; }
@@ -16527,18 +16527,18 @@ pub const MinHeight = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// For width/height, specifies an automatic size (automatic block size/automatic inline size). See the relevant layout module for how to calculate this. For min-width/min-height, specifies an automatic minimum size. Unless otherwise defined by the relevant layout module, however, it resolves to a used value of 0. For backwards-compatibility, the resolved value of this keyword is zero for boxes of all [CSS2] display types: block and inline boxes, inline blocks, and all the table layout boxes. It also resolves to zero when no box is generated.
     auto,
     ///     /// Use the min-content size in the relevant axis; for a box’s block size, unless otherwise specified, this is equivalent to its automatic size.
-    minContent,
+    min_content,
     ///     /// Use the max-content size in the relevant axis; for a box’s block size, unless otherwise specified, this is equivalent to its automatic size.
-    maxContent,
+    max_content,
     ///     /// Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.
     stretch,
     ///     /// Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).
-    fitContent,
+    fit_content,
     ///     /// If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.
     contain,
     px_: f32, em_: f32, rem_: f32,
@@ -16560,7 +16560,7 @@ pub const MinInlineSize = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) MinInlineSize { return .{ .raw_ = r }; }
@@ -16575,14 +16575,14 @@ pub const MinIntrinsicSizing = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The box’s min-content contribution is handled as normal.
     legacy,
     ///     /// The box’s min-content contribution is “compressed” if it is a scroll container.
-    zeroIfScroll,
+    zero_if_scroll,
     ///     /// The box’s min-content contribution is “compressed” if has an extrinsic preferred or maximum size.
-    zeroIfExtrinsic,
+    zero_if_extrinsic,
     raw_: []const u8,
     pub fn raw(r: []const u8) MinIntrinsicSizing { return .{ .raw_ = r }; }
 
@@ -16596,18 +16596,18 @@ pub const MinWidth = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// For width/height, specifies an automatic size (automatic block size/automatic inline size). See the relevant layout module for how to calculate this. For min-width/min-height, specifies an automatic minimum size. Unless otherwise defined by the relevant layout module, however, it resolves to a used value of 0. For backwards-compatibility, the resolved value of this keyword is zero for boxes of all [CSS2] display types: block and inline boxes, inline blocks, and all the table layout boxes. It also resolves to zero when no box is generated.
     auto,
     ///     /// Use the min-content size in the relevant axis; for a box’s block size, unless otherwise specified, this is equivalent to its automatic size.
-    minContent,
+    min_content,
     ///     /// Use the max-content size in the relevant axis; for a box’s block size, unless otherwise specified, this is equivalent to its automatic size.
-    maxContent,
+    max_content,
     ///     /// Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.
     stretch,
     ///     /// Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).
-    fitContent,
+    fit_content,
     ///     /// If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.
     contain,
     px_: f32, em_: f32, rem_: f32,
@@ -16629,25 +16629,25 @@ pub const MixBlendMode = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     normal,
     darken,
     multiply,
-    colorBurn,
+    color_burn,
     lighten,
     screen,
-    colorDodge,
+    color_dodge,
     overlay,
-    softLight,
-    hardLight,
+    soft_light,
+    hard_light,
     difference,
     exclusion,
     hue,
     saturation,
     color,
     luminosity,
-    plusLighter,
+    plus_lighter,
     raw_: []const u8,
     pub fn raw(r: []const u8) MixBlendMode { return .{ .raw_ = r }; }
 
@@ -16661,7 +16661,7 @@ pub const NavDown = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     current,
@@ -16679,7 +16679,7 @@ pub const NavLeft = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     current,
@@ -16697,7 +16697,7 @@ pub const NavRight = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     current,
@@ -16715,7 +16715,7 @@ pub const NavUp = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     current,
@@ -16733,7 +16733,7 @@ pub const ObjectFit = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The replaced content is sized to fill the element’s content box: the object’s concrete object size is the element’s used width and height.
     fill,
@@ -16742,7 +16742,7 @@ pub const ObjectFit = union(enum) {
     ///     /// The replaced content is sized to maintain its aspect ratio while filling the element’s entire content box: its concrete object size is resolved as a cover constraint against the element’s used width and height. If the scale-down flag is used, size the content as if none or cover were specified, whichever would result in a smaller concrete object size.
     cover,
     ///     /// Equivalent to contain scale-down.
-    scaleDown,
+    scale_down,
     raw_: []const u8,
     pub fn raw(r: []const u8) ObjectFit { return .{ .raw_ = r }; }
 
@@ -16756,21 +16756,21 @@ pub const ObjectPosition = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     left,
     center,
     right,
     top,
     bottom,
-    xStart,
-    xEnd,
-    yStart,
-    yEnd,
-    blockStart,
-    blockEnd,
-    inlineStart,
-    inlineEnd,
+    x_start,
+    x_end,
+    y_start,
+    y_end,
+    block_start,
+    block_end,
+    inline_start,
+    inline_end,
     start,
     end,
     px_: f32, em_: f32, rem_: f32,
@@ -16792,7 +16792,7 @@ pub const ObjectViewBox = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) ObjectViewBox { return .{ .raw_ = r }; }
@@ -16807,7 +16807,7 @@ pub const Offset = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) Offset { return .{ .raw_ = r }; }
@@ -16822,7 +16822,7 @@ pub const OffsetAnchor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The anchor point is the same as the point indicated by transform-origin. Specifically, the computed value of transform-origin is resolved as a <position> against the element’s reference box.
     auto,
@@ -16831,14 +16831,14 @@ pub const OffsetAnchor = union(enum) {
     right,
     top,
     bottom,
-    xStart,
-    xEnd,
-    yStart,
-    yEnd,
-    blockStart,
-    blockEnd,
-    inlineStart,
-    inlineEnd,
+    x_start,
+    x_end,
+    y_start,
+    y_end,
+    block_start,
+    block_end,
+    inline_start,
+    inline_end,
     start,
     end,
     px_: f32, em_: f32, rem_: f32,
@@ -16860,7 +16860,7 @@ pub const OffsetDistance = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -16881,14 +16881,14 @@ pub const OffsetPath = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    contentBox,
-    paddingBox,
-    borderBox,
-    fillBox,
-    strokeBox,
-    viewBox,
+    content_box,
+    padding_box,
+    border_box,
+    fill_box,
+    stroke_box,
+    view_box,
     raw_: []const u8,
     pub fn raw(r: []const u8) OffsetPath { return .{ .raw_ = r }; }
 
@@ -16902,7 +16902,7 @@ pub const OffsetPosition = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The element does not have an offset starting position.
     normal,
@@ -16913,14 +16913,14 @@ pub const OffsetPosition = union(enum) {
     right,
     top,
     bottom,
-    xStart,
-    xEnd,
-    yStart,
-    yEnd,
-    blockStart,
-    blockEnd,
-    inlineStart,
-    inlineEnd,
+    x_start,
+    x_end,
+    y_start,
+    y_end,
+    block_start,
+    block_end,
+    inline_start,
+    inline_end,
     start,
     end,
     px_: f32, em_: f32, rem_: f32,
@@ -16942,7 +16942,7 @@ pub const OffsetRotate = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The offset transform will have a rotation component equal to the difference between the offset path’s direction at the offset position and the direction of the positive X axis (that is, a line going toward the right). See SVG’s direction of a path for details on how to calculate this. If specified with an <angle>, the angle is added to the rotation component.
     auto,
@@ -16961,7 +16961,7 @@ pub const Opacity = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     percent_: f32,
     raw_: []const u8,
@@ -16978,7 +16978,7 @@ pub const Order = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) Order { return .{ .raw_ = r }; }
@@ -16993,7 +16993,7 @@ pub const Orphans = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) Orphans { return .{ .raw_ = r }; }
@@ -17008,7 +17008,7 @@ pub const Outline = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
     raw_: []const u8,
@@ -17026,7 +17026,7 @@ pub const OutlineColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// When outline-style is auto, outline-color: auto computes to auto and represents the accent color. Otherwise, outline-color: auto computes to currentColor.
     auto,
@@ -17046,7 +17046,7 @@ pub const OutlineOffset = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
@@ -17065,7 +17065,7 @@ pub const OutlineStyle = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     dotted,
@@ -17089,7 +17089,7 @@ pub const OutlineWidth = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hairline,
     thin,
@@ -17112,7 +17112,7 @@ pub const Overflow = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) Overflow { return .{ .raw_ = r }; }
@@ -17127,7 +17127,7 @@ pub const OverflowAnchor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Declares that the element is potentially eligible to participate in the anchor node selection algorithm for any scrolling box created by the element or an ancestor.
     auto,
@@ -17144,7 +17144,7 @@ pub const OverflowBlock = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     visible,
     hidden,
@@ -17164,11 +17164,11 @@ pub const OverflowClipMargin = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    contentBox,
-    paddingBox,
-    borderBox,
+    content_box,
+    padding_box,
+    border_box,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
     pub fn px(v: f32) OverflowClipMargin { return .{ .px_ = v }; }
@@ -17186,11 +17186,11 @@ pub const OverflowClipMarginBlock = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    contentBox,
-    paddingBox,
-    borderBox,
+    content_box,
+    padding_box,
+    border_box,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
     pub fn px(v: f32) OverflowClipMarginBlock { return .{ .px_ = v }; }
@@ -17208,11 +17208,11 @@ pub const OverflowClipMarginBlockEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    contentBox,
-    paddingBox,
-    borderBox,
+    content_box,
+    padding_box,
+    border_box,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
     pub fn px(v: f32) OverflowClipMarginBlockEnd { return .{ .px_ = v }; }
@@ -17230,11 +17230,11 @@ pub const OverflowClipMarginBlockStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    contentBox,
-    paddingBox,
-    borderBox,
+    content_box,
+    padding_box,
+    border_box,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
     pub fn px(v: f32) OverflowClipMarginBlockStart { return .{ .px_ = v }; }
@@ -17252,11 +17252,11 @@ pub const OverflowClipMarginBottom = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    contentBox,
-    paddingBox,
-    borderBox,
+    content_box,
+    padding_box,
+    border_box,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
     pub fn px(v: f32) OverflowClipMarginBottom { return .{ .px_ = v }; }
@@ -17274,11 +17274,11 @@ pub const OverflowClipMarginInline = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    contentBox,
-    paddingBox,
-    borderBox,
+    content_box,
+    padding_box,
+    border_box,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
     pub fn px(v: f32) OverflowClipMarginInline { return .{ .px_ = v }; }
@@ -17296,11 +17296,11 @@ pub const OverflowClipMarginInlineEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    contentBox,
-    paddingBox,
-    borderBox,
+    content_box,
+    padding_box,
+    border_box,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
     pub fn px(v: f32) OverflowClipMarginInlineEnd { return .{ .px_ = v }; }
@@ -17318,11 +17318,11 @@ pub const OverflowClipMarginInlineStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    contentBox,
-    paddingBox,
-    borderBox,
+    content_box,
+    padding_box,
+    border_box,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
     pub fn px(v: f32) OverflowClipMarginInlineStart { return .{ .px_ = v }; }
@@ -17340,11 +17340,11 @@ pub const OverflowClipMarginLeft = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    contentBox,
-    paddingBox,
-    borderBox,
+    content_box,
+    padding_box,
+    border_box,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
     pub fn px(v: f32) OverflowClipMarginLeft { return .{ .px_ = v }; }
@@ -17362,11 +17362,11 @@ pub const OverflowClipMarginRight = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    contentBox,
-    paddingBox,
-    borderBox,
+    content_box,
+    padding_box,
+    border_box,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
     pub fn px(v: f32) OverflowClipMarginRight { return .{ .px_ = v }; }
@@ -17384,11 +17384,11 @@ pub const OverflowClipMarginTop = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    contentBox,
-    paddingBox,
-    borderBox,
+    content_box,
+    padding_box,
+    border_box,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
     pub fn px(v: f32) OverflowClipMarginTop { return .{ .px_ = v }; }
@@ -17406,7 +17406,7 @@ pub const OverflowInline = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     visible,
     hidden,
@@ -17426,12 +17426,12 @@ pub const OverflowWrap = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Lines may break only at allowed break points. However, the restrictions introduced by word-break: keep-all may be relaxed to match word-break: normal if there are no otherwise-acceptable break points in the line. Also, the restrictions introduced by word-break: auto-phrase are relaxed if there are no otherwise-acceptable break points in the line: If suppressing soft wrap opportunities within a particular phrase would cause that phrase to overflow even when placed on an otherwise empty line, the user agent must fall back to the same soft wrap opportunities as normal within that phrase. If that is not enough to prevent overflow, suppression of hyphenation opportunities must also be abandoned within each line that would overflow. As an intermediary measure, user agents may also detect multiple levels of phrases, choosing to shorter ones (possibly down to individual words) when longer ones would lead to overflow. The soft wrap opportunities obtained by relaxing the restrictions introduced by word-break: keep-all and word-break: auto-phrase are not considered when calculating min-content intrinsic sizes.
     normal,
     ///     /// As for anywhere except that soft wrap opportunities introduced by break-word are not considered when calculating min-content intrinsic sizes.
-    breakWord,
+    break_word,
     ///     /// An otherwise unbreakable sequence of characters may be broken at an arbitrary point if there are no otherwise-acceptable break points in the line. Shaping characters are still shaped as if the word were not broken, and grapheme clusters must stay together as one unit. No hyphenation character is inserted at the break point. Soft wrap opportunities introduced by anywhere are considered when calculating min-content intrinsic sizes. In the case of word-break: auto-phrase, these additional soft wrap opportunities are only introduced if relaxing the restrictions introduced by word-break: auto-phrase as described in overflow-wrap: normal is insufficient to prevent overflow.
     anywhere,
     raw_: []const u8,
@@ -17447,7 +17447,7 @@ pub const OverflowX = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// There is no special handling of overflow, that is, the box’s content is rendered outside the box if positioned there. The box is not a scroll container.
     visible,
@@ -17472,7 +17472,7 @@ pub const OverflowY = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// There is no special handling of overflow, that is, the box’s content is rendered outside the box if positioned there. The box is not a scroll container.
     visible,
@@ -17497,7 +17497,7 @@ pub const Overlay = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The element is rendered in the top layer if it is in the top layer. Rather than generating boxes as part of its normal position in the document, it generates boxes as a sibling of the root element, rendered "above" it.
     auto,
@@ -17514,7 +17514,7 @@ pub const OverscrollBehavior = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// This value indicates that the element must not perform non-local boundary default actions such as scroll chaining or navigation. The user agent must not perform scroll chaining to any ancestors along the scroll chain regardless of whether the scroll originated at this element or one of its descendants. This value must not modify the behavior of how local boundary default actions should behave, such as showing any overscroll affordances.
     contain,
@@ -17533,7 +17533,7 @@ pub const OverscrollBehaviorBlock = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// This value indicates that the element must not perform non-local boundary default actions such as scroll chaining or navigation. The user agent must not perform scroll chaining to any ancestors along the scroll chain regardless of whether the scroll originated at this element or one of its descendants. This value must not modify the behavior of how local boundary default actions should behave, such as showing any overscroll affordances.
     contain,
@@ -17552,7 +17552,7 @@ pub const OverscrollBehaviorInline = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// This value indicates that the element must not perform non-local boundary default actions such as scroll chaining or navigation. The user agent must not perform scroll chaining to any ancestors along the scroll chain regardless of whether the scroll originated at this element or one of its descendants. This value must not modify the behavior of how local boundary default actions should behave, such as showing any overscroll affordances.
     contain,
@@ -17571,7 +17571,7 @@ pub const OverscrollBehaviorX = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// This value indicates that the element must not perform non-local boundary default actions such as scroll chaining or navigation. The user agent must not perform scroll chaining to any ancestors along the scroll chain regardless of whether the scroll originated at this element or one of its descendants. This value must not modify the behavior of how local boundary default actions should behave, such as showing any overscroll affordances.
     contain,
@@ -17590,7 +17590,7 @@ pub const OverscrollBehaviorY = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// This value indicates that the element must not perform non-local boundary default actions such as scroll chaining or navigation. The user agent must not perform scroll chaining to any ancestors along the scroll chain regardless of whether the scroll originated at this element or one of its descendants. This value must not modify the behavior of how local boundary default actions should behave, such as showing any overscroll affordances.
     contain,
@@ -17609,7 +17609,7 @@ pub const Padding = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) Padding { return .{ .raw_ = r }; }
@@ -17624,7 +17624,7 @@ pub const PaddingBlock = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) PaddingBlock { return .{ .raw_ = r }; }
@@ -17639,7 +17639,7 @@ pub const PaddingBlockEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) PaddingBlockEnd { return .{ .raw_ = r }; }
@@ -17654,7 +17654,7 @@ pub const PaddingBlockStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) PaddingBlockStart { return .{ .raw_ = r }; }
@@ -17669,7 +17669,7 @@ pub const PaddingBottom = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -17690,7 +17690,7 @@ pub const PaddingInline = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) PaddingInline { return .{ .raw_ = r }; }
@@ -17705,7 +17705,7 @@ pub const PaddingInlineEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) PaddingInlineEnd { return .{ .raw_ = r }; }
@@ -17720,7 +17720,7 @@ pub const PaddingInlineStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) PaddingInlineStart { return .{ .raw_ = r }; }
@@ -17735,7 +17735,7 @@ pub const PaddingLeft = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -17756,7 +17756,7 @@ pub const PaddingRight = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -17777,7 +17777,7 @@ pub const PaddingTop = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -17798,7 +17798,7 @@ pub const Page = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     raw_: []const u8,
@@ -17814,7 +17814,7 @@ pub const PageBreakAfter = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Neither force nor forbid a page break before (after, inside) the generated box.
     auto,
@@ -17839,7 +17839,7 @@ pub const PageBreakBefore = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Neither force nor forbid a page break before (after, inside) the generated box.
     auto,
@@ -17864,7 +17864,7 @@ pub const PageBreakInside = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Avoid a page break before (after, inside) the generated box.
     avoid,
@@ -17883,7 +17883,7 @@ pub const PaintOrder = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     normal,
     fill,
@@ -17902,7 +17902,7 @@ pub const Pause = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) Pause { return .{ .raw_ = r }; }
@@ -17917,10 +17917,10 @@ pub const PauseAfter = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Expresses the pause by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
-    xWeak,
+    x_weak,
     ///     /// Expresses the pause by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
     weak,
     ///     /// Expresses the pause by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
@@ -17928,7 +17928,7 @@ pub const PauseAfter = union(enum) {
     ///     /// Expresses the pause by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
     strong,
     ///     /// Expresses the pause by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
-    xStrong,
+    x_strong,
     raw_: []const u8,
     pub fn raw(r: []const u8) PauseAfter { return .{ .raw_ = r }; }
 
@@ -17942,10 +17942,10 @@ pub const PauseBefore = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Expresses the pause by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
-    xWeak,
+    x_weak,
     ///     /// Expresses the pause by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
     weak,
     ///     /// Expresses the pause by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
@@ -17953,7 +17953,7 @@ pub const PauseBefore = union(enum) {
     ///     /// Expresses the pause by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
     strong,
     ///     /// Expresses the pause by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
-    xStrong,
+    x_strong,
     raw_: []const u8,
     pub fn raw(r: []const u8) PauseBefore { return .{ .raw_ = r }; }
 
@@ -17967,7 +17967,7 @@ pub const Perspective = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
@@ -17986,7 +17986,7 @@ pub const PerspectiveOrigin = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Computes to 0% for the horizontal position if one or two values are given, otherwise specifies the left edge as the origin for the next offset.
     left,
@@ -17998,14 +17998,14 @@ pub const PerspectiveOrigin = union(enum) {
     top,
     ///     /// Computes to 100% for the vertical position if one or two values are given, otherwise specifies the bottom edge as the origin for the next offset.
     bottom,
-    xStart,
-    xEnd,
-    yStart,
-    yEnd,
-    blockStart,
-    blockEnd,
-    inlineStart,
-    inlineEnd,
+    x_start,
+    x_end,
+    y_start,
+    y_end,
+    block_start,
+    block_end,
+    inline_start,
+    inline_end,
     start,
     end,
     px_: f32, em_: f32, rem_: f32,
@@ -18027,7 +18027,7 @@ pub const PlaceContent = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) PlaceContent { return .{ .raw_ = r }; }
@@ -18042,7 +18042,7 @@ pub const PlaceItems = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) PlaceItems { return .{ .raw_ = r }; }
@@ -18057,7 +18057,7 @@ pub const PlaceSelf = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) PlaceSelf { return .{ .raw_ = r }; }
@@ -18072,10 +18072,10 @@ pub const PointerEvents = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
-    boundingBox,
+    bounding_box,
     visiblePainted,
     visibleFill,
     visibleStroke,
@@ -18097,7 +18097,7 @@ pub const PointerTimeline = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) PointerTimeline { return .{ .raw_ = r }; }
@@ -18112,7 +18112,7 @@ pub const PointerTimelineAxis = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Specifies to use the measure of progress along the block axis of the pointer range.
     block,
@@ -18135,7 +18135,7 @@ pub const PointerTimelineName = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) PointerTimelineName { return .{ .raw_ = r }; }
@@ -18150,7 +18150,7 @@ pub const Position = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The box is not a positioned box, and is laid out according to the rules of its parent formatting context. The inset properties do not apply.
     static,
@@ -18175,7 +18175,7 @@ pub const PositionAnchor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// If position-area is none, behaves as none. Otherwise, behaves as auto.
     normal,
@@ -18194,58 +18194,58 @@ pub const PositionArea = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     left,
     center,
     right,
-    spanLeft,
-    spanRight,
-    xStart,
-    xEnd,
-    spanXStart,
-    spanXEnd,
-    selfXStart,
-    selfXEnd,
-    spanSelfXStart,
-    spanSelfXEnd,
-    spanAll,
+    span_left,
+    span_right,
+    x_start,
+    x_end,
+    span_x_start,
+    span_x_end,
+    self_x_start,
+    self_x_end,
+    span_self_x_start,
+    span_self_x_end,
+    span_all,
     top,
     bottom,
-    spanTop,
-    spanBottom,
-    yStart,
-    yEnd,
-    spanYStart,
-    spanYEnd,
-    selfYStart,
-    selfYEnd,
-    spanSelfYStart,
-    spanSelfYEnd,
-    blockStart,
-    blockEnd,
-    spanBlockStart,
-    spanBlockEnd,
-    inlineStart,
-    inlineEnd,
-    spanInlineStart,
-    spanInlineEnd,
-    selfBlockStart,
-    selfBlockEnd,
-    spanSelfBlockStart,
-    spanSelfBlockEnd,
-    selfInlineStart,
-    selfInlineEnd,
-    spanSelfInlineStart,
-    spanSelfInlineEnd,
+    span_top,
+    span_bottom,
+    y_start,
+    y_end,
+    span_y_start,
+    span_y_end,
+    self_y_start,
+    self_y_end,
+    span_self_y_start,
+    span_self_y_end,
+    block_start,
+    block_end,
+    span_block_start,
+    span_block_end,
+    inline_start,
+    inline_end,
+    span_inline_start,
+    span_inline_end,
+    self_block_start,
+    self_block_end,
+    span_self_block_start,
+    span_self_block_end,
+    self_inline_start,
+    self_inline_end,
+    span_self_inline_start,
+    span_self_inline_end,
     start,
     end,
-    spanStart,
-    spanEnd,
-    selfStart,
-    selfEnd,
-    spanSelfStart,
-    spanSelfEnd,
+    span_start,
+    span_end,
+    self_start,
+    self_end,
+    span_self_start,
+    span_self_end,
     raw_: []const u8,
     pub fn raw(r: []const u8) PositionArea { return .{ .raw_ = r }; }
 
@@ -18259,7 +18259,7 @@ pub const PositionTry = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) PositionTry { return .{ .raw_ = r }; }
@@ -18274,68 +18274,68 @@ pub const PositionTryFallbacks = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// swaps the values in the block axis (between, for example, margin-block-start and margin-block-end), essentially mirroring across an inline-axis line.
-    flipBlock,
+    flip_block,
     ///     /// swaps the values in the inline axis, essentially mirroring across a block-axis line.
-    flipInline,
+    flip_inline,
     ///     /// swaps the values of the start properties with each other, and the end properties with each other (between, for example, margin-block-start and margin-inline-start), essentially mirroring across a diagonal drawn from the start-start corner to the end-end corner.
-    flipStart,
+    flip_start,
     ///     /// swaps the values in the horizontal axis (between, for example, margin-left and margin-right), essentially mirroring across a vertical-axis line.
-    flipX,
+    flip_x,
     ///     /// swaps the values in the vertical axis, essentially mirroring across a horizontal-axis line.
-    flipY,
+    flip_y,
     left,
     center,
     right,
-    spanLeft,
-    spanRight,
-    xStart,
-    xEnd,
-    spanXStart,
-    spanXEnd,
-    selfXStart,
-    selfXEnd,
-    spanSelfXStart,
-    spanSelfXEnd,
-    spanAll,
+    span_left,
+    span_right,
+    x_start,
+    x_end,
+    span_x_start,
+    span_x_end,
+    self_x_start,
+    self_x_end,
+    span_self_x_start,
+    span_self_x_end,
+    span_all,
     top,
     bottom,
-    spanTop,
-    spanBottom,
-    yStart,
-    yEnd,
-    spanYStart,
-    spanYEnd,
-    selfYStart,
-    selfYEnd,
-    spanSelfYStart,
-    spanSelfYEnd,
-    blockStart,
-    blockEnd,
-    spanBlockStart,
-    spanBlockEnd,
-    inlineStart,
-    inlineEnd,
-    spanInlineStart,
-    spanInlineEnd,
-    selfBlockStart,
-    selfBlockEnd,
-    spanSelfBlockStart,
-    spanSelfBlockEnd,
-    selfInlineStart,
-    selfInlineEnd,
-    spanSelfInlineStart,
-    spanSelfInlineEnd,
+    span_top,
+    span_bottom,
+    y_start,
+    y_end,
+    span_y_start,
+    span_y_end,
+    self_y_start,
+    self_y_end,
+    span_self_y_start,
+    span_self_y_end,
+    block_start,
+    block_end,
+    span_block_start,
+    span_block_end,
+    inline_start,
+    inline_end,
+    span_inline_start,
+    span_inline_end,
+    self_block_start,
+    self_block_end,
+    span_self_block_start,
+    span_self_block_end,
+    self_inline_start,
+    self_inline_end,
+    span_self_inline_start,
+    span_self_inline_end,
     start,
     end,
-    spanStart,
-    spanEnd,
-    selfStart,
-    selfEnd,
-    spanSelfStart,
-    spanSelfEnd,
+    span_start,
+    span_end,
+    self_start,
+    self_end,
+    span_self_start,
+    span_self_end,
     raw_: []const u8,
     pub fn raw(r: []const u8) PositionTryFallbacks { return .{ .raw_ = r }; }
 
@@ -18349,18 +18349,18 @@ pub const PositionTryOrder = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Try the position options in the order specified by position-try-fallbacks.
     normal,
     ///     /// For each entry in the position options list, apply that position option to the box, and find the inset-modified containing block size that results from those styles (treating auto inset values as zero). Stably sort the position options list according to this size, with the largest coming first. Logical directions are resolved against the writing mode of the containing block.
-    mostWidth,
+    most_width,
     ///     /// For each entry in the position options list, apply that position option to the box, and find the inset-modified containing block size that results from those styles (treating auto inset values as zero). Stably sort the position options list according to this size, with the largest coming first. Logical directions are resolved against the writing mode of the containing block.
-    mostHeight,
+    most_height,
     ///     /// For each entry in the position options list, apply that position option to the box, and find the inset-modified containing block size that results from those styles (treating auto inset values as zero). Stably sort the position options list according to this size, with the largest coming first. Logical directions are resolved against the writing mode of the containing block.
-    mostBlockSize,
+    most_block_size,
     ///     /// For each entry in the position options list, apply that position option to the box, and find the inset-modified containing block size that results from those styles (treating auto inset values as zero). Stably sort the position options list according to this size, with the largest coming first. Logical directions are resolved against the writing mode of the containing block.
-    mostInlineSize,
+    most_inline_size,
     raw_: []const u8,
     pub fn raw(r: []const u8) PositionTryOrder { return .{ .raw_ = r }; }
 
@@ -18374,16 +18374,16 @@ pub const PositionVisibility = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// This property has no effect. (The box is displayed without regard for its anchors or its overflowing status.)
     always,
     ///     /// If any of the box’s required anchor references do not resolve to a target anchor element, the box’s visibility property computes to force-hidden. What is a required anchor reference? anchor() functions that don’t have a fallback value; the default anchor *sometimes*? Need more detail here. Any anchors are missing, or all anchors are missing? I can see use-cases for either, potentially. Do we want to make a decision here, or make it controllable somehow?
-    anchorsValid,
+    anchors_valid,
     ///     /// If the box has a default anchor box but that anchor box is invisible or clipped by intervening boxes, the box’s visibility property computes to force-hidden.
-    anchorsVisible,
+    anchors_visible,
     ///     /// If the box overflows its inset-modified containing block even after applying position-try, the box’s visibility property computes to force-hidden.
-    noOverflow,
+    no_overflow,
     raw_: []const u8,
     pub fn raw(r: []const u8) PositionVisibility { return .{ .raw_ = r }; }
 
@@ -18397,7 +18397,7 @@ pub const PrintColorAdjust = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The user agent should make adjustments to the page’s styling as it deems necessary and prudent for the output device. For example, if the document is being printed, a user agent might ignore any backgrounds and adjust text color to be sufficiently dark, to minimize ink usage.
     economy,
@@ -18416,12 +18416,12 @@ pub const Quotes = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// A typographically appropriate quotation mark system is automatically chosen by the UA based on the content language of the parent (or, if there is no parent, of the element itself).
     auto,
     ///     /// Specifies the same quotation mark system as the parent. In general this is equivalent to inheriting the parent’s computed value, except that auto it resolves using the same content language that the parent used. Two possible approaches here, currently speccing the latter: a) this computes to the relevant string values, and inherits as such. b) this value effectively inherits as a keyword + a language code, meaning auto, but with this language.
-    matchParent,
+    match_parent,
     raw_: []const u8,
     pub fn raw(r: []const u8) Quotes { return .{ .raw_ = r }; }
 
@@ -18435,7 +18435,7 @@ pub const R = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -18456,22 +18456,22 @@ pub const ReadingFlow = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Follow the order of elements in the DOM.
     normal,
     ///     /// Applies to grid, flex, and block layouts. Creates a reading flow container, and enables the use of the reading-order property on direct children. Other than respecting the reading-order property, follows the order of elements in the DOM.
-    sourceOrder,
+    source_order,
     ///     /// Only takes effect on flex containers. Follows the visual reading order of flex items, taking the writing mode into account. Therefore, a document in English, with flex-direction: row-reverse and reading-flow: flex-visual would have a reading order of left to right.
-    flexVisual,
+    flex_visual,
     ///     /// Only takes effect on flex containers. Follows the flex-flow direction.
-    flexFlow,
+    flex_flow,
     ///     /// Only takes effect on grid containers. Follows the visual order of grid items by row, taking the writing mode into account.
-    gridRows,
+    grid_rows,
     ///     /// Only takes effect on grid containers. Follows the visual order of grid items by column, taking the writing mode into account.
-    gridColumns,
+    grid_columns,
     ///     /// Only takes effect on grid containers. Follows the order-modified document order. Therefore, as normal unless the order property has been used to change the order of items.
-    gridOrder,
+    grid_order,
     raw_: []const u8,
     pub fn raw(r: []const u8) ReadingFlow { return .{ .raw_ = r }; }
 
@@ -18485,7 +18485,7 @@ pub const ReadingOrder = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) ReadingOrder { return .{ .raw_ = r }; }
@@ -18500,7 +18500,7 @@ pub const RegionFragment = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     break_,
@@ -18517,7 +18517,7 @@ pub const Resize = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     both,
     horizontal,
@@ -18537,7 +18537,7 @@ pub const Rest = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) Rest { return .{ .raw_ = r }; }
@@ -18552,10 +18552,10 @@ pub const RestAfter = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Expresses the rest by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
-    xWeak,
+    x_weak,
     ///     /// Expresses the rest by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
     weak,
     ///     /// Expresses the rest by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
@@ -18563,7 +18563,7 @@ pub const RestAfter = union(enum) {
     ///     /// Expresses the rest by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
     strong,
     ///     /// Expresses the rest by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
-    xStrong,
+    x_strong,
     raw_: []const u8,
     pub fn raw(r: []const u8) RestAfter { return .{ .raw_ = r }; }
 
@@ -18577,10 +18577,10 @@ pub const RestBefore = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Expresses the rest by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
-    xWeak,
+    x_weak,
     ///     /// Expresses the rest by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
     weak,
     ///     /// Expresses the rest by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
@@ -18588,7 +18588,7 @@ pub const RestBefore = union(enum) {
     ///     /// Expresses the rest by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
     strong,
     ///     /// Expresses the rest by the strength of the prosodic break in speech output. The exact time is implementation-dependent. The values indicate monotonically non-decreasing (conceptually increasing) break strength between elements.
-    xStrong,
+    x_strong,
     raw_: []const u8,
     pub fn raw(r: []const u8) RestBefore { return .{ .raw_ = r }; }
 
@@ -18602,7 +18602,7 @@ pub const Right = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Represents an unconstrained inset; the exact meaning depends on the positioning scheme.
     auto,
@@ -18625,7 +18625,7 @@ pub const Rotate = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The axis can be specified with either the x, y, or z keywords, which specify a rotation around that axis, equivalent to the rotateX(), rotateY(), and rotateZ() transform functions. Alternately, the axis can be specified explicitly by giving three numbers representing the x, y, and z components of an origin-centered vector, equivalent to the rotate3d() function.
     x,
@@ -18646,7 +18646,7 @@ pub const RowGap = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The value normal represents a used value of 1em on multi-column containers, and a used value of 0px in all other contexts.
     normal,
@@ -18673,7 +18673,7 @@ pub const RowRule = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hairline,
     thin,
@@ -18901,7 +18901,7 @@ pub const RowRuleBreak = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Behavior depends on the type of container.
     normal,
@@ -18920,7 +18920,7 @@ pub const RowRuleColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     aliceblue,
     antiquewhite,
@@ -19131,7 +19131,7 @@ pub const RowRuleEdgeInset = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -19152,7 +19152,7 @@ pub const RowRuleEdgeInsetEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -19173,7 +19173,7 @@ pub const RowRuleEdgeInsetStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -19194,7 +19194,7 @@ pub const RowRuleInset = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) RowRuleInset { return .{ .raw_ = r }; }
@@ -19209,7 +19209,7 @@ pub const RowRuleInsetEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -19230,7 +19230,7 @@ pub const RowRuleInsetStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -19251,7 +19251,7 @@ pub const RowRuleInteriorInset = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -19272,7 +19272,7 @@ pub const RowRuleInteriorInsetEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -19293,7 +19293,7 @@ pub const RowRuleInteriorInsetStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -19314,7 +19314,7 @@ pub const RowRuleStyle = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hidden,
     dotted,
@@ -19339,7 +19339,7 @@ pub const RowRuleVisibilityItems = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Paint decorations in all gap segments, regardless of whether adjacent items are present.
     all,
@@ -19360,7 +19360,7 @@ pub const RowRuleWidth = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hairline,
     thin,
@@ -19384,16 +19384,16 @@ pub const RubyAlign = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The ruby content is aligned with the start edge of its box. start ruby distribution "Katatsuki ruby" (肩付きルビ) is close to, but not quite the same as, this start value. In particular, its behavior when overhanging its base can differ from start alignment depending on surrounding context, see JLREQ. Also, it’s only ever used in vertical writing, and the JLTF considers it not particularly important, so it may not be worth the effort to make this value smart enough to deal with katatsuki ruby. If start is needed for some other purpose, we should keep it. Otherwise, maybe just drop it?
     start,
     ///     /// The ruby content is centered within its box. center ruby distribution
     center,
     ///     /// The ruby content expands as defined for normal text justification (as defined by text-justify), except that if there are no justification opportunities the content is centered. space-between ruby distribution
-    spaceBetween,
+    space_between,
     ///     /// As for space-between except that there exists an extra justification opportunities whose space is distributed half before and half after the ruby content. space-around ruby distribution
-    spaceAround,
+    space_around,
     raw_: []const u8,
     pub fn raw(r: []const u8) RubyAlign { return .{ .raw_ = r }; }
 
@@ -19407,7 +19407,7 @@ pub const RubyMerge = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Each ruby annotation box is rendered within the same column(s) as its corresponding base box(es), i.e. without overlapping adjacent bases on either side. This style is called “mono ruby” in [JLREQ]. ruby-merge: separate with center alignment For example, the following two lines render the same: <p><ruby>無<rt>む</ruby><ruby>常<rt>じょう</ruby> <p><ruby style="ruby-merge:separate"><rb>無<rb>常<rt>む<rt>じょう</ruby>
     separate,
@@ -19428,7 +19428,7 @@ pub const RubyOverhang = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// When a ruby annotation container is longer than its corresponding ruby base container, the ruby annotation container may partially overlap adjacent boxes. Whether, how much, and under which conditions to overhang are determined by the UA.
     auto,
@@ -19445,7 +19445,7 @@ pub const RubyPosition = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Different levels of annotations alternate between over and under. If the annotation container is the first level of annotation in its ruby segment, or if all prior levels are inter-character, then alternate, either on its own or in combination with over, behaves the same as over, while alternate in combination with under behaves the same as under. Otherwise, if the previous level of interlinear annotation is over, alternate behaves like under, and vice versa. (In this case, whether alternate is specified alone or in combination with over or under makes no difference.)
     alternate,
@@ -19454,7 +19454,7 @@ pub const RubyPosition = union(enum) {
     ///     /// The ruby annotation appears line-under the base. This is a relatively rare setting used in ideographic East Asian writing systems, most easily found in educational text. Ruby under Japanese base text in horizontal layout Ruby to the left of Japanese base text in vertical layout
     under,
     ///     /// If the writing mode of the enclosing ruby container is vertical, this value has the same effect as over. Otherwise, the ruby annotation becomes an inter-character annotation. The annotation appears on the right of the base in horizontal text. This forces the computed value of writing-mode of the ruby annotation children of this ruby annotation container to be vertical-rl. This value is provided for the special case of traditional Chinese as used especially in Taiwan: ruby (made of bopomofo glyphs) in that context appears vertically along the right side of the base glyph, even when the layout of the base characters is horizontal: “Bopomofo” ruby in traditional Chinese (ruby annotation shown in blue for clarity) in horizontal layout
-    interCharacter,
+    inter_character,
     raw_: []const u8,
     pub fn raw(r: []const u8) RubyPosition { return .{ .raw_ = r }; }
 
@@ -19468,7 +19468,7 @@ pub const Rule = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) Rule { return .{ .raw_ = r }; }
@@ -19483,7 +19483,7 @@ pub const RuleBreak = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) RuleBreak { return .{ .raw_ = r }; }
@@ -19498,7 +19498,7 @@ pub const RuleColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
     raw_: []const u8,
@@ -19516,7 +19516,7 @@ pub const RuleEdgeInset = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) RuleEdgeInset { return .{ .raw_ = r }; }
@@ -19531,7 +19531,7 @@ pub const RuleInset = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) RuleInset { return .{ .raw_ = r }; }
@@ -19546,7 +19546,7 @@ pub const RuleInsetEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) RuleInsetEnd { return .{ .raw_ = r }; }
@@ -19561,7 +19561,7 @@ pub const RuleInsetStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) RuleInsetStart { return .{ .raw_ = r }; }
@@ -19576,7 +19576,7 @@ pub const RuleInteriorInset = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) RuleInteriorInset { return .{ .raw_ = r }; }
@@ -19591,12 +19591,12 @@ pub const RuleOverlap = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Row-direction decorations are painted above column-direction decorations.
-    rowOverColumn,
+    row_over_column,
     ///     /// Column-direction decorations are painted above row-direction decorations.
-    columnOverRow,
+    column_over_row,
     raw_: []const u8,
     pub fn raw(r: []const u8) RuleOverlap { return .{ .raw_ = r }; }
 
@@ -19610,7 +19610,7 @@ pub const RuleStyle = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) RuleStyle { return .{ .raw_ = r }; }
@@ -19625,7 +19625,7 @@ pub const RuleVisibilityItems = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) RuleVisibilityItems { return .{ .raw_ = r }; }
@@ -19640,7 +19640,7 @@ pub const RuleWidth = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) RuleWidth { return .{ .raw_ = r }; }
@@ -19655,7 +19655,7 @@ pub const Rx = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     px_: f32, em_: f32, rem_: f32,
@@ -19677,7 +19677,7 @@ pub const Ry = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     px_: f32, em_: f32, rem_: f32,
@@ -19699,7 +19699,7 @@ pub const Scale = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     percent_: f32,
     raw_: []const u8,
@@ -19716,7 +19716,7 @@ pub const ScrollBehavior = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The scroll container is scrolled in an instant fashion.
     auto,
@@ -19735,7 +19735,7 @@ pub const ScrollInitialTarget = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The element is potentially an initial scroll target for its nearest scroll container ancestor.
     nearest,
@@ -19752,7 +19752,7 @@ pub const ScrollMargin = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
@@ -19771,7 +19771,7 @@ pub const ScrollMarginBlock = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
@@ -19790,7 +19790,7 @@ pub const ScrollMarginBlockEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
@@ -19809,7 +19809,7 @@ pub const ScrollMarginBlockStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
@@ -19828,7 +19828,7 @@ pub const ScrollMarginBottom = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
@@ -19847,7 +19847,7 @@ pub const ScrollMarginInline = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
@@ -19866,7 +19866,7 @@ pub const ScrollMarginInlineEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
@@ -19885,7 +19885,7 @@ pub const ScrollMarginInlineStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
@@ -19904,7 +19904,7 @@ pub const ScrollMarginLeft = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
@@ -19923,7 +19923,7 @@ pub const ScrollMarginRight = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
@@ -19942,7 +19942,7 @@ pub const ScrollMarginTop = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
@@ -19961,7 +19961,7 @@ pub const ScrollMarkerGroup = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The scroll container generates a ::scroll-marker-group pseudo-element. When originating from the root element, the generated pseudo-element’s box is the first child of the originating element. Otherwise, its box is an immediate preceding sibling to its originating element.
     before,
@@ -19984,7 +19984,7 @@ pub const ScrollPadding = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Indicates that the offset for the corresponding edge of the scrollport is UA-determined. This should generally default to a used length of 0px, but UAs may use heuristics to detect when a non-zero value is more appropriate. For example, a UA could detect when a position:fixed element is being used as an opaque unscrollable “header” that obscures the content below it, and resolve the top offset to the height of that element so that a “page down” operation (such as pressing PgDn) automatically scrolls by one “visible page” of content.
     auto,
@@ -20007,7 +20007,7 @@ pub const ScrollPaddingBlock = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Indicates that the offset for the corresponding edge of the scrollport is UA-determined. This should generally default to a used length of 0px, but UAs may use heuristics to detect when a non-zero value is more appropriate. For example, a UA could detect when a position:fixed element is being used as an opaque unscrollable “header” that obscures the content below it, and resolve the top offset to the height of that element so that a “page down” operation (such as pressing PgDn) automatically scrolls by one “visible page” of content.
     auto,
@@ -20030,7 +20030,7 @@ pub const ScrollPaddingBlockEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Indicates that the offset for the corresponding edge of the scrollport is UA-determined. This should generally default to a used length of 0px, but UAs may use heuristics to detect when a non-zero value is more appropriate. For example, a UA could detect when a position:fixed element is being used as an opaque unscrollable “header” that obscures the content below it, and resolve the top offset to the height of that element so that a “page down” operation (such as pressing PgDn) automatically scrolls by one “visible page” of content.
     auto,
@@ -20053,7 +20053,7 @@ pub const ScrollPaddingBlockStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Indicates that the offset for the corresponding edge of the scrollport is UA-determined. This should generally default to a used length of 0px, but UAs may use heuristics to detect when a non-zero value is more appropriate. For example, a UA could detect when a position:fixed element is being used as an opaque unscrollable “header” that obscures the content below it, and resolve the top offset to the height of that element so that a “page down” operation (such as pressing PgDn) automatically scrolls by one “visible page” of content.
     auto,
@@ -20076,7 +20076,7 @@ pub const ScrollPaddingBottom = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     px_: f32, em_: f32, rem_: f32,
@@ -20098,7 +20098,7 @@ pub const ScrollPaddingInline = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Indicates that the offset for the corresponding edge of the scrollport is UA-determined. This should generally default to a used length of 0px, but UAs may use heuristics to detect when a non-zero value is more appropriate. For example, a UA could detect when a position:fixed element is being used as an opaque unscrollable “header” that obscures the content below it, and resolve the top offset to the height of that element so that a “page down” operation (such as pressing PgDn) automatically scrolls by one “visible page” of content.
     auto,
@@ -20121,7 +20121,7 @@ pub const ScrollPaddingInlineEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Indicates that the offset for the corresponding edge of the scrollport is UA-determined. This should generally default to a used length of 0px, but UAs may use heuristics to detect when a non-zero value is more appropriate. For example, a UA could detect when a position:fixed element is being used as an opaque unscrollable “header” that obscures the content below it, and resolve the top offset to the height of that element so that a “page down” operation (such as pressing PgDn) automatically scrolls by one “visible page” of content.
     auto,
@@ -20144,7 +20144,7 @@ pub const ScrollPaddingInlineStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Indicates that the offset for the corresponding edge of the scrollport is UA-determined. This should generally default to a used length of 0px, but UAs may use heuristics to detect when a non-zero value is more appropriate. For example, a UA could detect when a position:fixed element is being used as an opaque unscrollable “header” that obscures the content below it, and resolve the top offset to the height of that element so that a “page down” operation (such as pressing PgDn) automatically scrolls by one “visible page” of content.
     auto,
@@ -20167,7 +20167,7 @@ pub const ScrollPaddingLeft = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     px_: f32, em_: f32, rem_: f32,
@@ -20189,7 +20189,7 @@ pub const ScrollPaddingRight = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     px_: f32, em_: f32, rem_: f32,
@@ -20211,7 +20211,7 @@ pub const ScrollPaddingTop = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     px_: f32, em_: f32, rem_: f32,
@@ -20233,7 +20233,7 @@ pub const ScrollSnapAlign = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Start alignment of this box’s scroll snap area within the scroll container’s snapport is a snap position in the specified axis.
     start,
@@ -20254,7 +20254,7 @@ pub const ScrollSnapStop = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The scroll container may pass over a snap position defined by this element during the execution of a scrolling operation.
     normal,
@@ -20273,7 +20273,7 @@ pub const ScrollSnapType = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The scroll container snaps to snap positions in its horizontal axis only.
     x,
@@ -20302,7 +20302,7 @@ pub const ScrollTargetGroup = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The element establishes a scroll marker group container forming a scroll marker group containing all of the scroll marker elements for which this is the nearest ancestor scroll marker group container.
     auto,
@@ -20319,7 +20319,7 @@ pub const ScrollTimeline = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) ScrollTimeline { return .{ .raw_ = r }; }
@@ -20334,7 +20334,7 @@ pub const ScrollTimelineAxis = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Specifies to use the measure of progress along the block axis of the scroll container. (Default.)
     block,
@@ -20357,7 +20357,7 @@ pub const ScrollTimelineName = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) ScrollTimelineName { return .{ .raw_ = r }; }
@@ -20372,7 +20372,7 @@ pub const ScrollbarColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The user agent determines the colors of the scrollbar. It should follow platform conventions, but may adjust the colors in accordance with color-scheme or other contextual information to better suit the page.
     auto,
@@ -20584,14 +20584,14 @@ pub const ScrollbarGutter = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Classic scrollbars consume space by creating a scrollbar gutter when overflow is scroll, or when overflow is auto and the box is overflowing. Overlay scrollbars do not consume space.
     auto,
     ///     /// The scrollbar gutter is present for classic scrollbars when overflow is hidden, scroll, or auto, regardless of whether the box is actually overflowing. Overlay scrollbars do not consume space.
     stable,
     ///     /// If a scrollbar gutter would be present on one of the inline start edge or the inline end edge of the box, another scrollbar gutter must be present on the opposite edge as well.
-    bothEdges,
+    both_edges,
     raw_: []const u8,
     pub fn raw(r: []const u8) ScrollbarGutter { return .{ .raw_ = r }; }
 
@@ -20605,7 +20605,7 @@ pub const ScrollbarWidth = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Implementations must use the default scrollbar width.
     auto,
@@ -20624,7 +20624,7 @@ pub const ShapeImageThreshold = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     percent_: f32,
     raw_: []const u8,
@@ -20641,13 +20641,13 @@ pub const ShapeInside = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The shape is computed based on the content box of the element.
     auto,
     ///     /// The shape is computed based on the shape defined by the shape-outside and shape-margin properties.
-    outsideShape,
-    shapeBox,
+    outside_shape,
+    shape_box,
     ///     /// The shape is computed based on the shape of the display as described in css-round-display.
     display,
     raw_: []const u8,
@@ -20663,7 +20663,7 @@ pub const ShapeMargin = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -20684,13 +20684,13 @@ pub const ShapeOutside = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    contentBox,
-    paddingBox,
-    borderBox,
-    marginBox,
-    halfBorderBox,
+    content_box,
+    padding_box,
+    border_box,
+    margin_box,
+    half_border_box,
     raw_: []const u8,
     pub fn raw(r: []const u8) ShapeOutside { return .{ .raw_ = r }; }
 
@@ -20704,7 +20704,7 @@ pub const ShapePadding = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -20725,7 +20725,7 @@ pub const ShapeRendering = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     optimizeSpeed,
@@ -20744,7 +20744,7 @@ pub const ShapeSubtract = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) ShapeSubtract { return .{ .raw_ = r }; }
@@ -20759,18 +20759,18 @@ pub const SliderOrientation = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The slider-like control orientation is defined by the writing mode and direction.
     auto,
     ///     /// The slider-like control is rendered horizontally and ::slider-fill is left-aligned within the control.
-    leftToRight,
+    left_to_right,
     ///     /// The slider-like control is rendered horizontally and ::slider-fill is right-aligned within the control.
-    rightToLeft,
+    right_to_left,
     ///     /// The slider-like control is rendered vertically and ::slider-fill is top-aligned within the control.
-    topToBottom,
+    top_to_bottom,
     ///     /// The slider-like control is rendered vertically and ::slider-fill is bottom-aligned within the control.
-    bottomToTop,
+    bottom_to_top,
     raw_: []const u8,
     pub fn raw(r: []const u8) SliderOrientation { return .{ .raw_ = r }; }
 
@@ -20784,7 +20784,7 @@ pub const SpatialNavigationAction = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// If there are visible focusable elements within the scroll container in the direction requested, the closest one becomes focused. Otherwise, the scroll container is scrolled in the direction requested.
     auto,
@@ -20805,7 +20805,7 @@ pub const SpatialNavigationContain = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// If the element is a scroll container then it establishes a spatial navigation container, otherwise it does not.
     auto,
@@ -20824,7 +20824,7 @@ pub const SpatialNavigationFunction = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Moves the focus with the default focus navigation algorithm defined by UA. In general, the focus moves to the element with the closest distance calculated by finding the shortest distance.
     normal,
@@ -20843,7 +20843,7 @@ pub const Speak = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Resolves to a computed value of never when display is none, otherwise resolves to a computed value of auto. The used value of a computed auto is equivalent to always if visibility is visible and to never otherwise.
     auto,
@@ -20864,18 +20864,18 @@ pub const SpeakAs = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Uses language-dependent pronunciation rules for rendering the element’s content. For example, punctuation is not spoken as-is, but instead rendered naturally as appropriate pauses.
     normal,
     ///     /// Spells the text one letter at a time (useful for acronyms and abbreviations). In languages where accented characters are rare, it is permitted to drop accents in favor of alternative unaccented spellings. As an example, in English, the word “rôle” can also be written as “role”. A conforming implementation would thus be able to spell-out “rôle” as “R O L E”.
-    spellOut,
+    spell_out,
     ///     /// Speak numbers one digit at a time, for instance, “twelve” would be spoken as “one two”, and “31” as “three one”.
     digits,
     ///     /// Punctuation such as semicolons, braces, and so on is named aloud (i.e. spoken literally) rather than rendered naturally as appropriate pauses.
-    literalPunctuation,
+    literal_punctuation,
     ///     /// Punctuation is not rendered: neither spoken nor rendered as pauses.
-    noPunctuation,
+    no_punctuation,
     raw_: []const u8,
     pub fn raw(r: []const u8) SpeakAs { return .{ .raw_ = r }; }
 
@@ -20889,7 +20889,7 @@ pub const StopColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
     raw_: []const u8,
@@ -20907,7 +20907,7 @@ pub const StopOpacity = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) StopOpacity { return .{ .raw_ = r }; }
@@ -20922,7 +20922,7 @@ pub const StringSet = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) StringSet { return .{ .raw_ = r }; }
@@ -20937,7 +20937,7 @@ pub const Stroke = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     child,
     raw_: []const u8,
@@ -20953,7 +20953,7 @@ pub const StrokeAlign = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The stroke for each subpath is centered on the outline.
     center,
@@ -20974,7 +20974,7 @@ pub const StrokeAlignment = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     center,
     inner,
@@ -20992,9 +20992,9 @@ pub const StrokeBreak = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    boundingBox,
+    bounding_box,
     slice,
     clone,
     raw_: []const u8,
@@ -21010,7 +21010,7 @@ pub const StrokeColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     aliceblue,
     antiquewhite,
@@ -21220,7 +21220,7 @@ pub const StrokeDashCorner = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
@@ -21239,7 +21239,7 @@ pub const StrokeDashJustify = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Indicates that when the dash pattern does not fit into a subpath a whole number times, the dashes or gaps (or both) will be lengthened so that it does.
     stretch,
@@ -21262,7 +21262,7 @@ pub const StrokeDashadjust = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     stretch,
     compress,
@@ -21281,7 +21281,7 @@ pub const StrokeDasharray = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -21302,7 +21302,7 @@ pub const StrokeDashcorner = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
@@ -21321,7 +21321,7 @@ pub const StrokeDashoffset = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -21342,7 +21342,7 @@ pub const StrokeImage = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     child,
     raw_: []const u8,
@@ -21358,7 +21358,7 @@ pub const StrokeLinecap = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The stroke for each subpath does not extend beyond its two endpoints. (A zero length subpath will therefore not have any stroke.)
     butt,
@@ -21379,7 +21379,7 @@ pub const StrokeLinejoin = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The stroke extends the minimal amount past the corner necessary to form a convex corner. This acts identically to miter, but forces stroke-miterlimit to behave as if it had its minimum value of 1.
     crop,
@@ -21406,7 +21406,7 @@ pub const StrokeMiterlimit = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) StrokeMiterlimit { return .{ .raw_ = r }; }
@@ -21421,7 +21421,7 @@ pub const StrokeOpacity = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) StrokeOpacity { return .{ .raw_ = r }; }
@@ -21436,20 +21436,20 @@ pub const StrokeOrigin = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Use the same stroke positioning area as the parent. If it has no parent, use the initial containing block.
-    matchParent,
+    match_parent,
     ///     /// For SVG shapes or SVG text, use the object bounding box of the element. For CSS boxes, use the bounding box of the text glyph outlines of the element and all in-flow or floated descendants.
-    fillBox,
+    fill_box,
     ///     /// For SVG shapes or SVG text, use the stroke bounding box of the element. For CSS boxes, use the bounding box of the text glyph stroke outlines of the element and all in-flow or floated descendants.
-    strokeBox,
+    stroke_box,
     ///     /// Use the box’s own content-box/padding-box/border-box as the stroke positioning area. For SVG shapes, content-box and padding-box are treated as fill-box, while border-box is treated as stroke-box.
-    contentBox,
+    content_box,
     ///     /// Use the box’s own content-box/padding-box/border-box as the stroke positioning area. For SVG shapes, content-box and padding-box are treated as fill-box, while border-box is treated as stroke-box.
-    paddingBox,
+    padding_box,
     ///     /// Use the box’s own content-box/padding-box/border-box as the stroke positioning area. For SVG shapes, content-box and padding-box are treated as fill-box, while border-box is treated as stroke-box.
-    borderBox,
+    border_box,
     raw_: []const u8,
     pub fn raw(r: []const u8) StrokeOrigin { return .{ .raw_ = r }; }
 
@@ -21463,21 +21463,21 @@ pub const StrokePosition = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     left,
     center,
     right,
     top,
     bottom,
-    xStart,
-    xEnd,
-    yStart,
-    yEnd,
-    blockStart,
-    blockEnd,
-    inlineStart,
-    inlineEnd,
+    x_start,
+    x_end,
+    y_start,
+    y_end,
+    block_start,
+    block_end,
+    inline_start,
+    inline_end,
     start,
     end,
     px_: f32, em_: f32, rem_: f32,
@@ -21499,16 +21499,16 @@ pub const StrokeRepeat = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    repeatX,
-    repeatY,
-    repeatBlock,
-    repeatInline,
+    repeat_x,
+    repeat_y,
+    repeat_block,
+    repeat_inline,
     repeat,
     space,
     round,
-    noRepeat,
+    no_repeat,
     raw_: []const u8,
     pub fn raw(r: []const u8) StrokeRepeat { return .{ .raw_ = r }; }
 
@@ -21522,7 +21522,7 @@ pub const StrokeSize = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     cover,
@@ -21546,7 +21546,7 @@ pub const StrokeWidth = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -21567,7 +21567,7 @@ pub const TabSize = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     raw_: []const u8,
@@ -21586,7 +21586,7 @@ pub const TableLayout = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     fixed,
@@ -21603,7 +21603,7 @@ pub const TextAlign = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Inline-level content is aligned to the start edge of the line box.
     start,
@@ -21618,9 +21618,9 @@ pub const TextAlign = union(enum) {
     ///     /// Text is justified according to the method specified by the text-justify property, in order to exactly fill the line box. Unless otherwise specified by text-align-last, the last line before a forced break or the end of the block is start-aligned.
     justify,
     ///     /// This value behaves the same as inherit (computes to its parent’s computed value) except that an inherited value of start or end is interpreted against the parent’s direction value and results in a computed value of either left or right. Computes to start when specified on the root element. When specified on the text-align shorthand, sets both text-align-all and text-align-last to match-parent.
-    matchParent,
+    match_parent,
     ///     /// Sets both text-align-all and text-align-last to justify, forcing the last line to justify as well.
-    justifyAll,
+    justify_all,
     raw_: []const u8,
     pub fn raw(r: []const u8) TextAlign { return .{ .raw_ = r }; }
 
@@ -21634,7 +21634,7 @@ pub const TextAlignAll = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     start,
     end,
@@ -21642,7 +21642,7 @@ pub const TextAlignAll = union(enum) {
     right,
     center,
     justify,
-    matchParent,
+    match_parent,
     raw_: []const u8,
     pub fn raw(r: []const u8) TextAlignAll { return .{ .raw_ = r }; }
 
@@ -21656,7 +21656,7 @@ pub const TextAlignLast = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// If auto is specified, content on the affected line is aligned per text-align-all unless text-align-all is set to justify, in which case it is start-aligned. All other values are interpreted as described for text-align.
     auto,
@@ -21666,7 +21666,7 @@ pub const TextAlignLast = union(enum) {
     right,
     center,
     justify,
-    matchParent,
+    match_parent,
     raw_: []const u8,
     pub fn raw(r: []const u8) TextAlignLast { return .{ .raw_ = r }; }
 
@@ -21680,7 +21680,7 @@ pub const TextAnchor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     start,
     middle,
@@ -21698,16 +21698,16 @@ pub const TextAutospace = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Same behavior as ideograph-alpha ideograph-numeric.
     normal,
     ///     /// No automatic space is inserted.
-    noAutospace,
+    no_autospace,
     ///     /// Creates extra spacing between runs of ideographs and non-ideographic letters, see § 8.4.1 Inter-script Spacing.
-    ideographAlpha,
+    ideograph_alpha,
     ///     /// Creates extra spacing between runs of ideographs and non-ideographic numerals, see § 8.4.1 Inter-script Spacing.
-    ideographNumeric,
+    ideograph_numeric,
     ///     /// Creates extra non-breaking spacing around punctuation as required by language-specific typographic conventions. In this level, if the element’s content language is French, narrow no-break space (U+202F) and no-break space (U+00A0) is inserted where required by French typographic guidelines. Otherwise this value has no effect. However future specifications may add automatic spacing behavior for other languages.
     punctuation,
     ///     /// The specified spacing is automatically inserted if there are no space characters of any kind (Unicode general category Z) already there. If neither insert nor replace are specified, the behavior is the same as insert.
@@ -21729,7 +21729,7 @@ pub const TextBox = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// If the single keyword normal is specified, it sets text-box-trim to none and text-box-edge to auto. Otherwise, omitting the text-box-trim value sets it to trim-both (not the initial value), while omitting the text-box-edge value sets it to auto (the initial value).
     normal,
@@ -21746,13 +21746,13 @@ pub const TextBoxEdge = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// This property specifies the metrics to use for text-box-trim effects. Values have the same meanings as for line-fit-edge; the auto keyword uses the value of line-fit-edge, interpreting leading (the initial value) as text.
     auto,
     text,
     ideographic,
-    ideographicInk,
+    ideographic_ink,
     cap,
     ex,
     alphabetic,
@@ -21769,14 +21769,14 @@ pub const TextBoxTrim = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// For block containers and column boxes: trim the block-start side of the first formatted line to the specified metric of its root inline box. If there is no such line, or if there is intervening non-zero padding or borders, there is no effect. For inline boxes: trims the block-start side of the box to match its content edge to the metric specified by text-box-edge.
-    trimStart,
+    trim_start,
     ///     /// For block containers and column boxes: trim the block-end side of the last formatted line to the specified metric of its root inline box. If there is no such line, or if there is intervening non-zero padding or borders, there is no effect. For inline boxes: trims the block-end side of the box to match its content edge to the metric specified by text-box-edge.
-    trimEnd,
+    trim_end,
     ///     /// Specifies the behavior of trim-start and trim-end simultaneously.
-    trimBoth,
+    trim_both,
     raw_: []const u8,
     pub fn raw(r: []const u8) TextBoxTrim { return .{ .raw_ = r }; }
 
@@ -21790,7 +21790,7 @@ pub const TextCombineUpright = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Attempt to typeset horizontally all consecutive typographic character units within the box and text run such that they take up the space of a single typographic character unit within the vertical line box.
     all,
@@ -21808,7 +21808,7 @@ pub const TextDecoration = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
     raw_: []const u8,
@@ -21826,7 +21826,7 @@ pub const TextDecorationColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     aliceblue,
     antiquewhite,
@@ -22036,7 +22036,7 @@ pub const TextDecorationInset = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The UA chooses an inset amount that ensures that if two identical underlined elements appear side-by-side they do not appear to have a single underline. (This is important in Chinese, where underlining is a form of punctuation.) text-decoration-inset: auto for <u>石井</u><u>艾俐俐</u>
     auto,
@@ -22057,20 +22057,20 @@ pub const TextDecorationLine = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Each line of text is underlined.
     underline,
     ///     /// Each line of text has a line over it (i.e. on the opposite side from an underline).
     overline,
     ///     /// Each line of text has a line through the middle.
-    lineThrough,
+    line_through,
     ///     /// The text blinks (alternates between visible and invisible). Conforming user agents may simply not blink the text. Note that not blinking the text is one technique to satisfy checkpoint 3.3 of WAI-UAAG. This value is deprecated in favor of Animations [CSS3-ANIMATIONS].
     blink,
     ///     /// This value indicates the type of text decoration used by the user agent to highlight spelling mistakes. Its appearance is UA-defined, and may be platform-dependent.
-    spellingError,
+    spelling_error,
     ///     /// This value indicates the type of text decoration used by the user agent to highlight grammar mistakes. Its appearance is UA defined, and may be platform-dependent.
-    grammarError,
+    grammar_error,
     raw_: []const u8,
     pub fn raw(r: []const u8) TextDecorationLine { return .{ .raw_ = r }; }
 
@@ -22084,7 +22084,7 @@ pub const TextDecorationSkip = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The text-decoration-skip property and its sub-properties (text-decoration-skip-self, text-decoration-skip-box, text-decoration-skip-spaces, text-decoration-skip-ink) control interruptions in line decorations for which the element or an ancestor is the decorating box. The none value sets all sub-properties to none, and the auto value sets all sub-properties to their initial values.
     auto,
@@ -22101,7 +22101,7 @@ pub const TextDecorationSkipBox = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// When drawing text decoration lines applied to an ancestor decorating box, skip over the box’s own margin, border, and padding areas and only draw line decorations within its content area. This value only has an effect for decorations imposed by an ancestor; a decorating box never draws over its own box decoration.
     all,
@@ -22118,7 +22118,7 @@ pub const TextDecorationSkipInk = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// UAs may interrupt underlines and overlines where the line would cross glyph ink and to some distance to either side of the glyph outline. UAs should consider the script of the text (see note below) when determining whether to apply ink-skipping behavior to a given range of content.
     auto,
@@ -22137,20 +22137,20 @@ pub const TextDecorationSkipSelf = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Skip this element (its entire margin box) if it is an atomic inline (such as an image or inline-block).
     auto,
     ///     /// Skip this element (its entire margin box) unconditionally. Don’t draw across it, don’t propagate to it.
-    skipAll,
+    skip_all,
     ///     /// Skip this element (its entire margin box) unconditionally when drawing ancestor underlines.
-    skipUnderline,
+    skip_underline,
     ///     /// Skip this element (its entire margin box) unconditionally when drawing ancestor overlines.
-    skipOverline,
+    skip_overline,
     ///     /// Skip this element (its entire margin box) unconditionally when drawing ancestor line-throughs.
-    skipLineThrough,
+    skip_line_through,
     ///     /// Line decorations from ancestor decorating boxes are applied to this box unconditionally: drawn across it as if it were text if it is an atomic inline, or propagated to it according to the usual rules if it is not.
-    noSkip,
+    no_skip,
     raw_: []const u8,
     pub fn raw(r: []const u8) TextDecorationSkipSelf { return .{ .raw_ = r }; }
 
@@ -22164,7 +22164,7 @@ pub const TextDecorationSkipSpaces = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Skip all spacers and all word separators plus any adjacent letter-spacing or word-spacing.
     all,
@@ -22185,7 +22185,7 @@ pub const TextDecorationStyle = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     solid,
     double,
@@ -22206,12 +22206,12 @@ pub const TextDecorationThickness = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The UA chooses an appropriate thickness for text decoration lines; see below.
     auto,
     ///     /// If the first available font has metrics indicating a preferred underline width, use that width, otherwise behaves as auto.
-    fromFont,
+    from_font,
     hairline,
     thin,
     medium,
@@ -22235,7 +22235,7 @@ pub const TextEmphasis = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     hex_: u32, rgb_: core.Color, rgba_: core.Color,
     raw_: []const u8,
@@ -22253,7 +22253,7 @@ pub const TextEmphasisColor = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     aliceblue,
     antiquewhite,
@@ -22463,7 +22463,7 @@ pub const TextEmphasisPosition = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Draw marks over the text in horizontal typographic modes.
     over,
@@ -22486,7 +22486,7 @@ pub const TextEmphasisSkip = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Skip word separators or other characters belonging to the Unicode separator category (Z*). (But note that emphasis marks are drawn for a space that combines with any combining characters.)
     spaces,
@@ -22509,7 +22509,7 @@ pub const TextEmphasisStyle = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The shape is filled with solid color.
     filled,
@@ -22519,7 +22519,7 @@ pub const TextEmphasisStyle = union(enum) {
     ///     /// Display large circles as marks. The filled circle is U+25CF '●', and the open circle is U+25CB '○'.
     circle,
     ///     /// Display double circles as marks. The filled double-circle is U+25C9 '◉', and the open double-circle is U+25CE '◎'.
-    doubleCircle,
+    double_circle,
     ///     /// Display triangles as marks. The filled triangle is U+25B2 '▲', and the open triangle is U+25B3 '△'.
     triangle,
     ///     /// Display sesames as marks. The filled sesame is U+FE45 '﹅', and the open sesame is U+FE46 '﹆'.
@@ -22537,7 +22537,7 @@ pub const TextGroupAlign = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Inline-level content is group-aligned to the inline start side, by padding the inline end side of each line box.
     start,
@@ -22562,12 +22562,12 @@ pub const TextIndent = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Inverts which lines are affected.
     hanging,
     ///     /// Indentation affects the first line of each block container and each line after a forced line break (but not lines after a soft wrap break).
-    eachLine,
+    each_line,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
     raw_: []const u8,
@@ -22587,18 +22587,18 @@ pub const TextJustify = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The UA determines the justification algorithm to follow, based on a balance between performance and adequate presentation quality. Since justification rules vary by writing system and language, UAs should, where possible, use a justification algorithm appropriate to the text. For example, the UA could use by default a justification method that is a simple universal compromise for all writing systems—​such as primarily expanding word separators and between CJK typographic letter units along with secondarily expanding between Southeast Asian typographic letter units. Then, in cases where the content language of the paragraph is known, it could choose a more language-tailored justification behavior e.g. following the Requirements for Japanese Text Layout for Japanese [JLREQ], using cursive elongation for Arabic, using inter-word for German, etc. An example of cursively-justified Arabic text, rendered by Tasmeem. Like English, Arabic can be justified by adjusting the spacing between words, but in most styles it can also be justified by calligraphically elongating or compressing the letterforms themselves. In this example, the upper text is extended to fill the line by the use of elongated (kashida) forms and swash forms, while the bottom line is compressed slightly by using a stacked combination for the characters between ت and م. By employing traditional calligraphic techniques, a typesetter can justify the line while preserving flow and color, providing a very high quality justification effect. However, this is by its nature a very script-specific effect. Mixed-script text with text-justify: auto: this interpretation uses a universal-compromise justification method, expanding at spaces as well as between CJK and Southeast Asian letters. This effectively uses inter-word + inter-ideograph spacing for lines that have word-separators and/or CJK characters and falls back to inter-cluster behavior for lines that don’t or for which the space stretches too far.
     auto,
     ///     /// Justification adjusts spacing at word separators only (effectively varying the used word-spacing on the line). This behavior is typical for languages that separate words using spaces, like English or Korean. Mixed-script text with text-justify: inter-word
-    interWord,
+    inter_word,
     ///     /// Justification adjusts spacing between each pair of adjacent typographic character units (effectively varying the used letter-spacing on the line). This value is sometimes used in East Asian systems such as Japanese. Mixed-script text with text-justify: inter-character For legacy reasons, UAs must also support the alternate keyword distribute which must compute to inter-character, thus having the exact same meaning and behavior. UAs may treat this as a legacy value alias.
-    interCharacter,
+    inter_character,
     ///     /// Justification adjusts spacing as for auto except: Justification opportunities are disabled at word separators. Justification opportunities are disabled between Bopomofo characters
     ruby,
     ///     /// Justification must not compress spacing controlled by text-spacing-trim or text-autospace. (If this value is not specified, the justification process may reduce such spacing except when the spacing is at the start or end of the line.) This keyword used to be part of text-spacing; it might need renaming to be more specific now that it’s here, as it implies that e.g. U+0020 cannot be compressed. [Issue #7079]
-    noCompress,
+    no_compress,
     raw_: []const u8,
     pub fn raw(r: []const u8) TextJustify { return .{ .raw_ = r }; }
 
@@ -22612,7 +22612,7 @@ pub const TextOrientation = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Typographic character units from horizontal-only scripts are typeset sideways, i.e. 90° clockwise from their standard orientation in horizontal text. Typographic character units from vertical scripts are typeset with their intrinsic orientation. See Vertical Orientations for further details. This value is typical for layout of dominantly vertical-script text.
     mixed,
@@ -22633,7 +22633,7 @@ pub const TextOverflow = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Clip inline content that overflows its block container element. Characters may be only partially rendered.
     clip,
@@ -22654,7 +22654,7 @@ pub const TextRendering = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     optimizeSpeed,
@@ -22673,7 +22673,7 @@ pub const TextShadow = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     aliceblue,
     antiquewhite,
@@ -22888,7 +22888,7 @@ pub const TextSizeAdjust = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Renderers must use the default size adjustment when displaying on a small device.
     auto,
@@ -22907,19 +22907,19 @@ pub const TextSpacing = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Sets both text-spacing-trim and text-autospace to auto.
     auto,
-    spaceAll,
+    space_all,
     normal,
-    spaceFirst,
-    trimStart,
-    trimBoth,
-    trimAll,
-    noAutospace,
-    ideographAlpha,
-    ideographNumeric,
+    space_first,
+    trim_start,
+    trim_both,
+    trim_all,
+    no_autospace,
+    ideograph_alpha,
+    ideograph_numeric,
     punctuation,
     insert,
     replace,
@@ -22936,20 +22936,20 @@ pub const TextSpacingTrim = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// All fullwidth punctuation characters are set with full-width glyphs (spaced).
-    spaceAll,
+    space_all,
     ///     /// Set fullwidth opening punctuation with full-width glyphs (spaced) at the start of each line; set fullwidth closing punctuation with half-width glyphs (flush) at the end of each line if it does not otherwise fit prior to justification, else set the punctuation with full-width glyphs; and collapse spacing between punctuation glyphs as described below.
     normal,
     ///     /// Set fullwidth opening punctuation with full-width glyphs (spaced) on the first line of the block container and each line after a forced line break. Otherwise as normal.
-    spaceFirst,
+    space_first,
     ///     /// Set fullwidth opening punctuation with half-width glyphs (flush) at the start of each line. Otherwise as normal.
-    trimStart,
+    trim_start,
     ///     /// Set fullwidth opening punctuation with half-width glyphs (flush) at the start of each line; set fullwidth closing punctuation with half-width glyphs (flush) at the end of each line; and collapse spacing between punctuation glyphs as described below.
-    trimBoth,
+    trim_both,
     ///     /// Set fullwidth opening punctuation, fullwidth closing punctuation, and fullwidth middle dot punctuation with half-width glyphs, without regards for the position within the line nor for adjacent characters.
-    trimAll,
+    trim_all,
     ///     /// The user agent chooses a set of typographically high quality spacing values. Different user agents running on different platforms may pick different values. Do we need auto? It would be weird for the author to choose platform-dependent behavior at the start of the first line, and it should otherwise use trim-both.
     auto,
     raw_: []const u8,
@@ -22965,7 +22965,7 @@ pub const TextTransform = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Puts the first typographic letter unit of each word, if lowercase, in titlecase; other characters are unaffected.
     capitalize,
@@ -22974,11 +22974,11 @@ pub const TextTransform = union(enum) {
     ///     /// Puts all letters in lowercase.
     lowercase,
     ///     /// Puts all typographic character units in full-width form. If a character does not have a corresponding full-width form, it is left as is. This value is typically used to typeset Latin letters and digits as if they were ideographic characters.
-    fullWidth,
+    full_width,
     ///     /// Converts all small Kana characters to the equivalent full-size Kana. This value is typically used for ruby annotation text, where authors may want all small Kana to be drawn as large Kana to compensate for legibility issues at the small font sizes typically used in ruby.
-    fullSizeKana,
+    full_size_kana,
     ///     /// See MathML Core § 4.2 The math-auto transform.
-    mathAuto,
+    math_auto,
     raw_: []const u8,
     pub fn raw(r: []const u8) TextTransform { return .{ .raw_ = r }; }
 
@@ -22992,7 +22992,7 @@ pub const TextUnderlineOffset = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The UA chooses an appropriate offset for underlines. However, this offset must be zero if the computed value of text-underline-position is from-font and the UA was able to extract an appropriate metric to use from the font.
     auto,
@@ -23015,12 +23015,12 @@ pub const TextUnderlinePosition = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The user agent may use any algorithm to determine the underline’s position; however it must be placed at or under the alphabetic baseline. A typical “alphabetic” underline is positioned just below the alphabetic baseline
     auto,
     ///     /// If the first available font has metrics indicating a preferred underline offset, use that offset, otherwise behaves as auto.
-    fromFont,
+    from_font,
     ///     /// The underline is positioned under the element’s text content. In this case the underline usually does not cross the descenders. (This is sometimes called “accounting” underline.) This value can be combined with left or right if a particular side is preferred in vertical typographic modes. text-underline-position: under Because text-underline-position inherits, and is not reset by the text-decoration shorthand, the following example switches the document to use under underlining, which can be more appropriate for writing systems with long, complicated descenders. It is also often useful for mathematical or chemical texts that use many subscripts. :root { text-underline-position: under; }
     under,
     ///     /// In vertical typographic modes, the underline is aligned as for under, except it is always aligned to the left edge of the text. If this causes the underline to be drawn on the "over" side of the text, then an overline also switches sides and is drawn on the "under" side.
@@ -23040,7 +23040,7 @@ pub const TextWrap = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) TextWrap { return .{ .raw_ = r }; }
@@ -23055,7 +23055,7 @@ pub const TextWrapMode = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Content may break across lines at allowed soft wrap opportunities, as determined by the line-breaking rules in effect, in order to minimize inline-axis overflow.
     wrap,
@@ -23074,7 +23074,7 @@ pub const TextWrapStyle = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The exact algorithm for selecting which soft wrap opportunity to break at is UA-defined. The algorithm may consider multiple lines when making break decisions. The UA may bias for speed over best layout. The UA must not attempt to even out all lines (including the last) as for balance. This value selects the UA’s preferred (or most Web-compatible) wrapping algorithm.
     auto,
@@ -23085,7 +23085,7 @@ pub const TextWrapStyle = union(enum) {
     ///     /// Specifies the UA should bias for better layout over speed, and is expected to consider multiple lines when making break decisions. Otherwise equivalent to auto. The user agent may among other things attempt to avoid excessively short last lines, similarly to avoid-orphans, but it should also improve the layout in additional ways. The precise set of improvements is user agent dependent, and may include things such as: reducing the variation in length between lines; avoiding typographic rivers; prioritizing different classes of soft wrap opportunities, hyphenation opportunities, or justification opportunities; avoiding hyphenation on too many consecutive lines… The necessary computations may be expensive, especially when applied to large amounts of text. Authors are encouraged to assess the impact on performance when using text-wrap-style: pretty, and possibly use it selectively where it matters most.
     pretty,
     ///     /// Specifies the UA should avoid excessively short last lines, and is expected to consider more than one line when making break decisions (for example, to avoid "fixing" an orphan by making the previous line too short). The user agent may decide against improving the last line when it would make some prior line(s) substantially unbalanced. The user agent should not attempt to improve other aspects of the layout beyond what auto if those improvements come at a significant performance cost. For instance, with the given line length, the following test would be wrapped with a single word on the last line, which could be judged too short. ἄνδρα μοι ἔννεπε, μοῦσα, πολύτροπον, ὃς μάλα πολλὰ πλάγχθη, ἐπεὶ Τροίης ἱερὸν πτολίεθρον ἔπερσεν. Applying text-wrap-style: avoid-orphans could yield something like this instead, which is arguably more pleasing: ἄνδρα μοι ἔννεπε, μοῦσα, πολύτροπον, ὃς μάλα πολλὰ πλάγχθη, ἐπεὶ Τροίης ἱερὸν πτολίεθρον ἔπερσεν. However, the following fragment is more vexing: Circumnavigating the Mississippi river An attempt to make the last line less short by wrapping the previous line earlier would result in the following: Circumnavigating the Mississippi river While the last line would indeed no longer be short, the penultimate line would be unsightly. In such cases, user agents are expected to prefer the first rendering despite text-wrap-style: avoid-orphans being set.
-    avoidOrphans,
+    avoid_orphans,
     raw_: []const u8,
     pub fn raw(r: []const u8) TextWrapStyle { return .{ .raw_ = r }; }
 
@@ -23099,7 +23099,7 @@ pub const TimelineScope = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Specifies that all timeline names defined by this element or its flat tree descendants—​whose scope is not already limited by a descendant using timeline-scope—​to be in scope only for this element’s flat tree descendants; and limits descendants to only match timeline names to elements within this subtree.
     all,
@@ -23116,7 +23116,7 @@ pub const TimelineTrigger = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) TimelineTrigger { return .{ .raw_ = r }; }
@@ -23131,7 +23131,7 @@ pub const TimelineTriggerActivationRange = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) TimelineTriggerActivationRange { return .{ .raw_ = r }; }
@@ -23146,7 +23146,7 @@ pub const TimelineTriggerActivationRangeEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     normal,
     px_: f32, em_: f32, rem_: f32,
@@ -23168,7 +23168,7 @@ pub const TimelineTriggerActivationRangeStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     normal,
     px_: f32, em_: f32, rem_: f32,
@@ -23190,7 +23190,7 @@ pub const TimelineTriggerActiveRange = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) TimelineTriggerActiveRange { return .{ .raw_ = r }; }
@@ -23205,7 +23205,7 @@ pub const TimelineTriggerActiveRangeEnd = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The start (for timeline-trigger-active-range-start) or end (for timeline-trigger-active-range-end) is equal to the start/end of the timeline trigger’s activation range.
     auto,
@@ -23229,7 +23229,7 @@ pub const TimelineTriggerActiveRangeStart = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The start (for timeline-trigger-active-range-start) or end (for timeline-trigger-active-range-end) is equal to the start/end of the timeline trigger’s activation range.
     auto,
@@ -23253,7 +23253,7 @@ pub const TimelineTriggerName = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) TimelineTriggerName { return .{ .raw_ = r }; }
@@ -23268,7 +23268,7 @@ pub const TimelineTriggerSource = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
     raw_: []const u8,
@@ -23284,7 +23284,7 @@ pub const Top = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Represents an unconstrained inset; the exact meaning depends on the positioning scheme.
     auto,
@@ -23307,16 +23307,16 @@ pub const TouchAction = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     auto,
-    panX,
-    panLeft,
-    panRight,
-    panY,
-    panUp,
-    panDown,
-    pinchZoom,
+    pan_x,
+    pan_left,
+    pan_right,
+    pan_y,
+    pan_up,
+    pan_down,
+    pinch_zoom,
     manipulation,
     raw_: []const u8,
     pub fn raw(r: []const u8) TouchAction { return .{ .raw_ = r }; }
@@ -23331,7 +23331,7 @@ pub const Transform = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) Transform { return .{ .raw_ = r }; }
@@ -23346,18 +23346,18 @@ pub const TransformBox = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Uses the content box as reference box. The reference box of a table is the border box of its table wrapper box, not its table box.
-    contentBox,
+    content_box,
     ///     /// Uses the border box as reference box. The reference box of a table is the border box of its table wrapper box, not its table box.
-    borderBox,
+    border_box,
     ///     /// Uses the object bounding box as reference box.
-    fillBox,
+    fill_box,
     ///     /// Uses the stroke bounding box as reference box.
-    strokeBox,
+    stroke_box,
     ///     /// Uses the nearest SVG viewport as reference box.
-    viewBox,
+    view_box,
     raw_: []const u8,
     pub fn raw(r: []const u8) TransformBox { return .{ .raw_ = r }; }
 
@@ -23371,7 +23371,7 @@ pub const TransformOrigin = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Computes to 0% for the horizontal position.
     left,
@@ -23402,10 +23402,10 @@ pub const TransformStyle = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     flat,
-    preserve3d,
+    preserve_3d,
     raw_: []const u8,
     pub fn raw(r: []const u8) TransformStyle { return .{ .raw_ = r }; }
 
@@ -23419,18 +23419,18 @@ pub const Transition = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     all,
     linear,
     ease,
-    easeIn,
-    easeOut,
-    easeInOut,
-    stepStart,
-    stepEnd,
+    ease_in,
+    ease_out,
+    ease_in_out,
+    step_start,
+    step_end,
     normal,
-    allowDiscrete,
+    allow_discrete,
     raw_: []const u8,
     pub fn raw(r: []const u8) Transition { return .{ .raw_ = r }; }
 
@@ -23444,10 +23444,10 @@ pub const TransitionBehavior = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     normal,
-    allowDiscrete,
+    allow_discrete,
     raw_: []const u8,
     pub fn raw(r: []const u8) TransitionBehavior { return .{ .raw_ = r }; }
 
@@ -23461,7 +23461,7 @@ pub const TransitionDelay = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) TransitionDelay { return .{ .raw_ = r }; }
@@ -23476,7 +23476,7 @@ pub const TransitionDuration = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) TransitionDuration { return .{ .raw_ = r }; }
@@ -23491,7 +23491,7 @@ pub const TransitionProperty = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// A value of none means that no property will transition. Otherwise, a list of properties to be transitioned, or the keyword all which indicates that all properties are to be transitioned, is given.
     all,
@@ -23508,15 +23508,15 @@ pub const TransitionTimingFunction = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     linear,
     ease,
-    easeIn,
-    easeOut,
-    easeInOut,
-    stepStart,
-    stepEnd,
+    ease_in,
+    ease_out,
+    ease_in_out,
+    step_start,
+    step_end,
     raw_: []const u8,
     pub fn raw(r: []const u8) TransitionTimingFunction { return .{ .raw_ = r }; }
 
@@ -23530,7 +23530,7 @@ pub const Translate = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -23551,7 +23551,7 @@ pub const TriggerScope = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Specifies that all trigger names defined by this element or its descendants—​whose scope is not already limited by a descendant using trigger-scope—​to be in scope only for this element’s flat tree descendants; and limits descendants to only match trigger names to triggers within this subtree. This value only affects trigger names in the same tree scope, as if it were a strictly matched tree-scoped name. (That is, trigger-scope: all acts identically to trigger-scope: --foo, --bar, ..., listing all relevant trigger names.)
     all,
@@ -23568,7 +23568,7 @@ pub const UnicodeBidi = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The box does not open an additional level of embedding with respect to the bidirectional algorithm. For inline boxes, implicit reordering works across box boundaries.
     normal,
@@ -23577,9 +23577,9 @@ pub const UnicodeBidi = union(enum) {
     ///     /// On an inline box, this bidi-isolates its contents. This is similar to a directional embedding (and increases the embedding level accordingly) except that each sequence of inline-level boxes uninterrupted by any block boundary or forced paragraph break is treated as an isolated sequence: the content within the sequence is ordered as if inside an independent paragraph with the base directionality specified by the box’s direction property. for the purpose of bidi resolution in its containing bidi paragraph, the sequence is treated as if it were a single Object Replacement Character (U+FFFC). In effect, neither is the content inside the box bidi-affected by the content surrounding the box, nor is the content surrounding the box bidi-affected by the content or specified directionality of the box. However, forced paragraph breaks within the box still create a corresponding break in the containing paragraph.
     isolate,
     ///     /// This value puts the box’s immediate inline content in a directional override. For an inline, this means that the box acts like a directional embedding in the bidirectional algorithm, except that reordering within it is strictly in sequence according to the direction property; the implicit part of the bidirectional algorithm is ignored. For a block container, the override is applied to an anonymous inline box that surrounds all of its content.
-    bidiOverride,
+    bidi_override,
     ///     /// This combines the isolation behavior of isolate with the directional override behavior of bidi-override: to surrounding content, it is equivalent to isolate, but within the box content is ordered as if bidi-override were specified. It effectively nests a directional override inside an isolated sequence.
-    isolateOverride,
+    isolate_override,
     ///     /// This value behaves as isolate except that for the purposes of the Unicode bidirectional algorithm, the base directionality of each of the box’s bidi paragraphs (if a block container) or isolated sequences (if an inline) is determined by following the heuristic in rules P2 and P3 of the Unicode bidirectional algorithm (rather than by using the direction property of the box).
     plaintext,
     raw_: []const u8,
@@ -23595,7 +23595,7 @@ pub const UserSelect = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The used value of auto is determined as follows: On the ::before and ::after pseudo-elements, the used value is none If the element is an editable element, the used value is contain Otherwise, if the used value of user-select on the parent of this element is all, the used value is all Otherwise, if the used value of user-select on the parent of this element is none, the used value is none Otherwise, the used value is text
     auto,
@@ -23618,12 +23618,12 @@ pub const VectorEffect = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
-    nonScalingStroke,
-    nonScalingSize,
-    nonRotation,
-    fixedPosition,
+    non_scaling_stroke,
+    non_scaling_size,
+    non_rotation,
+    fixed_position,
     raw_: []const u8,
     pub fn raw(r: []const u8) VectorEffect { return .{ .raw_ = r }; }
 
@@ -23637,7 +23637,7 @@ pub const VerticalAlign = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Specifies first-baseline alignment.
     first,
@@ -23656,7 +23656,7 @@ pub const ViewTimeline = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) ViewTimeline { return .{ .raw_ = r }; }
@@ -23671,7 +23671,7 @@ pub const ViewTimelineAxis = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Specifies to use the measure of progress along the block axis of the scroll container. (Default.)
     block,
@@ -23694,7 +23694,7 @@ pub const ViewTimelineInset = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Indicates to use the value of scroll-padding.
     auto,
@@ -23717,7 +23717,7 @@ pub const ViewTimelineName = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) ViewTimelineName { return .{ .raw_ = r }; }
@@ -23732,7 +23732,7 @@ pub const ViewTransitionClass = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) ViewTransitionClass { return .{ .raw_ = r }; }
@@ -23747,7 +23747,7 @@ pub const ViewTransitionGroup = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The view-transition-group() pseudo-element generated by this element is a child of the view-transition-group-children() pseudo-element generated by this element’s nearest view-transition-group() generating flat tree ancestor element with a non-normal view-transition-group value, if any. If no such element is present, the view-transition-group() pseudo-element generated by this element is a direct child of the ::view-transition pseudo-element associated with this view transition.
     normal,
@@ -23768,7 +23768,7 @@ pub const ViewTransitionName = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) ViewTransitionName { return .{ .raw_ = r }; }
@@ -23783,7 +23783,7 @@ pub const ViewTransitionScope = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     all,
     raw_: []const u8,
@@ -23799,14 +23799,14 @@ pub const Visibility = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The generated box is visible, as normal.
     visible,
     ///     /// Any boxes generated by the element are invisible. Descendants of the element can, however, be visible if they have visibility: visible.
     hidden,
     ///     /// Any boxes generated by the element and its descendants are invisible (regardless of their visibility value).
-    forceHidden,
+    force_hidden,
     ///     /// Indicates that the box is collapsed, which can cause it to take up less space than otherwise in a formatting-context–specific way. See dynamic row and column effects in tables [CSS2] and collapsed flex items in flex layout [CSS-FLEXBOX-1]. In all other cases, however, (i.e. unless otherwise specified) this simply makes the box invisible, just like hidden.
     collapse,
     raw_: []const u8,
@@ -23822,7 +23822,7 @@ pub const VoiceBalance = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Same as -100.
     left,
@@ -23847,7 +23847,7 @@ pub const VoiceDuration = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Resolves to a used value corresponding to the duration of the speech synthesis when using the inherited voice-rate.
     auto,
@@ -23864,7 +23864,7 @@ pub const VoiceFamily = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Indicates that the voice-family value gets inherited and used regardless of any potential language change within the content markup (see the section below about voice selection and language handling). This value behaves as inherit when applied to the root element. Note: Descendants of the element automatically inherit the preserve value, unless it is explicitly overridden by other voice-family values (e.g. name, gender, age).
     preserve,
@@ -23881,12 +23881,12 @@ pub const VoicePitch = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// If specified, this keyword indicates that the specified frequency represents an absolute value. If a negative frequency is specified, the computed frequency will be zero.
     absolute,
     ///     /// A sequence of monotonically non-decreasing pitch levels that are implementation and voice specific. When the computed value for a given element is only a keyword (i.e. no relative offset is specified), then the corresponding absolute frequency will be re-evaluated on a voice change. Conversely, the application of a relative offset requires the calculation of the resulting frequency based on the current voice at the point at which the relative offset is specified, so the computed frequency will inherit absolutely regardless of any voice change further down the style cascade. Authors should therefore only use keyword values in cases where they wish that voice changes trigger the re-evaluation of the conversion from a keyword to a concrete, voice-dependent frequency.
-    xLow,
+    x_low,
     ///     /// A sequence of monotonically non-decreasing pitch levels that are implementation and voice specific. When the computed value for a given element is only a keyword (i.e. no relative offset is specified), then the corresponding absolute frequency will be re-evaluated on a voice change. Conversely, the application of a relative offset requires the calculation of the resulting frequency based on the current voice at the point at which the relative offset is specified, so the computed frequency will inherit absolutely regardless of any voice change further down the style cascade. Authors should therefore only use keyword values in cases where they wish that voice changes trigger the re-evaluation of the conversion from a keyword to a concrete, voice-dependent frequency.
     low,
     ///     /// A sequence of monotonically non-decreasing pitch levels that are implementation and voice specific. When the computed value for a given element is only a keyword (i.e. no relative offset is specified), then the corresponding absolute frequency will be re-evaluated on a voice change. Conversely, the application of a relative offset requires the calculation of the resulting frequency based on the current voice at the point at which the relative offset is specified, so the computed frequency will inherit absolutely regardless of any voice change further down the style cascade. Authors should therefore only use keyword values in cases where they wish that voice changes trigger the re-evaluation of the conversion from a keyword to a concrete, voice-dependent frequency.
@@ -23894,7 +23894,7 @@ pub const VoicePitch = union(enum) {
     ///     /// A sequence of monotonically non-decreasing pitch levels that are implementation and voice specific. When the computed value for a given element is only a keyword (i.e. no relative offset is specified), then the corresponding absolute frequency will be re-evaluated on a voice change. Conversely, the application of a relative offset requires the calculation of the resulting frequency based on the current voice at the point at which the relative offset is specified, so the computed frequency will inherit absolutely regardless of any voice change further down the style cascade. Authors should therefore only use keyword values in cases where they wish that voice changes trigger the re-evaluation of the conversion from a keyword to a concrete, voice-dependent frequency.
     high,
     ///     /// A sequence of monotonically non-decreasing pitch levels that are implementation and voice specific. When the computed value for a given element is only a keyword (i.e. no relative offset is specified), then the corresponding absolute frequency will be re-evaluated on a voice change. Conversely, the application of a relative offset requires the calculation of the resulting frequency based on the current voice at the point at which the relative offset is specified, so the computed frequency will inherit absolutely regardless of any voice change further down the style cascade. Authors should therefore only use keyword values in cases where they wish that voice changes trigger the re-evaluation of the conversion from a keyword to a concrete, voice-dependent frequency.
-    xHigh,
+    x_high,
     percent_: f32,
     raw_: []const u8,
     pub fn percent(v: f32) VoicePitch { return .{ .percent_ = v }; }
@@ -23910,12 +23910,12 @@ pub const VoiceRange = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// If specified, this keyword indicates that the specified frequency represents an absolute value. If a negative frequency is specified, the computed frequency will be zero.
     absolute,
     ///     /// A sequence of monotonically non-decreasing pitch levels that are implementation and voice specific. When the computed value for a given element is only a keyword (i.e. no relative offset is specified), then the corresponding absolute frequency will be re-evaluated on a voice change. Conversely, the application of a relative offset requires the calculation of the resulting frequency based on the current voice at the point at which the relative offset is specified, so the computed frequency will inherit absolutely regardless of any voice change further down the style cascade. Authors should therefore only use keyword values in cases where they wish that voice changes trigger the re-evaluation of the conversion from a keyword to a concrete, voice-dependent frequency.
-    xLow,
+    x_low,
     ///     /// A sequence of monotonically non-decreasing pitch levels that are implementation and voice specific. When the computed value for a given element is only a keyword (i.e. no relative offset is specified), then the corresponding absolute frequency will be re-evaluated on a voice change. Conversely, the application of a relative offset requires the calculation of the resulting frequency based on the current voice at the point at which the relative offset is specified, so the computed frequency will inherit absolutely regardless of any voice change further down the style cascade. Authors should therefore only use keyword values in cases where they wish that voice changes trigger the re-evaluation of the conversion from a keyword to a concrete, voice-dependent frequency.
     low,
     ///     /// A sequence of monotonically non-decreasing pitch levels that are implementation and voice specific. When the computed value for a given element is only a keyword (i.e. no relative offset is specified), then the corresponding absolute frequency will be re-evaluated on a voice change. Conversely, the application of a relative offset requires the calculation of the resulting frequency based on the current voice at the point at which the relative offset is specified, so the computed frequency will inherit absolutely regardless of any voice change further down the style cascade. Authors should therefore only use keyword values in cases where they wish that voice changes trigger the re-evaluation of the conversion from a keyword to a concrete, voice-dependent frequency.
@@ -23923,7 +23923,7 @@ pub const VoiceRange = union(enum) {
     ///     /// A sequence of monotonically non-decreasing pitch levels that are implementation and voice specific. When the computed value for a given element is only a keyword (i.e. no relative offset is specified), then the corresponding absolute frequency will be re-evaluated on a voice change. Conversely, the application of a relative offset requires the calculation of the resulting frequency based on the current voice at the point at which the relative offset is specified, so the computed frequency will inherit absolutely regardless of any voice change further down the style cascade. Authors should therefore only use keyword values in cases where they wish that voice changes trigger the re-evaluation of the conversion from a keyword to a concrete, voice-dependent frequency.
     high,
     ///     /// A sequence of monotonically non-decreasing pitch levels that are implementation and voice specific. When the computed value for a given element is only a keyword (i.e. no relative offset is specified), then the corresponding absolute frequency will be re-evaluated on a voice change. Conversely, the application of a relative offset requires the calculation of the resulting frequency based on the current voice at the point at which the relative offset is specified, so the computed frequency will inherit absolutely regardless of any voice change further down the style cascade. Authors should therefore only use keyword values in cases where they wish that voice changes trigger the re-evaluation of the conversion from a keyword to a concrete, voice-dependent frequency.
-    xHigh,
+    x_high,
     percent_: f32,
     raw_: []const u8,
     pub fn percent(v: f32) VoiceRange { return .{ .percent_ = v }; }
@@ -23939,12 +23939,12 @@ pub const VoiceRate = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Represents the default rate produced by the speech synthesizer for the currently active voice. This is processor-specific and depends on the language and dialect, and on the "personality" of the voice.
     normal,
     ///     /// A sequence of monotonically non-decreasing speaking rates that are implementation- and voice-specific. For example, typical values for the English language are (in words per minute) x-slow = 80, slow = 120, medium = between 180 and 200, fast = 500.
-    xSlow,
+    x_slow,
     ///     /// A sequence of monotonically non-decreasing speaking rates that are implementation- and voice-specific. For example, typical values for the English language are (in words per minute) x-slow = 80, slow = 120, medium = between 180 and 200, fast = 500.
     slow,
     ///     /// A sequence of monotonically non-decreasing speaking rates that are implementation- and voice-specific. For example, typical values for the English language are (in words per minute) x-slow = 80, slow = 120, medium = between 180 and 200, fast = 500.
@@ -23952,7 +23952,7 @@ pub const VoiceRate = union(enum) {
     ///     /// A sequence of monotonically non-decreasing speaking rates that are implementation- and voice-specific. For example, typical values for the English language are (in words per minute) x-slow = 80, slow = 120, medium = between 180 and 200, fast = 500.
     fast,
     ///     /// A sequence of monotonically non-decreasing speaking rates that are implementation- and voice-specific. For example, typical values for the English language are (in words per minute) x-slow = 80, slow = 120, medium = between 180 and 200, fast = 500.
-    xFast,
+    x_fast,
     percent_: f32,
     raw_: []const u8,
     pub fn percent(v: f32) VoiceRate { return .{ .percent_ = v }; }
@@ -23968,7 +23968,7 @@ pub const VoiceStress = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Represents the default emphasis produced by the speech synthesizer.
     normal,
@@ -23991,12 +23991,12 @@ pub const VoiceVolume = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Specifies that no sound is generated (the text is read "silently").
     silent,
     ///     /// This sequence of keywords corresponds to monotonically non-decreasing volume levels, mapped to implementation-dependent values that meet the listener’s requirements with regards to perceived loudness. These audio levels are typically provided via a preference mechanism that allow users to calibrate sound options according to their auditory environment. The keyword x-soft maps to the user’s minimum audible volume level, x-loud maps to the user’s maximum tolerable volume level, medium maps to the user’s preferred volume level, soft and loud map to intermediary values.
-    xSoft,
+    x_soft,
     ///     /// This sequence of keywords corresponds to monotonically non-decreasing volume levels, mapped to implementation-dependent values that meet the listener’s requirements with regards to perceived loudness. These audio levels are typically provided via a preference mechanism that allow users to calibrate sound options according to their auditory environment. The keyword x-soft maps to the user’s minimum audible volume level, x-loud maps to the user’s maximum tolerable volume level, medium maps to the user’s preferred volume level, soft and loud map to intermediary values.
     soft,
     ///     /// This sequence of keywords corresponds to monotonically non-decreasing volume levels, mapped to implementation-dependent values that meet the listener’s requirements with regards to perceived loudness. These audio levels are typically provided via a preference mechanism that allow users to calibrate sound options according to their auditory environment. The keyword x-soft maps to the user’s minimum audible volume level, x-loud maps to the user’s maximum tolerable volume level, medium maps to the user’s preferred volume level, soft and loud map to intermediary values.
@@ -24004,7 +24004,7 @@ pub const VoiceVolume = union(enum) {
     ///     /// This sequence of keywords corresponds to monotonically non-decreasing volume levels, mapped to implementation-dependent values that meet the listener’s requirements with regards to perceived loudness. These audio levels are typically provided via a preference mechanism that allow users to calibrate sound options according to their auditory environment. The keyword x-soft maps to the user’s minimum audible volume level, x-loud maps to the user’s maximum tolerable volume level, medium maps to the user’s preferred volume level, soft and loud map to intermediary values.
     loud,
     ///     /// This sequence of keywords corresponds to monotonically non-decreasing volume levels, mapped to implementation-dependent values that meet the listener’s requirements with regards to perceived loudness. These audio levels are typically provided via a preference mechanism that allow users to calibrate sound options according to their auditory environment. The keyword x-soft maps to the user’s minimum audible volume level, x-loud maps to the user’s maximum tolerable volume level, medium maps to the user’s preferred volume level, soft and loud map to intermediary values.
-    xLoud,
+    x_loud,
     raw_: []const u8,
     pub fn raw(r: []const u8) VoiceVolume { return .{ .raw_ = r }; }
 
@@ -24018,16 +24018,16 @@ pub const WhiteSpace = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// This value directs user agents to collapse sequences of white space into a single character (or in some cases, no character). Lines may wrap at allowed soft wrap opportunities, as determined by the line-breaking rules in effect, in order to minimize inline-axis overflow.
     normal,
     ///     /// This value prevents user agents from collapsing sequences of white space. Segment breaks such as line feeds are preserved as forced line breaks. Lines only break at forced line breaks; content that does not fit within the block container overflows it.
     pre,
     ///     /// Like pre, this value preserves white space; but like normal, it allows wrapping.
-    preWrap,
+    pre_wrap,
     ///     /// Like normal, this value collapses consecutive white space characters and allows wrapping, but it preserves segment breaks in the source as forced line breaks.
-    preLine,
+    pre_line,
     raw_: []const u8,
     pub fn raw(r: []const u8) WhiteSpace { return .{ .raw_ = r }; }
 
@@ -24041,7 +24041,7 @@ pub const WhiteSpaceCollapse = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// This value directs user agents to collapse sequences of white space into a single character (or in some cases, no character).
     collapse,
@@ -24050,11 +24050,11 @@ pub const WhiteSpaceCollapse = union(enum) {
     ///     /// This value prevents user agents from collapsing sequences of white space. Segment breaks such as line feeds are preserved as forced line breaks.
     preserve,
     ///     /// Like collapse, this value collapses consecutive white space characters, but preserves segment breaks in the source as forced line breaks.
-    preserveBreaks,
+    preserve_breaks,
     ///     /// This value prevents user agents from collapsing sequences of white space, and converts tabs and segment breaks to spaces. (This value is intended to represent the behavior of xml:space="preserve" in SVG.)
-    preserveSpaces,
+    preserve_spaces,
     ///     /// The behavior is identical to that of preserve, except that: Any sequence of preserved white space or other space separators always takes up space, including at the end of the line. A soft wrap opportunity exists after every preserved white space character and after every other space separator (including between adjacent spaces).
-    breakSpaces,
+    break_spaces,
     raw_: []const u8,
     pub fn raw(r: []const u8) WhiteSpaceCollapse { return .{ .raw_ = r }; }
 
@@ -24068,14 +24068,14 @@ pub const WhiteSpaceTrim = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// This value directs the UA to collapse all collapsible whitespace immediately before the start of the element.
-    discardBefore,
+    discard_before,
     ///     /// This value directs the UA to collapse all collapsible whitespace immediately after the end of the element.
-    discardAfter,
+    discard_after,
     ///     /// For block containers this value directs UAs to discard all whitespace at the beginning of the element up to and including the last segment break before the first non-white-space character in the element as well as to discard all white space at the end of the element starting with the first segment break after the last non-white-space character in the element. For other elements this value directs UAs to discard all whitespace at the beginning and end of the element.
-    discardInner,
+    discard_inner,
     raw_: []const u8,
     pub fn raw(r: []const u8) WhiteSpaceTrim { return .{ .raw_ = r }; }
 
@@ -24089,7 +24089,7 @@ pub const Widows = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     raw_: []const u8,
     pub fn raw(r: []const u8) Widows { return .{ .raw_ = r }; }
@@ -24104,18 +24104,18 @@ pub const Width = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// For width/height, specifies an automatic size (automatic block size/automatic inline size). See the relevant layout module for how to calculate this. For min-width/min-height, specifies an automatic minimum size. Unless otherwise defined by the relevant layout module, however, it resolves to a used value of 0. For backwards-compatibility, the resolved value of this keyword is zero for boxes of all [CSS2] display types: block and inline boxes, inline blocks, and all the table layout boxes. It also resolves to zero when no box is generated.
     auto,
     ///     /// Use the min-content size in the relevant axis; for a box’s block size, unless otherwise specified, this is equivalent to its automatic size.
-    minContent,
+    min_content,
     ///     /// Use the max-content size in the relevant axis; for a box’s block size, unless otherwise specified, this is equivalent to its automatic size.
-    maxContent,
+    max_content,
     ///     /// Applies stretch-fit sizing, attempting to match the size of the box’s margin box to the size of its containing block. See § 6.1 Stretch-fit Sizing: filling the containing block.
     stretch,
     ///     /// Essentially fit-content(stretch) i.e. min(max-content, max(min-content, stretch)).
-    fitContent,
+    fit_content,
     ///     /// If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.
     contain,
     px_: f32, em_: f32, rem_: f32,
@@ -24137,12 +24137,12 @@ pub const WillChange = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Expresses no particular intent; the user agent should apply whatever heuristics and optimizations it normally does.
     auto,
     ///     /// Indicates that the author expects to animate or change the scroll position of the element in the near future. For example, browsers often only render the content in the "scroll window" on a scrollable element, and some of the content past that window, balancing memory and time savings from the skipped rendering against making scrolling look nice. A browser might take this value as a signal to expand the range of content around the scroll window that is rendered, so that longer/faster scrolls can be done smoothly.
-    scrollPosition,
+    scroll_position,
     ///     /// Indicates that the author expects to animate or change something about the element’s contents in the near future. For example, browsers often “cache” rendering of elements over time, because most things don’t change very often, or only change their position. However, if an element does change its contents continually, producing and maintaining this cache is a waste of time. A browser might take this value as a signal to cache less aggressively on the element, or avoid caching at all and just continually re-render the element from scratch. This value is mostly intended to help browsers optimize JS-based animations of content, which change aspects of an element’s contents many times per second. This kind of optimization, when possible, is already done automatically by browsers when declarative animations are used.
     contents,
     raw_: []const u8,
@@ -24158,20 +24158,20 @@ pub const WordBreak = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Words break according to their customary rules, as described above. Korean, which commonly exhibits two different behaviors, allows breaks between any two consecutive Hangul/Hanja. For Ethiopic, which also exhibits two different behaviors, such breaks within words are not allowed. Some writing systems require specific processing to obtain the customarily expected soft wrap opportunities, as described in § 6.1.1 Analytical Word Breaking.
     normal,
     ///     /// Breaking is allowed within “words”: specifically, in addition to soft wrap opportunities allowed for normal, any typographic letter units (and any typographic character units resolving to the NU (“numeric”), AL (“alphabetic”), or SA (“Southeast Asian”) line breaking classes [UAX14]) are instead treated as ID (“ideographic characters”) for the purpose of line-breaking. Hyphenation is not applied.
-    breakAll,
+    break_all,
     ///     /// Breaking is forbidden within “words”: implicit soft wrap opportunities between typographic letter units (or other typographic character units belonging to the NU, AL, AI, or ID Unicode line breaking classes [UAX14]) are suppressed, i.e. breaks are prohibited between pairs of such characters (regardless of line-break settings other than anywhere) except where opportunities exist due to § 6.1.1.1 Lexical Word Breaking. Otherwise this option is equivalent to normal. In this style, sequences of CJK characters do not break.
-    keepAll,
+    keep_all,
     ///     /// Behaves the same as normal, except that § 6.1.1.1 Lexical Word Breaking must not be performed. Specifically, typographic character units with class SA in [UAX14] must be treated as if they had class AL (i.e. assuming a value of line-break other than anywhere, there is no soft wrap opportunity between pairs of such characters). alternatively, this value could be based on keep-all rather than normal. Yet another variant is to merge this behavior with keep-all.
     manual,
     ///     /// Behaves the same as normal, except that this value directs the user agent to perform language-specific content analysis to prioritize keeping natural phrases (of multiple words) together. If the content language of the element is unknown, or if the user agent does not know how to detect phrase boundaries for that particular language, this value must behave as normal. Otherwise, the user agent should detect phrase boundaries and suppress soft wrap opportunities within each phrase. Regardless of the content language and support for phrase boundary detection, hyphenation opportunities are suppressed as if hyphens: none had been specified.
-    autoPhrase,
+    auto_phrase,
     ///     /// For compatibility with legacy content, the word-break property also supports a deprecated break-word keyword. When specified, this has the same effect as word-break: normal and overflow-wrap: anywhere, regardless of the actual value of the overflow-wrap property.
-    breakWord,
+    break_word,
     raw_: []const u8,
     pub fn raw(r: []const u8) WordBreak { return .{ .raw_ = r }; }
 
@@ -24185,14 +24185,14 @@ pub const WordSpaceTransform = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Expandable separators within the child text of this element are replaced by U+0020 SPACE.
     space,
     ///     /// Expandable separators within the child text of this element are replaced by U+3000 IDEOGRAPHIC SPACE.
-    ideographicSpace,
+    ideographic_space,
     ///     /// If the content language is known and the user agent supports linguistic analysis for this language, the user agent must detect phrase boundaries. If a word-separator character, other space separator, or U+200B ZERO WIDTH SPACE character does not already occur at that boundary, then the UA must insert a virtual expandable separator. If this value is omitted, or if the content language is unknown, or if the user agent does not support detecting phrase boundaries for that language, there are no virtual expandable separator.
-    autoPhrase,
+    auto_phrase,
     raw_: []const u8,
     pub fn raw(r: []const u8) WordSpaceTransform { return .{ .raw_ = r }; }
 
@@ -24206,7 +24206,7 @@ pub const WordSpacing = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// No additional spacing is applied. Computes to zero.
     normal,
@@ -24229,10 +24229,10 @@ pub const WordWrap = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     normal,
-    breakWord,
+    break_word,
     anywhere,
     raw_: []const u8,
     pub fn raw(r: []const u8) WordWrap { return .{ .raw_ = r }; }
@@ -24247,16 +24247,16 @@ pub const WrapAfter = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Lines may break at allowed break points before and after the box, as determined by the line-breaking rules in effect.
     auto,
     ///     /// Line breaking is suppressed immediately before/after the box: the UA may only break there if there are no other valid break points in the line. If the text breaks, line-breaking restrictions are honored as for auto.
     avoid,
     ///     /// Same as avoid, but only for line breaks.
-    avoidLine,
+    avoid_line,
     ///     /// Same as avoid, but only for flex line breaks.
-    avoidFlex,
+    avoid_flex,
     ///     /// Force a line break immediately before/after the box if the box is an inline-level box.
     line,
     ///     /// Force a flex line break immediately before/after the box if the box is a flex item in a multi-line flex container.
@@ -24274,16 +24274,16 @@ pub const WrapBefore = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Lines may break at allowed break points before and after the box, as determined by the line-breaking rules in effect.
     auto,
     ///     /// Line breaking is suppressed immediately before/after the box: the UA may only break there if there are no other valid break points in the line. If the text breaks, line-breaking restrictions are honored as for auto.
     avoid,
     ///     /// Same as avoid, but only for line breaks.
-    avoidLine,
+    avoid_line,
     ///     /// Same as avoid, but only for flex line breaks.
-    avoidFlex,
+    avoid_flex,
     ///     /// Force a line break immediately before/after the box if the box is an inline-level box.
     line,
     ///     /// Force a flex line break immediately before/after the box if the box is a flex item in a multi-line flex container.
@@ -24301,7 +24301,7 @@ pub const WrapFlow = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// No exclusion is created. Inline flow content interacts with the element as usual. In particular, if the element is a float (see [CSS2]), the behavior is unchanged.
     auto,
@@ -24330,7 +24330,7 @@ pub const WrapInside = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Lines may break at allowed break points within the box, as determined by the line-breaking rules in effect.
     auto,
@@ -24349,7 +24349,7 @@ pub const WrapThrough = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The element inherits its parent node’s wrapping context. Its descendant inline content wraps around exclusions defined outside the element.
     wrap,
@@ -24366,18 +24366,18 @@ pub const WritingMode = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// Top-to-bottom block flow direction. Both the writing mode and the typographic mode are horizontal.
-    horizontalTb,
+    horizontal_tb,
     ///     /// Right-to-left block flow direction. Both the writing mode and the typographic mode are vertical.
-    verticalRl,
+    vertical_rl,
     ///     /// Left-to-right block flow direction. Both the writing mode and the typographic mode are vertical.
-    verticalLr,
+    vertical_lr,
     ///     /// Right-to-left block flow direction. The writing mode is vertical, while the typographic mode is horizontal.
-    sidewaysRl,
+    sideways_rl,
     ///     /// Left-to-right block flow direction. The writing mode is vertical, while the typographic mode is horizontal.
-    sidewaysLr,
+    sideways_lr,
     raw_: []const u8,
     pub fn raw(r: []const u8) WritingMode { return .{ .raw_ = r }; }
 
@@ -24391,7 +24391,7 @@ pub const X = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -24412,7 +24412,7 @@ pub const Y = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     px_: f32, em_: f32, rem_: f32,
     percent_: f32,
@@ -24433,7 +24433,7 @@ pub const ZIndex = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     ///     /// The stack level of the generated box in the current stacking context is 0. The box does not establish a new stacking context unless it is the root element.
     auto,
@@ -24450,7 +24450,7 @@ pub const Zoom = union(enum) {
     inherit,
     initial,
     revert,
-    revertLayer,
+    revert_layer,
     unset,
     percent_: f32,
     raw_: []const u8,
@@ -24464,303 +24464,303 @@ pub const Style = struct {
 
     /// -webkit-align-content
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-align-content
-    webkitAlignContent: WebkitAlignContent = .none,
+    webkit_align_content: WebkitAlignContent = .none,
 
     /// -webkit-align-items
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-align-items
-    webkitAlignItems: WebkitAlignItems = .none,
+    webkit_align_items: WebkitAlignItems = .none,
 
     /// -webkit-align-self
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-align-self
-    webkitAlignSelf: WebkitAlignSelf = .none,
+    webkit_align_self: WebkitAlignSelf = .none,
 
     /// -webkit-animation
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-animation
-    webkitAnimation: WebkitAnimation = .none,
+    webkit_animation: WebkitAnimation = .none,
 
     /// -webkit-animation-delay
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-animation-delay
-    webkitAnimationDelay: WebkitAnimationDelay = .none,
+    webkit_animation_delay: WebkitAnimationDelay = .none,
 
     /// -webkit-animation-direction
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-animation-direction
-    webkitAnimationDirection: WebkitAnimationDirection = .none,
+    webkit_animation_direction: WebkitAnimationDirection = .none,
 
     /// -webkit-animation-duration
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-animation-duration
-    webkitAnimationDuration: WebkitAnimationDuration = .none,
+    webkit_animation_duration: WebkitAnimationDuration = .none,
 
     /// -webkit-animation-fill-mode
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-animation-fill-mode
-    webkitAnimationFillMode: WebkitAnimationFillMode = .none,
+    webkit_animation_fill_mode: WebkitAnimationFillMode = .none,
 
     /// -webkit-animation-iteration-count
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-animation-iteration-count
-    webkitAnimationIterationCount: WebkitAnimationIterationCount = .none,
+    webkit_animation_iteration_count: WebkitAnimationIterationCount = .none,
 
     /// -webkit-animation-name
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-animation-name
-    webkitAnimationName: WebkitAnimationName = .none,
+    webkit_animation_name: WebkitAnimationName = .none,
 
     /// -webkit-animation-play-state
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-animation-play-state
-    webkitAnimationPlayState: WebkitAnimationPlayState = .none,
+    webkit_animation_play_state: WebkitAnimationPlayState = .none,
 
     /// -webkit-animation-timing-function
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-animation-timing-function
-    webkitAnimationTimingFunction: WebkitAnimationTimingFunction = .none,
+    webkit_animation_timing_function: WebkitAnimationTimingFunction = .none,
 
     /// -webkit-appearance
     /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef--webkit-appearance
-    webkitAppearance: WebkitAppearance = .none,
+    webkit_appearance: WebkitAppearance = .none,
 
     /// -webkit-backface-visibility
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-backface-visibility
-    webkitBackfaceVisibility: WebkitBackfaceVisibility = .none,
+    webkit_backface_visibility: WebkitBackfaceVisibility = .none,
 
     /// -webkit-background-clip
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-background-clip
-    webkitBackgroundClip: WebkitBackgroundClip = .none,
+    webkit_background_clip: WebkitBackgroundClip = .none,
 
     /// -webkit-background-origin
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-background-origin
-    webkitBackgroundOrigin: WebkitBackgroundOrigin = .none,
+    webkit_background_origin: WebkitBackgroundOrigin = .none,
 
     /// -webkit-background-size
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-background-size
-    webkitBackgroundSize: WebkitBackgroundSize = .none,
+    webkit_background_size: WebkitBackgroundSize = .none,
 
     /// -webkit-border-bottom-left-radius
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-border-bottom-left-radius
-    webkitBorderBottomLeftRadius: WebkitBorderBottomLeftRadius = .none,
+    webkit_border_bottom_left_radius: WebkitBorderBottomLeftRadius = .none,
 
     /// -webkit-border-bottom-right-radius
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-border-bottom-right-radius
-    webkitBorderBottomRightRadius: WebkitBorderBottomRightRadius = .none,
+    webkit_border_bottom_right_radius: WebkitBorderBottomRightRadius = .none,
 
     /// -webkit-border-radius
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-border-radius
-    webkitBorderRadius: WebkitBorderRadius = .none,
+    webkit_border_radius: WebkitBorderRadius = .none,
 
     /// -webkit-border-top-left-radius
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-border-top-left-radius
-    webkitBorderTopLeftRadius: WebkitBorderTopLeftRadius = .none,
+    webkit_border_top_left_radius: WebkitBorderTopLeftRadius = .none,
 
     /// -webkit-border-top-right-radius
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-border-top-right-radius
-    webkitBorderTopRightRadius: WebkitBorderTopRightRadius = .none,
+    webkit_border_top_right_radius: WebkitBorderTopRightRadius = .none,
 
     /// -webkit-box-align
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-box-align
-    webkitBoxAlign: WebkitBoxAlign = .none,
+    webkit_box_align: WebkitBoxAlign = .none,
 
     /// -webkit-box-flex
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-box-flex
-    webkitBoxFlex: WebkitBoxFlex = .none,
+    webkit_box_flex: WebkitBoxFlex = .none,
 
     /// -webkit-box-ordinal-group
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-box-ordinal-group
-    webkitBoxOrdinalGroup: WebkitBoxOrdinalGroup = .none,
+    webkit_box_ordinal_group: WebkitBoxOrdinalGroup = .none,
 
     /// -webkit-box-orient
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-box-orient
-    webkitBoxOrient: WebkitBoxOrient = .none,
+    webkit_box_orient: WebkitBoxOrient = .none,
 
     /// -webkit-box-pack
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-box-pack
-    webkitBoxPack: WebkitBoxPack = .none,
+    webkit_box_pack: WebkitBoxPack = .none,
 
     /// -webkit-box-shadow
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-box-shadow
-    webkitBoxShadow: WebkitBoxShadow = .none,
+    webkit_box_shadow: WebkitBoxShadow = .none,
 
     /// -webkit-box-sizing
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-box-sizing
-    webkitBoxSizing: WebkitBoxSizing = .none,
+    webkit_box_sizing: WebkitBoxSizing = .none,
 
     /// -webkit-filter
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-filter
-    webkitFilter: WebkitFilter = .none,
+    webkit_filter: WebkitFilter = .none,
 
     /// -webkit-flex
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-flex-propdef
-    webkitFlex: WebkitFlex = .none,
+    webkit_flex: WebkitFlex = .none,
 
     /// -webkit-flex-basis
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-flex-basis
-    webkitFlexBasis: WebkitFlexBasis = .none,
+    webkit_flex_basis: WebkitFlexBasis = .none,
 
     /// -webkit-flex-direction
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-flex-direction
-    webkitFlexDirection: WebkitFlexDirection = .none,
+    webkit_flex_direction: WebkitFlexDirection = .none,
 
     /// -webkit-flex-flow
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-flex-flow
-    webkitFlexFlow: WebkitFlexFlow = .none,
+    webkit_flex_flow: WebkitFlexFlow = .none,
 
     /// -webkit-flex-grow
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-flex-grow
-    webkitFlexGrow: WebkitFlexGrow = .none,
+    webkit_flex_grow: WebkitFlexGrow = .none,
 
     /// -webkit-flex-shrink
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-flex-shrink
-    webkitFlexShrink: WebkitFlexShrink = .none,
+    webkit_flex_shrink: WebkitFlexShrink = .none,
 
     /// -webkit-flex-wrap
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-flex-wrap
-    webkitFlexWrap: WebkitFlexWrap = .none,
+    webkit_flex_wrap: WebkitFlexWrap = .none,
 
     /// -webkit-justify-content
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-justify-content
-    webkitJustifyContent: WebkitJustifyContent = .none,
+    webkit_justify_content: WebkitJustifyContent = .none,
 
     /// -webkit-line-clamp
     /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef--webkit-line-clamp
-    webkitLineClamp: WebkitLineClamp = .none,
+    webkit_line_clamp: WebkitLineClamp = .none,
 
     /// -webkit-mask
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask
-    webkitMask: WebkitMask = .none,
+    webkit_mask: WebkitMask = .none,
 
     /// -webkit-mask-box-image
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-box-image
-    webkitMaskBoxImage: WebkitMaskBoxImage = .none,
+    webkit_mask_box_image: WebkitMaskBoxImage = .none,
 
     /// -webkit-mask-box-image-outset
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-box-image-outset
-    webkitMaskBoxImageOutset: WebkitMaskBoxImageOutset = .none,
+    webkit_mask_box_image_outset: WebkitMaskBoxImageOutset = .none,
 
     /// -webkit-mask-box-image-repeat
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-box-image-repeat
-    webkitMaskBoxImageRepeat: WebkitMaskBoxImageRepeat = .none,
+    webkit_mask_box_image_repeat: WebkitMaskBoxImageRepeat = .none,
 
     /// -webkit-mask-box-image-slice
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-box-image-slice
-    webkitMaskBoxImageSlice: WebkitMaskBoxImageSlice = .none,
+    webkit_mask_box_image_slice: WebkitMaskBoxImageSlice = .none,
 
     /// -webkit-mask-box-image-source
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-box-image-source
-    webkitMaskBoxImageSource: WebkitMaskBoxImageSource = .none,
+    webkit_mask_box_image_source: WebkitMaskBoxImageSource = .none,
 
     /// -webkit-mask-box-image-width
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-box-image-width
-    webkitMaskBoxImageWidth: WebkitMaskBoxImageWidth = .none,
+    webkit_mask_box_image_width: WebkitMaskBoxImageWidth = .none,
 
     /// -webkit-mask-clip
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-clip
-    webkitMaskClip: WebkitMaskClip = .none,
+    webkit_mask_clip: WebkitMaskClip = .none,
 
     /// -webkit-mask-composite
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-composite
-    webkitMaskComposite: WebkitMaskComposite = .none,
+    webkit_mask_composite: WebkitMaskComposite = .none,
 
     /// -webkit-mask-image
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-image
-    webkitMaskImage: WebkitMaskImage = .none,
+    webkit_mask_image: WebkitMaskImage = .none,
 
     /// -webkit-mask-origin
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-origin
-    webkitMaskOrigin: WebkitMaskOrigin = .none,
+    webkit_mask_origin: WebkitMaskOrigin = .none,
 
     /// -webkit-mask-position
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-position
-    webkitMaskPosition: WebkitMaskPosition = .none,
+    webkit_mask_position: WebkitMaskPosition = .none,
 
     /// -webkit-mask-repeat
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-repeat
-    webkitMaskRepeat: WebkitMaskRepeat = .none,
+    webkit_mask_repeat: WebkitMaskRepeat = .none,
 
     /// -webkit-mask-size
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-mask-size
-    webkitMaskSize: WebkitMaskSize = .none,
+    webkit_mask_size: WebkitMaskSize = .none,
 
     /// -webkit-order
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-order
-    webkitOrder: WebkitOrder = .none,
+    webkit_order: WebkitOrder = .none,
 
     /// -webkit-perspective
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-perspective
-    webkitPerspective: WebkitPerspective = .none,
+    webkit_perspective: WebkitPerspective = .none,
 
     /// -webkit-perspective-origin
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-perspective-origin
-    webkitPerspectiveOrigin: WebkitPerspectiveOrigin = .none,
+    webkit_perspective_origin: WebkitPerspectiveOrigin = .none,
 
     /// -webkit-text-fill-color
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-text-fill-color
-    webkitTextFillColor: WebkitTextFillColor = .none,
+    webkit_text_fill_color: WebkitTextFillColor = .none,
 
     /// -webkit-text-size-adjust
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-text-size-adjust
-    webkitTextSizeAdjust: WebkitTextSizeAdjust = .none,
+    webkit_text_size_adjust: WebkitTextSizeAdjust = .none,
 
     /// -webkit-text-stroke
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-text-stroke
-    webkitTextStroke: WebkitTextStroke = .none,
+    webkit_text_stroke: WebkitTextStroke = .none,
 
     /// -webkit-text-stroke-color
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-text-stroke-color
-    webkitTextStrokeColor: WebkitTextStrokeColor = .none,
+    webkit_text_stroke_color: WebkitTextStrokeColor = .none,
 
     /// -webkit-text-stroke-width
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-text-stroke-width
-    webkitTextStrokeWidth: WebkitTextStrokeWidth = .none,
+    webkit_text_stroke_width: WebkitTextStrokeWidth = .none,
 
     /// -webkit-transform
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-transform
-    webkitTransform: WebkitTransform = .none,
+    webkit_transform: WebkitTransform = .none,
 
     /// -webkit-transform-origin
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-transform-origin
-    webkitTransformOrigin: WebkitTransformOrigin = .none,
+    webkit_transform_origin: WebkitTransformOrigin = .none,
 
     /// -webkit-transform-style
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-transform-style
-    webkitTransformStyle: WebkitTransformStyle = .none,
+    webkit_transform_style: WebkitTransformStyle = .none,
 
     /// -webkit-transition
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-transition
-    webkitTransition: WebkitTransition = .none,
+    webkit_transition: WebkitTransition = .none,
 
     /// -webkit-transition-delay
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-transition-delay
-    webkitTransitionDelay: WebkitTransitionDelay = .none,
+    webkit_transition_delay: WebkitTransitionDelay = .none,
 
     /// -webkit-transition-duration
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-transition-duration
-    webkitTransitionDuration: WebkitTransitionDuration = .none,
+    webkit_transition_duration: WebkitTransitionDuration = .none,
 
     /// -webkit-transition-property
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-transition-property
-    webkitTransitionProperty: WebkitTransitionProperty = .none,
+    webkit_transition_property: WebkitTransitionProperty = .none,
 
     /// -webkit-transition-timing-function
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef--webkit-transition-timing-function
-    webkitTransitionTimingFunction: WebkitTransitionTimingFunction = .none,
+    webkit_transition_timing_function: WebkitTransitionTimingFunction = .none,
 
     /// -webkit-user-select
     /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef--webkit-user-select
-    webkitUserSelect: WebkitUserSelect = .none,
+    webkit_user_select: WebkitUserSelect = .none,
 
     /// accent-color
     /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-accent-color
-    accentColor: AccentColor = .none,
+    accent_color: AccentColor = .none,
 
     /// align-content
     /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-align-content
-    alignContent: AlignContent = .none,
+    align_content: AlignContent = .none,
 
     /// align-items
     /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-align-items
-    alignItems: AlignItems = .none,
+    align_items: AlignItems = .none,
 
     /// align-self
     /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-align-self
-    alignSelf: AlignSelf = .none,
+    align_self: AlignSelf = .none,
 
     /// alignment-baseline
     /// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-alignment-baseline
-    alignmentBaseline: AlignmentBaseline = .none,
+    alignment_baseline: AlignmentBaseline = .none,
 
     /// all
     /// - **W3C**: https://drafts.csswg.org/css-cascade-5/#propdef-all
@@ -24768,11 +24768,11 @@ pub const Style = struct {
 
     /// anchor-name
     /// - **W3C**: https://drafts.csswg.org/css-anchor-position-1/#propdef-anchor-name
-    anchorName: AnchorName = .none,
+    anchor_name: AnchorName = .none,
 
     /// anchor-scope
     /// - **W3C**: https://drafts.csswg.org/css-anchor-position-1/#propdef-anchor-scope
-    anchorScope: AnchorScope = .none,
+    anchor_scope: AnchorScope = .none,
 
     /// animation
     /// - **W3C**: https://drafts.csswg.org/css-animations-1/#propdef-animation
@@ -24780,63 +24780,63 @@ pub const Style = struct {
 
     /// animation-composition
     /// - **W3C**: https://drafts.csswg.org/css-animations-2/#propdef-animation-composition
-    animationComposition: AnimationComposition = .none,
+    animation_composition: AnimationComposition = .none,
 
     /// animation-delay
     /// - **W3C**: https://drafts.csswg.org/css-animations-1/#propdef-animation-delay
-    animationDelay: AnimationDelay = .none,
+    animation_delay: AnimationDelay = .none,
 
     /// animation-direction
     /// - **W3C**: https://drafts.csswg.org/css-animations-1/#propdef-animation-direction
-    animationDirection: AnimationDirection = .none,
+    animation_direction: AnimationDirection = .none,
 
     /// animation-duration
     /// - **W3C**: https://drafts.csswg.org/css-animations-2/#propdef-animation-duration
-    animationDuration: AnimationDuration = .none,
+    animation_duration: AnimationDuration = .none,
 
     /// animation-fill-mode
     /// - **W3C**: https://drafts.csswg.org/css-animations-1/#propdef-animation-fill-mode
-    animationFillMode: AnimationFillMode = .none,
+    animation_fill_mode: AnimationFillMode = .none,
 
     /// animation-iteration-count
     /// - **W3C**: https://drafts.csswg.org/css-animations-1/#propdef-animation-iteration-count
-    animationIterationCount: AnimationIterationCount = .none,
+    animation_iteration_count: AnimationIterationCount = .none,
 
     /// animation-name
     /// - **W3C**: https://drafts.csswg.org/css-animations-1/#propdef-animation-name
-    animationName: AnimationName = .none,
+    animation_name: AnimationName = .none,
 
     /// animation-play-state
     /// - **W3C**: https://drafts.csswg.org/css-animations-1/#propdef-animation-play-state
-    animationPlayState: AnimationPlayState = .none,
+    animation_play_state: AnimationPlayState = .none,
 
     /// animation-range
     /// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-animation-range
-    animationRange: AnimationRange = .none,
+    animation_range: AnimationRange = .none,
 
     /// animation-range-center
     /// - **W3C**: https://drafts.csswg.org/pointer-animations-1/#propdef-animation-range-center
-    animationRangeCenter: AnimationRangeCenter = .none,
+    animation_range_center: AnimationRangeCenter = .none,
 
     /// animation-range-end
     /// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-animation-range-end
-    animationRangeEnd: AnimationRangeEnd = .none,
+    animation_range_end: AnimationRangeEnd = .none,
 
     /// animation-range-start
     /// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-animation-range-start
-    animationRangeStart: AnimationRangeStart = .none,
+    animation_range_start: AnimationRangeStart = .none,
 
     /// animation-timeline
     /// - **W3C**: https://drafts.csswg.org/css-animations-2/#propdef-animation-timeline
-    animationTimeline: AnimationTimeline = .none,
+    animation_timeline: AnimationTimeline = .none,
 
     /// animation-timing-function
     /// - **W3C**: https://drafts.csswg.org/css-animations-1/#propdef-animation-timing-function
-    animationTimingFunction: AnimationTimingFunction = .none,
+    animation_timing_function: AnimationTimingFunction = .none,
 
     /// animation-trigger
     /// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-animation-trigger
-    animationTrigger: AnimationTrigger = .none,
+    animation_trigger: AnimationTrigger = .none,
 
     /// appearance
     /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-appearance
@@ -24844,15 +24844,15 @@ pub const Style = struct {
 
     /// aspect-ratio
     /// - **W3C**: https://drafts.csswg.org/css-sizing-4/#propdef-aspect-ratio
-    aspectRatio: AspectRatio = .none,
+    aspect_ratio: AspectRatio = .none,
 
     /// backdrop-filter
     /// - **W3C**: https://drafts.csswg.org/filter-effects-2/#propdef-backdrop-filter
-    backdropFilter: BackdropFilter = .none,
+    backdrop_filter: BackdropFilter = .none,
 
     /// backface-visibility
     /// - **W3C**: https://drafts.csswg.org/css-transforms-2/#propdef-backface-visibility
-    backfaceVisibility: BackfaceVisibility = .none,
+    backface_visibility: BackfaceVisibility = .none,
 
     /// background
     /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background
@@ -24860,123 +24860,123 @@ pub const Style = struct {
 
     /// background-attachment
     /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-attachment
-    backgroundAttachment: BackgroundAttachment = .none,
+    background_attachment: BackgroundAttachment = .none,
 
     /// background-blend-mode
     /// - **W3C**: https://drafts.csswg.org/compositing-2/#propdef-background-blend-mode
-    backgroundBlendMode: BackgroundBlendMode = .none,
+    background_blend_mode: BackgroundBlendMode = .none,
 
     /// background-clip
     /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-clip
-    backgroundClip: BackgroundClip = .none,
+    background_clip: BackgroundClip = .none,
 
     /// background-color
     /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-color
-    backgroundColor: BackgroundColor = .none,
+    background_color: BackgroundColor = .none,
 
     /// background-image
     /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-image
-    backgroundImage: BackgroundImage = .none,
+    background_image: BackgroundImage = .none,
 
     /// background-origin
     /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-origin
-    backgroundOrigin: BackgroundOrigin = .none,
+    background_origin: BackgroundOrigin = .none,
 
     /// background-position
     /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-position
-    backgroundPosition: BackgroundPosition = .none,
+    background_position: BackgroundPosition = .none,
 
     /// background-position-block
     /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-position-block
-    backgroundPositionBlock: BackgroundPositionBlock = .none,
+    background_position_block: BackgroundPositionBlock = .none,
 
     /// background-position-inline
     /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-position-inline
-    backgroundPositionInline: BackgroundPositionInline = .none,
+    background_position_inline: BackgroundPositionInline = .none,
 
     /// background-position-x
     /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-position-x
-    backgroundPositionX: BackgroundPositionX = .none,
+    background_position_x: BackgroundPositionX = .none,
 
     /// background-position-y
     /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-position-y
-    backgroundPositionY: BackgroundPositionY = .none,
+    background_position_y: BackgroundPositionY = .none,
 
     /// background-repeat
     /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-repeat
-    backgroundRepeat: BackgroundRepeat = .none,
+    background_repeat: BackgroundRepeat = .none,
 
     /// background-repeat-block
     /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-repeat-block
-    backgroundRepeatBlock: BackgroundRepeatBlock = .none,
+    background_repeat_block: BackgroundRepeatBlock = .none,
 
     /// background-repeat-inline
     /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-repeat-inline
-    backgroundRepeatInline: BackgroundRepeatInline = .none,
+    background_repeat_inline: BackgroundRepeatInline = .none,
 
     /// background-repeat-x
     /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-repeat-x
-    backgroundRepeatX: BackgroundRepeatX = .none,
+    background_repeat_x: BackgroundRepeatX = .none,
 
     /// background-repeat-y
     /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-repeat-y
-    backgroundRepeatY: BackgroundRepeatY = .none,
+    background_repeat_y: BackgroundRepeatY = .none,
 
     /// background-size
     /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-size
-    backgroundSize: BackgroundSize = .none,
+    background_size: BackgroundSize = .none,
 
     /// background-tbd
     /// - **W3C**: https://drafts.csswg.org/css-backgrounds-4/#propdef-background-tbd
-    backgroundTbd: BackgroundTbd = .none,
+    background_tbd: BackgroundTbd = .none,
 
     /// baseline-shift
     /// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-baseline-shift
-    baselineShift: BaselineShift = .none,
+    baseline_shift: BaselineShift = .none,
 
     /// baseline-source
     /// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-baseline-source
-    baselineSource: BaselineSource = .none,
+    baseline_source: BaselineSource = .none,
 
     /// block-ellipsis
     /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-block-ellipsis
-    blockEllipsis: BlockEllipsis = .none,
+    block_ellipsis: BlockEllipsis = .none,
 
     /// block-size
     /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-block-size
-    blockSize: BlockSize = .none,
+    block_size: BlockSize = .none,
 
     /// block-step
     /// - **W3C**: https://drafts.csswg.org/css-rhythm-1/#propdef-block-step
-    blockStep: BlockStep = .none,
+    block_step: BlockStep = .none,
 
     /// block-step-align
     /// - **W3C**: https://drafts.csswg.org/css-rhythm-1/#propdef-block-step-align
-    blockStepAlign: BlockStepAlign = .none,
+    block_step_align: BlockStepAlign = .none,
 
     /// block-step-insert
     /// - **W3C**: https://drafts.csswg.org/css-rhythm-1/#propdef-block-step-insert
-    blockStepInsert: BlockStepInsert = .none,
+    block_step_insert: BlockStepInsert = .none,
 
     /// block-step-round
     /// - **W3C**: https://drafts.csswg.org/css-rhythm-1/#propdef-block-step-round
-    blockStepRound: BlockStepRound = .none,
+    block_step_round: BlockStepRound = .none,
 
     /// block-step-size
     /// - **W3C**: https://drafts.csswg.org/css-rhythm-1/#propdef-block-step-size
-    blockStepSize: BlockStepSize = .none,
+    block_step_size: BlockStepSize = .none,
 
     /// bookmark-label
     /// - **W3C**: https://drafts.csswg.org/css-content-3/#propdef-bookmark-label
-    bookmarkLabel: BookmarkLabel = .none,
+    bookmark_label: BookmarkLabel = .none,
 
     /// bookmark-level
     /// - **W3C**: https://drafts.csswg.org/css-content-3/#propdef-bookmark-level
-    bookmarkLevel: BookmarkLevel = .none,
+    bookmark_level: BookmarkLevel = .none,
 
     /// bookmark-state
     /// - **W3C**: https://drafts.csswg.org/css-content-3/#propdef-bookmark-state
-    bookmarkState: BookmarkState = .none,
+    bookmark_state: BookmarkState = .none,
 
     /// border
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border
@@ -24984,331 +24984,331 @@ pub const Style = struct {
 
     /// border-block
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block
-    borderBlock: BorderBlock = .none,
+    border_block: BorderBlock = .none,
 
     /// border-block-clip
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-clip
-    borderBlockClip: BorderBlockClip = .none,
+    border_block_clip: BorderBlockClip = .none,
 
     /// border-block-color
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-color
-    borderBlockColor: BorderBlockColor = .none,
+    border_block_color: BorderBlockColor = .none,
 
     /// border-block-end
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-end
-    borderBlockEnd: BorderBlockEnd = .none,
+    border_block_end: BorderBlockEnd = .none,
 
     /// border-block-end-clip
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-end-clip
-    borderBlockEndClip: BorderBlockEndClip = .none,
+    border_block_end_clip: BorderBlockEndClip = .none,
 
     /// border-block-end-color
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-end-color
-    borderBlockEndColor: BorderBlockEndColor = .none,
+    border_block_end_color: BorderBlockEndColor = .none,
 
     /// border-block-end-radius
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-end-radius
-    borderBlockEndRadius: BorderBlockEndRadius = .none,
+    border_block_end_radius: BorderBlockEndRadius = .none,
 
     /// border-block-end-style
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-end-style
-    borderBlockEndStyle: BorderBlockEndStyle = .none,
+    border_block_end_style: BorderBlockEndStyle = .none,
 
     /// border-block-end-width
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-end-width
-    borderBlockEndWidth: BorderBlockEndWidth = .none,
+    border_block_end_width: BorderBlockEndWidth = .none,
 
     /// border-block-start
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-start
-    borderBlockStart: BorderBlockStart = .none,
+    border_block_start: BorderBlockStart = .none,
 
     /// border-block-start-clip
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-start-clip
-    borderBlockStartClip: BorderBlockStartClip = .none,
+    border_block_start_clip: BorderBlockStartClip = .none,
 
     /// border-block-start-color
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-start-color
-    borderBlockStartColor: BorderBlockStartColor = .none,
+    border_block_start_color: BorderBlockStartColor = .none,
 
     /// border-block-start-radius
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-start-radius
-    borderBlockStartRadius: BorderBlockStartRadius = .none,
+    border_block_start_radius: BorderBlockStartRadius = .none,
 
     /// border-block-start-style
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-start-style
-    borderBlockStartStyle: BorderBlockStartStyle = .none,
+    border_block_start_style: BorderBlockStartStyle = .none,
 
     /// border-block-start-width
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-start-width
-    borderBlockStartWidth: BorderBlockStartWidth = .none,
+    border_block_start_width: BorderBlockStartWidth = .none,
 
     /// border-block-style
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-style
-    borderBlockStyle: BorderBlockStyle = .none,
+    border_block_style: BorderBlockStyle = .none,
 
     /// border-block-width
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-block-width
-    borderBlockWidth: BorderBlockWidth = .none,
+    border_block_width: BorderBlockWidth = .none,
 
     /// border-bottom
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-bottom
-    borderBottom: BorderBottom = .none,
+    border_bottom: BorderBottom = .none,
 
     /// border-bottom-clip
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-bottom-clip
-    borderBottomClip: BorderBottomClip = .none,
+    border_bottom_clip: BorderBottomClip = .none,
 
     /// border-bottom-color
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-bottom-color
-    borderBottomColor: BorderBottomColor = .none,
+    border_bottom_color: BorderBottomColor = .none,
 
     /// border-bottom-left-radius
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-bottom-left-radius
-    borderBottomLeftRadius: BorderBottomLeftRadius = .none,
+    border_bottom_left_radius: BorderBottomLeftRadius = .none,
 
     /// border-bottom-radius
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-bottom-radius
-    borderBottomRadius: BorderBottomRadius = .none,
+    border_bottom_radius: BorderBottomRadius = .none,
 
     /// border-bottom-right-radius
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-bottom-right-radius
-    borderBottomRightRadius: BorderBottomRightRadius = .none,
+    border_bottom_right_radius: BorderBottomRightRadius = .none,
 
     /// border-bottom-style
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-bottom-style
-    borderBottomStyle: BorderBottomStyle = .none,
+    border_bottom_style: BorderBottomStyle = .none,
 
     /// border-bottom-width
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-bottom-width
-    borderBottomWidth: BorderBottomWidth = .none,
+    border_bottom_width: BorderBottomWidth = .none,
 
     /// border-boundary
     /// - **W3C**: https://drafts.csswg.org/css-round-display-1/#propdef-border-boundary
-    borderBoundary: BorderBoundary = .none,
+    border_boundary: BorderBoundary = .none,
 
     /// border-clip
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-clip
-    borderClip: BorderClip = .none,
+    border_clip: BorderClip = .none,
 
     /// border-collapse
     /// - **W3C**: https://drafts.csswg.org/css-tables-3/#propdef-border-collapse
-    borderCollapse: BorderCollapse = .none,
+    border_collapse: BorderCollapse = .none,
 
     /// border-color
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-color
-    borderColor: BorderColor = .none,
+    border_color: BorderColor = .none,
 
     /// border-end-end-radius
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-end-end-radius
-    borderEndEndRadius: BorderEndEndRadius = .none,
+    border_end_end_radius: BorderEndEndRadius = .none,
 
     /// border-end-start-radius
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-end-start-radius
-    borderEndStartRadius: BorderEndStartRadius = .none,
+    border_end_start_radius: BorderEndStartRadius = .none,
 
     /// border-image
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-image
-    borderImage: BorderImage = .none,
+    border_image: BorderImage = .none,
 
     /// border-image-outset
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-image-outset
-    borderImageOutset: BorderImageOutset = .none,
+    border_image_outset: BorderImageOutset = .none,
 
     /// border-image-repeat
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-image-repeat
-    borderImageRepeat: BorderImageRepeat = .none,
+    border_image_repeat: BorderImageRepeat = .none,
 
     /// border-image-slice
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-image-slice
-    borderImageSlice: BorderImageSlice = .none,
+    border_image_slice: BorderImageSlice = .none,
 
     /// border-image-source
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-image-source
-    borderImageSource: BorderImageSource = .none,
+    border_image_source: BorderImageSource = .none,
 
     /// border-image-width
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-image-width
-    borderImageWidth: BorderImageWidth = .none,
+    border_image_width: BorderImageWidth = .none,
 
     /// border-inline
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline
-    borderInline: BorderInline = .none,
+    border_inline: BorderInline = .none,
 
     /// border-inline-clip
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-clip
-    borderInlineClip: BorderInlineClip = .none,
+    border_inline_clip: BorderInlineClip = .none,
 
     /// border-inline-color
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-color
-    borderInlineColor: BorderInlineColor = .none,
+    border_inline_color: BorderInlineColor = .none,
 
     /// border-inline-end
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-end
-    borderInlineEnd: BorderInlineEnd = .none,
+    border_inline_end: BorderInlineEnd = .none,
 
     /// border-inline-end-clip
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-end-clip
-    borderInlineEndClip: BorderInlineEndClip = .none,
+    border_inline_end_clip: BorderInlineEndClip = .none,
 
     /// border-inline-end-color
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-end-color
-    borderInlineEndColor: BorderInlineEndColor = .none,
+    border_inline_end_color: BorderInlineEndColor = .none,
 
     /// border-inline-end-radius
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-end-radius
-    borderInlineEndRadius: BorderInlineEndRadius = .none,
+    border_inline_end_radius: BorderInlineEndRadius = .none,
 
     /// border-inline-end-style
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-end-style
-    borderInlineEndStyle: BorderInlineEndStyle = .none,
+    border_inline_end_style: BorderInlineEndStyle = .none,
 
     /// border-inline-end-width
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-end-width
-    borderInlineEndWidth: BorderInlineEndWidth = .none,
+    border_inline_end_width: BorderInlineEndWidth = .none,
 
     /// border-inline-start
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-start
-    borderInlineStart: BorderInlineStart = .none,
+    border_inline_start: BorderInlineStart = .none,
 
     /// border-inline-start-clip
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-start-clip
-    borderInlineStartClip: BorderInlineStartClip = .none,
+    border_inline_start_clip: BorderInlineStartClip = .none,
 
     /// border-inline-start-color
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-start-color
-    borderInlineStartColor: BorderInlineStartColor = .none,
+    border_inline_start_color: BorderInlineStartColor = .none,
 
     /// border-inline-start-radius
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-start-radius
-    borderInlineStartRadius: BorderInlineStartRadius = .none,
+    border_inline_start_radius: BorderInlineStartRadius = .none,
 
     /// border-inline-start-style
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-start-style
-    borderInlineStartStyle: BorderInlineStartStyle = .none,
+    border_inline_start_style: BorderInlineStartStyle = .none,
 
     /// border-inline-start-width
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-start-width
-    borderInlineStartWidth: BorderInlineStartWidth = .none,
+    border_inline_start_width: BorderInlineStartWidth = .none,
 
     /// border-inline-style
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-style
-    borderInlineStyle: BorderInlineStyle = .none,
+    border_inline_style: BorderInlineStyle = .none,
 
     /// border-inline-width
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-inline-width
-    borderInlineWidth: BorderInlineWidth = .none,
+    border_inline_width: BorderInlineWidth = .none,
 
     /// border-left
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-left
-    borderLeft: BorderLeft = .none,
+    border_left: BorderLeft = .none,
 
     /// border-left-clip
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-left-clip
-    borderLeftClip: BorderLeftClip = .none,
+    border_left_clip: BorderLeftClip = .none,
 
     /// border-left-color
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-left-color
-    borderLeftColor: BorderLeftColor = .none,
+    border_left_color: BorderLeftColor = .none,
 
     /// border-left-radius
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-left-radius
-    borderLeftRadius: BorderLeftRadius = .none,
+    border_left_radius: BorderLeftRadius = .none,
 
     /// border-left-style
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-left-style
-    borderLeftStyle: BorderLeftStyle = .none,
+    border_left_style: BorderLeftStyle = .none,
 
     /// border-left-width
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-left-width
-    borderLeftWidth: BorderLeftWidth = .none,
+    border_left_width: BorderLeftWidth = .none,
 
     /// border-limit
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-limit
-    borderLimit: BorderLimit = .none,
+    border_limit: BorderLimit = .none,
 
     /// border-radius
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-radius
-    borderRadius: BorderRadius = .none,
+    border_radius: BorderRadius = .none,
 
     /// border-right
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-right
-    borderRight: BorderRight = .none,
+    border_right: BorderRight = .none,
 
     /// border-right-clip
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-right-clip
-    borderRightClip: BorderRightClip = .none,
+    border_right_clip: BorderRightClip = .none,
 
     /// border-right-color
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-right-color
-    borderRightColor: BorderRightColor = .none,
+    border_right_color: BorderRightColor = .none,
 
     /// border-right-radius
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-right-radius
-    borderRightRadius: BorderRightRadius = .none,
+    border_right_radius: BorderRightRadius = .none,
 
     /// border-right-style
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-right-style
-    borderRightStyle: BorderRightStyle = .none,
+    border_right_style: BorderRightStyle = .none,
 
     /// border-right-width
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-right-width
-    borderRightWidth: BorderRightWidth = .none,
+    border_right_width: BorderRightWidth = .none,
 
     /// border-shape
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-shape
-    borderShape: BorderShape = .none,
+    border_shape: BorderShape = .none,
 
     /// border-spacing
     /// - **W3C**: https://drafts.csswg.org/css-tables-3/#propdef-border-spacing
-    borderSpacing: BorderSpacing = .none,
+    border_spacing: BorderSpacing = .none,
 
     /// border-start-end-radius
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-start-end-radius
-    borderStartEndRadius: BorderStartEndRadius = .none,
+    border_start_end_radius: BorderStartEndRadius = .none,
 
     /// border-start-start-radius
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-start-start-radius
-    borderStartStartRadius: BorderStartStartRadius = .none,
+    border_start_start_radius: BorderStartStartRadius = .none,
 
     /// border-style
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-style
-    borderStyle: BorderStyle = .none,
+    border_style: BorderStyle = .none,
 
     /// border-top
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-top
-    borderTop: BorderTop = .none,
+    border_top: BorderTop = .none,
 
     /// border-top-clip
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-top-clip
-    borderTopClip: BorderTopClip = .none,
+    border_top_clip: BorderTopClip = .none,
 
     /// border-top-color
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-top-color
-    borderTopColor: BorderTopColor = .none,
+    border_top_color: BorderTopColor = .none,
 
     /// border-top-left-radius
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-top-left-radius
-    borderTopLeftRadius: BorderTopLeftRadius = .none,
+    border_top_left_radius: BorderTopLeftRadius = .none,
 
     /// border-top-radius
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-top-radius
-    borderTopRadius: BorderTopRadius = .none,
+    border_top_radius: BorderTopRadius = .none,
 
     /// border-top-right-radius
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-top-right-radius
-    borderTopRightRadius: BorderTopRightRadius = .none,
+    border_top_right_radius: BorderTopRightRadius = .none,
 
     /// border-top-style
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-top-style
-    borderTopStyle: BorderTopStyle = .none,
+    border_top_style: BorderTopStyle = .none,
 
     /// border-top-width
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-top-width
-    borderTopWidth: BorderTopWidth = .none,
+    border_top_width: BorderTopWidth = .none,
 
     /// border-width
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-border-width
-    borderWidth: BorderWidth = .none,
+    border_width: BorderWidth = .none,
 
     /// bottom
     /// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-bottom
@@ -25316,55 +25316,55 @@ pub const Style = struct {
 
     /// box-decoration-break
     /// - **W3C**: https://drafts.csswg.org/css-break-4/#propdef-box-decoration-break
-    boxDecorationBreak: BoxDecorationBreak = .none,
+    box_decoration_break: BoxDecorationBreak = .none,
 
     /// box-shadow
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-box-shadow
-    boxShadow: BoxShadow = .none,
+    box_shadow: BoxShadow = .none,
 
     /// box-shadow-blur
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-box-shadow-blur
-    boxShadowBlur: BoxShadowBlur = .none,
+    box_shadow_blur: BoxShadowBlur = .none,
 
     /// box-shadow-color
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-box-shadow-color
-    boxShadowColor: BoxShadowColor = .none,
+    box_shadow_color: BoxShadowColor = .none,
 
     /// box-shadow-offset
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-box-shadow-offset
-    boxShadowOffset: BoxShadowOffset = .none,
+    box_shadow_offset: BoxShadowOffset = .none,
 
     /// box-shadow-position
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-box-shadow-position
-    boxShadowPosition: BoxShadowPosition = .none,
+    box_shadow_position: BoxShadowPosition = .none,
 
     /// box-shadow-spread
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-box-shadow-spread
-    boxShadowSpread: BoxShadowSpread = .none,
+    box_shadow_spread: BoxShadowSpread = .none,
 
     /// box-sizing
     /// - **W3C**: https://drafts.csswg.org/css-sizing-3/#propdef-box-sizing
-    boxSizing: BoxSizing = .none,
+    box_sizing: BoxSizing = .none,
 
     /// box-snap
     /// - **W3C**: https://drafts.csswg.org/css-line-grid-1/#propdef-box-snap
-    boxSnap: BoxSnap = .none,
+    box_snap: BoxSnap = .none,
 
     /// break-after
     /// - **W3C**: https://drafts.csswg.org/css-break-4/#propdef-break-after
-    breakAfter: BreakAfter = .none,
+    break_after: BreakAfter = .none,
 
     /// break-before
     /// - **W3C**: https://drafts.csswg.org/css-break-4/#propdef-break-before
-    breakBefore: BreakBefore = .none,
+    break_before: BreakBefore = .none,
 
     /// break-inside
     /// - **W3C**: https://drafts.csswg.org/css-break-4/#propdef-break-inside
-    breakInside: BreakInside = .none,
+    break_inside: BreakInside = .none,
 
     /// caption-side
     /// - **W3C**: https://drafts.csswg.org/css-tables-3/#propdef-caption-side
-    captionSide: CaptionSide = .none,
+    caption_side: CaptionSide = .none,
 
     /// caret
     /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-caret
@@ -25372,15 +25372,15 @@ pub const Style = struct {
 
     /// caret-animation
     /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-caret-animation
-    caretAnimation: CaretAnimation = .none,
+    caret_animation: CaretAnimation = .none,
 
     /// caret-color
     /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-caret-color
-    caretColor: CaretColor = .none,
+    caret_color: CaretColor = .none,
 
     /// caret-shape
     /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-caret-shape
-    caretShape: CaretShape = .none,
+    caret_shape: CaretShape = .none,
 
     /// clear
     /// - **W3C**: https://drafts.csswg.org/css-page-floats-3/#propdef-clear
@@ -25392,11 +25392,11 @@ pub const Style = struct {
 
     /// clip-path
     /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-clip-path
-    clipPath: ClipPath = .none,
+    clip_path: ClipPath = .none,
 
     /// clip-rule
     /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-clip-rule
-    clipRule: ClipRule = .none,
+    clip_rule: ClipRule = .none,
 
     /// color
     /// - **W3C**: https://drafts.csswg.org/css-color-4/#propdef-color
@@ -25404,107 +25404,107 @@ pub const Style = struct {
 
     /// color-adjust
     /// - **W3C**: https://drafts.csswg.org/css-color-adjust-1/#propdef-color-adjust
-    colorAdjust: ColorAdjust = .none,
+    color_adjust: ColorAdjust = .none,
 
     /// color-interpolation
     /// - **W3C**: https://svgwg.org/svg2-draft/painting.html#ColorInterpolationProperty
-    colorInterpolation: ColorInterpolation = .none,
+    color_interpolation: ColorInterpolation = .none,
 
     /// color-interpolation-filters
     /// - **W3C**: https://drafts.csswg.org/filter-effects-1/#propdef-color-interpolation-filters
-    colorInterpolationFilters: ColorInterpolationFilters = .none,
+    color_interpolation_filters: ColorInterpolationFilters = .none,
 
     /// color-scheme
     /// - **W3C**: https://drafts.csswg.org/css-color-adjust-1/#propdef-color-scheme
-    colorScheme: ColorScheme = .none,
+    color_scheme: ColorScheme = .none,
 
     /// column-count
     /// - **W3C**: https://drafts.csswg.org/css-multicol-2/#propdef-column-count
-    columnCount: ColumnCount = .none,
+    column_count: ColumnCount = .none,
 
     /// column-fill
     /// - **W3C**: https://drafts.csswg.org/css-multicol-2/#propdef-column-fill
-    columnFill: ColumnFill = .none,
+    column_fill: ColumnFill = .none,
 
     /// column-gap
     /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-column-gap
-    columnGap: ColumnGap = .none,
+    column_gap: ColumnGap = .none,
 
     /// column-height
     /// - **W3C**: https://drafts.csswg.org/css-multicol-2/#propdef-column-height
-    columnHeight: ColumnHeight = .none,
+    column_height: ColumnHeight = .none,
 
     /// column-rule
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule
-    columnRule: ColumnRule = .none,
+    column_rule: ColumnRule = .none,
 
     /// column-rule-break
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-break
-    columnRuleBreak: ColumnRuleBreak = .none,
+    column_rule_break: ColumnRuleBreak = .none,
 
     /// column-rule-color
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-color
-    columnRuleColor: ColumnRuleColor = .none,
+    column_rule_color: ColumnRuleColor = .none,
 
     /// column-rule-edge-inset
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-edge-inset
-    columnRuleEdgeInset: ColumnRuleEdgeInset = .none,
+    column_rule_edge_inset: ColumnRuleEdgeInset = .none,
 
     /// column-rule-edge-inset-end
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-edge-inset-end
-    columnRuleEdgeInsetEnd: ColumnRuleEdgeInsetEnd = .none,
+    column_rule_edge_inset_end: ColumnRuleEdgeInsetEnd = .none,
 
     /// column-rule-edge-inset-start
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-edge-inset-start
-    columnRuleEdgeInsetStart: ColumnRuleEdgeInsetStart = .none,
+    column_rule_edge_inset_start: ColumnRuleEdgeInsetStart = .none,
 
     /// column-rule-inset
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-inset
-    columnRuleInset: ColumnRuleInset = .none,
+    column_rule_inset: ColumnRuleInset = .none,
 
     /// column-rule-inset-end
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-inset-end
-    columnRuleInsetEnd: ColumnRuleInsetEnd = .none,
+    column_rule_inset_end: ColumnRuleInsetEnd = .none,
 
     /// column-rule-inset-start
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-inset-start
-    columnRuleInsetStart: ColumnRuleInsetStart = .none,
+    column_rule_inset_start: ColumnRuleInsetStart = .none,
 
     /// column-rule-interior-inset
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-interior-inset
-    columnRuleInteriorInset: ColumnRuleInteriorInset = .none,
+    column_rule_interior_inset: ColumnRuleInteriorInset = .none,
 
     /// column-rule-interior-inset-end
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-interior-inset-end
-    columnRuleInteriorInsetEnd: ColumnRuleInteriorInsetEnd = .none,
+    column_rule_interior_inset_end: ColumnRuleInteriorInsetEnd = .none,
 
     /// column-rule-interior-inset-start
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-interior-inset-start
-    columnRuleInteriorInsetStart: ColumnRuleInteriorInsetStart = .none,
+    column_rule_interior_inset_start: ColumnRuleInteriorInsetStart = .none,
 
     /// column-rule-style
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-style
-    columnRuleStyle: ColumnRuleStyle = .none,
+    column_rule_style: ColumnRuleStyle = .none,
 
     /// column-rule-visibility-items
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-visibility-items
-    columnRuleVisibilityItems: ColumnRuleVisibilityItems = .none,
+    column_rule_visibility_items: ColumnRuleVisibilityItems = .none,
 
     /// column-rule-width
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-width
-    columnRuleWidth: ColumnRuleWidth = .none,
+    column_rule_width: ColumnRuleWidth = .none,
 
     /// column-span
     /// - **W3C**: https://drafts.csswg.org/css-multicol-2/#propdef-column-span
-    columnSpan: ColumnSpan = .none,
+    column_span: ColumnSpan = .none,
 
     /// column-width
     /// - **W3C**: https://drafts.csswg.org/css-multicol-2/#propdef-column-width
-    columnWidth: ColumnWidth = .none,
+    column_width: ColumnWidth = .none,
 
     /// column-wrap
     /// - **W3C**: https://drafts.csswg.org/css-multicol-2/#propdef-column-wrap
-    columnWrap: ColumnWrap = .none,
+    column_wrap: ColumnWrap = .none,
 
     /// columns
     /// - **W3C**: https://drafts.csswg.org/css-multicol-2/#propdef-columns
@@ -25516,23 +25516,23 @@ pub const Style = struct {
 
     /// contain-intrinsic-block-size
     /// - **W3C**: https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-block-size
-    containIntrinsicBlockSize: ContainIntrinsicBlockSize = .none,
+    contain_intrinsic_block_size: ContainIntrinsicBlockSize = .none,
 
     /// contain-intrinsic-height
     /// - **W3C**: https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-height
-    containIntrinsicHeight: ContainIntrinsicHeight = .none,
+    contain_intrinsic_height: ContainIntrinsicHeight = .none,
 
     /// contain-intrinsic-inline-size
     /// - **W3C**: https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-inline-size
-    containIntrinsicInlineSize: ContainIntrinsicInlineSize = .none,
+    contain_intrinsic_inline_size: ContainIntrinsicInlineSize = .none,
 
     /// contain-intrinsic-size
     /// - **W3C**: https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-size
-    containIntrinsicSize: ContainIntrinsicSize = .none,
+    contain_intrinsic_size: ContainIntrinsicSize = .none,
 
     /// contain-intrinsic-width
     /// - **W3C**: https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-width
-    containIntrinsicWidth: ContainIntrinsicWidth = .none,
+    contain_intrinsic_width: ContainIntrinsicWidth = .none,
 
     /// container
     /// - **W3C**: https://drafts.csswg.org/css-conditional-5/#propdef-container
@@ -25540,11 +25540,11 @@ pub const Style = struct {
 
     /// container-name
     /// - **W3C**: https://drafts.csswg.org/css-conditional-5/#propdef-container-name
-    containerName: ContainerName = .none,
+    container_name: ContainerName = .none,
 
     /// container-type
     /// - **W3C**: https://drafts.csswg.org/css-conditional-5/#propdef-container-type
-    containerType: ContainerType = .none,
+    container_type: ContainerType = .none,
 
     /// content
     /// - **W3C**: https://drafts.csswg.org/css-content-3/#propdef-content
@@ -25552,7 +25552,7 @@ pub const Style = struct {
 
     /// content-visibility
     /// - **W3C**: https://drafts.csswg.org/css-contain-2/#propdef-content-visibility
-    contentVisibility: ContentVisibility = .none,
+    content_visibility: ContentVisibility = .none,
 
     /// continue
     /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-continue
@@ -25560,7 +25560,7 @@ pub const Style = struct {
 
     /// copy-into
     /// - **W3C**: https://drafts.csswg.org/css-gcpm-4/#propdef-copy-into
-    copyInto: CopyInto = .none,
+    copy_into: CopyInto = .none,
 
     /// corner
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner
@@ -25568,147 +25568,147 @@ pub const Style = struct {
 
     /// corner-block-end
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-block-end
-    cornerBlockEnd: CornerBlockEnd = .none,
+    corner_block_end: CornerBlockEnd = .none,
 
     /// corner-block-end-shape
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-block-end-shape
-    cornerBlockEndShape: CornerBlockEndShape = .none,
+    corner_block_end_shape: CornerBlockEndShape = .none,
 
     /// corner-block-start
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-block-start
-    cornerBlockStart: CornerBlockStart = .none,
+    corner_block_start: CornerBlockStart = .none,
 
     /// corner-block-start-shape
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-block-start-shape
-    cornerBlockStartShape: CornerBlockStartShape = .none,
+    corner_block_start_shape: CornerBlockStartShape = .none,
 
     /// corner-bottom
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-bottom
-    cornerBottom: CornerBottom = .none,
+    corner_bottom: CornerBottom = .none,
 
     /// corner-bottom-left
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-bottom-left
-    cornerBottomLeft: CornerBottomLeft = .none,
+    corner_bottom_left: CornerBottomLeft = .none,
 
     /// corner-bottom-left-shape
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-bottom-left-shape
-    cornerBottomLeftShape: CornerBottomLeftShape = .none,
+    corner_bottom_left_shape: CornerBottomLeftShape = .none,
 
     /// corner-bottom-right
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-bottom-right
-    cornerBottomRight: CornerBottomRight = .none,
+    corner_bottom_right: CornerBottomRight = .none,
 
     /// corner-bottom-right-shape
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-bottom-right-shape
-    cornerBottomRightShape: CornerBottomRightShape = .none,
+    corner_bottom_right_shape: CornerBottomRightShape = .none,
 
     /// corner-bottom-shape
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-bottom-shape
-    cornerBottomShape: CornerBottomShape = .none,
+    corner_bottom_shape: CornerBottomShape = .none,
 
     /// corner-end-end
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-end-end
-    cornerEndEnd: CornerEndEnd = .none,
+    corner_end_end: CornerEndEnd = .none,
 
     /// corner-end-end-shape
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-end-end-shape
-    cornerEndEndShape: CornerEndEndShape = .none,
+    corner_end_end_shape: CornerEndEndShape = .none,
 
     /// corner-end-start
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-end-start
-    cornerEndStart: CornerEndStart = .none,
+    corner_end_start: CornerEndStart = .none,
 
     /// corner-end-start-shape
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-end-start-shape
-    cornerEndStartShape: CornerEndStartShape = .none,
+    corner_end_start_shape: CornerEndStartShape = .none,
 
     /// corner-inline-end
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-inline-end
-    cornerInlineEnd: CornerInlineEnd = .none,
+    corner_inline_end: CornerInlineEnd = .none,
 
     /// corner-inline-end-shape
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-inline-end-shape
-    cornerInlineEndShape: CornerInlineEndShape = .none,
+    corner_inline_end_shape: CornerInlineEndShape = .none,
 
     /// corner-inline-start
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-inline-start
-    cornerInlineStart: CornerInlineStart = .none,
+    corner_inline_start: CornerInlineStart = .none,
 
     /// corner-inline-start-shape
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-inline-start-shape
-    cornerInlineStartShape: CornerInlineStartShape = .none,
+    corner_inline_start_shape: CornerInlineStartShape = .none,
 
     /// corner-left
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-left
-    cornerLeft: CornerLeft = .none,
+    corner_left: CornerLeft = .none,
 
     /// corner-left-shape
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-left-shape
-    cornerLeftShape: CornerLeftShape = .none,
+    corner_left_shape: CornerLeftShape = .none,
 
     /// corner-right
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-right
-    cornerRight: CornerRight = .none,
+    corner_right: CornerRight = .none,
 
     /// corner-right-shape
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-right-shape
-    cornerRightShape: CornerRightShape = .none,
+    corner_right_shape: CornerRightShape = .none,
 
     /// corner-shape
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-shape
-    cornerShape: CornerShape = .none,
+    corner_shape: CornerShape = .none,
 
     /// corner-start-end
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-start-end
-    cornerStartEnd: CornerStartEnd = .none,
+    corner_start_end: CornerStartEnd = .none,
 
     /// corner-start-end-shape
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-start-end-shape
-    cornerStartEndShape: CornerStartEndShape = .none,
+    corner_start_end_shape: CornerStartEndShape = .none,
 
     /// corner-start-start
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-start-start
-    cornerStartStart: CornerStartStart = .none,
+    corner_start_start: CornerStartStart = .none,
 
     /// corner-start-start-shape
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-start-start-shape
-    cornerStartStartShape: CornerStartStartShape = .none,
+    corner_start_start_shape: CornerStartStartShape = .none,
 
     /// corner-top
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-top
-    cornerTop: CornerTop = .none,
+    corner_top: CornerTop = .none,
 
     /// corner-top-left
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-top-left
-    cornerTopLeft: CornerTopLeft = .none,
+    corner_top_left: CornerTopLeft = .none,
 
     /// corner-top-left-shape
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-top-left-shape
-    cornerTopLeftShape: CornerTopLeftShape = .none,
+    corner_top_left_shape: CornerTopLeftShape = .none,
 
     /// corner-top-right
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-top-right
-    cornerTopRight: CornerTopRight = .none,
+    corner_top_right: CornerTopRight = .none,
 
     /// corner-top-right-shape
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-top-right-shape
-    cornerTopRightShape: CornerTopRightShape = .none,
+    corner_top_right_shape: CornerTopRightShape = .none,
 
     /// corner-top-shape
     /// - **W3C**: https://drafts.csswg.org/css-borders-4/#propdef-corner-top-shape
-    cornerTopShape: CornerTopShape = .none,
+    corner_top_shape: CornerTopShape = .none,
 
     /// counter-increment
     /// - **W3C**: https://drafts.csswg.org/css-lists-3/#propdef-counter-increment
-    counterIncrement: CounterIncrement = .none,
+    counter_increment: CounterIncrement = .none,
 
     /// counter-reset
     /// - **W3C**: https://drafts.csswg.org/css-lists-3/#propdef-counter-reset
-    counterReset: CounterReset = .none,
+    counter_reset: CounterReset = .none,
 
     /// counter-set
     /// - **W3C**: https://drafts.csswg.org/css-lists-3/#propdef-counter-set
-    counterSet: CounterSet = .none,
+    counter_set: CounterSet = .none,
 
     /// cue
     /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-cue
@@ -25716,11 +25716,11 @@ pub const Style = struct {
 
     /// cue-after
     /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-cue-after
-    cueAfter: CueAfter = .none,
+    cue_after: CueAfter = .none,
 
     /// cue-before
     /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-cue-before
-    cueBefore: CueBefore = .none,
+    cue_before: CueBefore = .none,
 
     /// cursor
     /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-cursor
@@ -25748,31 +25748,31 @@ pub const Style = struct {
 
     /// dominant-baseline
     /// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-dominant-baseline
-    dominantBaseline: DominantBaseline = .none,
+    dominant_baseline: DominantBaseline = .none,
 
     /// dynamic-range-limit
     /// - **W3C**: https://drafts.csswg.org/css-color-hdr-1/#propdef-dynamic-range-limit
-    dynamicRangeLimit: DynamicRangeLimit = .none,
+    dynamic_range_limit: DynamicRangeLimit = .none,
 
     /// empty-cells
     /// - **W3C**: https://drafts.csswg.org/css-tables-3/#propdef-empty-cells
-    emptyCells: EmptyCells = .none,
+    empty_cells: EmptyCells = .none,
 
     /// event-trigger
     /// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-event-trigger
-    eventTrigger: EventTrigger = .none,
+    event_trigger: EventTrigger = .none,
 
     /// event-trigger-name
     /// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-event-trigger-name
-    eventTriggerName: EventTriggerName = .none,
+    event_trigger_name: EventTriggerName = .none,
 
     /// event-trigger-source
     /// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-event-trigger-source
-    eventTriggerSource: EventTriggerSource = .none,
+    event_trigger_source: EventTriggerSource = .none,
 
     /// field-sizing
     /// - **W3C**: https://drafts.csswg.org/css-forms-1/#propdef-field-sizing
-    fieldSizing: FieldSizing = .none,
+    field_sizing: FieldSizing = .none,
 
     /// fill
     /// - **W3C**: https://svgwg.org/svg2-draft/painting.html#FillProperty
@@ -25780,39 +25780,39 @@ pub const Style = struct {
 
     /// fill-break
     /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-fill-break
-    fillBreak: FillBreak = .none,
+    fill_break: FillBreak = .none,
 
     /// fill-color
     /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-fill-color
-    fillColor: FillColor = .none,
+    fill_color: FillColor = .none,
 
     /// fill-image
     /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-fill-image
-    fillImage: FillImage = .none,
+    fill_image: FillImage = .none,
 
     /// fill-opacity
     /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-fill-opacity
-    fillOpacity: FillOpacity = .none,
+    fill_opacity: FillOpacity = .none,
 
     /// fill-origin
     /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-fill-origin
-    fillOrigin: FillOrigin = .none,
+    fill_origin: FillOrigin = .none,
 
     /// fill-position
     /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-fill-position
-    fillPosition: FillPosition = .none,
+    fill_position: FillPosition = .none,
 
     /// fill-repeat
     /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-fill-repeat
-    fillRepeat: FillRepeat = .none,
+    fill_repeat: FillRepeat = .none,
 
     /// fill-rule
     /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-fill-rule
-    fillRule: FillRule = .none,
+    fill_rule: FillRule = .none,
 
     /// fill-size
     /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-fill-size
-    fillSize: FillSize = .none,
+    fill_size: FillSize = .none,
 
     /// filter
     /// - **W3C**: https://drafts.csswg.org/filter-effects-1/#propdef-filter
@@ -25824,27 +25824,27 @@ pub const Style = struct {
 
     /// flex-basis
     /// - **W3C**: https://drafts.csswg.org/css-flexbox-1/#propdef-flex-basis
-    flexBasis: FlexBasis = .none,
+    flex_basis: FlexBasis = .none,
 
     /// flex-direction
     /// - **W3C**: https://drafts.csswg.org/css-flexbox-1/#propdef-flex-direction
-    flexDirection: FlexDirection = .none,
+    flex_direction: FlexDirection = .none,
 
     /// flex-flow
     /// - **W3C**: https://drafts.csswg.org/css-flexbox-1/#propdef-flex-flow
-    flexFlow: FlexFlow = .none,
+    flex_flow: FlexFlow = .none,
 
     /// flex-grow
     /// - **W3C**: https://drafts.csswg.org/css-flexbox-1/#propdef-flex-grow
-    flexGrow: FlexGrow = .none,
+    flex_grow: FlexGrow = .none,
 
     /// flex-shrink
     /// - **W3C**: https://drafts.csswg.org/css-flexbox-1/#propdef-flex-shrink
-    flexShrink: FlexShrink = .none,
+    flex_shrink: FlexShrink = .none,
 
     /// flex-wrap
     /// - **W3C**: https://drafts.csswg.org/css-flexbox-1/#propdef-flex-wrap
-    flexWrap: FlexWrap = .none,
+    flex_wrap: FlexWrap = .none,
 
     /// float
     /// - **W3C**: https://drafts.csswg.org/css-page-floats-3/#propdef-float
@@ -25852,35 +25852,35 @@ pub const Style = struct {
 
     /// float-defer
     /// - **W3C**: https://drafts.csswg.org/css-page-floats-3/#propdef-float-defer
-    floatDefer: FloatDefer = .none,
+    float_defer: FloatDefer = .none,
 
     /// float-offset
     /// - **W3C**: https://drafts.csswg.org/css-page-floats-3/#propdef-float-offset
-    floatOffset: FloatOffset = .none,
+    float_offset: FloatOffset = .none,
 
     /// float-reference
     /// - **W3C**: https://drafts.csswg.org/css-page-floats-3/#propdef-float-reference
-    floatReference: FloatReference = .none,
+    float_reference: FloatReference = .none,
 
     /// flood-color
     /// - **W3C**: https://drafts.csswg.org/filter-effects-1/#propdef-flood-color
-    floodColor: FloodColor = .none,
+    flood_color: FloodColor = .none,
 
     /// flood-opacity
     /// - **W3C**: https://drafts.csswg.org/filter-effects-1/#propdef-flood-opacity
-    floodOpacity: FloodOpacity = .none,
+    flood_opacity: FloodOpacity = .none,
 
     /// flow-from
     /// - **W3C**: https://drafts.csswg.org/css-regions-1/#propdef-flow-from
-    flowFrom: FlowFrom = .none,
+    flow_from: FlowFrom = .none,
 
     /// flow-into
     /// - **W3C**: https://drafts.csswg.org/css-regions-1/#propdef-flow-into
-    flowInto: FlowInto = .none,
+    flow_into: FlowInto = .none,
 
     /// flow-tolerance
     /// - **W3C**: https://drafts.csswg.org/css-grid-3/#propdef-flow-tolerance
-    flowTolerance: FlowTolerance = .none,
+    flow_tolerance: FlowTolerance = .none,
 
     /// font
     /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font
@@ -25888,119 +25888,119 @@ pub const Style = struct {
 
     /// font-family
     /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-family
-    fontFamily: FontFamily = .none,
+    font_family: FontFamily = .none,
 
     /// font-feature-settings
     /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-feature-settings
-    fontFeatureSettings: FontFeatureSettings = .none,
+    font_feature_settings: FontFeatureSettings = .none,
 
     /// font-kerning
     /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-kerning
-    fontKerning: FontKerning = .none,
+    font_kerning: FontKerning = .none,
 
     /// font-language-override
     /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-language-override
-    fontLanguageOverride: FontLanguageOverride = .none,
+    font_language_override: FontLanguageOverride = .none,
 
     /// font-optical-sizing
     /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-optical-sizing
-    fontOpticalSizing: FontOpticalSizing = .none,
+    font_optical_sizing: FontOpticalSizing = .none,
 
     /// font-palette
     /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-palette
-    fontPalette: FontPalette = .none,
+    font_palette: FontPalette = .none,
 
     /// font-size
     /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-size
-    fontSize: FontSize = .none,
+    font_size: FontSize = .none,
 
     /// font-size-adjust
     /// - **W3C**: https://drafts.csswg.org/css-fonts-5/#propdef-font-size-adjust
-    fontSizeAdjust: FontSizeAdjust = .none,
+    font_size_adjust: FontSizeAdjust = .none,
 
     /// font-stretch
     /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-stretch
-    fontStretch: FontStretch = .none,
+    font_stretch: FontStretch = .none,
 
     /// font-style
     /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-style
-    fontStyle: FontStyle = .none,
+    font_style: FontStyle = .none,
 
     /// font-synthesis
     /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-synthesis
-    fontSynthesis: FontSynthesis = .none,
+    font_synthesis: FontSynthesis = .none,
 
     /// font-synthesis-position
     /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-synthesis-position
-    fontSynthesisPosition: FontSynthesisPosition = .none,
+    font_synthesis_position: FontSynthesisPosition = .none,
 
     /// font-synthesis-small-caps
     /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-synthesis-small-caps
-    fontSynthesisSmallCaps: FontSynthesisSmallCaps = .none,
+    font_synthesis_small_caps: FontSynthesisSmallCaps = .none,
 
     /// font-synthesis-style
     /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-synthesis-style
-    fontSynthesisStyle: FontSynthesisStyle = .none,
+    font_synthesis_style: FontSynthesisStyle = .none,
 
     /// font-synthesis-weight
     /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-synthesis-weight
-    fontSynthesisWeight: FontSynthesisWeight = .none,
+    font_synthesis_weight: FontSynthesisWeight = .none,
 
     /// font-variant
     /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-variant
-    fontVariant: FontVariant = .none,
+    font_variant: FontVariant = .none,
 
     /// font-variant-alternates
     /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-alternates
-    fontVariantAlternates: FontVariantAlternates = .none,
+    font_variant_alternates: FontVariantAlternates = .none,
 
     /// font-variant-caps
     /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-caps
-    fontVariantCaps: FontVariantCaps = .none,
+    font_variant_caps: FontVariantCaps = .none,
 
     /// font-variant-east-asian
     /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-east-asian
-    fontVariantEastAsian: FontVariantEastAsian = .none,
+    font_variant_east_asian: FontVariantEastAsian = .none,
 
     /// font-variant-emoji
     /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-emoji
-    fontVariantEmoji: FontVariantEmoji = .none,
+    font_variant_emoji: FontVariantEmoji = .none,
 
     /// font-variant-ligatures
     /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-ligatures
-    fontVariantLigatures: FontVariantLigatures = .none,
+    font_variant_ligatures: FontVariantLigatures = .none,
 
     /// font-variant-numeric
     /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-numeric
-    fontVariantNumeric: FontVariantNumeric = .none,
+    font_variant_numeric: FontVariantNumeric = .none,
 
     /// font-variant-position
     /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-position
-    fontVariantPosition: FontVariantPosition = .none,
+    font_variant_position: FontVariantPosition = .none,
 
     /// font-variation-settings
     /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-variation-settings
-    fontVariationSettings: FontVariationSettings = .none,
+    font_variation_settings: FontVariationSettings = .none,
 
     /// font-weight
     /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-weight
-    fontWeight: FontWeight = .none,
+    font_weight: FontWeight = .none,
 
     /// font-width
     /// - **W3C**: https://drafts.csswg.org/css-fonts-4/#propdef-font-width
-    fontWidth: FontWidth = .none,
+    font_width: FontWidth = .none,
 
     /// footnote-display
     /// - **W3C**: https://drafts.csswg.org/css-gcpm-3/#propdef-footnote-display
-    footnoteDisplay: FootnoteDisplay = .none,
+    footnote_display: FootnoteDisplay = .none,
 
     /// footnote-policy
     /// - **W3C**: https://drafts.csswg.org/css-gcpm-3/#propdef-footnote-policy
-    footnotePolicy: FootnotePolicy = .none,
+    footnote_policy: FootnotePolicy = .none,
 
     /// forced-color-adjust
     /// - **W3C**: https://drafts.csswg.org/css-color-adjust-1/#propdef-forced-color-adjust
-    forcedColorAdjust: ForcedColorAdjust = .none,
+    forced_color_adjust: ForcedColorAdjust = .none,
 
     /// gap
     /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-gap
@@ -26008,7 +26008,7 @@ pub const Style = struct {
 
     /// glyph-orientation-vertical
     /// - **W3C**: https://drafts.csswg.org/css-writing-modes-4/#propdef-glyph-orientation-vertical
-    glyphOrientationVertical: GlyphOrientationVertical = .none,
+    glyph_orientation_vertical: GlyphOrientationVertical = .none,
 
     /// grid
     /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid
@@ -26016,75 +26016,75 @@ pub const Style = struct {
 
     /// grid-area
     /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-area
-    gridArea: GridArea = .none,
+    grid_area: GridArea = .none,
 
     /// grid-auto-columns
     /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-auto-columns
-    gridAutoColumns: GridAutoColumns = .none,
+    grid_auto_columns: GridAutoColumns = .none,
 
     /// grid-auto-flow
     /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-auto-flow
-    gridAutoFlow: GridAutoFlow = .none,
+    grid_auto_flow: GridAutoFlow = .none,
 
     /// grid-auto-rows
     /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-auto-rows
-    gridAutoRows: GridAutoRows = .none,
+    grid_auto_rows: GridAutoRows = .none,
 
     /// grid-column
     /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-column
-    gridColumn: GridColumn = .none,
+    grid_column: GridColumn = .none,
 
     /// grid-column-end
     /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-column-end
-    gridColumnEnd: GridColumnEnd = .none,
+    grid_column_end: GridColumnEnd = .none,
 
     /// grid-column-gap
     /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-grid-column-gap
-    gridColumnGap: GridColumnGap = .none,
+    grid_column_gap: GridColumnGap = .none,
 
     /// grid-column-start
     /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-column-start
-    gridColumnStart: GridColumnStart = .none,
+    grid_column_start: GridColumnStart = .none,
 
     /// grid-gap
     /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-grid-gap
-    gridGap: GridGap = .none,
+    grid_gap: GridGap = .none,
 
     /// grid-row
     /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-row
-    gridRow: GridRow = .none,
+    grid_row: GridRow = .none,
 
     /// grid-row-end
     /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-row-end
-    gridRowEnd: GridRowEnd = .none,
+    grid_row_end: GridRowEnd = .none,
 
     /// grid-row-gap
     /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-grid-row-gap
-    gridRowGap: GridRowGap = .none,
+    grid_row_gap: GridRowGap = .none,
 
     /// grid-row-start
     /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-row-start
-    gridRowStart: GridRowStart = .none,
+    grid_row_start: GridRowStart = .none,
 
     /// grid-template
     /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-template
-    gridTemplate: GridTemplate = .none,
+    grid_template: GridTemplate = .none,
 
     /// grid-template-areas
     /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-template-areas
-    gridTemplateAreas: GridTemplateAreas = .none,
+    grid_template_areas: GridTemplateAreas = .none,
 
     /// grid-template-columns
     /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-template-columns
-    gridTemplateColumns: GridTemplateColumns = .none,
+    grid_template_columns: GridTemplateColumns = .none,
 
     /// grid-template-rows
     /// - **W3C**: https://drafts.csswg.org/css-grid-2/#propdef-grid-template-rows
-    gridTemplateRows: GridTemplateRows = .none,
+    grid_template_rows: GridTemplateRows = .none,
 
     /// hanging-punctuation
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-hanging-punctuation
-    hangingPunctuation: HangingPunctuation = .none,
+    hanging_punctuation: HangingPunctuation = .none,
 
     /// height
     /// - **W3C**: https://drafts.csswg.org/css-sizing-3/#propdef-height
@@ -26092,23 +26092,23 @@ pub const Style = struct {
 
     /// hyphenate-character
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-hyphenate-character
-    hyphenateCharacter: HyphenateCharacter = .none,
+    hyphenate_character: HyphenateCharacter = .none,
 
     /// hyphenate-limit-chars
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-hyphenate-limit-chars
-    hyphenateLimitChars: HyphenateLimitChars = .none,
+    hyphenate_limit_chars: HyphenateLimitChars = .none,
 
     /// hyphenate-limit-last
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-hyphenate-limit-last
-    hyphenateLimitLast: HyphenateLimitLast = .none,
+    hyphenate_limit_last: HyphenateLimitLast = .none,
 
     /// hyphenate-limit-lines
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-hyphenate-limit-lines
-    hyphenateLimitLines: HyphenateLimitLines = .none,
+    hyphenate_limit_lines: HyphenateLimitLines = .none,
 
     /// hyphenate-limit-zone
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-hyphenate-limit-zone
-    hyphenateLimitZone: HyphenateLimitZone = .none,
+    hyphenate_limit_zone: HyphenateLimitZone = .none,
 
     /// hyphens
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-hyphens
@@ -26116,43 +26116,43 @@ pub const Style = struct {
 
     /// image-animation
     /// - **W3C**: https://drafts.csswg.org/css-image-animation-1/#propdef-image-animation
-    imageAnimation: ImageAnimation = .none,
+    image_animation: ImageAnimation = .none,
 
     /// image-orientation
     /// - **W3C**: https://drafts.csswg.org/css-images-3/#propdef-image-orientation
-    imageOrientation: ImageOrientation = .none,
+    image_orientation: ImageOrientation = .none,
 
     /// image-rendering
     /// - **W3C**: https://drafts.csswg.org/css-images-3/#propdef-image-rendering
-    imageRendering: ImageRendering = .none,
+    image_rendering: ImageRendering = .none,
 
     /// image-resolution
     /// - **W3C**: https://drafts.csswg.org/css-images-4/#propdef-image-resolution
-    imageResolution: ImageResolution = .none,
+    image_resolution: ImageResolution = .none,
 
     /// initial-letter
     /// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-initial-letter
-    initialLetter: InitialLetter = .none,
+    initial_letter: InitialLetter = .none,
 
     /// initial-letter-align
     /// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-initial-letter-align
-    initialLetterAlign: InitialLetterAlign = .none,
+    initial_letter_align: InitialLetterAlign = .none,
 
     /// initial-letter-wrap
     /// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-initial-letter-wrap
-    initialLetterWrap: InitialLetterWrap = .none,
+    initial_letter_wrap: InitialLetterWrap = .none,
 
     /// inline-size
     /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-inline-size
-    inlineSize: InlineSize = .none,
+    inline_size: InlineSize = .none,
 
     /// inline-sizing
     /// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-inline-sizing
-    inlineSizing: InlineSizing = .none,
+    inline_sizing: InlineSizing = .none,
 
     /// input-security
     /// - **W3C**: https://drafts.csswg.org/css-forms-1/#propdef-input-security
-    inputSecurity: InputSecurity = .none,
+    input_security: InputSecurity = .none,
 
     /// inset
     /// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-inset
@@ -26160,27 +26160,27 @@ pub const Style = struct {
 
     /// inset-block
     /// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-inset-block
-    insetBlock: InsetBlock = .none,
+    inset_block: InsetBlock = .none,
 
     /// inset-block-end
     /// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-inset-block-end
-    insetBlockEnd: InsetBlockEnd = .none,
+    inset_block_end: InsetBlockEnd = .none,
 
     /// inset-block-start
     /// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-inset-block-start
-    insetBlockStart: InsetBlockStart = .none,
+    inset_block_start: InsetBlockStart = .none,
 
     /// inset-inline
     /// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-inset-inline
-    insetInline: InsetInline = .none,
+    inset_inline: InsetInline = .none,
 
     /// inset-inline-end
     /// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-inset-inline-end
-    insetInlineEnd: InsetInlineEnd = .none,
+    inset_inline_end: InsetInlineEnd = .none,
 
     /// inset-inline-start
     /// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-inset-inline-start
-    insetInlineStart: InsetInlineStart = .none,
+    inset_inline_start: InsetInlineStart = .none,
 
     /// interactivity
     /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-interactivity
@@ -26188,19 +26188,19 @@ pub const Style = struct {
 
     /// interest-delay
     /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-interest-delay
-    interestDelay: InterestDelay = .none,
+    interest_delay: InterestDelay = .none,
 
     /// interest-delay-end
     /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-interest-delay-end
-    interestDelayEnd: InterestDelayEnd = .none,
+    interest_delay_end: InterestDelayEnd = .none,
 
     /// interest-delay-start
     /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-interest-delay-start
-    interestDelayStart: InterestDelayStart = .none,
+    interest_delay_start: InterestDelayStart = .none,
 
     /// interpolate-size
     /// - **W3C**: https://drafts.csswg.org/css-values-5/#propdef-interpolate-size
-    interpolateSize: InterpolateSize = .none,
+    interpolate_size: InterpolateSize = .none,
 
     /// isolation
     /// - **W3C**: https://drafts.csswg.org/compositing-2/#propdef-isolation
@@ -26208,15 +26208,15 @@ pub const Style = struct {
 
     /// justify-content
     /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-justify-content
-    justifyContent: JustifyContent = .none,
+    justify_content: JustifyContent = .none,
 
     /// justify-items
     /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-justify-items
-    justifyItems: JustifyItems = .none,
+    justify_items: JustifyItems = .none,
 
     /// justify-self
     /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-justify-self
-    justifySelf: JustifySelf = .none,
+    justify_self: JustifySelf = .none,
 
     /// left
     /// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-left
@@ -26224,63 +26224,63 @@ pub const Style = struct {
 
     /// letter-spacing
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-letter-spacing
-    letterSpacing: LetterSpacing = .none,
+    letter_spacing: LetterSpacing = .none,
 
     /// lighting-color
     /// - **W3C**: https://drafts.csswg.org/filter-effects-1/#propdef-lighting-color
-    lightingColor: LightingColor = .none,
+    lighting_color: LightingColor = .none,
 
     /// line-break
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-line-break
-    lineBreak: LineBreak = .none,
+    line_break: LineBreak = .none,
 
     /// line-clamp
     /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-line-clamp
-    lineClamp: LineClamp = .none,
+    line_clamp: LineClamp = .none,
 
     /// line-fit-edge
     /// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-line-fit-edge
-    lineFitEdge: LineFitEdge = .none,
+    line_fit_edge: LineFitEdge = .none,
 
     /// line-grid
     /// - **W3C**: https://drafts.csswg.org/css-line-grid-1/#propdef-line-grid
-    lineGrid: LineGrid = .none,
+    line_grid: LineGrid = .none,
 
     /// line-height
     /// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-line-height
-    lineHeight: LineHeight = .none,
+    line_height: LineHeight = .none,
 
     /// line-height-step
     /// - **W3C**: https://drafts.csswg.org/css-rhythm-1/#propdef-line-height-step
-    lineHeightStep: LineHeightStep = .none,
+    line_height_step: LineHeightStep = .none,
 
     /// line-padding
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-line-padding
-    linePadding: LinePadding = .none,
+    line_padding: LinePadding = .none,
 
     /// line-snap
     /// - **W3C**: https://drafts.csswg.org/css-line-grid-1/#propdef-line-snap
-    lineSnap: LineSnap = .none,
+    line_snap: LineSnap = .none,
 
     /// link-parameters
     /// - **W3C**: https://drafts.csswg.org/css-link-params-1/#propdef-link-parameters
-    linkParameters: LinkParameters = .none,
+    link_parameters: LinkParameters = .none,
 
     /// list-style
     /// - **W3C**: https://drafts.csswg.org/css-lists-3/#propdef-list-style
-    listStyle: ListStyle = .none,
+    list_style: ListStyle = .none,
 
     /// list-style-image
     /// - **W3C**: https://drafts.csswg.org/css-lists-3/#propdef-list-style-image
-    listStyleImage: ListStyleImage = .none,
+    list_style_image: ListStyleImage = .none,
 
     /// list-style-position
     /// - **W3C**: https://drafts.csswg.org/css-lists-3/#propdef-list-style-position
-    listStylePosition: ListStylePosition = .none,
+    list_style_position: ListStylePosition = .none,
 
     /// list-style-type
     /// - **W3C**: https://drafts.csswg.org/css-lists-3/#propdef-list-style-type
-    listStyleType: ListStyleType = .none,
+    list_style_type: ListStyleType = .none,
 
     /// margin
     /// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-margin
@@ -26288,51 +26288,51 @@ pub const Style = struct {
 
     /// margin-block
     /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-margin-block
-    marginBlock: MarginBlock = .none,
+    margin_block: MarginBlock = .none,
 
     /// margin-block-end
     /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-margin-block-end
-    marginBlockEnd: MarginBlockEnd = .none,
+    margin_block_end: MarginBlockEnd = .none,
 
     /// margin-block-start
     /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-margin-block-start
-    marginBlockStart: MarginBlockStart = .none,
+    margin_block_start: MarginBlockStart = .none,
 
     /// margin-bottom
     /// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-margin-bottom
-    marginBottom: MarginBottom = .none,
+    margin_bottom: MarginBottom = .none,
 
     /// margin-break
     /// - **W3C**: https://drafts.csswg.org/css-break-4/#propdef-margin-break
-    marginBreak: MarginBreak = .none,
+    margin_break: MarginBreak = .none,
 
     /// margin-inline
     /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-margin-inline
-    marginInline: MarginInline = .none,
+    margin_inline: MarginInline = .none,
 
     /// margin-inline-end
     /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-margin-inline-end
-    marginInlineEnd: MarginInlineEnd = .none,
+    margin_inline_end: MarginInlineEnd = .none,
 
     /// margin-inline-start
     /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-margin-inline-start
-    marginInlineStart: MarginInlineStart = .none,
+    margin_inline_start: MarginInlineStart = .none,
 
     /// margin-left
     /// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-margin-left
-    marginLeft: MarginLeft = .none,
+    margin_left: MarginLeft = .none,
 
     /// margin-right
     /// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-margin-right
-    marginRight: MarginRight = .none,
+    margin_right: MarginRight = .none,
 
     /// margin-top
     /// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-margin-top
-    marginTop: MarginTop = .none,
+    margin_top: MarginTop = .none,
 
     /// margin-trim
     /// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-margin-trim
-    marginTrim: MarginTrim = .none,
+    margin_trim: MarginTrim = .none,
 
     /// marker
     /// - **W3C**: https://svgwg.org/svg2-draft/painting.html#MarkerProperty
@@ -26340,19 +26340,19 @@ pub const Style = struct {
 
     /// marker-end
     /// - **W3C**: https://svgwg.org/svg2-draft/painting.html#MarkerEndProperty
-    markerEnd: MarkerEnd = .none,
+    marker_end: MarkerEnd = .none,
 
     /// marker-mid
     /// - **W3C**: https://svgwg.org/svg2-draft/painting.html#MarkerMidProperty
-    markerMid: MarkerMid = .none,
+    marker_mid: MarkerMid = .none,
 
     /// marker-side
     /// - **W3C**: https://drafts.csswg.org/css-lists-3/#propdef-marker-side
-    markerSide: MarkerSide = .none,
+    marker_side: MarkerSide = .none,
 
     /// marker-start
     /// - **W3C**: https://svgwg.org/svg2-draft/painting.html#MarkerStartProperty
-    markerStart: MarkerStart = .none,
+    marker_start: MarkerStart = .none,
 
     /// mask
     /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask
@@ -26360,151 +26360,151 @@ pub const Style = struct {
 
     /// mask-border
     /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-border
-    maskBorder: MaskBorder = .none,
+    mask_border: MaskBorder = .none,
 
     /// mask-border-mode
     /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-border-mode
-    maskBorderMode: MaskBorderMode = .none,
+    mask_border_mode: MaskBorderMode = .none,
 
     /// mask-border-outset
     /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-border-outset
-    maskBorderOutset: MaskBorderOutset = .none,
+    mask_border_outset: MaskBorderOutset = .none,
 
     /// mask-border-repeat
     /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-border-repeat
-    maskBorderRepeat: MaskBorderRepeat = .none,
+    mask_border_repeat: MaskBorderRepeat = .none,
 
     /// mask-border-slice
     /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-border-slice
-    maskBorderSlice: MaskBorderSlice = .none,
+    mask_border_slice: MaskBorderSlice = .none,
 
     /// mask-border-source
     /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-border-source
-    maskBorderSource: MaskBorderSource = .none,
+    mask_border_source: MaskBorderSource = .none,
 
     /// mask-border-width
     /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-border-width
-    maskBorderWidth: MaskBorderWidth = .none,
+    mask_border_width: MaskBorderWidth = .none,
 
     /// mask-clip
     /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-clip
-    maskClip: MaskClip = .none,
+    mask_clip: MaskClip = .none,
 
     /// mask-composite
     /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-composite
-    maskComposite: MaskComposite = .none,
+    mask_composite: MaskComposite = .none,
 
     /// mask-image
     /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-image
-    maskImage: MaskImage = .none,
+    mask_image: MaskImage = .none,
 
     /// mask-mode
     /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-mode
-    maskMode: MaskMode = .none,
+    mask_mode: MaskMode = .none,
 
     /// mask-origin
     /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-origin
-    maskOrigin: MaskOrigin = .none,
+    mask_origin: MaskOrigin = .none,
 
     /// mask-position
     /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-position
-    maskPosition: MaskPosition = .none,
+    mask_position: MaskPosition = .none,
 
     /// mask-repeat
     /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-repeat
-    maskRepeat: MaskRepeat = .none,
+    mask_repeat: MaskRepeat = .none,
 
     /// mask-size
     /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-size
-    maskSize: MaskSize = .none,
+    mask_size: MaskSize = .none,
 
     /// mask-type
     /// - **W3C**: https://drafts.csswg.org/css-masking-1/#propdef-mask-type
-    maskType: MaskType = .none,
+    mask_type: MaskType = .none,
 
     /// math-depth
     /// - **W3C**: https://w3c.github.io/mathml-core/#propdef-math-depth
-    mathDepth: MathDepth = .none,
+    math_depth: MathDepth = .none,
 
     /// math-shift
     /// - **W3C**: https://w3c.github.io/mathml-core/#propdef-math-shift
-    mathShift: MathShift = .none,
+    math_shift: MathShift = .none,
 
     /// math-style
     /// - **W3C**: https://w3c.github.io/mathml-core/#propdef-math-style
-    mathStyle: MathStyle = .none,
+    math_style: MathStyle = .none,
 
     /// max-block-size
     /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-max-block-size
-    maxBlockSize: MaxBlockSize = .none,
+    max_block_size: MaxBlockSize = .none,
 
     /// max-height
     /// - **W3C**: https://drafts.csswg.org/css-sizing-3/#propdef-max-height
-    maxHeight: MaxHeight = .none,
+    max_height: MaxHeight = .none,
 
     /// max-inline-size
     /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-max-inline-size
-    maxInlineSize: MaxInlineSize = .none,
+    max_inline_size: MaxInlineSize = .none,
 
     /// max-lines
     /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-max-lines
-    maxLines: MaxLines = .none,
+    max_lines: MaxLines = .none,
 
     /// max-width
     /// - **W3C**: https://drafts.csswg.org/css-sizing-3/#propdef-max-width
-    maxWidth: MaxWidth = .none,
+    max_width: MaxWidth = .none,
 
     /// min-block-size
     /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-min-block-size
-    minBlockSize: MinBlockSize = .none,
+    min_block_size: MinBlockSize = .none,
 
     /// min-height
     /// - **W3C**: https://drafts.csswg.org/css-sizing-3/#propdef-min-height
-    minHeight: MinHeight = .none,
+    min_height: MinHeight = .none,
 
     /// min-inline-size
     /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-min-inline-size
-    minInlineSize: MinInlineSize = .none,
+    min_inline_size: MinInlineSize = .none,
 
     /// min-intrinsic-sizing
     /// - **W3C**: https://drafts.csswg.org/css-sizing-4/#propdef-min-intrinsic-sizing
-    minIntrinsicSizing: MinIntrinsicSizing = .none,
+    min_intrinsic_sizing: MinIntrinsicSizing = .none,
 
     /// min-width
     /// - **W3C**: https://drafts.csswg.org/css-sizing-3/#propdef-min-width
-    minWidth: MinWidth = .none,
+    min_width: MinWidth = .none,
 
     /// mix-blend-mode
     /// - **W3C**: https://drafts.csswg.org/compositing-2/#propdef-mix-blend-mode
-    mixBlendMode: MixBlendMode = .none,
+    mix_blend_mode: MixBlendMode = .none,
 
     /// nav-down
     /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-nav-down
-    navDown: NavDown = .none,
+    nav_down: NavDown = .none,
 
     /// nav-left
     /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-nav-left
-    navLeft: NavLeft = .none,
+    nav_left: NavLeft = .none,
 
     /// nav-right
     /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-nav-right
-    navRight: NavRight = .none,
+    nav_right: NavRight = .none,
 
     /// nav-up
     /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-nav-up
-    navUp: NavUp = .none,
+    nav_up: NavUp = .none,
 
     /// object-fit
     /// - **W3C**: https://drafts.csswg.org/css-images-4/#propdef-object-fit
-    objectFit: ObjectFit = .none,
+    object_fit: ObjectFit = .none,
 
     /// object-position
     /// - **W3C**: https://drafts.csswg.org/css-images-3/#propdef-object-position
-    objectPosition: ObjectPosition = .none,
+    object_position: ObjectPosition = .none,
 
     /// object-view-box
     /// - **W3C**: https://drafts.csswg.org/css-images-5/#propdef-object-view-box
-    objectViewBox: ObjectViewBox = .none,
+    object_view_box: ObjectViewBox = .none,
 
     /// offset
     /// - **W3C**: https://drafts.csswg.org/motion-1/#propdef-offset
@@ -26512,23 +26512,23 @@ pub const Style = struct {
 
     /// offset-anchor
     /// - **W3C**: https://drafts.csswg.org/motion-1/#propdef-offset-anchor
-    offsetAnchor: OffsetAnchor = .none,
+    offset_anchor: OffsetAnchor = .none,
 
     /// offset-distance
     /// - **W3C**: https://drafts.csswg.org/motion-1/#propdef-offset-distance
-    offsetDistance: OffsetDistance = .none,
+    offset_distance: OffsetDistance = .none,
 
     /// offset-path
     /// - **W3C**: https://drafts.csswg.org/motion-1/#propdef-offset-path
-    offsetPath: OffsetPath = .none,
+    offset_path: OffsetPath = .none,
 
     /// offset-position
     /// - **W3C**: https://drafts.csswg.org/motion-1/#propdef-offset-position
-    offsetPosition: OffsetPosition = .none,
+    offset_position: OffsetPosition = .none,
 
     /// offset-rotate
     /// - **W3C**: https://drafts.csswg.org/motion-1/#propdef-offset-rotate
-    offsetRotate: OffsetRotate = .none,
+    offset_rotate: OffsetRotate = .none,
 
     /// opacity
     /// - **W3C**: https://drafts.csswg.org/css-color-4/#propdef-opacity
@@ -26548,19 +26548,19 @@ pub const Style = struct {
 
     /// outline-color
     /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-outline-color
-    outlineColor: OutlineColor = .none,
+    outline_color: OutlineColor = .none,
 
     /// outline-offset
     /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-outline-offset
-    outlineOffset: OutlineOffset = .none,
+    outline_offset: OutlineOffset = .none,
 
     /// outline-style
     /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-outline-style
-    outlineStyle: OutlineStyle = .none,
+    outline_style: OutlineStyle = .none,
 
     /// outline-width
     /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-outline-width
-    outlineWidth: OutlineWidth = .none,
+    outline_width: OutlineWidth = .none,
 
     /// overflow
     /// - **W3C**: https://drafts.csswg.org/css-overflow-3/#propdef-overflow
@@ -26568,71 +26568,71 @@ pub const Style = struct {
 
     /// overflow-anchor
     /// - **W3C**: https://drafts.csswg.org/css-scroll-anchoring-1/#propdef-overflow-anchor
-    overflowAnchor: OverflowAnchor = .none,
+    overflow_anchor: OverflowAnchor = .none,
 
     /// overflow-block
     /// - **W3C**: https://drafts.csswg.org/css-overflow-3/#propdef-overflow-block
-    overflowBlock: OverflowBlock = .none,
+    overflow_block: OverflowBlock = .none,
 
     /// overflow-clip-margin
     /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin
-    overflowClipMargin: OverflowClipMargin = .none,
+    overflow_clip_margin: OverflowClipMargin = .none,
 
     /// overflow-clip-margin-block
     /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-block
-    overflowClipMarginBlock: OverflowClipMarginBlock = .none,
+    overflow_clip_margin_block: OverflowClipMarginBlock = .none,
 
     /// overflow-clip-margin-block-end
     /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-block-end
-    overflowClipMarginBlockEnd: OverflowClipMarginBlockEnd = .none,
+    overflow_clip_margin_block_end: OverflowClipMarginBlockEnd = .none,
 
     /// overflow-clip-margin-block-start
     /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-block-start
-    overflowClipMarginBlockStart: OverflowClipMarginBlockStart = .none,
+    overflow_clip_margin_block_start: OverflowClipMarginBlockStart = .none,
 
     /// overflow-clip-margin-bottom
     /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-bottom
-    overflowClipMarginBottom: OverflowClipMarginBottom = .none,
+    overflow_clip_margin_bottom: OverflowClipMarginBottom = .none,
 
     /// overflow-clip-margin-inline
     /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-inline
-    overflowClipMarginInline: OverflowClipMarginInline = .none,
+    overflow_clip_margin_inline: OverflowClipMarginInline = .none,
 
     /// overflow-clip-margin-inline-end
     /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-inline-end
-    overflowClipMarginInlineEnd: OverflowClipMarginInlineEnd = .none,
+    overflow_clip_margin_inline_end: OverflowClipMarginInlineEnd = .none,
 
     /// overflow-clip-margin-inline-start
     /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-inline-start
-    overflowClipMarginInlineStart: OverflowClipMarginInlineStart = .none,
+    overflow_clip_margin_inline_start: OverflowClipMarginInlineStart = .none,
 
     /// overflow-clip-margin-left
     /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-left
-    overflowClipMarginLeft: OverflowClipMarginLeft = .none,
+    overflow_clip_margin_left: OverflowClipMarginLeft = .none,
 
     /// overflow-clip-margin-right
     /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-right
-    overflowClipMarginRight: OverflowClipMarginRight = .none,
+    overflow_clip_margin_right: OverflowClipMarginRight = .none,
 
     /// overflow-clip-margin-top
     /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-top
-    overflowClipMarginTop: OverflowClipMarginTop = .none,
+    overflow_clip_margin_top: OverflowClipMarginTop = .none,
 
     /// overflow-inline
     /// - **W3C**: https://drafts.csswg.org/css-overflow-3/#propdef-overflow-inline
-    overflowInline: OverflowInline = .none,
+    overflow_inline: OverflowInline = .none,
 
     /// overflow-wrap
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-overflow-wrap
-    overflowWrap: OverflowWrap = .none,
+    overflow_wrap: OverflowWrap = .none,
 
     /// overflow-x
     /// - **W3C**: https://drafts.csswg.org/css-overflow-3/#propdef-overflow-x
-    overflowX: OverflowX = .none,
+    overflow_x: OverflowX = .none,
 
     /// overflow-y
     /// - **W3C**: https://drafts.csswg.org/css-overflow-3/#propdef-overflow-y
-    overflowY: OverflowY = .none,
+    overflow_y: OverflowY = .none,
 
     /// overlay
     /// - **W3C**: https://drafts.csswg.org/css-position-4/#propdef-overlay
@@ -26640,23 +26640,23 @@ pub const Style = struct {
 
     /// overscroll-behavior
     /// - **W3C**: https://drafts.csswg.org/css-overscroll-1/#propdef-overscroll-behavior
-    overscrollBehavior: OverscrollBehavior = .none,
+    overscroll_behavior: OverscrollBehavior = .none,
 
     /// overscroll-behavior-block
     /// - **W3C**: https://drafts.csswg.org/css-overscroll-1/#propdef-overscroll-behavior-block
-    overscrollBehaviorBlock: OverscrollBehaviorBlock = .none,
+    overscroll_behavior_block: OverscrollBehaviorBlock = .none,
 
     /// overscroll-behavior-inline
     /// - **W3C**: https://drafts.csswg.org/css-overscroll-1/#propdef-overscroll-behavior-inline
-    overscrollBehaviorInline: OverscrollBehaviorInline = .none,
+    overscroll_behavior_inline: OverscrollBehaviorInline = .none,
 
     /// overscroll-behavior-x
     /// - **W3C**: https://drafts.csswg.org/css-overscroll-1/#propdef-overscroll-behavior-x
-    overscrollBehaviorX: OverscrollBehaviorX = .none,
+    overscroll_behavior_x: OverscrollBehaviorX = .none,
 
     /// overscroll-behavior-y
     /// - **W3C**: https://drafts.csswg.org/css-overscroll-1/#propdef-overscroll-behavior-y
-    overscrollBehaviorY: OverscrollBehaviorY = .none,
+    overscroll_behavior_y: OverscrollBehaviorY = .none,
 
     /// padding
     /// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-padding
@@ -26664,43 +26664,43 @@ pub const Style = struct {
 
     /// padding-block
     /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-padding-block
-    paddingBlock: PaddingBlock = .none,
+    padding_block: PaddingBlock = .none,
 
     /// padding-block-end
     /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-padding-block-end
-    paddingBlockEnd: PaddingBlockEnd = .none,
+    padding_block_end: PaddingBlockEnd = .none,
 
     /// padding-block-start
     /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-padding-block-start
-    paddingBlockStart: PaddingBlockStart = .none,
+    padding_block_start: PaddingBlockStart = .none,
 
     /// padding-bottom
     /// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-padding-bottom
-    paddingBottom: PaddingBottom = .none,
+    padding_bottom: PaddingBottom = .none,
 
     /// padding-inline
     /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-padding-inline
-    paddingInline: PaddingInline = .none,
+    padding_inline: PaddingInline = .none,
 
     /// padding-inline-end
     /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-padding-inline-end
-    paddingInlineEnd: PaddingInlineEnd = .none,
+    padding_inline_end: PaddingInlineEnd = .none,
 
     /// padding-inline-start
     /// - **W3C**: https://drafts.csswg.org/css-logical-1/#propdef-padding-inline-start
-    paddingInlineStart: PaddingInlineStart = .none,
+    padding_inline_start: PaddingInlineStart = .none,
 
     /// padding-left
     /// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-padding-left
-    paddingLeft: PaddingLeft = .none,
+    padding_left: PaddingLeft = .none,
 
     /// padding-right
     /// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-padding-right
-    paddingRight: PaddingRight = .none,
+    padding_right: PaddingRight = .none,
 
     /// padding-top
     /// - **W3C**: https://drafts.csswg.org/css-box-4/#propdef-padding-top
-    paddingTop: PaddingTop = .none,
+    padding_top: PaddingTop = .none,
 
     /// page
     /// - **W3C**: https://drafts.csswg.org/css-page-3/#propdef-page
@@ -26708,19 +26708,19 @@ pub const Style = struct {
 
     /// page-break-after
     /// - **W3C**: https://drafts.csswg.org/css2/#propdef-page-break-after
-    pageBreakAfter: PageBreakAfter = .none,
+    page_break_after: PageBreakAfter = .none,
 
     /// page-break-before
     /// - **W3C**: https://drafts.csswg.org/css2/#propdef-page-break-before
-    pageBreakBefore: PageBreakBefore = .none,
+    page_break_before: PageBreakBefore = .none,
 
     /// page-break-inside
     /// - **W3C**: https://drafts.csswg.org/css2/#propdef-page-break-inside
-    pageBreakInside: PageBreakInside = .none,
+    page_break_inside: PageBreakInside = .none,
 
     /// paint-order
     /// - **W3C**: https://svgwg.org/svg2-draft/painting.html#PaintOrderProperty
-    paintOrder: PaintOrder = .none,
+    paint_order: PaintOrder = .none,
 
     /// pause
     /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-pause
@@ -26728,11 +26728,11 @@ pub const Style = struct {
 
     /// pause-after
     /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-pause-after
-    pauseAfter: PauseAfter = .none,
+    pause_after: PauseAfter = .none,
 
     /// pause-before
     /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-pause-before
-    pauseBefore: PauseBefore = .none,
+    pause_before: PauseBefore = .none,
 
     /// perspective
     /// - **W3C**: https://drafts.csswg.org/css-transforms-2/#propdef-perspective
@@ -26740,35 +26740,35 @@ pub const Style = struct {
 
     /// perspective-origin
     /// - **W3C**: https://drafts.csswg.org/css-transforms-2/#propdef-perspective-origin
-    perspectiveOrigin: PerspectiveOrigin = .none,
+    perspective_origin: PerspectiveOrigin = .none,
 
     /// place-content
     /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-place-content
-    placeContent: PlaceContent = .none,
+    place_content: PlaceContent = .none,
 
     /// place-items
     /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-place-items
-    placeItems: PlaceItems = .none,
+    place_items: PlaceItems = .none,
 
     /// place-self
     /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-place-self
-    placeSelf: PlaceSelf = .none,
+    place_self: PlaceSelf = .none,
 
     /// pointer-events
     /// - **W3C**: https://svgwg.org/svg2-draft/interact.html#PointerEventsProperty
-    pointerEvents: PointerEvents = .none,
+    pointer_events: PointerEvents = .none,
 
     /// pointer-timeline
     /// - **W3C**: https://drafts.csswg.org/pointer-animations-1/#propdef-pointer-timeline
-    pointerTimeline: PointerTimeline = .none,
+    pointer_timeline: PointerTimeline = .none,
 
     /// pointer-timeline-axis
     /// - **W3C**: https://drafts.csswg.org/pointer-animations-1/#propdef-pointer-timeline-axis
-    pointerTimelineAxis: PointerTimelineAxis = .none,
+    pointer_timeline_axis: PointerTimelineAxis = .none,
 
     /// pointer-timeline-name
     /// - **W3C**: https://drafts.csswg.org/pointer-animations-1/#propdef-pointer-timeline-name
-    pointerTimelineName: PointerTimelineName = .none,
+    pointer_timeline_name: PointerTimelineName = .none,
 
     /// position
     /// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-position
@@ -26776,31 +26776,31 @@ pub const Style = struct {
 
     /// position-anchor
     /// - **W3C**: https://drafts.csswg.org/css-anchor-position-1/#propdef-position-anchor
-    positionAnchor: PositionAnchor = .none,
+    position_anchor: PositionAnchor = .none,
 
     /// position-area
     /// - **W3C**: https://drafts.csswg.org/css-anchor-position-1/#propdef-position-area
-    positionArea: PositionArea = .none,
+    position_area: PositionArea = .none,
 
     /// position-try
     /// - **W3C**: https://drafts.csswg.org/css-anchor-position-1/#propdef-position-try
-    positionTry: PositionTry = .none,
+    position_try: PositionTry = .none,
 
     /// position-try-fallbacks
     /// - **W3C**: https://drafts.csswg.org/css-anchor-position-1/#propdef-position-try-fallbacks
-    positionTryFallbacks: PositionTryFallbacks = .none,
+    position_try_fallbacks: PositionTryFallbacks = .none,
 
     /// position-try-order
     /// - **W3C**: https://drafts.csswg.org/css-anchor-position-1/#propdef-position-try-order
-    positionTryOrder: PositionTryOrder = .none,
+    position_try_order: PositionTryOrder = .none,
 
     /// position-visibility
     /// - **W3C**: https://drafts.csswg.org/css-anchor-position-1/#propdef-position-visibility
-    positionVisibility: PositionVisibility = .none,
+    position_visibility: PositionVisibility = .none,
 
     /// print-color-adjust
     /// - **W3C**: https://drafts.csswg.org/css-color-adjust-1/#propdef-print-color-adjust
-    printColorAdjust: PrintColorAdjust = .none,
+    print_color_adjust: PrintColorAdjust = .none,
 
     /// quotes
     /// - **W3C**: https://drafts.csswg.org/css-content-3/#propdef-quotes
@@ -26812,15 +26812,15 @@ pub const Style = struct {
 
     /// reading-flow
     /// - **W3C**: https://drafts.csswg.org/css-display-4/#propdef-reading-flow
-    readingFlow: ReadingFlow = .none,
+    reading_flow: ReadingFlow = .none,
 
     /// reading-order
     /// - **W3C**: https://drafts.csswg.org/css-display-4/#propdef-reading-order
-    readingOrder: ReadingOrder = .none,
+    reading_order: ReadingOrder = .none,
 
     /// region-fragment
     /// - **W3C**: https://drafts.csswg.org/css-regions-1/#propdef-region-fragment
-    regionFragment: RegionFragment = .none,
+    region_fragment: RegionFragment = .none,
 
     /// resize
     /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-resize
@@ -26832,11 +26832,11 @@ pub const Style = struct {
 
     /// rest-after
     /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-rest-after
-    restAfter: RestAfter = .none,
+    rest_after: RestAfter = .none,
 
     /// rest-before
     /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-rest-before
-    restBefore: RestBefore = .none,
+    rest_before: RestBefore = .none,
 
     /// right
     /// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-right
@@ -26848,83 +26848,83 @@ pub const Style = struct {
 
     /// row-gap
     /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-row-gap
-    rowGap: RowGap = .none,
+    row_gap: RowGap = .none,
 
     /// row-rule
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule
-    rowRule: RowRule = .none,
+    row_rule: RowRule = .none,
 
     /// row-rule-break
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-break
-    rowRuleBreak: RowRuleBreak = .none,
+    row_rule_break: RowRuleBreak = .none,
 
     /// row-rule-color
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-color
-    rowRuleColor: RowRuleColor = .none,
+    row_rule_color: RowRuleColor = .none,
 
     /// row-rule-edge-inset
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-edge-inset
-    rowRuleEdgeInset: RowRuleEdgeInset = .none,
+    row_rule_edge_inset: RowRuleEdgeInset = .none,
 
     /// row-rule-edge-inset-end
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-edge-inset-end
-    rowRuleEdgeInsetEnd: RowRuleEdgeInsetEnd = .none,
+    row_rule_edge_inset_end: RowRuleEdgeInsetEnd = .none,
 
     /// row-rule-edge-inset-start
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-edge-inset-start
-    rowRuleEdgeInsetStart: RowRuleEdgeInsetStart = .none,
+    row_rule_edge_inset_start: RowRuleEdgeInsetStart = .none,
 
     /// row-rule-inset
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-inset
-    rowRuleInset: RowRuleInset = .none,
+    row_rule_inset: RowRuleInset = .none,
 
     /// row-rule-inset-end
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-inset-end
-    rowRuleInsetEnd: RowRuleInsetEnd = .none,
+    row_rule_inset_end: RowRuleInsetEnd = .none,
 
     /// row-rule-inset-start
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-inset-start
-    rowRuleInsetStart: RowRuleInsetStart = .none,
+    row_rule_inset_start: RowRuleInsetStart = .none,
 
     /// row-rule-interior-inset
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-interior-inset
-    rowRuleInteriorInset: RowRuleInteriorInset = .none,
+    row_rule_interior_inset: RowRuleInteriorInset = .none,
 
     /// row-rule-interior-inset-end
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-interior-inset-end
-    rowRuleInteriorInsetEnd: RowRuleInteriorInsetEnd = .none,
+    row_rule_interior_inset_end: RowRuleInteriorInsetEnd = .none,
 
     /// row-rule-interior-inset-start
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-interior-inset-start
-    rowRuleInteriorInsetStart: RowRuleInteriorInsetStart = .none,
+    row_rule_interior_inset_start: RowRuleInteriorInsetStart = .none,
 
     /// row-rule-style
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-style
-    rowRuleStyle: RowRuleStyle = .none,
+    row_rule_style: RowRuleStyle = .none,
 
     /// row-rule-visibility-items
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-visibility-items
-    rowRuleVisibilityItems: RowRuleVisibilityItems = .none,
+    row_rule_visibility_items: RowRuleVisibilityItems = .none,
 
     /// row-rule-width
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-width
-    rowRuleWidth: RowRuleWidth = .none,
+    row_rule_width: RowRuleWidth = .none,
 
     /// ruby-align
     /// - **W3C**: https://drafts.csswg.org/css-ruby-1/#propdef-ruby-align
-    rubyAlign: RubyAlign = .none,
+    ruby_align: RubyAlign = .none,
 
     /// ruby-merge
     /// - **W3C**: https://drafts.csswg.org/css-ruby-1/#propdef-ruby-merge
-    rubyMerge: RubyMerge = .none,
+    ruby_merge: RubyMerge = .none,
 
     /// ruby-overhang
     /// - **W3C**: https://drafts.csswg.org/css-ruby-1/#propdef-ruby-overhang
-    rubyOverhang: RubyOverhang = .none,
+    ruby_overhang: RubyOverhang = .none,
 
     /// ruby-position
     /// - **W3C**: https://drafts.csswg.org/css-ruby-1/#propdef-ruby-position
-    rubyPosition: RubyPosition = .none,
+    ruby_position: RubyPosition = .none,
 
     /// rule
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule
@@ -26932,47 +26932,47 @@ pub const Style = struct {
 
     /// rule-break
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-break
-    ruleBreak: RuleBreak = .none,
+    rule_break: RuleBreak = .none,
 
     /// rule-color
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-color
-    ruleColor: RuleColor = .none,
+    rule_color: RuleColor = .none,
 
     /// rule-edge-inset
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-edge-inset
-    ruleEdgeInset: RuleEdgeInset = .none,
+    rule_edge_inset: RuleEdgeInset = .none,
 
     /// rule-inset
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-inset
-    ruleInset: RuleInset = .none,
+    rule_inset: RuleInset = .none,
 
     /// rule-inset-end
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-inset-end
-    ruleInsetEnd: RuleInsetEnd = .none,
+    rule_inset_end: RuleInsetEnd = .none,
 
     /// rule-inset-start
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-inset-start
-    ruleInsetStart: RuleInsetStart = .none,
+    rule_inset_start: RuleInsetStart = .none,
 
     /// rule-interior-inset
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-interior-inset
-    ruleInteriorInset: RuleInteriorInset = .none,
+    rule_interior_inset: RuleInteriorInset = .none,
 
     /// rule-overlap
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-overlap
-    ruleOverlap: RuleOverlap = .none,
+    rule_overlap: RuleOverlap = .none,
 
     /// rule-style
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-style
-    ruleStyle: RuleStyle = .none,
+    rule_style: RuleStyle = .none,
 
     /// rule-visibility-items
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-visibility-items
-    ruleVisibilityItems: RuleVisibilityItems = .none,
+    rule_visibility_items: RuleVisibilityItems = .none,
 
     /// rule-width
     /// - **W3C**: https://drafts.csswg.org/css-gaps-1/#propdef-rule-width
-    ruleWidth: RuleWidth = .none,
+    rule_width: RuleWidth = .none,
 
     /// rx
     /// - **W3C**: https://svgwg.org/svg2-draft/geometry.html#RxProperty
@@ -26988,187 +26988,187 @@ pub const Style = struct {
 
     /// scroll-behavior
     /// - **W3C**: https://drafts.csswg.org/css-overflow-3/#propdef-scroll-behavior
-    scrollBehavior: ScrollBehavior = .none,
+    scroll_behavior: ScrollBehavior = .none,
 
     /// scroll-initial-target
     /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-2/#propdef-scroll-initial-target
-    scrollInitialTarget: ScrollInitialTarget = .none,
+    scroll_initial_target: ScrollInitialTarget = .none,
 
     /// scroll-margin
     /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin
-    scrollMargin: ScrollMargin = .none,
+    scroll_margin: ScrollMargin = .none,
 
     /// scroll-margin-block
     /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-block
-    scrollMarginBlock: ScrollMarginBlock = .none,
+    scroll_margin_block: ScrollMarginBlock = .none,
 
     /// scroll-margin-block-end
     /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-block-end
-    scrollMarginBlockEnd: ScrollMarginBlockEnd = .none,
+    scroll_margin_block_end: ScrollMarginBlockEnd = .none,
 
     /// scroll-margin-block-start
     /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-block-start
-    scrollMarginBlockStart: ScrollMarginBlockStart = .none,
+    scroll_margin_block_start: ScrollMarginBlockStart = .none,
 
     /// scroll-margin-bottom
     /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-bottom
-    scrollMarginBottom: ScrollMarginBottom = .none,
+    scroll_margin_bottom: ScrollMarginBottom = .none,
 
     /// scroll-margin-inline
     /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-inline
-    scrollMarginInline: ScrollMarginInline = .none,
+    scroll_margin_inline: ScrollMarginInline = .none,
 
     /// scroll-margin-inline-end
     /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-inline-end
-    scrollMarginInlineEnd: ScrollMarginInlineEnd = .none,
+    scroll_margin_inline_end: ScrollMarginInlineEnd = .none,
 
     /// scroll-margin-inline-start
     /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-inline-start
-    scrollMarginInlineStart: ScrollMarginInlineStart = .none,
+    scroll_margin_inline_start: ScrollMarginInlineStart = .none,
 
     /// scroll-margin-left
     /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-left
-    scrollMarginLeft: ScrollMarginLeft = .none,
+    scroll_margin_left: ScrollMarginLeft = .none,
 
     /// scroll-margin-right
     /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-right
-    scrollMarginRight: ScrollMarginRight = .none,
+    scroll_margin_right: ScrollMarginRight = .none,
 
     /// scroll-margin-top
     /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-top
-    scrollMarginTop: ScrollMarginTop = .none,
+    scroll_margin_top: ScrollMarginTop = .none,
 
     /// scroll-marker-group
     /// - **W3C**: https://drafts.csswg.org/css-overflow-5/#propdef-scroll-marker-group
-    scrollMarkerGroup: ScrollMarkerGroup = .none,
+    scroll_marker_group: ScrollMarkerGroup = .none,
 
     /// scroll-padding
     /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding
-    scrollPadding: ScrollPadding = .none,
+    scroll_padding: ScrollPadding = .none,
 
     /// scroll-padding-block
     /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-block
-    scrollPaddingBlock: ScrollPaddingBlock = .none,
+    scroll_padding_block: ScrollPaddingBlock = .none,
 
     /// scroll-padding-block-end
     /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-block-end
-    scrollPaddingBlockEnd: ScrollPaddingBlockEnd = .none,
+    scroll_padding_block_end: ScrollPaddingBlockEnd = .none,
 
     /// scroll-padding-block-start
     /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-block-start
-    scrollPaddingBlockStart: ScrollPaddingBlockStart = .none,
+    scroll_padding_block_start: ScrollPaddingBlockStart = .none,
 
     /// scroll-padding-bottom
     /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-bottom
-    scrollPaddingBottom: ScrollPaddingBottom = .none,
+    scroll_padding_bottom: ScrollPaddingBottom = .none,
 
     /// scroll-padding-inline
     /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-inline
-    scrollPaddingInline: ScrollPaddingInline = .none,
+    scroll_padding_inline: ScrollPaddingInline = .none,
 
     /// scroll-padding-inline-end
     /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-inline-end
-    scrollPaddingInlineEnd: ScrollPaddingInlineEnd = .none,
+    scroll_padding_inline_end: ScrollPaddingInlineEnd = .none,
 
     /// scroll-padding-inline-start
     /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-inline-start
-    scrollPaddingInlineStart: ScrollPaddingInlineStart = .none,
+    scroll_padding_inline_start: ScrollPaddingInlineStart = .none,
 
     /// scroll-padding-left
     /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-left
-    scrollPaddingLeft: ScrollPaddingLeft = .none,
+    scroll_padding_left: ScrollPaddingLeft = .none,
 
     /// scroll-padding-right
     /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-right
-    scrollPaddingRight: ScrollPaddingRight = .none,
+    scroll_padding_right: ScrollPaddingRight = .none,
 
     /// scroll-padding-top
     /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-top
-    scrollPaddingTop: ScrollPaddingTop = .none,
+    scroll_padding_top: ScrollPaddingTop = .none,
 
     /// scroll-snap-align
     /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-snap-align
-    scrollSnapAlign: ScrollSnapAlign = .none,
+    scroll_snap_align: ScrollSnapAlign = .none,
 
     /// scroll-snap-stop
     /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-snap-stop
-    scrollSnapStop: ScrollSnapStop = .none,
+    scroll_snap_stop: ScrollSnapStop = .none,
 
     /// scroll-snap-type
     /// - **W3C**: https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-snap-type
-    scrollSnapType: ScrollSnapType = .none,
+    scroll_snap_type: ScrollSnapType = .none,
 
     /// scroll-target-group
     /// - **W3C**: https://drafts.csswg.org/css-overflow-5/#propdef-scroll-target-group
-    scrollTargetGroup: ScrollTargetGroup = .none,
+    scroll_target_group: ScrollTargetGroup = .none,
 
     /// scroll-timeline
     /// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-scroll-timeline
-    scrollTimeline: ScrollTimeline = .none,
+    scroll_timeline: ScrollTimeline = .none,
 
     /// scroll-timeline-axis
     /// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-scroll-timeline-axis
-    scrollTimelineAxis: ScrollTimelineAxis = .none,
+    scroll_timeline_axis: ScrollTimelineAxis = .none,
 
     /// scroll-timeline-name
     /// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-scroll-timeline-name
-    scrollTimelineName: ScrollTimelineName = .none,
+    scroll_timeline_name: ScrollTimelineName = .none,
 
     /// scrollbar-color
     /// - **W3C**: https://drafts.csswg.org/css-scrollbars-1/#propdef-scrollbar-color
-    scrollbarColor: ScrollbarColor = .none,
+    scrollbar_color: ScrollbarColor = .none,
 
     /// scrollbar-gutter
     /// - **W3C**: https://drafts.csswg.org/css-overflow-3/#propdef-scrollbar-gutter
-    scrollbarGutter: ScrollbarGutter = .none,
+    scrollbar_gutter: ScrollbarGutter = .none,
 
     /// scrollbar-width
     /// - **W3C**: https://drafts.csswg.org/css-scrollbars-1/#propdef-scrollbar-width
-    scrollbarWidth: ScrollbarWidth = .none,
+    scrollbar_width: ScrollbarWidth = .none,
 
     /// shape-image-threshold
     /// - **W3C**: https://drafts.csswg.org/css-shapes-1/#propdef-shape-image-threshold
-    shapeImageThreshold: ShapeImageThreshold = .none,
+    shape_image_threshold: ShapeImageThreshold = .none,
 
     /// shape-inside
     /// - **W3C**: https://drafts.csswg.org/css-shapes-2/#propdef-shape-inside
-    shapeInside: ShapeInside = .none,
+    shape_inside: ShapeInside = .none,
 
     /// shape-margin
     /// - **W3C**: https://drafts.csswg.org/css-shapes-1/#propdef-shape-margin
-    shapeMargin: ShapeMargin = .none,
+    shape_margin: ShapeMargin = .none,
 
     /// shape-outside
     /// - **W3C**: https://drafts.csswg.org/css-shapes-1/#propdef-shape-outside
-    shapeOutside: ShapeOutside = .none,
+    shape_outside: ShapeOutside = .none,
 
     /// shape-padding
     /// - **W3C**: https://drafts.csswg.org/css-shapes-2/#propdef-shape-padding
-    shapePadding: ShapePadding = .none,
+    shape_padding: ShapePadding = .none,
 
     /// shape-rendering
     /// - **W3C**: https://svgwg.org/svg2-draft/painting.html#ShapeRenderingProperty
-    shapeRendering: ShapeRendering = .none,
+    shape_rendering: ShapeRendering = .none,
 
     /// shape-subtract
     /// - **W3C**: https://svgwg.org/svg2-draft/text.html#ShapesubtractProperty
-    shapeSubtract: ShapeSubtract = .none,
+    shape_subtract: ShapeSubtract = .none,
 
     /// slider-orientation
     /// - **W3C**: https://drafts.csswg.org/css-forms-1/#propdef-slider-orientation
-    sliderOrientation: SliderOrientation = .none,
+    slider_orientation: SliderOrientation = .none,
 
     /// spatial-navigation-action
     /// - **W3C**: https://drafts.csswg.org/css-nav-1/#propdef-spatial-navigation-action
-    spatialNavigationAction: SpatialNavigationAction = .none,
+    spatial_navigation_action: SpatialNavigationAction = .none,
 
     /// spatial-navigation-contain
     /// - **W3C**: https://drafts.csswg.org/css-nav-1/#propdef-spatial-navigation-contain
-    spatialNavigationContain: SpatialNavigationContain = .none,
+    spatial_navigation_contain: SpatialNavigationContain = .none,
 
     /// spatial-navigation-function
     /// - **W3C**: https://drafts.csswg.org/css-nav-1/#propdef-spatial-navigation-function
-    spatialNavigationFunction: SpatialNavigationFunction = .none,
+    spatial_navigation_function: SpatialNavigationFunction = .none,
 
     /// speak
     /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-speak
@@ -27176,19 +27176,19 @@ pub const Style = struct {
 
     /// speak-as
     /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-speak-as
-    speakAs: SpeakAs = .none,
+    speak_as: SpeakAs = .none,
 
     /// stop-color
     /// - **W3C**: https://svgwg.org/svg2-draft/pservers.html#StopColorProperty
-    stopColor: StopColor = .none,
+    stop_color: StopColor = .none,
 
     /// stop-opacity
     /// - **W3C**: https://svgwg.org/svg2-draft/pservers.html#StopOpacityProperty
-    stopOpacity: StopOpacity = .none,
+    stop_opacity: StopOpacity = .none,
 
     /// string-set
     /// - **W3C**: https://drafts.csswg.org/css-content-3/#propdef-string-set
-    stringSet: StringSet = .none,
+    string_set: StringSet = .none,
 
     /// stroke
     /// - **W3C**: https://svgwg.org/svg2-draft/painting.html#StrokeProperty
@@ -27196,295 +27196,295 @@ pub const Style = struct {
 
     /// stroke-align
     /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-align
-    strokeAlign: StrokeAlign = .none,
+    stroke_align: StrokeAlign = .none,
 
     /// stroke-alignment
     /// - **W3C**: https://svgwg.org/specs/strokes/#StrokeAlignmentProperty
-    strokeAlignment: StrokeAlignment = .none,
+    stroke_alignment: StrokeAlignment = .none,
 
     /// stroke-break
     /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-break
-    strokeBreak: StrokeBreak = .none,
+    stroke_break: StrokeBreak = .none,
 
     /// stroke-color
     /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-color
-    strokeColor: StrokeColor = .none,
+    stroke_color: StrokeColor = .none,
 
     /// stroke-dash-corner
     /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-dash-corner
-    strokeDashCorner: StrokeDashCorner = .none,
+    stroke_dash_corner: StrokeDashCorner = .none,
 
     /// stroke-dash-justify
     /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-dash-justify
-    strokeDashJustify: StrokeDashJustify = .none,
+    stroke_dash_justify: StrokeDashJustify = .none,
 
     /// stroke-dashadjust
     /// - **W3C**: https://svgwg.org/specs/strokes/#StrokeDashadjustProperty
-    strokeDashadjust: StrokeDashadjust = .none,
+    stroke_dashadjust: StrokeDashadjust = .none,
 
     /// stroke-dasharray
     /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-dasharray
-    strokeDasharray: StrokeDasharray = .none,
+    stroke_dasharray: StrokeDasharray = .none,
 
     /// stroke-dashcorner
     /// - **W3C**: https://svgwg.org/specs/strokes/#StrokeDashcornerProperty
-    strokeDashcorner: StrokeDashcorner = .none,
+    stroke_dashcorner: StrokeDashcorner = .none,
 
     /// stroke-dashoffset
     /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-dashoffset
-    strokeDashoffset: StrokeDashoffset = .none,
+    stroke_dashoffset: StrokeDashoffset = .none,
 
     /// stroke-image
     /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-image
-    strokeImage: StrokeImage = .none,
+    stroke_image: StrokeImage = .none,
 
     /// stroke-linecap
     /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-linecap
-    strokeLinecap: StrokeLinecap = .none,
+    stroke_linecap: StrokeLinecap = .none,
 
     /// stroke-linejoin
     /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-linejoin
-    strokeLinejoin: StrokeLinejoin = .none,
+    stroke_linejoin: StrokeLinejoin = .none,
 
     /// stroke-miterlimit
     /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-miterlimit
-    strokeMiterlimit: StrokeMiterlimit = .none,
+    stroke_miterlimit: StrokeMiterlimit = .none,
 
     /// stroke-opacity
     /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-opacity
-    strokeOpacity: StrokeOpacity = .none,
+    stroke_opacity: StrokeOpacity = .none,
 
     /// stroke-origin
     /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-origin
-    strokeOrigin: StrokeOrigin = .none,
+    stroke_origin: StrokeOrigin = .none,
 
     /// stroke-position
     /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-position
-    strokePosition: StrokePosition = .none,
+    stroke_position: StrokePosition = .none,
 
     /// stroke-repeat
     /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-repeat
-    strokeRepeat: StrokeRepeat = .none,
+    stroke_repeat: StrokeRepeat = .none,
 
     /// stroke-size
     /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-size
-    strokeSize: StrokeSize = .none,
+    stroke_size: StrokeSize = .none,
 
     /// stroke-width
     /// - **W3C**: https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-width
-    strokeWidth: StrokeWidth = .none,
+    stroke_width: StrokeWidth = .none,
 
     /// tab-size
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-tab-size
-    tabSize: TabSize = .none,
+    tab_size: TabSize = .none,
 
     /// table-layout
     /// - **W3C**: https://drafts.csswg.org/css-tables-3/#propdef-table-layout
-    tableLayout: TableLayout = .none,
+    table_layout: TableLayout = .none,
 
     /// text-align
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-align
-    textAlign: TextAlign = .none,
+    text_align: TextAlign = .none,
 
     /// text-align-all
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-align-all
-    textAlignAll: TextAlignAll = .none,
+    text_align_all: TextAlignAll = .none,
 
     /// text-align-last
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-align-last
-    textAlignLast: TextAlignLast = .none,
+    text_align_last: TextAlignLast = .none,
 
     /// text-anchor
     /// - **W3C**: https://svgwg.org/svg2-draft/text.html#TextAnchorProperty
-    textAnchor: TextAnchor = .none,
+    text_anchor: TextAnchor = .none,
 
     /// text-autospace
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-autospace
-    textAutospace: TextAutospace = .none,
+    text_autospace: TextAutospace = .none,
 
     /// text-box
     /// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-text-box
-    textBox: TextBox = .none,
+    text_box: TextBox = .none,
 
     /// text-box-edge
     /// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-text-box-edge
-    textBoxEdge: TextBoxEdge = .none,
+    text_box_edge: TextBoxEdge = .none,
 
     /// text-box-trim
     /// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-text-box-trim
-    textBoxTrim: TextBoxTrim = .none,
+    text_box_trim: TextBoxTrim = .none,
 
     /// text-combine-upright
     /// - **W3C**: https://drafts.csswg.org/css-writing-modes-4/#propdef-text-combine-upright
-    textCombineUpright: TextCombineUpright = .none,
+    text_combine_upright: TextCombineUpright = .none,
 
     /// text-decoration
     /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration
-    textDecoration: TextDecoration = .none,
+    text_decoration: TextDecoration = .none,
 
     /// text-decoration-color
     /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-color
-    textDecorationColor: TextDecorationColor = .none,
+    text_decoration_color: TextDecorationColor = .none,
 
     /// text-decoration-inset
     /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-inset
-    textDecorationInset: TextDecorationInset = .none,
+    text_decoration_inset: TextDecorationInset = .none,
 
     /// text-decoration-line
     /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-line
-    textDecorationLine: TextDecorationLine = .none,
+    text_decoration_line: TextDecorationLine = .none,
 
     /// text-decoration-skip
     /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip
-    textDecorationSkip: TextDecorationSkip = .none,
+    text_decoration_skip: TextDecorationSkip = .none,
 
     /// text-decoration-skip-box
     /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip-box
-    textDecorationSkipBox: TextDecorationSkipBox = .none,
+    text_decoration_skip_box: TextDecorationSkipBox = .none,
 
     /// text-decoration-skip-ink
     /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip-ink
-    textDecorationSkipInk: TextDecorationSkipInk = .none,
+    text_decoration_skip_ink: TextDecorationSkipInk = .none,
 
     /// text-decoration-skip-self
     /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip-self
-    textDecorationSkipSelf: TextDecorationSkipSelf = .none,
+    text_decoration_skip_self: TextDecorationSkipSelf = .none,
 
     /// text-decoration-skip-spaces
     /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip-spaces
-    textDecorationSkipSpaces: TextDecorationSkipSpaces = .none,
+    text_decoration_skip_spaces: TextDecorationSkipSpaces = .none,
 
     /// text-decoration-style
     /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-style
-    textDecorationStyle: TextDecorationStyle = .none,
+    text_decoration_style: TextDecorationStyle = .none,
 
     /// text-decoration-thickness
     /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-thickness
-    textDecorationThickness: TextDecorationThickness = .none,
+    text_decoration_thickness: TextDecorationThickness = .none,
 
     /// text-emphasis
     /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis
-    textEmphasis: TextEmphasis = .none,
+    text_emphasis: TextEmphasis = .none,
 
     /// text-emphasis-color
     /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis-color
-    textEmphasisColor: TextEmphasisColor = .none,
+    text_emphasis_color: TextEmphasisColor = .none,
 
     /// text-emphasis-position
     /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis-position
-    textEmphasisPosition: TextEmphasisPosition = .none,
+    text_emphasis_position: TextEmphasisPosition = .none,
 
     /// text-emphasis-skip
     /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis-skip
-    textEmphasisSkip: TextEmphasisSkip = .none,
+    text_emphasis_skip: TextEmphasisSkip = .none,
 
     /// text-emphasis-style
     /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis-style
-    textEmphasisStyle: TextEmphasisStyle = .none,
+    text_emphasis_style: TextEmphasisStyle = .none,
 
     /// text-group-align
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-group-align
-    textGroupAlign: TextGroupAlign = .none,
+    text_group_align: TextGroupAlign = .none,
 
     /// text-indent
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-indent
-    textIndent: TextIndent = .none,
+    text_indent: TextIndent = .none,
 
     /// text-justify
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-justify
-    textJustify: TextJustify = .none,
+    text_justify: TextJustify = .none,
 
     /// text-orientation
     /// - **W3C**: https://drafts.csswg.org/css-writing-modes-4/#propdef-text-orientation
-    textOrientation: TextOrientation = .none,
+    text_orientation: TextOrientation = .none,
 
     /// text-overflow
     /// - **W3C**: https://drafts.csswg.org/css-overflow-4/#propdef-text-overflow
-    textOverflow: TextOverflow = .none,
+    text_overflow: TextOverflow = .none,
 
     /// text-rendering
     /// - **W3C**: https://svgwg.org/svg2-draft/painting.html#TextRenderingProperty
-    textRendering: TextRendering = .none,
+    text_rendering: TextRendering = .none,
 
     /// text-shadow
     /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-shadow
-    textShadow: TextShadow = .none,
+    text_shadow: TextShadow = .none,
 
     /// text-size-adjust
     /// - **W3C**: https://drafts.csswg.org/css-size-adjust-1/#propdef-text-size-adjust
-    textSizeAdjust: TextSizeAdjust = .none,
+    text_size_adjust: TextSizeAdjust = .none,
 
     /// text-spacing
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-spacing
-    textSpacing: TextSpacing = .none,
+    text_spacing: TextSpacing = .none,
 
     /// text-spacing-trim
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-spacing-trim
-    textSpacingTrim: TextSpacingTrim = .none,
+    text_spacing_trim: TextSpacingTrim = .none,
 
     /// text-transform
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-transform
-    textTransform: TextTransform = .none,
+    text_transform: TextTransform = .none,
 
     /// text-underline-offset
     /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-underline-offset
-    textUnderlineOffset: TextUnderlineOffset = .none,
+    text_underline_offset: TextUnderlineOffset = .none,
 
     /// text-underline-position
     /// - **W3C**: https://drafts.csswg.org/css-text-decor-4/#propdef-text-underline-position
-    textUnderlinePosition: TextUnderlinePosition = .none,
+    text_underline_position: TextUnderlinePosition = .none,
 
     /// text-wrap
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-wrap
-    textWrap: TextWrap = .none,
+    text_wrap: TextWrap = .none,
 
     /// text-wrap-mode
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-wrap-mode
-    textWrapMode: TextWrapMode = .none,
+    text_wrap_mode: TextWrapMode = .none,
 
     /// text-wrap-style
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-text-wrap-style
-    textWrapStyle: TextWrapStyle = .none,
+    text_wrap_style: TextWrapStyle = .none,
 
     /// timeline-scope
     /// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-timeline-scope
-    timelineScope: TimelineScope = .none,
+    timeline_scope: TimelineScope = .none,
 
     /// timeline-trigger
     /// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger
-    timelineTrigger: TimelineTrigger = .none,
+    timeline_trigger: TimelineTrigger = .none,
 
     /// timeline-trigger-activation-range
     /// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-activation-range
-    timelineTriggerActivationRange: TimelineTriggerActivationRange = .none,
+    timeline_trigger_activation_range: TimelineTriggerActivationRange = .none,
 
     /// timeline-trigger-activation-range-end
     /// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-activation-range-end
-    timelineTriggerActivationRangeEnd: TimelineTriggerActivationRangeEnd = .none,
+    timeline_trigger_activation_range_end: TimelineTriggerActivationRangeEnd = .none,
 
     /// timeline-trigger-activation-range-start
     /// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-activation-range-start
-    timelineTriggerActivationRangeStart: TimelineTriggerActivationRangeStart = .none,
+    timeline_trigger_activation_range_start: TimelineTriggerActivationRangeStart = .none,
 
     /// timeline-trigger-active-range
     /// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-active-range
-    timelineTriggerActiveRange: TimelineTriggerActiveRange = .none,
+    timeline_trigger_active_range: TimelineTriggerActiveRange = .none,
 
     /// timeline-trigger-active-range-end
     /// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-active-range-end
-    timelineTriggerActiveRangeEnd: TimelineTriggerActiveRangeEnd = .none,
+    timeline_trigger_active_range_end: TimelineTriggerActiveRangeEnd = .none,
 
     /// timeline-trigger-active-range-start
     /// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-active-range-start
-    timelineTriggerActiveRangeStart: TimelineTriggerActiveRangeStart = .none,
+    timeline_trigger_active_range_start: TimelineTriggerActiveRangeStart = .none,
 
     /// timeline-trigger-name
     /// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-name
-    timelineTriggerName: TimelineTriggerName = .none,
+    timeline_trigger_name: TimelineTriggerName = .none,
 
     /// timeline-trigger-source
     /// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-source
-    timelineTriggerSource: TimelineTriggerSource = .none,
+    timeline_trigger_source: TimelineTriggerSource = .none,
 
     /// top
     /// - **W3C**: https://drafts.csswg.org/css-position-3/#propdef-top
@@ -27492,7 +27492,7 @@ pub const Style = struct {
 
     /// touch-action
     /// - **W3C**: https://compat.spec.whatwg.org/#propdef-touch-action
-    touchAction: TouchAction = .none,
+    touch_action: TouchAction = .none,
 
     /// transform
     /// - **W3C**: https://drafts.csswg.org/css-transforms-1/#propdef-transform
@@ -27500,15 +27500,15 @@ pub const Style = struct {
 
     /// transform-box
     /// - **W3C**: https://drafts.csswg.org/css-transforms-1/#propdef-transform-box
-    transformBox: TransformBox = .none,
+    transform_box: TransformBox = .none,
 
     /// transform-origin
     /// - **W3C**: https://drafts.csswg.org/css-transforms-1/#propdef-transform-origin
-    transformOrigin: TransformOrigin = .none,
+    transform_origin: TransformOrigin = .none,
 
     /// transform-style
     /// - **W3C**: https://drafts.csswg.org/css-transforms-2/#propdef-transform-style
-    transformStyle: TransformStyle = .none,
+    transform_style: TransformStyle = .none,
 
     /// transition
     /// - **W3C**: https://drafts.csswg.org/css-transitions-1/#propdef-transition
@@ -27516,23 +27516,23 @@ pub const Style = struct {
 
     /// transition-behavior
     /// - **W3C**: https://drafts.csswg.org/css-transitions-2/#propdef-transition-behavior
-    transitionBehavior: TransitionBehavior = .none,
+    transition_behavior: TransitionBehavior = .none,
 
     /// transition-delay
     /// - **W3C**: https://drafts.csswg.org/css-transitions-1/#propdef-transition-delay
-    transitionDelay: TransitionDelay = .none,
+    transition_delay: TransitionDelay = .none,
 
     /// transition-duration
     /// - **W3C**: https://drafts.csswg.org/css-transitions-1/#propdef-transition-duration
-    transitionDuration: TransitionDuration = .none,
+    transition_duration: TransitionDuration = .none,
 
     /// transition-property
     /// - **W3C**: https://drafts.csswg.org/css-transitions-1/#propdef-transition-property
-    transitionProperty: TransitionProperty = .none,
+    transition_property: TransitionProperty = .none,
 
     /// transition-timing-function
     /// - **W3C**: https://drafts.csswg.org/css-transitions-1/#propdef-transition-timing-function
-    transitionTimingFunction: TransitionTimingFunction = .none,
+    transition_timing_function: TransitionTimingFunction = .none,
 
     /// translate
     /// - **W3C**: https://drafts.csswg.org/css-transforms-2/#propdef-translate
@@ -27540,55 +27540,55 @@ pub const Style = struct {
 
     /// trigger-scope
     /// - **W3C**: https://drafts.csswg.org/animation-triggers-1/#propdef-trigger-scope
-    triggerScope: TriggerScope = .none,
+    trigger_scope: TriggerScope = .none,
 
     /// unicode-bidi
     /// - **W3C**: https://drafts.csswg.org/css-writing-modes-4/#propdef-unicode-bidi
-    unicodeBidi: UnicodeBidi = .none,
+    unicode_bidi: UnicodeBidi = .none,
 
     /// user-select
     /// - **W3C**: https://drafts.csswg.org/css-ui-4/#propdef-user-select
-    userSelect: UserSelect = .none,
+    user_select: UserSelect = .none,
 
     /// vector-effect
     /// - **W3C**: https://svgwg.org/svg2-draft/coords.html#VectorEffectProperty
-    vectorEffect: VectorEffect = .none,
+    vector_effect: VectorEffect = .none,
 
     /// vertical-align
     /// - **W3C**: https://drafts.csswg.org/css-inline-3/#propdef-vertical-align
-    verticalAlign: VerticalAlign = .none,
+    vertical_align: VerticalAlign = .none,
 
     /// view-timeline
     /// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-view-timeline
-    viewTimeline: ViewTimeline = .none,
+    view_timeline: ViewTimeline = .none,
 
     /// view-timeline-axis
     /// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-view-timeline-axis
-    viewTimelineAxis: ViewTimelineAxis = .none,
+    view_timeline_axis: ViewTimelineAxis = .none,
 
     /// view-timeline-inset
     /// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-view-timeline-inset
-    viewTimelineInset: ViewTimelineInset = .none,
+    view_timeline_inset: ViewTimelineInset = .none,
 
     /// view-timeline-name
     /// - **W3C**: https://drafts.csswg.org/scroll-animations-1/#propdef-view-timeline-name
-    viewTimelineName: ViewTimelineName = .none,
+    view_timeline_name: ViewTimelineName = .none,
 
     /// view-transition-class
     /// - **W3C**: https://drafts.csswg.org/css-view-transitions-2/#propdef-view-transition-class
-    viewTransitionClass: ViewTransitionClass = .none,
+    view_transition_class: ViewTransitionClass = .none,
 
     /// view-transition-group
     /// - **W3C**: https://drafts.csswg.org/css-view-transitions-2/#propdef-view-transition-group
-    viewTransitionGroup: ViewTransitionGroup = .none,
+    view_transition_group: ViewTransitionGroup = .none,
 
     /// view-transition-name
     /// - **W3C**: https://drafts.csswg.org/css-view-transitions-2/#propdef-view-transition-name
-    viewTransitionName: ViewTransitionName = .none,
+    view_transition_name: ViewTransitionName = .none,
 
     /// view-transition-scope
     /// - **W3C**: https://drafts.csswg.org/css-view-transitions-2/#propdef-view-transition-scope
-    viewTransitionScope: ViewTransitionScope = .none,
+    view_transition_scope: ViewTransitionScope = .none,
 
     /// visibility
     /// - **W3C**: https://drafts.csswg.org/css-display-4/#propdef-visibility
@@ -27596,47 +27596,47 @@ pub const Style = struct {
 
     /// voice-balance
     /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-voice-balance
-    voiceBalance: VoiceBalance = .none,
+    voice_balance: VoiceBalance = .none,
 
     /// voice-duration
     /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-voice-duration
-    voiceDuration: VoiceDuration = .none,
+    voice_duration: VoiceDuration = .none,
 
     /// voice-family
     /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-voice-family
-    voiceFamily: VoiceFamily = .none,
+    voice_family: VoiceFamily = .none,
 
     /// voice-pitch
     /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-voice-pitch
-    voicePitch: VoicePitch = .none,
+    voice_pitch: VoicePitch = .none,
 
     /// voice-range
     /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-voice-range
-    voiceRange: VoiceRange = .none,
+    voice_range: VoiceRange = .none,
 
     /// voice-rate
     /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-voice-rate
-    voiceRate: VoiceRate = .none,
+    voice_rate: VoiceRate = .none,
 
     /// voice-stress
     /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-voice-stress
-    voiceStress: VoiceStress = .none,
+    voice_stress: VoiceStress = .none,
 
     /// voice-volume
     /// - **W3C**: https://drafts.csswg.org/css-speech-1/#propdef-voice-volume
-    voiceVolume: VoiceVolume = .none,
+    voice_volume: VoiceVolume = .none,
 
     /// white-space
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-white-space
-    whiteSpace: WhiteSpace = .none,
+    white_space: WhiteSpace = .none,
 
     /// white-space-collapse
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-white-space-collapse
-    whiteSpaceCollapse: WhiteSpaceCollapse = .none,
+    white_space_collapse: WhiteSpaceCollapse = .none,
 
     /// white-space-trim
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-white-space-trim
-    whiteSpaceTrim: WhiteSpaceTrim = .none,
+    white_space_trim: WhiteSpaceTrim = .none,
 
     /// widows
     /// - **W3C**: https://drafts.csswg.org/css-break-4/#propdef-widows
@@ -27648,47 +27648,47 @@ pub const Style = struct {
 
     /// will-change
     /// - **W3C**: https://drafts.csswg.org/css-will-change-1/#propdef-will-change
-    willChange: WillChange = .none,
+    will_change: WillChange = .none,
 
     /// word-break
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-word-break
-    wordBreak: WordBreak = .none,
+    word_break: WordBreak = .none,
 
     /// word-space-transform
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-word-space-transform
-    wordSpaceTransform: WordSpaceTransform = .none,
+    word_space_transform: WordSpaceTransform = .none,
 
     /// word-spacing
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-word-spacing
-    wordSpacing: WordSpacing = .none,
+    word_spacing: WordSpacing = .none,
 
     /// word-wrap
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-word-wrap
-    wordWrap: WordWrap = .none,
+    word_wrap: WordWrap = .none,
 
     /// wrap-after
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-wrap-after
-    wrapAfter: WrapAfter = .none,
+    wrap_after: WrapAfter = .none,
 
     /// wrap-before
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-wrap-before
-    wrapBefore: WrapBefore = .none,
+    wrap_before: WrapBefore = .none,
 
     /// wrap-flow
     /// - **W3C**: https://drafts.csswg.org/css-exclusions-1/#propdef-wrap-flow
-    wrapFlow: WrapFlow = .none,
+    wrap_flow: WrapFlow = .none,
 
     /// wrap-inside
     /// - **W3C**: https://drafts.csswg.org/css-text-4/#propdef-wrap-inside
-    wrapInside: WrapInside = .none,
+    wrap_inside: WrapInside = .none,
 
     /// wrap-through
     /// - **W3C**: https://drafts.csswg.org/css-exclusions-1/#propdef-wrap-through
-    wrapThrough: WrapThrough = .none,
+    wrap_through: WrapThrough = .none,
 
     /// writing-mode
     /// - **W3C**: https://drafts.csswg.org/css-writing-modes-4/#propdef-writing-mode
-    writingMode: WritingMode = .none,
+    writing_mode: WritingMode = .none,
 
     /// x
     /// - **W3C**: https://svgwg.org/svg2-draft/geometry.html#XProperty
@@ -27700,7 +27700,7 @@ pub const Style = struct {
 
     /// z-index
     /// - **W3C**: https://drafts.csswg.org/css2/#propdef-z-index
-    zIndex: ZIndex = .none,
+    z_index: ZIndex = .none,
 
     /// zoom
     /// - **W3C**: https://drafts.csswg.org/css-viewport/#propdef-zoom

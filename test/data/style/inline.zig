@@ -5,7 +5,7 @@ pub fn Page(allocator: zx.Allocator) zx.Component {
         .{
             .allocator = allocator,
             .attributes = _zx.attrs(.{
-                _zx.attr("style", zx.StyleSheet{ .display = .flex, .rowGap = .px(10) }),
+                _zx.attr("style", zx.Style{ .display = .flex, .row_gap = .px(10) }),
             }),
             .children = &.{
                 _zx.txt(" Inline Style "),

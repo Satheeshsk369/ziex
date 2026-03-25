@@ -125,7 +125,7 @@ pub fn main() !void {
 
         var k_it = data.keywords.iterator();
         while (k_it.next()) |k_entry| {
-            const clean_kw = try cleanName(allocator, k_entry.key_ptr.*, .camel);
+            const clean_kw = try cleanName(allocator, k_entry.key_ptr.*, .snake);
             if (!tags.contains(clean_kw)) {
                 if (k_entry.value_ptr.*.len > 0) {
                     try writer.interface.writeAll("    /// ");
@@ -170,7 +170,7 @@ pub fn main() !void {
         const data = prop_data.get(name).?;
         const type_name_raw = try cleanName(allocator, name, .pascal);
         const final_type_name = if (std.mem.eql(u8, type_name_raw, "Color")) "CssColor" else type_name_raw;
-        const clean_p = try cleanName(allocator, name, .camel);
+        const clean_p = try cleanName(allocator, name, .snake);
         try writer.interface.print("\n    /// {s}\n", .{name});
         if (data.prose.len > 0) {
             try writeDoc(&writer.interface, data.prose, "    ");
@@ -215,7 +215,7 @@ fn writeDoc(writer: *std.Io.Writer, prose: []const u8, indent: []const u8) !void
     }
 }
 
-fn cleanName(allocator: std.mem.Allocator, name: []const u8, case: enum { pascal, camel }) ![]const u8 {
+fn cleanName(allocator: std.mem.Allocator, name: []const u8, case: enum { pascal, camel, snake }) ![]const u8 {
     if (name.len == 0) return "";
     if (std.ascii.isDigit(name[0])) return try std.fmt.allocPrint(allocator, "@\"{s}\"", .{name});
     var list: std.ArrayList(u8) = .empty;
@@ -224,7 +224,11 @@ fn cleanName(allocator: std.mem.Allocator, name: []const u8, case: enum { pascal
     while (start < name.len and name[start] == '-') : (start += 1) {}
     for (name[start..]) |c| {
         if (c == '-') {
-            next_upper = true;
+            if (case == .snake) {
+                try list.append(allocator, '_');
+            } else {
+                next_upper = true;
+            }
         } else {
             if (next_upper) {
                 try list.append(allocator, std.ascii.toUpper(c));

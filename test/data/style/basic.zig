@@ -1,7 +1,7 @@
 pub fn Page(allocator: zx.Allocator) zx.Component {
-    const style: zx.StyleSheet = .{
+    const style: zx.Style = .{
         .display = .flex,
-        .backgroundColor = .hex(0xff0000),
+        .background_color = .hex(0xff0000),
     };
     var _zx = @import("zx").allocInit(allocator);
     return _zx.ele(
