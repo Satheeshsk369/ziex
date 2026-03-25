@@ -2,6 +2,8 @@ const std = @import("std");
 const builtin = @import("builtin");
 const zx_options = @import("zx_options");
 
+const zx = @import("../../root.zig");
+
 // -- Public types -- //
 pub const PutOptions = struct {
     expiration: ?u64 = null,
@@ -32,8 +34,17 @@ pub fn get(allocator: std.mem.Allocator, key: []const u8) !?[]u8 {
     return _vtable.get(_ctx, "default", allocator, key);
 }
 
+// Get the value of a key parsed as the given type, returning error if type is not expected,
+pub fn as(allocator: std.mem.Allocator, key: []const u8, comptime T: type) !?T {
+    return getTyped("default", allocator, key, T);
+}
+
 pub fn put(key: []const u8, value: []const u8, opts: PutOptions) !void {
     return _vtable.put(_ctx, "default", key, value, opts);
+}
+
+pub fn putAs(key: []const u8, value: anytype, opts: PutOptions) !void {
+    return putTyped("default", key, value, opts);
 }
 
 pub fn delete(key: []const u8) !void {
@@ -60,9 +71,19 @@ pub const KVScope = struct {
     pub fn get(self: KVScope, allocator: std.mem.Allocator, key: []const u8) !?[]u8 {
         return _vtable.get(_ctx, self.ns, allocator, key);
     }
+
+    pub fn as(self: KVScope, allocator: std.mem.Allocator, key: []const u8, comptime T: type) !?T {
+        return getTyped(self.ns, allocator, key, T);
+    }
+
     pub fn put(self: KVScope, key: []const u8, value: []const u8, opts: PutOptions) !void {
         return _vtable.put(_ctx, self.ns, key, value, opts);
     }
+
+    pub fn putAs(self: KVScope, key: []const u8, value: anytype, opts: PutOptions) !void {
+        return putTyped(self.ns, key, value, opts);
+    }
+
     pub fn delete(self: KVScope, key: []const u8) !void {
         return _vtable.delete(_ctx, self.ns, key);
     }
@@ -70,6 +91,56 @@ pub const KVScope = struct {
         return _vtable.list(_ctx, self.ns, allocator, prefix);
     }
 };
+
+fn getTyped(ns: []const u8, allocator: std.mem.Allocator, key: []const u8, comptime T: type) !?T {
+    const raw = (try _vtable.get(_ctx, ns, allocator, key)) orelse return null;
+    defer allocator.free(raw);
+
+    const expected_hash = zx.util.zxon.schema(T).hash;
+    if (try storedTypeHash(raw) != expected_hash) return error.InvalidType;
+
+    const TypedValue = struct {
+        hash: u64,
+        value: T,
+    };
+
+    const parsed = try zx.util.zxon.parse(TypedValue, allocator, raw, .{});
+    return parsed.value;
+}
+
+fn putTyped(ns: []const u8, key: []const u8, value: anytype, opts: PutOptions) !void {
+    const ValueType = @TypeOf(value);
+    const TypedValue = struct {
+        hash: u64,
+        value: ValueType,
+    };
+
+    var writer = std.Io.Writer.Allocating.init(zx.client_allocator);
+    defer writer.deinit();
+
+    try zx.util.zxon.serialize(TypedValue{
+        .hash = zx.util.zxon.schema(ValueType).hash,
+        .value = value,
+    }, &writer.writer, .{});
+
+    return _vtable.put(_ctx, ns, key, writer.written(), opts);
+}
+
+fn storedTypeHash(raw: []const u8) !u64 {
+    var i: usize = 0;
+
+    while (i < raw.len and std.ascii.isWhitespace(raw[i])) : (i += 1) {}
+    if (i >= raw.len or raw[i] != '[') return error.InvalidType;
+    i += 1;
+
+    while (i < raw.len and std.ascii.isWhitespace(raw[i])) : (i += 1) {}
+    const start = i;
+
+    while (i < raw.len and std.ascii.isDigit(raw[i])) : (i += 1) {}
+    if (start == i) return error.InvalidType;
+
+    return std.fmt.parseUnsigned(u64, raw[start..i], 10);
+}
 
 // -- Impl: Noop (WASM default — replaced by edge adapter at startup) -- //
 
