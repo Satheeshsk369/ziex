@@ -43,7 +43,6 @@ pub const Color = union(enum) {
     }
 };
 
-/// Formats a Zig snake_case name into a CSS kebab-case string
 pub fn formatKebab(name: []const u8, w: anytype) !void {
     const prefixes = [_][]const u8{ "webkit", "moz", "ms", "apple", "epub", "hp", "atsc", "rim", "ro", "tc", "xhtml" };
     for (prefixes) |p| {
@@ -106,6 +105,13 @@ pub fn formatValue(value: anytype, w: *std.io.Writer) std.io.Writer.Error!void {
             if (comptime std.mem.eql(u8, f.name, "px_")) { try formatShorthand(@field(value, f.name), "px", w); return; }
             if (comptime std.mem.eql(u8, f.name, "em_")) { try formatShorthand(@field(value, f.name), "em", w); return; }
             if (comptime std.mem.eql(u8, f.name, "rem_")) { try formatShorthand(@field(value, f.name), "rem", w); return; }
+            
+            if (comptime std.mem.eql(u8, f.name, "calc_")) {
+                try w.writeAll("calc(");
+                try w.writeAll(@field(value, f.name));
+                try w.writeAll(")");
+                return;
+            }
             
             if (comptime std.mem.eql(u8, f.name, "vh_")) { try w.print("{d}vh", .{@field(value, f.name)}); return; }
             if (comptime std.mem.eql(u8, f.name, "vw_")) { try w.print("{d}vw", .{@field(value, f.name)}); return; }
