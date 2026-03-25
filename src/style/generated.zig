@@ -326,12 +326,17 @@ pub const WebkitBackgroundSize = union(enum) {
     auto,
     cover,
     contain,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) WebkitBackgroundSize { return .{ .px_ = v }; }
-    pub fn em(v: f32) WebkitBackgroundSize { return .{ .em_ = v }; }
-    pub fn rem(v: f32) WebkitBackgroundSize { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) WebkitBackgroundSize { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) WebkitBackgroundSize { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) WebkitBackgroundSize { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) WebkitBackgroundSize { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) WebkitBackgroundSize { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) WebkitBackgroundSize { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) WebkitBackgroundSize { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) WebkitBackgroundSize { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) WebkitBackgroundSize { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) WebkitBackgroundSize { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: WebkitBackgroundSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -345,12 +350,17 @@ pub const WebkitBorderBottomLeftRadius = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) WebkitBorderBottomLeftRadius { return .{ .px_ = v }; }
-    pub fn em(v: f32) WebkitBorderBottomLeftRadius { return .{ .em_ = v }; }
-    pub fn rem(v: f32) WebkitBorderBottomLeftRadius { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) WebkitBorderBottomLeftRadius { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) WebkitBorderBottomLeftRadius { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) WebkitBorderBottomLeftRadius { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) WebkitBorderBottomLeftRadius { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) WebkitBorderBottomLeftRadius { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) WebkitBorderBottomLeftRadius { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) WebkitBorderBottomLeftRadius { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) WebkitBorderBottomLeftRadius { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) WebkitBorderBottomLeftRadius { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) WebkitBorderBottomLeftRadius { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: WebkitBorderBottomLeftRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -364,12 +374,17 @@ pub const WebkitBorderBottomRightRadius = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) WebkitBorderBottomRightRadius { return .{ .px_ = v }; }
-    pub fn em(v: f32) WebkitBorderBottomRightRadius { return .{ .em_ = v }; }
-    pub fn rem(v: f32) WebkitBorderBottomRightRadius { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) WebkitBorderBottomRightRadius { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) WebkitBorderBottomRightRadius { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) WebkitBorderBottomRightRadius { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) WebkitBorderBottomRightRadius { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) WebkitBorderBottomRightRadius { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) WebkitBorderBottomRightRadius { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) WebkitBorderBottomRightRadius { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) WebkitBorderBottomRightRadius { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) WebkitBorderBottomRightRadius { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) WebkitBorderBottomRightRadius { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: WebkitBorderBottomRightRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -383,12 +398,17 @@ pub const WebkitBorderRadius = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) WebkitBorderRadius { return .{ .px_ = v }; }
-    pub fn em(v: f32) WebkitBorderRadius { return .{ .em_ = v }; }
-    pub fn rem(v: f32) WebkitBorderRadius { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) WebkitBorderRadius { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) WebkitBorderRadius { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) WebkitBorderRadius { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) WebkitBorderRadius { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) WebkitBorderRadius { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) WebkitBorderRadius { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) WebkitBorderRadius { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) WebkitBorderRadius { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) WebkitBorderRadius { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) WebkitBorderRadius { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: WebkitBorderRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -402,12 +422,17 @@ pub const WebkitBorderTopLeftRadius = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) WebkitBorderTopLeftRadius { return .{ .px_ = v }; }
-    pub fn em(v: f32) WebkitBorderTopLeftRadius { return .{ .em_ = v }; }
-    pub fn rem(v: f32) WebkitBorderTopLeftRadius { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) WebkitBorderTopLeftRadius { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) WebkitBorderTopLeftRadius { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) WebkitBorderTopLeftRadius { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) WebkitBorderTopLeftRadius { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) WebkitBorderTopLeftRadius { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) WebkitBorderTopLeftRadius { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) WebkitBorderTopLeftRadius { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) WebkitBorderTopLeftRadius { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) WebkitBorderTopLeftRadius { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) WebkitBorderTopLeftRadius { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: WebkitBorderTopLeftRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -421,12 +446,17 @@ pub const WebkitBorderTopRightRadius = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) WebkitBorderTopRightRadius { return .{ .px_ = v }; }
-    pub fn em(v: f32) WebkitBorderTopRightRadius { return .{ .em_ = v }; }
-    pub fn rem(v: f32) WebkitBorderTopRightRadius { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) WebkitBorderTopRightRadius { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) WebkitBorderTopRightRadius { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) WebkitBorderTopRightRadius { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) WebkitBorderTopRightRadius { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) WebkitBorderTopRightRadius { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) WebkitBorderTopRightRadius { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) WebkitBorderTopRightRadius { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) WebkitBorderTopRightRadius { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) WebkitBorderTopRightRadius { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) WebkitBorderTopRightRadius { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: WebkitBorderTopRightRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -505,12 +535,14 @@ pub const WebkitBoxShadow = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    hex_: u32,
-    pub fn px(v: f32) WebkitBoxShadow { return .{ .px_ = v }; }
-    pub fn em(v: f32) WebkitBoxShadow { return .{ .em_ = v }; }
-    pub fn rem(v: f32) WebkitBoxShadow { return .{ .rem_ = v }; }
-    pub fn hex(v: u32) WebkitBoxShadow { return .{ .hex_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) WebkitBoxShadow { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) WebkitBoxShadow { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) WebkitBoxShadow { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) WebkitBoxShadow { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) WebkitBoxShadow { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) WebkitBoxShadow { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) WebkitBoxShadow { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: WebkitBoxShadow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -733,12 +765,17 @@ pub const WebkitMask = union(enum) {
     alpha,
     luminance,
     match_source,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) WebkitMask { return .{ .px_ = v }; }
-    pub fn em(v: f32) WebkitMask { return .{ .em_ = v }; }
-    pub fn rem(v: f32) WebkitMask { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) WebkitMask { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) WebkitMask { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) WebkitMask { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) WebkitMask { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) WebkitMask { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) WebkitMask { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) WebkitMask { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) WebkitMask { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) WebkitMask { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) WebkitMask { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: WebkitMask, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -752,6 +789,14 @@ pub const WebkitMaskBoxImage = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) WebkitMaskBoxImage { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) WebkitMaskBoxImage { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) WebkitMaskBoxImage { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) WebkitMaskBoxImage { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) WebkitMaskBoxImage { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) WebkitMaskBoxImage { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) WebkitMaskBoxImage { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: WebkitMaskBoxImage, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -765,10 +810,14 @@ pub const WebkitMaskBoxImageOutset = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) WebkitMaskBoxImageOutset { return .{ .px_ = v }; }
-    pub fn em(v: f32) WebkitMaskBoxImageOutset { return .{ .em_ = v }; }
-    pub fn rem(v: f32) WebkitMaskBoxImageOutset { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) WebkitMaskBoxImageOutset { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) WebkitMaskBoxImageOutset { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) WebkitMaskBoxImageOutset { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) WebkitMaskBoxImageOutset { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) WebkitMaskBoxImageOutset { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) WebkitMaskBoxImageOutset { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) WebkitMaskBoxImageOutset { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: WebkitMaskBoxImageOutset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -800,8 +849,9 @@ pub const WebkitMaskBoxImageSlice = union(enum) {
     revert_layer,
     unset,
     fill,
-    percent_: f32,
-    pub fn percent(v: f32) WebkitMaskBoxImageSlice { return .{ .percent_ = v }; }
+    percent_: [4]f32,
+    pub fn percent(v: f32) WebkitMaskBoxImageSlice { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) WebkitMaskBoxImageSlice { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: WebkitMaskBoxImageSlice, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -829,12 +879,17 @@ pub const WebkitMaskBoxImageWidth = union(enum) {
     revert_layer,
     unset,
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) WebkitMaskBoxImageWidth { return .{ .px_ = v }; }
-    pub fn em(v: f32) WebkitMaskBoxImageWidth { return .{ .em_ = v }; }
-    pub fn rem(v: f32) WebkitMaskBoxImageWidth { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) WebkitMaskBoxImageWidth { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) WebkitMaskBoxImageWidth { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) WebkitMaskBoxImageWidth { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) WebkitMaskBoxImageWidth { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) WebkitMaskBoxImageWidth { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) WebkitMaskBoxImageWidth { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) WebkitMaskBoxImageWidth { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) WebkitMaskBoxImageWidth { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) WebkitMaskBoxImageWidth { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) WebkitMaskBoxImageWidth { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: WebkitMaskBoxImageWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -932,12 +987,17 @@ pub const WebkitMaskPosition = union(enum) {
     inline_end,
     start,
     end,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) WebkitMaskPosition { return .{ .px_ = v }; }
-    pub fn em(v: f32) WebkitMaskPosition { return .{ .em_ = v }; }
-    pub fn rem(v: f32) WebkitMaskPosition { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) WebkitMaskPosition { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) WebkitMaskPosition { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) WebkitMaskPosition { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) WebkitMaskPosition { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) WebkitMaskPosition { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) WebkitMaskPosition { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) WebkitMaskPosition { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) WebkitMaskPosition { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) WebkitMaskPosition { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) WebkitMaskPosition { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: WebkitMaskPosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -975,12 +1035,17 @@ pub const WebkitMaskSize = union(enum) {
     auto,
     cover,
     contain,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) WebkitMaskSize { return .{ .px_ = v }; }
-    pub fn em(v: f32) WebkitMaskSize { return .{ .em_ = v }; }
-    pub fn rem(v: f32) WebkitMaskSize { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) WebkitMaskSize { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) WebkitMaskSize { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) WebkitMaskSize { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) WebkitMaskSize { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) WebkitMaskSize { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) WebkitMaskSize { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) WebkitMaskSize { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) WebkitMaskSize { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) WebkitMaskSize { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) WebkitMaskSize { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: WebkitMaskSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -1007,10 +1072,14 @@ pub const WebkitPerspective = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) WebkitPerspective { return .{ .px_ = v }; }
-    pub fn em(v: f32) WebkitPerspective { return .{ .em_ = v }; }
-    pub fn rem(v: f32) WebkitPerspective { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) WebkitPerspective { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) WebkitPerspective { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) WebkitPerspective { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) WebkitPerspective { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) WebkitPerspective { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) WebkitPerspective { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) WebkitPerspective { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: WebkitPerspective, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -1039,12 +1108,17 @@ pub const WebkitPerspectiveOrigin = union(enum) {
     inline_end,
     start,
     end,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) WebkitPerspectiveOrigin { return .{ .px_ = v }; }
-    pub fn em(v: f32) WebkitPerspectiveOrigin { return .{ .em_ = v }; }
-    pub fn rem(v: f32) WebkitPerspectiveOrigin { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) WebkitPerspectiveOrigin { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) WebkitPerspectiveOrigin { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) WebkitPerspectiveOrigin { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) WebkitPerspectiveOrigin { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) WebkitPerspectiveOrigin { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) WebkitPerspectiveOrigin { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) WebkitPerspectiveOrigin { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) WebkitPerspectiveOrigin { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) WebkitPerspectiveOrigin { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) WebkitPerspectiveOrigin { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: WebkitPerspectiveOrigin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -1266,8 +1340,9 @@ pub const WebkitTextSizeAdjust = union(enum) {
     revert_layer,
     unset,
     auto,
-    percent_: f32,
-    pub fn percent(v: f32) WebkitTextSizeAdjust { return .{ .percent_ = v }; }
+    percent_: [4]f32,
+    pub fn percent(v: f32) WebkitTextSizeAdjust { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) WebkitTextSizeAdjust { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: WebkitTextSizeAdjust, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -1477,11 +1552,15 @@ pub const WebkitTextStroke = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    px_: f32, em_: f32, rem_: f32,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
     hex_: u32,
-    pub fn px(v: f32) WebkitTextStroke { return .{ .px_ = v }; }
-    pub fn em(v: f32) WebkitTextStroke { return .{ .em_ = v }; }
-    pub fn rem(v: f32) WebkitTextStroke { return .{ .rem_ = v }; }
+    pub fn px(v: f32) WebkitTextStroke { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) WebkitTextStroke { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) WebkitTextStroke { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) WebkitTextStroke { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) WebkitTextStroke { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) WebkitTextStroke { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) WebkitTextStroke { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
     pub fn hex(v: u32) WebkitTextStroke { return .{ .hex_ = v }; }
 
     pub fn format(self: WebkitTextStroke, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
@@ -1707,10 +1786,14 @@ pub const WebkitTextStrokeWidth = union(enum) {
     thin,
     medium,
     thick,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) WebkitTextStrokeWidth { return .{ .px_ = v }; }
-    pub fn em(v: f32) WebkitTextStrokeWidth { return .{ .em_ = v }; }
-    pub fn rem(v: f32) WebkitTextStrokeWidth { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) WebkitTextStrokeWidth { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) WebkitTextStrokeWidth { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) WebkitTextStrokeWidth { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) WebkitTextStrokeWidth { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) WebkitTextStrokeWidth { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) WebkitTextStrokeWidth { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) WebkitTextStrokeWidth { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: WebkitTextStrokeWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -1742,12 +1825,17 @@ pub const WebkitTransformOrigin = union(enum) {
     right,
     top,
     bottom,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) WebkitTransformOrigin { return .{ .px_ = v }; }
-    pub fn em(v: f32) WebkitTransformOrigin { return .{ .em_ = v }; }
-    pub fn rem(v: f32) WebkitTransformOrigin { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) WebkitTransformOrigin { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) WebkitTransformOrigin { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) WebkitTransformOrigin { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) WebkitTransformOrigin { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) WebkitTransformOrigin { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) WebkitTransformOrigin { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) WebkitTransformOrigin { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) WebkitTransformOrigin { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) WebkitTransformOrigin { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) WebkitTransformOrigin { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: WebkitTransformOrigin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2417,12 +2505,17 @@ pub const AnimationRangeCenter = union(enum) {
     unset,
     ///     /// The 50% progress point of the animation’s active interval is at the center of the animation attachment range.
     normal,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) AnimationRangeCenter { return .{ .px_ = v }; }
-    pub fn em(v: f32) AnimationRangeCenter { return .{ .em_ = v }; }
-    pub fn rem(v: f32) AnimationRangeCenter { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) AnimationRangeCenter { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) AnimationRangeCenter { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) AnimationRangeCenter { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) AnimationRangeCenter { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) AnimationRangeCenter { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) AnimationRangeCenter { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) AnimationRangeCenter { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) AnimationRangeCenter { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) AnimationRangeCenter { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) AnimationRangeCenter { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: AnimationRangeCenter, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2438,12 +2531,17 @@ pub const AnimationRangeEnd = union(enum) {
     unset,
     ///     /// The end of the animation’s attachment range is the end of its associated timeline; the end of the animation’s active interval is determined as normal.
     normal,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) AnimationRangeEnd { return .{ .px_ = v }; }
-    pub fn em(v: f32) AnimationRangeEnd { return .{ .em_ = v }; }
-    pub fn rem(v: f32) AnimationRangeEnd { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) AnimationRangeEnd { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) AnimationRangeEnd { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) AnimationRangeEnd { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) AnimationRangeEnd { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) AnimationRangeEnd { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) AnimationRangeEnd { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) AnimationRangeEnd { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) AnimationRangeEnd { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) AnimationRangeEnd { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) AnimationRangeEnd { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: AnimationRangeEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2459,12 +2557,17 @@ pub const AnimationRangeStart = union(enum) {
     unset,
     ///     /// The start of the animation’s attachment range is the start of its associated timeline; the start of the animation’s active interval is determined as normal.
     normal,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) AnimationRangeStart { return .{ .px_ = v }; }
-    pub fn em(v: f32) AnimationRangeStart { return .{ .em_ = v }; }
-    pub fn rem(v: f32) AnimationRangeStart { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) AnimationRangeStart { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) AnimationRangeStart { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) AnimationRangeStart { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) AnimationRangeStart { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) AnimationRangeStart { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) AnimationRangeStart { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) AnimationRangeStart { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) AnimationRangeStart { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) AnimationRangeStart { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) AnimationRangeStart { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: AnimationRangeStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2632,14 +2735,17 @@ pub const Background = union(enum) {
     border_box,
     border_area,
     text,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    hex_: u32,
-    pub fn px(v: f32) Background { return .{ .px_ = v }; }
-    pub fn em(v: f32) Background { return .{ .em_ = v }; }
-    pub fn rem(v: f32) Background { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) Background { return .{ .percent_ = v }; }
-    pub fn hex(v: u32) Background { return .{ .hex_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) Background { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) Background { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) Background { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) Background { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) Background { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) Background { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) Background { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) Background { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) Background { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: Background, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2965,12 +3071,17 @@ pub const BackgroundPosition = union(enum) {
     inline_end,
     start,
     end,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BackgroundPosition { return .{ .px_ = v }; }
-    pub fn em(v: f32) BackgroundPosition { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BackgroundPosition { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BackgroundPosition { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BackgroundPosition { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BackgroundPosition { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BackgroundPosition { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BackgroundPosition { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BackgroundPosition { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BackgroundPosition { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BackgroundPosition { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BackgroundPosition { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BackgroundPosition { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BackgroundPosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -2987,12 +3098,17 @@ pub const BackgroundPositionBlock = union(enum) {
     center,
     start,
     end,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BackgroundPositionBlock { return .{ .px_ = v }; }
-    pub fn em(v: f32) BackgroundPositionBlock { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BackgroundPositionBlock { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BackgroundPositionBlock { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BackgroundPositionBlock { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BackgroundPositionBlock { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BackgroundPositionBlock { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BackgroundPositionBlock { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BackgroundPositionBlock { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BackgroundPositionBlock { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BackgroundPositionBlock { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BackgroundPositionBlock { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BackgroundPositionBlock { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BackgroundPositionBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3009,12 +3125,17 @@ pub const BackgroundPositionInline = union(enum) {
     center,
     start,
     end,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BackgroundPositionInline { return .{ .px_ = v }; }
-    pub fn em(v: f32) BackgroundPositionInline { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BackgroundPositionInline { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BackgroundPositionInline { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BackgroundPositionInline { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BackgroundPositionInline { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BackgroundPositionInline { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BackgroundPositionInline { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BackgroundPositionInline { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BackgroundPositionInline { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BackgroundPositionInline { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BackgroundPositionInline { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BackgroundPositionInline { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BackgroundPositionInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3033,12 +3154,17 @@ pub const BackgroundPositionX = union(enum) {
     right,
     x_start,
     x_end,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BackgroundPositionX { return .{ .px_ = v }; }
-    pub fn em(v: f32) BackgroundPositionX { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BackgroundPositionX { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BackgroundPositionX { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BackgroundPositionX { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BackgroundPositionX { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BackgroundPositionX { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BackgroundPositionX { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BackgroundPositionX { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BackgroundPositionX { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BackgroundPositionX { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BackgroundPositionX { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BackgroundPositionX { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BackgroundPositionX, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3057,12 +3183,17 @@ pub const BackgroundPositionY = union(enum) {
     bottom,
     y_start,
     y_end,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BackgroundPositionY { return .{ .px_ = v }; }
-    pub fn em(v: f32) BackgroundPositionY { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BackgroundPositionY { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BackgroundPositionY { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BackgroundPositionY { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BackgroundPositionY { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BackgroundPositionY { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BackgroundPositionY { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BackgroundPositionY { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BackgroundPositionY { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BackgroundPositionY { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BackgroundPositionY { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BackgroundPositionY { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BackgroundPositionY, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3195,12 +3326,17 @@ pub const BackgroundSize = union(enum) {
     cover,
     ///     /// Scale the image, while preserving its natural aspect ratio (if any), to the largest size such that both its width and its height can fit inside the background positioning area.
     contain,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BackgroundSize { return .{ .px_ = v }; }
-    pub fn em(v: f32) BackgroundSize { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BackgroundSize { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BackgroundSize { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BackgroundSize { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BackgroundSize { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BackgroundSize { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BackgroundSize { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BackgroundSize { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BackgroundSize { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BackgroundSize { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BackgroundSize { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BackgroundSize { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BackgroundSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3248,12 +3384,17 @@ pub const BackgroundTbd = union(enum) {
     border_box,
     border_area,
     text,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BackgroundTbd { return .{ .px_ = v }; }
-    pub fn em(v: f32) BackgroundTbd { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BackgroundTbd { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BackgroundTbd { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BackgroundTbd { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BackgroundTbd { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BackgroundTbd { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BackgroundTbd { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BackgroundTbd { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BackgroundTbd { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BackgroundTbd { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BackgroundTbd { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BackgroundTbd { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BackgroundTbd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3277,12 +3418,17 @@ pub const BaselineShift = union(enum) {
     center,
     ///     /// Align the line-under edge of the aligned subtree with the line-under edge of the line box.
     bottom,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BaselineShift { return .{ .px_ = v }; }
-    pub fn em(v: f32) BaselineShift { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BaselineShift { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BaselineShift { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BaselineShift { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BaselineShift { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BaselineShift { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BaselineShift { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BaselineShift { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BaselineShift { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BaselineShift { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BaselineShift { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BaselineShift { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BaselineShift, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3414,10 +3560,14 @@ pub const BlockStepSize = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) BlockStepSize { return .{ .px_ = v }; }
-    pub fn em(v: f32) BlockStepSize { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BlockStepSize { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BlockStepSize { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BlockStepSize { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BlockStepSize { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BlockStepSize { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BlockStepSize { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BlockStepSize { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BlockStepSize { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BlockStepSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3684,11 +3834,15 @@ pub const Border = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    px_: f32, em_: f32, rem_: f32,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
     hex_: u32,
-    pub fn px(v: f32) Border { return .{ .px_ = v }; }
-    pub fn em(v: f32) Border { return .{ .em_ = v }; }
-    pub fn rem(v: f32) Border { return .{ .rem_ = v }; }
+    pub fn px(v: f32) Border { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) Border { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) Border { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) Border { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) Border { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) Border { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) Border { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
     pub fn hex(v: u32) Border { return .{ .hex_ = v }; }
 
     pub fn format(self: Border, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
@@ -3703,6 +3857,14 @@ pub const BorderBlock = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BorderBlock { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderBlock { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderBlock { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderBlock { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderBlock { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderBlock { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderBlock { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3716,6 +3878,14 @@ pub const BorderBlockClip = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BorderBlockClip { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderBlockClip { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderBlockClip { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderBlockClip { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderBlockClip { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderBlockClip { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderBlockClip { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderBlockClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3729,8 +3899,14 @@ pub const BorderBlockColor = union(enum) {
     revert,
     revert_layer,
     unset,
-    hex_: u32,
-    pub fn hex(v: u32) BorderBlockColor { return .{ .hex_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BorderBlockColor { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderBlockColor { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderBlockColor { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderBlockColor { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderBlockColor { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderBlockColor { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderBlockColor { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderBlockColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -3949,11 +4125,15 @@ pub const BorderBlockEnd = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    px_: f32, em_: f32, rem_: f32,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
     hex_: u32,
-    pub fn px(v: f32) BorderBlockEnd { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderBlockEnd { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderBlockEnd { return .{ .rem_ = v }; }
+    pub fn px(v: f32) BorderBlockEnd { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderBlockEnd { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderBlockEnd { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderBlockEnd { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderBlockEnd { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderBlockEnd { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderBlockEnd { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
     pub fn hex(v: u32) BorderBlockEnd { return .{ .hex_ = v }; }
 
     pub fn format(self: BorderBlockEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
@@ -3968,12 +4148,17 @@ pub const BorderBlockEndClip = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BorderBlockEndClip { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderBlockEndClip { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderBlockEndClip { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BorderBlockEndClip { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BorderBlockEndClip { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderBlockEndClip { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderBlockEndClip { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderBlockEndClip { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderBlockEndClip { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderBlockEndClip { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderBlockEndClip { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BorderBlockEndClip { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BorderBlockEndClip { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderBlockEndClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -4194,12 +4379,17 @@ pub const BorderBlockEndRadius = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BorderBlockEndRadius { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderBlockEndRadius { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderBlockEndRadius { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BorderBlockEndRadius { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BorderBlockEndRadius { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderBlockEndRadius { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderBlockEndRadius { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderBlockEndRadius { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderBlockEndRadius { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderBlockEndRadius { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderBlockEndRadius { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BorderBlockEndRadius { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BorderBlockEndRadius { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderBlockEndRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -4239,10 +4429,14 @@ pub const BorderBlockEndWidth = union(enum) {
     thin,
     medium,
     thick,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) BorderBlockEndWidth { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderBlockEndWidth { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderBlockEndWidth { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BorderBlockEndWidth { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderBlockEndWidth { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderBlockEndWidth { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderBlockEndWidth { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderBlockEndWidth { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderBlockEndWidth { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderBlockEndWidth { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderBlockEndWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -4461,11 +4655,15 @@ pub const BorderBlockStart = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    px_: f32, em_: f32, rem_: f32,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
     hex_: u32,
-    pub fn px(v: f32) BorderBlockStart { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderBlockStart { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderBlockStart { return .{ .rem_ = v }; }
+    pub fn px(v: f32) BorderBlockStart { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderBlockStart { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderBlockStart { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderBlockStart { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderBlockStart { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderBlockStart { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderBlockStart { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
     pub fn hex(v: u32) BorderBlockStart { return .{ .hex_ = v }; }
 
     pub fn format(self: BorderBlockStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
@@ -4480,12 +4678,17 @@ pub const BorderBlockStartClip = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BorderBlockStartClip { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderBlockStartClip { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderBlockStartClip { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BorderBlockStartClip { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BorderBlockStartClip { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderBlockStartClip { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderBlockStartClip { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderBlockStartClip { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderBlockStartClip { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderBlockStartClip { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderBlockStartClip { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BorderBlockStartClip { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BorderBlockStartClip { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderBlockStartClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -4706,12 +4909,17 @@ pub const BorderBlockStartRadius = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BorderBlockStartRadius { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderBlockStartRadius { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderBlockStartRadius { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BorderBlockStartRadius { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BorderBlockStartRadius { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderBlockStartRadius { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderBlockStartRadius { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderBlockStartRadius { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderBlockStartRadius { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderBlockStartRadius { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderBlockStartRadius { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BorderBlockStartRadius { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BorderBlockStartRadius { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderBlockStartRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -4751,10 +4959,14 @@ pub const BorderBlockStartWidth = union(enum) {
     thin,
     medium,
     thick,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) BorderBlockStartWidth { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderBlockStartWidth { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderBlockStartWidth { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BorderBlockStartWidth { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderBlockStartWidth { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderBlockStartWidth { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderBlockStartWidth { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderBlockStartWidth { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderBlockStartWidth { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderBlockStartWidth { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderBlockStartWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -4768,6 +4980,14 @@ pub const BorderBlockStyle = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BorderBlockStyle { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderBlockStyle { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderBlockStyle { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderBlockStyle { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderBlockStyle { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderBlockStyle { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderBlockStyle { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderBlockStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -4781,6 +5001,14 @@ pub const BorderBlockWidth = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BorderBlockWidth { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderBlockWidth { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderBlockWidth { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderBlockWidth { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderBlockWidth { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderBlockWidth { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderBlockWidth { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderBlockWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -4999,11 +5227,15 @@ pub const BorderBottom = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    px_: f32, em_: f32, rem_: f32,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
     hex_: u32,
-    pub fn px(v: f32) BorderBottom { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderBottom { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderBottom { return .{ .rem_ = v }; }
+    pub fn px(v: f32) BorderBottom { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderBottom { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderBottom { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderBottom { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderBottom { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderBottom { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderBottom { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
     pub fn hex(v: u32) BorderBottom { return .{ .hex_ = v }; }
 
     pub fn format(self: BorderBottom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
@@ -5018,12 +5250,17 @@ pub const BorderBottomClip = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BorderBottomClip { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderBottomClip { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderBottomClip { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BorderBottomClip { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BorderBottomClip { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderBottomClip { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderBottomClip { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderBottomClip { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderBottomClip { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderBottomClip { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderBottomClip { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BorderBottomClip { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BorderBottomClip { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderBottomClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5244,12 +5481,17 @@ pub const BorderBottomLeftRadius = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BorderBottomLeftRadius { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderBottomLeftRadius { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderBottomLeftRadius { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BorderBottomLeftRadius { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BorderBottomLeftRadius { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderBottomLeftRadius { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderBottomLeftRadius { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderBottomLeftRadius { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderBottomLeftRadius { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderBottomLeftRadius { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderBottomLeftRadius { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BorderBottomLeftRadius { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BorderBottomLeftRadius { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderBottomLeftRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5263,12 +5505,17 @@ pub const BorderBottomRadius = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BorderBottomRadius { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderBottomRadius { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderBottomRadius { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BorderBottomRadius { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BorderBottomRadius { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderBottomRadius { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderBottomRadius { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderBottomRadius { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderBottomRadius { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderBottomRadius { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderBottomRadius { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BorderBottomRadius { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BorderBottomRadius { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderBottomRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5282,12 +5529,17 @@ pub const BorderBottomRightRadius = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BorderBottomRightRadius { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderBottomRightRadius { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderBottomRightRadius { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BorderBottomRightRadius { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BorderBottomRightRadius { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderBottomRightRadius { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderBottomRightRadius { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderBottomRightRadius { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderBottomRightRadius { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderBottomRightRadius { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderBottomRightRadius { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BorderBottomRightRadius { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BorderBottomRightRadius { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderBottomRightRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5327,10 +5579,14 @@ pub const BorderBottomWidth = union(enum) {
     thin,
     medium,
     thick,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) BorderBottomWidth { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderBottomWidth { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderBottomWidth { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BorderBottomWidth { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderBottomWidth { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderBottomWidth { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderBottomWidth { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderBottomWidth { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderBottomWidth { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderBottomWidth { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderBottomWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5359,6 +5615,14 @@ pub const BorderClip = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BorderClip { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderClip { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderClip { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderClip { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderClip { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderClip { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderClip { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5594,12 +5858,17 @@ pub const BorderEndEndRadius = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BorderEndEndRadius { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderEndEndRadius { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderEndEndRadius { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BorderEndEndRadius { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BorderEndEndRadius { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderEndEndRadius { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderEndEndRadius { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderEndEndRadius { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderEndEndRadius { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderEndEndRadius { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderEndEndRadius { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BorderEndEndRadius { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BorderEndEndRadius { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderEndEndRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5613,12 +5882,17 @@ pub const BorderEndStartRadius = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BorderEndStartRadius { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderEndStartRadius { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderEndStartRadius { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BorderEndStartRadius { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BorderEndStartRadius { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderEndStartRadius { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderEndStartRadius { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderEndStartRadius { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderEndStartRadius { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderEndStartRadius { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderEndStartRadius { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BorderEndStartRadius { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BorderEndStartRadius { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderEndStartRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5632,6 +5906,14 @@ pub const BorderImage = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BorderImage { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderImage { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderImage { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderImage { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderImage { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderImage { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderImage { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderImage, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5645,10 +5927,14 @@ pub const BorderImageOutset = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) BorderImageOutset { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderImageOutset { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderImageOutset { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BorderImageOutset { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderImageOutset { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderImageOutset { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderImageOutset { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderImageOutset { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderImageOutset { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderImageOutset { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderImageOutset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5685,8 +5971,9 @@ pub const BorderImageSlice = union(enum) {
     unset,
     ///     /// The fill keyword, if present, causes the middle part of the border-image to be preserved. (By default it is discarded, i.e., treated as empty.)
     fill,
-    percent_: f32,
-    pub fn percent(v: f32) BorderImageSlice { return .{ .percent_ = v }; }
+    percent_: [4]f32,
+    pub fn percent(v: f32) BorderImageSlice { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BorderImageSlice { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderImageSlice, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5715,12 +6002,17 @@ pub const BorderImageWidth = union(enum) {
     unset,
     ///     /// If auto is specified then the used border-image-width is the natural width or height (whichever is applicable) of the corresponding image slice (see border-image-slice). If the image does not have the required natural dimension then the corresponding computed border-width is used instead.
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BorderImageWidth { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderImageWidth { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderImageWidth { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BorderImageWidth { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BorderImageWidth { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderImageWidth { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderImageWidth { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderImageWidth { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderImageWidth { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderImageWidth { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderImageWidth { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BorderImageWidth { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BorderImageWidth { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderImageWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5734,6 +6026,14 @@ pub const BorderInline = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BorderInline { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderInline { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderInline { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderInline { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderInline { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderInline { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderInline { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5747,6 +6047,14 @@ pub const BorderInlineClip = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BorderInlineClip { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderInlineClip { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderInlineClip { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderInlineClip { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderInlineClip { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderInlineClip { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderInlineClip { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderInlineClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5760,8 +6068,14 @@ pub const BorderInlineColor = union(enum) {
     revert,
     revert_layer,
     unset,
-    hex_: u32,
-    pub fn hex(v: u32) BorderInlineColor { return .{ .hex_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BorderInlineColor { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderInlineColor { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderInlineColor { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderInlineColor { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderInlineColor { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderInlineColor { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderInlineColor { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderInlineColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -5980,11 +6294,15 @@ pub const BorderInlineEnd = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    px_: f32, em_: f32, rem_: f32,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
     hex_: u32,
-    pub fn px(v: f32) BorderInlineEnd { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderInlineEnd { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderInlineEnd { return .{ .rem_ = v }; }
+    pub fn px(v: f32) BorderInlineEnd { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderInlineEnd { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderInlineEnd { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderInlineEnd { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderInlineEnd { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderInlineEnd { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderInlineEnd { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
     pub fn hex(v: u32) BorderInlineEnd { return .{ .hex_ = v }; }
 
     pub fn format(self: BorderInlineEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
@@ -5999,12 +6317,17 @@ pub const BorderInlineEndClip = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BorderInlineEndClip { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderInlineEndClip { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderInlineEndClip { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BorderInlineEndClip { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BorderInlineEndClip { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderInlineEndClip { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderInlineEndClip { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderInlineEndClip { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderInlineEndClip { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderInlineEndClip { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderInlineEndClip { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BorderInlineEndClip { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BorderInlineEndClip { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderInlineEndClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -6225,12 +6548,17 @@ pub const BorderInlineEndRadius = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BorderInlineEndRadius { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderInlineEndRadius { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderInlineEndRadius { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BorderInlineEndRadius { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BorderInlineEndRadius { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderInlineEndRadius { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderInlineEndRadius { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderInlineEndRadius { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderInlineEndRadius { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderInlineEndRadius { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderInlineEndRadius { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BorderInlineEndRadius { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BorderInlineEndRadius { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderInlineEndRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -6270,10 +6598,14 @@ pub const BorderInlineEndWidth = union(enum) {
     thin,
     medium,
     thick,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) BorderInlineEndWidth { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderInlineEndWidth { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderInlineEndWidth { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BorderInlineEndWidth { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderInlineEndWidth { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderInlineEndWidth { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderInlineEndWidth { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderInlineEndWidth { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderInlineEndWidth { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderInlineEndWidth { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderInlineEndWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -6492,11 +6824,15 @@ pub const BorderInlineStart = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    px_: f32, em_: f32, rem_: f32,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
     hex_: u32,
-    pub fn px(v: f32) BorderInlineStart { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderInlineStart { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderInlineStart { return .{ .rem_ = v }; }
+    pub fn px(v: f32) BorderInlineStart { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderInlineStart { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderInlineStart { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderInlineStart { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderInlineStart { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderInlineStart { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderInlineStart { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
     pub fn hex(v: u32) BorderInlineStart { return .{ .hex_ = v }; }
 
     pub fn format(self: BorderInlineStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
@@ -6511,12 +6847,17 @@ pub const BorderInlineStartClip = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BorderInlineStartClip { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderInlineStartClip { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderInlineStartClip { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BorderInlineStartClip { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BorderInlineStartClip { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderInlineStartClip { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderInlineStartClip { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderInlineStartClip { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderInlineStartClip { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderInlineStartClip { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderInlineStartClip { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BorderInlineStartClip { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BorderInlineStartClip { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderInlineStartClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -6737,12 +7078,17 @@ pub const BorderInlineStartRadius = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BorderInlineStartRadius { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderInlineStartRadius { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderInlineStartRadius { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BorderInlineStartRadius { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BorderInlineStartRadius { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderInlineStartRadius { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderInlineStartRadius { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderInlineStartRadius { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderInlineStartRadius { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderInlineStartRadius { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderInlineStartRadius { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BorderInlineStartRadius { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BorderInlineStartRadius { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderInlineStartRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -6782,10 +7128,14 @@ pub const BorderInlineStartWidth = union(enum) {
     thin,
     medium,
     thick,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) BorderInlineStartWidth { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderInlineStartWidth { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderInlineStartWidth { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BorderInlineStartWidth { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderInlineStartWidth { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderInlineStartWidth { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderInlineStartWidth { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderInlineStartWidth { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderInlineStartWidth { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderInlineStartWidth { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderInlineStartWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -6799,6 +7149,14 @@ pub const BorderInlineStyle = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BorderInlineStyle { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderInlineStyle { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderInlineStyle { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderInlineStyle { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderInlineStyle { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderInlineStyle { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderInlineStyle { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderInlineStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -6812,6 +7170,14 @@ pub const BorderInlineWidth = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BorderInlineWidth { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderInlineWidth { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderInlineWidth { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderInlineWidth { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderInlineWidth { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderInlineWidth { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderInlineWidth { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderInlineWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7030,11 +7396,15 @@ pub const BorderLeft = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    px_: f32, em_: f32, rem_: f32,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
     hex_: u32,
-    pub fn px(v: f32) BorderLeft { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderLeft { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderLeft { return .{ .rem_ = v }; }
+    pub fn px(v: f32) BorderLeft { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderLeft { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderLeft { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderLeft { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderLeft { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderLeft { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderLeft { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
     pub fn hex(v: u32) BorderLeft { return .{ .hex_ = v }; }
 
     pub fn format(self: BorderLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
@@ -7049,12 +7419,17 @@ pub const BorderLeftClip = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BorderLeftClip { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderLeftClip { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderLeftClip { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BorderLeftClip { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BorderLeftClip { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderLeftClip { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderLeftClip { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderLeftClip { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderLeftClip { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderLeftClip { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderLeftClip { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BorderLeftClip { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BorderLeftClip { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderLeftClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7275,12 +7650,17 @@ pub const BorderLeftRadius = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BorderLeftRadius { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderLeftRadius { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderLeftRadius { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BorderLeftRadius { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BorderLeftRadius { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderLeftRadius { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderLeftRadius { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderLeftRadius { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderLeftRadius { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderLeftRadius { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderLeftRadius { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BorderLeftRadius { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BorderLeftRadius { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderLeftRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7320,10 +7700,14 @@ pub const BorderLeftWidth = union(enum) {
     thin,
     medium,
     thick,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) BorderLeftWidth { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderLeftWidth { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderLeftWidth { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BorderLeftWidth { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderLeftWidth { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderLeftWidth { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderLeftWidth { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderLeftWidth { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderLeftWidth { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderLeftWidth { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderLeftWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7351,12 +7735,17 @@ pub const BorderLimit = union(enum) {
     bottom,
     ///     /// For the left and right (vertical) sides, draws the entire side and corner. For the top and bottom (horizontal) sides, draws the left/right portion, as specified. Distances are measured as for corners.
     left,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BorderLimit { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderLimit { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderLimit { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BorderLimit { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BorderLimit { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderLimit { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderLimit { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderLimit { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderLimit { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderLimit { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderLimit { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BorderLimit { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BorderLimit { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderLimit, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7370,12 +7759,17 @@ pub const BorderRadius = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BorderRadius { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderRadius { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderRadius { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BorderRadius { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BorderRadius { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderRadius { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderRadius { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderRadius { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderRadius { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderRadius { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderRadius { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BorderRadius { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BorderRadius { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7594,11 +7988,15 @@ pub const BorderRight = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    px_: f32, em_: f32, rem_: f32,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
     hex_: u32,
-    pub fn px(v: f32) BorderRight { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderRight { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderRight { return .{ .rem_ = v }; }
+    pub fn px(v: f32) BorderRight { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderRight { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderRight { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderRight { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderRight { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderRight { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderRight { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
     pub fn hex(v: u32) BorderRight { return .{ .hex_ = v }; }
 
     pub fn format(self: BorderRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
@@ -7613,12 +8011,17 @@ pub const BorderRightClip = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BorderRightClip { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderRightClip { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderRightClip { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BorderRightClip { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BorderRightClip { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderRightClip { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderRightClip { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderRightClip { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderRightClip { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderRightClip { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderRightClip { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BorderRightClip { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BorderRightClip { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderRightClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7839,12 +8242,17 @@ pub const BorderRightRadius = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BorderRightRadius { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderRightRadius { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderRightRadius { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BorderRightRadius { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BorderRightRadius { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderRightRadius { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderRightRadius { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderRightRadius { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderRightRadius { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderRightRadius { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderRightRadius { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BorderRightRadius { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BorderRightRadius { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderRightRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7884,10 +8292,14 @@ pub const BorderRightWidth = union(enum) {
     thin,
     medium,
     thick,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) BorderRightWidth { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderRightWidth { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderRightWidth { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BorderRightWidth { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderRightWidth { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderRightWidth { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderRightWidth { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderRightWidth { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderRightWidth { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderRightWidth { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderRightWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7922,10 +8334,14 @@ pub const BorderSpacing = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) BorderSpacing { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderSpacing { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderSpacing { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BorderSpacing { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderSpacing { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderSpacing { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderSpacing { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderSpacing { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderSpacing { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderSpacing { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderSpacing, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7939,12 +8355,17 @@ pub const BorderStartEndRadius = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BorderStartEndRadius { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderStartEndRadius { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderStartEndRadius { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BorderStartEndRadius { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BorderStartEndRadius { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderStartEndRadius { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderStartEndRadius { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderStartEndRadius { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderStartEndRadius { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderStartEndRadius { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderStartEndRadius { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BorderStartEndRadius { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BorderStartEndRadius { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderStartEndRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7958,12 +8379,17 @@ pub const BorderStartStartRadius = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BorderStartStartRadius { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderStartStartRadius { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderStartStartRadius { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BorderStartStartRadius { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BorderStartStartRadius { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderStartStartRadius { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderStartStartRadius { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderStartStartRadius { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderStartStartRadius { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderStartStartRadius { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderStartStartRadius { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BorderStartStartRadius { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BorderStartStartRadius { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderStartStartRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -7977,6 +8403,14 @@ pub const BorderStyle = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BorderStyle { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderStyle { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderStyle { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderStyle { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderStyle { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderStyle { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderStyle { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderStyle, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8195,11 +8629,15 @@ pub const BorderTop = union(enum) {
     Window,
     WindowFrame,
     WindowText,
-    px_: f32, em_: f32, rem_: f32,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
     hex_: u32,
-    pub fn px(v: f32) BorderTop { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderTop { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderTop { return .{ .rem_ = v }; }
+    pub fn px(v: f32) BorderTop { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderTop { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderTop { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderTop { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderTop { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderTop { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderTop { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
     pub fn hex(v: u32) BorderTop { return .{ .hex_ = v }; }
 
     pub fn format(self: BorderTop, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
@@ -8214,12 +8652,17 @@ pub const BorderTopClip = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BorderTopClip { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderTopClip { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderTopClip { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BorderTopClip { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BorderTopClip { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderTopClip { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderTopClip { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderTopClip { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderTopClip { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderTopClip { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderTopClip { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BorderTopClip { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BorderTopClip { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderTopClip, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8440,12 +8883,17 @@ pub const BorderTopLeftRadius = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BorderTopLeftRadius { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderTopLeftRadius { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderTopLeftRadius { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BorderTopLeftRadius { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BorderTopLeftRadius { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderTopLeftRadius { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderTopLeftRadius { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderTopLeftRadius { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderTopLeftRadius { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderTopLeftRadius { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderTopLeftRadius { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BorderTopLeftRadius { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BorderTopLeftRadius { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderTopLeftRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8459,12 +8907,17 @@ pub const BorderTopRadius = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BorderTopRadius { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderTopRadius { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderTopRadius { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BorderTopRadius { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BorderTopRadius { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderTopRadius { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderTopRadius { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderTopRadius { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderTopRadius { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderTopRadius { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderTopRadius { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BorderTopRadius { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BorderTopRadius { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderTopRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8478,12 +8931,17 @@ pub const BorderTopRightRadius = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) BorderTopRightRadius { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderTopRightRadius { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderTopRightRadius { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) BorderTopRightRadius { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) BorderTopRightRadius { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderTopRightRadius { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderTopRightRadius { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderTopRightRadius { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderTopRightRadius { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderTopRightRadius { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderTopRightRadius { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) BorderTopRightRadius { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) BorderTopRightRadius { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderTopRightRadius, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8523,10 +8981,14 @@ pub const BorderTopWidth = union(enum) {
     thin,
     medium,
     thick,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) BorderTopWidth { return .{ .px_ = v }; }
-    pub fn em(v: f32) BorderTopWidth { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BorderTopWidth { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BorderTopWidth { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderTopWidth { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderTopWidth { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderTopWidth { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderTopWidth { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderTopWidth { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderTopWidth { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderTopWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8540,6 +9002,14 @@ pub const BorderWidth = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BorderWidth { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BorderWidth { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BorderWidth { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BorderWidth { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BorderWidth { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BorderWidth { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BorderWidth { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BorderWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8555,12 +9025,17 @@ pub const Bottom = union(enum) {
     unset,
     ///     /// Represents an unconstrained inset; the exact meaning depends on the positioning scheme.
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) Bottom { return .{ .px_ = v }; }
-    pub fn em(v: f32) Bottom { return .{ .em_ = v }; }
-    pub fn rem(v: f32) Bottom { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) Bottom { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) Bottom { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) Bottom { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) Bottom { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) Bottom { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) Bottom { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) Bottom { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) Bottom { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) Bottom { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) Bottom { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: Bottom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8591,12 +9066,14 @@ pub const BoxShadow = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    hex_: u32,
-    pub fn px(v: f32) BoxShadow { return .{ .px_ = v }; }
-    pub fn em(v: f32) BoxShadow { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BoxShadow { return .{ .rem_ = v }; }
-    pub fn hex(v: u32) BoxShadow { return .{ .hex_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BoxShadow { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BoxShadow { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BoxShadow { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BoxShadow { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BoxShadow { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BoxShadow { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BoxShadow { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BoxShadow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8610,10 +9087,14 @@ pub const BoxShadowBlur = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) BoxShadowBlur { return .{ .px_ = v }; }
-    pub fn em(v: f32) BoxShadowBlur { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BoxShadowBlur { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BoxShadowBlur { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BoxShadowBlur { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BoxShadowBlur { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BoxShadowBlur { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BoxShadowBlur { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BoxShadowBlur { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BoxShadowBlur { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BoxShadowBlur, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8834,10 +9315,14 @@ pub const BoxShadowOffset = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) BoxShadowOffset { return .{ .px_ = v }; }
-    pub fn em(v: f32) BoxShadowOffset { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BoxShadowOffset { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BoxShadowOffset { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BoxShadowOffset { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BoxShadowOffset { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BoxShadowOffset { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BoxShadowOffset { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BoxShadowOffset { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BoxShadowOffset { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BoxShadowOffset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -8868,10 +9353,14 @@ pub const BoxShadowSpread = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) BoxShadowSpread { return .{ .px_ = v }; }
-    pub fn em(v: f32) BoxShadowSpread { return .{ .em_ = v }; }
-    pub fn rem(v: f32) BoxShadowSpread { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) BoxShadowSpread { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) BoxShadowSpread { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) BoxShadowSpread { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) BoxShadowSpread { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) BoxShadowSpread { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) BoxShadowSpread { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) BoxShadowSpread { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: BoxShadowSpread, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9047,8 +9536,6 @@ pub const Caret = union(enum) {
     revert,
     revert_layer,
     unset,
-    hex_: u32,
-    pub fn hex(v: u32) Caret { return .{ .hex_ = v }; }
 
     pub fn format(self: Caret, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9398,8 +9885,6 @@ pub const ColorAdjust = union(enum) {
     revert,
     revert_layer,
     unset,
-    hex_: u32,
-    pub fn hex(v: u32) ColorAdjust { return .{ .hex_ = v }; }
 
     pub fn format(self: ColorAdjust, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9509,12 +9994,17 @@ pub const ColumnGap = union(enum) {
     thin,
     medium,
     thick,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) ColumnGap { return .{ .px_ = v }; }
-    pub fn em(v: f32) ColumnGap { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ColumnGap { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) ColumnGap { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) ColumnGap { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ColumnGap { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ColumnGap { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ColumnGap { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ColumnGap { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ColumnGap { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ColumnGap { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) ColumnGap { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) ColumnGap { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ColumnGap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9530,10 +10020,14 @@ pub const ColumnHeight = union(enum) {
     unset,
     ///     /// means that the column height will be determined by the amount of content and other properties.
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) ColumnHeight { return .{ .px_ = v }; }
-    pub fn em(v: f32) ColumnHeight { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ColumnHeight { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) ColumnHeight { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ColumnHeight { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ColumnHeight { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ColumnHeight { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ColumnHeight { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ColumnHeight { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ColumnHeight { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ColumnHeight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -9753,11 +10247,15 @@ pub const ColumnRule = union(enum) {
     WindowFrame,
     WindowText,
     auto,
-    px_: f32, em_: f32, rem_: f32,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
     hex_: u32,
-    pub fn px(v: f32) ColumnRule { return .{ .px_ = v }; }
-    pub fn em(v: f32) ColumnRule { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ColumnRule { return .{ .rem_ = v }; }
+    pub fn px(v: f32) ColumnRule { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ColumnRule { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ColumnRule { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ColumnRule { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ColumnRule { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ColumnRule { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ColumnRule { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
     pub fn hex(v: u32) ColumnRule { return .{ .hex_ = v }; }
 
     pub fn format(self: ColumnRule, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
@@ -9997,12 +10495,17 @@ pub const ColumnRuleEdgeInset = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) ColumnRuleEdgeInset { return .{ .px_ = v }; }
-    pub fn em(v: f32) ColumnRuleEdgeInset { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ColumnRuleEdgeInset { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) ColumnRuleEdgeInset { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) ColumnRuleEdgeInset { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ColumnRuleEdgeInset { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ColumnRuleEdgeInset { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ColumnRuleEdgeInset { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ColumnRuleEdgeInset { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ColumnRuleEdgeInset { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ColumnRuleEdgeInset { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) ColumnRuleEdgeInset { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) ColumnRuleEdgeInset { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ColumnRuleEdgeInset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10016,12 +10519,17 @@ pub const ColumnRuleEdgeInsetEnd = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) ColumnRuleEdgeInsetEnd { return .{ .px_ = v }; }
-    pub fn em(v: f32) ColumnRuleEdgeInsetEnd { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ColumnRuleEdgeInsetEnd { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) ColumnRuleEdgeInsetEnd { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) ColumnRuleEdgeInsetEnd { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ColumnRuleEdgeInsetEnd { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ColumnRuleEdgeInsetEnd { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ColumnRuleEdgeInsetEnd { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ColumnRuleEdgeInsetEnd { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ColumnRuleEdgeInsetEnd { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ColumnRuleEdgeInsetEnd { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) ColumnRuleEdgeInsetEnd { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) ColumnRuleEdgeInsetEnd { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ColumnRuleEdgeInsetEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10035,12 +10543,17 @@ pub const ColumnRuleEdgeInsetStart = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) ColumnRuleEdgeInsetStart { return .{ .px_ = v }; }
-    pub fn em(v: f32) ColumnRuleEdgeInsetStart { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ColumnRuleEdgeInsetStart { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) ColumnRuleEdgeInsetStart { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) ColumnRuleEdgeInsetStart { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ColumnRuleEdgeInsetStart { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ColumnRuleEdgeInsetStart { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ColumnRuleEdgeInsetStart { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ColumnRuleEdgeInsetStart { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ColumnRuleEdgeInsetStart { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ColumnRuleEdgeInsetStart { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) ColumnRuleEdgeInsetStart { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) ColumnRuleEdgeInsetStart { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ColumnRuleEdgeInsetStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10067,12 +10580,17 @@ pub const ColumnRuleInsetEnd = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) ColumnRuleInsetEnd { return .{ .px_ = v }; }
-    pub fn em(v: f32) ColumnRuleInsetEnd { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ColumnRuleInsetEnd { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) ColumnRuleInsetEnd { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) ColumnRuleInsetEnd { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ColumnRuleInsetEnd { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ColumnRuleInsetEnd { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ColumnRuleInsetEnd { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ColumnRuleInsetEnd { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ColumnRuleInsetEnd { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ColumnRuleInsetEnd { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) ColumnRuleInsetEnd { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) ColumnRuleInsetEnd { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ColumnRuleInsetEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10086,12 +10604,17 @@ pub const ColumnRuleInsetStart = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) ColumnRuleInsetStart { return .{ .px_ = v }; }
-    pub fn em(v: f32) ColumnRuleInsetStart { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ColumnRuleInsetStart { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) ColumnRuleInsetStart { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) ColumnRuleInsetStart { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ColumnRuleInsetStart { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ColumnRuleInsetStart { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ColumnRuleInsetStart { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ColumnRuleInsetStart { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ColumnRuleInsetStart { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ColumnRuleInsetStart { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) ColumnRuleInsetStart { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) ColumnRuleInsetStart { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ColumnRuleInsetStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10105,12 +10628,17 @@ pub const ColumnRuleInteriorInset = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) ColumnRuleInteriorInset { return .{ .px_ = v }; }
-    pub fn em(v: f32) ColumnRuleInteriorInset { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ColumnRuleInteriorInset { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) ColumnRuleInteriorInset { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) ColumnRuleInteriorInset { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ColumnRuleInteriorInset { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ColumnRuleInteriorInset { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ColumnRuleInteriorInset { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ColumnRuleInteriorInset { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ColumnRuleInteriorInset { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ColumnRuleInteriorInset { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) ColumnRuleInteriorInset { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) ColumnRuleInteriorInset { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ColumnRuleInteriorInset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10124,12 +10652,17 @@ pub const ColumnRuleInteriorInsetEnd = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) ColumnRuleInteriorInsetEnd { return .{ .px_ = v }; }
-    pub fn em(v: f32) ColumnRuleInteriorInsetEnd { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ColumnRuleInteriorInsetEnd { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) ColumnRuleInteriorInsetEnd { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) ColumnRuleInteriorInsetEnd { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ColumnRuleInteriorInsetEnd { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ColumnRuleInteriorInsetEnd { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ColumnRuleInteriorInsetEnd { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ColumnRuleInteriorInsetEnd { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ColumnRuleInteriorInsetEnd { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ColumnRuleInteriorInsetEnd { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) ColumnRuleInteriorInsetEnd { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) ColumnRuleInteriorInsetEnd { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ColumnRuleInteriorInsetEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10143,12 +10676,17 @@ pub const ColumnRuleInteriorInsetStart = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) ColumnRuleInteriorInsetStart { return .{ .px_ = v }; }
-    pub fn em(v: f32) ColumnRuleInteriorInsetStart { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ColumnRuleInteriorInsetStart { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) ColumnRuleInteriorInsetStart { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) ColumnRuleInteriorInsetStart { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ColumnRuleInteriorInsetStart { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ColumnRuleInteriorInsetStart { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ColumnRuleInteriorInsetStart { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ColumnRuleInteriorInsetStart { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ColumnRuleInteriorInsetStart { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ColumnRuleInteriorInsetStart { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) ColumnRuleInteriorInsetStart { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) ColumnRuleInteriorInsetStart { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ColumnRuleInteriorInsetStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10209,10 +10747,14 @@ pub const ColumnRuleWidth = union(enum) {
     medium,
     thick,
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) ColumnRuleWidth { return .{ .px_ = v }; }
-    pub fn em(v: f32) ColumnRuleWidth { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ColumnRuleWidth { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) ColumnRuleWidth { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ColumnRuleWidth { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ColumnRuleWidth { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ColumnRuleWidth { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ColumnRuleWidth { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ColumnRuleWidth { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ColumnRuleWidth { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ColumnRuleWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10249,10 +10791,14 @@ pub const ColumnWidth = union(enum) {
     min_content,
     ///     /// Specifies the optimal column width as the max-content inline size of the multi-column container’s contents.
     max_content,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) ColumnWidth { return .{ .px_ = v }; }
-    pub fn em(v: f32) ColumnWidth { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ColumnWidth { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) ColumnWidth { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ColumnWidth { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ColumnWidth { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ColumnWidth { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ColumnWidth { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ColumnWidth { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ColumnWidth { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ColumnWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10329,10 +10875,14 @@ pub const ContainIntrinsicBlockSize = union(enum) {
     auto,
     ///     /// If from-element is specified and the element is a replaced element with an internal layout intrinsic size, its explicit intrinsic inner size in the corresponding axis is that size. Should this apply even when contain:layout isn’t specified? The name needs further discussion.
     from_element,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) ContainIntrinsicBlockSize { return .{ .px_ = v }; }
-    pub fn em(v: f32) ContainIntrinsicBlockSize { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ContainIntrinsicBlockSize { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) ContainIntrinsicBlockSize { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ContainIntrinsicBlockSize { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ContainIntrinsicBlockSize { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ContainIntrinsicBlockSize { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ContainIntrinsicBlockSize { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ContainIntrinsicBlockSize { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ContainIntrinsicBlockSize { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ContainIntrinsicBlockSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10350,10 +10900,14 @@ pub const ContainIntrinsicHeight = union(enum) {
     auto,
     ///     /// If from-element is specified and the element is a replaced element with an internal layout intrinsic size, its explicit intrinsic inner size in the corresponding axis is that size. Should this apply even when contain:layout isn’t specified? The name needs further discussion.
     from_element,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) ContainIntrinsicHeight { return .{ .px_ = v }; }
-    pub fn em(v: f32) ContainIntrinsicHeight { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ContainIntrinsicHeight { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) ContainIntrinsicHeight { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ContainIntrinsicHeight { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ContainIntrinsicHeight { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ContainIntrinsicHeight { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ContainIntrinsicHeight { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ContainIntrinsicHeight { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ContainIntrinsicHeight { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ContainIntrinsicHeight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10371,10 +10925,14 @@ pub const ContainIntrinsicInlineSize = union(enum) {
     auto,
     ///     /// If from-element is specified and the element is a replaced element with an internal layout intrinsic size, its explicit intrinsic inner size in the corresponding axis is that size. Should this apply even when contain:layout isn’t specified? The name needs further discussion.
     from_element,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) ContainIntrinsicInlineSize { return .{ .px_ = v }; }
-    pub fn em(v: f32) ContainIntrinsicInlineSize { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ContainIntrinsicInlineSize { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) ContainIntrinsicInlineSize { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ContainIntrinsicInlineSize { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ContainIntrinsicInlineSize { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ContainIntrinsicInlineSize { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ContainIntrinsicInlineSize { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ContainIntrinsicInlineSize { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ContainIntrinsicInlineSize { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ContainIntrinsicInlineSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10392,10 +10950,14 @@ pub const ContainIntrinsicSize = union(enum) {
     auto,
     ///     /// If from-element is specified and the element is a replaced element with an internal layout intrinsic size, its explicit intrinsic inner size in the corresponding axis is that size. Should this apply even when contain:layout isn’t specified? The name needs further discussion.
     from_element,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) ContainIntrinsicSize { return .{ .px_ = v }; }
-    pub fn em(v: f32) ContainIntrinsicSize { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ContainIntrinsicSize { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) ContainIntrinsicSize { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ContainIntrinsicSize { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ContainIntrinsicSize { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ContainIntrinsicSize { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ContainIntrinsicSize { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ContainIntrinsicSize { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ContainIntrinsicSize { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ContainIntrinsicSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10413,10 +10975,14 @@ pub const ContainIntrinsicWidth = union(enum) {
     auto,
     ///     /// If from-element is specified and the element is a replaced element with an internal layout intrinsic size, its explicit intrinsic inner size in the corresponding axis is that size. Should this apply even when contain:layout isn’t specified? The name needs further discussion.
     from_element,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) ContainIntrinsicWidth { return .{ .px_ = v }; }
-    pub fn em(v: f32) ContainIntrinsicWidth { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ContainIntrinsicWidth { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) ContainIntrinsicWidth { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ContainIntrinsicWidth { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ContainIntrinsicWidth { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ContainIntrinsicWidth { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ContainIntrinsicWidth { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ContainIntrinsicWidth { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ContainIntrinsicWidth { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ContainIntrinsicWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10559,6 +11125,14 @@ pub const Corner = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) Corner { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) Corner { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) Corner { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) Corner { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) Corner { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) Corner { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) Corner { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: Corner, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10572,6 +11146,14 @@ pub const CornerBlockEnd = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) CornerBlockEnd { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) CornerBlockEnd { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) CornerBlockEnd { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) CornerBlockEnd { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) CornerBlockEnd { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) CornerBlockEnd { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) CornerBlockEnd { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: CornerBlockEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10598,6 +11180,14 @@ pub const CornerBlockStart = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) CornerBlockStart { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) CornerBlockStart { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) CornerBlockStart { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) CornerBlockStart { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) CornerBlockStart { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) CornerBlockStart { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) CornerBlockStart { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: CornerBlockStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10624,6 +11214,14 @@ pub const CornerBottom = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) CornerBottom { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) CornerBottom { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) CornerBottom { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) CornerBottom { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) CornerBottom { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) CornerBottom { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) CornerBottom { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: CornerBottom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10637,6 +11235,14 @@ pub const CornerBottomLeft = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) CornerBottomLeft { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) CornerBottomLeft { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) CornerBottomLeft { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) CornerBottomLeft { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) CornerBottomLeft { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) CornerBottomLeft { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) CornerBottomLeft { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: CornerBottomLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10669,6 +11275,14 @@ pub const CornerBottomRight = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) CornerBottomRight { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) CornerBottomRight { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) CornerBottomRight { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) CornerBottomRight { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) CornerBottomRight { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) CornerBottomRight { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) CornerBottomRight { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: CornerBottomRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10714,6 +11328,14 @@ pub const CornerEndEnd = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) CornerEndEnd { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) CornerEndEnd { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) CornerEndEnd { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) CornerEndEnd { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) CornerEndEnd { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) CornerEndEnd { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) CornerEndEnd { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: CornerEndEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10746,6 +11368,14 @@ pub const CornerEndStart = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) CornerEndStart { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) CornerEndStart { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) CornerEndStart { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) CornerEndStart { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) CornerEndStart { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) CornerEndStart { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) CornerEndStart { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: CornerEndStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10778,6 +11408,14 @@ pub const CornerInlineEnd = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) CornerInlineEnd { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) CornerInlineEnd { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) CornerInlineEnd { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) CornerInlineEnd { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) CornerInlineEnd { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) CornerInlineEnd { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) CornerInlineEnd { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: CornerInlineEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10804,6 +11442,14 @@ pub const CornerInlineStart = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) CornerInlineStart { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) CornerInlineStart { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) CornerInlineStart { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) CornerInlineStart { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) CornerInlineStart { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) CornerInlineStart { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) CornerInlineStart { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: CornerInlineStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10830,6 +11476,14 @@ pub const CornerLeft = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) CornerLeft { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) CornerLeft { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) CornerLeft { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) CornerLeft { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) CornerLeft { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) CornerLeft { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) CornerLeft { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: CornerLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10856,6 +11510,14 @@ pub const CornerRight = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) CornerRight { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) CornerRight { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) CornerRight { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) CornerRight { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) CornerRight { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) CornerRight { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) CornerRight { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: CornerRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10895,6 +11557,14 @@ pub const CornerStartEnd = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) CornerStartEnd { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) CornerStartEnd { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) CornerStartEnd { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) CornerStartEnd { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) CornerStartEnd { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) CornerStartEnd { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) CornerStartEnd { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: CornerStartEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10927,6 +11597,14 @@ pub const CornerStartStart = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) CornerStartStart { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) CornerStartStart { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) CornerStartStart { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) CornerStartStart { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) CornerStartStart { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) CornerStartStart { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) CornerStartStart { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: CornerStartStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10959,6 +11637,14 @@ pub const CornerTop = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) CornerTop { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) CornerTop { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) CornerTop { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) CornerTop { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) CornerTop { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) CornerTop { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) CornerTop { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: CornerTop, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -10972,6 +11658,14 @@ pub const CornerTopLeft = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) CornerTopLeft { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) CornerTopLeft { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) CornerTopLeft { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) CornerTopLeft { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) CornerTopLeft { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) CornerTopLeft { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) CornerTopLeft { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: CornerTopLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11004,6 +11698,14 @@ pub const CornerTopRight = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) CornerTopRight { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) CornerTopRight { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) CornerTopRight { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) CornerTopRight { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) CornerTopRight { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) CornerTopRight { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) CornerTopRight { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: CornerTopRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11210,12 +11912,17 @@ pub const Cx = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) Cx { return .{ .px_ = v }; }
-    pub fn em(v: f32) Cx { return .{ .em_ = v }; }
-    pub fn rem(v: f32) Cx { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) Cx { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) Cx { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) Cx { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) Cx { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) Cx { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) Cx { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) Cx { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) Cx { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) Cx { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) Cx { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: Cx, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11229,12 +11936,17 @@ pub const Cy = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) Cy { return .{ .px_ = v }; }
-    pub fn em(v: f32) Cy { return .{ .em_ = v }; }
-    pub fn rem(v: f32) Cy { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) Cy { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) Cy { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) Cy { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) Cy { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) Cy { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) Cy { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) Cy { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) Cy { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) Cy { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) Cy { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: Cy, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11759,12 +12471,17 @@ pub const FillPosition = union(enum) {
     inline_end,
     start,
     end,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) FillPosition { return .{ .px_ = v }; }
-    pub fn em(v: f32) FillPosition { return .{ .em_ = v }; }
-    pub fn rem(v: f32) FillPosition { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) FillPosition { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) FillPosition { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) FillPosition { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) FillPosition { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) FillPosition { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) FillPosition { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) FillPosition { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) FillPosition { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) FillPosition { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) FillPosition { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: FillPosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -11819,12 +12536,17 @@ pub const FillSize = union(enum) {
     auto,
     cover,
     contain,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) FillSize { return .{ .px_ = v }; }
-    pub fn em(v: f32) FillSize { return .{ .em_ = v }; }
-    pub fn rem(v: f32) FillSize { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) FillSize { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) FillSize { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) FillSize { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) FillSize { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) FillSize { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) FillSize { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) FillSize { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) FillSize { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) FillSize { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) FillSize { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: FillSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12007,12 +12729,17 @@ pub const FloatOffset = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) FloatOffset { return .{ .px_ = v }; }
-    pub fn em(v: f32) FloatOffset { return .{ .em_ = v }; }
-    pub fn rem(v: f32) FloatOffset { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) FloatOffset { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) FloatOffset { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) FloatOffset { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) FloatOffset { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) FloatOffset { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) FloatOffset { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) FloatOffset { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) FloatOffset { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) FloatOffset { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) FloatOffset { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: FloatOffset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12299,12 +13026,17 @@ pub const FlowTolerance = union(enum) {
     normal,
     ///     /// Specifies an infinite tie threshold. This makes items distribute themselves strictly in order, without considering the length of the tracks at all.
     infinite,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) FlowTolerance { return .{ .px_ = v }; }
-    pub fn em(v: f32) FlowTolerance { return .{ .em_ = v }; }
-    pub fn rem(v: f32) FlowTolerance { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) FlowTolerance { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) FlowTolerance { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) FlowTolerance { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) FlowTolerance { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) FlowTolerance { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) FlowTolerance { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) FlowTolerance { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) FlowTolerance { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) FlowTolerance { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) FlowTolerance { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: FlowTolerance, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12471,12 +13203,17 @@ pub const FontSize = union(enum) {
     smaller,
     ///     /// Special mathematical scaling rules must be applied when determining the computed value of the font-size property.
     math,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) FontSize { return .{ .px_ = v }; }
-    pub fn em(v: f32) FontSize { return .{ .em_ = v }; }
-    pub fn rem(v: f32) FontSize { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) FontSize { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) FontSize { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) FontSize { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) FontSize { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) FontSize { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) FontSize { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) FontSize { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) FontSize { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) FontSize { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) FontSize { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: FontSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12524,8 +13261,9 @@ pub const FontStretch = union(enum) {
     expanded,
     extra_expanded,
     ultra_expanded,
-    percent_: f32,
-    pub fn percent(v: f32) FontStretch { return .{ .percent_ = v }; }
+    percent_: [4]f32,
+    pub fn percent(v: f32) FontStretch { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) FontStretch { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: FontStretch, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -12915,8 +13653,9 @@ pub const FontWidth = union(enum) {
     expanded,
     extra_expanded,
     ultra_expanded,
-    percent_: f32,
-    pub fn percent(v: f32) FontWidth { return .{ .percent_ = v }; }
+    percent_: [4]f32,
+    pub fn percent(v: f32) FontWidth { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) FontWidth { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: FontWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13046,12 +13785,17 @@ pub const GridAutoColumns = union(enum) {
     min_content,
     max_content,
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) GridAutoColumns { return .{ .px_ = v }; }
-    pub fn em(v: f32) GridAutoColumns { return .{ .em_ = v }; }
-    pub fn rem(v: f32) GridAutoColumns { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) GridAutoColumns { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) GridAutoColumns { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) GridAutoColumns { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) GridAutoColumns { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) GridAutoColumns { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) GridAutoColumns { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) GridAutoColumns { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) GridAutoColumns { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) GridAutoColumns { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) GridAutoColumns { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: GridAutoColumns, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13087,12 +13831,17 @@ pub const GridAutoRows = union(enum) {
     min_content,
     max_content,
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) GridAutoRows { return .{ .px_ = v }; }
-    pub fn em(v: f32) GridAutoRows { return .{ .em_ = v }; }
-    pub fn rem(v: f32) GridAutoRows { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) GridAutoRows { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) GridAutoRows { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) GridAutoRows { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) GridAutoRows { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) GridAutoRows { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) GridAutoRows { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) GridAutoRows { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) GridAutoRows { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) GridAutoRows { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) GridAutoRows { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: GridAutoRows, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13141,12 +13890,17 @@ pub const GridColumnGap = union(enum) {
     thin,
     medium,
     thick,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) GridColumnGap { return .{ .px_ = v }; }
-    pub fn em(v: f32) GridColumnGap { return .{ .em_ = v }; }
-    pub fn rem(v: f32) GridColumnGap { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) GridColumnGap { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) GridColumnGap { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) GridColumnGap { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) GridColumnGap { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) GridColumnGap { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) GridColumnGap { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) GridColumnGap { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) GridColumnGap { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) GridColumnGap { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) GridColumnGap { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: GridColumnGap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13223,12 +13977,17 @@ pub const GridRowGap = union(enum) {
     thin,
     medium,
     thick,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) GridRowGap { return .{ .px_ = v }; }
-    pub fn em(v: f32) GridRowGap { return .{ .em_ = v }; }
-    pub fn rem(v: f32) GridRowGap { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) GridRowGap { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) GridRowGap { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) GridRowGap { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) GridRowGap { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) GridRowGap { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) GridRowGap { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) GridRowGap { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) GridRowGap { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) GridRowGap { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) GridRowGap { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: GridRowGap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13260,12 +14019,17 @@ pub const GridTemplate = union(enum) {
     min_content,
     max_content,
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) GridTemplate { return .{ .px_ = v }; }
-    pub fn em(v: f32) GridTemplate { return .{ .em_ = v }; }
-    pub fn rem(v: f32) GridTemplate { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) GridTemplate { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) GridTemplate { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) GridTemplate { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) GridTemplate { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) GridTemplate { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) GridTemplate { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) GridTemplate { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) GridTemplate { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) GridTemplate { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) GridTemplate { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: GridTemplate, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13301,12 +14065,17 @@ pub const GridTemplateColumns = union(enum) {
     auto_fill,
     auto_fit,
     subgrid,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) GridTemplateColumns { return .{ .px_ = v }; }
-    pub fn em(v: f32) GridTemplateColumns { return .{ .em_ = v }; }
-    pub fn rem(v: f32) GridTemplateColumns { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) GridTemplateColumns { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) GridTemplateColumns { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) GridTemplateColumns { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) GridTemplateColumns { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) GridTemplateColumns { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) GridTemplateColumns { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) GridTemplateColumns { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) GridTemplateColumns { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) GridTemplateColumns { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) GridTemplateColumns { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: GridTemplateColumns, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13329,12 +14098,17 @@ pub const GridTemplateRows = union(enum) {
     auto_fill,
     auto_fit,
     subgrid,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) GridTemplateRows { return .{ .px_ = v }; }
-    pub fn em(v: f32) GridTemplateRows { return .{ .em_ = v }; }
-    pub fn rem(v: f32) GridTemplateRows { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) GridTemplateRows { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) GridTemplateRows { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) GridTemplateRows { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) GridTemplateRows { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) GridTemplateRows { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) GridTemplateRows { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) GridTemplateRows { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) GridTemplateRows { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) GridTemplateRows { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) GridTemplateRows { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: GridTemplateRows, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13381,12 +14155,17 @@ pub const Height = union(enum) {
     fit_content,
     ///     /// If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.
     contain,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) Height { return .{ .px_ = v }; }
-    pub fn em(v: f32) Height { return .{ .em_ = v }; }
-    pub fn rem(v: f32) Height { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) Height { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) Height { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) Height { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) Height { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) Height { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) Height { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) Height { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) Height { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) Height { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) Height { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: Height, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13461,12 +14240,17 @@ pub const HyphenateLimitZone = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) HyphenateLimitZone { return .{ .px_ = v }; }
-    pub fn em(v: f32) HyphenateLimitZone { return .{ .em_ = v }; }
-    pub fn rem(v: f32) HyphenateLimitZone { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) HyphenateLimitZone { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) HyphenateLimitZone { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) HyphenateLimitZone { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) HyphenateLimitZone { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) HyphenateLimitZone { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) HyphenateLimitZone { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) HyphenateLimitZone { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) HyphenateLimitZone { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) HyphenateLimitZone { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) HyphenateLimitZone { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: HyphenateLimitZone, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13622,12 +14406,17 @@ pub const InitialLetterWrap = union(enum) {
     all,
     ///     /// This value is the same as none, except that the exclusion area of the impacted lines is increased as necessary for its end-edge to land on the character grid, i.e. to be a multiple of (1ic + letter-spacing) as computed on the containing block. The justify-self property can then be used to align the initial letter box within the exclusion area. Diagram of Japanese initial letter in vertical writing mode
     grid,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) InitialLetterWrap { return .{ .px_ = v }; }
-    pub fn em(v: f32) InitialLetterWrap { return .{ .em_ = v }; }
-    pub fn rem(v: f32) InitialLetterWrap { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) InitialLetterWrap { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) InitialLetterWrap { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) InitialLetterWrap { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) InitialLetterWrap { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) InitialLetterWrap { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) InitialLetterWrap { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) InitialLetterWrap { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) InitialLetterWrap { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) InitialLetterWrap { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) InitialLetterWrap { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: InitialLetterWrap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13714,12 +14503,17 @@ pub const InsetBlockEnd = union(enum) {
     unset,
     ///     /// Represents an unconstrained inset; the exact meaning depends on the positioning scheme.
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) InsetBlockEnd { return .{ .px_ = v }; }
-    pub fn em(v: f32) InsetBlockEnd { return .{ .em_ = v }; }
-    pub fn rem(v: f32) InsetBlockEnd { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) InsetBlockEnd { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) InsetBlockEnd { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) InsetBlockEnd { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) InsetBlockEnd { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) InsetBlockEnd { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) InsetBlockEnd { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) InsetBlockEnd { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) InsetBlockEnd { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) InsetBlockEnd { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) InsetBlockEnd { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: InsetBlockEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13735,12 +14529,17 @@ pub const InsetBlockStart = union(enum) {
     unset,
     ///     /// Represents an unconstrained inset; the exact meaning depends on the positioning scheme.
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) InsetBlockStart { return .{ .px_ = v }; }
-    pub fn em(v: f32) InsetBlockStart { return .{ .em_ = v }; }
-    pub fn rem(v: f32) InsetBlockStart { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) InsetBlockStart { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) InsetBlockStart { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) InsetBlockStart { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) InsetBlockStart { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) InsetBlockStart { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) InsetBlockStart { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) InsetBlockStart { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) InsetBlockStart { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) InsetBlockStart { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) InsetBlockStart { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: InsetBlockStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13769,12 +14568,17 @@ pub const InsetInlineEnd = union(enum) {
     unset,
     ///     /// Represents an unconstrained inset; the exact meaning depends on the positioning scheme.
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) InsetInlineEnd { return .{ .px_ = v }; }
-    pub fn em(v: f32) InsetInlineEnd { return .{ .em_ = v }; }
-    pub fn rem(v: f32) InsetInlineEnd { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) InsetInlineEnd { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) InsetInlineEnd { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) InsetInlineEnd { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) InsetInlineEnd { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) InsetInlineEnd { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) InsetInlineEnd { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) InsetInlineEnd { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) InsetInlineEnd { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) InsetInlineEnd { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) InsetInlineEnd { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: InsetInlineEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -13790,12 +14594,17 @@ pub const InsetInlineStart = union(enum) {
     unset,
     ///     /// Represents an unconstrained inset; the exact meaning depends on the positioning scheme.
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) InsetInlineStart { return .{ .px_ = v }; }
-    pub fn em(v: f32) InsetInlineStart { return .{ .em_ = v }; }
-    pub fn rem(v: f32) InsetInlineStart { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) InsetInlineStart { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) InsetInlineStart { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) InsetInlineStart { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) InsetInlineStart { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) InsetInlineStart { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) InsetInlineStart { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) InsetInlineStart { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) InsetInlineStart { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) InsetInlineStart { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) InsetInlineStart { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: InsetInlineStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14005,12 +14814,17 @@ pub const Left = union(enum) {
     unset,
     ///     /// Represents an unconstrained inset; the exact meaning depends on the positioning scheme.
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) Left { return .{ .px_ = v }; }
-    pub fn em(v: f32) Left { return .{ .em_ = v }; }
-    pub fn rem(v: f32) Left { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) Left { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) Left { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) Left { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) Left { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) Left { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) Left { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) Left { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) Left { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) Left { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) Left { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: Left, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14026,12 +14840,17 @@ pub const LetterSpacing = union(enum) {
     unset,
     ///     /// No additional spacing is applied. Computes to zero.
     normal,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) LetterSpacing { return .{ .px_ = v }; }
-    pub fn em(v: f32) LetterSpacing { return .{ .em_ = v }; }
-    pub fn rem(v: f32) LetterSpacing { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) LetterSpacing { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) LetterSpacing { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) LetterSpacing { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) LetterSpacing { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) LetterSpacing { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) LetterSpacing { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) LetterSpacing { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) LetterSpacing { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) LetterSpacing { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) LetterSpacing { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: LetterSpacing, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14336,12 +15155,17 @@ pub const LineHeight = union(enum) {
     unset,
     ///     /// Determine the preferred line height automatically based on font metrics.
     normal,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) LineHeight { return .{ .px_ = v }; }
-    pub fn em(v: f32) LineHeight { return .{ .em_ = v }; }
-    pub fn rem(v: f32) LineHeight { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) LineHeight { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) LineHeight { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) LineHeight { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) LineHeight { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) LineHeight { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) LineHeight { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) LineHeight { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) LineHeight { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) LineHeight { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) LineHeight { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: LineHeight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14355,10 +15179,14 @@ pub const LineHeightStep = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) LineHeightStep { return .{ .px_ = v }; }
-    pub fn em(v: f32) LineHeightStep { return .{ .em_ = v }; }
-    pub fn rem(v: f32) LineHeightStep { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) LineHeightStep { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) LineHeightStep { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) LineHeightStep { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) LineHeightStep { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) LineHeightStep { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) LineHeightStep { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) LineHeightStep { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: LineHeightStep, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14372,10 +15200,14 @@ pub const LinePadding = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) LinePadding { return .{ .px_ = v }; }
-    pub fn em(v: f32) LinePadding { return .{ .em_ = v }; }
-    pub fn rem(v: f32) LinePadding { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) LinePadding { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) LinePadding { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) LinePadding { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) LinePadding { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) LinePadding { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) LinePadding { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) LinePadding { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: LinePadding, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14475,6 +15307,14 @@ pub const Margin = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) Margin { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) Margin { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) Margin { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) Margin { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) Margin { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) Margin { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) Margin { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: Margin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14488,6 +15328,14 @@ pub const MarginBlock = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) MarginBlock { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) MarginBlock { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) MarginBlock { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) MarginBlock { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) MarginBlock { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) MarginBlock { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) MarginBlock { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: MarginBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14501,6 +15349,14 @@ pub const MarginBlockEnd = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) MarginBlockEnd { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) MarginBlockEnd { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) MarginBlockEnd { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) MarginBlockEnd { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) MarginBlockEnd { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) MarginBlockEnd { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) MarginBlockEnd { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: MarginBlockEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14514,6 +15370,14 @@ pub const MarginBlockStart = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) MarginBlockStart { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) MarginBlockStart { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) MarginBlockStart { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) MarginBlockStart { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) MarginBlockStart { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) MarginBlockStart { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) MarginBlockStart { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: MarginBlockStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14528,12 +15392,17 @@ pub const MarginBottom = union(enum) {
     revert_layer,
     unset,
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) MarginBottom { return .{ .px_ = v }; }
-    pub fn em(v: f32) MarginBottom { return .{ .em_ = v }; }
-    pub fn rem(v: f32) MarginBottom { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) MarginBottom { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) MarginBottom { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) MarginBottom { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) MarginBottom { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) MarginBottom { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) MarginBottom { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) MarginBottom { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) MarginBottom { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) MarginBottom { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) MarginBottom { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: MarginBottom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14566,6 +15435,14 @@ pub const MarginInline = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) MarginInline { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) MarginInline { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) MarginInline { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) MarginInline { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) MarginInline { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) MarginInline { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) MarginInline { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: MarginInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14579,6 +15456,14 @@ pub const MarginInlineEnd = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) MarginInlineEnd { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) MarginInlineEnd { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) MarginInlineEnd { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) MarginInlineEnd { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) MarginInlineEnd { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) MarginInlineEnd { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) MarginInlineEnd { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: MarginInlineEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14592,6 +15477,14 @@ pub const MarginInlineStart = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) MarginInlineStart { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) MarginInlineStart { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) MarginInlineStart { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) MarginInlineStart { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) MarginInlineStart { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) MarginInlineStart { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) MarginInlineStart { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: MarginInlineStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14606,12 +15499,17 @@ pub const MarginLeft = union(enum) {
     revert_layer,
     unset,
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) MarginLeft { return .{ .px_ = v }; }
-    pub fn em(v: f32) MarginLeft { return .{ .em_ = v }; }
-    pub fn rem(v: f32) MarginLeft { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) MarginLeft { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) MarginLeft { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) MarginLeft { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) MarginLeft { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) MarginLeft { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) MarginLeft { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) MarginLeft { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) MarginLeft { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) MarginLeft { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) MarginLeft { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: MarginLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14626,12 +15524,17 @@ pub const MarginRight = union(enum) {
     revert_layer,
     unset,
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) MarginRight { return .{ .px_ = v }; }
-    pub fn em(v: f32) MarginRight { return .{ .em_ = v }; }
-    pub fn rem(v: f32) MarginRight { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) MarginRight { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) MarginRight { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) MarginRight { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) MarginRight { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) MarginRight { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) MarginRight { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) MarginRight { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) MarginRight { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) MarginRight { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) MarginRight { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: MarginRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14646,12 +15549,17 @@ pub const MarginTop = union(enum) {
     revert_layer,
     unset,
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) MarginTop { return .{ .px_ = v }; }
-    pub fn em(v: f32) MarginTop { return .{ .em_ = v }; }
-    pub fn rem(v: f32) MarginTop { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) MarginTop { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) MarginTop { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) MarginTop { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) MarginTop { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) MarginTop { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) MarginTop { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) MarginTop { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) MarginTop { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) MarginTop { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) MarginTop { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: MarginTop, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14801,12 +15709,17 @@ pub const Mask = union(enum) {
     alpha,
     luminance,
     match_source,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) Mask { return .{ .px_ = v }; }
-    pub fn em(v: f32) Mask { return .{ .em_ = v }; }
-    pub fn rem(v: f32) Mask { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) Mask { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) Mask { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) Mask { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) Mask { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) Mask { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) Mask { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) Mask { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) Mask { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) Mask { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) Mask { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: Mask, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14820,6 +15733,14 @@ pub const MaskBorder = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) MaskBorder { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) MaskBorder { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) MaskBorder { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) MaskBorder { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) MaskBorder { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) MaskBorder { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) MaskBorder { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: MaskBorder, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14850,10 +15771,14 @@ pub const MaskBorderOutset = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) MaskBorderOutset { return .{ .px_ = v }; }
-    pub fn em(v: f32) MaskBorderOutset { return .{ .em_ = v }; }
-    pub fn rem(v: f32) MaskBorderOutset { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) MaskBorderOutset { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) MaskBorderOutset { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) MaskBorderOutset { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) MaskBorderOutset { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) MaskBorderOutset { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) MaskBorderOutset { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) MaskBorderOutset { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: MaskBorderOutset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14886,8 +15811,9 @@ pub const MaskBorderSlice = union(enum) {
     unset,
     ///     /// This property specifies inward offsets from the top, right, bottom, and left edges of the mask border image, dividing it into nine regions: four corners, four edges and a middle. The middle image part is discarded and treated as fully opaque white (the content covered by the middle part is not masked and shines through) unless the fill keyword is present.
     fill,
-    percent_: f32,
-    pub fn percent(v: f32) MaskBorderSlice { return .{ .percent_ = v }; }
+    percent_: [4]f32,
+    pub fn percent(v: f32) MaskBorderSlice { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) MaskBorderSlice { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: MaskBorderSlice, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -14915,12 +15841,17 @@ pub const MaskBorderWidth = union(enum) {
     revert_layer,
     unset,
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) MaskBorderWidth { return .{ .px_ = v }; }
-    pub fn em(v: f32) MaskBorderWidth { return .{ .em_ = v }; }
-    pub fn rem(v: f32) MaskBorderWidth { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) MaskBorderWidth { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) MaskBorderWidth { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) MaskBorderWidth { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) MaskBorderWidth { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) MaskBorderWidth { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) MaskBorderWidth { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) MaskBorderWidth { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) MaskBorderWidth { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) MaskBorderWidth { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) MaskBorderWidth { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: MaskBorderWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15054,12 +15985,17 @@ pub const MaskPosition = union(enum) {
     inline_end,
     start,
     end,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) MaskPosition { return .{ .px_ = v }; }
-    pub fn em(v: f32) MaskPosition { return .{ .em_ = v }; }
-    pub fn rem(v: f32) MaskPosition { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) MaskPosition { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) MaskPosition { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) MaskPosition { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) MaskPosition { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) MaskPosition { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) MaskPosition { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) MaskPosition { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) MaskPosition { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) MaskPosition { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) MaskPosition { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: MaskPosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15097,12 +16033,17 @@ pub const MaskSize = union(enum) {
     auto,
     cover,
     contain,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) MaskSize { return .{ .px_ = v }; }
-    pub fn em(v: f32) MaskSize { return .{ .em_ = v }; }
-    pub fn rem(v: f32) MaskSize { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) MaskSize { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) MaskSize { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) MaskSize { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) MaskSize { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) MaskSize { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) MaskSize { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) MaskSize { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) MaskSize { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) MaskSize { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) MaskSize { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: MaskSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15200,12 +16141,17 @@ pub const MaxHeight = union(enum) {
     fit_content,
     ///     /// If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.
     contain,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) MaxHeight { return .{ .px_ = v }; }
-    pub fn em(v: f32) MaxHeight { return .{ .em_ = v }; }
-    pub fn rem(v: f32) MaxHeight { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) MaxHeight { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) MaxHeight { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) MaxHeight { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) MaxHeight { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) MaxHeight { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) MaxHeight { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) MaxHeight { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) MaxHeight { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) MaxHeight { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) MaxHeight { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: MaxHeight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15255,12 +16201,17 @@ pub const MaxWidth = union(enum) {
     fit_content,
     ///     /// If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.
     contain,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) MaxWidth { return .{ .px_ = v }; }
-    pub fn em(v: f32) MaxWidth { return .{ .em_ = v }; }
-    pub fn rem(v: f32) MaxWidth { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) MaxWidth { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) MaxWidth { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) MaxWidth { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) MaxWidth { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) MaxWidth { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) MaxWidth { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) MaxWidth { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) MaxWidth { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) MaxWidth { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) MaxWidth { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: MaxWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15299,12 +16250,17 @@ pub const MinHeight = union(enum) {
     fit_content,
     ///     /// If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.
     contain,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) MinHeight { return .{ .px_ = v }; }
-    pub fn em(v: f32) MinHeight { return .{ .em_ = v }; }
-    pub fn rem(v: f32) MinHeight { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) MinHeight { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) MinHeight { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) MinHeight { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) MinHeight { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) MinHeight { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) MinHeight { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) MinHeight { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) MinHeight { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) MinHeight { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) MinHeight { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: MinHeight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15362,12 +16318,17 @@ pub const MinWidth = union(enum) {
     fit_content,
     ///     /// If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.
     contain,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) MinWidth { return .{ .px_ = v }; }
-    pub fn em(v: f32) MinWidth { return .{ .em_ = v }; }
-    pub fn rem(v: f32) MinWidth { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) MinWidth { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) MinWidth { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) MinWidth { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) MinWidth { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) MinWidth { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) MinWidth { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) MinWidth { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) MinWidth { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) MinWidth { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) MinWidth { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: MinWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15511,12 +16472,17 @@ pub const ObjectPosition = union(enum) {
     inline_end,
     start,
     end,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) ObjectPosition { return .{ .px_ = v }; }
-    pub fn em(v: f32) ObjectPosition { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ObjectPosition { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) ObjectPosition { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) ObjectPosition { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ObjectPosition { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ObjectPosition { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ObjectPosition { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ObjectPosition { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ObjectPosition { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ObjectPosition { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) ObjectPosition { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) ObjectPosition { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ObjectPosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15573,12 +16539,17 @@ pub const OffsetAnchor = union(enum) {
     inline_end,
     start,
     end,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) OffsetAnchor { return .{ .px_ = v }; }
-    pub fn em(v: f32) OffsetAnchor { return .{ .em_ = v }; }
-    pub fn rem(v: f32) OffsetAnchor { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) OffsetAnchor { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) OffsetAnchor { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) OffsetAnchor { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) OffsetAnchor { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) OffsetAnchor { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) OffsetAnchor { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) OffsetAnchor { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) OffsetAnchor { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) OffsetAnchor { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) OffsetAnchor { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: OffsetAnchor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15592,12 +16563,17 @@ pub const OffsetDistance = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) OffsetDistance { return .{ .px_ = v }; }
-    pub fn em(v: f32) OffsetDistance { return .{ .em_ = v }; }
-    pub fn rem(v: f32) OffsetDistance { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) OffsetDistance { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) OffsetDistance { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) OffsetDistance { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) OffsetDistance { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) OffsetDistance { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) OffsetDistance { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) OffsetDistance { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) OffsetDistance { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) OffsetDistance { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) OffsetDistance { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: OffsetDistance, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15649,12 +16625,17 @@ pub const OffsetPosition = union(enum) {
     inline_end,
     start,
     end,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) OffsetPosition { return .{ .px_ = v }; }
-    pub fn em(v: f32) OffsetPosition { return .{ .em_ = v }; }
-    pub fn rem(v: f32) OffsetPosition { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) OffsetPosition { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) OffsetPosition { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) OffsetPosition { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) OffsetPosition { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) OffsetPosition { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) OffsetPosition { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) OffsetPosition { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) OffsetPosition { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) OffsetPosition { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) OffsetPosition { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: OffsetPosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15685,8 +16666,9 @@ pub const Opacity = union(enum) {
     revert,
     revert_layer,
     unset,
-    percent_: f32,
-    pub fn percent(v: f32) Opacity { return .{ .percent_ = v }; }
+    percent_: [4]f32,
+    pub fn percent(v: f32) Opacity { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) Opacity { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: Opacity, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15726,8 +16708,6 @@ pub const Outline = union(enum) {
     revert,
     revert_layer,
     unset,
-    hex_: u32,
-    pub fn hex(v: u32) Outline { return .{ .hex_ = v }; }
 
     pub fn format(self: Outline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15743,8 +16723,14 @@ pub const OutlineColor = union(enum) {
     unset,
     ///     /// When outline-style is auto, outline-color: auto computes to auto and represents the accent color. Otherwise, outline-color: auto computes to currentColor.
     auto,
-    hex_: u32,
-    pub fn hex(v: u32) OutlineColor { return .{ .hex_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) OutlineColor { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) OutlineColor { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) OutlineColor { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) OutlineColor { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) OutlineColor { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) OutlineColor { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) OutlineColor { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: OutlineColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15758,10 +16744,14 @@ pub const OutlineOffset = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) OutlineOffset { return .{ .px_ = v }; }
-    pub fn em(v: f32) OutlineOffset { return .{ .em_ = v }; }
-    pub fn rem(v: f32) OutlineOffset { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) OutlineOffset { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) OutlineOffset { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) OutlineOffset { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) OutlineOffset { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) OutlineOffset { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) OutlineOffset { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) OutlineOffset { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: OutlineOffset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15801,10 +16791,14 @@ pub const OutlineWidth = union(enum) {
     thin,
     medium,
     thick,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) OutlineWidth { return .{ .px_ = v }; }
-    pub fn em(v: f32) OutlineWidth { return .{ .em_ = v }; }
-    pub fn rem(v: f32) OutlineWidth { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) OutlineWidth { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) OutlineWidth { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) OutlineWidth { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) OutlineWidth { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) OutlineWidth { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) OutlineWidth { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) OutlineWidth { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: OutlineWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15867,10 +16861,14 @@ pub const OverflowClipMargin = union(enum) {
     content_box,
     padding_box,
     border_box,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) OverflowClipMargin { return .{ .px_ = v }; }
-    pub fn em(v: f32) OverflowClipMargin { return .{ .em_ = v }; }
-    pub fn rem(v: f32) OverflowClipMargin { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) OverflowClipMargin { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) OverflowClipMargin { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) OverflowClipMargin { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) OverflowClipMargin { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) OverflowClipMargin { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) OverflowClipMargin { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) OverflowClipMargin { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: OverflowClipMargin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15887,10 +16885,14 @@ pub const OverflowClipMarginBlock = union(enum) {
     content_box,
     padding_box,
     border_box,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) OverflowClipMarginBlock { return .{ .px_ = v }; }
-    pub fn em(v: f32) OverflowClipMarginBlock { return .{ .em_ = v }; }
-    pub fn rem(v: f32) OverflowClipMarginBlock { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) OverflowClipMarginBlock { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) OverflowClipMarginBlock { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) OverflowClipMarginBlock { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) OverflowClipMarginBlock { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) OverflowClipMarginBlock { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) OverflowClipMarginBlock { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) OverflowClipMarginBlock { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: OverflowClipMarginBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15907,10 +16909,14 @@ pub const OverflowClipMarginBlockEnd = union(enum) {
     content_box,
     padding_box,
     border_box,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) OverflowClipMarginBlockEnd { return .{ .px_ = v }; }
-    pub fn em(v: f32) OverflowClipMarginBlockEnd { return .{ .em_ = v }; }
-    pub fn rem(v: f32) OverflowClipMarginBlockEnd { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) OverflowClipMarginBlockEnd { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) OverflowClipMarginBlockEnd { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) OverflowClipMarginBlockEnd { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) OverflowClipMarginBlockEnd { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) OverflowClipMarginBlockEnd { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) OverflowClipMarginBlockEnd { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) OverflowClipMarginBlockEnd { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: OverflowClipMarginBlockEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15927,10 +16933,14 @@ pub const OverflowClipMarginBlockStart = union(enum) {
     content_box,
     padding_box,
     border_box,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) OverflowClipMarginBlockStart { return .{ .px_ = v }; }
-    pub fn em(v: f32) OverflowClipMarginBlockStart { return .{ .em_ = v }; }
-    pub fn rem(v: f32) OverflowClipMarginBlockStart { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) OverflowClipMarginBlockStart { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) OverflowClipMarginBlockStart { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) OverflowClipMarginBlockStart { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) OverflowClipMarginBlockStart { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) OverflowClipMarginBlockStart { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) OverflowClipMarginBlockStart { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) OverflowClipMarginBlockStart { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: OverflowClipMarginBlockStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15947,10 +16957,14 @@ pub const OverflowClipMarginBottom = union(enum) {
     content_box,
     padding_box,
     border_box,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) OverflowClipMarginBottom { return .{ .px_ = v }; }
-    pub fn em(v: f32) OverflowClipMarginBottom { return .{ .em_ = v }; }
-    pub fn rem(v: f32) OverflowClipMarginBottom { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) OverflowClipMarginBottom { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) OverflowClipMarginBottom { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) OverflowClipMarginBottom { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) OverflowClipMarginBottom { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) OverflowClipMarginBottom { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) OverflowClipMarginBottom { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) OverflowClipMarginBottom { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: OverflowClipMarginBottom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15967,10 +16981,14 @@ pub const OverflowClipMarginInline = union(enum) {
     content_box,
     padding_box,
     border_box,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) OverflowClipMarginInline { return .{ .px_ = v }; }
-    pub fn em(v: f32) OverflowClipMarginInline { return .{ .em_ = v }; }
-    pub fn rem(v: f32) OverflowClipMarginInline { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) OverflowClipMarginInline { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) OverflowClipMarginInline { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) OverflowClipMarginInline { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) OverflowClipMarginInline { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) OverflowClipMarginInline { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) OverflowClipMarginInline { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) OverflowClipMarginInline { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: OverflowClipMarginInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -15987,10 +17005,14 @@ pub const OverflowClipMarginInlineEnd = union(enum) {
     content_box,
     padding_box,
     border_box,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) OverflowClipMarginInlineEnd { return .{ .px_ = v }; }
-    pub fn em(v: f32) OverflowClipMarginInlineEnd { return .{ .em_ = v }; }
-    pub fn rem(v: f32) OverflowClipMarginInlineEnd { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) OverflowClipMarginInlineEnd { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) OverflowClipMarginInlineEnd { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) OverflowClipMarginInlineEnd { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) OverflowClipMarginInlineEnd { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) OverflowClipMarginInlineEnd { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) OverflowClipMarginInlineEnd { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) OverflowClipMarginInlineEnd { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: OverflowClipMarginInlineEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16007,10 +17029,14 @@ pub const OverflowClipMarginInlineStart = union(enum) {
     content_box,
     padding_box,
     border_box,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) OverflowClipMarginInlineStart { return .{ .px_ = v }; }
-    pub fn em(v: f32) OverflowClipMarginInlineStart { return .{ .em_ = v }; }
-    pub fn rem(v: f32) OverflowClipMarginInlineStart { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) OverflowClipMarginInlineStart { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) OverflowClipMarginInlineStart { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) OverflowClipMarginInlineStart { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) OverflowClipMarginInlineStart { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) OverflowClipMarginInlineStart { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) OverflowClipMarginInlineStart { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) OverflowClipMarginInlineStart { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: OverflowClipMarginInlineStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16027,10 +17053,14 @@ pub const OverflowClipMarginLeft = union(enum) {
     content_box,
     padding_box,
     border_box,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) OverflowClipMarginLeft { return .{ .px_ = v }; }
-    pub fn em(v: f32) OverflowClipMarginLeft { return .{ .em_ = v }; }
-    pub fn rem(v: f32) OverflowClipMarginLeft { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) OverflowClipMarginLeft { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) OverflowClipMarginLeft { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) OverflowClipMarginLeft { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) OverflowClipMarginLeft { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) OverflowClipMarginLeft { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) OverflowClipMarginLeft { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) OverflowClipMarginLeft { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: OverflowClipMarginLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16047,10 +17077,14 @@ pub const OverflowClipMarginRight = union(enum) {
     content_box,
     padding_box,
     border_box,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) OverflowClipMarginRight { return .{ .px_ = v }; }
-    pub fn em(v: f32) OverflowClipMarginRight { return .{ .em_ = v }; }
-    pub fn rem(v: f32) OverflowClipMarginRight { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) OverflowClipMarginRight { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) OverflowClipMarginRight { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) OverflowClipMarginRight { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) OverflowClipMarginRight { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) OverflowClipMarginRight { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) OverflowClipMarginRight { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) OverflowClipMarginRight { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: OverflowClipMarginRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16067,10 +17101,14 @@ pub const OverflowClipMarginTop = union(enum) {
     content_box,
     padding_box,
     border_box,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) OverflowClipMarginTop { return .{ .px_ = v }; }
-    pub fn em(v: f32) OverflowClipMarginTop { return .{ .em_ = v }; }
-    pub fn rem(v: f32) OverflowClipMarginTop { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) OverflowClipMarginTop { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) OverflowClipMarginTop { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) OverflowClipMarginTop { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) OverflowClipMarginTop { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) OverflowClipMarginTop { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) OverflowClipMarginTop { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) OverflowClipMarginTop { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: OverflowClipMarginTop, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16267,6 +17305,14 @@ pub const Padding = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) Padding { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) Padding { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) Padding { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) Padding { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) Padding { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) Padding { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) Padding { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: Padding, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16280,6 +17326,14 @@ pub const PaddingBlock = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) PaddingBlock { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) PaddingBlock { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) PaddingBlock { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) PaddingBlock { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) PaddingBlock { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) PaddingBlock { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) PaddingBlock { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: PaddingBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16293,6 +17347,14 @@ pub const PaddingBlockEnd = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) PaddingBlockEnd { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) PaddingBlockEnd { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) PaddingBlockEnd { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) PaddingBlockEnd { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) PaddingBlockEnd { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) PaddingBlockEnd { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) PaddingBlockEnd { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: PaddingBlockEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16306,6 +17368,14 @@ pub const PaddingBlockStart = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) PaddingBlockStart { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) PaddingBlockStart { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) PaddingBlockStart { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) PaddingBlockStart { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) PaddingBlockStart { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) PaddingBlockStart { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) PaddingBlockStart { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: PaddingBlockStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16319,12 +17389,17 @@ pub const PaddingBottom = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) PaddingBottom { return .{ .px_ = v }; }
-    pub fn em(v: f32) PaddingBottom { return .{ .em_ = v }; }
-    pub fn rem(v: f32) PaddingBottom { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) PaddingBottom { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) PaddingBottom { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) PaddingBottom { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) PaddingBottom { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) PaddingBottom { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) PaddingBottom { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) PaddingBottom { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) PaddingBottom { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) PaddingBottom { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) PaddingBottom { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: PaddingBottom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16338,6 +17413,14 @@ pub const PaddingInline = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) PaddingInline { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) PaddingInline { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) PaddingInline { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) PaddingInline { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) PaddingInline { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) PaddingInline { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) PaddingInline { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: PaddingInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16351,6 +17434,14 @@ pub const PaddingInlineEnd = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) PaddingInlineEnd { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) PaddingInlineEnd { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) PaddingInlineEnd { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) PaddingInlineEnd { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) PaddingInlineEnd { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) PaddingInlineEnd { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) PaddingInlineEnd { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: PaddingInlineEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16364,6 +17455,14 @@ pub const PaddingInlineStart = union(enum) {
     revert,
     revert_layer,
     unset,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) PaddingInlineStart { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) PaddingInlineStart { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) PaddingInlineStart { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) PaddingInlineStart { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) PaddingInlineStart { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) PaddingInlineStart { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) PaddingInlineStart { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: PaddingInlineStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16377,12 +17476,17 @@ pub const PaddingLeft = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) PaddingLeft { return .{ .px_ = v }; }
-    pub fn em(v: f32) PaddingLeft { return .{ .em_ = v }; }
-    pub fn rem(v: f32) PaddingLeft { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) PaddingLeft { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) PaddingLeft { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) PaddingLeft { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) PaddingLeft { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) PaddingLeft { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) PaddingLeft { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) PaddingLeft { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) PaddingLeft { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) PaddingLeft { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) PaddingLeft { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: PaddingLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16396,12 +17500,17 @@ pub const PaddingRight = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) PaddingRight { return .{ .px_ = v }; }
-    pub fn em(v: f32) PaddingRight { return .{ .em_ = v }; }
-    pub fn rem(v: f32) PaddingRight { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) PaddingRight { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) PaddingRight { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) PaddingRight { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) PaddingRight { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) PaddingRight { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) PaddingRight { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) PaddingRight { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) PaddingRight { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) PaddingRight { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) PaddingRight { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: PaddingRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16415,12 +17524,17 @@ pub const PaddingTop = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) PaddingTop { return .{ .px_ = v }; }
-    pub fn em(v: f32) PaddingTop { return .{ .em_ = v }; }
-    pub fn rem(v: f32) PaddingTop { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) PaddingTop { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) PaddingTop { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) PaddingTop { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) PaddingTop { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) PaddingTop { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) PaddingTop { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) PaddingTop { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) PaddingTop { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) PaddingTop { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) PaddingTop { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: PaddingTop, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16587,10 +17701,14 @@ pub const Perspective = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) Perspective { return .{ .px_ = v }; }
-    pub fn em(v: f32) Perspective { return .{ .em_ = v }; }
-    pub fn rem(v: f32) Perspective { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) Perspective { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) Perspective { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) Perspective { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) Perspective { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) Perspective { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) Perspective { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) Perspective { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: Perspective, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -16624,12 +17742,17 @@ pub const PerspectiveOrigin = union(enum) {
     inline_end,
     start,
     end,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) PerspectiveOrigin { return .{ .px_ = v }; }
-    pub fn em(v: f32) PerspectiveOrigin { return .{ .em_ = v }; }
-    pub fn rem(v: f32) PerspectiveOrigin { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) PerspectiveOrigin { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) PerspectiveOrigin { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) PerspectiveOrigin { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) PerspectiveOrigin { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) PerspectiveOrigin { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) PerspectiveOrigin { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) PerspectiveOrigin { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) PerspectiveOrigin { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) PerspectiveOrigin { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) PerspectiveOrigin { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: PerspectiveOrigin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17019,12 +18142,17 @@ pub const R = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) R { return .{ .px_ = v }; }
-    pub fn em(v: f32) R { return .{ .em_ = v }; }
-    pub fn rem(v: f32) R { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) R { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) R { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) R { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) R { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) R { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) R { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) R { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) R { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) R { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) R { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: R, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17172,12 +18300,17 @@ pub const Right = union(enum) {
     unset,
     ///     /// Represents an unconstrained inset; the exact meaning depends on the positioning scheme.
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) Right { return .{ .px_ = v }; }
-    pub fn em(v: f32) Right { return .{ .em_ = v }; }
-    pub fn rem(v: f32) Right { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) Right { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) Right { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) Right { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) Right { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) Right { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) Right { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) Right { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) Right { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) Right { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) Right { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: Right, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17216,12 +18349,17 @@ pub const RowGap = union(enum) {
     thin,
     medium,
     thick,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) RowGap { return .{ .px_ = v }; }
-    pub fn em(v: f32) RowGap { return .{ .em_ = v }; }
-    pub fn rem(v: f32) RowGap { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) RowGap { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) RowGap { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) RowGap { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) RowGap { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) RowGap { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) RowGap { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) RowGap { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) RowGap { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) RowGap { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) RowGap { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: RowGap, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17441,11 +18579,15 @@ pub const RowRule = union(enum) {
     WindowFrame,
     WindowText,
     auto,
-    px_: f32, em_: f32, rem_: f32,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
     hex_: u32,
-    pub fn px(v: f32) RowRule { return .{ .px_ = v }; }
-    pub fn em(v: f32) RowRule { return .{ .em_ = v }; }
-    pub fn rem(v: f32) RowRule { return .{ .rem_ = v }; }
+    pub fn px(v: f32) RowRule { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) RowRule { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) RowRule { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) RowRule { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) RowRule { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) RowRule { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) RowRule { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
     pub fn hex(v: u32) RowRule { return .{ .hex_ = v }; }
 
     pub fn format(self: RowRule, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
@@ -17685,12 +18827,17 @@ pub const RowRuleEdgeInset = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) RowRuleEdgeInset { return .{ .px_ = v }; }
-    pub fn em(v: f32) RowRuleEdgeInset { return .{ .em_ = v }; }
-    pub fn rem(v: f32) RowRuleEdgeInset { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) RowRuleEdgeInset { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) RowRuleEdgeInset { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) RowRuleEdgeInset { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) RowRuleEdgeInset { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) RowRuleEdgeInset { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) RowRuleEdgeInset { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) RowRuleEdgeInset { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) RowRuleEdgeInset { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) RowRuleEdgeInset { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) RowRuleEdgeInset { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: RowRuleEdgeInset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17704,12 +18851,17 @@ pub const RowRuleEdgeInsetEnd = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) RowRuleEdgeInsetEnd { return .{ .px_ = v }; }
-    pub fn em(v: f32) RowRuleEdgeInsetEnd { return .{ .em_ = v }; }
-    pub fn rem(v: f32) RowRuleEdgeInsetEnd { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) RowRuleEdgeInsetEnd { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) RowRuleEdgeInsetEnd { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) RowRuleEdgeInsetEnd { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) RowRuleEdgeInsetEnd { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) RowRuleEdgeInsetEnd { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) RowRuleEdgeInsetEnd { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) RowRuleEdgeInsetEnd { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) RowRuleEdgeInsetEnd { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) RowRuleEdgeInsetEnd { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) RowRuleEdgeInsetEnd { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: RowRuleEdgeInsetEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17723,12 +18875,17 @@ pub const RowRuleEdgeInsetStart = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) RowRuleEdgeInsetStart { return .{ .px_ = v }; }
-    pub fn em(v: f32) RowRuleEdgeInsetStart { return .{ .em_ = v }; }
-    pub fn rem(v: f32) RowRuleEdgeInsetStart { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) RowRuleEdgeInsetStart { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) RowRuleEdgeInsetStart { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) RowRuleEdgeInsetStart { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) RowRuleEdgeInsetStart { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) RowRuleEdgeInsetStart { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) RowRuleEdgeInsetStart { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) RowRuleEdgeInsetStart { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) RowRuleEdgeInsetStart { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) RowRuleEdgeInsetStart { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) RowRuleEdgeInsetStart { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: RowRuleEdgeInsetStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17755,12 +18912,17 @@ pub const RowRuleInsetEnd = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) RowRuleInsetEnd { return .{ .px_ = v }; }
-    pub fn em(v: f32) RowRuleInsetEnd { return .{ .em_ = v }; }
-    pub fn rem(v: f32) RowRuleInsetEnd { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) RowRuleInsetEnd { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) RowRuleInsetEnd { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) RowRuleInsetEnd { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) RowRuleInsetEnd { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) RowRuleInsetEnd { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) RowRuleInsetEnd { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) RowRuleInsetEnd { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) RowRuleInsetEnd { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) RowRuleInsetEnd { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) RowRuleInsetEnd { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: RowRuleInsetEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17774,12 +18936,17 @@ pub const RowRuleInsetStart = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) RowRuleInsetStart { return .{ .px_ = v }; }
-    pub fn em(v: f32) RowRuleInsetStart { return .{ .em_ = v }; }
-    pub fn rem(v: f32) RowRuleInsetStart { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) RowRuleInsetStart { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) RowRuleInsetStart { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) RowRuleInsetStart { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) RowRuleInsetStart { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) RowRuleInsetStart { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) RowRuleInsetStart { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) RowRuleInsetStart { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) RowRuleInsetStart { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) RowRuleInsetStart { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) RowRuleInsetStart { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: RowRuleInsetStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17793,12 +18960,17 @@ pub const RowRuleInteriorInset = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) RowRuleInteriorInset { return .{ .px_ = v }; }
-    pub fn em(v: f32) RowRuleInteriorInset { return .{ .em_ = v }; }
-    pub fn rem(v: f32) RowRuleInteriorInset { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) RowRuleInteriorInset { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) RowRuleInteriorInset { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) RowRuleInteriorInset { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) RowRuleInteriorInset { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) RowRuleInteriorInset { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) RowRuleInteriorInset { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) RowRuleInteriorInset { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) RowRuleInteriorInset { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) RowRuleInteriorInset { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) RowRuleInteriorInset { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: RowRuleInteriorInset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17812,12 +18984,17 @@ pub const RowRuleInteriorInsetEnd = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) RowRuleInteriorInsetEnd { return .{ .px_ = v }; }
-    pub fn em(v: f32) RowRuleInteriorInsetEnd { return .{ .em_ = v }; }
-    pub fn rem(v: f32) RowRuleInteriorInsetEnd { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) RowRuleInteriorInsetEnd { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) RowRuleInteriorInsetEnd { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) RowRuleInteriorInsetEnd { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) RowRuleInteriorInsetEnd { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) RowRuleInteriorInsetEnd { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) RowRuleInteriorInsetEnd { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) RowRuleInteriorInsetEnd { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) RowRuleInteriorInsetEnd { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) RowRuleInteriorInsetEnd { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) RowRuleInteriorInsetEnd { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: RowRuleInteriorInsetEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17831,12 +19008,17 @@ pub const RowRuleInteriorInsetStart = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) RowRuleInteriorInsetStart { return .{ .px_ = v }; }
-    pub fn em(v: f32) RowRuleInteriorInsetStart { return .{ .em_ = v }; }
-    pub fn rem(v: f32) RowRuleInteriorInsetStart { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) RowRuleInteriorInsetStart { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) RowRuleInteriorInsetStart { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) RowRuleInteriorInsetStart { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) RowRuleInteriorInsetStart { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) RowRuleInteriorInsetStart { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) RowRuleInteriorInsetStart { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) RowRuleInteriorInsetStart { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) RowRuleInteriorInsetStart { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) RowRuleInteriorInsetStart { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) RowRuleInteriorInsetStart { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: RowRuleInteriorInsetStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -17897,10 +19079,14 @@ pub const RowRuleWidth = union(enum) {
     medium,
     thick,
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) RowRuleWidth { return .{ .px_ = v }; }
-    pub fn em(v: f32) RowRuleWidth { return .{ .em_ = v }; }
-    pub fn rem(v: f32) RowRuleWidth { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) RowRuleWidth { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) RowRuleWidth { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) RowRuleWidth { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) RowRuleWidth { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) RowRuleWidth { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) RowRuleWidth { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) RowRuleWidth { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: RowRuleWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18016,8 +19202,6 @@ pub const RuleColor = union(enum) {
     revert,
     revert_layer,
     unset,
-    hex_: u32,
-    pub fn hex(v: u32) RuleColor { return .{ .hex_ = v }; }
 
     pub fn format(self: RuleColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18153,12 +19337,17 @@ pub const Rx = union(enum) {
     revert_layer,
     unset,
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) Rx { return .{ .px_ = v }; }
-    pub fn em(v: f32) Rx { return .{ .em_ = v }; }
-    pub fn rem(v: f32) Rx { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) Rx { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) Rx { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) Rx { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) Rx { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) Rx { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) Rx { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) Rx { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) Rx { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) Rx { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) Rx { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: Rx, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18173,12 +19362,17 @@ pub const Ry = union(enum) {
     revert_layer,
     unset,
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) Ry { return .{ .px_ = v }; }
-    pub fn em(v: f32) Ry { return .{ .em_ = v }; }
-    pub fn rem(v: f32) Ry { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) Ry { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) Ry { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) Ry { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) Ry { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) Ry { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) Ry { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) Ry { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) Ry { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) Ry { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) Ry { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: Ry, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18192,8 +19386,9 @@ pub const Scale = union(enum) {
     revert,
     revert_layer,
     unset,
-    percent_: f32,
-    pub fn percent(v: f32) Scale { return .{ .percent_ = v }; }
+    percent_: [4]f32,
+    pub fn percent(v: f32) Scale { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) Scale { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: Scale, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18239,10 +19434,14 @@ pub const ScrollMargin = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) ScrollMargin { return .{ .px_ = v }; }
-    pub fn em(v: f32) ScrollMargin { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ScrollMargin { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) ScrollMargin { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ScrollMargin { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ScrollMargin { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ScrollMargin { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ScrollMargin { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ScrollMargin { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ScrollMargin { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ScrollMargin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18256,10 +19455,14 @@ pub const ScrollMarginBlock = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) ScrollMarginBlock { return .{ .px_ = v }; }
-    pub fn em(v: f32) ScrollMarginBlock { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ScrollMarginBlock { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) ScrollMarginBlock { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ScrollMarginBlock { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ScrollMarginBlock { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ScrollMarginBlock { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ScrollMarginBlock { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ScrollMarginBlock { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ScrollMarginBlock { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ScrollMarginBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18273,10 +19476,14 @@ pub const ScrollMarginBlockEnd = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) ScrollMarginBlockEnd { return .{ .px_ = v }; }
-    pub fn em(v: f32) ScrollMarginBlockEnd { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ScrollMarginBlockEnd { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) ScrollMarginBlockEnd { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ScrollMarginBlockEnd { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ScrollMarginBlockEnd { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ScrollMarginBlockEnd { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ScrollMarginBlockEnd { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ScrollMarginBlockEnd { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ScrollMarginBlockEnd { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ScrollMarginBlockEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18290,10 +19497,14 @@ pub const ScrollMarginBlockStart = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) ScrollMarginBlockStart { return .{ .px_ = v }; }
-    pub fn em(v: f32) ScrollMarginBlockStart { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ScrollMarginBlockStart { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) ScrollMarginBlockStart { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ScrollMarginBlockStart { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ScrollMarginBlockStart { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ScrollMarginBlockStart { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ScrollMarginBlockStart { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ScrollMarginBlockStart { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ScrollMarginBlockStart { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ScrollMarginBlockStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18307,10 +19518,14 @@ pub const ScrollMarginBottom = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) ScrollMarginBottom { return .{ .px_ = v }; }
-    pub fn em(v: f32) ScrollMarginBottom { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ScrollMarginBottom { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) ScrollMarginBottom { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ScrollMarginBottom { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ScrollMarginBottom { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ScrollMarginBottom { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ScrollMarginBottom { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ScrollMarginBottom { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ScrollMarginBottom { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ScrollMarginBottom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18324,10 +19539,14 @@ pub const ScrollMarginInline = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) ScrollMarginInline { return .{ .px_ = v }; }
-    pub fn em(v: f32) ScrollMarginInline { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ScrollMarginInline { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) ScrollMarginInline { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ScrollMarginInline { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ScrollMarginInline { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ScrollMarginInline { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ScrollMarginInline { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ScrollMarginInline { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ScrollMarginInline { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ScrollMarginInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18341,10 +19560,14 @@ pub const ScrollMarginInlineEnd = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) ScrollMarginInlineEnd { return .{ .px_ = v }; }
-    pub fn em(v: f32) ScrollMarginInlineEnd { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ScrollMarginInlineEnd { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) ScrollMarginInlineEnd { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ScrollMarginInlineEnd { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ScrollMarginInlineEnd { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ScrollMarginInlineEnd { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ScrollMarginInlineEnd { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ScrollMarginInlineEnd { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ScrollMarginInlineEnd { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ScrollMarginInlineEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18358,10 +19581,14 @@ pub const ScrollMarginInlineStart = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) ScrollMarginInlineStart { return .{ .px_ = v }; }
-    pub fn em(v: f32) ScrollMarginInlineStart { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ScrollMarginInlineStart { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) ScrollMarginInlineStart { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ScrollMarginInlineStart { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ScrollMarginInlineStart { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ScrollMarginInlineStart { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ScrollMarginInlineStart { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ScrollMarginInlineStart { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ScrollMarginInlineStart { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ScrollMarginInlineStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18375,10 +19602,14 @@ pub const ScrollMarginLeft = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) ScrollMarginLeft { return .{ .px_ = v }; }
-    pub fn em(v: f32) ScrollMarginLeft { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ScrollMarginLeft { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) ScrollMarginLeft { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ScrollMarginLeft { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ScrollMarginLeft { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ScrollMarginLeft { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ScrollMarginLeft { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ScrollMarginLeft { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ScrollMarginLeft { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ScrollMarginLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18392,10 +19623,14 @@ pub const ScrollMarginRight = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) ScrollMarginRight { return .{ .px_ = v }; }
-    pub fn em(v: f32) ScrollMarginRight { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ScrollMarginRight { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) ScrollMarginRight { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ScrollMarginRight { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ScrollMarginRight { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ScrollMarginRight { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ScrollMarginRight { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ScrollMarginRight { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ScrollMarginRight { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ScrollMarginRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18409,10 +19644,14 @@ pub const ScrollMarginTop = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) ScrollMarginTop { return .{ .px_ = v }; }
-    pub fn em(v: f32) ScrollMarginTop { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ScrollMarginTop { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) ScrollMarginTop { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ScrollMarginTop { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ScrollMarginTop { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ScrollMarginTop { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ScrollMarginTop { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ScrollMarginTop { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ScrollMarginTop { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ScrollMarginTop, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18449,12 +19688,17 @@ pub const ScrollPadding = union(enum) {
     unset,
     ///     /// Indicates that the offset for the corresponding edge of the scrollport is UA-determined. This should generally default to a used length of 0px, but UAs may use heuristics to detect when a non-zero value is more appropriate. For example, a UA could detect when a position:fixed element is being used as an opaque unscrollable “header” that obscures the content below it, and resolve the top offset to the height of that element so that a “page down” operation (such as pressing PgDn) automatically scrolls by one “visible page” of content.
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) ScrollPadding { return .{ .px_ = v }; }
-    pub fn em(v: f32) ScrollPadding { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ScrollPadding { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) ScrollPadding { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) ScrollPadding { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ScrollPadding { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ScrollPadding { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ScrollPadding { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ScrollPadding { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ScrollPadding { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ScrollPadding { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) ScrollPadding { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) ScrollPadding { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ScrollPadding, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18470,12 +19714,17 @@ pub const ScrollPaddingBlock = union(enum) {
     unset,
     ///     /// Indicates that the offset for the corresponding edge of the scrollport is UA-determined. This should generally default to a used length of 0px, but UAs may use heuristics to detect when a non-zero value is more appropriate. For example, a UA could detect when a position:fixed element is being used as an opaque unscrollable “header” that obscures the content below it, and resolve the top offset to the height of that element so that a “page down” operation (such as pressing PgDn) automatically scrolls by one “visible page” of content.
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) ScrollPaddingBlock { return .{ .px_ = v }; }
-    pub fn em(v: f32) ScrollPaddingBlock { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ScrollPaddingBlock { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) ScrollPaddingBlock { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) ScrollPaddingBlock { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ScrollPaddingBlock { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ScrollPaddingBlock { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ScrollPaddingBlock { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ScrollPaddingBlock { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ScrollPaddingBlock { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ScrollPaddingBlock { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) ScrollPaddingBlock { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) ScrollPaddingBlock { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ScrollPaddingBlock, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18491,12 +19740,17 @@ pub const ScrollPaddingBlockEnd = union(enum) {
     unset,
     ///     /// Indicates that the offset for the corresponding edge of the scrollport is UA-determined. This should generally default to a used length of 0px, but UAs may use heuristics to detect when a non-zero value is more appropriate. For example, a UA could detect when a position:fixed element is being used as an opaque unscrollable “header” that obscures the content below it, and resolve the top offset to the height of that element so that a “page down” operation (such as pressing PgDn) automatically scrolls by one “visible page” of content.
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) ScrollPaddingBlockEnd { return .{ .px_ = v }; }
-    pub fn em(v: f32) ScrollPaddingBlockEnd { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ScrollPaddingBlockEnd { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) ScrollPaddingBlockEnd { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) ScrollPaddingBlockEnd { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ScrollPaddingBlockEnd { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ScrollPaddingBlockEnd { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ScrollPaddingBlockEnd { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ScrollPaddingBlockEnd { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ScrollPaddingBlockEnd { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ScrollPaddingBlockEnd { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) ScrollPaddingBlockEnd { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) ScrollPaddingBlockEnd { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ScrollPaddingBlockEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18512,12 +19766,17 @@ pub const ScrollPaddingBlockStart = union(enum) {
     unset,
     ///     /// Indicates that the offset for the corresponding edge of the scrollport is UA-determined. This should generally default to a used length of 0px, but UAs may use heuristics to detect when a non-zero value is more appropriate. For example, a UA could detect when a position:fixed element is being used as an opaque unscrollable “header” that obscures the content below it, and resolve the top offset to the height of that element so that a “page down” operation (such as pressing PgDn) automatically scrolls by one “visible page” of content.
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) ScrollPaddingBlockStart { return .{ .px_ = v }; }
-    pub fn em(v: f32) ScrollPaddingBlockStart { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ScrollPaddingBlockStart { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) ScrollPaddingBlockStart { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) ScrollPaddingBlockStart { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ScrollPaddingBlockStart { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ScrollPaddingBlockStart { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ScrollPaddingBlockStart { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ScrollPaddingBlockStart { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ScrollPaddingBlockStart { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ScrollPaddingBlockStart { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) ScrollPaddingBlockStart { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) ScrollPaddingBlockStart { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ScrollPaddingBlockStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18532,12 +19791,17 @@ pub const ScrollPaddingBottom = union(enum) {
     revert_layer,
     unset,
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) ScrollPaddingBottom { return .{ .px_ = v }; }
-    pub fn em(v: f32) ScrollPaddingBottom { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ScrollPaddingBottom { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) ScrollPaddingBottom { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) ScrollPaddingBottom { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ScrollPaddingBottom { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ScrollPaddingBottom { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ScrollPaddingBottom { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ScrollPaddingBottom { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ScrollPaddingBottom { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ScrollPaddingBottom { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) ScrollPaddingBottom { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) ScrollPaddingBottom { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ScrollPaddingBottom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18553,12 +19817,17 @@ pub const ScrollPaddingInline = union(enum) {
     unset,
     ///     /// Indicates that the offset for the corresponding edge of the scrollport is UA-determined. This should generally default to a used length of 0px, but UAs may use heuristics to detect when a non-zero value is more appropriate. For example, a UA could detect when a position:fixed element is being used as an opaque unscrollable “header” that obscures the content below it, and resolve the top offset to the height of that element so that a “page down” operation (such as pressing PgDn) automatically scrolls by one “visible page” of content.
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) ScrollPaddingInline { return .{ .px_ = v }; }
-    pub fn em(v: f32) ScrollPaddingInline { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ScrollPaddingInline { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) ScrollPaddingInline { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) ScrollPaddingInline { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ScrollPaddingInline { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ScrollPaddingInline { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ScrollPaddingInline { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ScrollPaddingInline { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ScrollPaddingInline { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ScrollPaddingInline { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) ScrollPaddingInline { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) ScrollPaddingInline { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ScrollPaddingInline, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18574,12 +19843,17 @@ pub const ScrollPaddingInlineEnd = union(enum) {
     unset,
     ///     /// Indicates that the offset for the corresponding edge of the scrollport is UA-determined. This should generally default to a used length of 0px, but UAs may use heuristics to detect when a non-zero value is more appropriate. For example, a UA could detect when a position:fixed element is being used as an opaque unscrollable “header” that obscures the content below it, and resolve the top offset to the height of that element so that a “page down” operation (such as pressing PgDn) automatically scrolls by one “visible page” of content.
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) ScrollPaddingInlineEnd { return .{ .px_ = v }; }
-    pub fn em(v: f32) ScrollPaddingInlineEnd { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ScrollPaddingInlineEnd { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) ScrollPaddingInlineEnd { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) ScrollPaddingInlineEnd { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ScrollPaddingInlineEnd { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ScrollPaddingInlineEnd { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ScrollPaddingInlineEnd { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ScrollPaddingInlineEnd { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ScrollPaddingInlineEnd { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ScrollPaddingInlineEnd { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) ScrollPaddingInlineEnd { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) ScrollPaddingInlineEnd { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ScrollPaddingInlineEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18595,12 +19869,17 @@ pub const ScrollPaddingInlineStart = union(enum) {
     unset,
     ///     /// Indicates that the offset for the corresponding edge of the scrollport is UA-determined. This should generally default to a used length of 0px, but UAs may use heuristics to detect when a non-zero value is more appropriate. For example, a UA could detect when a position:fixed element is being used as an opaque unscrollable “header” that obscures the content below it, and resolve the top offset to the height of that element so that a “page down” operation (such as pressing PgDn) automatically scrolls by one “visible page” of content.
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) ScrollPaddingInlineStart { return .{ .px_ = v }; }
-    pub fn em(v: f32) ScrollPaddingInlineStart { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ScrollPaddingInlineStart { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) ScrollPaddingInlineStart { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) ScrollPaddingInlineStart { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ScrollPaddingInlineStart { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ScrollPaddingInlineStart { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ScrollPaddingInlineStart { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ScrollPaddingInlineStart { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ScrollPaddingInlineStart { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ScrollPaddingInlineStart { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) ScrollPaddingInlineStart { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) ScrollPaddingInlineStart { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ScrollPaddingInlineStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18615,12 +19894,17 @@ pub const ScrollPaddingLeft = union(enum) {
     revert_layer,
     unset,
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) ScrollPaddingLeft { return .{ .px_ = v }; }
-    pub fn em(v: f32) ScrollPaddingLeft { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ScrollPaddingLeft { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) ScrollPaddingLeft { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) ScrollPaddingLeft { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ScrollPaddingLeft { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ScrollPaddingLeft { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ScrollPaddingLeft { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ScrollPaddingLeft { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ScrollPaddingLeft { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ScrollPaddingLeft { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) ScrollPaddingLeft { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) ScrollPaddingLeft { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ScrollPaddingLeft, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18635,12 +19919,17 @@ pub const ScrollPaddingRight = union(enum) {
     revert_layer,
     unset,
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) ScrollPaddingRight { return .{ .px_ = v }; }
-    pub fn em(v: f32) ScrollPaddingRight { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ScrollPaddingRight { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) ScrollPaddingRight { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) ScrollPaddingRight { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ScrollPaddingRight { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ScrollPaddingRight { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ScrollPaddingRight { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ScrollPaddingRight { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ScrollPaddingRight { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ScrollPaddingRight { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) ScrollPaddingRight { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) ScrollPaddingRight { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ScrollPaddingRight, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -18655,12 +19944,17 @@ pub const ScrollPaddingTop = union(enum) {
     revert_layer,
     unset,
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) ScrollPaddingTop { return .{ .px_ = v }; }
-    pub fn em(v: f32) ScrollPaddingTop { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ScrollPaddingTop { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) ScrollPaddingTop { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) ScrollPaddingTop { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ScrollPaddingTop { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ScrollPaddingTop { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ScrollPaddingTop { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ScrollPaddingTop { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ScrollPaddingTop { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ScrollPaddingTop { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) ScrollPaddingTop { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) ScrollPaddingTop { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ScrollPaddingTop, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19044,8 +20338,9 @@ pub const ShapeImageThreshold = union(enum) {
     revert,
     revert_layer,
     unset,
-    percent_: f32,
-    pub fn percent(v: f32) ShapeImageThreshold { return .{ .percent_ = v }; }
+    percent_: [4]f32,
+    pub fn percent(v: f32) ShapeImageThreshold { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) ShapeImageThreshold { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ShapeImageThreshold, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19079,12 +20374,17 @@ pub const ShapeMargin = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) ShapeMargin { return .{ .px_ = v }; }
-    pub fn em(v: f32) ShapeMargin { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ShapeMargin { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) ShapeMargin { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) ShapeMargin { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ShapeMargin { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ShapeMargin { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ShapeMargin { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ShapeMargin { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ShapeMargin { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ShapeMargin { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) ShapeMargin { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) ShapeMargin { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ShapeMargin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19116,12 +20416,17 @@ pub const ShapePadding = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) ShapePadding { return .{ .px_ = v }; }
-    pub fn em(v: f32) ShapePadding { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ShapePadding { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) ShapePadding { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) ShapePadding { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ShapePadding { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ShapePadding { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ShapePadding { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ShapePadding { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ShapePadding { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ShapePadding { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) ShapePadding { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) ShapePadding { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ShapePadding, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19283,8 +20588,6 @@ pub const StopColor = union(enum) {
     revert,
     revert_layer,
     unset,
-    hex_: u32,
-    pub fn hex(v: u32) StopColor { return .{ .hex_ = v }; }
 
     pub fn format(self: StopColor, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19596,10 +20899,14 @@ pub const StrokeDashCorner = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) StrokeDashCorner { return .{ .px_ = v }; }
-    pub fn em(v: f32) StrokeDashCorner { return .{ .em_ = v }; }
-    pub fn rem(v: f32) StrokeDashCorner { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) StrokeDashCorner { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) StrokeDashCorner { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) StrokeDashCorner { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) StrokeDashCorner { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) StrokeDashCorner { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) StrokeDashCorner { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) StrokeDashCorner { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: StrokeDashCorner, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19651,12 +20958,17 @@ pub const StrokeDasharray = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) StrokeDasharray { return .{ .px_ = v }; }
-    pub fn em(v: f32) StrokeDasharray { return .{ .em_ = v }; }
-    pub fn rem(v: f32) StrokeDasharray { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) StrokeDasharray { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) StrokeDasharray { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) StrokeDasharray { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) StrokeDasharray { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) StrokeDasharray { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) StrokeDasharray { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) StrokeDasharray { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) StrokeDasharray { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) StrokeDasharray { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) StrokeDasharray { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: StrokeDasharray, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19670,10 +20982,14 @@ pub const StrokeDashcorner = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) StrokeDashcorner { return .{ .px_ = v }; }
-    pub fn em(v: f32) StrokeDashcorner { return .{ .em_ = v }; }
-    pub fn rem(v: f32) StrokeDashcorner { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) StrokeDashcorner { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) StrokeDashcorner { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) StrokeDashcorner { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) StrokeDashcorner { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) StrokeDashcorner { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) StrokeDashcorner { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) StrokeDashcorner { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: StrokeDashcorner, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19687,12 +21003,17 @@ pub const StrokeDashoffset = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) StrokeDashoffset { return .{ .px_ = v }; }
-    pub fn em(v: f32) StrokeDashoffset { return .{ .em_ = v }; }
-    pub fn rem(v: f32) StrokeDashoffset { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) StrokeDashoffset { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) StrokeDashoffset { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) StrokeDashoffset { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) StrokeDashoffset { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) StrokeDashoffset { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) StrokeDashoffset { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) StrokeDashoffset { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) StrokeDashoffset { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) StrokeDashoffset { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) StrokeDashoffset { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: StrokeDashoffset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19830,12 +21151,17 @@ pub const StrokePosition = union(enum) {
     inline_end,
     start,
     end,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) StrokePosition { return .{ .px_ = v }; }
-    pub fn em(v: f32) StrokePosition { return .{ .em_ = v }; }
-    pub fn rem(v: f32) StrokePosition { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) StrokePosition { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) StrokePosition { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) StrokePosition { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) StrokePosition { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) StrokePosition { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) StrokePosition { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) StrokePosition { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) StrokePosition { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) StrokePosition { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) StrokePosition { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: StrokePosition, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19873,12 +21199,17 @@ pub const StrokeSize = union(enum) {
     auto,
     cover,
     contain,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) StrokeSize { return .{ .px_ = v }; }
-    pub fn em(v: f32) StrokeSize { return .{ .em_ = v }; }
-    pub fn rem(v: f32) StrokeSize { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) StrokeSize { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) StrokeSize { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) StrokeSize { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) StrokeSize { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) StrokeSize { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) StrokeSize { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) StrokeSize { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) StrokeSize { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) StrokeSize { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) StrokeSize { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: StrokeSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19892,12 +21223,17 @@ pub const StrokeWidth = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) StrokeWidth { return .{ .px_ = v }; }
-    pub fn em(v: f32) StrokeWidth { return .{ .em_ = v }; }
-    pub fn rem(v: f32) StrokeWidth { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) StrokeWidth { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) StrokeWidth { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) StrokeWidth { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) StrokeWidth { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) StrokeWidth { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) StrokeWidth { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) StrokeWidth { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) StrokeWidth { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) StrokeWidth { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) StrokeWidth { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: StrokeWidth, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -19911,10 +21247,14 @@ pub const TabSize = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) TabSize { return .{ .px_ = v }; }
-    pub fn em(v: f32) TabSize { return .{ .em_ = v }; }
-    pub fn rem(v: f32) TabSize { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) TabSize { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) TabSize { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) TabSize { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) TabSize { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) TabSize { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) TabSize { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) TabSize { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: TabSize, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20130,8 +21470,6 @@ pub const TextDecoration = union(enum) {
     revert,
     revert_layer,
     unset,
-    hex_: u32,
-    pub fn hex(v: u32) TextDecoration { return .{ .hex_ = v }; }
 
     pub fn format(self: TextDecoration, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20354,10 +21692,14 @@ pub const TextDecorationInset = union(enum) {
     unset,
     ///     /// The UA chooses an inset amount that ensures that if two identical underlined elements appear side-by-side they do not appear to have a single underline. (This is important in Chinese, where underlining is a form of punctuation.) text-decoration-inset: auto for <u>石井</u><u>艾俐俐</u>
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    pub fn px(v: f32) TextDecorationInset { return .{ .px_ = v }; }
-    pub fn em(v: f32) TextDecorationInset { return .{ .em_ = v }; }
-    pub fn rem(v: f32) TextDecorationInset { return .{ .rem_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    pub fn px(v: f32) TextDecorationInset { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) TextDecorationInset { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) TextDecorationInset { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) TextDecorationInset { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) TextDecorationInset { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) TextDecorationInset { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) TextDecorationInset { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: TextDecorationInset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20514,12 +21856,17 @@ pub const TextDecorationThickness = union(enum) {
     thin,
     medium,
     thick,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) TextDecorationThickness { return .{ .px_ = v }; }
-    pub fn em(v: f32) TextDecorationThickness { return .{ .em_ = v }; }
-    pub fn rem(v: f32) TextDecorationThickness { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) TextDecorationThickness { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) TextDecorationThickness { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) TextDecorationThickness { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) TextDecorationThickness { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) TextDecorationThickness { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) TextDecorationThickness { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) TextDecorationThickness { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) TextDecorationThickness { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) TextDecorationThickness { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) TextDecorationThickness { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: TextDecorationThickness, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20533,8 +21880,6 @@ pub const TextEmphasis = union(enum) {
     revert,
     revert_layer,
     unset,
-    hex_: u32,
-    pub fn hex(v: u32) TextEmphasis { return .{ .hex_ = v }; }
 
     pub fn format(self: TextEmphasis, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -20850,12 +22195,17 @@ pub const TextIndent = union(enum) {
     hanging,
     ///     /// Indentation affects the first line of each block container and each line after a forced line break (but not lines after a soft wrap break).
     each_line,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) TextIndent { return .{ .px_ = v }; }
-    pub fn em(v: f32) TextIndent { return .{ .em_ = v }; }
-    pub fn rem(v: f32) TextIndent { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) TextIndent { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) TextIndent { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) TextIndent { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) TextIndent { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) TextIndent { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) TextIndent { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) TextIndent { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) TextIndent { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) TextIndent { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) TextIndent { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: TextIndent, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21140,11 +22490,15 @@ pub const TextShadow = union(enum) {
     WindowFrame,
     WindowText,
     inset,
-    px_: f32, em_: f32, rem_: f32,
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
     hex_: u32,
-    pub fn px(v: f32) TextShadow { return .{ .px_ = v }; }
-    pub fn em(v: f32) TextShadow { return .{ .em_ = v }; }
-    pub fn rem(v: f32) TextShadow { return .{ .rem_ = v }; }
+    pub fn px(v: f32) TextShadow { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) TextShadow { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) TextShadow { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) TextShadow { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) TextShadow { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) TextShadow { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) TextShadow { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
     pub fn hex(v: u32) TextShadow { return .{ .hex_ = v }; }
 
     pub fn format(self: TextShadow, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
@@ -21161,8 +22515,9 @@ pub const TextSizeAdjust = union(enum) {
     unset,
     ///     /// Renderers must use the default size adjustment when displaying on a small device.
     auto,
-    percent_: f32,
-    pub fn percent(v: f32) TextSizeAdjust { return .{ .percent_ = v }; }
+    percent_: [4]f32,
+    pub fn percent(v: f32) TextSizeAdjust { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) TextSizeAdjust { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: TextSizeAdjust, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21257,12 +22612,17 @@ pub const TextUnderlineOffset = union(enum) {
     unset,
     ///     /// The UA chooses an appropriate offset for underlines. However, this offset must be zero if the computed value of text-underline-position is from-font and the UA was able to extract an appropriate metric to use from the font.
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) TextUnderlineOffset { return .{ .px_ = v }; }
-    pub fn em(v: f32) TextUnderlineOffset { return .{ .em_ = v }; }
-    pub fn rem(v: f32) TextUnderlineOffset { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) TextUnderlineOffset { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) TextUnderlineOffset { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) TextUnderlineOffset { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) TextUnderlineOffset { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) TextUnderlineOffset { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) TextUnderlineOffset { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) TextUnderlineOffset { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) TextUnderlineOffset { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) TextUnderlineOffset { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) TextUnderlineOffset { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: TextUnderlineOffset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21394,12 +22754,17 @@ pub const TimelineTriggerActivationRangeEnd = union(enum) {
     revert_layer,
     unset,
     normal,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) TimelineTriggerActivationRangeEnd { return .{ .px_ = v }; }
-    pub fn em(v: f32) TimelineTriggerActivationRangeEnd { return .{ .em_ = v }; }
-    pub fn rem(v: f32) TimelineTriggerActivationRangeEnd { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) TimelineTriggerActivationRangeEnd { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) TimelineTriggerActivationRangeEnd { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) TimelineTriggerActivationRangeEnd { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) TimelineTriggerActivationRangeEnd { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) TimelineTriggerActivationRangeEnd { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) TimelineTriggerActivationRangeEnd { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) TimelineTriggerActivationRangeEnd { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) TimelineTriggerActivationRangeEnd { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) TimelineTriggerActivationRangeEnd { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) TimelineTriggerActivationRangeEnd { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: TimelineTriggerActivationRangeEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21414,12 +22779,17 @@ pub const TimelineTriggerActivationRangeStart = union(enum) {
     revert_layer,
     unset,
     normal,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) TimelineTriggerActivationRangeStart { return .{ .px_ = v }; }
-    pub fn em(v: f32) TimelineTriggerActivationRangeStart { return .{ .em_ = v }; }
-    pub fn rem(v: f32) TimelineTriggerActivationRangeStart { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) TimelineTriggerActivationRangeStart { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) TimelineTriggerActivationRangeStart { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) TimelineTriggerActivationRangeStart { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) TimelineTriggerActivationRangeStart { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) TimelineTriggerActivationRangeStart { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) TimelineTriggerActivationRangeStart { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) TimelineTriggerActivationRangeStart { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) TimelineTriggerActivationRangeStart { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) TimelineTriggerActivationRangeStart { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) TimelineTriggerActivationRangeStart { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: TimelineTriggerActivationRangeStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21449,12 +22819,17 @@ pub const TimelineTriggerActiveRangeEnd = union(enum) {
     ///     /// The start (for timeline-trigger-active-range-start) or end (for timeline-trigger-active-range-end) is equal to the start/end of the timeline trigger’s activation range.
     auto,
     normal,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) TimelineTriggerActiveRangeEnd { return .{ .px_ = v }; }
-    pub fn em(v: f32) TimelineTriggerActiveRangeEnd { return .{ .em_ = v }; }
-    pub fn rem(v: f32) TimelineTriggerActiveRangeEnd { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) TimelineTriggerActiveRangeEnd { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) TimelineTriggerActiveRangeEnd { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) TimelineTriggerActiveRangeEnd { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) TimelineTriggerActiveRangeEnd { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) TimelineTriggerActiveRangeEnd { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) TimelineTriggerActiveRangeEnd { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) TimelineTriggerActiveRangeEnd { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) TimelineTriggerActiveRangeEnd { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) TimelineTriggerActiveRangeEnd { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) TimelineTriggerActiveRangeEnd { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: TimelineTriggerActiveRangeEnd, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21471,12 +22846,17 @@ pub const TimelineTriggerActiveRangeStart = union(enum) {
     ///     /// The start (for timeline-trigger-active-range-start) or end (for timeline-trigger-active-range-end) is equal to the start/end of the timeline trigger’s activation range.
     auto,
     normal,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) TimelineTriggerActiveRangeStart { return .{ .px_ = v }; }
-    pub fn em(v: f32) TimelineTriggerActiveRangeStart { return .{ .em_ = v }; }
-    pub fn rem(v: f32) TimelineTriggerActiveRangeStart { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) TimelineTriggerActiveRangeStart { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) TimelineTriggerActiveRangeStart { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) TimelineTriggerActiveRangeStart { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) TimelineTriggerActiveRangeStart { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) TimelineTriggerActiveRangeStart { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) TimelineTriggerActiveRangeStart { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) TimelineTriggerActiveRangeStart { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) TimelineTriggerActiveRangeStart { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) TimelineTriggerActiveRangeStart { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) TimelineTriggerActiveRangeStart { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: TimelineTriggerActiveRangeStart, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21519,12 +22899,17 @@ pub const Top = union(enum) {
     unset,
     ///     /// Represents an unconstrained inset; the exact meaning depends on the positioning scheme.
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) Top { return .{ .px_ = v }; }
-    pub fn em(v: f32) Top { return .{ .em_ = v }; }
-    pub fn rem(v: f32) Top { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) Top { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) Top { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) Top { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) Top { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) Top { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) Top { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) Top { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) Top { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) Top { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) Top { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: Top, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21606,12 +22991,17 @@ pub const TransformOrigin = union(enum) {
     top,
     ///     /// Computes to 100% for the vertical position.
     bottom,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) TransformOrigin { return .{ .px_ = v }; }
-    pub fn em(v: f32) TransformOrigin { return .{ .em_ = v }; }
-    pub fn rem(v: f32) TransformOrigin { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) TransformOrigin { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) TransformOrigin { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) TransformOrigin { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) TransformOrigin { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) TransformOrigin { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) TransformOrigin { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) TransformOrigin { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) TransformOrigin { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) TransformOrigin { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) TransformOrigin { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: TransformOrigin, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21739,12 +23129,17 @@ pub const Translate = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) Translate { return .{ .px_ = v }; }
-    pub fn em(v: f32) Translate { return .{ .em_ = v }; }
-    pub fn rem(v: f32) Translate { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) Translate { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) Translate { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) Translate { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) Translate { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) Translate { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) Translate { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) Translate { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) Translate { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) Translate { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) Translate { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: Translate, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -21889,12 +23284,17 @@ pub const ViewTimelineInset = union(enum) {
     unset,
     ///     /// Indicates to use the value of scroll-padding.
     auto,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) ViewTimelineInset { return .{ .px_ = v }; }
-    pub fn em(v: f32) ViewTimelineInset { return .{ .em_ = v }; }
-    pub fn rem(v: f32) ViewTimelineInset { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) ViewTimelineInset { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) ViewTimelineInset { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) ViewTimelineInset { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) ViewTimelineInset { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) ViewTimelineInset { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) ViewTimelineInset { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) ViewTimelineInset { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) ViewTimelineInset { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) ViewTimelineInset { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) ViewTimelineInset { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: ViewTimelineInset, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22066,8 +23466,9 @@ pub const VoicePitch = union(enum) {
     high,
     ///     /// A sequence of monotonically non-decreasing pitch levels that are implementation and voice specific. When the computed value for a given element is only a keyword (i.e. no relative offset is specified), then the corresponding absolute frequency will be re-evaluated on a voice change. Conversely, the application of a relative offset requires the calculation of the resulting frequency based on the current voice at the point at which the relative offset is specified, so the computed frequency will inherit absolutely regardless of any voice change further down the style cascade. Authors should therefore only use keyword values in cases where they wish that voice changes trigger the re-evaluation of the conversion from a keyword to a concrete, voice-dependent frequency.
     x_high,
-    percent_: f32,
-    pub fn percent(v: f32) VoicePitch { return .{ .percent_ = v }; }
+    percent_: [4]f32,
+    pub fn percent(v: f32) VoicePitch { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) VoicePitch { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: VoicePitch, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22093,8 +23494,9 @@ pub const VoiceRange = union(enum) {
     high,
     ///     /// A sequence of monotonically non-decreasing pitch levels that are implementation and voice specific. When the computed value for a given element is only a keyword (i.e. no relative offset is specified), then the corresponding absolute frequency will be re-evaluated on a voice change. Conversely, the application of a relative offset requires the calculation of the resulting frequency based on the current voice at the point at which the relative offset is specified, so the computed frequency will inherit absolutely regardless of any voice change further down the style cascade. Authors should therefore only use keyword values in cases where they wish that voice changes trigger the re-evaluation of the conversion from a keyword to a concrete, voice-dependent frequency.
     x_high,
-    percent_: f32,
-    pub fn percent(v: f32) VoiceRange { return .{ .percent_ = v }; }
+    percent_: [4]f32,
+    pub fn percent(v: f32) VoiceRange { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) VoiceRange { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: VoiceRange, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22120,8 +23522,9 @@ pub const VoiceRate = union(enum) {
     fast,
     ///     /// A sequence of monotonically non-decreasing speaking rates that are implementation- and voice-specific. For example, typical values for the English language are (in words per minute) x-slow = 80, slow = 120, medium = between 180 and 200, fast = 500.
     x_fast,
-    percent_: f32,
-    pub fn percent(v: f32) VoiceRate { return .{ .percent_ = v }; }
+    percent_: [4]f32,
+    pub fn percent(v: f32) VoiceRate { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) VoiceRate { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: VoiceRate, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22271,12 +23674,17 @@ pub const Width = union(enum) {
     fit_content,
     ///     /// If the box has a preferred aspect ratio, applies contain-fit sizing, attempting to fit into the box’s constraints while maintaining its preferred aspect ratio insofar as possible. See § 6.2 Contain-fit Sizing: stretching while maintaining an aspect ratio. If the box has no preferred aspect ratio, applies stretch-fit sizing.
     contain,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) Width { return .{ .px_ = v }; }
-    pub fn em(v: f32) Width { return .{ .em_ = v }; }
-    pub fn rem(v: f32) Width { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) Width { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) Width { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) Width { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) Width { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) Width { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) Width { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) Width { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) Width { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) Width { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) Width { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: Width, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22355,12 +23763,17 @@ pub const WordSpacing = union(enum) {
     unset,
     ///     /// No additional spacing is applied. Computes to zero.
     normal,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) WordSpacing { return .{ .px_ = v }; }
-    pub fn em(v: f32) WordSpacing { return .{ .em_ = v }; }
-    pub fn rem(v: f32) WordSpacing { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) WordSpacing { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) WordSpacing { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) WordSpacing { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) WordSpacing { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) WordSpacing { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) WordSpacing { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) WordSpacing { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) WordSpacing { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) WordSpacing { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) WordSpacing { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: WordSpacing, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22522,12 +23935,17 @@ pub const X = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) X { return .{ .px_ = v }; }
-    pub fn em(v: f32) X { return .{ .em_ = v }; }
-    pub fn rem(v: f32) X { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) X { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) X { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) X { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) X { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) X { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) X { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) X { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) X { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) X { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) X { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: X, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22541,12 +23959,17 @@ pub const Y = union(enum) {
     revert,
     revert_layer,
     unset,
-    px_: f32, em_: f32, rem_: f32,
-    percent_: f32,
-    pub fn px(v: f32) Y { return .{ .px_ = v }; }
-    pub fn em(v: f32) Y { return .{ .em_ = v }; }
-    pub fn rem(v: f32) Y { return .{ .rem_ = v }; }
-    pub fn percent(v: f32) Y { return .{ .percent_ = v }; }
+    px_: [4]f32, em_: [4]f32, rem_: [4]f32,
+    percent_: [4]f32,
+    pub fn px(v: f32) Y { return .{ .px_ = .{ v, v, v, v } }; }
+    pub fn px2(v1: f32, v2: f32) Y { return .{ .px_ = .{ v1, v2, v1, v2 } }; }
+    pub fn px4(v1: f32, v2: f32, v3: f32, v4: f32) Y { return .{ .px_ = .{ v1, v2, v3, v4 } }; }
+    pub fn em(v: f32) Y { return .{ .em_ = .{ v, v, v, v } }; }
+    pub fn em2(v1: f32, v2: f32) Y { return .{ .em_ = .{ v1, v2, v1, v2 } }; }
+    pub fn rem(v: f32) Y { return .{ .rem_ = .{ v, v, v, v } }; }
+    pub fn rem2(v1: f32, v2: f32) Y { return .{ .rem_ = .{ v1, v2, v1, v2 } }; }
+    pub fn percent(v: f32) Y { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) Y { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: Y, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };
@@ -22575,8 +23998,9 @@ pub const Zoom = union(enum) {
     revert,
     revert_layer,
     unset,
-    percent_: f32,
-    pub fn percent(v: f32) Zoom { return .{ .percent_ = v }; }
+    percent_: [4]f32,
+    pub fn percent(v: f32) Zoom { return .{ .percent_ = .{ v, v, v, v } }; }
+    pub fn percent2(v1: f32, v2: f32) Zoom { return .{ .percent_ = .{ v1, v2, v1, v2 } }; }
 
     pub fn format(self: Zoom, w: *std.io.Writer) std.io.Writer.Error!void { return core.formatValue(self, w); }
 };

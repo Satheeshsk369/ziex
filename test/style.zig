@@ -72,3 +72,17 @@ test "Style pseudo-states" {
     try std.testing.expect(style.hover != null);
     try std.testing.expectEqual(zx.style.generated.BackgroundColor.hex(0xff0000), style.hover.?.background_color);
 }
+
+test "Style shorthands" {
+    const allocator = std.testing.allocator;
+    const style: zx.Style = .{
+        .padding = .px2(10, 20),
+        .margin = .px4(5, 10, 15, 20),
+    };
+
+    const result = try std.fmt.allocPrint(allocator, "{f}", .{style});
+    defer allocator.free(result);
+    
+    try std.testing.expect(std.mem.indexOf(u8, result, "padding: 10px 20px;") != null);
+    try std.testing.expect(std.mem.indexOf(u8, result, "margin: 5px 10px 15px 20px;") != null);
+}
