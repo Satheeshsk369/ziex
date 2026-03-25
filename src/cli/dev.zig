@@ -165,7 +165,7 @@ fn dev(ctx: zli.CommandContext) !void {
                         last_error_formatted = null;
                     }
                     rebuild_timer = std.time.Timer.start() catch null;
-                    dev_server.notifyBuilding();
+                    dev_server.notify(.{ .type = .building });
                     if (use_spinner) {
                         if (rebuilding_shown) {
                             var spinner = ctx.spinner;
@@ -219,19 +219,13 @@ fn dev(ctx: zli.CommandContext) !void {
                         try ctx.writer.writeAll(formatted_oxlint);
                     }
 
-                    const error_json = Diagnostics.toJson(allocator, build_result.diagnostics) catch null;
-                    if (error_json) |json| {
-                        defer allocator.free(json);
-                        if (build_result.diagnostics.len > 0) dev_server.notifyRawJson(json);
-                    } else {
-                        dev_server.notifyError(formatted_oxlint);
-                    }
+                    notifyBuildError(allocator, &dev_server, formatted_oxlint, build_result.diagnostics);
                     rebuilding_shown = false;
                 },
                 .resolved => {
                     last_was_no_change = false;
                     try ctx.writer.print("{s} ✓ {s}All build errors have been resolved!{s}\n", .{ Colors.green, Colors.bold, Colors.reset });
-                    dev_server.notifyClear();
+                    dev_server.notify(.{ .type = .clear });
                 },
                 .build_complete_no_change => |_| {
                     if (rebuilding_shown) {
@@ -245,7 +239,7 @@ fn dev(ctx: zli.CommandContext) !void {
                             try ctx.writer.print("\r{s}✓ No changes{s}\x1b[K\n", .{ dim, Colors.reset });
                         }
                     }
-                    dev_server.notifyClear();
+                    dev_server.notify(.{ .type = .clear });
                     rebuild_timer = null;
                     rebuilding_shown = false;
                     last_was_no_change = true;
@@ -343,7 +337,7 @@ fn dev(ctx: zli.CommandContext) !void {
                     }
                     printFirstLine(&runner_output.?, is_first_run);
                     is_first_run = false;
-                    dev_server.notifyReload();
+                    dev_server.notify(.{ .type = .reload });
 
                     const current_stat = std.fs.cwd().statFile(program_path.?) catch |err| {
                         log.debug("Failed to stat binary after restart: {any}", .{err});
@@ -374,4 +368,107 @@ fn printFirstLine(output: *util.ChildOutput, is_first_run: bool) void {
             std.debug.print("{s}\n", .{first_line});
         }
     }
+}
+
+fn notifyBuildError(
+    allocator: std.mem.Allocator,
+    dev_server: *DevServer,
+    formatted_oxlint: []const u8,
+    diagnostics: []const Builder.Diagnostic,
+) void {
+    if (diagnostics.len > 0) {
+        const notification_diagnostics = buildNotificationDiagnostics(allocator, diagnostics) catch null;
+        if (notification_diagnostics) |items| {
+            defer freeNotificationDiagnostics(allocator, items);
+            dev_server.notify(.{
+                .type = .@"error",
+                .diagnostics = items,
+            });
+            return;
+        }
+    }
+
+    const stripped = stripAnsi(allocator, formatted_oxlint) catch
+        allocator.dupe(u8, formatted_oxlint) catch return;
+    defer allocator.free(stripped);
+
+    dev_server.notify(.{
+        .type = .@"error",
+        .message = stripped,
+    });
+}
+
+fn buildNotificationDiagnostics(
+    allocator: std.mem.Allocator,
+    diagnostics: []const Builder.Diagnostic,
+) ![]DevServer.Notification.Diagnostic {
+    const items = try allocator.alloc(DevServer.Notification.Diagnostic, diagnostics.len);
+    errdefer allocator.free(items);
+
+    for (diagnostics, 0..) |d, idx| {
+        items[idx] = .{
+            .file = d.file,
+            .line = d.line,
+            .col = d.col,
+            .kind = switch (d.kind) {
+                .@"error" => .@"error",
+                .warning => .warning,
+                .note => .note,
+            },
+            .message = d.message,
+            .source = null,
+        };
+
+        if (d.kind == .@"error") {
+            items[idx].source = Diagnostics.readSourceContext(allocator, d.file, d.line, 3);
+        }
+    }
+
+    return items;
+}
+
+fn freeNotificationDiagnostics(
+    allocator: std.mem.Allocator,
+    diagnostics: []DevServer.Notification.Diagnostic,
+) void {
+    for (diagnostics) |d| {
+        if (d.source) |source| allocator.free(source);
+    }
+    allocator.free(diagnostics);
+}
+
+fn stripAnsi(allocator: std.mem.Allocator, input: []const u8) ![]u8 {
+    var out = std.ArrayList(u8).empty;
+    var i: usize = 0;
+    while (i < input.len) {
+        if (input[i] == 0x1B) {
+            i += 1;
+            if (i >= input.len) break;
+            switch (input[i]) {
+                '[' => {
+                    i += 1;
+                    while (i < input.len and (input[i] < 0x40 or input[i] > 0x7E)) : (i += 1) {}
+                    if (i < input.len) i += 1;
+                },
+                ']' => {
+                    i += 1;
+                    while (i < input.len) : (i += 1) {
+                        if (input[i] == 0x07) {
+                            i += 1;
+                            break;
+                        }
+                        if (input[i] == 0x1B and i + 1 < input.len and input[i + 1] == '\\') {
+                            i += 2;
+                            break;
+                        }
+                    }
+                },
+                else => {},
+            }
+        } else {
+            try out.append(allocator, input[i]);
+            i += 1;
+        }
+    }
+    return out.toOwnedSlice(allocator);
 }
