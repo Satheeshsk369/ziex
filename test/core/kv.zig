@@ -2,10 +2,27 @@ const std = @import("std");
 const zx = @import("zx");
 
 const kv = zx.kv;
+const allocator = std.testing.allocator;
+
+const User = struct {
+    id: u32,
+    name: []const u8,
+    active: bool,
+};
+
+const UserAlias = struct {
+    id: u32,
+    label: []const u8,
+    active: bool,
+};
 
 fn uniqueLabel(comptime prefix: []const u8, buf: []u8) ![]const u8 {
     const value = std.crypto.random.int(u64);
     return std.fmt.bufPrint(buf, "{s}-{x}", .{ prefix, value });
+}
+
+fn freeUser(user: User) void {
+    allocator.free(user.name);
 }
 
 test "kv default impl: put/get/delete roundtrip" {
@@ -86,4 +103,63 @@ test "kv default impl: scoped namespaces are isolated" {
 
     try std.testing.expectEqualStrings("scoped-value", scoped_value);
     try std.testing.expectEqualStrings("default-value", default_value);
+}
+
+test "kv default impl: putAs/as roundtrip typed value" {
+    var key_buf: [64]u8 = undefined;
+    const key = try uniqueLabel("kv-typed-key", &key_buf);
+
+    defer kv.delete(key) catch {};
+
+    try kv.putAs(key, User{
+        .id = 42,
+        .name = "nurul",
+        .active = true,
+    }, .{});
+
+    const user = (try kv.as(allocator, key, User)).?;
+    defer freeUser(user);
+
+    try std.testing.expectEqual(@as(u32, 42), user.id);
+    try std.testing.expectEqualStrings("nurul", user.name);
+    try std.testing.expect(user.active);
+}
+
+test "kv default impl: as returns invalid type on schema mismatch" {
+    var key_buf: [64]u8 = undefined;
+    const key = try uniqueLabel("kv-typed-mismatch", &key_buf);
+
+    defer kv.delete(key) catch {};
+
+    try kv.putAs(key, User{
+        .id = 7,
+        .name = "mismatch",
+        .active = false,
+    }, .{});
+
+    try std.testing.expectError(error.InvalidType, kv.as(allocator, key, UserAlias));
+}
+
+test "kv default impl: scoped putAs/as roundtrip typed value" {
+    var ns_buf: [64]u8 = undefined;
+    var key_buf: [64]u8 = undefined;
+
+    const namespace = try uniqueLabel("kv-typed-scope", &ns_buf);
+    const key = try uniqueLabel("profile", &key_buf);
+    const scoped = kv.scope(namespace);
+
+    defer scoped.delete(key) catch {};
+
+    try scoped.putAs(key, User{
+        .id = 99,
+        .name = "scoped-user",
+        .active = true,
+    }, .{});
+
+    const user = (try scoped.as(allocator, key, User)).?;
+    defer freeUser(user);
+
+    try std.testing.expectEqual(@as(u32, 99), user.id);
+    try std.testing.expectEqualStrings("scoped-user", user.name);
+    try std.testing.expect(user.active);
 }
