@@ -203,6 +203,13 @@ export class ZxBridgeCore {
         }
     }
 
+    dispose(): void {
+        for (const handle of this.#intervals.values()) {
+            clearInterval(handle);
+        }
+        this.#intervals.clear();
+    }
+
     /** Write a string to WASM memory, returning pointer and length */
     protected _writeStringToWasm(str: string): { ptr: number; len: number } {
         return this._writeBytesToWasm(textEncoder.encode(str));

@@ -10,6 +10,7 @@ const Builder = @import("dev/Builder.zig");
 const tui = @import("../tui/main.zig");
 const Diagnostics = @import("dev/Diagnostics.zig");
 const DevServer = @import("dev/DevServer.zig");
+const Highlight = @import("dev/Highlight.zig");
 
 const Colors = tui.Colors;
 const log = std.log.scoped(.cli);
@@ -421,6 +422,7 @@ fn buildNotificationDiagnostics(
 
         if (d.kind == .@"error") {
             items[idx].source = Diagnostics.readSourceContext(allocator, d.file, d.line, 3);
+            items[idx].source_html = Diagnostics.readHighlightedSourceContext(allocator, d.file, d.line, 3, Highlight.highlightZx) catch null;
         }
     }
 
@@ -433,6 +435,7 @@ fn freeNotificationDiagnostics(
 ) void {
     for (diagnostics) |d| {
         if (d.source) |source| allocator.free(source);
+        if (d.source_html) |source_html| allocator.free(source_html);
     }
     allocator.free(diagnostics);
 }
