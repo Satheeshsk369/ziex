@@ -215,9 +215,9 @@ pub fn initInner(
         },
     });
     // Inject jsglue script tag via the build system
-    injections_step.add(.{ .parent = .body, .position = .ending, .element = .{
+    injections_step.add(.{ .parent = .head, .position = .ending, .element = .{
         .tag = "script",
-        .attributes = b.fmt("src=\"{s}?{s}\"", .{ zxjs_href, version }),
+        .attributes = b.fmt("defer src=\"{s}?{s}\"", .{ zxjs_href, version }),
     } });
     zx_module.addAnonymousImport("zx_injections", .{
         .root_source_file = injections_step.getOutput(),

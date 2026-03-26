@@ -163,6 +163,18 @@ export class ZxBridge extends ZxBridgeCore {
         }
     }
 
+    override dispose(): void {
+        super.dispose();
+        for (const ws of this.#websockets.values()) {
+            try {
+                ws.close();
+            } catch {
+                // Ignore shutdown races during hot-reinit.
+            }
+        }
+        this.#websockets.clear();
+    }
+
     /** Handle a DOM event (called by event delegation) */
     eventbridge(velementId: bigint, eventTypeId: number, event: Event): void {
         if (!this.#eventbridge) return;
@@ -555,12 +567,14 @@ const EVENT_TYPE_MAP: Record<DelegatedEvent, number> = {
 };
 
 /** Initialize event delegation */
-export function initEventDelegation(bridge: ZxBridge, rootSelector: string = 'body'): void {
+export function initEventDelegation(bridge: ZxBridge, rootSelector: string = 'body'): () => void {
     const root = document.querySelector(rootSelector);
-    if (!root) return;
+    if (!root) return () => {};
+
+    const removers: Array<() => void> = [];
 
     for (const eventType of DELEGATED_EVENTS) {
-        root.addEventListener(eventType, (event: Event) => {
+        const listener = (event: Event) => {
             let target = event.target as HTMLElement | null;
             while (target && target !== document.body) {
                 const zxRef = (target as any).__zx_ref;
@@ -570,8 +584,16 @@ export function initEventDelegation(bridge: ZxBridge, rootSelector: string = 'bo
                 }
                 target = target.parentElement;
             }
-        }, { passive: eventType.startsWith('touch') || eventType === 'scroll' });
+        };
+
+        const options = { passive: eventType.startsWith('touch') || eventType === 'scroll' };
+        root.addEventListener(eventType, listener, options);
+        removers.push(() => root.removeEventListener(eventType, listener, options));
     }
+
+    return () => {
+        for (const remove of removers) remove();
+    };
 }
 
 export type InitOptions = {
@@ -582,8 +604,34 @@ export type InitOptions = {
 
 const DEFAULT_URL = "/assets/_/main.wasm";
 
+type ActiveRuntime = {
+    dispose: () => void;
+    options: InitOptions;
+};
+
+let activeRuntime: ActiveRuntime | null = null;
+
+function normalizeOptions(options: InitOptions = {}): InitOptions {
+    return {
+        url: options.url,
+        eventDelegationRoot: options.eventDelegationRoot,
+        importObject: options.importObject,
+    };
+}
+
+function registerDevReinit(options: InitOptions): void {
+    if (typeof window === 'undefined') return;
+    window.__zx_dev_reinit = () => init(options);
+}
+
 /** Initialize WASM with the ZX Bridge */
 export async function init(options: InitOptions = {}): Promise<{ source: WebAssembly.WebAssemblyInstantiatedSource; bridge: ZxBridge }> {
+    const normalizedOptions = normalizeOptions(options);
+    if (activeRuntime) {
+        activeRuntime.dispose();
+        activeRuntime = null;
+    }
+
     const url = options.url ?? (document.getElementById("__$wasmlink") as HTMLLinkElement | null)?.href ?? DEFAULT_URL;
     const bridgeRef: { current: ZxBridge | null } = { current: null };
 
@@ -601,10 +649,25 @@ export async function init(options: InitOptions = {}): Promise<{ source: WebAsse
     const bridge = new ZxBridge(instance.exports);
     bridgeRef.current = bridge;
 
-    initEventDelegation(bridge, options.eventDelegationRoot ?? 'body');
+    domNodes.clear();
+
+    const disposeDelegation = initEventDelegation(bridge, options.eventDelegationRoot ?? 'body');
 
     const main = instance.exports.mainClient;
     if (typeof main === 'function') main();
+
+    activeRuntime = {
+        options: normalizedOptions,
+        dispose: () => {
+            disposeDelegation();
+            bridge.dispose();
+            domNodes.clear();
+        },
+    };
+
+    // TODO: dev only and prebundle a dev and prod version before publishing
+    // if (import.meta.env.DEV)
+    registerDevReinit(normalizedOptions);
 
     return { source, bridge };
 }
@@ -613,5 +676,9 @@ export async function init(options: InitOptions = {}): Promise<{ source: WebAsse
 declare global {
     interface HTMLElement {
         __zx_ref?: number;
+    }
+
+    interface Window {
+        __zx_dev_reinit?: () => Promise<{ source: WebAssembly.WebAssemblyInstantiatedSource; bridge: ZxBridge }>;
     }
 }

@@ -136,6 +136,100 @@ pub fn readSourceContext(allocator: std.mem.Allocator, file_path: []const u8, ta
     return buf.toOwnedSlice(allocator) catch null;
 }
 
+pub fn readHighlightedSourceContext(
+    allocator: std.mem.Allocator,
+    file_path: []const u8,
+    target_line: u32,
+    context_lines: u32,
+    highlightFn: fn (std.mem.Allocator, []const u8) anyerror![]u8,
+) !?[]u8 {
+    const source = std.fs.cwd().readFileAlloc(allocator, file_path, 10 * 1024 * 1024) catch return null;
+    defer allocator.free(source);
+
+    const start_line = if (target_line > context_lines) target_line - context_lines else 1;
+    const end_line = target_line + context_lines;
+
+    var lines = std.ArrayList([]const u8).empty;
+    defer lines.deinit(allocator);
+
+    var line_num: u32 = 1;
+    var iter = std.mem.splitScalar(u8, source, '\n');
+    while (iter.next()) |line| : (line_num += 1) {
+        if (line_num >= start_line and line_num <= end_line) {
+            try lines.append(allocator, line);
+        }
+        if (line_num > end_line) break;
+    }
+
+    if (lines.items.len == 0) return null;
+
+    var snippet = std.ArrayList(u8).empty;
+    defer snippet.deinit(allocator);
+    for (lines.items, 0..) |line, idx| {
+        if (idx > 0) try snippet.append(allocator, '\n');
+        try snippet.appendSlice(allocator, line);
+    }
+
+    const highlighted = highlightFn(allocator, snippet.items) catch try escapeHtmlAlloc(allocator, snippet.items);
+    defer allocator.free(highlighted);
+
+    return try wrapHighlightedLines(allocator, highlighted, start_line, target_line);
+}
+
+fn wrapHighlightedLines(
+    allocator: std.mem.Allocator,
+    highlighted: []const u8,
+    start_line: u32,
+    target_line: u32,
+) ![]u8 {
+    var out = std.ArrayList(u8).empty;
+    errdefer out.deinit(allocator);
+
+    var current_line = start_line;
+    var line_start: usize = 0;
+    while (line_start <= highlighted.len) : (current_line += 1) {
+        const rel_end = std.mem.indexOfScalarPos(u8, highlighted, line_start, '\n');
+        const line_end = rel_end orelse highlighted.len;
+        const line_html = highlighted[line_start..line_end];
+        const is_error_line = current_line == target_line;
+        try out.appendSlice(allocator, "<span class=\"zx-code-line");
+        if (is_error_line) try out.appendSlice(allocator, " zx-code-line-error");
+        try out.appendSlice(allocator, "\"><span class=\"zx-code-line-no\">");
+
+        var number_buf: [16]u8 = undefined;
+        const line_no = try std.fmt.bufPrint(&number_buf, "{d}", .{current_line});
+        try out.appendSlice(allocator, line_no);
+        try out.appendSlice(allocator, "</span><span class=\"zx-code-line-text\">");
+        if (line_html.len > 0) {
+            try out.appendSlice(allocator, line_html);
+        } else {
+            try out.appendSlice(allocator, " ");
+        }
+        try out.appendSlice(allocator, "</span></span>");
+        if (rel_end == null) break;
+        try out.append(allocator, '\n');
+        line_start = line_end + 1;
+    }
+
+    return out.toOwnedSlice(allocator);
+}
+
+fn escapeHtmlAlloc(allocator: std.mem.Allocator, text: []const u8) ![]u8 {
+    var out = std.ArrayList(u8).empty;
+    errdefer out.deinit(allocator);
+    for (text) |c| {
+        switch (c) {
+            '<' => try out.appendSlice(allocator, "&lt;"),
+            '>' => try out.appendSlice(allocator, "&gt;"),
+            '&' => try out.appendSlice(allocator, "&amp;"),
+            '"' => try out.appendSlice(allocator, "&quot;"),
+            '\'' => try out.appendSlice(allocator, "&#39;"),
+            else => try out.append(allocator, c),
+        }
+    }
+    return out.toOwnedSlice(allocator);
+}
+
 /// Build a structured JSON payload for the error overlay.
 pub fn toJson(allocator: std.mem.Allocator, diagnostics: []const Builder.Diagnostic) ![]u8 {
     var buf = std.ArrayList(u8).empty;

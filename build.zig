@@ -81,6 +81,8 @@ pub fn build(b: *std.Build) !void {
             .{ .name = "cli_options", .module = cli_options_dev.createModule() },
             .{ .name = "zx", .module = mod },
             .{ .name = "zli", .module = zli_dep.module("zli") },
+            .{ .name = "tree_sitter", .module = tree_sitter_dep.module("tree_sitter") },
+            .{ .name = "tree_sitter_zx", .module = tree_sitter_zx_dep.module("tree_sitter_zx") },
         },
     };
 
@@ -217,6 +219,8 @@ pub fn build(b: *std.Build) !void {
                         .{ .name = "zx", .module = release_mod },
                         .{ .name = "zli", .module = zli_dep.module("zli") },
                         .{ .name = "zls", .module = release_zls_dep.module("zls") },
+                        .{ .name = "tree_sitter", .module = release_tree_sitter_dep.module("tree_sitter") },
+                        .{ .name = "tree_sitter_zx", .module = release_tree_sitter_zx_dep.module("tree_sitter_zx") },
                     },
                 }),
             });

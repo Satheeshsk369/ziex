@@ -51,6 +51,7 @@ pub const Notification = struct {
         kind: Kind,
         message: []const u8,
         source: ?[]const u8 = null,
+        source_html: ?[]const u8 = null,
     };
 };
 
@@ -74,6 +75,7 @@ event_mutex: std.Thread.Mutex,
 event_queue: [EVENT_QUEUE_CAP]QueuedEvent = undefined,
 event_head: u32 = 0, // next write position
 event_tail: u32 = 0, // next read position
+sticky_state_json: ?[]u8 = null,
 
 pub const Options = struct {
     gpa: Allocator,
@@ -107,6 +109,9 @@ pub fn deinit(ds: *DevServer) void {
         const idx = ds.event_tail % EVENT_QUEUE_CAP;
         ds.gpa.free(ds.event_queue[idx].json);
         ds.event_tail +%= 1;
+    }
+    if (ds.sticky_state_json) |json| {
+        ds.gpa.free(json);
     }
 }
 
@@ -148,7 +153,27 @@ fn pushEvent(ds: *DevServer, json: []u8) void {
 
 pub fn notify(ds: *DevServer, notification: Notification) void {
     const json = serializeNotification(ds.gpa, notification) catch return;
+    ds.updateStickyState(notification, json);
     ds.pushEvent(json);
+}
+
+fn updateStickyState(ds: *DevServer, notification: Notification, json: []const u8) void {
+    ds.event_mutex.lock();
+    defer ds.event_mutex.unlock();
+
+    switch (notification.type) {
+        .building, .@"error" => {
+            const duplicated = ds.gpa.dupe(u8, json) catch return;
+            if (ds.sticky_state_json) |prev| ds.gpa.free(prev);
+            ds.sticky_state_json = duplicated;
+        },
+        .clear, .reload, .connected => {
+            if (ds.sticky_state_json) |prev| {
+                ds.gpa.free(prev);
+                ds.sticky_state_json = null;
+            }
+        },
+    }
 }
 
 /// Find a free OS-assigned port by briefly binding to port 0.
@@ -300,10 +325,20 @@ fn serveWebSocket(ds: *DevServer, sock: *http.Server.WebSocket) !noreturn {
     defer recv_thread.join();
     log.debug("ws: recv thread spawned, entering event loop", .{});
 
-    // Use 0 as sentinel so any event fired before this connection is replayed.
-    // update_id starts at 0 and is only incremented by notify*, so a value > 0
-    // means at least one event has been broadcast since the server started.
+    var sticky_snapshot: ?[]u8 = null;
     var last_id: u32 = 0;
+    ds.event_mutex.lock();
+    last_id = ds.event_head;
+    if (ds.sticky_state_json) |json| {
+        sticky_snapshot = ds.gpa.dupe(u8, json) catch null;
+    }
+    ds.event_mutex.unlock();
+
+    if (sticky_snapshot) |json| {
+        defer ds.gpa.free(json);
+        try sock.writeMessage(json, .text);
+    }
+
     while (true) {
         const cur = ds.update_id.load(.acquire);
         if (cur == last_id) {
