@@ -76,6 +76,17 @@ pub const ZxContext = struct {
         return self.allocator orelse @panic("Allocator not set. Please provide @allocator attribute to the parent element.");
     }
 
+    /// Check if a Style has any pseudo-states or media queries
+    fn hasSelectors(style_obj: zx.Style) bool {
+        const fields = std.meta.fields(zx.Style);
+        inline for (fields) |f| {
+            if (f.type == ?*const zx.Style) {
+                if (@field(style_obj, f.name) != null) return true;
+            }
+        }
+        return false;
+    }
+
     fn escapeHtml(self: *ZxContext, text: []const u8) []const u8 {
         // On browser, DOM APIs (textContent) handle escaping automatically
         // We only need to escape when generating HTML strings on the server

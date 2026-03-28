@@ -2955,8 +2955,6 @@ pub const AlignItems = union(enum) {
     self_end,
     flex_start,
     flex_end,
-    /// The new anchor-center value makes this case extremely simple: if the positioned box has a default anchor box, then it is centered (insofar as possible) over the default anchor box in the relevant axis. Additionally:
-    anchor_center,
 
     pub fn format(self: AlignItems, w: *std.io.Writer) std.io.Writer.Error!void {
         return core.formatValue(self, w);
@@ -14078,8 +14076,6 @@ pub const ContainIntrinsicBlockSize = union(enum) {
     unset,
     /// If auto is specified and the element has a last remembered size and is currently skipping its contents, its explicit intrinsic inner size in the corresponding axis is the last remembered size in that axis.
     auto,
-    /// If from-element is specified and the element is a replaced element with an internal layout intrinsic size, its explicit intrinsic inner size in the corresponding axis is that size. Should this apply even when contain:layout isn’t specified? The name needs further discussion.
-    from_element,
     px_: [4]f32,
     em_: [4]f32,
     rem_: [4]f32,
@@ -14125,8 +14121,6 @@ pub const ContainIntrinsicHeight = union(enum) {
     unset,
     /// If auto is specified and the element has a last remembered size and is currently skipping its contents, its explicit intrinsic inner size in the corresponding axis is the last remembered size in that axis.
     auto,
-    /// If from-element is specified and the element is a replaced element with an internal layout intrinsic size, its explicit intrinsic inner size in the corresponding axis is that size. Should this apply even when contain:layout isn’t specified? The name needs further discussion.
-    from_element,
     px_: [4]f32,
     em_: [4]f32,
     rem_: [4]f32,
@@ -14172,8 +14166,6 @@ pub const ContainIntrinsicInlineSize = union(enum) {
     unset,
     /// If auto is specified and the element has a last remembered size and is currently skipping its contents, its explicit intrinsic inner size in the corresponding axis is the last remembered size in that axis.
     auto,
-    /// If from-element is specified and the element is a replaced element with an internal layout intrinsic size, its explicit intrinsic inner size in the corresponding axis is that size. Should this apply even when contain:layout isn’t specified? The name needs further discussion.
-    from_element,
     px_: [4]f32,
     em_: [4]f32,
     rem_: [4]f32,
@@ -14219,8 +14211,6 @@ pub const ContainIntrinsicSize = union(enum) {
     unset,
     /// If auto is specified and the element has a last remembered size and is currently skipping its contents, its explicit intrinsic inner size in the corresponding axis is the last remembered size in that axis.
     auto,
-    /// If from-element is specified and the element is a replaced element with an internal layout intrinsic size, its explicit intrinsic inner size in the corresponding axis is that size. Should this apply even when contain:layout isn’t specified? The name needs further discussion.
-    from_element,
     px_: [4]f32,
     em_: [4]f32,
     rem_: [4]f32,
@@ -14266,8 +14256,6 @@ pub const ContainIntrinsicWidth = union(enum) {
     unset,
     /// If auto is specified and the element has a last remembered size and is currently skipping its contents, its explicit intrinsic inner size in the corresponding axis is the last remembered size in that axis.
     auto,
-    /// If from-element is specified and the element is a replaced element with an internal layout intrinsic size, its explicit intrinsic inner size in the corresponding axis is that size. Should this apply even when contain:layout isn’t specified? The name needs further discussion.
-    from_element,
     px_: [4]f32,
     em_: [4]f32,
     rem_: [4]f32,
@@ -17796,6 +17784,26 @@ pub const ForcedColorAdjust = union(enum) {
     }
 };
 
+/// frame-sizing
+/// - **W3C**: https://drafts.csswg.org/css-sizing-4/#propdef-frame-sizing
+pub const FrameSizing = union(enum) {
+    none,
+    inherit,
+    initial,
+    revert,
+    revert_layer,
+    unset,
+    auto,
+    content_width,
+    content_height,
+    content_block_size,
+    content_inline_size,
+
+    pub fn format(self: FrameSizing, w: *std.io.Writer) std.io.Writer.Error!void {
+        return core.formatValue(self, w);
+    }
+};
+
 /// gap
 /// - **W3C**: https://drafts.csswg.org/css-align-3/#propdef-gap
 pub const Gap = union(enum) {
@@ -19293,8 +19301,6 @@ pub const JustifyItems = union(enum) {
     right,
     /// This keyword causes the value to effectively inherit into descendants. If the legacy keyword appears on its own (without an accompanying left, right, or center keyword): if the inherited value of justify-items includes the legacy keyword, this value computes to the inherited value; otherwise it computes to normal. When justify-self:auto references the value of justify-items, only the alignment keyword, not the legacy keyword, is referenced by it. It exists to implement the legacy alignment behavior of HTML’s <center> element and align attribute.
     legacy,
-    /// The new anchor-center value makes this case extremely simple: if the positioned box has a default anchor box, then it is centered (insofar as possible) over the default anchor box in the relevant axis. Additionally:
-    anchor_center,
 
     pub fn format(self: JustifyItems, w: *std.io.Writer) std.io.Writer.Error!void {
         return core.formatValue(self, w);
@@ -23983,6 +23989,8 @@ pub const PositionAnchor = union(enum) {
     normal,
     /// Use the implicit anchor element if it exists; otherwise the box has no default anchor element.
     auto,
+    /// Uses the same default anchor element as the parent—​or originating element, if this is a pseudo-element—​if any, and if that would be an acceptable anchor element. Otherwise, the box has no default anchor element.
+    match_parent,
 
     pub fn format(self: PositionAnchor, w: *std.io.Writer) std.io.Writer.Error!void {
         return core.formatValue(self, w);
@@ -32504,6 +32512,7 @@ pub const StyleProperty = union(enum(u32)) {
     footnote_display: FootnoteDisplay,
     footnote_policy: FootnotePolicy,
     forced_color_adjust: ForcedColorAdjust,
+    frame_sizing: FrameSizing,
     gap: Gap,
     glyph_orientation_vertical: GlyphOrientationVertical,
     grid: Grid,
@@ -34583,6 +34592,10 @@ pub fn footnote_policy(v: FootnotePolicy) StyleProperty {
 
 pub fn forced_color_adjust(v: ForcedColorAdjust) StyleProperty {
     return .{ .forced_color_adjust = v };
+}
+
+pub fn frame_sizing(v: FrameSizing) StyleProperty {
+    return .{ .frame_sizing = v };
 }
 
 pub fn gap(v: Gap) StyleProperty {
