@@ -82,7 +82,7 @@ test "Style shorthands" {
 
     const result = try std.fmt.allocPrint(allocator, "{f}", .{style});
     defer allocator.free(result);
-    
+
     try std.testing.expect(std.mem.indexOf(u8, result, "padding: 10px 20px;") != null);
     try std.testing.expect(std.mem.indexOf(u8, result, "margin: 5px 10px 15px 20px;") != null);
 }

@@ -310,18 +310,18 @@ pub const ZxContext = struct {
                         // We need a deterministic hash of the style
                         // For now, let's just use the formatted string as the key
                         const style_str = self.printf("{f}", .{val});
-                        
+
                         // Register style if registry exists
                         if (self.style_registry) |reg| {
                             const hash = std.hash.Wyhash.hash(0, style_str);
                             const class_name = self.printf("zx-{x}", .{hash});
-                            
+
                             if (!reg.contains(class_name)) {
                                 // Important: We store the Style object itself or its string representation.
                                 // For now, storing the string is easier for the final flush.
                                 reg.put(class_name, style_str) catch @panic("OOM");
                             }
-                            
+
                             // Return class attribute instead of style
                             break :blk .{
                                 .name = "class",

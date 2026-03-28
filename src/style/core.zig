@@ -1,11 +1,30 @@
 const std = @import("std");
 
 pub const Unit = enum {
-    px, em, rem, vh, vw, vmin, vmax, @"%", pt, pc, in, cm, mm,
-    deg, rad, grad, turn,
-    s, ms,
-    Hz, kHz,
-    dpi, dpcm, dppx,
+    px,
+    em,
+    rem,
+    vh,
+    vw,
+    vmin,
+    vmax,
+    @"%",
+    pt,
+    pc,
+    in,
+    cm,
+    mm,
+    deg,
+    rad,
+    grad,
+    turn,
+    s,
+    ms,
+    Hz,
+    kHz,
+    dpi,
+    dpcm,
+    dppx,
 
     pub fn toString(self: Unit) []const u8 {
         return switch (self) {
@@ -27,10 +46,18 @@ pub const Color = union(enum) {
     rgba_: struct { r: u8, g: u8, b: u8, a: f32 },
     keyword_: []const u8,
 
-    pub fn hex(val: u32) Color { return .{ .hex_ = val }; }
-    pub fn rgb(r: u8, g: u8, b: u8) Color { return .{ .rgb_ = .{ .r = r, .g = g, .b = b } }; }
-    pub fn rgba(r: u8, g: u8, b: u8, a: f32) Color { return .{ .rgba_ = .{ .r = r, .g = g, .b = b, .a = a } }; }
-    pub fn kw(k: []const u8) Color { return .{ .keyword_ = k }; }
+    pub fn hex(val: u32) Color {
+        return .{ .hex_ = val };
+    }
+    pub fn rgb(r: u8, g: u8, b: u8) Color {
+        return .{ .rgb_ = .{ .r = r, .g = g, .b = b } };
+    }
+    pub fn rgba(r: u8, g: u8, b: u8, a: f32) Color {
+        return .{ .rgba_ = .{ .r = r, .g = g, .b = b, .a = a } };
+    }
+    pub fn kw(k: []const u8) Color {
+        return .{ .keyword_ = k };
+    }
 
     pub fn format(self: Color, w: *std.io.Writer) std.io.Writer.Error!void {
         switch (self) {
@@ -97,27 +124,48 @@ pub fn formatValue(value: anytype, w: *std.io.Writer) std.io.Writer.Error!void {
                 try w.writeAll(@field(value, f.name));
                 return;
             }
-            
+
             if (comptime std.mem.eql(u8, f.name, "percent_")) {
                 try formatShorthand(@field(value, f.name), "%", w);
                 return;
             }
-            if (comptime std.mem.eql(u8, f.name, "px_")) { try formatShorthand(@field(value, f.name), "px", w); return; }
-            if (comptime std.mem.eql(u8, f.name, "em_")) { try formatShorthand(@field(value, f.name), "em", w); return; }
-            if (comptime std.mem.eql(u8, f.name, "rem_")) { try formatShorthand(@field(value, f.name), "rem", w); return; }
-            
+            if (comptime std.mem.eql(u8, f.name, "px_")) {
+                try formatShorthand(@field(value, f.name), "px", w);
+                return;
+            }
+            if (comptime std.mem.eql(u8, f.name, "em_")) {
+                try formatShorthand(@field(value, f.name), "em", w);
+                return;
+            }
+            if (comptime std.mem.eql(u8, f.name, "rem_")) {
+                try formatShorthand(@field(value, f.name), "rem", w);
+                return;
+            }
+
             if (comptime std.mem.eql(u8, f.name, "calc_")) {
                 try w.writeAll("calc(");
                 try @field(value, f.name).format(w);
                 try w.writeAll(")");
                 return;
             }
-            
-            if (comptime std.mem.eql(u8, f.name, "vh_")) { try w.print("{d}vh", .{@field(value, f.name)}); return; }
-            if (comptime std.mem.eql(u8, f.name, "vw_")) { try w.print("{d}vw", .{@field(value, f.name)}); return; }
-            if (comptime std.mem.eql(u8, f.name, "vmin_")) { try w.print("{d}vmin", .{@field(value, f.name)}); return; }
-            if (comptime std.mem.eql(u8, f.name, "vmax_")) { try w.print("{d}vmax", .{@field(value, f.name)}); return; }
-            
+
+            if (comptime std.mem.eql(u8, f.name, "vh_")) {
+                try w.print("{d}vh", .{@field(value, f.name)});
+                return;
+            }
+            if (comptime std.mem.eql(u8, f.name, "vw_")) {
+                try w.print("{d}vw", .{@field(value, f.name)});
+                return;
+            }
+            if (comptime std.mem.eql(u8, f.name, "vmin_")) {
+                try w.print("{d}vmin", .{@field(value, f.name)});
+                return;
+            }
+            if (comptime std.mem.eql(u8, f.name, "vmax_")) {
+                try w.print("{d}vmax", .{@field(value, f.name)});
+                return;
+            }
+
             // Keywords
             try formatKebab(f.name, w);
             return;

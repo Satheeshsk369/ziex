@@ -4,7 +4,7 @@ pub fn Page(allocator: zx.Allocator) zx.Component {
     };
     return (
         <StyledCard @allocator={allocator} style={style}>
-             Hello Component 
+             Hello Component
         </StyledCard>
     );
 }
