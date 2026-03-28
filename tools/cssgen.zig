@@ -144,8 +144,10 @@ pub fn main() !void {
         if (data.units.length) try writer.interface.writeAll("    px_: [4]f32, em_: [4]f32, rem_: [4]f32,\n");
         if (data.units.percentage) try writer.interface.writeAll("    percent_: [4]f32,\n");
         if (data.units.color) try writer.interface.writeAll("    hex_: u32,\n");
+        try writer.interface.writeAll("    calc_: []const u8,\n");
 
         // Helper Methods
+        try writer.interface.print("    pub fn calc(s: []const u8) {s} {{ return .{{ .calc_ = s }}; }}\n", .{final_type_name});
         if (data.units.length) {
             try writer.interface.print("    pub fn px(v: f32) {s} {{ return .{{ .px_ = .{{ v, v, v, v }} }}; }}\n", .{final_type_name});
             try writer.interface.print("    pub fn px2(v1: f32, v2: f32) {s} {{ return .{{ .px_ = .{{ v1, v2, v1, v2 }} }}; }}\n", .{final_type_name});
